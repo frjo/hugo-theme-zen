@@ -1,0 +1,31 @@
+// Skip link
+//
+// To make the link completely hidden until a user tabs to the link, combine it
+// with the `visually-hidden` component.
+//
+// :focus - Focus styling.
+//
+// Markup: skip-link.twig
+//
+// Style guide: navigation.skip-link
+
+.skip-link,
+%skip-link {
+  display: block;
+  padding: 2px 0 3px;
+  text-align: center;
+
+  &:link,
+  &:visited {
+    background-color: color(skip-link-bg);
+    color: color(skip-link);
+  }
+
+  &__wrapper {
+    margin: 0;
+
+    @media print {
+      display: none;
+    }
+  }
+}

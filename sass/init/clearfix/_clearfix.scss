@@ -1,0 +1,21 @@
+// clearfix()
+//
+// Allows the bottom of an element to extend to the bottom of all floated
+// children elements. @see http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// We use the micro-clearfix, optimized for use in `@extend` where fewer `&` is
+// better.
+//
+// Style guide: sass.mixins.clearfix
+@mixin clearfix() {
+  &::before {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

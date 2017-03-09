@@ -1,0 +1,25 @@
+// Highlight mark
+//
+// The "new" or "updated" marker. This is a very thin component. A front-end
+// developer may choose to delete this component and just style the `<mark>`
+// element directly.
+//
+// Markup: highlight-mark.twig
+//
+// Style guide: components.highlight-mark
+
+.highlight-mark,
+%highlight-mark {
+  color: color(mark-highlight);
+  // Remove background highlighting from <mark> in normalize.
+  background-color: transparent;
+}
+
+//
+// Drupal selectors. (In case a module doesn't use theme_mark().)
+//
+
+.new,
+.update {
+  @extend %highlight-mark;
+}

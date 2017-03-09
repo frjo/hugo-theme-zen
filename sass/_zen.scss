@@ -1,0 +1,208 @@
+/**
+ * @file
+ * Zen custom styles
+ */
+
+/* Zen overrides */
+
+p,
+pre {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  @include margin(.75 0);
+}
+
+/* Apply smaller text to blocks, footer etc. */
+
+th,
+label,
+legend,
+figcaption {
+  @include type-layout(s, 1);
+
+  @include respond-to(xxl) {
+    @include type-layout(s-2, 1);
+  }
+}
+
+.footer {
+  @include type-layout(xs, 1);
+
+  @include respond-to(xxl) {
+    @include type-layout(xs-2, 1);
+  }
+}
+
+/* Apply heading font stack to heading, labels etc. */
+
+h1,
+h2,
+h3,
+th,
+nav,
+label,
+legend,
+article > header,
+.header,
+.footer {
+  @include typeface(headings);
+  color: color(headings);
+  font-weight: normal;
+}
+
+article,
+aside {
+  ul {
+    @extend %ul-straight-left;
+  }
+
+  ol {
+    @extend %ol-straight-left;
+  }
+}
+
+figure {
+  @include respond-to(s) {
+    display: table;
+
+    &.left {
+      @include padding(.5 .5 0 0);
+      margin: 0;
+      float: left;
+      clear: both;
+
+      figcaption {
+        @include padding(0 .5 .5 0);
+      }
+    }
+
+    &.right {
+      @include padding(.5 0 0 .5);
+      margin: 0;
+      float: right;
+      clear: both;
+
+      figcaption {
+        @include padding(0 0 .5 .5);
+      }
+    }
+  }
+}
+
+figcaption {
+  @include respond-to(s) {
+    display: table-caption;
+    caption-side: bottom;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Page */
+
+body {
+  background-color: color(backdrop);
+}
+
+.layout-center {
+  background-color: color(body-bg);
+}
+
+.header {
+  padding-top: $zen-gutters / 2;
+
+  @include respond-to(m) {
+    padding-top: $zen-gutters;
+  }
+
+  &__logo {
+    width: 100px;
+  }
+}
+
+/* Navigation */
+
+.main-menu {
+  @include margin-top(.5);
+  @include margin-bottom(.5);
+  outline: 0;
+
+  li {
+    @include margin-right(.5);
+    @include margin-bottom(.5);
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    background-color: color(brand);
+    color: color(text-bg);
+    padding: 2px 8px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: color(brand-dark);
+    }
+
+    &:active,
+    &.active {
+      background-color: color(brand);
+      text-decoration: underline;
+    }
+  }
+}
+
+.menu a.active {
+  text-decoration: none;
+}
+
+.footer {
+  @include margin-top(1.5);
+  @include padding(.5 0);
+  text-align: center;
+  border-top: 2px solid color(brand);
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Print. */
+
+aside,
+nav,
+footer {
+  @extend %print-none;
+}
+
+@media print {
+  body,
+  .layout-center {
+    background-color: color(white);
+  }
+
+  .layout-swap {
+    padding-top: 0;
+  }
+
+  [role='main'] {
+    width: 100%;
+  }
+
+  .layout-swap__top {
+    border-bottom: 0;
+  }
+
+  /* Zen overrides */
+  :link,
+  :visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: '';
+  }
+
+}

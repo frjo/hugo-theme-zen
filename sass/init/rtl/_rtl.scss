@@ -1,0 +1,28 @@
+$include-rtl: true !default;
+
+// rtl()
+//
+// Includes Right-To-Left language support by adding a parent selector of
+// `[dir="rtl"]`. Since the dir attribute is usually defined on the html element
+// of a page, using this mixin on a ruleset that matches the html element won't
+// work.
+//
+// Can be turned off globally by setting `$include-rtl: false;`.
+//
+// $selector = '[dir="rtl"]' - The RTL parent selector.
+//
+// Style guide: sass.mixins.rtl
+@mixin rtl($selector: '[dir="rtl"]') {
+  @if $include-rtl {
+    @if & {
+      #{$selector} & {
+        @content;
+      }
+    }
+    @else {
+      #{$selector} {
+        @content;
+      }
+    }
+  }
+}

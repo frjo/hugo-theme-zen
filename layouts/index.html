@@ -1,0 +1,14 @@
+{{ define "meta" }}
+{{ partial "single_meta.html" . }}
+{{ partial "single_json_ld.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<main class="layout-3col__left-content" role="main">
+<article>
+{{ .Content }}
+</article>
+</main>
+{{ partial "menu.html" . }}
+{{ partial "sidebar.html" . }}
+{{ end }}

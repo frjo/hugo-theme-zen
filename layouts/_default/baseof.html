@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+<link rel="stylesheet" href="/css/styles.css?{{ readFile "/themes/zen/static/css/styles.css" | sha1}}">
+{{ partial "meta.html" . }}
+{{ block "meta" . }}{{ end }}
+</head>
+
+<body class="one-sidebar sidebar-second">
+<div class="layout-center">
+<header class="header" role="banner">
+<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>
+<h1 class="header__site-name">
+<a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
+</h1>
+</header>
+
+<div class="layout-3col layout-swap">
+{{ block "main" . }}{{ end }}
+</div>
+
+<footer class="footer" role="contentinfo">
+<p>{{ with .Site.Params.copyright }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
+{{ with .Site.Params.footer }}<p>{{ . | markdownify }}</p>{{ end }}
+{{ if .Site.Params.poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
+</footer>
+</div>
+{{ if .Site.Params.jquery }}<script src="/js/jquery.min.js"></script>{{ end }}
+{{ if and .Site.Params.jquery .Site.Params.slicknav }}<script src="/js/jquery.slicknav.min.js"></script>{{ end }}
+{{ if .Site.Params.jquery }}<script src="/js/script.js"></script>{{ end }}
+</body>
+</html>

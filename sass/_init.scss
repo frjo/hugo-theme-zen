@@ -1,0 +1,69 @@
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// project, each .scss file has a `@import 'init';` declaration. The _init.scss
+// file is in charge of importing all the other partials needed for the
+// project.
+//
+// The initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Sass modules.
+// - Last we define our custom mixins for this project.
+//
+// Weight: -1
+//
+// Style guide: sass.init
+
+
+// The following Sass functions/mixins are required to generate some variables'
+// values, so we load them first.
+@import 'breakpoint';
+@import 'chroma/functions';
+
+@import 'init/colors';
+@import 'init/variables';
+
+
+// 3rd party libraries
+//
+// The following sass modules are shared with all .scss files:
+// - [Breakpoint](http://breakpoint-sass.com/)
+// - [Chroma](https://github.com/JohnAlbin/chroma)
+// - [Support-for](https://github.com/JohnAlbin/support-for)
+// - [Typey](https://github.com/jptaranto/typey)
+// - [Zen Grids](http://zengrids.com/help/)
+//
+// Additional pre-built libraries can be found on the [Sache website](http://www.sache.in/).
+//
+// Style guide: sass.modules
+
+// Add Chroma to manage colors.
+@import 'chroma';
+@import 'chroma/kss';
+// Add support-for to manage normalize-scss' browser support.
+@import 'support-for';
+// Add typey to manage font sizes and margins.
+@import 'typey';
+// Add the Zen Grids responsive layout mixins.
+@import 'zen-grids';
+
+
+// Mixins
+//
+// Custom mixins used on this site.
+//
+// Weight: 1
+//
+// Style guide: sass.mixins
+@import 'init/clearfix/clearfix';
+@import 'init/rtl/rtl';
+@import 'init/visually-hidden/visually-hidden';
+
+// Functions
+//
+// Custom functions used on this site.
+//
+// Weight: 1
+//
+// Style guide: sass.functions
+@import 'init/image-url/image-url';

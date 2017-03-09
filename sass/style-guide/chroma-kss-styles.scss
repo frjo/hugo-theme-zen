@@ -1,0 +1,4 @@
+// Build the stylesheet needed for the color section of the KSS style guide.
+@import 'init';
+
+@include chroma-kss-styles();

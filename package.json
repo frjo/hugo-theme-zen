@@ -1,0 +1,39 @@
+{
+  "name": "zen",
+  "version": "1.0.0",
+  "description": "The node.js requirements to build this project.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Fredrik Jonsson",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "chroma-sass": "^1.2.6",
+    "del": "^2.2.2",
+    "eslint": "^3.17.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-eslint": "^3.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "kss": "^3.0.0-beta.18",
+    "node-sass-import-once": "^1.2.0",
+    "sass-lint": "^1.10.2",
+    "support-for": "^1.0.7",
+    "typey": "^1.1.1",
+    "zen-grids": "^2.0.3"
+  },
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "private": true
+}

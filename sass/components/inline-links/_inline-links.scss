@@ -1,0 +1,36 @@
+// Inline links
+//
+// A list of links that are inline with each other.
+//
+// Markup: inline-links.twig
+//
+// Style guide: components.inline-links
+
+.inline-links,
+%inline-links {
+  padding: 0;
+
+  &__item {
+    display: inline;
+    list-style-type: none;
+    padding: 0 1em 0 0;
+
+    @include rtl() {
+      // Bug in Safari causes display: inline to fail.
+      display: inline-block;
+      padding: 0 0 0 1em;
+    }
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.inline.links {
+  @extend %inline-links;
+
+  li {
+    @extend %inline-links__item;
+  }
+}

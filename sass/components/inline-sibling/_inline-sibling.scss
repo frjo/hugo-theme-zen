@@ -1,0 +1,55 @@
+// Inline sibling
+//
+// An element that needs to appear inline with the content that follows.
+//
+// Markup: inline-sibling.twig
+//
+// Style guide: components.inline-sibling
+
+.inline-sibling,
+%inline-sibling {
+  display: inline;
+  margin-right: 10px;
+
+  @include rtl() {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  // All of the children of the element need to be inline as well.
+  &__child,
+  * {
+    display: inline;
+  }
+
+  // The next element (and its first-child element, if the markup is nested)
+  // needs to be inline.
+  &__adjacent,
+  + *,
+  + * > :first-child,
+  + * > :first-child > :first-child {
+    display: inline;
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+// Drupal core.
+.field-label-inline {
+  .field-label {
+    @extend %inline-sibling;
+  }
+
+  // Revert core's ridiculous styling without polluting the component.
+  .field-label,
+  .field-items {
+    float: none;
+  }
+}
+
+// The inline field label used by the Fences 7.x-1.x module.
+span.field-label {
+  @extend %inline-sibling;
+}

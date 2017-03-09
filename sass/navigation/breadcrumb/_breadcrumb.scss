@@ -1,0 +1,33 @@
+// Dependencies.
+@import 'components/visually-hidden/visually-hidden';
+
+// Breadcrumb navigation
+//
+// The path to the current page in the form of a list of links.
+//
+// Markup: breadcrumb.twig
+//
+// Style guide: navigation.breadcrumb
+
+.breadcrumb,
+%breadcrumb {
+  @media print {
+    display: none;
+  }
+
+  &__title {
+    @extend %visually-hidden;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

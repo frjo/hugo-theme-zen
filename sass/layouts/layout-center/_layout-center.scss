@@ -1,0 +1,64 @@
+// Dependencies.
+// Allow layout-center's margin/padding to override layout-3col.
+@import 'layouts/layout-3col/layout-3col';
+
+// Layout Center
+//
+// All other layouts should be nested inside this centered layout to ensure that
+// content does not get too wide on very large screens.
+//
+// Applying a `.layout-*` class to the same HTML element as `.layout-center`
+// would cause that element's grid to mis-align with the rest of the grid on the
+// page, but this component will automatically detect the other `.layout-*`
+// class and automatically use the `.layout-center--shared-grid` variant
+// instead.
+//
+// .layout-center--shared-grid - If `.layout-center` is applied to the same div
+//   as another .layout-* class, then this variant should be used to prevent the
+//   shared layout's grid from mis-aligning. Note: Each time a new .layout-*
+//   component is created, this component will need to be modified.
+//
+// Markup: layout-center.twig
+//
+// Weight: -1
+//
+// Style guide: layouts.layout-center
+
+.layout-center,
+%layout-center {
+  @include zen-apply-gutter-padding();
+  margin: 0 auto;
+
+  // We wrap the max-width declaration with zen-layout() so we can see the value
+  // of $zen-gutters when it is at the larger "xl"-sized media query.
+  @include zen-layout(xl) {
+    // The max content width is 1140px (the container width minus the gutters.)
+    max-width: 1140px + $zen-gutters;
+  }
+
+  @include zen-respond-to(m) {
+    // Since we are using zen-respond-to(), the values in $zen-layouts will
+    // override the global value for $zen-gutters.
+    @include zen-apply-gutter-padding();
+  }
+
+  // Since .layout-center has overridden the negative margin on another
+  // .layout-* container, the grid children will be misaligned due to
+  // .layout-center's gutter padding. So we remove it.
+  &--shared-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//
+// Fugly selectors.
+//
+
+.layout-center {
+  // Ensure the .layout-center--shared-grid variant is automatically used by
+  // adding all other .layout-* classes here.
+  &.layout-3col {
+    @extend %layout-center--shared-grid;
+  }
+}

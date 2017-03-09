@@ -1,0 +1,8 @@
+<meta name="description" content="{{ replaceRE "\n" "" (.Description | default .Summary) }}">
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{ replaceRE "\n" "" (.Description | default .Summary) }}">
+<meta property="og:locale" content="{{ .Lang }}">
+{{ with .Params.thumbnail }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ . }}">{{ end }}

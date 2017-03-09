@@ -1,0 +1,49 @@
+// The relative path from the css directory to the sass directory.
+$image-url-path-to-source: '../sass' !default;
+// The relative path from the root sass directory to where your components usually lie.
+$image-url-subdirectory: 'components' !default;
+
+// image-url()
+//
+// If you include your images next to your component Sass files, you need to
+// specify a url() to point from the generated CSS to the Sass source like this:
+//
+// ```css
+// content: url(../sass/components/is-quite/long.svg);
+// ```
+//
+// With the `image-url()` function the path to all your components is assumed to
+// start with `../sass/components/` and you just need to give it the last, short
+// bit of the path in your Sass code like this:
+//
+// ```scss
+// content: image-url(is-quite/short.svg);
+// ```
+//
+// If you want to point at an image that is not in the components sub-directory
+// of your sass directory, you can override the default $subdirectory by
+// passing it in as the first parameter of `image-url()` like this:
+//
+// ```scss
+// content: image-url(base, grouping/blockquote.svg);
+// ```
+//
+// which would output `url(../sass/base/grouping/blockquote.svg)`.
+//
+// $subdirectory   = $image-url-subdirectory - Optional. The relative path from
+//                   the root of your Sass source to the sub-directory where
+//                   components usually lie.
+// $path           - Required. The path to the image relative to the
+//                   `$subdirectory`.
+// $path-to-source = $image-url-path-to-source - Optional. The relative path
+//                   from the css build directory to the sass source directory.
+//
+// Style guide: sass.mixins.image-url
+@function image-url($subdirectory, $path: null, $path-to-source: $image-url-path-to-source) {
+  // If only 1 parameter is given, its value is intended for the $path.
+  @if type-of($path) == 'null' {
+    $path: $subdirectory;
+    $subdirectory: $image-url-subdirectory;
+  }
+  @return url(unquote($path-to-source + '/' + $subdirectory + '/' + $path));
+}

@@ -1,0 +1,73 @@
+// Links
+//
+// Hyperlinks are used to allow the user to navigate to other resources or to
+// download a resource.
+//
+// The order of link states are based on Eric Meyer's article:
+// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+//
+// :visited - A link that has already been visited.
+// :hover   - A link that is being hovered over.
+// :focus   - A link that has been given keyboard focus.
+// :active  - A link that is being actively clicked.
+//
+// Markup: links-a.twig
+//
+// Style guide: base.link
+
+a,
+%link {
+  color: color(link);
+  // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  -webkit-text-decoration-skip: objects;
+}
+
+// Any element can receive focus, but only links can be visited, so we can
+// safely lower this selector's specificity. This also ensures visited links
+// with additional styles won't have their styles overridden.
+:visited {
+  color: color(link-visited);
+}
+
+a:hover,
+a:focus {
+  // Add your styles.
+}
+
+a:active {
+  color: color(link-active);
+
+  &:not(.button) {
+    // Remove the gray background on active links in IE 10.
+    background-color: transparent;
+  }
+}
+
+// Remove the outline on focused links when they are also active or hovered
+// in all browsers (opinionated).
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+@media print {
+  // Underline all links.
+  :link,
+  :visited {
+    text-decoration: underline;
+  }
+
+  // Add visible URL after links.
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-weight: normal;
+    font-size: $base-font-size;
+    text-decoration: none;
+  }
+
+  // Only display useful links.
+  a[href^='javascript:']::after,
+  a[href^='#']::after {
+    content: '';
+  }
+}

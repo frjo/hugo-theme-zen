@@ -1,0 +1,22 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "meta" }}
+{{ partial "single_meta.html" . }}
+{{ partial "single_json_ld.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<main class="layout-3col__left-content" role="main">
+<h1>{{ .Title }}</h1>
+<article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} single-view">
+<header>
+</header>
+<div>
+{{ .Content }}
+</div>
+</article>
+</main>
+
+{{ partial "menu.html" . }}
+{{ partial "sidebar.html" . }}
+{{ end }}

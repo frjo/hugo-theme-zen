@@ -1,0 +1,57 @@
+// Pager
+//
+// Paged navigation is a list of page numbers when more than 1 page of content
+// is available.
+//
+// Markup: pager.twig
+//
+// Style guide: navigation.pager
+
+.pager,
+%pager {
+  clear: both;
+  padding: 0;
+  text-align: center;
+
+  @media print {
+    display: none;
+  }
+
+  // A page item in the pager list.
+  &__item {
+    display: inline;
+    padding: 0 .5em;
+    list-style-type: none;
+    background-image: none;
+  }
+
+  // The current page's list item.
+  &__current-item {
+    @extend %pager__item;
+    font-weight: bold;
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+// .pager-item     - A list item containing a page number in the list of pages.
+// .pager-first    - The first page's list item.
+// .pager-previous - The previous page's list item.
+// .pager-next     - The next page's list item.
+// .pager-last     - The last page's list item.
+// .pager-ellipsis - A concatenation of several list items using an ellipsis.
+
+.pager-item,
+.pager-first,
+.pager-previous,
+.pager-next,
+.pager-last,
+.pager-ellipsis {
+  @extend %pager__item;
+}
+
+.pager-current {
+  @extend %pager__current-item;
+}

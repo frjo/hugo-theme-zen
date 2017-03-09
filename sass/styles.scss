@@ -1,0 +1,87 @@
+// @file
+// The major stylesheet for this theme.
+//
+// We categorize our components by creating headings in this file. See the
+// description on the style guide home page for more information.
+
+
+// Colors and Sass
+//
+// Documentation for colors and Sass mixins and variables.
+//
+// Weight: -1
+//
+// Style guide: sass
+@import 'init';
+
+// Defaults
+//
+// These are the default base styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: base
+
+// Ensure fonts get loaded first to minimize front-end performance impact.
+@import 'base/fonts';
+@import 'base/normalize';
+
+// Layouts
+//
+// The layout styling for major parts of the page that are included with the
+// theme. Note: some Panels layouts are included in other parts of the system
+// and are not documented.
+//
+// Style guide: layouts
+@import 'layouts/layout-3col/layout-3col';
+@import 'layouts/layout-center/layout-center';
+@import 'layouts/layout-swap/layout-swap';
+
+// Components
+//
+// Design components are reusable designs that can be applied using just the CSS
+// class names specified in the component.
+//
+// Weight: 1
+//
+// Style guide: components
+
+@import 'components/box/box';
+@import 'components/clearfix/clearfix';
+@import 'components/divider/divider';
+@import 'components/header/header';
+@import 'components/hidden/hidden';
+@import 'components/highlight-mark/highlight-mark';
+@import 'components/inline-links/inline-links';
+@import 'components/inline-sibling/inline-sibling';
+@import 'components/print-none/print-none';
+@import 'components/responsive-video/responsive-video';
+@import 'components/visually-hidden/visually-hidden';
+@import 'components/watermark/watermark';
+@import 'components/wireframe/wireframe';
+
+// Navigation
+//
+// Navigation components are specialized design components that are used for
+// page navigation.
+//
+// Weight: 2
+//
+// Style guide: navigation
+
+@import 'navigation/breadcrumb/breadcrumb';
+@import 'navigation/more-link/more-link';
+@import 'navigation/nav-menu/nav-menu';
+@import 'navigation/navbar/navbar';
+@import 'navigation/pager/pager';
+@import 'navigation/skip-link/skip-link';
+
+// Custom
+@import 'custom/list-straight-left/list-straight-left';
+
+// Slicknav
+@import 'slicknav';
+
+// zen
+@import 'zen';

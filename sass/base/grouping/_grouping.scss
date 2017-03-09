@@ -1,0 +1,184 @@
+// Dependencies.
+@import 'base/text/text';
+@import 'components/divider/divider';
+
+// Grouping content
+//
+// Weight: 1
+//
+// Style guide: base.grouping
+
+
+// Block quotes
+//
+// The `<blockquote>` element is for quoting blocks of content from another
+// source within your document. Wrap the `<blockquote>` around any <abbr
+// title="HyperText Markup Language">HTML</abbr> as the quote. For straight
+// quotes, we recommend a `<p>`.
+//
+// Optionally, add a `<footer>` to identify the source of the quote, wrapping
+// the name of the source work in `<cite>`.
+//
+// Markup: grouping-blockquote.twig
+//
+// Style guide: base.grouping.blockquote
+
+blockquote {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  // Also indent the quote on both sides.
+  @include margin(1 $indent-amount);
+}
+
+// Lists
+//
+// Weight: -1
+//
+// Style guide: base.grouping.lists
+
+// Unordered list
+//
+// The `<ul>` element is a list of items in which the order does <em>not</em>
+// explicitly matter.
+//
+// Markup: grouping-ul.twig
+//
+// Style guide: base.grouping.lists.ul
+
+// Ordered list
+//
+// The `<ol>` element is a list of items in which the order <em>does</em>
+// explicitly matter.
+//
+// Markup: grouping-ol.twig
+//
+// Style guide: base.grouping.lists.ol
+
+// Description list
+//
+// The `<dl>` element is a list of terms with their associated descriptions.
+//
+// Markup: grouping-dl.twig
+//
+// Weight: 1
+//
+// Style guide: base.grouping.lists.dl
+
+dl,
+menu,
+ol,
+ul {
+  // Address margins set differently in IE 6/7.
+  @include margin(1 0);
+}
+
+// Turn off margins on nested lists.
+ol,
+ul {
+  ol,
+  ul {
+    margin: 0;
+  }
+}
+
+dt {
+  // Add your styles.
+}
+
+dd {
+  margin: 0 0 0 $indent-amount;
+
+  @include rtl {
+    margin: 0 $indent-amount 0 0;
+  }
+}
+
+// Address paddings set differently in IE 6/7.
+menu,
+ol,
+ul {
+  padding: 0 0 0 $indent-amount;
+
+  @include rtl {
+    padding: 0 $indent-amount 0 0;
+  }
+}
+
+@if support-for(ie, 7) {
+  // Correct list images handled incorrectly in IE 7.
+  nav ul,
+  nav ol {
+    list-style: none;
+    list-style-image: none;
+  }
+}
+
+// Figures
+//
+// The `<figure>` element can be used to annotate illustrations, diagrams,
+// photos, code listings, etc.
+//
+// Optionally, a `<figcaption>` element inside the `<figure>` represents the
+// caption of the figure.
+//
+// Markup: grouping-figure.twig
+//
+// Style guide: base.grouping.figure
+
+figure {
+  // Add the correct margin in IE 8.
+  @include margin(1 0);
+}
+
+figcaption {
+  // Add your styles.
+}
+
+// Horizontal rule
+//
+// The `<hr>` element represents a paragraph-level thematic break, e.g. a scene
+// change in a story, or a transition to another topic within a section of a
+// reference book.
+//
+// Markup: grouping-hr.twig
+//
+// Style guide: base.grouping.hr
+
+hr {
+  @extend %divider;
+  // Add the correct box sizing in Firefox.
+  box-sizing: content-box;
+  height: 0;
+  // Show the overflow in Edge and IE.
+  overflow: visible;
+}
+
+// Body copy
+//
+// The default `font-size` and `line-height` properties are applied to the
+// `<body>` element and all paragraphs. In addition, `<p>` (paragraphs) receive
+// a top and bottom margin.
+//
+// Markup: grouping-p.twig
+//
+// Weight: -2
+//
+// Style guide: base.grouping.p
+
+p,
+pre {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  @include margin(1 0);
+}
+
+// Preformatted text
+//
+// The `<pre>` element represents a block of preformatted text, such as
+// fragments of computer code, ASCII art, etc.
+//
+// Markup: grouping-pre.twig
+//
+// Style guide: base.grouping.pre
+
+pre {
+  @extend %monospace;
+}

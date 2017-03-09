@@ -1,0 +1,31 @@
+// The height of the navigation container.
+$layout-swap-height: 2 * $base-line-height;
+
+// Layout swap
+//
+// Uses absolute positioning and selective padding to make 2 elements appear to
+// swap places in the visual order while maintaining their original HTML source
+// order.
+//
+// Markup: layout-swap.twig
+//
+// Style guide: layouts.layout-swap
+
+.layout-swap,
+%layout-swap {
+  position: relative;
+
+  @include respond-to(xs) {
+    // Move all the children down to make room for the "top" element.
+    padding-top: $layout-swap-height;
+  }
+
+  &__top {
+    @include respond-to(xs) {
+      position: absolute;
+      top: 0;
+      height: $layout-swap-height;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// Clearfix
+//
+// Allows the bottom of an element to extend to the bottom of all floated child
+// elements. See http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// Markup: clearfix.twig
+//
+// Style guide: components.clearfix
+
+.clearfix,
+%clearfix {
+  @include clearfix();
+}

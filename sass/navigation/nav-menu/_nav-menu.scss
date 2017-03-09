@@ -1,0 +1,61 @@
+// Nav menu
+//
+// A "nav menu" is secondary, hierarchical navigation which can be displayed to the
+// side or below the main content.
+//
+// Markup: nav-menu.twig
+//
+// Style guide: navigation.nav-menu
+
+.nav-menu,
+%nav-menu {
+
+  &__item {
+    list-style-image: image-url('navigation', 'nav-menu/leaf.svg');
+    list-style-type: square;
+
+    &.is-expanded,
+    &--is-expanded {
+      list-style-image: image-url('navigation', 'nav-menu/expanded.svg');
+      list-style-type: circle;
+    }
+
+    &.is-collapsed,
+    &--is-collapsed {
+      list-style-image: image-url('navigation', 'nav-menu/collapsed.svg');
+      list-style-type: disc;
+
+      @include rtl() {
+        list-style-image: image-url('navigation', 'nav-menu/collapsed-rtl.svg');
+      }
+    }
+  }
+
+  &__link {
+    &.is-active,
+    &--is-active {
+      color: color(menu-active);
+    }
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.menu__item {
+  @extend %nav-menu__item;
+
+  &.is-expanded {
+    @extend %nav-menu__item--is-expanded;
+  }
+
+  &.is-collapsed {
+    @extend %nav-menu__item--is-collapsed;
+  }
+}
+
+// The active item in a Drupal menu.
+.menu a.active {
+  @extend %nav-menu__link--is-active;
+}

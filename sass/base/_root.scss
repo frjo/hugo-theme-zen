@@ -1,0 +1,37 @@
+// sass-lint:disable no-vendor-prefixes
+
+// Use the saner border-box model for all elements.
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include define-type-sizing();
+  // Change the default font family in all browsers (opinionated).
+  @include typeface(body);
+  // Prevent adjustments of font size after orientation changes in IE and iOS.
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // On short pages, we want any background gradients to fill the entire height
+  // of the browser.
+  min-height: 100%;
+}
+
+body {
+  // Output a horizontal grid to help with debugging typography. The
+  // $typey-debug variable will toggle its output.
+  @include typey-debug-grid();
+  // Remove default margin and padding.
+  margin: 0;
+  padding: 0;
+  color: color(text);
+  background-color: color(text-bg);
+}
+
+@include respond-to(xxl) {
+
+  html {
+    @include define-type-sizing($base-font-size-2, $base-line-height-2);
+  }
+
+}

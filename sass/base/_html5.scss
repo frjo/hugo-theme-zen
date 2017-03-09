@@ -1,0 +1,45 @@
+// HTML5 display definitions
+// ==========================================================================
+
+// Add the correct display in IE <10.
+// Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
+// Add the correct display in IE for `main`.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+// Add the correct display in IE <10.
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+// Add the correct display and remove excess height in iOS 4-7.
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+progress {
+  vertical-align: baseline;
+}
+
+// Add the correct display in IE <11, Safari <8, and Firefox <22.
+template,
+[hidden] {
+  display: none;
+}

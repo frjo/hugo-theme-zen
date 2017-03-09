@@ -1,0 +1,20 @@
+{{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}
+
+{{ define "main" }}
+<main class="layout-3col__left-content" role="main">
+{{ range .Data.Pages }}
+<article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} list-view">
+<header>
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><h2>
+</header>
+<div>
+{{ .Summary }}
+</div>
+</article>
+{{ end }}
+</main>
+
+{{ partial "menu.html" . }}
+{{ partial "sidebar.html" . }}
+
+{{ end }}

@@ -1,0 +1,41 @@
+// Visually hidden
+//
+// Make an element visually hidden, but accessible to screen readers, etc.
+//
+// .visually-hidden--off        - Turns off the visually-hidden effect.
+// .visually-hidden--focusable  - Makes an element visually hidden by default,
+//                                but visible when receiving focus.
+// .visually-hidden--focusable:focus  - A focused, and visible, element.
+//
+// Markup: visually-hidden.twig
+//
+// Style guide: components.visually-hidden
+
+.visually-hidden,
+%visually-hidden {
+  @include visually-hidden();
+
+  &--off {
+    @include visually-hidden--off();
+  }
+
+  &--focusable {
+    &:active,
+    &:focus {
+      @extend %visually-hidden--off;
+    }
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.element-invisible {
+  @extend %visually-hidden;
+}
+
+.element-focusable {
+  @extend %visually-hidden;
+  @extend %visually-hidden--focusable;
+}

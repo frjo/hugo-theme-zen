@@ -1,0 +1,40 @@
+// "More" link
+//
+// Styles the "Read more…" and "Help" links common in Drupal.
+//
+// Markup: more-link.twig
+//
+// Style guide: navigation.more-link
+
+.more-link,
+%more-link {
+  text-align: right;
+
+  @include rtl() {
+    text-align: left;
+  }
+
+  &__help-icon {
+    padding: 1px 0 1px 20px;
+    background-image: image-url('navigation', 'more-link/more-link__help-icon.svg');
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+
+    @include rtl() {
+      padding: 1px 20px 1px 0;
+      background-position: 100% 50%;
+    }
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.more-help-link {
+  @extend %more-link;
+
+  a {
+    @extend %more-link__help-icon;
+  }
+}

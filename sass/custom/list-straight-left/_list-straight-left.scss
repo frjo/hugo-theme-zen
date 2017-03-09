@@ -1,0 +1,55 @@
+// Lists with a straight left margin.
+
+%ul-straight-left {
+  list-style: none;
+  padding-left: 1rem;
+  text-indent: -1rem;
+
+  & > li {
+    &::before {
+      @include font-size(s);
+      @include padding-right(.5);
+      content: '\2022';
+
+      @include respond-to(xxl) {
+        @include font-size(s-2);
+      }
+    }
+  }
+}
+
+%ol-straight-left {
+  display: table;
+  list-style: none;
+  padding: 0;
+
+  & > li {
+    display: table-row;
+    counter-increment: table-ol;
+
+    &::before {
+      @include font-size(s);
+      @include padding-right(.5);
+      display: table-cell;
+      content: counter(table-ol) '.';
+      text-align: right;
+
+      @include respond-to(xxl) {
+        @include font-size(s-2);
+      }
+    }
+  }
+}
+
+%ul-straight-left--off {
+  padding-left: 0;
+  text-indent: 0;
+
+  & > li {
+    &::before {
+      font-size: inherit;
+      padding-right: 0;
+      content: '';
+    }
+  }
+}

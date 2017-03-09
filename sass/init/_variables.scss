@@ -1,0 +1,215 @@
+// Variables
+//
+// Set variables for this site before a library sets its !default value.
+//
+// Style guide: sass.variables
+
+
+// Browser support
+//
+// For older versions of browsers, some Sass relies on the `support-for()` to
+// control whether extra CSS is needed to be output. The `support-for()`
+// function and the `$support-for` variable are documented on the [support-for
+// homepage](https://github.com/JohnAlbin/support-for).
+//
+// Style guide: sass.variables.support-for
+
+// Support the same browsers as normalize.css v3.
+// Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
+$support-for: (
+  // IE 9-11
+  ie:  9,
+  // The last 4 versions of all other browsers.
+  '*': -4,
+);
+
+
+// Font faces, stacks and sizes.
+//
+// Font styling and line heights are controlled by the several variables that
+// used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
+// These variable and mixins are documented on the [Typey
+// homepage](https://github.com/jptaranto/typey).
+//
+// Style guide: sass.variables.typey
+
+// The font size set on the root html element.
+$base-font-size:    22px;
+$base-font-size-2:  18px;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height:    31px;
+$base-line-height-2:  25px;
+
+$base-multiplier: $base-font-size / $base-font-size-2;
+
+$xxl-2: 34px * $base-multiplier;
+$xl-2:  28px * $base-multiplier;
+$l-2:   22px * $base-multiplier;
+$m-2:   18px * $base-multiplier;
+$s-2:   16px * $base-multiplier;
+$xs-2:  14px * $base-multiplier;
+
+// The font sizes in our type hierarchy as tee shirt sizes.
+$font-size: (
+  xxl:              28px,
+  xl:               26px,
+  l:                24px,
+  m:                $base-font-size,
+  s:                18px,
+  xs:               16px,
+  xxl-2:            $xxl-2,
+  xl-2:             $xl-2,
+  l-2:              $l-2,
+  m-2:              $m-2,
+  s-2:              $s-2,
+  xs-2:             $xs-2
+);
+
+// Typey allows you to alter font weights site-wide with this map.
+$font-weight: (
+  bold:             bold,
+  medium:           500,
+  normal:           normal,
+  light:            300,
+  lighter:          lighter,
+);
+
+// The following font family declarations use widely available fonts.
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// Serif font stacks.
+$times-new-roman: 'Times New Roman', Times, Georgia, 'DejaVu Serif', serif;
+$times:           Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
+$georgia:         Georgia, 'Times New Roman', 'DejaVu Serif', serif;
+$garamond:        'Garamond Premier Pro', 'Adobe Garamond', Garamond, Baskerville, 'Times New Roman', serif;
+
+// Sans-serif font stacks.
+$verdana:         Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+$tahoma:          Tahoma, Verdana, 'DejaVu Sans', sans-serif;
+$helvetica:       Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+$arial:           Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+$impact:          Impact, 'Arial Narrow', Helvetica, sans-serif;
+$lucida:          'Lucida Grande', 'Lucida Sans Unicode', Lucida, Verdana, sans-serif;
+$futura:          Futura, 'Century Gothic', AppleGothic, sans-serif;
+
+// Monospace font stacks.
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+//$menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier New', monospace, sans-serif;
+$menlo:           Menlo, 'Ubuntu Mono', 'DejaVu Sans Mono', 'Courier New', Courier, monospace, sans-serif;
+
+// The font faces you specify in the $typefaces map can be used in the
+// typeface() mixin.
+$typefaces: (
+  body: (
+    font-family: $garamond,
+  ),
+  headings: (
+    font-family: $futura,
+  ),
+  monospace: (
+    font-family: $menlo,
+  ),
+  compact: (
+    font-family: $impact,
+    weight: bold,
+    case: uppercase,
+    // We could also specify the following property:
+    // letter-spacing: .5px,
+  ),
+);
+
+// Output a horizontal grid to help with debugging typography.
+$typey-debug: false;
+
+// The length unit in which to output font size and margin values.
+// Supported values: px, em, rem.
+$base-unit:         'rem';
+
+// px fallbacks for rem units are needed for IE 8 and earlier.
+$rem-fallback:      false;
+
+
+// Breakpoints
+//
+// Use the `respond-to()` mixin to use named breakpoints. Documentation is
+// available in the [Breakpoint wiki
+// pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
+//
+// Style guide: sass.variables.breakpoints
+
+@include add-breakpoint(xxxs, (333px, 'no-query' true));
+@include add-breakpoint(xxs,  (444px, 'no-query' true));
+@include add-breakpoint(xs,   (555px, 'no-query' true));
+@include add-breakpoint(s,    (666px, 'no-query' true));
+@include add-breakpoint(m,    (777px, 'no-query' true));
+@include add-breakpoint(l,    (888px, 'no-query' true));
+@include add-breakpoint(xl,   (999px, 'no-query' true));
+@include add-breakpoint(xxl,  (1111px));
+@include add-breakpoint(xxxl, (1222px));
+
+// Output media queries where the above px are converted to ems.
+// @include breakpoint-set('to ems', true);
+
+
+// Zen grids
+//
+// The default grid system is built using the Zen Grids sass module. Full
+// documentation is available on the [Zen Grids website](http://zengrids.com/).
+//
+// Note: if you are more comfortable using another grid system, you can easily
+// remove Zen Grids and its layouts.
+//
+// Style guide: sass.variables.zen-grids
+
+// These are needed for all breakpoints on all layouts.
+$zen-auto-include-grid-item-base: false;
+$zen-box-sizing: universal-border-box;
+
+// First we set the values we need for the mobile version of our layouts (the
+// version that does _not_ appear inside any @media queries.)
+$zen-columns: 1;
+$zen-gutters: 20px;
+
+// Then we set the values we need for each of the layouts at larger media query
+// sizes. Note how the names of the layouts match the names of our breakpoints
+// above. That allows a single zen-respond-to() to both use the proper item
+// from $zen-layouts and from $breakpoints.
+$zen-layouts: (
+  m: (
+    columns: 2,
+    // The gutters in the layouts are larger on mobile.
+    gutters: 40px,
+  ),
+  xl: (
+    columns: 3,
+    gutters: 40px,
+  ),
+);
+
+// See $include-rtl below.
+$zen-rtl-selector: '[dir="rtl"]';
+
+
+// Miscellaneous variables
+//
+// `$indent-amount` controls the amount lists, blockquotes and comments are indented.
+//
+// `$include-rtl` controls whether RTL styles are output. Rather than include a separate `*-rtl.css` file, Zen 6 uses Drupal 8's standard `[dir="rtl"]` selector for RTL language support.
+//
+// weight: 10
+//
+// Style guide: sass.variables.misc
+
+$indent-amount: 2 * $base-font-size;
+
+$include-rtl: false;
+// Automatically turn off Zen Grids' RTL support if $include-rtl is false.
+@if not $include-rtl {
+  $zen-rtl-selector: false !global;
+}

@@ -1,0 +1,26 @@
+// A inverted box style.
+
+.inverted-box,
+%inverted-box {
+  @include padding(.5);
+  background: color(brand);
+  color: color(text-bg);
+  border-radius: 5px;
+
+  :link,
+  :visited {
+    color: color(text-bg);
+  }
+
+  p,
+  ul,
+  ol {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

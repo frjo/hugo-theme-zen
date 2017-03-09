@@ -1,0 +1,38 @@
+// Hidden
+//
+// Hide elements from all users. Compare to the visually-hidden component.
+//
+// Used for elements which should not be immediately displayed to any user. An
+// example would be a collapsible fieldset that will be expanded with a click
+// from a user.
+//
+// For anything you want to hide on page load when JavaScript is enabled, use
+// the `.js-hidden` class.
+//
+// Markup: hidden.twig
+//
+// Style guide: components.hidden
+
+.hidden,
+%hidden {
+  display: none;
+}
+
+.js-hidden,
+%js-hidden {
+  html.js & {
+    @extend %hidden;
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.element-hidden {
+  @extend %js-hidden;
+}
+
+.js-hide {
+  @extend %js-hidden;
+}

@@ -1,0 +1,33 @@
+$with-wireframes: false !default;
+
+// Wireframe
+//
+// Add wireframes around main layout elements. [Wireframes](http://www.boxesandarrows.com/view/html_wireframes_and_prototypes_all_gain_and_no_pain)
+// are useful when prototyping a website.
+//
+// This design is not applied to the site unless you set the following Sass
+// variable: `$with-wireframes: true;`
+//
+// Markup: wireframe.twig
+//
+// Style guide: components.wireframe
+
+@if $with-wireframes {
+
+  .wireframe,
+  %wireframe {
+    outline: 1px solid color(border);
+  }
+
+  //
+  // Drupal selectors.
+  //
+
+  .header,
+  .layout-3col > div,
+  .footer,
+  .region-bottom {
+    @extend %wireframe;
+  }
+
+}

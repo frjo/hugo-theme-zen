@@ -1,0 +1,23 @@
+// Normalize.css is intended to be used as an alternative to CSS resets.
+//
+// @see http://nicolasgallagher.com/about-normalize-css/
+//
+// Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+//       @see http://snook.ca/archives/html_and_css/no_css_reset/
+//
+// This directory is a slight fork of this original source:
+// - normalize-scss 5.0.3 | MIT/GPLv2 License | bit.ly/normalize-scss
+
+
+// Normalize-scss is broken into modular pieces to make it easier to edit.
+@import 'root';
+@import 'html5';
+@import 'links/links';
+@import 'headings/headings';
+@import 'text/text';
+@import 'grouping/grouping';
+@import 'embedded/embedded';
+@import 'tables/tables';
+
+// Note: we allow the .button component (loaded by forms) to override :link, by
+// loading links first.

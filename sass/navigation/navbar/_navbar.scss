@@ -1,0 +1,52 @@
+// Dependencies.
+@import 'components/visually-hidden/visually-hidden';
+
+// Navbar
+//
+// A simple method to get navigation links to appear in one line.
+//
+// Markup: navbar.twig
+//
+// Style guide: navigation.navbar
+
+.navbar,
+%navbar {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  @include rtl() {
+    text-align: right;
+  }
+
+  &__item,
+  li {
+    float: left;
+    padding: 0 10px 0 0;
+    list-style-type: none;
+    list-style-image: none;
+
+    @include rtl() {
+      float: right;
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.main-navigation {
+  // Hide the block titles put into the main-navigation area of the page.tpl.php.
+  .block-menu .block__title,
+  .block-menu-block .block__title {
+    @extend %visually-hidden;
+  }
+
+  // Main menu and secondary menu links and menu block links.
+  .links,
+  .menu {
+    @extend %navbar;
+  }
+}

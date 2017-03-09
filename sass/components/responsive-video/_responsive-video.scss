@@ -1,0 +1,45 @@
+// Responsive video
+//
+// Using a wrapper div, embedded videos can be made responsive so that their
+// intrinsic aspect ratio is preserved at any screen width. The
+// `responsive-video__embed` class is optional if the embed is an `iframe`.
+//
+// .responsive-video--4-3 - A video with a 4:3 aspect ratio instead of the
+//                          default 16:9 one.
+//
+// Markup: responsive-video.twig
+//
+// Style guide: components.responsive-video
+
+.responsive-video,
+%responsive-video {
+  position: relative;
+  padding-bottom: (9/16)*100%; // 16:9 aspect ratio
+  padding-top: 25px; // Height of video controls
+  height: 0;
+
+  iframe {
+    @extend %responsive-video__embed;
+  }
+
+  &__embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--4-3 {
+    padding-bottom: (3/4)*100%; // 4:3 aspect ratio
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.media-youtube-video,
+.media-vimeo-preview-wrapper {
+  @extend %responsive-video;
+}
