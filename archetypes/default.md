@@ -1,8 +1,7 @@
 ---
-date: "now()"
-slug: ""
-tags: ["", ""]
 title: ""
 author: ""
+slug: ""
+tags: ["", ""]
 
 ---
