@@ -1,5 +1,9 @@
 {{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}
 
+{{ define "meta" }}
+{{ partial "section_meta.html" . }}
+{{ end }}
+
 {{ define "main" }}
 <main class="layout-3col__left-content" role="main">
 {{ range .Data.Pages }}
