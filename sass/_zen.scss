@@ -117,7 +117,23 @@ body {
   }
 
   &__logo {
-    width: 100px;
+    @include respond-to(s) {
+      float: left;
+    }
+  }
+
+  &__site-name {
+    @include respond-to(s) {
+      float: left;
+    }
+  }
+
+  &__region {
+    @include respond-to(s) {
+      float: right;
+      width: 33%;
+      clear: none;
+    }
   }
 }
 
@@ -168,6 +184,22 @@ body {
     margin: 0;
   }
 }
+
+
+/* Search */
+
+.search-form {
+  @include padding-top(.5);
+  text-align: center;
+
+  @include respond-to(s) {
+    text-align: left;
+  }
+}
+
+.search-text {
+}
+
 
 /* Print. */
 

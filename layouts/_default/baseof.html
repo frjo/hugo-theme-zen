@@ -14,6 +14,7 @@
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
+<div class="header__region region region-header">{{ if .Site.Params.search }}{{ partial "search.html" . }}{{ end }}</div>
 </header>
 
 <div class="layout-3col layout-swap">
