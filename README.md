@@ -60,6 +60,7 @@ params:
   searchSize: 20    # Search field size, default 20.
   cacheBustCSS: true    # Add a cache busting hash on styles.css
   cacheBustJS: true    # Add a cache busting hash on script.js
+  supressRSSLink: false    # Do not generate rss links.
 ```
 
 
