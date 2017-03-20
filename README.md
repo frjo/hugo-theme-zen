@@ -18,6 +18,16 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 * Slicknav mobile menu
 
 
+## On the large screen
+
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn.png)
+
+
+## On the small screen
+
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
+
+
 ## Installation
 
 ```
