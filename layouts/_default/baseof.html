@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
 <head>
+<meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-<link rel="stylesheet" href="/css/styles.css?{{ readFile "/themes/zen/static/css/styles.css" | sha1}}">
 {{ partial "meta.html" . }}
 {{ block "meta" . }}{{ end }}
 </head>
@@ -27,8 +27,6 @@
 {{ if .Site.Params.poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
 </footer>
 </div>
-{{ if .Site.Params.jquery }}<script src="/js/jquery.min.js"></script>{{ end }}
-{{ if and .Site.Params.jquery .Site.Params.slicknav }}<script src="/js/jquery.slicknav.min.js"></script>{{ end }}
-{{ if .Site.Params.jquery }}<script src="/js/script.js"></script>{{ end }}
+{{ partial "scripts.html" . }}
 </body>
 </html>

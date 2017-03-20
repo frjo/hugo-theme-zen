@@ -1,0 +1,3 @@
+{{ if .Site.Params.jquery }}<script src="/js/jquery.min.js"></script>{{ end }}
+{{ if and .Site.Params.jquery .Site.Params.slicknav }}<script src="/js/jquery.slicknav.min.js"></script>{{ end }}
+{{ if .Site.Params.jquery }}<script src="/js/script.js?{{ readFile "/public/js/script.js" | sha1}}"></script>{{ end }}
