@@ -16,6 +16,7 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 * Minify css
 * jQuery 2
 * Slicknav mobile menu
+* Search with DuckDuckGo
 
 
 ## On the large screen
