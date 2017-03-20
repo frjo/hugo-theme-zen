@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-{{ partial "meta.html" . }}
+{{ partialCached "meta.html" . }}
 {{ block "meta" . }}{{ end }}
 </head>
 
@@ -14,7 +14,7 @@
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
-<div class="header__region region region-header">{{ if .Site.Params.search }}{{ partial "search.html" . }}{{ end }}</div>
+<div class="header__region region region-header">{{ if .Site.Params.search }}{{ partialCached "search.html" . }}{{ end }}</div>
 </header>
 
 <div class="layout-3col layout-swap">
@@ -27,6 +27,6 @@
 {{ if .Site.Params.poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
 </footer>
 </div>
-{{ partial "scripts.html" . }}
+{{ partialCached "scripts.html" . }}
 </body>
 </html>
