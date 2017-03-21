@@ -4,7 +4,7 @@
 {{ .Hugo.Generator }}
 <link rel="stylesheet" href="/css/styles.css{{ if .Site.Params.cacheBustCSS }}?{{ readFile "/public/css/styles.css" | sha1 }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {{ if and (.Site.RSSLink) (not .Site.Params.supressRSSLink) }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.RSSLink }}">{{ end }}
 {{ with .Site.Params.contact }}<meta name="contact" content="{{ . }}">{{ end }}
