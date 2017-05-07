@@ -45,7 +45,7 @@ options.sass = {
 options.autoprefixer = {
   browsers: [
     '> 1%',
-    'ie 10'
+    'ie 11'
   ]
 };
 
