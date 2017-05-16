@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-{{ partialCached "meta.html" . }}
-{{ block "meta" . }}{{ end }}
+{{ partialCached "meta.html" . -}}
+{{ block "meta" . }}{{ end -}}
 </head>
 
 <body class="{{ if $.Param "sidebar" | default true }}one-sidebar sidebar-second{{ else }}no-sidebars{{ end }}">
 <div class="layout-center">
 <header class="header" role="banner">
-{{ if $.Param "logo" | default true }}<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>{{ end }}
+{{ if $.Param "logo" | default true }}<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>{{ end -}}
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
@@ -18,13 +18,13 @@
 </header>
 
 <div class="layout-3col layout-swap">
-{{ block "main" . }}{{ end }}
+{{ block "main" . }}{{ end -}}
 </div>
 
 <footer class="footer" role="contentinfo">
 <p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
-{{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}
-{{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
+{{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end -}}
+{{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end -}}
 </footer>
 </div>
 {{ partialCached "scripts.html" . }}

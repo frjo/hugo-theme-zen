@@ -1,14 +1,18 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 
 {{ define "meta" }}
-{{ partial "single_meta.html" . }}
+{{ partial "single_meta.html" . -}}
 {{ end }}
 
-{{ define "main" }}
+{{ define "main" -}}
 <main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
 <h1>{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} single-view">
 <header>
+<p class="submitted">
+{{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
+<span class="created-date">{{ .Date.Format "2 January, 2006" }}</span>
+</p>
 </header>
 <div>
 {{ .Content }}
@@ -16,6 +20,6 @@
 </article>
 </main>
 
-{{ partial "menu.html" . }}
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . }}{{ end }}
+{{ partial "menu.html" . -}}
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 {{ end }}

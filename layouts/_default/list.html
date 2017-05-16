@@ -1,19 +1,19 @@
 {{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ .Site.Title }}{{ end }}{{ end }}
 
 {{ define "meta" }}
-{{ partial "section_meta.html" . }}
+{{ partial "section_meta.html" . -}}
 {{ end }}
 
-{{ define "main" }}
+{{ define "main" -}}
 <main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
-{{ $paginator := .Paginate (.Data.Pages) }}
-{{ range $paginator.Pages }}
+{{ $paginator := .Paginate (.Data.Pages) -}}
+{{ range $paginator.Pages -}}
 {{ .Render "summary"}}
-{{ end }}
+{{ end -}}
 
 {{ partial "pagination.html" . }}
 </main>
 
-{{ partial "menu.html" . }}
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . }}{{ end }}
+{{ partial "menu.html" . -}}
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 {{ end }}

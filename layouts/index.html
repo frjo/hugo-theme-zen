@@ -1,13 +1,13 @@
 {{ define "meta" }}
-{{ partial "single_meta.html" . }}
+{{ partial "single_meta.html" . -}}
 {{ end }}
 
-{{ define "main" }}
+{{ define "main" -}}
 <main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
 <article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} single-view">
 {{ .Content }}
 </article>
 </main>
-{{ partial "menu.html" . }}
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . }}{{ end }}
+{{ partial "menu.html" . -}}
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 {{ end }}

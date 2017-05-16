@@ -1,1 +1,3 @@
-{{ if and (.RSSLink) (not ($.Param "supressRSSLink")) }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} - {{ .Site.Title }}" href="{{ .RSSLink }}">{{ end }}
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" title="{{ .Name }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}

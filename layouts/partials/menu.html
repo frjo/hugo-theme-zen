@@ -5,15 +5,15 @@
 <h2 class="visually-hidden">Main menu</h2>
 <ul class="navbar clearfix">
 <li><a class="{{ if .IsHome }}active{{ end }}" href="/">Home</a></li>
-{{ range $section, $taxonomy := .Site.Sections }}
-{{ if eq $section "" }}
-{{ range $taxonomy.Pages }}
+{{ range $section, $taxonomy := .Site.Sections -}}
+{{ if eq $section "" -}}
+{{ range $taxonomy.Pages -}}
 <li><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-{{ end }}
-{{ else }}
+{{ end -}}
+{{ else -}}
 <li><a class="{{ if eq $currentSection $section }}active{{ end }}" href="/{{ urlize $section }}">{{ humanize $section }}</a></li>
-{{ end }}
-{{ end }}
+{{ end -}}
+{{ end -}}
 </ul>
 </nav>
 </div>
