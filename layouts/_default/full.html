@@ -1,0 +1,8 @@
+<article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} full-view">
+<header>
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><h2>
+</header>
+<div>
+{{ .Content }}
+</div>
+</article>

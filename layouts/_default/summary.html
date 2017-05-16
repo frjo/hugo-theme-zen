@@ -1,0 +1,9 @@
+<article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} list-view">
+<header>
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><h2>
+</header>
+<div>
+{{ .Summary }}
+</div>
+<a class="read-more" href="{{ .Permalink }}">Read the rest of this posting</a>
+</article>
