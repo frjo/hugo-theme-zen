@@ -1,1 +1,1 @@
-{{ if and (.RSSLink) (not .Site.Params.supressRSSLink) }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} - {{ .Site.Title }}" href="{{ .RSSLink }}">{{ end }}
+{{ if and (.RSSLink) (not ($.Param "supressRSSLink")) }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} - {{ .Site.Title }}" href="{{ .RSSLink }}">{{ end }}

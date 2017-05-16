@@ -5,20 +5,15 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="layout-3col__left-content" role="main">
-{{ range .Data.Pages }}
-<article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} list-view">
-<header>
-<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><h2>
-</header>
-<div>
-{{ .Summary }}
-</div>
-</article>
+<main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
+{{ $paginator := .Paginate (.Data.Pages) }}
+{{ range $paginator.Pages }}
+{{ .Render "summary"}}
 {{ end }}
+
+{{ partial "pagination.html" . }}
 </main>
 
 {{ partial "menu.html" . }}
-{{ partial "sidebar.html" . }}
-
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . }}{{ end }}
 {{ end }}

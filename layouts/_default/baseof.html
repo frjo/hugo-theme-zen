@@ -7,14 +7,14 @@
 {{ block "meta" . }}{{ end }}
 </head>
 
-<body class="one-sidebar sidebar-second">
+<body class="{{ if $.Param "sidebar" | default true }}one-sidebar sidebar-second{{ else }}no-sidebars{{ end }}">
 <div class="layout-center">
 <header class="header" role="banner">
-<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>
+{{ if $.Param "logo" | default true }}<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>{{ end }}
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
-<div class="header__region region region-header">{{ if .Site.Params.search }}{{ partialCached "search.html" . }}{{ end }}</div>
+<div class="header__region region region-header">{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}</div>
 </header>
 
 <div class="layout-3col layout-swap">
@@ -22,9 +22,9 @@
 </div>
 
 <footer class="footer" role="contentinfo">
-<p>{{ with .Site.Params.copyright }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
-{{ with .Site.Params.footer }}<p>{{ . | markdownify }}</p>{{ end }}
-{{ if .Site.Params.poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
+<p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
+{{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}
+{{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
 </footer>
 </div>
 {{ partialCached "scripts.html" . }}

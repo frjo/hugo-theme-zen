@@ -5,4 +5,4 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:description" content="{{ replaceRE "\n" "" (.Description | default .Summary) }}">
 <meta property="og:locale" content="{{ .Lang }}">
-{{ with .Params.thumbnail }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ . }}">{{ end }}
+{{ with $.Param "thumbnail" }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ . }}">{{ end }}
