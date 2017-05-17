@@ -2,9 +2,9 @@
 <html lang="{{ .Site.Language.Lang }}">
 <head>
 <meta charset="utf-8">
-<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+<title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+{{ block "meta" . }}{{ end }}
 {{ partialCached "meta.html" . -}}
-{{ block "meta" . }}{{ end -}}
 </head>
 
 <body class="{{ if $.Param "sidebar" | default true }}one-sidebar sidebar-second{{ else }}no-sidebars{{ end }}">

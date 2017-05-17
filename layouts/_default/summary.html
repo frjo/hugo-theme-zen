@@ -1,6 +1,10 @@
 <article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} list-view">
 <header>
 <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><h2>
+<p class="submitted">
+{{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
+<span class="created-date">{{ .Date.Format "2 January, 2006" }}</span>
+</p>
 </header>
 <div>
 {{ .Summary }}

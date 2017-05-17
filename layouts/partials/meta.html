@@ -2,12 +2,8 @@
 <meta name="MobileOptimized" content="width">
 <meta name="HandheldFriendly" content="true">
 {{ .Hugo.Generator }}
+{{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <link rel="stylesheet" href="/css/styles.css{{ if $.Param "cacheBustCSS" }}?{{ readFile "/public/css/styles.css" | sha1 }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-{{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" title="{{ .Name }}" href="{{ .Permalink | safeURL }}">
-{{ end -}}
-{{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end -}}
-
