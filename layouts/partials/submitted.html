@@ -1,0 +1,4 @@
+<p class="submitted">
+{{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
+<span class="created-date">{{ .Date.Format "2 January, 2006" }}</span>
+</p>

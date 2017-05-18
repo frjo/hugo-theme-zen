@@ -7,10 +7,7 @@
 <h1>{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} single-view">
 <header>
-<p class="submitted">
-{{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
-<span class="created-date">{{ .Date.Format "2 January, 2006" }}</span>
-</p>
+{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
 </header>
 <div>
 {{ .Content }}

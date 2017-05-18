@@ -1,12 +1,11 @@
 <article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} full-view">
 <header>
-<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-<p class="submitted">
-{{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
-<span class="created-date">{{ .Date.Format "2 January, 2006" }}</span>
-</p>
+<h2 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
 </header>
 <div>
 {{ .Content }}
 </div>
 </article>
+
+
