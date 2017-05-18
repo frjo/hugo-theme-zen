@@ -24,6 +24,7 @@ figcaption {
   }
 }
 
+article > header,
 .footer {
   @include type-layout(xs, 1);
 
@@ -50,7 +51,8 @@ article > header,
 }
 
 article,
-aside {
+aside,
+.blog-archive {
   ul {
     @extend %ul-straight-left;
   }
@@ -60,29 +62,93 @@ aside {
   }
 }
 
+article {
+
+  & > header {
+    color: color('grey');
+
+    .title-submitted {
+      margin-bottom: 0;
+    }
+
+    p {
+      @include margin(.2 0);
+    }
+
+  }
+
+  pre,
+  .codeblock {
+    @include type-layout(xs, .72);
+    color: color(headings);
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid color(border);
+    background-color: color(text-bg);
+    overflow: auto;
+    max-height: 250px;
+    max-width: 550px;
+  }
+
+  pre > code {
+    display: inline-block;
+    white-space: pre;
+  }
+
+  p > code {
+    @include type-layout(s, 1);
+    word-wrap: break-word;
+  }
+
+  .codeblock {
+    @include margin(.75 0);
+    white-space: nowrap;
+  }
+}
+
 figure {
   @include respond-to(s) {
     display: table;
 
+    img {
+      display: block;
+    }
+
     &.left {
-      @include padding(.5 .5 0 0);
+      @include padding(0 .5 .5 0);
       margin: 0;
       float: left;
       clear: both;
 
+      @include respond-to(s) {
+        @include padding(0 1 1 0);
+      }
+
       figcaption {
         @include padding(0 .5 .5 0);
+
+        @include respond-to(s) {
+          @include padding(0 1 1 0);
+        }
       }
     }
 
     &.right {
-      @include padding(.5 0 0 .5);
+      @include padding(0 0 .5 .5);
       margin: 0;
       float: right;
       clear: both;
 
+      @include respond-to(s) {
+        @include padding(0 0 1 1);
+      }
+
       figcaption {
         @include padding(0 0 .5 .5);
+
+        @include respond-to(s) {
+          @include padding(0 0 1 1);
+        }
       }
     }
   }
@@ -94,6 +160,7 @@ figcaption {
     caption-side: bottom;
   }
 
+  h4,
   p {
     margin: 0;
   }
@@ -131,7 +198,6 @@ body {
   &__region {
     @include respond-to(s) {
       float: right;
-      width: 33%;
       clear: none;
     }
   }
@@ -190,14 +256,10 @@ body {
 
 .search-form {
   @include padding-top(.5);
-  text-align: center;
-
-  @include respond-to(s) {
-    text-align: left;
-  }
 }
 
 .search-text {
+  @include type-layout(l, 1);
 }
 
 
