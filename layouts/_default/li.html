@@ -1,1 +1,1 @@
-<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> {{ .Date }}</li>
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> – {{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</li>

@@ -63,6 +63,8 @@ params:
   cacheBustJS: true     # Add a cache busting hash on script.js
   sidebar: true         # Show a sidebar to the right
   submitted: false      # Show author and date information for a post.
+  dateformat: ""        # Set the date format, default to "2 January, 2006"
+
 ```
 
 
