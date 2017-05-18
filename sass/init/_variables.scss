@@ -167,6 +167,10 @@ $rem-fallback:      false;
 //
 // Style guide: sass.variables.zen-grids
 
+// The max content width (the gutters with will be added).
+$max-content-width: 1140px;
+$max-no-sidebars-content-width: 840px;
+
 // These are needed for all breakpoints on all layouts.
 $zen-auto-include-grid-item-base: false;
 $zen-box-sizing: universal-border-box;

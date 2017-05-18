@@ -32,8 +32,11 @@
   // We wrap the max-width declaration with zen-layout() so we can see the value
   // of $zen-gutters when it is at the larger "xl"-sized media query.
   @include zen-layout(xl) {
-    // The max content width is 1140px (the container width minus the gutters.)
-    max-width: 1140px + $zen-gutters;
+    max-width: $max-content-width + $zen-gutters;
+
+    .no-sidebars & {
+      max-width: $max-no-sidebars-content-width + $zen-gutters;
+    }
   }
 
   @include zen-respond-to(m) {
