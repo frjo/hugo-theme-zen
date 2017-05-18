@@ -48,19 +48,21 @@ baseurl: "https://example.org/"
 title: "SiteTitle"
 
 params:
+  logo: false
   copyright: "This site is licensed under a 
       [Creative Commons Attribution-ShareAlike 4.0 International License]
       (https://creativecommons.org/licenses/by-sa/4.0/)."
   contact: "info@example.org"
   footer: "A [example.org](https://example.org/) production."
-  poweredby: true    # Show powered by hugo in footer
-  jquery: true
-  slicknav: true    # Activates SlickNav, a nice mobile menu.
-  search: true    # Site search with DuckDuckGo.
-  searchSize: 20    # Search field size, default 20.
+  poweredby: true       # Show powered by hugo in footer
+  jquery: true          # Add jQuery
+  slicknav: true        # Activates SlickNav, a nice mobile menu.
+  search: true          # Site search with DuckDuckGo.
+  searchSize: 20        # Search field size, default 20.
   cacheBustCSS: true    # Add a cache busting hash on styles.css
-  cacheBustJS: true    # Add a cache busting hash on script.js
-  supressRSSLink: false    # Do not generate rss links.
+  cacheBustJS: true     # Add a cache busting hash on script.js
+  sidebar: true         # Show a sidebar to the right
+  submitted: false      # Show author and date information for a post.
 ```
 
 
