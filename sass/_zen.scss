@@ -51,8 +51,7 @@ article > header,
 }
 
 article,
-aside,
-.blog-archive {
+aside {
   ul {
     @extend %ul-straight-left;
   }
@@ -62,15 +61,6 @@ aside,
   }
 }
 
-.blog-archive {
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 article {
 
   & > header {
