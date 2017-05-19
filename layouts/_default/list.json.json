@@ -1,25 +1,24 @@
-{{ $baseurl := .Site.BaseURL -}}
-{{ $list := (.Data.Pages) -}}
+{{ $list := .Data.Pages -}}
 {{ $length := (len $list) -}}
 {
     "version" : "https://jsonfeed.org/version/1",
     "title" : "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}",
     "description": "Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}",
-    "home_page_url" : "{{ $baseurl }}",
+    "home_page_url" : "{{ .Site.BaseURL }}",
     {{ with .OutputFormats.Get "JSON" -}}
     "feed_url" : "{{ .Permalink }}",
     {{ end -}}
     {{ with $.Param "icon" -}}
-    "icon" : "{{ (print $baseurl .) }}",
+    "icon" : "{{ . | absURL }}",
     {{ end -}}
     {{ with $.Param "favicon" -}}
-    "favicon" : "{{ (print $baseurl .) }}",
+    "favicon" : "{{ . | absURL }}",
     {{ end -}}
     {{ with .Site.Author.name -}}
     "author" : {
       "name" : "{{ . }}"{{ with $.Site.Author.url }},
       "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
-      "avatar": "{{ (print $baseurl .) }}"{{ end }}
+      "avatar": "{{ . | absURL }}"{{ end }}
     },
     {{ end -}}
     "items" : [
