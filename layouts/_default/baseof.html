@@ -22,7 +22,8 @@
 </div>
 
 <footer class="footer" role="contentinfo">
-<p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
+{{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . -}}{{ end }}
+<p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ .Site.Title }}</span>{{ end }}</p>
 {{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end -}}
 {{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end -}}
 </footer>

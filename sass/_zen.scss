@@ -62,6 +62,15 @@ aside,
   }
 }
 
+.blog-archive {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 article {
 
   & > header {

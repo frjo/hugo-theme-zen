@@ -48,23 +48,25 @@ baseurl: "https://example.org/"
 title: "SiteTitle"
 
 params:
-  logo: false
-  copyright: "This site is licensed under a 
-      [Creative Commons Attribution-ShareAlike 4.0 International License]
-      (https://creativecommons.org/licenses/by-sa/4.0/)."
-  contact: "info@example.org"
-  footer: "A [example.org](https://example.org/) production."
-  poweredby: true       # Show powered by hugo in footer
-  jquery: true          # Add jQuery
-  slicknav: true        # Activates SlickNav, a nice mobile menu.
-  search: true          # Site search with DuckDuckGo.
-  searchSize: 20        # Search field size, default 20.
   cacheBustCSS: true    # Add a cache busting hash on styles.css
   cacheBustJS: true     # Add a cache busting hash on script.js
-  sidebar: true         # Show a sidebar to the right
-  submitted: false      # Show author and date information for a post.
+  contact: "info@example.org"
+  copyright: "This site is licensed under a 
+              (https://creativecommons.org/licenses/by-sa/4.0/)."
+              [Creative Commons Attribution-ShareAlike 4.0 International License]
   dateformat: ""        # Set the date format, default to "2 January, 2006"
-
+  favicon: ""           # Relative path to favicon in json feed, no leading slash.
+  feedlinks: true       # Show feed links in the footer.
+  footer: "A [example.org](https://example.org/) production."
+  icon: ""              # Relative path to icon in json feed, no leading slash.
+  jquery: true          # Add jQuery
+  logo: false
+  poweredby: true       # Show powered by hugo in footer
+  search: true          # Site search with DuckDuckGo.
+  searchSize: 20        # Search field size, default 20.
+  sidebar: true         # Show a sidebar to the right
+  slicknav: true        # Activates SlickNav, a nice mobile menu.
+  submitted: true      # Show author and date information for a post.
 ```
 
 
