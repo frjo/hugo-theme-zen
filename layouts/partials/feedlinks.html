@@ -1,6 +1,8 @@
 {{ $list := .AlternativeOutputFormats -}}
 {{ $length := (len $list) -}}
+{{ if $list -}}
 <p>Subscribe{{ with .Section }} to section {{ . }}{{ end }}: {{ range $index, $element := $list -}}
 <a href="{{ .Permalink | safeURL }}">{{ .Name }}</a>{{ if ne (add $index 1) $length }} | {{ end }}
 {{- end -}}
 </p>
+{{ end -}}
