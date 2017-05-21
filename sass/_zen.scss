@@ -73,6 +73,14 @@ article {
 
   }
 
+  .submitted,
+  .tags {
+    @include respond-to(l) {
+      display: inline-block;
+      padding-right: 1rem;
+    }
+  }
+
   .tags {
     ul {
       margin: 0;
