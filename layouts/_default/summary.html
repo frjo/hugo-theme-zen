@@ -3,7 +3,7 @@
 <h2 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
 </header>
-<div>
+<div class="content">
 {{ .Summary }}
 <p class="read-more"><a class="read-more" href="{{ .Permalink }}">Read the rest of this posting</a></p>
 </div>
