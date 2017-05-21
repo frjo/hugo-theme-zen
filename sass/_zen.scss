@@ -50,7 +50,7 @@ article > header,
   font-weight: normal;
 }
 
-article,
+article > .content,
 aside {
   ul {
     @extend %ul-straight-left;
@@ -66,9 +66,6 @@ article {
   & > header {
     color: color('grey');
 
-    .title-submitted {
-      margin-bottom: 0;
-    }
 
     p {
       @include margin(.2 0);
@@ -76,9 +73,32 @@ article {
 
   }
 
-  pre,
-  .codeblock {
-    @include type-layout(xs, .72);
+  .tags {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      display: inline;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      @include padding-right(.2);
+    }
+  }
+
+  code {
+    @include type-layout(s, 1);
+    word-wrap: break-word;
+  }
+
+  pre {
     color: color(headings);
     border-radius: 3px;
     padding: 5px;
@@ -87,22 +107,17 @@ article {
     overflow: auto;
     max-height: 250px;
     max-width: 550px;
+
+    & > code {
+      display: inline-block;
+      white-space: pre;
+    }
   }
 
-  pre > code {
-    display: inline-block;
-    white-space: pre;
-  }
+}
 
-  p > code {
-    @include type-layout(s, 1);
-    word-wrap: break-word;
-  }
-
-  .codeblock {
-    @include margin(.75 0);
-    white-space: nowrap;
-  }
+.title-submitted {
+  margin-bottom: 0;
 }
 
 figure {
