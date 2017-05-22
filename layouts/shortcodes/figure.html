@@ -1,6 +1,22 @@
+{{ $maxwidth := .Site.Params.imageMaxWidth -}}
+{{ with (imageConfig (add "/static/" (.Get "src"))) -}}
+    {{ $.Scratch.Set "realwidth" .Width -}}
+    {{ $.Scratch.Set "realheight" .Height -}}
+    {{ $.Scratch.Set "width" .Width -}}
+    {{ $.Scratch.Set "height" .Height -}}
+{{ end -}}
+{{ if (.Get "width") -}}
+    {{ $.Scratch.Set "width" (int (.Get "width")) -}}
+{{ else if lt $maxwidth ($.Scratch.Get "width") -}}
+    {{ $.Scratch.Set "width" $maxwidth -}}
+{{ end -}}
+{{ if lt ($.Scratch.Get "width") ($.Scratch.Get "realwidth") -}}
+    {{ $height := (mul ($.Scratch.Get "realheight") (div (add ($.Scratch.Get "width") 0.0) ($.Scratch.Get "realwidth"))) -}}
+    {{ $.Scratch.Set "height" (int $height) -}}
+{{ end -}}
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
 {{ with .Get "link" }}<a href="{{.}}">{{ end -}}
-<img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}" {{ end }}{{ with .Get "width" }}width="{{.}}" {{ end }}/>
+<img src="{{ $.Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $.Scratch.Get "width" }} width="{{.}}"{{ end }}{{ with $.Scratch.Get "height" }} height="{{.}}"{{ end }}>
 {{- if .Get "link" }}</a>{{ end }}
 {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
 <figcaption>{{ if isset .Params "title" }}
@@ -8,7 +24,7 @@
 {{ if or (.Get "caption") (.Get "attr") -}}
 <p>
 {{- .Get "caption" -}}
-{{ with .Get "attrlink" }} <a href="{{.}}">{{ end }}{{ .Get "attr" }}{{ if .Get "attrlink"}}</a>{{ end -}}
+{{ with .Get "attrlink" }} <a href="{{.}}">{{ end }}{{ .Get "attr" }}{{ if .Get "attrlink" }}</a>{{ end -}}
 </p>
 {{ end -}}
 </figcaption>
