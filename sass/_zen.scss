@@ -142,16 +142,8 @@ figure {
       float: left;
       clear: both;
 
-      @include respond-to(s) {
-        @include padding(0 1 1 0);
-      }
-
       figcaption {
         @include padding(0 .5 .5 0);
-
-        @include respond-to(s) {
-          @include padding(0 1 1 0);
-        }
       }
     }
 
@@ -161,16 +153,8 @@ figure {
       float: right;
       clear: both;
 
-      @include respond-to(s) {
-        @include padding(0 0 1 1);
-      }
-
       figcaption {
         @include padding(0 0 .5 .5);
-
-        @include respond-to(s) {
-          @include padding(0 0 1 1);
-        }
       }
     }
   }
