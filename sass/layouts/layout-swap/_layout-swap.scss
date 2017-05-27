@@ -15,13 +15,13 @@ $layout-swap-height: 2 * $base-line-height;
 %layout-swap {
   position: relative;
 
-  @include respond-to(xs) {
+  @include respond-to(s) {
     // Move all the children down to make room for the "top" element.
     padding-top: $layout-swap-height;
   }
 
   &__top {
-    @include respond-to(xs) {
+    @include respond-to(s) {
       position: absolute;
       top: 0;
       height: $layout-swap-height;

@@ -1,14 +1,17 @@
 // Lists with a straight left margin.
 
 %ul-straight-left {
+  display: table;
   list-style: none;
-  padding-left: 1rem;
-  text-indent: -1rem;
+  padding: 0;
 
   & > li {
+    display: table-row;
+
     &::before {
       @include font-size(s);
       @include padding-right(.5);
+      display: table-cell;
       content: '\2022';
 
       @include respond-to(xxl) {
@@ -42,14 +45,16 @@
 }
 
 %ul-straight-left--off {
-  padding-left: 0;
-  text-indent: 0;
+  display: block;
+  list-style: inherit;
 
   & > li {
+    display: list-item;
+
     &::before {
-      font-size: inherit;
-      padding-right: 0;
       content: '';
+      display: inline;
+      padding: inherit;
     }
   }
 }
