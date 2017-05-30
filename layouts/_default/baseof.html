@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
 {{ block "meta" . }}{{ end }}
-{{ partialCached "meta.html" . -}}
+{{- partialCached "meta.html" . -}}
+<link rel="canonical" href="{{ .Permalink }}">
 </head>
 
 <body class="{{ if $.Param "sidebar" | default true }}one-sidebar sidebar-second{{ else }}no-sidebars{{ end }}">
