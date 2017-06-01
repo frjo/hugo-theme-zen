@@ -66,7 +66,7 @@ params:
   searchSize: 20        # Search field size, default 20.
   sidebar: true         # Show a sidebar to the right
   slicknav: true        # Activates SlickNav, a nice mobile menu.
-  submitted: true      # Show author and date information for a post.
+  submitted: true       # Show author and date information for a post.
 ```
 
 
