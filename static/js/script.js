@@ -10,7 +10,7 @@
   // Add a js class to the html-tag when JavsScript is active.
   $('html').addClass('js');
 
-  // Activate he SlickNav menu for small screens.
+  // Activate the SlickNav menu for small screens.
   if (window.matchMedia && $.isFunction($.fn.slicknav)) {
     var mq = window.matchMedia('(max-width: 666px)');
     if (mq.matches) {
