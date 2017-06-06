@@ -45,15 +45,6 @@
   width: 1.125em;
   height: .875em;
   margin: .188em 0 0 .438em;
-
-  &::before { // Firefox Mobile v42 bugfix
-    background-color: transparent;
-    width: 1.125em;
-    height: .875em;
-    display: block;
-    content: '';
-    position: absolute;
-  }
 }
 
 .slicknav_no-text {
@@ -63,7 +54,7 @@
 .slicknav_icon-bar {
   display: block;
   width: 1.125em;
-  height: .125em;
+  height: 3px;
   border-radius: 1px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .25);
   background-color: color(text-bg);
