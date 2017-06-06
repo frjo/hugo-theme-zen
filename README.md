@@ -60,7 +60,7 @@ params:
   footer: "A [example.org](https://example.org/) production."
   icon: ""              # Relative path to icon in json feed, no leading slash.
   jquery: true          # Add jQuery
-  logo: false
+  logo: false           # Turn off the logo.
   poweredby: true       # Show powered by hugo in footer
   search: true          # Site search with DuckDuckGo.
   searchSize: 20        # Search field size, default 20.
