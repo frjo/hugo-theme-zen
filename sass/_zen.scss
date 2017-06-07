@@ -269,6 +269,20 @@ body {
 }
 
 
+/* Form */
+
+.contact-form {
+  input,
+  textarea {
+    @include margin-bottom(.75);
+    width: 95%;
+  }
+
+  button {
+    display: block;
+  }
+}
+
 /* Print. */
 
 aside,

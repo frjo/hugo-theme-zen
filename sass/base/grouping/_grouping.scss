@@ -103,15 +103,6 @@ ul {
   }
 }
 
-@if support-for(ie, 7) {
-  // Correct list images handled incorrectly in IE 7.
-  nav ul,
-  nav ol {
-    list-style: none;
-    list-style-image: none;
-  }
-}
-
 // Figures
 //
 // The `<figure>` element can be used to annotate illustrations, diagrams,
