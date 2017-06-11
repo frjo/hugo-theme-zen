@@ -16,9 +16,9 @@
     {{ end -}}
     {{ with .Site.Author.name -}}
     "author" : {
-      "name" : "{{ . }}"{{ with $.Site.Author.url }},
-      "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
-      "avatar": "{{ . | absURL }}"{{ end }}
+        "name" : "{{ . }}"{{ with $.Site.Author.url }},
+        "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
+        "avatar": "{{ . | absURL }}"{{ end }}
     },
     {{ end -}}
     "items" : [
