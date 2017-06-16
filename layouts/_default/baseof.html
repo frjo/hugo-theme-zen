@@ -6,6 +6,7 @@
 {{ block "meta" . }}{{ end }}
 {{- partialCached "meta.html" . -}}
 <link rel="canonical" href="{{ .Permalink }}">
+{{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "piwik.html" . }}{{ end -}}
 </head>
 
 <body class="{{ if $.Param "sidebar" | default true }}one-sidebar sidebar-second{{ else }}no-sidebars{{ end }}">

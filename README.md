@@ -17,6 +17,7 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 * jQuery 2
 * Slicknav mobile menu
 * Search with DuckDuckGo
+* Analytics with Piwik
 
 
 ## On the large screen
@@ -61,6 +62,8 @@ params:
   icon: ""              # Relative path to icon in json feed, no leading slash.
   jquery: true          # Add jQuery
   logo: false           # Turn off the logo.
+  piwikSiteId:          # Piwik site id
+  piwikTrackerUrl: ""   # Piwik url, schemaless and no slash on end (example.com/piwik).
   poweredby: true       # Show powered by hugo in footer
   search: true          # Site search with DuckDuckGo.
   searchSize: 20        # Search field size, default 20.
