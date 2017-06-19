@@ -1,16 +1,13 @@
-{{ $currentSection := .Section }}
 {{ $currentID := .UniqueID }}
 <aside class="layout-3col__right-sidebar" role="complementary">
-{{ range $section, $taxonomy := .Site.Sections -}}
-{{ if ne $section "" -}}
+{{ range $.Site.Home.Sections -}}
 <section>
-<h4 class="menu"><a class="{{ if eq $currentSection $section }}active{{ end }}" href="/{{ urlize $section }}">{{ humanize $section }}</a></h4>
+<h4 class="menu"><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
 <ul class="menu">
-{{ range $taxonomy.Pages -}}
-<li><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+{{ range .Pages -}}
+<li><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 {{ end -}}
 </ul>
 </section>
-{{ end -}}
 {{ end -}}
 </aside>
