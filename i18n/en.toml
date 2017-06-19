@@ -1,0 +1,17 @@
+[menu_home]
+other = "Home"
+
+[pager_next]
+other = "Next"
+
+[pager_prev]
+other = "Prev"
+
+[taxo_tags]
+other = "Tags"
+
+[search_placeholder]
+other = "Search"
+
+[search_title]
+other = "Enter the terms you wish to search for."
