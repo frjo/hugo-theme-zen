@@ -5,7 +5,7 @@
 {{ define "main" -}}
 <main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
 <h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
-<article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} single-view">
+<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <header>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
 {{ if .Params.tags }}{{ partial "tags.html" . -}}{{ end }}
