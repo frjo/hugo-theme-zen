@@ -257,6 +257,32 @@ body {
   }
 }
 
+/* Messages */
+
+.message {
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  width: 95%;
+
+  &.status {
+    background-color: color(status-bg);
+    color: color(status);
+    border-color: color(status);
+  }
+
+  &.warning {
+    background-color: color(warning-bg);
+    color: color(warning);
+    border-color: color(warning);
+  }
+
+  &.error {
+    background-color: color(error-bg);
+    color: color(error);
+    border-color: color(error);
+  }
+}
 
 /* Search */
 
@@ -268,14 +294,31 @@ body {
   @include type-layout(l, 1);
 }
 
-
 /* Form */
 
-.contact-form {
+.content {
   input,
   textarea {
     @include margin-bottom(.75);
     width: 95%;
+
+    &:required+span::after {
+      content: ' *';
+      color: color('red');
+      vertical-align: top;
+    }
+
+    &:valid {
+      background-color: color(status-bg);
+    }
+
+    &:not(:placeholder-shown):invalid {
+      background-color: color(error-bg);
+    }
+
+    form.submitted &:invalid {
+      background-color: color(error-bg);
+    }
   }
 
   button {
