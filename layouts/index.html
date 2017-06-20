@@ -7,7 +7,9 @@
 {{ define "main" -}}
 <main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+<div class="content">
 {{ .Content }}
+</div>
 </article>
 </main>
 {{ partial "menu.html" . -}}
