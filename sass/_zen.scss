@@ -308,21 +308,30 @@ body {
       vertical-align: top;
     }
 
-    &:valid {
+    &:not(:placeholder-shown):valid {
       background-color: color(status-bg);
     }
 
     &:not(:placeholder-shown):invalid {
       background-color: color(error-bg);
     }
-
-    form.submitted &:invalid {
-      background-color: color(error-bg);
-    }
   }
 
   button {
     display: block;
+  }
+}
+
+.js-submitted {
+  input,
+  textarea {
+    &:valid {
+      background-color: color(status-bg);
+    }
+
+    &:invalid {
+      background-color: color(error-bg);
+    }
   }
 }
 
