@@ -1,7 +1,8 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }}
 
 {{ define "meta" }}
-{{ partial "single_meta.html" . -}}
+{{- partial "section_meta.html" . -}}
+{{- partial "single_meta.html" . -}}
 {{ end }}
 
 {{ define "main" -}}

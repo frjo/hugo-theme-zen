@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
 {{ block "meta" . }}{{ end }}
-{{- partialCached "meta.html" . -}}
-<link rel="canonical" href="{{ .Permalink }}">
+{{- partial "meta.html" . -}}
+{{- partialCached "meta_cache.html" . -}}
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "piwik.html" . }}{{ end -}}
 </head>
 
@@ -30,6 +30,7 @@
 {{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end -}}
 </footer>
 </div>
-{{ partialCached "scripts.html" . }}
+{{ partial "scripts.html" . -}}
+{{ partialCached "scripts_cache.html" . -}}
 </body>
 </html>

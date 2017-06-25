@@ -1,3 +1,2 @@
 {{ if $.Param "jquery" }}<script src="/js/jquery.min.js"></script>{{ end }}
 {{ if and ($.Param "jquery") ($.Param "slicknav") }}<script src="/js/jquery.slicknav.min.js"></script>{{ end }}
-{{ if $.Param "jquery" }}<script src="/js/script.js{{ if $.Param "cacheBustJS" }}?{{ readFile "/public/js/script.js" | sha1 }}{{ end }}"></script>{{ end }}
