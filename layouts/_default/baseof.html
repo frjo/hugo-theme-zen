@@ -24,11 +24,12 @@
 </div>
 
 <footer class="footer" role="contentinfo">
-{{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . -}}{{ end }}
+{{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
 <p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ .Site.Title }}</span>{{ end }}</p>
-{{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end -}}
-{{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end -}}
+{{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}
+{{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
 </footer>
+
 </div>
 {{ partial "scripts.html" . -}}
 {{ partialCached "scripts_cache.html" . -}}
