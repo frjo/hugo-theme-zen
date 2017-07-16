@@ -111,6 +111,8 @@ $base-unit:         'rem';
 // px fallbacks for rem units are needed for IE 8 and earlier.
 $rem-fallback:      false;
 
+// We have separate print file.
+$auto-print-sizing: false;
 
 // Breakpoints
 //

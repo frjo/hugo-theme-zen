@@ -1,7 +1,18 @@
 // @file
 // The print stylesheet for this theme.
 
+// Colors and Sass
+//
+// Documentation for colors and Sass mixins and variables.
+//
+// Weight: -1
+
+@import 'init';
+
 // Components
+//
+// Weight: 1
+
 @import 'components/print-none/print-none';
 
 .skip-link,
@@ -17,6 +28,10 @@ footer {
 }
 
 @media print {
+  html {
+    font-size: $print-font-size;
+  }
+
   body,
   .page {
     background-color: color(white);
