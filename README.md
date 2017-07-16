@@ -15,7 +15,7 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 * Gulp.js
 * Minify css
 * jQuery 2
-* Slicknav mobile menu
+* A mobile menu
 * Search with DuckDuckGo
 * Analytics with Piwik
 
@@ -68,7 +68,6 @@ params:
   search: true          # Site search with DuckDuckGo.
   searchSize: 20        # Search field size, default 20.
   sidebar: true         # Show a sidebar to the right
-  slicknav: true        # Activates SlickNav, a nice mobile menu.
   submitted: true       # Show author and date information for a post.
 ```
 

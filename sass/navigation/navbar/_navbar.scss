@@ -11,23 +11,23 @@
 
 .navbar,
 %navbar {
+  display: flex;
   margin: 0;
   padding: 0;
   text-align: left;
 
   @include rtl() {
+    flex-direction: row-reverse;
     text-align: right;
   }
 
   &__item,
   li {
-    float: left;
     padding: 0 10px 0 0;
     list-style-type: none;
     list-style-image: none;
 
     @include rtl() {
-      float: right;
       padding: 0 0 0 10px;
     }
   }

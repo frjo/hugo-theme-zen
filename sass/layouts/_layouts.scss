@@ -1,5 +1,5 @@
 .layout {
-    &__content {
+    &__page {
       max-width: $max-content-width;
     }
 
@@ -22,20 +22,19 @@
 @supports (display: grid) {
 
   .layout {
-    &__wrapper {
+    &__page {
       display: grid;
       grid-template-columns: [first-start] 1fr [last-end];
     }
 
     @include respond-to(s) {
-      &__wrapper {
+      &__page {
         grid-template-rows: [head-start] auto
                             [nav-start] auto
                             [page-top-start] auto
                             [main-start] 1fr
                             [page-bottom-start] auto
                             [footer-start] auto;
-        max-width: 960px;
         min-height: 100vh;
         margin: 0 auto;
       }
