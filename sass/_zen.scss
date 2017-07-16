@@ -183,26 +183,7 @@ body {
 }
 
 .header {
-  padding-top: $zen-gutters / 2;
-
-  @include respond-to(m) {
-    padding-top: $zen-gutters;
-  }
-
-  &__logo {
-    @include respond-to(s) {
-    }
-  }
-
-  &__site-name {
-    @include respond-to(s) {
-    }
-  }
-
-  &__region {
-    @include respond-to(s) {
-    }
-  }
+  padding-top: $zen-gutters;
 }
 
 /* Navigation */
@@ -328,5 +309,108 @@ body {
     &:invalid {
       background-color: color(error-bg);
     }
+  }
+}
+
+
+
+
+
+.js-nav-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.js-nav-cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(color(text), .2);
+  opacity: 0;
+
+  .js-nav-open & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.js-nav-toggle {
+  @include typeface(headings);
+  display: block;
+  position: absolute;
+  top: $zen-gutters / 2;
+  right: $zen-gutters + $zen-gutters / 2 + $zen-gutters / 4;
+  z-index: 12;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  pointer-events: auto;
+
+  .js-nav-open & {
+    color: color(text-bg);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    margin-left: $zen-gutters / 4;
+    width: $zen-gutters;
+    height: 4px;
+    border-top: 12px double color(text);
+    border-bottom: 4px solid color(text);
+  }
+
+  .js-nav-open &::after {
+    border-color: color(text-bg);
+  }
+}
+
+.js-nav-sheet {
+  position: relative;
+  background-color: color(header-bg);
+  width: 90vw;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100vw);
+  z-index: 11;
+
+  .js-nav-open & {
+    pointer-events: auto;
+    box-shadow: -10px 0 10px -10px color('nearblack');
+    transform: translateX(10vw);
+  }
+
+  .js-navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      margin: .4rem 0;
+
+      a {
+        color: color(white);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.js-nav-cover,
+.js-nav-toggle,
+.js-nav-toggle::after,
+.js-nav-sheet {
+  transition: all 130ms ease-in;
+
+  .js-nav-open & {
+    transition: all 330ms ease-out;
   }
 }

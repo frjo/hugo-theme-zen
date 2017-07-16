@@ -2,7 +2,7 @@
 {{ $currentID := .UniqueID }}
 <nav class="main-menu layout__navigation layout__full" role="navigation">
 <h2 class="visually-hidden">Main menu</h2>
-<ul class="navbar clearfix">
+<ul class="navbar">
 <li><a class="{{ if .IsHome }}active{{ end }}" href="/">{{ i18n "menu_home" }}</a></li>
 {{ range after 1 (where .Site.Pages "Section" "") -}}
 <li><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
