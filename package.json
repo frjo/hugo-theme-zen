@@ -14,7 +14,6 @@
     "del": "^2.2.2",
     "eslint": "^3.17.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.3",
     "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.2",
@@ -28,7 +27,6 @@
     "kss": "^3.0.0-beta.18",
     "node-sass-import-once": "^1.2.0",
     "sass-lint": "^1.10.2",
-    "support-for": "^1.0.7",
     "typey": "^1.1.1"
   },
   "engines": {

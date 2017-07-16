@@ -23,9 +23,5 @@
 
   &__wrapper {
     margin: 0;
-
-    @media print {
-      display: none;
-    }
   }
 }

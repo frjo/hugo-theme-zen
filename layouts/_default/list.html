@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
+<main class="layout__content" role="main">
 <h1 class="title">{{ .Title }}</h1>
 {{ $paginator := .Paginate (.Data.Pages) -}}
 {{ range $paginator.Pages -}}

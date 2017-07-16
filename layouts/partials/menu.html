@@ -1,7 +1,6 @@
 {{ $currentSection := .Section }}
 {{ $currentID := .UniqueID }}
-<div class="layout-swap__top layout-3col__full">
-<nav class="main-menu" role="navigation">
+<nav class="main-menu layout__navigation layout__full" role="navigation">
 <h2 class="visually-hidden">Main menu</h2>
 <ul class="navbar clearfix">
 <li><a class="{{ if .IsHome }}active{{ end }}" href="/">{{ i18n "menu_home" }}</a></li>
@@ -13,4 +12,3 @@
 {{ end -}}
 </ul>
 </nav>
-</div>

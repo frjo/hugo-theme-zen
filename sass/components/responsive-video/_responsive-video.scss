@@ -34,12 +34,3 @@
     padding-bottom: (3/4)*100%; // 4:3 aspect ratio
   }
 }
-
-//
-// Drupal selectors.
-//
-
-.media-youtube-video,
-.media-vimeo-preview-wrapper {
-  @extend %responsive-video;
-}

@@ -9,21 +9,19 @@
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "piwik.html" . }}{{ end -}}
 </head>
 
-<body class="{{ if $.Param "sidebar" | default true }}one-sidebar sidebar-second{{ else }}no-sidebars{{ end }}">
-<div class="layout-center">
-<header class="header" role="banner">
+<body>
+<div class="page layout__wrapper{{ if $.Param "sidebar" | default true }} layout__sidebar layout__sidebar-second{{ end }}">
+<header class="header layout__header layout__full" role="banner">
 {{ if $.Param "logo" | default true }}<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>{{ end -}}
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
-<div class="header__region region region-header">{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}</div>
+<div class="header__region region">{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}</div>
 </header>
 
-<div class="layout-3col layout-swap">
 {{ block "main" . }}{{ end -}}
-</div>
 
-<footer class="footer" role="contentinfo">
+<footer class="footer layout__footer layout__full" role="contentinfo">
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
 <p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ .Site.Title }}</span>{{ end }}</p>
 {{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}

@@ -10,8 +10,7 @@
 // Documentation for colors and Sass mixins and variables.
 //
 // Weight: -1
-//
-// Style guide: sass
+
 @import 'init';
 
 // Defaults
@@ -20,23 +19,18 @@
 //
 // Component classes can override these styles, but if no class applies a style
 // to an HTML element, these styles will be the ones displayed.
-//
-// Style guide: base
 
 // Ensure fonts get loaded first to minimize front-end performance impact.
+
 @import 'base/fonts';
 @import 'base/normalize';
 
 // Layouts
 //
 // The layout styling for major parts of the page that are included with the
-// theme. Note: some Panels layouts are included in other parts of the system
-// and are not documented.
-//
-// Style guide: layouts
-@import 'layouts/layout-3col/layout-3col';
-@import 'layouts/layout-center/layout-center';
-@import 'layouts/layout-swap/layout-swap';
+// theme.
+
+@import 'layouts/layouts';
 
 // Components
 //
@@ -44,8 +38,6 @@
 // class names specified in the component.
 //
 // Weight: 1
-//
-// Style guide: components
 
 @import 'components/box/box';
 @import 'components/button/button';
@@ -56,7 +48,6 @@
 @import 'components/highlight-mark/highlight-mark';
 @import 'components/inline-links/inline-links';
 @import 'components/inline-sibling/inline-sibling';
-@import 'components/print-none/print-none';
 @import 'components/responsive-video/responsive-video';
 @import 'components/visually-hidden/visually-hidden';
 @import 'components/watermark/watermark';
@@ -68,8 +59,6 @@
 // page navigation.
 //
 // Weight: 2
-//
-// Style guide: navigation
 
 @import 'navigation/breadcrumb/breadcrumb';
 @import 'navigation/more-link/more-link';

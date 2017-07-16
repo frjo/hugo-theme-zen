@@ -1,27 +1,6 @@
 // Variables
 //
 // Set variables for this site before a library sets its !default value.
-//
-// Style guide: sass.variables
-
-
-// Browser support
-//
-// For older versions of browsers, some Sass relies on the `support-for()` to
-// control whether extra CSS is needed to be output. The `support-for()`
-// function and the `$support-for` variable are documented on the [support-for
-// homepage](https://github.com/JohnAlbin/support-for).
-//
-// Style guide: sass.variables.support-for
-
-// Support the same browsers as normalize.css v3.
-// Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
-$support-for: (
-  // IE 9-11
-  ie:  11,
-  // The last 4 versions of all other browsers.
-  '*': -4,
-);
 
 
 // Font faces, stacks and sizes.
@@ -30,8 +9,6 @@ $support-for: (
 // used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
 // These variable and mixins are documented on the [Typey
 // homepage](https://github.com/jptaranto/typey).
-//
-// Style guide: sass.variables.typey
 
 // The font size set on the root html element.
 $base-font-size:    22px;
@@ -140,8 +117,6 @@ $rem-fallback:      false;
 // Use the `respond-to()` mixin to use named breakpoints. Documentation is
 // available in the [Breakpoint wiki
 // pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
-//
-// Style guide: sass.variables.breakpoints
 
 @include add-breakpoint(xxxs, (333px, 'no-query' true));
 @include add-breakpoint(xxs,  (444px, 'no-query' true));
@@ -157,44 +132,13 @@ $rem-fallback:      false;
 // @include breakpoint-set('to ems', true);
 
 
-// Zen grids
-//
-// The default grid system is built using the Zen Grids sass module. Full
-// documentation is available on the [Zen Grids website](http://zengrids.com/).
-//
-// Note: if you are more comfortable using another grid system, you can easily
-// remove Zen Grids and its layouts.
-//
-// Style guide: sass.variables.zen-grids
+// Layout
 
-// The max content width (the gutters with will be added).
-$max-content-width: 1140px;
-$max-no-sidebars-content-width: 740px;
+// The max content width (the main content area).
+$max-content-width: 740px;
 
-// These are needed for all breakpoints on all layouts.
-$zen-auto-include-grid-item-base: false;
-$zen-box-sizing: universal-border-box;
-
-// First we set the values we need for the mobile version of our layouts (the
-// version that does _not_ appear inside any @media queries.)
-$zen-columns: 1;
+// The default left/right gutter/padding.
 $zen-gutters: 20px;
-
-// Then we set the values we need for each of the layouts at larger media query
-// sizes. Note how the names of the layouts match the names of our breakpoints
-// above. That allows a single zen-respond-to() to both use the proper item
-// from $zen-layouts and from $breakpoints.
-$zen-layouts: (
-  m: (
-    columns: 2,
-    // The gutters in the layouts are larger on mobile.
-    gutters: 40px,
-  ),
-  xl: (
-    columns: 3,
-    gutters: 40px,
-  ),
-);
 
 // See $include-rtl below.
 $zen-rtl-selector: '[dir="rtl"]';
@@ -204,11 +148,9 @@ $zen-rtl-selector: '[dir="rtl"]';
 //
 // `$indent-amount` controls the amount lists, blockquotes and comments are indented.
 //
-// `$include-rtl` controls whether RTL styles are output. Rather than include a separate `*-rtl.css` file, Zen 6 uses Drupal 8's standard `[dir="rtl"]` selector for RTL language support.
+// `$include-rtl` controls whether RTL styles are output.
 //
 // weight: 10
-//
-// Style guide: sass.variables.misc
 
 $indent-amount: 2 * $base-font-size;
 

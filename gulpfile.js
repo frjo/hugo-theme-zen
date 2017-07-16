@@ -33,18 +33,9 @@ options.sass = {
     options.theme.sass,
     options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
     options.rootPath.project + 'node_modules/chroma-sass/sass',
-    options.rootPath.project + 'node_modules/support-for/sass',
     options.rootPath.project + 'node_modules/typey/stylesheets'
   ],
   outputStyle: 'expanded'
-};
-
-// Define which browsers to add vendor prefixes for.
-options.autoprefixer = {
-  browsers: [
-    '> 1%',
-    'ie 11'
-  ]
 };
 
 // Define the paths to the JS files to lint.
@@ -93,7 +84,6 @@ gulp.task('styles', ['clean:css'], function() {
   return gulp.src(sassFiles)
     .pipe($.sourcemaps.init())
     .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(options.theme.css))
@@ -102,7 +92,6 @@ gulp.task('styles', ['clean:css'], function() {
 gulp.task('styles:production', ['clean:css'], function() {
   return gulp.src(sassFiles)
     .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
     .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(gulp.dest(options.theme.css));

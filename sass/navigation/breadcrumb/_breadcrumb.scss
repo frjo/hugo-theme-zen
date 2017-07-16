@@ -11,10 +11,6 @@
 
 .breadcrumb,
 %breadcrumb {
-  @media print {
-    display: none;
-  }
-
   &__title {
     @extend %visually-hidden;
   }

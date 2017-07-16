@@ -26,16 +26,3 @@
     }
   }
 }
-
-//
-// Drupal selectors.
-//
-
-.element-invisible {
-  @extend %visually-hidden;
-}
-
-.element-focusable {
-  @extend %visually-hidden;
-  @extend %visually-hidden--focusable;
-}

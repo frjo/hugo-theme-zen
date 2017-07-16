@@ -2,3 +2,25 @@
  * @file
  * Site custom styles
  */
+
+.header {
+  &__logo {
+    width: 100px;
+  }
+}
+
+figure {
+  margin-left: -($zen-gutters / 2);
+  margin-right: -($zen-gutters / 2);
+
+  @include respond-to(s) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+blockquote {
+  @include margin(1 $indent-amount/2);
+  @include padding(0 $indent-amount/2);
+  border-left: 2px solid color(border);
+}

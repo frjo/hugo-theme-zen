@@ -29,9 +29,7 @@
 // The following sass modules are shared with all .scss files:
 // - [Breakpoint](http://breakpoint-sass.com/)
 // - [Chroma](https://github.com/JohnAlbin/chroma)
-// - [Support-for](https://github.com/JohnAlbin/support-for)
 // - [Typey](https://github.com/jptaranto/typey)
-// - [Zen Grids](http://zengrids.com/help/)
 //
 // Additional pre-built libraries can be found on the [Sache website](http://www.sache.in/).
 //
@@ -40,12 +38,8 @@
 // Add Chroma to manage colors.
 @import 'chroma';
 @import 'chroma/kss';
-// Add support-for to manage normalize-scss' browser support.
-@import 'support-for';
 // Add typey to manage font sizes and margins.
 @import 'typey';
-// Add the Zen Grids responsive layout mixins.
-@import 'zen-grids';
 
 
 // Mixins

@@ -38,24 +38,3 @@
     }
   }
 }
-
-//
-// Drupal selectors.
-//
-
-.menu__item {
-  @extend %nav-menu__item;
-
-  &.is-expanded {
-    @extend %nav-menu__item--is-expanded;
-  }
-
-  &.is-collapsed {
-    @extend %nav-menu__item--is-collapsed;
-  }
-}
-
-// The active item in a Drupal menu.
-.menu a.active {
-  @extend %nav-menu__link--is-active;
-}

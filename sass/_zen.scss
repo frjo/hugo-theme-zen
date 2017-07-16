@@ -178,7 +178,7 @@ body {
   background-color: color(backdrop);
 }
 
-.layout-center {
+.page {
   background-color: color(body-bg);
 }
 
@@ -191,20 +191,16 @@ body {
 
   &__logo {
     @include respond-to(s) {
-      float: left;
     }
   }
 
   &__site-name {
     @include respond-to(s) {
-      float: left;
     }
   }
 
   &__region {
     @include respond-to(s) {
-      float: right;
-      clear: none;
     }
   }
 }
@@ -333,42 +329,4 @@ body {
       background-color: color(error-bg);
     }
   }
-}
-
-/* Print. */
-
-aside,
-nav,
-footer {
-  @extend %print-none;
-}
-
-@media print {
-  body,
-  .layout-center {
-    background-color: color(white);
-  }
-
-  .layout-swap {
-    padding-top: 0;
-  }
-
-  [role='main'] {
-    width: 100%;
-  }
-
-  .layout-swap__top {
-    border-bottom: 0;
-  }
-
-  /* Zen overrides */
-  :link,
-  :visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: '';
-  }
-
 }

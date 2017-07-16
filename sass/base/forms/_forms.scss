@@ -45,10 +45,6 @@ select {
 // Show the overflow in Edge.
 input {
   overflow: visible;
-  @if support-for(firefox, 29) {
-    // Firefox sets `line-height` using `!important` in the UA stylesheet.
-    line-height: normal;
-  }
 }
 
 // Correct the cursor style of increment and decrement buttons in Chrome.
@@ -196,7 +192,6 @@ legend {
 // Style guide: forms.base.label
 
 label {
-  // Drupal-style form labels.
   display: block;
   font-weight: bold;
 }

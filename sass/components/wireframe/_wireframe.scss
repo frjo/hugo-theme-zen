@@ -20,14 +20,20 @@ $with-wireframes: false !default;
   }
 
   //
-  // Drupal selectors.
+  // Zen selectors.
   //
 
-  .header,
-  .layout-3col > div,
-  .footer,
-  .region-bottom {
-    @extend %wireframe;
+  .layout {
+    &__header,
+    &__footer,
+    &__content,
+    &__navigation,
+    &__first-sidebar,
+    &__second-sidebar,
+    &__page-top,
+    &__page-bottom {
+      @extend %wireframe;
+    }
   }
 
 }

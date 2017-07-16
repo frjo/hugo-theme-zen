@@ -16,17 +16,3 @@
     display: none;
   }
 }
-
-//
-// Drupal selectors.
-//
-
-// Hide Drupal nav elements.
-.toolbar,
-.action-links,
-.links,
-.book-navigation,
-.forum-topic-navigation,
-.feed-icons {
-  @extend %print-none;
-}

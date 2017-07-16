@@ -22,15 +22,3 @@
     }
   }
 }
-
-//
-// Drupal selectors.
-//
-
-.inline.links {
-  @extend %inline-links;
-
-  li {
-    @extend %inline-links__item;
-  }
-}

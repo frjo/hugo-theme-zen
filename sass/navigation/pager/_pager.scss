@@ -13,10 +13,6 @@
   padding: 0;
   text-align: center;
 
-  @media print {
-    display: none;
-  }
-
   // A page item in the pager list.
   &__item {
     display: inline;
@@ -33,7 +29,7 @@
 }
 
 //
-// Drupal selectors.
+// Zen selectors.
 //
 
 // .pager-item     - A list item containing a page number in the list of pages.
