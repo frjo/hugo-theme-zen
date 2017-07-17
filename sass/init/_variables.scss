@@ -142,9 +142,6 @@ $max-content-width: 960px;
 // The default left/right gutter/padding.
 $zen-gutters: 20px;
 
-// See $include-rtl below.
-$zen-rtl-selector: '[dir="rtl"]';
-
 
 // Miscellaneous variables
 //
@@ -157,7 +154,3 @@ $zen-rtl-selector: '[dir="rtl"]';
 $indent-amount: 2 * $base-font-size;
 
 $include-rtl: false;
-// Automatically turn off Zen Grids' RTL support if $include-rtl is false.
-@if not $include-rtl {
-  $zen-rtl-selector: false !global;
-}

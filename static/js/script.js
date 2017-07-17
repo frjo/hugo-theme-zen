@@ -15,7 +15,7 @@
     var mq = window.matchMedia('(max-width: 666px)');
     if (mq.matches) {
       // Create the nav toggle button and the nav sheet.
-      $('.page').after('<div class="js-nav-wrapper"><div class="js-nav-cover"></div><a href="#navigation" class="js-nav-toggle" aria-haspopup="true" role="button">Menu</a><nav class="js-nav-sheet"></nav></div>');
+      $('.page').after('<div class="js-nav-wrapper"><div class="js-nav-cover"></div><a href="#navigation" class="js-nav-toggle" aria-haspopup="true" role="button">Menu</a><div class="js-nav-sheet"></div></div>');
 
       // Populate the nav sheet.
       $('.main-menu').addClass('hidden').clone().removeClass('main-menu layout__navigation layout__full hidden hidden').addClass('js-main-menu').appendTo('.js-nav-sheet').find('.navbar').removeClass('navbar').addClass('js-navbar');

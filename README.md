@@ -37,7 +37,7 @@ $ cd themes
 $ git clone https://github.com/frjo/hugo-theme-zen.git zen
 ```
 
-[Hugo - Installing Hugo](http://gohugo.io/overview/installing/)
+[Hugo - Installing Hugo](https://gohugo.io/overview/installing/)
 
 
 ## config.yaml example
@@ -61,6 +61,7 @@ params:
   footer: "A [example.org](https://example.org/) production."
   icon: ""              # Relative path to icon in json feed, no leading slash.
   jquery: true          # Add jQuery
+  languageDir: ""       # Set ltr or rtl, defaults to ltr.
   logo: false           # Turn off the logo.
   piwikSiteId:          # Piwik site id
   piwikTrackerUrl: ""   # Piwik url, schemaless and no slash on end (example.com/piwik).

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="{{ .Site.Language.Lang }}" dir="{{ $.Param "languagedir" | default "ltr" }}">
 <head>
 <meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
@@ -33,6 +33,7 @@
 </footer>
 
 </div>
+
 {{ partial "scripts.html" . -}}
 {{ partialCached "scripts_cache.html" . -}}
 </body>
