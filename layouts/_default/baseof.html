@@ -10,9 +10,9 @@
 </head>
 
 <body>
-<div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar layout__sidebar-second{{ end }}">
+<div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar-second{{ end }}">
 <header class="header layout__header layout__full" role="banner">
-{{ if $.Param "logo" | default true }}<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image" /></a>{{ end -}}
+{{ if $.Param "logo" | default true }}<a href="{{ .Site.BaseURL }}" title="Home" rel="home" class="header__logo"><img src="/images/logo.png" alt="Home" class="header__logo-image"></a>{{ end }}
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
