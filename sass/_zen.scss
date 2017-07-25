@@ -11,6 +11,35 @@ pre {
   @include margin(.75 0);
 }
 
+/* Page */
+
+body {
+  background-color: color(backdrop);
+}
+
+.page {
+  background-color: color(body-bg);
+}
+
+.header {
+  padding-top: $zen-gutters / 2;
+
+  @include respond-to(s) {
+    padding-top: $zen-gutters;
+  }
+}
+
+.footer {
+  @include margin-top(1.5);
+  @include padding(.5 0);
+  text-align: center;
+  border-top: 2px solid color(brand);
+
+  p {
+    margin: 0;
+  }
+}
+
 /* Apply smaller text to blocks, footer etc. */
 
 th,
@@ -172,20 +201,6 @@ figcaption {
   }
 }
 
-/* Page */
-
-body {
-  background-color: color(backdrop);
-}
-
-.page {
-  background-color: color(body-bg);
-}
-
-.header {
-  padding-top: $zen-gutters;
-}
-
 /* Navigation */
 
 .main-menu {
@@ -221,17 +236,6 @@ body {
 
 .menu a.active {
   text-decoration: none;
-}
-
-.footer {
-  @include margin-top(1.5);
-  @include padding(.5 0);
-  text-align: center;
-  border-top: 2px solid color(brand);
-
-  p {
-    margin: 0;
-  }
 }
 
 /* Messages */
@@ -312,9 +316,9 @@ body {
   }
 }
 
-/* Mobil menu */
+/* Mobile menu */
 
-.js-nav-wrapper {
+.mobile-nav-wrapper {
   position: fixed;
   right: 0;
   top: 0;
@@ -325,7 +329,7 @@ body {
   pointer-events: none;
 }
 
-.js-nav-cover {
+.mobile-nav-cover {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -338,16 +342,19 @@ body {
   }
 }
 
-.js-nav-toggle {
+.mobile-nav-toggle {
   @include typeface(headings);
   display: block;
   position: absolute;
   top: $zen-gutters / 2;
   right: $zen-gutters + $zen-gutters / 2 + $zen-gutters / 4;
+  padding: 3px ($zen-gutters + $zen-gutters / 4 + 4px) 2px 4px;
   z-index: 12;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
+  border: 1px solid color(border);
+  border-radius: 3px;
   pointer-events: auto;
 
   .js-nav-open & {
@@ -369,7 +376,7 @@ body {
   }
 }
 
-.js-nav-sheet {
+.mobile-nav-sheet {
   position: relative;
   background-color: color(header-bg);
   width: 90vw;
@@ -380,7 +387,7 @@ body {
 
   .js-nav-open & {
     pointer-events: auto;
-    box-shadow: -10px 0 10px -10px color('nearblack');
+    box-shadow: -10px 0 10px -10px color(nearblack);
     transform: translateX(10vw);
   }
 
@@ -402,10 +409,10 @@ body {
   }
 }
 
-.js-nav-cover,
-.js-nav-toggle,
-.js-nav-toggle::after,
-.js-nav-sheet {
+.mobile-nav-cover,
+.mobile-nav-toggle,
+.mobile-nav-toggle::after,
+.mobile-nav-sheet {
   transition: all 130ms ease-in;
 
   .js-nav-open & {
