@@ -333,7 +333,7 @@ figcaption {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(color(text), .2);
+  background-color: rgba(color(nearblack), .2);
   opacity: 0;
 
   .js-nav-open & {
