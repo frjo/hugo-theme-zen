@@ -24,3 +24,10 @@
     @extend %hidden;
   }
 }
+
+.nojs-hidden,
+%nojs-hidden {
+  html.nojs & {
+    @extend %hidden;
+  }
+}

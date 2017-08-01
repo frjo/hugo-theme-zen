@@ -12,6 +12,7 @@
 .navbar,
 %navbar {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   text-align: left;

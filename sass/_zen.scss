@@ -131,8 +131,12 @@ article {
   }
 
   code {
-    @include type-layout(s, 1);
+    @include type-layout(xs, 1);
     word-wrap: break-word;
+
+    @include respond-to(xxl) {
+      @include type-layout(xs-2, 1);
+    }
   }
 
   pre {
@@ -143,7 +147,11 @@ article {
     background-color: color(text-bg);
     overflow: auto;
     max-height: 250px;
-    max-width: 550px;
+    max-width: 90vw;
+
+    @include respond-to(s) {
+      max-width: 600px;
+    }
 
     & > code {
       display: inline-block;
@@ -319,21 +327,26 @@ figcaption {
 /* Mobile menu */
 
 .mobile-nav-wrapper {
-  position: fixed;
+  @include typeface(headings);
+  position: absolute;
   right: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 10;
+  z-index: 20;
   pointer-events: none;
+
+  .js-nav-open & {
+    position: fixed;
+  }
 }
 
 .mobile-nav-cover {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(color(nearblack), .2);
+  background-color: rgba(color('black'), .2);
   opacity: 0;
 
   .js-nav-open & {
@@ -343,13 +356,12 @@ figcaption {
 }
 
 .mobile-nav-toggle {
-  @include typeface(headings);
   display: block;
   position: absolute;
   top: $zen-gutters / 2;
-  right: $zen-gutters + $zen-gutters / 2 + $zen-gutters / 4;
+  right: $zen-gutters / 2;
   padding: 3px ($zen-gutters + $zen-gutters / 4 + 4px) 2px 4px;
-  z-index: 12;
+  z-index: 22;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
@@ -377,13 +389,12 @@ figcaption {
 }
 
 .mobile-nav-sheet {
-  position: relative;
   background-color: color(header-bg);
   width: 90vw;
   height: 100vh;
   padding: 2rem;
   transform: translateX(100vw);
-  z-index: 11;
+  z-index: 21;
 
   .js-nav-open & {
     pointer-events: auto;
@@ -406,6 +417,10 @@ figcaption {
         text-decoration: none;
       }
     }
+  }
+
+  .js-region {
+    @include padding(.5 0);
   }
 }
 
