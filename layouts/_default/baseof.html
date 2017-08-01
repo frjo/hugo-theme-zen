@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" dir="{{ $.Param "languagedir" | default "ltr" }}">
+<html class="nojs" lang="{{ .Site.Language.Lang }}" dir="{{ $.Param "languagedir" | default "ltr" }}">
 <head>
 <meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
@@ -19,9 +19,9 @@
 <div class="region header__region">{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}</div>
 </header>
 
-{{ block "main" . }}{{ end -}}
-
 {{ partial "menu.html" . -}}
+
+{{ block "main" . }}{{ end -}}
 
 {{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 
