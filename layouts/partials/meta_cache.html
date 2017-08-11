@@ -1,2 +1,3 @@
+<link rel="preload" as="style" href="/css/styles.css{{ if $.Param "cacheBustCSS" }}?{{ readFile "/public/css/styles.css" | sha1 }}{{ end }}">
 <link rel="stylesheet" href="/css/styles.css{{ if $.Param "cacheBustCSS" }}?{{ readFile "/public/css/styles.css" | sha1 }}{{ end }}">
 <link rel="stylesheet" href="/css/print.css" media="print">

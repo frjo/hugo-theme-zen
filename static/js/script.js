@@ -31,8 +31,8 @@
   }
 
   // Display CSS grid layout warning to old browsers.
-  if (!window.CSS || !window.CSS.supports || !window.CSS.supports('display', 'grid')) {
-    $('.header').after('<div class="layout__grid-notice" role="complementary">Your browsers does not support modern grid layout so this page will not look or behave as it should. Resent versions of Chrome, Firefox and Safari all works so please update. Support is coming in Microsoft Edge as well, until then use another browser. <a href="https://www.whatbrowser.org/">What Browser?</a></div>');
-  }
+  // if (!window.CSS || !window.CSS.supports || !window.CSS.supports('display', 'grid')) {
+  //   $('.header').after('<div class="layout__grid-notice" role="complementary">Your browsers does not support modern grid layout so this page will not look or behave as it should. Resent versions of Chrome, Firefox and Safari all works so please update. Support is coming in Microsoft Edge as well, until then use another browser. <a href="https://www.whatbrowser.org/">What Browser?</a></div>');
+  // }
 
 })(jQuery);

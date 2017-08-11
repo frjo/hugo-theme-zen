@@ -46,14 +46,12 @@
 
   // Wrapper for any blocks placed in the header region.
   &__region {
-    @include padding(.5 0);
-
     @include respond-to(s) {
       margin-left: auto;
-      padding: 0;
 
       @include rtl() {
         margin-right: auto;
+        margin-left: 0;
       }
     }
   }

@@ -1,0 +1,104 @@
+.mobile-nav-wrapper {
+  @include typeface(headings);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 20;
+  pointer-events: none;
+
+  .js-nav-open & {
+    position: fixed;
+  }
+}
+
+.mobile-nav-cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(color('black'), .2);
+  opacity: 0;
+
+  .js-nav-open & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.mobile-nav-toggle {
+  display: block;
+  position: absolute;
+  top: $zen-gutters / 2;
+  right: $zen-gutters / 2;
+  padding: 3px ($zen-gutters + $zen-gutters / 4 + 4px) 2px 4px;
+  z-index: 22;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  border: 1px solid color(border);
+  border-radius: 3px;
+  pointer-events: auto;
+
+  .js-nav-open & {
+    color: color(text-bg);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    margin-left: $zen-gutters / 4;
+    width: $zen-gutters;
+    height: 4px;
+    border-top: 12px double color(text);
+    border-bottom: 4px solid color(text);
+  }
+
+  .js-nav-open &::after {
+    border-color: color(text-bg);
+  }
+}
+
+.mobile-nav-sheet {
+  background-color: color(header-bg);
+  width: 90vw;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100vw);
+  z-index: 21;
+
+  .js-nav-open & {
+    pointer-events: auto;
+    box-shadow: -10px 0 10px -10px color(nearblack);
+    transform: translateX(10vw);
+  }
+
+  .js-navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      margin: .4rem 0;
+
+      a {
+        color: color(white);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mobile-nav-cover,
+.mobile-nav-toggle,
+.mobile-nav-toggle::after,
+.mobile-nav-sheet {
+  transition: all 130ms ease-in;
+
+  .js-nav-open & {
+    transition: all 330ms ease-out;
+  }
+}
