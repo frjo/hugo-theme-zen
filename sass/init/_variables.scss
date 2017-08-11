@@ -102,8 +102,8 @@ $typefaces: (
 );
 
 // Output a horizontal grid to help with debugging typography.
-$typey-debug: true;
-$with-wireframes: true;
+$typey-debug: false;
+$with-wireframes: false;
 
 // The length unit in which to output font size and margin values.
 // Supported values: px, em, rem.

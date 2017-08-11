@@ -48,6 +48,7 @@
 @import 'components/highlight-mark/highlight-mark';
 @import 'components/inline-links/inline-links';
 @import 'components/inline-sibling/inline-sibling';
+@import 'components/list-straight-left/list-straight-left';
 @import 'components/responsive-video/responsive-video';
 @import 'components/visually-hidden/visually-hidden';
 @import 'components/watermark/watermark';
@@ -60,15 +61,10 @@
 //
 // Weight: 2
 
-@import 'navigation/breadcrumb/breadcrumb';
 @import 'navigation/more-link/more-link';
 @import 'navigation/navbar/navbar';
 @import 'navigation/mobile/mobile';
 @import 'navigation/pager/pager';
-@import 'navigation/skip-link/skip-link';
-
-// Custom
-@import 'custom/list-straight-left/list-straight-left';
 
 // zen
 @import 'zen';

@@ -58,7 +58,6 @@ $chroma: add-colors('functional', (
   button:                 'nearblack',
   button-disabled:        'grey',
 
-  fieldset-summary:       'grey',
   form-error:             'red',
 
   mark-highlight:         'red',
@@ -68,17 +67,8 @@ $chroma: add-colors('functional', (
 
   preview-bg:             ('yellow' lighten 43%),
 
-  progress-bar:           'blue',
-  progress-bar-bg:        'grey-light',
-  progress-bar-border:    'grey-dark',
-
-  resizable-grippie:      'grey-extra-light',
-
   row-stripe:             'white',
   row-disabled:           'grey-light',
-
-  skip-link:              'white',
-  skip-link-bg:           'grey-dark',
 
   status:                 'green',
   status-bg:              (status lighten 62%),
@@ -88,16 +78,6 @@ $chroma: add-colors('functional', (
   warning-border:         'yellow',
   error:                  'red',
   error-bg:               (error lighten 57%),
-
-  tabs-border:            'border',
-  tabs-bg:                'text-bg',
-  tab:                    'text',
-  tab-text-shadow:        'white',
-  tab-bg:                 ('grey-light' lighten 6.66%),
-  tab-secondary:          'grey-dark',
-
-  table-drag:             ('yellow' lighten 43%),
-  table-select:           ('yellow' lighten 47%),
 
   watermark:              'grey-extra-light',
 

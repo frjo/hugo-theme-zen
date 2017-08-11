@@ -1,1 +1,1 @@
-/*! typey | GPLv2 License | https://github.com/jptaranto/typey */@media print{.breadcrumb,.pager,.print-none,.skip-link,aside,footer,nav{display:none}}@media print{html{font-size:12pt}.page,body{background-color:#fff}[role=main]{width:100%}:link,:visited{text-decoration:underline}}
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */@media print{.pager,.print-none,aside,footer,nav{display:none}}@media print{html{font-size:12pt}.page,body{background-color:#fff}[role=main]{width:100%}:link,:visited{text-decoration:underline}}
