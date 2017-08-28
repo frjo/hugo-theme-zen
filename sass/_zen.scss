@@ -54,6 +54,7 @@ figcaption {
 }
 
 article > header,
+.content-dates,
 .footer {
   @include type-layout(xs, 1);
 
@@ -72,6 +73,7 @@ nav,
 label,
 legend,
 article > header,
+.content-dates,
 .header,
 .footer {
   @include typeface(headings);
@@ -159,6 +161,10 @@ article {
     }
   }
 
+  .content-dates {
+    color: color('grey');
+    text-align: right;
+  }
 }
 
 .title-submitted {

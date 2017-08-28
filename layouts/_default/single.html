@@ -12,6 +12,8 @@
 </header>
 <div class="content">
 {{ .Content }}
+
+{{- if not .Lastmod.IsZero }}{{ partial "dates.html" . -}}{{ end -}}
 </div>
 </article>
 </main>
