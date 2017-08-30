@@ -63,6 +63,7 @@ params:
   jquery: true          # Add jQuery
   languageDir: ""       # Set ltr or rtl, defaults to ltr.
   logo: false           # Turn off the logo.
+  mobileMenu: true      # Turn on a mobile menu on small screens.
   piwikSiteId:          # Piwik site id
   piwikTrackerUrl: ""   # Piwik url, schemaless and no slash on end (example.com/piwik).
   poweredby: true       # Show powered by hugo in footer
@@ -71,6 +72,13 @@ params:
   sidebar: true         # Show a sidebar to the right
   submitted: true       # Show author and date information for a post.
 ```
+
+
+## Dates
+
+If "lastmod" is set in the frontmatter on a post that value will be used in the "submitted" section. If not "date" is used.
+
+With "lastmod" set a date section will also appear at the bottom of post telling the reader the created and modification dates.
 
 
 ## Shortcodes

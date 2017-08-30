@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="layout__content" role="main">
+<main class="content layout__content" role="main">
 <h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <header>

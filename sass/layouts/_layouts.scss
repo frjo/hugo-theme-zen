@@ -17,7 +17,7 @@
   &__page-top,
   &__page-bottom {
     padding: 0 $zen-gutters / 2;
-    min-width: 0;  // With display grid defaults to auto making <pre> overflow.
+    min-width: 0;  // With display grid defaults to auto, making <pre> overflow.
 
     @include respond-to(s) {
       padding: 0 $zen-gutters;

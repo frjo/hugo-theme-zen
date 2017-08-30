@@ -6,7 +6,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="layout__content" role="main">
+<main class="content layout__content" role="main">
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <div class="content">
 {{ .Content }}
