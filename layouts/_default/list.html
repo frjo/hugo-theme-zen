@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="content layout__content" role="main">
+<main class="main layout__main" role="main">
 <h1 class="title">{{ .Title }}</h1>
 {{ $paginator := .Paginate (.Data.Pages) -}}
 {{ range $paginator.Pages -}}

@@ -10,7 +10,7 @@
 
   &__header,
   &__footer,
-  &__content,
+  &__main,
   &__navigation,
   &__first-sidebar,
   &__second-sidebar,
@@ -112,7 +112,7 @@
       grid-area: top;
     }
 
-    &__content {
+    &__main {
       grid-area: main;
     }
 

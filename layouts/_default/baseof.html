@@ -19,9 +19,9 @@
 <div class="region header__region">{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}</div>
 </header>
 
-{{ partial "menu.html" . -}}
+{{ partial "menu.html" . }}
 
-{{ block "main" . }}{{ end -}}
+{{ block "main" . }}{{ end }}
 
 {{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 

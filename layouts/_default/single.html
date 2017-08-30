@@ -3,17 +3,17 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="content layout__content" role="main">
+<main class="main layout__main" role="main">
 <h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <header>
-{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
-{{ if .Params.tags }}{{ partial "tags.html" . -}}{{ end }}
+{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
+{{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
 </header>
 <div class="content">
 {{ .Content }}
 
-{{- if not .Lastmod.IsZero }}{{ partial "dates.html" . -}}{{ end -}}
+{{ if not .Lastmod.IsZero }}{{ partial "dates.html" . }}{{ end -}}
 </div>
 </article>
 </main>
