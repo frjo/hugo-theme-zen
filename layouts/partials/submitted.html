@@ -1,4 +1,8 @@
 <p class="submitted">
 {{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
+{{ if not .Lastmod.IsZero }}
+<time class="modified-date" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format ($.Param "dateformat" | default "2 January, 2006") }}</time>
+{{ else }}
 <time class="modified-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</time>
+{{ end -}}
 </p>
