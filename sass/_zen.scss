@@ -219,7 +219,6 @@ figcaption {
 
 .main-menu {
   @include margin-top(.5);
-  @include margin-bottom(.5);
   outline: 0;
 
   li {
