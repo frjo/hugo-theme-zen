@@ -9,6 +9,8 @@
 
 .pager,
 %pager {
+  @include margin-top(.5);
+  @include margin-bottom(.5);
   clear: both;
   padding: 0;
   text-align: center;
