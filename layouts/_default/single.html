@@ -13,7 +13,7 @@
 <div class="content">
 {{ .Content }}
 
-{{ if not .Lastmod.IsZero }}{{ partial "dates.html" . }}{{ end -}}
+{{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
 </div>
 </article>
 </main>
