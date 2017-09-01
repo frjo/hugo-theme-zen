@@ -294,7 +294,7 @@ figcaption {
   input,
   textarea {
     @include margin-bottom(.75);
-    width: 95%;
+    width: 92%;
 
     &:required+span::after {
       content: ' *';

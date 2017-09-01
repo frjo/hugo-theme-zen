@@ -39,6 +39,7 @@
   line-height: 1;
   border: 1px solid color(border);
   border-radius: 3px;
+  color: color(text);
   pointer-events: auto;
 
   .js-nav-open & {
@@ -61,7 +62,7 @@
 }
 
 .mobile-nav-sheet {
-  background-color: color(header-bg);
+  background-color: color(mobile-menu);
   width: 90vw;
   height: 100vh;
   padding: 2rem;
