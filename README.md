@@ -22,17 +22,17 @@ The Zen grid system has been replaces with a modern CSS grid layout.
 
 ## On the large screen
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/grid/images/tn.png)
 
 
 ## On the small screen
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/grid/images/tn_mobil.png)
 
 
-## The mobile manu
+## The mobile menu
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil_menu.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/grid/images/tn_mobil_menu.png)
 
 
 ## Installation
