@@ -9,12 +9,12 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 
 * HTML5
 * Responsive design
-* Zen grids
+* CSS grid
 * Normalize CSS
 * libSass
 * Gulp.js
 * Minify css
-* jQuery 2
+* jQuery 3
 * A mobile menu
 * Search with DuckDuckGo
 * Analytics with Piwik
