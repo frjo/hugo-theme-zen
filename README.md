@@ -1,8 +1,8 @@
 # A Hugo theme based on the Drupal zen base theme
 
-A very popular base theme for Drupal is [Zen](https://www.drupal.org/project/zen) by [JohnAlbin](https://www.drupal.org/u/johnalbin).
+A very popular base theme for Drupal is [Zen](https://www.drupal.org/project/zen) by [JohnAlbin](https://www.drupal.org/u/johnalbin). This is a port of that theme for [Hugo :: A fast and modern static website engine](https://gohugo.io/).
 
-This is a port of that theme for [Hugo :: A fast and modern static website engine](https://gohugo.io/).
+The Zen grid system has been replaces with a modern CSS grid layout.
 
 
 ## Features
@@ -28,6 +28,11 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 ## On the small screen
 
 ![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
+
+
+## The mobile manu
+
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil_menu.png)
 
 
 ## Installation
