@@ -2,8 +2,9 @@
 
 A very popular base theme for Drupal is [Zen](https://www.drupal.org/project/zen) by [JohnAlbin](https://www.drupal.org/u/johnalbin). This is a port of that theme for [Hugo :: A fast and modern static website engine](https://gohugo.io/).
 
-The Zen grid system has been replaces with a modern CSS grid layout.
+This version uses a modern CSS grid layout. Recent versions of all the mayor browsers support it, see [Can I use css grid](http://caniuse.com/#search=grid).
 
+The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the original Zen grid system that uses floats and clearfixes like they did in the stone age.
 
 ## Features
 
@@ -22,17 +23,17 @@ The Zen grid system has been replaces with a modern CSS grid layout.
 
 ## On the large screen
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/grid/images/tn.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn.png)
 
 
 ## On the small screen
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/grid/images/tn_mobil.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
 
 
 ## The mobile menu
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/grid/images/tn_mobil_menu.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil_menu.png)
 
 
 ## Installation
