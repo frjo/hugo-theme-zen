@@ -3,9 +3,9 @@ description = "A port of the Drupal zen base theme with libsass and gulp support
 homepage = "https://github.com/frjo/hugo-theme-zen"
 license = "GPLv2"
 licenselink = "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-tags = ["simple", "articles", "blog"]
-features = ["responsive", "grid", "sass", "gulp", "search", "piwik", "jsonfeed"]
-min_version = 0.23
+tags = ["multilingual", "responsive", "blog", "search"]
+features = ["multilingual", "responsive", "grid", "sass", "gulp", "search", "piwik", "jsonfeed"]
+min_version = 0.28
 
 [author]
   name = "Fredrik Jonsson"
