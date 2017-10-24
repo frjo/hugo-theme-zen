@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | jsonify }},
+    "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}",
+    "url" : "{{ .Permalink }}",
+    "description": {{ with (replaceRE "\n" "" (.Description | default .Summary))  }}{{ . | jsonify }}{{ end }},
+    {{ with .Params.tags -}}
+    "keywords": {{ . | jsonify }},
+    {{ end -}}
+    {{ with $.Param "author" -}}
+    "author": {
+      "@type": "Person",
+      "name": "{{ . }}"
+    },
+    {{ end -}}
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Site.BaseURL }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}",
+    }
+  }
+</script>
