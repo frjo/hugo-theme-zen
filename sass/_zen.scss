@@ -95,7 +95,7 @@ aside {
 article {
 
   & > header {
-    color: color('grey');
+    color: color('text-meta');
 
 
     p {
@@ -162,7 +162,7 @@ article {
   }
 
   .content-dates {
-    color: color('grey');
+    color: color('text-meta');
     text-align: right;
   }
 }
