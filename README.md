@@ -1,25 +1,35 @@
-# A Hugo theme based on the Drupal zen base theme
+# The Hugo Zen theme
 
-A very popular base theme for Drupal is [Zen](https://www.drupal.org/project/zen) by [JohnAlbin](https://www.drupal.org/u/johnalbin). This is a port of that theme for [Hugo :: A fast and modern static website engine](https://gohugo.io/).
+**Zen** theme strives to be as clean and standard compliant as possible with some neat features. A solid base for your custom [Hugo](https://gohugo.io/) theme.
 
-This version uses a modern CSS grid layout. Recent versions of all the mayor browsers support it, see [Can I use css grid](http://caniuse.com/#search=grid).
+It uses HTML5 with a modern CSS grid and flex layout. Recent versions of all the mayor browsers support it, see [Can I use css grid](http://caniuse.com/#search=grid).
+
+This is a port of the [Zen](https://www.drupal.org/project/zen) theme by [JohnAlbin](https://www.drupal.org/u/johnalbin), a very popular base theme for Drupal.
 
 The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the original Zen grid system that uses floats and clearfixes like they did in the stone age.
 
 ## Features
 
-* HTML5
-* Responsive design
-* CSS grid
-* Normalize CSS
-* libSass
-* Gulp.js
-* Minify css
-* jQuery 3
 * A mobile menu
-* Search with DuckDuckGo
 * Analytics with Piwik
+* Automatic linting of css and js
+* CSS grid and flex for layout
+* Gulp.js
+* HTML5
+* jQuery 3
+* libSass
+* Minify css
+* Multilingual (i18n)
+* Normalize CSS
+* Responsive design
+* RSS and JSON feeds with full content
+* Search with DuckDuckGo
 
+## Sites using the Hugo Zen theme
+
+* [Combonetwork development](https://combonet.se/)
+* [Helmer Grundström](https://www.helmergrundstrom.se/)
+* [xdeb.org](https://xdeb.org/)
 
 ## On the large screen
 
@@ -43,7 +53,7 @@ $ cd themes
 $ git clone https://github.com/frjo/hugo-theme-zen.git zen
 ```
 
-[Hugo - Installing Hugo](https://gohugo.io/overview/installing/)
+[Hugo - Installing Hugo](https://gohugo.io/getting-started/installing/)
 
 
 ## config.yaml example
@@ -89,6 +99,14 @@ With "lastmod" set a date section will also appear at the bottom of post telling
 
 
 ## Shortcodes
+
+### Figure
+
+Zen comes with a improved version of the built in "figure"" shortcut.
+
+* You can set a max width for images with parameter "imageMaxWidth". 
+* If width and height is not set the real dimensions of the image will be used.
+* If only width or height is set the other value will be proportionally calculated.
 
 ### Clear
 
