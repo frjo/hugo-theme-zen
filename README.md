@@ -66,6 +66,7 @@ params:
   feedlinks: true       # Show feed links in the footer.
   footer: "A [example.org](https://example.org/) production."
   icon: ""              # Relative path to icon in json feed, no leading slash.
+  imageMaxWidth: ""     # Max width for images added via figure shortcode.
   jquery: true          # Add jQuery
   languageDir: ""       # Set ltr or rtl, defaults to ltr.
   logo: false           # Turn off the logo.

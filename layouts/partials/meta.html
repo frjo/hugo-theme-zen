@@ -1,4 +1,4 @@
 {{ .Hugo.Generator }}
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}">
