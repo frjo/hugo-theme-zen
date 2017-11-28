@@ -28,6 +28,7 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 ## Sites using the Hugo Zen theme
 
 * [Combonetwork development](https://combonet.se/)
+* [Drejargården](https://www.drejargarden.se/)
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
 
@@ -102,7 +103,7 @@ With "lastmod" set a date section will also appear at the bottom of post telling
 
 ### Figure
 
-Zen comes with a improved version of the built in "figure"" shortcut.
+Zen comes with a improved version of the built in "figure" shortcut.
 
 * You can set a max width for images with parameter "imageMaxWidth". 
 * If width and height is not set the real dimensions of the image will be used.
