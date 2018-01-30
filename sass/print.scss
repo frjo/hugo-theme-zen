@@ -41,4 +41,11 @@ footer {
   :visited {
     text-decoration: underline;
   }
+
+  // Add visible title after abbreviations.
+  abbr[title] {
+    &::after {
+      content: ' (' attr(title) ')';
+    }
+  }
 }
