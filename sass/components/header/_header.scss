@@ -1,20 +1,26 @@
 // Dependencies.
-@import 'base/headings/headings';
+@import 'base/grouping/grouping';
+@import 'components/clearfix/clearfix';
 
 // Branding header
+//
+// Markup: header.twig
+//
+// Style guide: components.header
 
 .header,
 %header {
-  @include respond-to(s) {
-    display: flex;
-  }
+  @extend %clearfix;
 
   // Wrapping link for logo.
   &__logo {
-    margin: 0 $zen-gutters 0 0;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0;
 
     @include rtl() {
-      margin: 0 0 0 $zen-gutters;
+      float: right;
+      margin: 0 0 0 10px;
     }
   }
 
@@ -23,11 +29,15 @@
     vertical-align: bottom;
   }
 
+  // Wrapper for website name and slogan.
+  &__name-and-slogan {
+    float: left;
+  }
+
   // The name of the website.
   &__site-name {
     @extend %h1;
     margin: 0;
-    display: inline-block;
   }
 
   // The link around the name of the website.
@@ -44,15 +54,23 @@
     }
   }
 
+  // The slogan (or tagline) of a website.
+  &__site-slogan {
+    margin: 0;
+  }
+
+  // The secondary menu (login, etc.)
+  &__secondary-menu {
+    float: right;
+
+    @include rtl() {
+      float: left;
+    }
+  }
+
   // Wrapper for any blocks placed in the header region.
   &__region {
-    @include respond-to(s) {
-      margin-left: auto;
-
-      @include rtl() {
-        margin-right: auto;
-        margin-left: 0;
-      }
-    }
+    // Clear the logo.
+    clear: both;
   }
 }

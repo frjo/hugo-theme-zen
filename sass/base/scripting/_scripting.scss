@@ -1,0 +1,18 @@
+// Scripting
+
+// Canvas
+
+canvas {
+  // Add the correct display in IE 9-.
+  display: inline-block;
+}
+
+// Template
+//
+// Some older browsers do not hide elements the web components' `template`
+// element.
+
+template {
+  // Add the correct display in IE.
+  display: none;
+}

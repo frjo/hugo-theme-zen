@@ -3,24 +3,26 @@
 // The elements in this section give semantics to inline text.
 //
 // Weight: 1
-//
-// Style guide: base.text
 
 // Abbreviation / Acroynym
 //
 // The `<abbr>` element makes the meanings of abbreviations and acronyms visible
 // on hover.
-//
-// Markup: text-abbr.twig
-//
-// Style guide: base.text.abbr
 
 abbr[title] {
-  // Remove the bottom border in Firefox <40.
+  // Remove the bottom border in Chrome 57- and Firefox 39-.
   border-bottom: 0;
+  // sass-lint:disable no-duplicate-properties
   // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   text-decoration: underline;
   text-decoration: underline dotted;
+
+  @media print {
+    // Add visible title after abbreviations.
+    &::after {
+      content: ' (' attr(title) ')';
+    }
+  }
 }
 
 // Bold
@@ -31,11 +33,7 @@ abbr[title] {
 // Feel free to use `<b>` in HTML5. `<b>` is meant to highlight words or phrases
 // without conveying additional importance.
 //
-// Markup: text-b.twig
-//
 // Weight: -1
-//
-// Style guide: base.text.b
 
 // Prevent the duplicate application of `bolder` by the next rule in Safari 6.
 
@@ -45,8 +43,8 @@ strong {
 }
 
 // sass-lint:disable no-mergeable-selectors
-strong,
-b {
+b,
+strong {
   // Add the correct font weight in Chrome, Edge, and Safari.
   font-weight: bolder;
 }
@@ -66,34 +64,19 @@ cite {
 
 // Code
 //
-// The `<code>` element represents a fragment of computer code. The `<var>`
-// element represents a variable. The `<samp>` element represents (sample)
-// output from a program or computing system. The `<kbd>` element represents
-// user input (typically keyboard input.)
-//
-// Markup: text-code.twig
-//
-// Style guide: base.text.code
+// The `<code>` element represents a fragment of computer code. The `<samp>`
+// element represents (sample) output from a program or computing system. The
+// `<kbd>` element represents user input (typically keyboard input.)
 
-%monospace,
 code,
 kbd,
-samp,
-var {
-  // Correct the inheritance and scaling of font size in all browsers.
-  // The font-family value ends with ", serif".
-  @include typeface(monospace);
-  // Correct the odd `em` font sizing in all browsers.
-  font-size: 1em;
+samp {
+  @extend %monospace;
 }
 
 // Deleted text
 //
 // The `<del>` element indicates blocks of text that have been deleted.
-//
-// Markup: text-del.twig
-//
-// Style guide: base.text.del
 
 del {
   // Add your styles.
@@ -102,13 +85,9 @@ del {
 // Definition
 //
 // The `<dfn>` element represents the defining instance of a term.
-//
-// Markup: text-dfn.twig
-//
-// Style guide: base.text.dfn
 
 dfn {
-  // Add the correct font style in Android <4.4.
+  // Add the correct font style in Android 4.3-.
   font-style: italic;
 }
 
@@ -120,11 +99,7 @@ dfn {
 // Feel free to use `<i>` element in HTML5. `<i>` is meant to convey voice,
 // technical terms, etc.
 //
-// Markup: text-i.twig
-//
 // Weight: -1
-//
-// Style guide: base.text.i
 
 i,
 em {
@@ -134,10 +109,6 @@ em {
 // Inserted text
 //
 // The `<ins>` element indicates additions to the document.
-//
-// Markup: text-ins.twig
-//
-// Style guide: base.text.ins
 
 ins {
   // Add your styles.
@@ -147,13 +118,9 @@ ins {
 //
 // The `<mark>` element highlights a run of text due to its relevance in another
 // context.
-//
-// Markup: text-mark.twig
-//
-// Style guide: base.text.mark
 
 mark {
-  // Add the correct background and color in IE <10.
+  // Add the correct background and color in IE 9-.
   background-color: color(mark-bg);
   color: color(text);
 }
@@ -162,10 +129,6 @@ mark {
 //
 // The `<q>` element represents an inline quote from another source. Longer
 // quotes should use the `<blockquote>` element.
-//
-// Markup: text-q.twig
-//
-// Style guide: base.text.q
 
 q {
   // Add your styles.
@@ -174,10 +137,6 @@ q {
 // Strikethrough text
 //
 // The `<s>` element indicates blocks of text that are no longer relevant.
-//
-// Markup: text-s.twig
-//
-// Style guide: base.text.s
 
 s {
   // Add your styles.
@@ -187,10 +146,6 @@ s {
 //
 // For de-emphasizing inline or blocks of text, use the `<small>` element to set
 // text at 80% the size of the parent.
-//
-// Markup: text-small.twig
-//
-// Style guide: base.text.small
 
 small {
   // Add the correct font size in all browsers.
@@ -201,10 +156,6 @@ small {
 //
 // The `<sup>` element represents a superscript and the `<sub>` element
 // represents a subscript.
-//
-// Markup: text-sub.twig
-//
-// Style guide: base.text.sub
 
 sub,
 sup {
@@ -228,10 +179,6 @@ sup {
 //
 // To underline text use the `<u>` element. Not recommended since underlines are
 // used by web browsers to style hyperlinks.
-//
-// Markup: text-u.twig
-//
-// Style guide: base.text.u
 
 u {
   // Add your styles.

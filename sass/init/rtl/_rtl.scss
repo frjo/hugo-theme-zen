@@ -10,8 +10,6 @@ $include-rtl: true !default;
 // Can be turned off globally by setting `$include-rtl: false;`.
 //
 // $selector = '[dir="rtl"]' - The RTL parent selector.
-//
-// Style guide: sass.mixins.rtl
 @mixin rtl($selector: '[dir="rtl"]') {
   @if $include-rtl {
     @if & {

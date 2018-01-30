@@ -1,19 +1,26 @@
 // Embedded content
 //
 // Weight: 2
-//
-// Style guide: base.embedded
+
+// Audio
+
+audio {
+  // Add the correct display in IE 9-.
+  display: inline-block;
+}
+
+// Add the correct display in iOS 4-7.
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 
 // Image
 //
 // An `<img>` element represents an image.
-//
-// Markup: embedded-img.twig
-//
-// Style guide: base.embedded.img
 
 img {
-  // Remove the border on images inside links in IE <11.
+  // Remove the border on images inside links in IE 10-.
   border-style: none;
 }
 
@@ -30,12 +37,15 @@ svg {
 // Scalable vector
 //
 // A `<svg>` element represents an image encoded as a Scalable Vector Graphic.
-//
-// Markup: embedded-svg.twig
-//
-// Style guide: base.embedded.svg
 
 svg:not(:root) {
   // Hide the overflow in IE.
   overflow: hidden;
+}
+
+// Video
+
+video {
+  // Add the correct display in IE 9-.
+  display: inline-block;
 }

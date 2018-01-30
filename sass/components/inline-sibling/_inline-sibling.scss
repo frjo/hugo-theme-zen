@@ -31,3 +31,25 @@
     display: inline;
   }
 }
+
+//
+// Drupal selectors.
+//
+
+// Drupal core.
+.field-label-inline {
+  .field-label {
+    @extend %inline-sibling;
+  }
+
+  // Revert core's ridiculous styling without polluting the component.
+  .field-label,
+  .field-items {
+    float: none;
+  }
+}
+
+// The inline field label used by the Fences 7.x-1.x module.
+span.field-label {
+  @extend %inline-sibling;
+}

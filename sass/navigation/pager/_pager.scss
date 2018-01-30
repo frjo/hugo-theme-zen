@@ -2,10 +2,6 @@
 //
 // Paged navigation is a list of page numbers when more than 1 page of content
 // is available.
-//
-// Markup: pager.twig
-//
-// Style guide: navigation.pager
 
 .pager,
 %pager {
@@ -31,7 +27,7 @@
 }
 
 //
-// Zen selectors.
+// Drupal selectors.
 //
 
 // .pager-item     - A list item containing a page number in the list of pages.

@@ -25,9 +25,14 @@
   }
 }
 
-.nojs-hidden,
-%nojs-hidden {
-  html.nojs & {
-    @extend %hidden;
-  }
+//
+// Drupal selectors.
+//
+
+.element-hidden {
+  @extend %js-hidden;
+}
+
+.js-hide {
+  @extend %js-hidden;
 }

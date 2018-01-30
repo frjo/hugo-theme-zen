@@ -1,9 +1,4 @@
-/**
- * @file
- * Zen custom styles
- */
-
-/* Zen overrides */
+// Zen custom styles
 
 p,
 pre {
@@ -11,7 +6,7 @@ pre {
   @include margin(.75 0);
 }
 
-/* Page */
+// Page
 
 body {
   background-color: color(backdrop);
@@ -40,7 +35,7 @@ body {
   }
 }
 
-/* Apply smaller text to blocks, footer etc. */
+// Apply smaller text to blocks, footer etc.
 
 th,
 label,
@@ -63,7 +58,7 @@ article > header,
   }
 }
 
-/* Apply heading font stack to heading, labels etc. */
+// Apply heading font stack to heading, labels etc.
 
 h1,
 h2,
@@ -215,7 +210,7 @@ figcaption {
   }
 }
 
-/* Navigation */
+// Navigation
 
 .main-menu {
   @include margin-top(.5);
@@ -251,7 +246,7 @@ figcaption {
   text-decoration: none;
 }
 
-/* Messages */
+// Messages
 
 .message {
   padding: 10px;
@@ -278,7 +273,7 @@ figcaption {
   }
 }
 
-/* Search */
+// Search
 
 .search-form {
   @include padding(.5 0);
@@ -288,7 +283,7 @@ figcaption {
   @include type-layout(l, 1);
 }
 
-/* Form */
+// Form
 
 .content {
   input,

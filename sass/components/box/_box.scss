@@ -2,7 +2,7 @@
 //
 // A simple box style.
 //
-// A block is often styled as a box. However, this design component is
+// A Drupal block is often styled as a box. However, this design component is
 // not applied to any blocks by default; it is used as an example of how to
 // build and document a CSS component.
 //
@@ -16,10 +16,6 @@
 //
 // :hover - The hover/focus styling.
 // .box--highlight - The "highlight" box variant.
-//
-// Markup: box.twig
-//
-// Style guide: components.box
 
 .box,
 %box {
@@ -35,9 +31,19 @@
   }
 
   // Sass compiles this nested ruleset's selector into:
-  // .box:focus, .box:hover, %box:focus, %box:hover
+  // .box:focus, .box:hover, .box.is-focus, .box--is-focus,
+  // %box:focus, %box:hover, %box.is-focus, %box--is-focus {}
+  //
+  // The ".box--is-focus" class is a stray class we don't actually want, but we
+  // deal with it because we often want a placeholder selector like
+  // %box--is-focus in case we need to use @extends later.
+  //
+  // The ".is-" part of the class name is a Drupal 8 BEM naming convention that
+  // indicates the "focus" is a _state_ of the "box" component.
   &:focus,
-  &:hover {
+  &:hover,
+  &.is-focus,
+  &--is-focus {
     border-color: color(text);
   }
 

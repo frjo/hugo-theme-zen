@@ -18,7 +18,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(color('black'), .2);
+  background-color: color(mobile-menu-cover);
   opacity: 0;
 
   .js-nav-open & {
@@ -86,7 +86,7 @@
       margin: .4rem 0;
 
       a {
-        color: color(white);
+        color: color('white');
         text-decoration: none;
       }
     }

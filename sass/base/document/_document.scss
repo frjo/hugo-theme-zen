@@ -1,0 +1,23 @@
+// sass-lint:disable no-vendor-prefixes
+
+// Document
+//
+// The default font styles are inherited from the `<html>` element.
+
+html {
+  // Change the default font family in all browsers (opinionated).
+  @include typeface(body);
+  // Correct the line height in all browsers.
+  @include define-type-sizing();
+  // Prevent adjustments of font size after orientation changes in IE on Windows
+  // Phone and in iOS.
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // On short pages, we want any background gradients to fill the entire height
+  // of the browser.
+  min-height: 100%;
+
+  @include respond-to(xxl) {
+    @include define-type-sizing($base-font-size-2, $base-line-height-2);
+  }
+}

@@ -8,8 +8,6 @@
 // to an HTML form element, these styles will be the ones displayed.
 //
 // Weight: -1
-//
-// Style guide: forms.base
 
 //
 // The following rules are from normalize.css and help to fix inconsistencies
@@ -22,11 +20,13 @@ input,
 optgroup,
 select,
 textarea {
+  // Change the font styles in all browsers (opinionated).
+  @include typeface(body);
+  @include line-height(1);
+  font-size: 100%;
   // Keep form elements constrained in their containers.
   box-sizing: border-box;
   max-width: 100%;
-  // Change font properties to `inherit` in all browsers (opinionated).
-  font: inherit;
   // Remove the margin in Firefox and Safari.
   margin: 0;
 }
@@ -59,17 +59,11 @@ input {
   // Correct the outline style in Safari.
   outline-offset: -2px;
 
-  // Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+  // Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
-}
-
-// Correct the text style of placeholders in Chrome, Edge, and Safari.
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .54;
 }
 
 ::-webkit-file-upload-button {
@@ -78,6 +72,20 @@ input {
   // Change font properties to `inherit` in Safari.
   font: inherit;
 }
+
+// Buttons
+//
+// Buttons built with the `<button>` element are the most flexible for styling
+// purposes. But `<input>` elements with `type` set to `submit`, `image`,
+// `reset`, or `button` are also supported.
+//
+// Below is the default button styling. To see variations on the button styling
+// see the [button component](section-forms.html#kssref-forms-button).
+//
+// :hover        - Hover styling.
+// :active:hover - Depressed button styling.
+
+@import 'components/button/button';
 
 // The %text-form-element can be used to style `<input>` text types and
 // `<textarea>` elements at the same time.
@@ -91,9 +99,18 @@ input {
 // HTML5 types: `text`, `search`, `tel`, `url`, `email`, `password`, `date`,
 // `time`, `number`, `range`, `color`, and `file`.
 //
-// Markup: forms-input.twig
+// Note: Certain font size values applied to `number` inputs cause the cursor
+// style of the decrement button to change from `default` to `text`.
 //
-// Style guide: forms.base.input
+// Note: The search input is not fully stylable by default. In Chrome and Safari
+// on OSX/iOS you can't control `font`, `padding`, `border`, or `background`. In
+// Chrome and Safari on Windows you can't control `border` properly. It will
+// apply `border-width` but will only show a border color (which cannot be
+// controlled) for the outer 1px of that border. Applying
+// `-webkit-appearance: textfield` addresses these issues without removing the
+// benefits of search inputs (e.g. showing past searches). Safari (but not
+// Chrome) will clip the cancel button on when it has padding (and `textfield`
+// appearance).
 
 [type='text'],
 [type='search'],
@@ -124,30 +141,22 @@ input {
 // If an `<input>` element has the `type='checkbox'` attribute set, the form
 // field is displayed as a checkbox.
 //
-// It's recommended that you don't attempt to style these elements. Firefox's
-// implementation doesn't respect `box-sizing`, `padding`, or `width`.
-//
-// Markup: forms-input-checkbox.twig
-//
-// Style guide: forms.base.input-checkbox
+// It is recommended that you do not style checkbox and radio inputs as
+// Firefox's implementation does not respect box-sizing, padding, or width.
 
 // Radio buttons
 //
 // If an `<input>` element has the `type='radio'` attribute set, the form field
 // is displayed as a radio button.
 //
-// It's recommended that you don't attempt to style these elements. Firefox's
-// implementation doesn't respect `box-sizing`, `padding`, or `width`.
-//
-// Markup: forms-input-radio.twig
-//
-// Style guide: forms.base.input-radio
+// It is recommended that you do not style checkbox and radio inputs as
+// Firefox's implementation does not respect box-sizing, padding, or width.
 
 [type='checkbox'],
 [type='radio'] {
-  // Add the correct box sizing in IE <11.
+  // Add the correct box sizing in IE 10-.
   box-sizing: border-box;
-  // Remove the padding in IE <11.
+  // Remove the padding in IE 10-.
   padding: 0;
 }
 
@@ -155,16 +164,11 @@ input {
 //
 // The `<fieldset>` element groups a set of form fields, optionally under a
 // common name given by the `<legend>` element.
-//
-// Markup: forms-fieldset.twig
-//
-// Style guide: forms.base.fieldset
 
 fieldset {
-  // Change the border, margin, and padding in all browsers (opinionated).
-  @include padding(.35 .625 .65);
+  // Correct the padding in Firefox.
+  @include padding(.35 .5 .65);
   border: 1px solid color(border);
-  margin: 0 2px;
 }
 
 legend {
@@ -172,13 +176,13 @@ legend {
   box-sizing: border-box;
   display: table;
   max-width: 100%;
-  white-space: normal;
-  // Correct the color inheritance from `fieldset` elements in IE.
-  color: inherit;
   // Align legend text with a fieldset's text while removing left padding so
   // people aren't caught out if they zero out fieldset padding.
   margin-left: -5px;
   padding: 0 5px;
+  // Correct the color inheritance from `fieldset` elements in IE.
+  color: inherit;
+  white-space: normal;
 }
 
 // Labels
@@ -186,12 +190,9 @@ legend {
 // The `<label>` element represents a caption of a form field. The label can be
 // associated with a specific form control by using the `for` attribute or by
 // putting the form control inside the label element itself.
-//
-// Markup: forms-label.twig
-//
-// Style guide: forms.base.label
 
 label {
+  // Drupal-style form labels.
   display: block;
   font-weight: bold;
 }
@@ -202,28 +203,28 @@ label {
 // options.
 //
 // Known limitation: by default, Chrome and Safari on OS X allow very limited
-// styling of `<select>`, unless a `border` property is set.
-//
-// Markup: forms-select.twig
-//
-// Style guide: forms.base.select
+// styling of `<select>`, unless a `border` property is set. The default font
+// weight on `optgroup` elements cannot safely be changed in Chrome on OSX and
+// Safari on OS X.
 
 select {
   // Add your styles.
 }
 
-optgroup {
-  // Restore the font weight unset by a previous rule.
-  font-weight: bold;
+// Progress
+//
+// The `<progress>` element represents the completion progress of a task.
+
+progress {
+  // Add the correct display in IE 9-.
+  display: inline-block;
+  // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  vertical-align: baseline;
 }
 
 // Text areas
 //
 // The `<textarea>` element represents a multi-line plain text form field.
-//
-// Markup: forms-textarea.twig
-//
-// Style guide: forms.base.textarea
 
 textarea {
   @extend %text-form-element !optional;

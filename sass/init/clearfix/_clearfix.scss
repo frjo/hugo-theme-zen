@@ -5,8 +5,6 @@
 //
 // We use the micro-clearfix, optimized for use in `@extend` where fewer `&` is
 // better.
-//
-// Style guide: sass.mixins.clearfix
 @mixin clearfix() {
   &::before {
     content: '';

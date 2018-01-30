@@ -16,24 +16,18 @@ $with-wireframes: false !default;
 
   .wireframe,
   %wireframe {
-    outline: 1px solid color(border) !important;
+    outline: 1px solid color(border);
   }
 
   //
-  // Zen selectors.
+  // Drupal selectors.
   //
 
-  .layout {
-    &__header,
-    &__footer,
-    &__main,
-    &__navigation,
-    &__first-sidebar,
-    &__second-sidebar,
-    &__page-top,
-    &__page-bottom {
-      @extend %wireframe;
-    }
+  .header,
+  .layout-3col > div,
+  .footer,
+  .region-bottom {
+    @extend %wireframe;
   }
 
 }

@@ -6,19 +6,29 @@
 //       @see http://snook.ca/archives/html_and_css/no_css_reset/
 //
 // This directory is a slight fork of this original source:
-// - normalize-scss 5.0.3 | MIT/GPLv2 License | bit.ly/normalize-scss
+// normalize-scss 7.0.0 | MIT/GPLv2 License | bit.ly/normalize-scss
 
+
+// Universal
+// ==========================================================================
+
+// Use the saner border-box model for all elements.
+* {
+  box-sizing: border-box;
+}
 
 // Normalize-scss is broken into modular pieces to make it easier to edit.
-@import 'root';
-@import 'html5';
-@import 'links/links';
-@import 'headings/headings';
-@import 'text/text';
+@import 'document/document';
+@import 'sections/sections';
 @import 'grouping/grouping';
+@import 'links/links';
+@import 'text/text';
 @import 'embedded/embedded';
 @import 'forms/forms';
 @import 'tables/tables';
+@import 'interactive/interactive';
+@import 'scripting/scripting';
+@import 'hidden/hidden';
 
 // Note: we allow the .button component (loaded by forms) to override :link, by
 // loading links first.

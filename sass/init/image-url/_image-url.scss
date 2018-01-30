@@ -37,8 +37,6 @@ $image-url-subdirectory: 'components' !default;
 //                   `$subdirectory`.
 // $path-to-source = $image-url-path-to-source - Optional. The relative path
 //                   from the css build directory to the sass source directory.
-//
-// Style guide: sass.mixins.image-url
 @function image-url($subdirectory, $path: null, $path-to-source: $image-url-path-to-source) {
   // If only 1 parameter is given, its value is intended for the $path.
   @if type-of($path) == 'null' {

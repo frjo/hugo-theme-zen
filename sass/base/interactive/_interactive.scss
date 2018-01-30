@@ -1,0 +1,35 @@
+// Interactive
+
+// Details
+
+details {
+  // Add the correct display in Edge, IE, and Firefox.
+  display: block;
+}
+
+summary {
+  // Add the correct display in all browsers.
+  display: list-item;
+}
+
+// Menu
+
+menu {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  @include margin(1 0);
+  // Add the correct display in IE 9-.
+  display: block;
+  // Set consistent space for the list style image.
+  padding: 0 0 0 $indent-amount;
+
+  @include rtl {
+    padding: 0 $indent-amount 0 0;
+  }
+
+  // Turn off margins on nested lists.
+  menu &,
+  ol &,
+  ul & {
+    margin: 0;
+  }
+}
