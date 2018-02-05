@@ -8,10 +8,6 @@
 //
 // For anything you want to hide on page load when JavaScript is enabled, use
 // the `.js-hidden` class.
-//
-// Markup: hidden.twig
-//
-// Style guide: components.hidden
 
 .hidden,
 %hidden {
@@ -25,14 +21,9 @@
   }
 }
 
-//
-// Drupal selectors.
-//
-
-.element-hidden {
-  @extend %js-hidden;
-}
-
-.js-hide {
-  @extend %js-hidden;
+.nojs-hidden,
+%nojs-hidden {
+  html.nojs & {
+    @extend %hidden;
+  }
 }

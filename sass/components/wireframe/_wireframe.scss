@@ -7,10 +7,6 @@ $with-wireframes: false !default;
 //
 // This design is not applied to the site unless you set the following Sass
 // variable: `$with-wireframes: true;`
-//
-// Markup: wireframe.twig
-//
-// Style guide: components.wireframe
 
 @if $with-wireframes {
 
@@ -20,14 +16,20 @@ $with-wireframes: false !default;
   }
 
   //
-  // Drupal selectors.
+  // Zen selectors.
   //
 
-  .header,
-  .layout-3col > div,
-  .footer,
-  .region-bottom {
-    @extend %wireframe;
+  .layout {
+    &__header,
+    &__footer,
+    &__main,
+    &__navigation,
+    &__first-sidebar,
+    &__second-sidebar,
+    &__page-top,
+    &__page-bottom {
+      @extend %wireframe;
+    }
   }
 
 }

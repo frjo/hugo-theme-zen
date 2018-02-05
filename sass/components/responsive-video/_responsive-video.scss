@@ -6,10 +6,6 @@
 //
 // .responsive-video--4-3 - A video with a 4:3 aspect ratio instead of the
 //                          default 16:9 one.
-//
-// Markup: responsive-video.twig
-//
-// Style guide: components.responsive-video
 
 .responsive-video,
 %responsive-video {
@@ -33,13 +29,4 @@
   &--4-3 {
     padding-bottom: (3/4)*100%; // 4:3 aspect ratio
   }
-}
-
-//
-// Drupal selectors.
-//
-
-.media-youtube-video,
-.media-vimeo-preview-wrapper {
-  @extend %responsive-video;
 }

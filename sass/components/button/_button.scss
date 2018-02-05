@@ -7,10 +7,6 @@
 //
 // :hover  - Hover styling.
 // :active - Depressed button styling.
-//
-// Markup: button.twig
-//
-// Style guide: forms.button
 
 // 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
 //    controls in Android 4.
@@ -33,10 +29,14 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
+  // sass-lint:disable no-color-hex, no-color-literals
   @extend %button--disabled;
+  @include typeface(headings);
+  @include margin-right(.75);
+  @include margin-bottom(.75);
   // Some styles don't apply to <a> links since they are inline elements by default.
   display: inline-block;
-  padding: 2px 6px;
+  padding: 2px 10px;
   // Address Firefox 4+ setting `line-height` on `input` using `!important` in
   // the UA stylesheet. And prevent its "line-height: normal" rule below from
   // breaking the "appearance: button" styling on the input elements.
@@ -45,6 +45,14 @@ button,
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
   color: color(button);
+  text-align: center;
+  background-image: linear-gradient(#f6f6f6, #e2e2e2);
+  border: 1px solid #e4e4e4;
+  border-left-color: #d2d2d2;
+  border-right-color: #d2d2d2;
+  border-bottom-color: #b4b4b4;
+  border-radius: 2px;
+
 
   // sass-lint:disable no-vendor-prefixes
   // Remove the inner border and padding in Firefox.
@@ -66,6 +74,13 @@ button,
     text-decoration: none;
     color: color(button);
   }
+
+  &:active {
+    border-color: #555;
+    text-shadow: color(button) 0 -1px 0;
+    background: color(grey-dark);
+    color: color(text-bg);
+  }
 }
 
 // Add button variations here.
@@ -82,6 +97,10 @@ button,
   // Re-set default cursor for disabled elements.
   cursor: default;
   color: color(button-disabled);
+  background-color: color(grey-extra-light);
+  border-color: color(grey-extra-light);
+  background-image: none;
+  text-shadow: none;
 
   &:hover,
   &:focus,
