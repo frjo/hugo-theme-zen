@@ -14,4 +14,4 @@ min_version = 0.28
 [original]
   name = "Drupal zen base theme"
   homepage = "https://www.drupal.org/project/zen"
-  repo = "http://drupalcode.org/zen"
+  repo = "https://cgit.drupalcode.org/zen"
