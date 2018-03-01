@@ -3,7 +3,7 @@ description = "A solid base for your custom Hugo theme with libsass and gulp sup
 homepage = "https://github.com/frjo/hugo-theme-zen"
 license = "GPLv2"
 licenselink = "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-tags = ["multilingual", "responsive", "blog", "search"]
+tags = ["multilingual", "responsive", "blog", "search", "micro"]
 features = ["multilingual", "responsive", "grid", "sass", "gulp", "search", "piwik", "jsonfeed"]
 min_version = 0.28
 
