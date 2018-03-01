@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Micro posts {{ i18n "string_on" }} {{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Micro blog {{ i18n "string_by" }} {{ with $.Site.Author.name }}{{ . }}{{end}}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    {{ with .Site.LanguageCode -}}
+    <language>{{ . }}</language>
+    {{ end -}}
+    {{ with .Site.Author.email -}}
+    <managingEditor>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{end}}</managingEditor>
+    {{ end -}}
+    {{ with .Site.Author.email -}}
+    <webMaster>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{end}}</webMaster>
+    {{ end -}}
+    {{ with .Site.Copyright -}}
+    <copyright>{{ . }}</copyright>
+    {{ end -}}
+    {{ if not .Date.IsZero -}}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{ end -}}
+    {{ with .OutputFormats.Get "RSS" -}}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end -}}
+    {{ range .Data.Pages }}
+    <item>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Content | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

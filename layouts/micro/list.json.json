@@ -1,0 +1,35 @@
+{{ $list := .Data.Pages -}}
+{{ $length := (len $list) -}}
+{
+    "version" : "https://jsonfeed.org/version/1",
+    "title" : "Micro posts {{ i18n "string_on" }} {{ .Site.Title }}",
+    "description": "Micro blog {{ i18n "string_by" }} {{ with $.Site.Author.name }}{{ . }}{{end}}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}",
+    "home_page_url" : "{{ .Site.BaseURL }}",
+    {{ with .OutputFormats.Get "JSON" -}}
+    "feed_url" : "{{ .Permalink }}",
+    {{ end -}}
+    {{ with $.Param "icon" -}}
+    "icon" : "{{ . | absURL }}",
+    {{ end -}}
+    {{ with $.Param "favicon" -}}
+    "favicon" : "{{ . | absURL }}",
+    {{ end -}}
+    {{ with .Site.Author.name -}}
+    "author" : {
+        "name" : "{{ . }}"{{ with $.Site.Author.url }},
+        "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
+        "avatar": "{{ . | absURL }}"{{ end }}
+    },
+    {{ end -}}
+    "items" : [
+    {{ range $index, $element := $list -}}
+    {
+        "date_published" : "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+        "date_modified" : "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+        "id" : "{{ .Permalink }}",
+        "url" : "{{ .Permalink }}",
+        "content_html" : {{ .Content | jsonify }}
+    }{{ if ne (add $index 1) $length }},{{ end }}
+    {{ end -}}
+    ]
+}

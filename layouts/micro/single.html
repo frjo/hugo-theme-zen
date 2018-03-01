@@ -1,0 +1,19 @@
+{{ define "meta" }}
+{{- partial "single_meta.html" . -}}
+{{ end }}
+
+{{ define "header" }}
+{{- partial "single_json_ld.html" . -}}
+{{ end }}
+
+{{ define "main" -}}
+<main class="main layout__main" role="main">
+<h1 class="title hidden">{{ .Title }}</h1>
+<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+{{ if $.Param "submitted" | default false }}<a href="{{ .RelPermalink }}">{{ partial "submitted.html" . -}}</a>{{ end }}
+<div class="content">
+{{ .Content }}
+</div>
+</article>
+</main>
+{{ end }}

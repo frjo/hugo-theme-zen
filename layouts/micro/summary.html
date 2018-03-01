@@ -1,0 +1,9 @@
+<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}list-view">
+<header>
+<h2 class="title hidden">{{ .Title }}</h2>
+{{ if $.Param "submitted" | default false }}<a href="{{ .RelPermalink }}">{{ partial "submitted.html" . -}}</a>{{ end }}
+</header>
+<div class="content">
+{{ .Content }}
+</div>
+</article>
