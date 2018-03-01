@@ -2,6 +2,10 @@
 {{- partial "section_meta.html" . -}}
 {{ end }}
 
+{{ define "header" }}
+{{- partial "section_json_ld.html" . -}}
+{{ end }}
+
 {{ define "main" -}}
 <main class="main layout__main" role="main">
 <h1 class="title">{{ .Title }}</h1>
