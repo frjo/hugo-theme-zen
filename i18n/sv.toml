@@ -21,3 +21,21 @@ other = "Sök"
 
 [search_title]
 other = "Ange de villkor du vill söka efter."
+
+[string_at]
+other = "på"
+
+[string_by]
+other = "av"
+
+[string_follow]
+other = "följ"
+
+[string_in]
+other = "i"
+
+[string_on]
+other = "på"
+
+[string_recent_content]
+other = "Senaste innehåll"

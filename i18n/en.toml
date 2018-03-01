@@ -21,3 +21,21 @@ other = "Search"
 
 [search_title]
 other = "Enter the terms you wish to search for."
+
+[string_at]
+other = "at"
+
+[string_by]
+other = "by"
+
+[string_follow]
+other = "follow"
+
+[string_in]
+other = "in"
+
+[string_on]
+other = "on"
+
+[string_recent_content]
+other = "Recent content"
