@@ -1,0 +1,9 @@
+{{ if .IsPage -}}
+<meta name="description" content="{{ .Description | default (replaceRE "\n" " " .Summary) }}">
+{{ else -}}
+<meta name="description" content="{{ $.Param "description" }}">
+{{ end -}}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with $.Param "image" }}<meta name="og:image" content="{{ . | absURL }}">{{ end }}

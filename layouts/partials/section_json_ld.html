@@ -4,7 +4,9 @@
     "@type": "WebSite",
     "url" : "{{ .Permalink }}",
     "name": {{ .Title | jsonify }},
-    "description": {{ $.Param "description" | jsonify }},
+    {{ with $.Param "description" -}}
+    "description": {{ . | jsonify }},
+    {{ end -}}
     {{ with $.Param "image" -}}
     "image" : "{{ . | absURL }}",
     {{ end -}}
