@@ -69,6 +69,11 @@
   transform: translateX(100vw);
   z-index: 21;
 
+  a {
+    color: color(text-bg);
+    text-decoration: none;
+  }
+
   .js-nav-open & {
     pointer-events: auto;
     box-shadow: -10px 0 10px -10px color(nearblack);
@@ -84,11 +89,6 @@
     li {
       list-style-type: none;
       margin: .4rem 0;
-
-      a {
-        color: color('white');
-        text-decoration: none;
-      }
     }
   }
 }

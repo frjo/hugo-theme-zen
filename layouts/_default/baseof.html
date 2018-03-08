@@ -14,11 +14,14 @@
 <body>
 <div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar-second{{ end }}">
 <header class="header layout__header" role="banner">
-{{ if $.Param "logo" | default true }}<a href="{{ "/" | relURL }}" title="Home" rel="home" class="header__logo"><img src="{{ "/images/logo.png" | relURL }}" alt="Home" class="header__logo-image"></a>{{ end }}
+{{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ "/images/logo.png" | relURL }}" alt="Home" class="header__logo-image"></a>{{ end }}
 <h1 class="header__site-name">
-<a href="{{ "/" | relURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
+<a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
-<div class="region header__region">{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}</div>
+<div class="region header__region">
+{{ if .Site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end }}
+{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}
+</div>
 </header>
 
 {{ partial "menu.html" . }}

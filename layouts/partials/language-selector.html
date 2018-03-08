@@ -1,0 +1,21 @@
+<h2 class="visually-hidden">{{ i18n "lang_select_title" }}</h2>
+<nav class="language-selector layout__language-selector" role="navigation">
+<ul class="navbar">
+
+{{ if .IsTranslated -}}
+{{ range .Translations }}
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Site.Language.Params.LanguageName }}</a></li>
+{{ end -}}
+
+{{ else -}}
+
+{{ range .Site.Languages -}}
+{{ if ne $.Site.Language.Lang .Lang }}
+<li><a rel="alternate" href="/{{ .Lang }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Params.LanguageName }}</a></li>
+{{ end -}}
+{{ end -}}
+
+
+{{ end -}}
+</ul>
+</nav>

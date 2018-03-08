@@ -39,3 +39,45 @@ other = "på"
 
 [string_recent_content]
 other = "Senaste innehåll"
+
+[contact_js]
+other = "Du behöver ha Javascript aktiverat för att använda detta kontaktformulär."
+
+[contact_submitted]
+other = "Ditt meddelande har skickats."
+
+[contact_error]
+other = "Det blev ett fel när meddelandet skickades."
+
+[contact_name]
+other = "Namn"
+
+[contact_name_placeholder]
+other = "Ditt namn"
+
+[contact_mail]
+other = "E-postadress"
+
+[contact_mail_placeholder]
+other = "Din e-postadress"
+
+[contact_subject]
+other = "Rubrik"
+
+[contact_subject_placeholder]
+other = "En kort rubrik"
+
+[contact_message]
+other = "Meddelande"
+
+[contact_message_placeholder]
+other = "Meddelandet skrivs här…"
+
+[contact_submit]
+other = "Skicka meddelande"
+
+[contact_honypot]
+other = "Hoppa över ifall du är människa."
+
+[lang_select_title]
+other = "Språkväljare"
