@@ -100,7 +100,7 @@ params:
 
 If your server support php with the mail() command (very common) you can use the included contact form feature to get a contact form for your site.
 
-1. Copy the file `themes/zen/static/php/contact.php.example` to `static/php/contact.php`.
+1. Copy the file `themes/zen/php/contact.php.example` to `static/php/contact.php`.
 2. Edit the contact.php file so it has your own e-mail address. You may also change the mail subject prefix.
 3. Add the shortcode `{{< contact >}}` to a page. Also set `contactform: true` in the front matter for that page so the contact.js file gets loaded.
 
