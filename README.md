@@ -29,7 +29,7 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 
 ## Sites using the Hugo Zen theme
 
-* [Combonetwork development](https://combonet.se/)
+* [Combonetwork development](https://combonet.se/) (multilingual)
 * [Drejargården](https://www.drejargarden.se/)
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
@@ -93,6 +93,27 @@ params:
   searchSize: 20        # Search field size, default 20.
   sidebar: true         # Show a sidebar to the right
   submitted: true       # Show author and date information for a post.
+```
+
+
+## Multilingual
+
+English and Swedish translations are included and you can easily add more to the `i18n` site directory.
+
+A language selector will be included on sites with more than one language. Add a `LanguageName` parameter to your language configuration, this is what will be displayed in the selector.
+
+The language selector will link to a translation of the current page if it exist and to the front page if it does not.
+
+```
+languages:
+  sv:
+    weight: 1
+    params:
+      LanguageName: "Svenska"
+  en:
+    weight: 2
+    params:
+      LanguageName: "English"
 ```
 
 
