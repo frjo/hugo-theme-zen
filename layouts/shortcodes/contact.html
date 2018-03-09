@@ -1,0 +1,16 @@
+<p class="contact-no-js error message">{{ i18n "contact_js" }}</p>
+<p class="contact-submitted status message hidden">{{ i18n "contact_submitted" }}</p>
+<p class="contact-error error message hidden">{{ i18n "contact_error" }}</p>
+
+<form class="contact-form hidden" action="#" method="post" accept-charset="UTF-8">
+  <label for="edit-name">{{ i18n "contact_name" }}</label>
+  <input type="text" id="edit-name" name="name" placeholder="{{ i18n "contact_name_placeholder" }}" tabindex="1" required autofocus><span></span>
+  <label for="edit-mail">{{ i18n "contact_mail" }}</label>
+  <input type="email" id="edit-mail" name="email" placeholder="{{ i18n "contact_mail_placeholder" }}" tabindex="2" required><span></span>
+  <input type="text" id="edit-url" class="hidden" name="url" placeholder="{{ i18n "contact_honypot" }}">
+  <label for="edit-subject">{{ i18n "contact_subject" }}</label>
+  <input type="text" id="edit-subject" name="subject" placeholder="{{ i18n "contact_subject_placeholder" }}" tabindex="3" required><span></span>
+  <label for="edit-message">{{ i18n "contact_message" }}</label>
+  <textarea id="edit-message" name="message" rows="5" placeholder="{{ i18n "contact_message_placeholder" }}" tabindex="4" required></textarea><span></span>
+  <button type="submit" name="submit" class="form-submit" disabled>{{ i18n "contact_submit" }}</button>
+</form>
