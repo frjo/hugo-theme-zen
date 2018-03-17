@@ -19,15 +19,15 @@
     $('.contact-no-js').detach();
 
     // Wait for a mouse to move, indicating they are human.
-    $('body').mousemove(function() {
+    $('body').mousemove(function () {
       // Unlock the form.
       $contact_form.attr('action', contact_action);
       $contact_button.attr('disabled', false);
     });
 
     // A tab or enter key pressed can also indicate they are human.
-    $('body').keydown(function(e) {
-      if ((e.keyCode == 9) || (e.keyCode == 13)) {
+    $('body').keydown(function (e) {
+      if ((e.keyCode === 9) || (e.keyCode === 13)) {
         // Unlock the form.
         $contact_form.attr('action', contact_action);
         $contact_button.attr('disabled', false);
@@ -40,8 +40,8 @@
     });
 
     // Display messages.
-    if (location.search.substring(1) != '') {
-      switch(location.search.substring(1)) {
+    if (location.search.substring(1) !== '') {
+      switch (location.search.substring(1)) {
         case 'submitted':
           $('.contact-submitted').removeClass('hidden');
           break;
