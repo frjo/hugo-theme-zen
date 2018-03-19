@@ -4,12 +4,6 @@
 //
 // Use the `color()` function to add colors to CSS properties. To learn more,
 // [read the Chroma documentation](http://johnalbin.github.io/chroma/).
-//
-// Markup: chroma.twig
-//
-// Weight: -1
-//
-// Style guide: sass.colors
 
 // Define the default color scheme's color names.
 $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
