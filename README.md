@@ -68,31 +68,32 @@ baseurl: "https://example.org/"
 title: "SiteTitle"
 
 params:
-  cacheBustCSS: true    # Add a cache busting hash on styles.css
-  cacheBustJS: true     # Add a cache busting hash on script.js
+  cacheBustCSS: true        # Add a cache busting hash on styles.css
+  cacheBustJS: true         # Add a cache busting hash on script.js
   contact: "info@example.org"
   copyright: "This site is licensed under a 
               (https://creativecommons.org/licenses/by-sa/4.0/)."
               [Creative Commons Attribution-ShareAlike 4.0 International License]
-  dateformat: ""        # Set the date format, default to "2 January, 2006"
-  favicon: ""           # Relative path to favicon in json feed, no leading slash.
-  feedlinks: true       # Show feed links in the footer.
+  dateformat: ""            # Set the date format, default to "2 January, 2006"
+  description: ""           # Set site description, used in meta tags and JSON-LD
+  favicon: ""               # Relative path to favicon in json feed, no leading slash.
+  feedlinks: true           # Show feed links in the footer.
   footer: "A [example.org](https://example.org/) production."
-  icon: ""              # Relative path to icon in json feed, no leading slash.
-  image: ""             # Relative path to site image in JSON-LD, no leading slash.
-  imageMaxWidth: ""     # Max width for images added via figure shortcode.
-  jquery: true          # Add jQuery
-  languageDir: ""       # Set ltr or rtl, defaults to ltr.
-  logo: false           # Turn off the logo.
-  microUsername: ""     # Your micro.blog username.
-  mobileMenu: true      # Turn on a mobile menu on small screens.
-  piwikSiteId:          # Piwik site id
-  piwikTrackerUrl: ""   # Piwik url, schemaless and no slash on end (example.com/piwik).
-  poweredby: true       # Show powered by hugo in footer
-  search: true          # Site search with DuckDuckGo.
-  searchSize: 20        # Search field size, default 20.
-  sidebar: true         # Show a sidebar to the right
-  submitted: true       # Show author and date information for a post.
+  icon: ""                  # Relative path to icon in json feed, no leading slash.
+  image: ""                 # Relative path to site image in JSON-LD, no leading slash.
+  imageMaxWidth: ""         # Max width for images added via figure shortcode.
+  jquery: true              # Add jQuery
+  languageDir: ""           # Set ltr or rtl, defaults to ltr.
+  logo: false               # Turn off the logo.
+  microUsername: ""         # Your micro.blog username.
+  mobileMenu: true          # Turn on a mobile menu on small screens.
+  piwikSiteId:              # Piwik site id
+  piwikTrackerUrl: ""       # Piwik url, schemaless and no slash on end (example.com/piwik).
+  poweredby: true           # Show powered by hugo in footer
+  search: true              # Site search with DuckDuckGo.
+  searchSize: 20            # Search field size, default 20.
+  sidebar: true             # Show a sidebar to the right
+  submitted: true           # Show author and date information for a post.
 ```
 
 
