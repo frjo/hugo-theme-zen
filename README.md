@@ -13,6 +13,7 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 * A mobile menu
 * Analytics with Piwik
 * Automatic linting of css and js
+* Contact form (PHP)
 * CSS grid and flex for layout
 * Gulp.js
 * HTML5
@@ -125,6 +126,14 @@ If your server support php with the mail() command (very common) you can use the
 1. Copy the file `themes/zen/php/contact.php.example` to `static/php/contact.php`.
 2. Edit the contact.php file so it has your own e-mail address. You may also change the mail subject prefix.
 3. Add the shortcode `{{< contact >}}` to a page. Also set `contactform: true` in the front matter for that page so the contact.js file gets loaded.
+
+If you have a SPF record for your domain, make sure the web server is listed or other mail server may mark the mail as spam.
+
+Two types of spam protection is implemented. The form can only be posted after the user have moved the mouse or pressed the tab or enter key. The form have a "honypot" field that is invisible to humans but not to most spam boots. If that field is filled in the mail will not be sent.
+
+Form validation is handeld by HTML5 and there is some CSS to make it look nice.
+
+Javascript is used for spam protection and to display error/success messages.
 
 
 ## Dates
