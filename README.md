@@ -166,14 +166,33 @@ Zen comes with a improved version of the built in "figure" shortcut.
 Break float.
 
 ```
-{{% figure src="/images/image.jpg" class="right" %}}
+{{< figure src="/images/image.jpg" class="right" >}}
 
 blablabla # Displayed left of the image.
 
-{{% clear %}}
+{{< clear >}}
 
 blablabla # Displayed below of the image.
 ```
+
+### Wrapper
+
+A simple, but useful, shortcode to wrap content in a div with a class.
+
+```
+{{% wrapper class-name-you-want %}}
+The **content** that should be wrapped.
+{{% /wrapper %}}
+```
+
+This will produce:
+
+```
+<div class="class-name-you-want">
+The <strong>content</strong> that should be wrapped.
+</div>
+```
+
 
 ## Use Gulp to generate css from sass
 
