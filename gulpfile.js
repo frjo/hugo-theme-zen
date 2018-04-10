@@ -135,7 +135,7 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['watch:lint', 'watch:js']);
+gulp.task('watch', ['watch:css', 'watch:lint', 'watch:js']);
 
 gulp.task('watch:css', ['styles'], function() {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
