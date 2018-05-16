@@ -13,8 +13,14 @@
 // ==========================================================================
 
 // Use the saner border-box model for all elements.
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 // Normalize-scss is broken into modular pieces to make it easier to edit.
