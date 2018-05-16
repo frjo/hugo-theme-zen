@@ -22,11 +22,15 @@
       $('.main-menu').addClass('hidden').clone().removeClass('main-menu layout__navigation hidden').addClass('js-main-menu').appendTo('.mobile-nav-sheet').find('.navbar').removeClass('navbar').addClass('js-navbar');
 
       // Toggle the mobile nav sheet.
-      $('.mobile-nav-cover, .mobile-nav-toggle').on('click toushstart', function (e) {
+      $('.mobile-nav-cover, .mobile-nav-toggle').click(function (e) {
         e.preventDefault();
         $('body').scrollTop(0).toggleClass('js-nav-open');
       });
 
+      // Close the nav sheet after click (needed for anchor links).
+      $('.mobile-nav-sheet').find('a').click(function () {
+        $('body').removeClass('js-nav-open');
+      });
     }
   }
 

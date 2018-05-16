@@ -35,7 +35,7 @@
     });
 
     // Mark the form as submitted.
-    $contact_button.on('click touchstart MSPointerDown', function () {
+    $contact_button.click(function () {
       $contact_form.addClass('js-submitted');
     });
 
