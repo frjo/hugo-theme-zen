@@ -11,7 +11,7 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 ## Features
 
 * A mobile menu
-* Analytics with Piwik
+* Analytics with Matamo (Piwik)
 * Automatic linting of css and js
 * Contact form (PHP)
 * CSS grid and flex for layout
@@ -88,8 +88,8 @@ params:
   logo: false               # Turn off the logo.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens.
-  piwikSiteId:              # Piwik site id
-  piwikTrackerUrl: ""       # Piwik url, schemaless and no slash on end (example.com/piwik).
+  piwikSiteId:              # Matamo site id
+  piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.com/matamo).
   poweredby: true           # Show powered by hugo in footer
   search: true              # Site search with DuckDuckGo.
   searchSize: 20            # Search field size, default 20.
