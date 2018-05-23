@@ -51,7 +51,7 @@
     content: '';
     margin-left: $zen-gutters / 4;
     width: $zen-gutters;
-    height: 4px;
+    height: $zen-gutters;
     border-top: 12px double color(text);
     border-bottom: 4px solid color(text);
   }
