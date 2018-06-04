@@ -1,1 +1,2 @@
 {{ if $.Param "jquery" }}<script src="{{ "/js/jquery.slim.min.js" | relURL }}"></script>{{ end }}
+{{ if and ($.Param "jquery") ($.Param "contactform") }}<script src="/js/contact.js"></script>{{ end }}
