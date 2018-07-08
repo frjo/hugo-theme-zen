@@ -8,6 +8,7 @@ This is a port of the [Zen](https://www.drupal.org/project/zen) theme by [JohnAl
 
 The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the original Zen grid system that uses floats and clearfixes like they did in the stone age.
 
+
 ## Features
 
 * A mobile menu
@@ -27,6 +28,8 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 * Responsive design
 * RSS and JSON feeds with full content
 * Search with DuckDuckGo
+* Sub theme support (Theme Components)
+
 
 ## Sites using the Hugo Zen theme
 
@@ -34,6 +37,7 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 * [Drejargården](https://www.drejargarden.se/)
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
+
 
 ## On the large screen
 
@@ -58,6 +62,23 @@ $ git clone https://github.com/frjo/hugo-theme-zen.git zen
 ```
 
 [Hugo - Installing Hugo](https://gohugo.io/getting-started/installing/)
+
+
+## Create a zen subtheme
+
+Since Hugo 0.42 there is sub them support via [Theme Components](https://gohugo.io/themes/theme-components/). This makes it easy to update the base theme without overwriting customisation.
+
+Navigate to the theme folder where you have placed the zen base theme. Run the included "create_sub_theme.sh" script like this.
+
+```
+$ ./zen/create_sub_theme.sh
+```
+
+Enter a name for your sub theme when asked for. In the site config file add your sub theme name first and "zen" after it. Hugo will now first look in the sub theme for files and if they are not there look in the zen base theme.
+
+Edit all css/sass only in the sub theme and add any custom layouts etc. If there is a need to edit e.g. layouts from the zen base theme make sure to copy them over to the sub theme and edit them there.
+
+This way all customisation are in the sub theme, making it easy to update the base theme.
 
 
 ## config.yaml example
