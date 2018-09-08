@@ -18,7 +18,6 @@
 // The following Sass functions/mixins are required to generate some variables'
 // values, so we load them first.
 @import 'breakpoint';
-@import 'chroma/functions';
 
 @import 'init/colors';
 @import 'init/variables';
@@ -28,16 +27,12 @@
 //
 // The following sass modules are shared with all .scss files:
 // - [Breakpoint](http://breakpoint-sass.com/)
-// - [Chroma](https://github.com/JohnAlbin/chroma)
 // - [Typey](https://github.com/jptaranto/typey)
 //
 // Additional pre-built libraries can be found on the [Sache website](http://www.sache.in/).
 //
 // Style guide: sass.modules
 
-// Add Chroma to manage colors.
-@import 'chroma';
-@import 'chroma/kss';
 // Add typey to manage font sizes and margins.
 @import 'typey';
 

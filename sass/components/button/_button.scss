@@ -44,7 +44,7 @@ button,
   text-decoration: none;
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
-  color: color(button);
+  color: $button;
   text-align: center;
   background-image: linear-gradient(#f6f6f6, #e2e2e2);
   border: 1px solid #e4e4e4;
@@ -72,14 +72,14 @@ button,
   &:active {
     // Override any link underlines and color changes.
     text-decoration: none;
-    color: color(button);
+    color: $button;
   }
 
   &:active {
     border-color: #555;
-    text-shadow: color(button) 0 -1px 0;
-    background: color(grey-dark);
-    color: color(text-bg);
+    text-shadow: $button 0 -1px 0;
+    background: $grey-dark;
+    color: $text-bg;
   }
 }
 
@@ -96,9 +96,9 @@ button,
 %button--disabled[disabled] {
   // Re-set default cursor for disabled elements.
   cursor: default;
-  color: color(button-disabled);
-  background-color: color(grey-extra-light);
-  border-color: color(grey-extra-light);
+  color: $button-disabled;
+  background-color: $grey-extra-light;
+  border-color: $grey-extra-light;
   background-image: none;
   text-shadow: none;
 
@@ -106,6 +106,6 @@ button,
   &:focus,
   &:active {
     // Override any link underlines and color changes.
-    color: color(button-disabled);
+    color: $button-disabled;
   }
 }

@@ -6,7 +6,7 @@
 %divider {
   @include margin(1 0);
   border: 0;
-  border-top: 1px solid color(border);
+  border-top: 1px solid $border;
 
   // If used as a container, add a top margin to the first child.
   > :first-child {

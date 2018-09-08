@@ -110,8 +110,8 @@ ins {
 
 mark {
   // Add the correct background and color in IE 9-.
-  background-color: color(mark-bg);
-  color: color(text);
+  background-color: $mark-bg;
+  color: $text;
 }
 
 // Quote

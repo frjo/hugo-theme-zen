@@ -13,7 +13,7 @@
 
 a,
 %link {
-  color: color(link);
+  color: $link;
   // sass-lint:disable no-vendor-prefixes
   // Remove gaps in links underline in iOS 8+ and Safari 8+.
   -webkit-text-decoration-skip: objects;
@@ -23,16 +23,16 @@ a,
 // safely lower this selector's specificity. This also ensures visited links
 // with additional styles won't have their styles overridden.
 :visited {
-  color: color(link-visited);
+  color: $link-visited;
 }
 
 a:hover,
 a:focus {
-  color: color(link-hover);
+  color: $link-hover;
 }
 
 a:active {
-  color: color(link-active);
+  color: $link-active;
 
   &:not(.button) {
     // Remove the gray background on active links in IE 10.

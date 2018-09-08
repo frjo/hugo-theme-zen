@@ -12,7 +12,7 @@ $with-wireframes: false !default;
 
   .wireframe,
   %wireframe {
-    outline: 1px solid color(border);
+    outline: 1px solid $border;
   }
 
   //

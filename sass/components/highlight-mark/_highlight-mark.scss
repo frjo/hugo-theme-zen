@@ -6,7 +6,7 @@
 
 .highlight-mark,
 %highlight-mark {
-  color: color(mark-highlight);
+  color: $mark-highlight;
   // Remove background highlighting from <mark> in normalize.
   background-color: transparent;
 }

@@ -20,7 +20,7 @@
 .box,
 %box {
   @include margin-bottom(1);
-  border: 5px solid color(border);
+  border: 5px solid $border;
   padding: 1em;
 
   // Sass compiles this to the selector: .box__title, %box__title {}
@@ -44,7 +44,7 @@
   &:hover,
   &.is-focus,
   &--is-focus {
-    border-color: color(text);
+    border-color: $text;
   }
 
   // Sass compiles this to the selector: .box--highlight, %box--highlight {}
@@ -52,6 +52,6 @@
   // the "highlight" is a _modifier_, creating a new variation of the standard
   // "box" component.
   &--highlight {
-    border-color: color(link);
+    border-color: $link;
   }
 }

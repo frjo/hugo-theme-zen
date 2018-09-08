@@ -18,7 +18,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: color(mobile-menu-cover);
+  background-color: $mobile-menu-cover;
   opacity: 0;
 
   .js-nav-open & {
@@ -37,13 +37,13 @@
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
-  border: 1px solid color(border);
+  border: 1px solid $border;
   border-radius: 3px;
-  color: color(text);
+  color: $text;
   pointer-events: auto;
 
   .js-nav-open & {
-    color: color(text-bg);
+    color: $text-bg;
   }
 
   &::after {
@@ -52,17 +52,17 @@
     margin-left: $zen-gutters / 4;
     width: $zen-gutters;
     height: $zen-gutters;
-    border-top: 12px double color(text);
-    border-bottom: 4px solid color(text);
+    border-top: 12px double $text;
+    border-bottom: 4px solid $text;
   }
 
   .js-nav-open &::after {
-    border-color: color(text-bg);
+    border-color: $text-bg;
   }
 }
 
 .mobile-nav-sheet {
-  background-color: color(mobile-menu);
+  background-color: $mobile-menu;
   width: 90vw;
   height: 100vh;
   padding: 2rem;
@@ -70,13 +70,13 @@
   z-index: 21;
 
   a {
-    color: color(text-bg);
+    color: $text-bg;
     text-decoration: none;
   }
 
   .js-nav-open & {
     pointer-events: auto;
-    box-shadow: -10px 0 10px -10px color(nearblack);
+    box-shadow: -10px 0 10px -10px $nearblack;
     transform: translateX(10vw);
   }
 

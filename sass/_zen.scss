@@ -8,11 +8,11 @@ pre {
 // Page
 
 body {
-  background-color: color(backdrop);
+  background-color: $backdrop;
 }
 
 .page {
-  background-color: color(body-bg);
+  background-color: $body-bg;
 }
 
 .header {
@@ -27,7 +27,7 @@ body {
   @include margin-top(1.5);
   @include padding(.5 0);
   text-align: center;
-  border-top: 2px solid color(brand);
+  border-top: 2px solid $brand;
 
   p {
     margin: 0;
@@ -72,7 +72,7 @@ article > header,
 .header,
 .footer {
   @include typeface(headings);
-  color: color(headings);
+  color: $headings;
   font-weight: normal;
 }
 
@@ -90,7 +90,7 @@ aside {
 article {
 
   & > header {
-    color: color('text-meta');
+    color: $text-meta;
 
     p {
       @include margin(.2 0);
@@ -136,11 +136,11 @@ article {
   }
 
   pre {
-    color: color(code);
+    color: $code;
     border-radius: 3px;
     padding: 5px;
-    border: 1px solid color(border);
-    background-color: color(text-bg);
+    border: 1px solid $border;
+    background-color: $text-bg;
     overflow: auto;
     max-height: 250px;
     max-width: 90vw;
@@ -156,7 +156,7 @@ article {
   }
 
   .content-dates {
-    color: color('text-meta');
+    color: $text-meta;
     text-align: right;
   }
 }
@@ -223,19 +223,19 @@ figcaption {
 
   a {
     display: block;
-    background-color: color(brand);
-    color: color(text-bg);
+    background-color: $brand;
+    color: $text-bg;
     padding: 2px 8px;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      background-color: color(brand-dark);
+      background-color: $brand-dark;
     }
 
     &:active,
     &.active {
-      background-color: color(brand);
+      background-color: $brand;
       text-decoration: underline;
     }
   }
@@ -254,21 +254,21 @@ figcaption {
   width: 95%;
 
   &.status {
-    background-color: color(status-bg);
-    color: color(status);
-    border-color: color(status);
+    background-color: $status-bg;
+    color: $status;
+    border-color: $status;
   }
 
   &.warning {
-    background-color: color(warning-bg);
-    color: color(warning);
-    border-color: color(warning);
+    background-color: $warning-bg;
+    color: $warning;
+    border-color: $warning;
   }
 
   &.error {
-    background-color: color(error-bg);
-    color: color(error);
-    border-color: color(error);
+    background-color: $error-bg;
+    color: $error;
+    border-color: $error;
   }
 }
 
@@ -311,16 +311,16 @@ figcaption {
 
     &:required+span::after {
       content: ' *';
-      color: color('red');
+      color: $red;
       vertical-align: top;
     }
 
     &:not(:placeholder-shown):valid {
-      background-color: color(status-bg);
+      background-color: $status-bg;
     }
 
     &:not(:placeholder-shown):invalid {
-      background-color: color(error-bg);
+      background-color: $error-bg;
     }
   }
 
@@ -333,11 +333,11 @@ figcaption {
   input,
   textarea {
     &:valid {
-      background-color: color(status-bg);
+      background-color: $status-bg;
     }
 
     &:invalid {
-      background-color: color(error-bg);
+      background-color: $error-bg;
     }
   }
 }

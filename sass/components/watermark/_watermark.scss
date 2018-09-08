@@ -10,7 +10,7 @@
   overflow: visible;
   // Remove background highlighting from <mark> in normalize.
   background-color: transparent;
-  color: color(watermark);
+  color: $watermark;
   font-size: 75px;
   line-height: 1;
   text-align: center;

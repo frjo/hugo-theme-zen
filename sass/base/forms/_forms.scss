@@ -168,7 +168,7 @@ input {
 fieldset {
   // Correct the padding in Firefox.
   @include padding(.35 .5 .65);
-  border: 1px solid color(border);
+  border: 1px solid $border;
 }
 
 legend {

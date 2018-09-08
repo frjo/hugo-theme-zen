@@ -52,65 +52,41 @@ options.gulpWatchOptions = {interval: 600};
 // options.gulpWatchOptions = {interval: 1000, mode: 'poll'};
 
 
-// ################################
 // Load Gulp and tools we will use.
-// ################################
 var gulp      = require('gulp'),
   $           = require('gulp-load-plugins')(),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss'),
   cleanCSS    = require('gulp-clean-css');
 
-// The default task.
-gulp.task('default', ['build']);
-
-// #################
-// Build everything.
-// #################
-gulp.task('build', ['styles:production', 'lint']);
-
-// ##########
-// Build CSS.
-// ##########
+// The sass files to process.
 var sassFiles = [
   options.theme.sass + '**/*.scss',
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss'
 ];
 
-gulp.task('styles', ['clean:css'], function() {
-  return gulp.src(sassFiles)
-    .pipe($.sourcemaps.init())
-    .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.size({showFiles: true}))
-    .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(options.theme.css))
+// Clean CSS files.
+gulp.task('clean:css', function clean () {
+  return del([
+      options.theme.css + '**/*.css',
+      options.theme.css + '**/*.map'
+    ], {force: true});
 });
 
-gulp.task('styles:production', ['clean:css'], function() {
-  return gulp.src(sassFiles)
-    .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.size({showFiles: true}))
-    .pipe(cleanCSS({compatibility: 'ie10'}))
-    .pipe(gulp.dest(options.theme.css));
-});
-
-// #########################
-// Lint Sass and JavaScript.
-// #########################
-gulp.task('lint', ['lint:sass', 'lint:js']);
+// Clean all directories.
+gulp.task('clean', gulp.series('clean:css'));
 
 // Lint JavaScript.
-gulp.task('lint:js', function() {
+gulp.task('lint:js', function lint () {
   return gulp.src(options.eslint.files)
     .pipe($.eslint())
     .pipe($.eslint.format());
 });
 
 // Lint JavaScript and throw an error for a CI to catch.
-gulp.task('lint:js-with-fail', function() {
+gulp.task('lint:js-with-fail', function lint () {
   return gulp.src(options.eslint.files)
     .pipe($.eslint())
     .pipe($.eslint.format())
@@ -118,49 +94,61 @@ gulp.task('lint:js-with-fail', function() {
 });
 
 // Lint Sass.
-gulp.task('lint:sass', function() {
+gulp.task('lint:sass', function lint () {
   return gulp.src(options.theme.sass + '**/*.scss')
     .pipe($.sassLint())
     .pipe($.sassLint.format());
 });
 
 // Lint Sass and throw an error for a CI to catch.
-gulp.task('lint:sass-with-fail', function() {
+gulp.task('lint:sass-with-fail', function lint () {
   return gulp.src(options.theme.sass + '**/*.scss')
     .pipe($.sassLint())
     .pipe($.sassLint.format())
     .pipe($.sassLint.failOnError());
 });
 
-// ##############################
+// Lint Sass and JavaScript.
+gulp.task('lint', gulp.parallel('lint:sass', 'lint:js'));
+
+// Build CSS.
+gulp.task('styles', gulp.series('clean:css', function css () {
+  return gulp.src(sassFiles)
+    .pipe($.sourcemaps.init())
+    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.size({showFiles: true}))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest(options.theme.css));
+}));
+
+gulp.task('styles:production', gulp.series('clean:css', function css () {
+  return gulp.src(sassFiles)
+    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.size({showFiles: true}))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(options.theme.css));
+}));
+
 // Watch for changes and rebuild.
-// ##############################
-gulp.task('watch', ['watch:css', 'watch:lint', 'watch:js']);
+gulp.task('watch:css', gulp.series('styles', function watch () {
+  return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, gulp.series('styles'));
+}));
 
-gulp.task('watch:css', ['styles'], function() {
-  return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
-});
+gulp.task('watch:lint', gulp.series('lint:sass', function watch () {
+  return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, gulp.series('lint:sass'));
+}));
 
-gulp.task('watch:lint', ['lint:sass'], function() {
-  return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['lint:sass']);
-});
+gulp.task('watch:js', gulp.series('lint:js', function watch () {
+  return gulp.watch(options.eslint.files, options.gulpWatchOptions, gulp.series('lint:js'));
+}));
 
-gulp.task('watch:js', ['lint:js'], function() {
-  return gulp.watch(options.eslint.files, options.gulpWatchOptions, ['lint:js']);
-});
+gulp.task('watch', gulp.parallel('watch:css', 'watch:lint', 'watch:js'));
 
-// ######################
-// Clean all directories.
-// ######################
-gulp.task('clean', ['clean:css']);
+// Build everything.
+gulp.task('build', gulp.parallel('styles:production', 'lint'));
 
-// Clean CSS files.
-gulp.task('clean:css', function() {
-  return del([
-      options.theme.css + '**/*.css',
-      options.theme.css + '**/*.map'
-    ], {force: true});
-});
+// The default task.
+gulp.task('default', gulp.series('build'));
 
 
 // Resources used to create this gulpfile.js:

@@ -1,88 +1,73 @@
-// sass-lint:disable indentation, no-color-keywords, no-color-hex
+// sass-lint:disable no-color-keywords; no-color-hex
 
-// Colors
-//
-// Use the `color()` function to add colors to CSS properties. To learn more,
-// [read the Chroma documentation](http://johnalbin.github.io/chroma/).
+// Base colors.
+$black:                  #000;
+$nearblack:              lighten($black, 20%); // #333
+$grey-dark:              lighten($black, 40%); // #666
+$grey:                   lighten($black, 60%); // #999
+$grey-light:             lighten($black, 80%); // #ccc
+$grey-extra-light:       lighten($black, 93.33%); // #eee
+$white:                  #fff;
 
-// Define the default color scheme's color names.
-$chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
+$blue:                   #0072b9;
+$red:                    #c00;
+$green:                  #43a808;
+$yellow:                 #fd0;
 
-$chroma: add-colors((
-  black:                  #000,
-  nearblack:              ('black' lighten 20%), // #333
-  grey-dark:              ('black' lighten 40%), // #666
-  'grey':                 ('black' lighten 60%), // #999
-  grey-light:             ('black' lighten 80%), // #ccc
-  grey-extra-light:       ('black' lighten 93.33%), // #eee
-  white:                  #fff,
+// Colors used in the main content area.
+$brand:                  $nearblack;
+$brand-alt:              $grey;
+$brand-dark:             $grey-dark;
+$text:                   $black;
+$text-bg:                $white;
+$text-meta:              $grey-dark;
 
-  blue:                   #0072b9,
-  red:                    #c00,
-  green:                  #43a808,
-  yellow:                 #fd0,
-));
+$link:                   $black;
+$link-visited:           $black;
+$link-hover:             $brand;
+$link-active:            $red;
 
-// Define color names for functional uses.
-$chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
-$chroma: add-colors('functional', (
-  // Colors used in the main content area.
-  brand:                  'nearblack',
-  brand-alt:              'grey',
-  brand-dark:             'grey-dark',
-  text:                   'black',
-  text-bg:                'white',
-  text-meta:              'grey-dark',
+$border:                 $grey-light;
+$border-dark:            $nearblack;
 
-  link:                   'black',
-  link-visited:           'black',
-  link-hover:             'brand',
-  link-active:            'red',
+$autocomplete:           $text;
+$autocomplete-bg:        $text-bg;
+$autocomplete-select:    $white;
+$autocomplete-select-bg: $blue;
 
-  border:                 'grey-light',
-  border-dark:            'nearblack',
+$body-bg:                $white;
+$header-bg:              $brand;
+$backdrop:               $grey-extra-light;
 
-  autocomplete:           'text',
-  autocomplete-bg:        'text-bg',
-  autocomplete-select:    'white',
-  autocomplete-select-bg: 'blue',
+$mobile-menu:            $header-bg;
+$mobile-menu-cover:      rgba($black, .2);
 
-  body-bg:                'white',
-  header-bg:              'brand',
-  backdrop:               'grey-extra-light',
+$button:                 $nearblack;
+$button-disabled:        $grey;
 
-  mobile-menu:            'header-bg',
-  mobile-menu-cover:      ('black' rgba .2),
+$form-error:             $red;
 
-  button:                 'nearblack',
-  button-disabled:        'grey',
+$mark-highlight:         $red;
+$mark-bg:                $yellow;
 
-  form-error:             'red',
+$menu-active:            $text;
 
-  mark-highlight:         'red',
-  mark-bg:                'yellow',
+$preview-bg:             lighten($yellow, 43%);
 
-  menu-active:            'text',
+$row-stripe:             $white;
+$row-disabled:           $grey-light;
 
-  preview-bg:             ('yellow' lighten 43%),
+$status:                 $green;
+$status-bg:              lighten($status, 62%);
+$status-highlight:       $text;
+$warning:                $text;
+$warning-bg:             lighten($yellow, 45%);
+$warning-border:         $yellow;
+$error:                  $red;
+$error-bg:               lighten($error, 57%);
 
-  row-stripe:             'white',
-  row-disabled:           'grey-light',
+$watermark:              $grey-extra-light;
 
-  status:                 'green',
-  status-bg:              (status lighten 62%),
-  status-highlight:       text,
-  warning:                text,
-  warning-bg:             ('yellow' lighten 45%),
-  warning-border:         'yellow',
-  error:                  'red',
-  error-bg:               (error lighten 57%),
+$headings:               $nearblack;
 
-  watermark:              'grey-extra-light',
-
-  headings:               'nearblack',
-
-  code:                   'nearblack',
-));
-
-$chroma-active-scheme: 'functional';
+$code:                   $nearblack;
