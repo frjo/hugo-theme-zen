@@ -1,7 +1,6 @@
 'use strict';
 
-var importOnce = require('node-sass-import-once'),
-  path = require('path');
+var importOnce = require('node-sass-import-once');
 
 var options = {};
 
@@ -32,7 +31,6 @@ options.sass = {
   includePaths: [
     options.theme.sass,
     options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
-    options.rootPath.project + 'node_modules/chroma-sass/sass',
     options.rootPath.project + 'node_modules/typey/stylesheets'
   ],
   outputStyle: 'expanded'
@@ -58,7 +56,8 @@ var gulp      = require('gulp'),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  cleanCSS    = require('gulp-clean-css');
+  cleanCSS    = require('gulp-clean-css'),
+  touch       = require('gulp-touch-cmd');
 
 // The sass files to process.
 var sassFiles = [
@@ -118,7 +117,8 @@ gulp.task('styles', gulp.series('clean:css', function css () {
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.size({showFiles: true}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(options.theme.css));
+    .pipe(gulp.dest(options.theme.css))
+    .pipe(touch());
 }));
 
 gulp.task('styles:production', gulp.series('clean:css', function css () {
@@ -126,7 +126,8 @@ gulp.task('styles:production', gulp.series('clean:css', function css () {
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.size({showFiles: true}))
     .pipe(cleanCSS())
-    .pipe(gulp.dest(options.theme.css));
+    .pipe(gulp.dest(options.theme.css))
+    .pipe(touch());
 }));
 
 // Watch for changes and rebuild.
