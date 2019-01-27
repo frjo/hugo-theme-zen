@@ -8,7 +8,7 @@
 {{- partial "meta.html" . -}}
 {{- partialCached "meta_cache.html" . -}}
 {{ block "header" . }}{{ end }}
-{{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "piwik.html" . }}{{ end -}}
+{{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "matomo.html" . }}{{ end -}}
 </head>
 
 <body>
