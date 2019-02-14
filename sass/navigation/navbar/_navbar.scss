@@ -16,6 +16,7 @@
   @include rtl() {
     flex-direction: row-reverse;
     text-align: right;
+    padding: 0;
   }
 
   &__item,
