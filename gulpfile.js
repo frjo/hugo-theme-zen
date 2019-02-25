@@ -30,7 +30,6 @@ options.sass = {
   importer: importOnce,
   includePaths: [
     options.theme.sass,
-    options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
     options.rootPath.project + 'node_modules/typey/stylesheets'
   ],
   outputStyle: 'expanded'

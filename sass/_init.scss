@@ -17,7 +17,7 @@
 
 // The following Sass functions/mixins are required to generate some variables'
 // values, so we load them first.
-@import 'breakpoint';
+@import 'init/breakpoint/respond-to';
 
 @import 'init/colors';
 @import 'init/variables';

@@ -120,23 +120,19 @@ $auto-print-sizing: false;
 
 // Breakpoints
 //
-// Use the `respond-to()` mixin to use named breakpoints. Documentation is
-// available in the [Breakpoint wiki
-// pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
+// Use the `respond-to()` mixin to use named breakpoints.
 
-@include add-breakpoint(xxxs, (333px, 'no-query' true));
-@include add-breakpoint(xxs,  (444px, 'no-query' true));
-@include add-breakpoint(xs,   (555px, 'no-query' true));
-@include add-breakpoint(s,    (666px, 'no-query' true));
-@include add-breakpoint(m,    (777px, 'no-query' true));
-@include add-breakpoint(l,    (888px, 'no-query' true));
-@include add-breakpoint(xl,   (999px, 'no-query' true));
-@include add-breakpoint(xxl,  (1111px));
-@include add-breakpoint(xxxl, (1222px));
-
-// Output media queries where the above px are converted to ems.
-// @include breakpoint-set('to ems', true);
-
+$breakpoints: (
+  'xxxs': 333px,
+  'xxs':  444px,
+  'xs':   555px,
+  's':    666px,
+  'm':    777px,
+  'l':    888px,
+  'xl':   999px,
+  'xxl':  1111px,
+  'xxxl': 1222px
+) !default;
 
 // Layout
 
