@@ -285,19 +285,16 @@ figcaption {
 // Language selector
 
 .language-selector {
-  position: relative;
-  padding-left: 32px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('../images/language-icon.png');
-    background-size: 24px;
-    background-repeat: no-repeat;
-    height: 24px;
-    width: 24px;
+  .navbar {
+    &::before {
+      content: '';
+      background-image: url('../images/language-icon.png');
+      background-size: 24px;
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px;
+      margin-right: 8px;
+    }
   }
 }
 
