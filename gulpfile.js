@@ -19,10 +19,11 @@ options.rootPath = {
 };
 
 options.theme = {
-  root  : options.rootPath.theme,
-  css   : options.rootPath.theme + 'static/css/',
-  sass  : options.rootPath.theme + 'sass/',
-  js    : options.rootPath.theme + 'static/js/'
+  root    : options.rootPath.theme,
+  sass    : options.rootPath.theme + 'assets/sass/',
+  css     : options.rootPath.theme + 'static/css/',
+  js      : options.rootPath.theme + 'assets/js/',
+  js_dest : options.rootPath.theme + 'static/js/'
 };
 
 // Define the node-sass configuration. The includePaths is critical!
@@ -64,6 +65,13 @@ var sassFiles = [
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss'
 ];
+
+// Clean JS files.
+gulp.task('clean:js', function clean () {
+  return del([
+      options.theme.js_dest + '**/*.js'
+    ], {force: true});
+});
 
 // Clean CSS files.
 gulp.task('clean:css', function clean () {
@@ -109,6 +117,15 @@ gulp.task('lint:sass-with-fail', function lint () {
 // Lint Sass and JavaScript.
 gulp.task('lint', gulp.parallel('lint:sass', 'lint:js'));
 
+//Build JS
+gulp.task('scripts', gulp.series('clean:js', function js () {
+  return gulp.src(options.theme.js + '**/*.js')
+    .pipe(gulp.dest(options.theme.js_dest))
+    .pipe(touch());
+}));
+
+gulp.task('scripts:production', gulp.series('scripts'));
+
 // Build CSS.
 gulp.task('styles', gulp.series('clean:css', function css () {
   return gulp.src(sassFiles)
@@ -134,18 +151,22 @@ gulp.task('watch:css', gulp.series('styles', function watch () {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, gulp.series('styles'));
 }));
 
-gulp.task('watch:lint', gulp.series('lint:sass', function watch () {
+gulp.task('watch:lint:sass', gulp.series('lint:sass', function watch () {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, gulp.series('lint:sass'));
 }));
 
-gulp.task('watch:js', gulp.series('lint:js', function watch () {
+gulp.task('watch:js', gulp.series('scripts', function watch () {
+  return gulp.watch(options.eslint.files, options.gulpWatchOptions, gulp.series('scripts'));
+}));
+
+gulp.task('watch:lint:js', gulp.series('lint:js', function watch () {
   return gulp.watch(options.eslint.files, options.gulpWatchOptions, gulp.series('lint:js'));
 }));
 
-gulp.task('watch', gulp.parallel('watch:css', 'watch:lint', 'watch:js'));
+gulp.task('watch', gulp.parallel('watch:css', 'watch:lint:sass', 'watch:js', 'watch:lint:js'));
 
 // Build everything.
-gulp.task('build', gulp.parallel('styles:production', 'lint'));
+gulp.task('build', gulp.parallel('styles:production', 'scripts:production', 'lint'));
 
 // The default task.
 gulp.task('default', gulp.series('build'));
