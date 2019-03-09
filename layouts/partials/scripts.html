@@ -1,2 +1,10 @@
-{{ if $.Param "jquery" }}<script src="{{ "/js/jquery.slim.min.js" | relURL }}"></script>{{ end }}
-{{ if and ($.Param "jquery") ($.Param "contactform") }}<script src="/js/contact.js"></script>{{ end }}
+{{ if $.Param "jquery" -}}
+{{ $jquery := resources.Get "js/jquery.slim.min.js" | fingerprint -}}
+<script src="{{ $jquery.RelPermalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
+<script src="{{ $script.RelPermalink }}"></script>
+{{ if $.Param "contactform" -}}
+{{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
+<script src="{{ $contact.RelPermalink }}"></script>
+{{ end -}}
+{{ end -}}

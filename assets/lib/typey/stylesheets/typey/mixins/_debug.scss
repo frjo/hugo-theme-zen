@@ -1,0 +1,41 @@
+// Output a horizontal grid to help with debugging typography.
+//
+// @param number $line-height
+//   Multiple of line height to be used, line-height ratio or px value to be converted.
+// @param number|string $context
+//   (optional) Only used if em is the $base-unit. The value of the
+//   elements/parents font-size if it differs from $base-font-size.
+//   Specified as a t-shirt size or value in px.
+// @param string $color
+//   (optional) Use a custom grid color.
+@mixin typey-debug-grid($line-height: $base-line-height, $context: $base-font-size, $color: $typey-debug-color) {
+  @if $typey-debug == true {
+    $allowed-types: "multiplier", "px";
+    $type: typey-validator($line-height, $allowed-types);
+    $grid-height: 0;
+    @if $line-height-method == "rhythm" {
+      $grid-height: line-height($line-height, $context);
+    }
+    @if $line-height-method == "ratio" {
+      @if $line-height == $base-line-height {
+        $grid-height: line-height($base-line-height-ratio, $context) * 1em;
+      }
+      @else {
+        $grid-height: line-height($line-height, $context) * 1em;
+      }
+    }
+
+    position: relative;
+    background-image: repeating-linear-gradient(180deg, $color, $color 1px, transparent 1px, transparent $grid-height);
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color;
+    }
+  }
+}

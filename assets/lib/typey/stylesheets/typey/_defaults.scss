@@ -1,0 +1,181 @@
+// The browser font size default. No need to change this.
+// Allowed units: px
+$browser-font-size:        16px !default;
+
+// Allowed units: rem, em or px
+$base-unit:                rem !default;
+
+// The base font size will be used for most calculations involving font-size.
+// Allowed units: px
+$base-font-size:           16px !default;
+
+// The base line height will be used for most calculations involving height.
+// Allowed units: px
+$base-line-height:         24px !default;
+
+// The method to calculate line-height. Allowed values: rhythm or ratio.
+// Rhytm uses a vertical rhythm approach where line-height is specified as
+// a multiple of the $base-line-height.
+// Ratio uses a ratio approach where line-height is specified as a ratio
+// of the elements font-size.
+$line-height-method:       rhythm !default;
+
+// The default ratio of line-height to font-size.
+$base-line-height-ratio:   1.5 !default;
+
+// By default we will provide fallbacks when rem is the base unit.
+$rem-fallback:             true !default;
+
+// By default, when rem or em are the base unit we will output a print suitable
+// media query with the define-type-sizing() mixin. This will take care of all
+// print media type sizing effortlessly.
+$auto-print-sizing:        true !default;
+
+// The pt font-size to be used with the print media query when
+// $auto-print-sizing is enabled.
+// Allowed units: pt
+$print-font-size:          12pt !default;
+
+// Default font sizes
+// Once you redefine the $font-size map it will overwrite all sizes here.
+// Allowed units: px
+$font-size: (
+  xxxl:                    60px,
+  xxl:                     46px,
+  xl:                      32px,
+  l:                       24px,
+  m:                       16px,
+  s:                       14px,
+  xs:                      12px
+) !default;
+
+// Default font weights
+// This map and accompanying function help provide granular control over
+// setting and retrieving static font weights.
+$font-weight: (
+  bold:                    700,
+  normal:                  400,
+  lighter:                 200
+) !default;
+
+// Declare typefaces
+// These can use any key you like, and allow you to set global letter-spacing,
+// weight and case for font-families. You can then use the
+// font-family mixin to embed your font families anywhere you like.
+//
+// Each key in the $typefaces map can either be a keyed map of settings
+// using any combination of the keys below, or it can be a shorthand list
+// of each property value. When using shorthand it doesn't matter what order
+// each value is arranged in, but best practice is to do it in the order:
+// [font-family] [letter-spacing] [weight] [case]
+//
+// @setting list font-family
+//   Any standard CSS font-family. Use typey pre-written stacks or roll your own.
+// @setting number letter-spacing
+//   CSS letter-spacing. Specified as a px value when font-size is the
+//   $base-font-size.
+// @setting string weight
+//   A key from the $font-weight map. Only specify this if you want a consistant
+//   font-weight used accross the board with this typeface.
+// @setting string case
+//   A value for CSS text-transform. Only specify this if you want a consistant
+//   case used accross the board with this typeface.
+$typefaces: () !default;
+
+// Declare typestyles
+// These can use any key you like, and allow you to set an easily reusable type
+// style. They can be as simple as a font-size and line-height, or can go on
+// to encompass a full range of css type properties.
+//
+// Each key in the $typestyles map can either be a keyed map of settings
+// using any combination of the keys below, or it can be a shorthand list
+// of each property value. When using shorthand for $typestyles, the first value
+// must always be font-size. After that it doesn't matter what order each value
+// is arranged in, but best practice is to do it in the order:
+// [font-size] [line-height] [weight] [case]
+//
+// @setting number|string font-size
+//   A size from the $font-size map or px value to be converted
+// @setting number $x line-height
+//   Multiple of line height, ratio or px value to be converted.
+// @setting string weight
+//   A key from the $font-weight map.
+// @setting string case
+//   A value for CSS text-transform.
+$typestyles: () !default;
+
+// Debug grid
+// Shows horizontal lines for each elements line height.
+$typey-debug:              false !default;
+
+// Debug grid coloring
+$typey-debug-color:        #4affff !default;
+
+// Lets store the allowed values for text-transform and font-style so we can
+// make shorthand work a little better.
+$text-transform-values: (
+  lowercase,
+  uppercase,
+  capitalize
+) !default;
+
+$font-style-values: (
+  normal,
+  italic,
+  oblique
+) !default;
+
+// Warnings for $base-unit.
+@if $base-unit != px and $base-unit != rem and $base-unit != em {
+  @error "$base-unit must be one of the following unit types: rem, em or px";
+}
+
+// Warnings for $base-font-size and $base-line-height.
+@if unit($base-font-size) != px {
+  @error "$base-font-size must be in px";
+}
+@if unit($base-line-height) != px {
+  @error "$base-line-height must be in px";
+}
+
+// Warnings for $print-font-size.
+@if unit($print-font-size) != pt {
+  @error "$print-font-size must be in pt";
+}
+
+// Warnings for $font-size.
+@each $key, $size in $font-size {
+  @if unit($size) != px {
+    @error "Size '#{$key}' in $font-size map is not specified in px";
+  }
+}
+
+// Warnings for $font-weight.
+$typey-text-transform-properties: none capitalize uppercase lowercase initial inherit;
+@each $property in $typey-text-transform-properties {
+  @if map-has-key($font-weight, $property) {
+    @warn "'#{$property}' used in $font-weight map is a potential value of the text-transform property and will conflict when using typey shorthand";
+  }
+}
+
+// Warnings for $typefaces.
+@each $key, $typeface in $typefaces {
+  @if type-of($typeface) != "map" and type-of($typeface) != "list" {
+    @error "Typeface '#{$key}' in $typefaces map must be a keyed map or a shorthand list in the format: [font-family] [letter-spacing] [weight] [case]";
+  }
+}
+
+// Warnings for $typestyles.
+@each $key, $typestyle in $typestyles {
+  @if type-of($typestyle) == "list" {
+    @each $value in $typestyle {
+      @if index($typestyle, $value) == 1 {
+        $allowed-types: "font-size", "px";
+        $type: typey-check-value($value);
+        @if index($allowed-types, $type) == null {
+          @error "Incorrect shorthand format used in '#{$key}' in $typestyles map: [font-size] must appear first";
+        }
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ mkdir "$themename"
 
 cp -p zen/.eslintrc zen/.gitignore zen/.sass-lint.yml $themename/
 cp -p zen/gulpfile.js zen/package-lock.json zen/package.json zen/theme.toml $themename/
-cp -pr zen/sass $themename/
+cp -pr zen/assets $themename/
 cp -pr zen/static $themename/
 
 sed -e 's/^\(name = \).*$/\1"'"$human"'"/g' -e 's/^\(description = \).*$/\1"A Zen sub-theme"/g' $themename/theme.toml > $themename/theme.toml.temp

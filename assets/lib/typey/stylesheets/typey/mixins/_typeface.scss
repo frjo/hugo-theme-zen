@@ -1,0 +1,90 @@
+// Embed a typeface.
+//
+// @param string $typeface
+//   A font family from the $typefaces map.
+@mixin typeface($typeface) {
+  $typeface-name: $typeface;
+  $typeface: map-get($typefaces, $typeface);
+
+  $font-family: false;
+  $letter-spacing: false;
+  $weight: false;
+  $style: false;
+  $case: false;
+
+  // Assign values to variables when $typeface is a keyed map.
+  @if type-of($typeface) == "map" {
+    @if map-has-key($typeface, font-family) {
+      $font-family: map-get($typeface, font-family);
+    }
+    @if map-has-key($typeface, letter-spacing) {
+      $letter-spacing: map-get($typeface, letter-spacing);
+    }
+    @if map-has-key($typeface, weight) {
+      $weight: map-get($typeface, weight);
+    }
+    @if map-has-key($typeface, style) {
+      $style: map-get($typeface, style);
+    }
+    @if map-has-key($typeface, case) {
+      $case: map-get($typeface, case);
+    }
+  }
+
+  // Assign values to variables when $typeface is shorthand.
+  @if type-of($typeface) == "list" {
+    @if (list-separator($typeface) == "comma") {
+      // This shorthand is just a list of fonts.
+      $font-family: $typeface;
+    }
+    @else {
+      @each $value in $typeface {
+        // This is a font-family.
+        @if type-of($value) == "list" {
+          $font-family: $value;
+        }
+        // This is a letter-spacing value.
+        @if type-of($value) == "number" {
+          $letter-spacing: $value;
+        }
+        // This is a font-weight value.
+        @if map-has-key($font-weight, $value) {
+          $weight: $value;
+        }
+        // This is a case value.
+        @else if type-of($value) == "string" and index($text-transform-values, $value) != null {
+          $case: $value;
+        }
+        // This is a style value.
+        @else if type-of($value) == "string" and index($font-style-values, $value) != null {
+          $style: $value;
+        }
+      }
+    }
+  }
+
+  // Output properties.
+  @if $font-family {
+    font-family: $font-family;
+  }
+  @else {
+    @error "Typeface '#{$typeface-name}' does not have a font-family";
+  }
+  @if $letter-spacing {
+    @if ($letter-spacing == 0) {
+      letter-spacing: 0;
+    }
+    @else {
+      letter-spacing: calculate-em-px($letter-spacing, $base-font-size);
+    }
+  }
+  @if $weight {
+    font-weight: weight($weight);
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $case {
+    text-transform: $case;
+  }
+}

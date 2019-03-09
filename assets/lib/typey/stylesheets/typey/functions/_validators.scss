@@ -1,0 +1,82 @@
+// Takes a value and checks to ensure it's expressed correctly then returns
+// the type.
+//
+// @param number|string|list $x
+//   A multiple of $base-line-height.
+//   A px value.
+//   A size from the $font-size map.
+//   A space seperated list container multiples and/or px values.
+//
+// @return string
+//   multiplier, px, font-size, list
+@function typey-check-value($x) {
+  @if type-of($x) == "number" {
+    @if unitless($x) {
+      @return "multiplier";
+    }
+    @if not unitless($x) {
+      @if unit($x) == px {
+        @return "px";
+      }
+      @else {
+        @error "All units must be expressed in px";
+      }
+    }
+  }
+  @if type-of($x) == "string" {
+    @if $x == "auto" {
+      @return "auto";
+    }
+    @if map-has-key($font-size, $x) {
+      @return "font-size";
+    }
+    @else {
+      @error "'#{$x}' not found in $font-size map";
+    }
+  }
+  @if type-of($x) == "list" {
+    @if list-separator($x) == space {
+      @each $value in $x {
+        @if type-of($value) == "number" or $value == "auto" {
+          @if type-of($value) == "number" {
+            @if not unitless($value) and unit($value) != px {
+              @error "All units must be expressed in px";
+            }
+          }
+        }
+        @else {
+          @error "Values specified inside lists must be a number or 'auto'";
+        }
+      }
+      @return "list";
+    }
+    @else {
+      @error "All lists must use a space as their seperator";
+    }
+  }
+  @else {
+    @return type-of($x);
+  }
+}
+
+// Takes a value and validates it against a specified type.
+//
+// @param number|string|list $x
+//   A multiple of $base-line-height.
+//   A px value.
+//   A size from the $font-size map.
+//   A space seperated list container multiples and/or px values.
+// @param string|list $allowed-types
+//   Either multiplier, px, font-size, list, or a comibation specified in a list.
+//
+// @return string
+//   The values type.
+@function typey-validator($x, $allowed-types) {
+  $type: typey-check-value($x);
+  @if index($allowed-types, $type) != null {
+    @return $type;
+  }
+  @else {
+    @error "'#{$type}' is not a valid type for this function (allowed types are: #{$allowed-types})";
+  }
+}

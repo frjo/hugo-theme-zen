@@ -1,1 +1,0 @@
-{{ if $.Param "jquery" }}<script src="{{ "/js/script.js" | relURL }}{{ if $.Param "cacheBustJS" }}?{{ readFile "/public/js/script.js" | sha1 }}{{ end }}"></script>{{ end }}

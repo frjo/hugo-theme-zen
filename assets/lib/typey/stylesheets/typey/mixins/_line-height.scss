@@ -1,0 +1,23 @@
+// Define line-height (with fallback).
+//
+// @param number $x
+//   Multiple of line height to be used or px value to be converted.
+// @param number|string $context
+//   (optional) Only used if em is the $base-unit. The value of the
+//   elements/parents font-size if it differs from $base-font-size.
+//   Specified as a t-shirt size or value in px.
+@mixin line-height($x, $context: $base-font-size) {
+  $allowed-types: "multiplier", "px";
+  $type: typey-validator($x, $allowed-types);
+  @if $base-unit == rem and $line-height-method == "rhythm" {
+    @if $rem-fallback == true {
+      @if $type == "multiplier" {
+        line-height: $x * $base-line-height;
+      }
+      @if $type == "px" {
+        line-height: $x;
+      }
+    }
+  }
+  line-height: line-height($x, $context);
+}

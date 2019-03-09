@@ -1,0 +1,89 @@
+// Define spacing (with fallbacks).
+//
+// @param string $type
+//   The type of spacing: margin, padding, margin-top, etc.
+// @param number|list|string $spacing
+//   Multiple of $base-line-height to be used or px value to be converted.
+//   Can be a SASS list using the same parameters as the CSS margin property:
+//   i.e. top right bottom left, 1 0 2 0.
+//   Can also be the string "auto" when used as margin.
+// @param number|string $context
+//   (optional) Only used if em is the $base-unit. The value of the elements/parents
+//   font-size if it differs from $base-font-size. Specified as a t-shirt size or
+//   value in px.
+@mixin spacing($property, $spacing, $context: $base-font-size) {
+  $allowed-types: "multiplier", "px", "list";
+  $type: typey-validator($spacing, $allowed-types);
+
+  $px-fallback-list: ();
+  $converted-list: ();
+
+  @each $x in $spacing {
+    @if $base-unit == rem {
+      $allowed-types: "multiplier", "px", "auto";
+      $type: typey-validator($x, $allowed-types);
+      @if $type == "multiplier" {
+        $spacing: $x * $base-line-height;
+        $px-fallback-list: join($px-fallback-list, $spacing, $separator: space);
+      }
+      @if $type == "px" {
+        $px-fallback-list: join($px-fallback-list, $x, $separator: space);
+      }
+      @if $type == "auto" {
+        $px-fallback-list: join($px-fallback-list, $x, $separator: space);
+      }
+    }
+    $spacing: spacing($x, $context);
+    $converted-list: join($converted-list, $spacing, $separator: space);
+  }
+
+  @if $base-unit == rem {
+    @if $rem-fallback == true {
+      #{$property}: $px-fallback-list;
+    }
+  }
+  #{$property}: $converted-list;
+}
+
+// Wrapper mixins for various spacing properties.
+// These can be used to provide easily sized spacing in the base unit.
+//
+// @param number|list|string $x
+//   Multiple of $base-line-height to be used or px value to be converted.
+//   Can be a SASS list using the same parameters as the CSS margin property:
+//   i.e. top right bottom left, 1 0 2 0.
+//   Can also be the string "auto" when used as margin.
+// @param number|string $context
+//   (optional) Only used if em is the $base-unit. The value of the elements/parents
+//   font-size if it differs from $base-font-size. Specified as a t-shirt size or
+//   value in px.
+@mixin margin($x, $context: $base-font-size) {
+  @include spacing(margin, $x, $context);
+}
+@mixin margin-top($x, $context: $base-font-size) {
+  @include spacing(margin-top, $x, $context);
+}
+@mixin margin-bottom($x, $context: $base-font-size) {
+  @include spacing(margin-bottom, $x, $context);
+}
+@mixin margin-left($x, $context: $base-font-size) {
+  @include spacing(margin-left, $x, $context);
+}
+@mixin margin-right($x, $context: $base-font-size) {
+  @include spacing(margin-right, $x, $context);
+}
+@mixin padding($x, $context: $base-font-size) {
+  @include spacing(padding, $x, $context);
+}
+@mixin padding-top($x, $context: $base-font-size) {
+  @include spacing(padding-top, $x, $context);
+}
+@mixin padding-bottom($x, $context: $base-font-size) {
+  @include spacing(padding-bottom, $x, $context);
+}
+@mixin padding-left($x, $context: $base-font-size) {
+  @include spacing(padding-left, $x, $context);
+}
+@mixin padding-right($x, $context: $base-font-size) {
+  @include spacing(padding-right, $x, $context);
+}

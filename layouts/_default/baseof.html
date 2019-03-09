@@ -6,7 +6,7 @@
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
 {{ block "meta" . }}{{ end }}
 {{- partial "meta.html" . -}}
-{{- partialCached "meta_cache.html" . -}}
+{{- partial "styles.html" . -}}
 {{ block "header" . }}{{ end }}
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "matomo.html" . }}{{ end -}}
 </head>
@@ -40,6 +40,5 @@
 </div>
 {{ if $.Param "mobilemenu" }}{{ partial "mobilemenu.html" . }}{{ end -}}
 {{ partial "scripts.html" . -}}
-{{ partialCached "scripts_cache.html" . -}}
 </body>
 </html>

@@ -1,0 +1,55 @@
+// DEPRECIATED FUNCTIONS
+// The names of these functions have been refined and namespaced (above) to avoid
+// potential confusion with functions from other libraries.
+
+// (Depreciated) Output a number in the $base-unit..
+//
+// @param string $weight
+//   A weight from the $font-weight map.
+//
+// @return string
+//   The selected font-weight.
+@function output-unit($number) {
+  @warn "output-unit() is depreciated. Please use typey-output-in-base-unit() instead";
+  @return typey-output-in-base-unit($number);
+}
+
+// (Depreciated) Remove the unit from a number.
+//
+// @param number $number
+//   The number (with unit) to convert. Allowed units: any
+//
+// @return number
+//   The number without the unit.
+@function strip-unit($number) {
+  @warn "strip-unit() is depreciated. Please use typey-strip-unit() instead";
+  @return typey-strip-unit($number);
+}
+
+// (Depreciated) Convert px to the $base-unit.
+//
+// @param number $number
+//   The number (with unit) to convert. Allowed units: px
+// @param number|string $context
+//   (optional) Only used if em is the $base-unit. The value of the elements/parents
+//   font-size if it differs from $base-font-size. Specified as a t-shirt size or
+//   value in px.
+//
+// @return number
+//   The number converted to the base unit.
+@function convert-unit($number, $context: $base-font-size) {
+  @warn "convert-unit() is depreciated. Please use output-from-px() instead";
+  @return output-from-px($number, $context);
+}
+
+// (Depreciated) Retrieve a font weight.
+//
+// @param string $weight
+//   A weight from the $font-weight map.
+//
+// @return string
+//   The selected font-weight.
+@function font-weight($weight) {
+  @warn "font-weight() is depreciated. Please use weight() instead";
+  @return weight($weight);
+}

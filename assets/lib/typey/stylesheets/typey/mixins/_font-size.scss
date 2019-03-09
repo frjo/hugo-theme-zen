@@ -1,0 +1,24 @@
+// Define font-size (with fallback)
+//
+// @param number|string $size
+//   A size from the $font-size map or px value to be converted
+// @param number|string $context
+//   (optional) Only used if em is the $base-unit. The value of the elements/parents
+//   font-size if it differs from $base-font-size. Specified as a t-shirt size or
+//   value in px.
+@mixin font-size($size, $context: $base-font-size) {
+  $allowed-types: "font-size", "px";
+  $type: typey-validator($size, $allowed-types);
+  @if $base-unit == rem {
+    @if $rem-fallback == true {
+      @if $type == "font-size" {
+        $map-size: map-get($font-size, $size);
+        font-size: $map-size;
+      }
+      @if $type == "px" {
+        font-size: $size;
+      }
+    }
+  }
+  font-size: font-size($size, $context);
+}

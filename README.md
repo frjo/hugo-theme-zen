@@ -16,10 +16,10 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 * Automatic linting of css and js
 * Contact form (PHP)
 * CSS grid and flex for layout
-* Gulp.js
+* Gulp.js (only for sass/js lint)
 * HTML5
+* Hugo Pipes for js and sass
 * jQuery 3
-* libSass
 * Micro.blog
 * Minify css
 * Meta tags and JSON-LD
@@ -37,6 +37,7 @@ The [old branch](https://github.com/frjo/hugo-theme-zen/tree/old) has the origin
 * [Drejargården](https://www.drejargarden.se/)
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
+* [xdeb.net](https://xdeb.net/)
 
 
 ## On the large screen
@@ -64,21 +65,24 @@ $ git clone https://github.com/frjo/hugo-theme-zen.git zen
 [Hugo - Installing Hugo](https://gohugo.io/getting-started/installing/)
 
 
-## Create a zen subtheme
+## Customise layouts
 
-Since Hugo 0.42 there is sub them support via [Theme Components](https://gohugo.io/themes/theme-components/). This makes it easy to update the base theme without overwriting customisation.
+To customise a layout included in the zen theme, copy it to the root layout directory and edit it there. Make sure to maintain the directory structure inside the layouts directory. 
 
-Navigate to the theme folder where you have placed the zen base theme. Run the included "create_sub_theme.sh" script like this.
+Add any new layouts to the root layout directory as well. This way they will not be overwritten when updating the theme.
+
+
+## Customise styles and scripts
+
+Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
+
+To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets directory.
+
+By default the sass files are built for production, compressed with fingerprint. By setting the Hugo enviroment variable to "dev" they will instead be nested with sourcemaps.
 
 ```
-$ ./zen/create_sub_theme.sh
+§ hugo serve watch --environment=dev
 ```
-
-Enter a name for your sub theme when asked for. In the site config file add your sub theme name first and "zen" after it. Hugo will now first look in the sub theme for files and if they are not there look in the zen base theme.
-
-Edit all css/sass only in the sub theme and add any custom layouts etc. If there is a need to edit e.g. layouts from the zen base theme make sure to copy them over to the sub theme and edit them there.
-
-This way all customisation are in the sub theme, making it easy to update the base theme.
 
 
 ## config.yaml example
@@ -90,8 +94,6 @@ baseurl: "https://example.org/"
 title: "SiteTitle"
 
 params:
-  cacheBustCSS: true        # Add a cache busting hash on styles.css
-  cacheBustJS: true         # Add a cache busting hash on script.js
   contact: "info@example.org"
   copyright: "This site is licensed under a 
               (https://creativecommons.org/licenses/by-sa/4.0/)."
@@ -215,18 +217,11 @@ The <strong>content</strong> that should be wrapped.
 ```
 
 
-## Use Gulp to generate css from sass
+## Use Gulp to lint Sass and JavaScript
 
-Your new Zen theme uses Gulp.js as a task runner, so that it can do many
-different tasks automatically:
-
-* Build your CSS from your Sass using libSass and node-sass.
-* Add vendor prefixes for the browsers you want to support using Autoprefixer.
-* Build a style guide of your components based on the KSS comments in your Sass
-source files.
 * Lint your Sass using sass-lint.
 * Lint your JavaScript using eslint.
-* Minify the css.
+* Will lint files in the theme as well as the root assets directory.
 * Watch all of your files as you develop and re-build everything on the fly.
 
 Set up your front-end development build tools:
@@ -249,8 +244,7 @@ To install gulp's global wrapper, run:
 
         npm install -g gulp-cli
 
-5. The default gulp task will build your production minified CSS,
-build your style guide, and lint your Sass and JavaScript.
+5. The default gulp task will lint your Sass and JavaScript.
 To run the default gulp task, type:
 
         gulp
@@ -259,8 +253,17 @@ To run the default gulp task, type:
 
         gulp watch
 
-    or just type:
 
-        gulp watch:css
-  
-    to only watch the css files.
+## Create a zen subtheme
+
+Since Hugo 0.42 there is sub them support via [Theme Components](https://gohugo.io/themes/theme-components/). A nice feature if you want to extend an existing theme, like zen.
+
+If all you want is customise layouts, styles and scripts for a site it's easier to copy the needed files to the root layout and assets directories and edit them there. See instructions above.
+
+The included "create_sub_theme.sh" script makes it easy to get started on a sub theme. Navigate to the theme directory where you have placed the zen base theme and run the script like this.
+
+```
+$ ./zen/create_sub_theme.sh
+```
+
+Enter a name for your sub theme when asked for. In the site config file add your sub theme name first and "zen" after it. Hugo will now first look in the sub theme for files and if they are not there look in the zen base theme.
