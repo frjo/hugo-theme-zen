@@ -1,5 +1,27 @@
-<div class="mobile-nav-wrapper hidden" dir="ltr">
-  <div class="mobile-nav-cover"></div>
-  <a href="#navigation" class="mobile-nav-toggle" aria-haspopup="true" role="button">{{ i18n "menu_mobile" }}</a>
-  <div class="mobile-nav-sheet"></div>
+<div class="mobile-nav" dir="ltr">
+  <div class="mobile-nav__cover"></div>
+  <a href="#navigation" class="mobile-nav__toggle" aria-haspopup="true" role="button">{{ i18n "menu_mobile" }}</a>
+  <div class="mobile-nav__sheet">
+    <div class="mobile-nav__region">
+    {{ if .Site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end }}
+    {{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}
+    </div>
+    {{ $home := relLangURL "/" }}
+    {{ $currentSection := .Section }}
+    {{ $currentID := .UniqueID }}
+    <nav class="mobile-nav__main-menu" role="navigation">
+    <h2 class="visually-hidden">{{ i18n "menu_title" }}</h2>
+    <ul class="mobile-nav__navbar">
+    <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ $home }}">{{ i18n "menu_home" }}</a></li>
+    {{ range where .Site.Pages "Section" "" -}}
+    {{ if ne .RelPermalink (string $home) -}}
+    <li><a class="{{ if eq $currentID .UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end -}}
+    {{ end -}}
+    {{ range $.Site.Home.Sections -}}
+    <li><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end -}}
+    </ul>
+    </nav>
+  </div>
 </div>

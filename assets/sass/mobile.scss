@@ -1,0 +1,131 @@
+// @file
+// The mobile navigation stylesheet for this theme.
+
+@import 'init';
+
+.main-menu,
+.header__region {
+  display: none;
+  @include respond-to(s) {
+    display: block;
+  }
+}
+
+.mobile-nav {
+  @include typeface(headings);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 20;
+  pointer-events: none;
+
+  @include respond-to(s) {
+    display: none;
+  }
+
+  .js-nav-open & {
+    position: fixed;
+  }
+
+  &__cover {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $mobile-menu-cover;
+    opacity: 0;
+
+    .js-nav-open & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    position: absolute;
+    top: $zen-gutters / 2;
+    right: $zen-gutters / 2;
+    padding: 6px ($zen-gutters + $zen-gutters / 4 + 4px) 4px 4px;
+    z-index: 22;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    border: 1px solid $border;
+    border-radius: 3px;
+    color: $text;
+    pointer-events: auto;
+
+    @include respond-to(s) {
+      display: none;
+    }
+
+    .js-nav-open & {
+      color: $text-bg;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      margin-left: $zen-gutters / 4;
+      width: $zen-gutters;
+      height: $zen-gutters;
+      border-top: 12px double $text;
+      border-bottom: 4px solid $text;
+    }
+
+    .js-nav-open &::after {
+      border-color: $text-bg;
+    }
+  }
+
+  &__sheet {
+    background-color: $mobile-menu;
+    width: 90vw;
+    height: 100vh;
+    padding: 2rem;
+    transform: translateX(100vw);
+    z-index: 21;
+
+    a {
+      color: $text-bg;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $text-bg;
+      }
+    }
+
+    .js-nav-open & {
+      pointer-events: auto;
+      box-shadow: -10px 0 10px -10px $nearblack;
+      transform: translateX(10vw);
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      margin: .4rem 0;
+    }
+  }
+
+  &__cover,
+  &__toggle,
+  &__toggle::after,
+  &__sheet {
+    transition: all 130ms ease-in;
+
+    .js-nav-open & {
+      transition: all 330ms ease-out;
+    }
+  }
+}

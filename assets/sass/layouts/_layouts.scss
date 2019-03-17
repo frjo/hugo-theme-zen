@@ -25,12 +25,6 @@
       padding: 0 $zen-gutters;
     }
   }
-
-  &__grid-notice {
-    margin: $zen-gutters/2;
-    padding: $zen-gutters/2;
-    border: 2px dashed $red;
-  }
 }
 
 @supports (display: grid) {
