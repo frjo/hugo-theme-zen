@@ -29,6 +29,7 @@ This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme
 * RSS and JSON feeds with full content
 * Search with DuckDuckGo
 * Sub theme support (Theme Components)
+* Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
 
 
 ## Sites using the Hugo Zen theme
@@ -214,6 +215,39 @@ This will produce:
 <div class="class-name-you-want">
 The <strong>content</strong> that should be wrapped.
 </div>
+```
+
+
+## Choose between using jQuery or Umbrella JS
+
+Umbrella JS is always added and it's used for all theme JavaScript. To add jQuery, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having both libraries loaded on the same page.
+
+This is the way I construct my JavaScript files.
+
+**Umbrella JS:**
+
+```
+(function ($) {
+
+  'use strict';
+
+  // Add your code here.
+  $('html').removeClass('nojs').addClass('js');
+
+})(u);
+```
+
+**jQuery:**
+
+```
+(function ($) {
+
+  'use strict';
+
+  // Add your code here.
+  $('html').removeClass('nojs').addClass('js');
+
+})(jQuery);
 ```
 
 

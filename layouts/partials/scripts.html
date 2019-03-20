@@ -1,10 +1,16 @@
 {{ if $.Param "jquery" -}}
 {{ $jquery := resources.Get "js/jquery.slim.min.js" | fingerprint -}}
 <script src="{{ $jquery.RelPermalink }}"></script>
-{{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
-<script src="{{ $script.RelPermalink }}"></script>
+{{ end -}}
+{{ $umbrella := resources.Get "js/umbrella.min.js" | fingerprint -}}
+<script src="{{ $umbrella.RelPermalink }}"></script>
+{{ if $.Param "mobilemenu" -}}
+{{ $mobilemenu := resources.Get "js/mobile.js" | minify | fingerprint -}}
+<script src="{{ $mobilemenu.RelPermalink }}"></script>
+{{ end -}}
 {{ if $.Param "contactform" -}}
 {{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
 <script src="{{ $contact.RelPermalink }}"></script>
 {{ end -}}
-{{ end -}}
+{{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
+<script src="{{ $script.RelPermalink }}"></script>
