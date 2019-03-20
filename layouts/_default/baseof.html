@@ -13,7 +13,7 @@
 
 <body>
 <div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar-second{{ end }}">
-<header class="header layout__header" role="banner">
+<header class="header layout__header">
 {{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ "/images/logo.png" | relURL }}" alt="Home" class="header__logo-image"></a>{{ end }}
 <h1 class="header__site-name">
 <a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
@@ -30,7 +30,7 @@
 
 {{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 
-<footer class="footer layout__footer" role="contentinfo">
+<footer class="footer layout__footer">
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
 <p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ .Site.Title }}</span>{{ end }}</p>
 {{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}

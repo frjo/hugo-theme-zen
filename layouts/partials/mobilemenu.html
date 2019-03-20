@@ -9,7 +9,7 @@
     {{ $home := relLangURL "/" }}
     {{ $currentSection := .Section }}
     {{ $currentID := .UniqueID }}
-    <nav class="mobile-nav__main-menu" role="navigation">
+    <nav class="mobile-nav__main-menu">
     <h2 class="visually-hidden">{{ i18n "menu_title" }}</h2>
     <ul class="mobile-nav__navbar">
     <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ $home }}">{{ i18n "menu_home" }}</a></li>

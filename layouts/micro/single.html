@@ -7,7 +7,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="main layout__main" role="main">
+<main class="main layout__main">
 <h1 class="title hidden">{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 {{ if $.Param "submitted" | default false }}<a href="{{ .RelPermalink }}">{{ partial "submitted.html" . -}}</a>{{ end }}
