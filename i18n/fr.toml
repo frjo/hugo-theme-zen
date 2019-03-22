@@ -1,0 +1,83 @@
+[menu_title]
+other = "Menu principal"
+
+[menu_home]
+other = "Accueil"
+
+[menu_mobile]
+other = "Menu"
+
+[pager_next]
+other = "Suivant"
+
+[pager_prev]
+other = "Précédent"
+
+[taxo_tags]
+other = "Tags"
+
+[search_placeholder]
+other = "Rechercher"
+
+[search_title]
+other = "Entrez les termes de la recherche."
+
+[string_at]
+other = "à"
+
+[string_by]
+other = "par"
+
+[string_follow]
+other = "suivre"
+
+[string_in]
+other = "dans"
+
+[string_on]
+other = "sur"
+
+[string_recent_content]
+other = "Contenu récent"
+
+[contact_js]
+other = "Javascript doit être activé pour utiliser ce formulaire de contact."
+
+[contact_submitted]
+other = "Votre message a été envoyé."
+
+[contact_error]
+other = "Une erreur est survenue lors de l'envoi du formulaire."
+
+[contact_name]
+other = "Nom"
+
+[contact_name_placeholder]
+other = "Votre nom"
+
+[contact_mail]
+other = "Adresse e-mail"
+
+[contact_mail_placeholder]
+other = "Votre adresse e-mail"
+
+[contact_subject]
+other = "Sujet"
+
+[contact_subject_placeholder]
+other = "Le sujet du message"
+
+[contact_message]
+other = "Message"
+
+[contact_message_placeholder]
+other = "Contenu du message"
+
+[contact_submit]
+other = "Envoyer"
+
+[contact_honypot]
+other = "Ne faites pas attention à ça si vous êtes humain"
+
+[lang_select_title]
+other = "Selection de la langue"
