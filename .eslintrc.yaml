@@ -3,6 +3,7 @@ env:
   browser: true
 globals:
   jQuery: true
+  u: true
 rules:
   array-bracket-spacing:
     - "error"
