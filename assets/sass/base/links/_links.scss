@@ -33,9 +33,4 @@ a:focus {
 
 a:active {
   color: $link-active;
-
-  &:not(.button) {
-    // Remove the gray background on active links in IE 10.
-    background-color: transparent;
-  }
 }

@@ -4,55 +4,19 @@
 // project, each .scss file has a `@import 'init';` declaration. The _init.scss
 // file is in charge of importing all the other partials needed for the
 // project.
-//
-// The initialization partial is organized in this way:
-// - First we set any shared Sass variables.
-// - Next we import Sass modules.
-// - Last we define our custom mixins for this project.
-//
-// Weight: -1
-//
-// Style guide: sass.init
 
-
-// The following Sass functions/mixins are required to generate some variables'
-// values, so we load them first.
-@import 'init/breakpoint/respond-to';
-
+// Colours and variables.
 @import 'init/colors';
 @import 'init/variables';
-
-
-// 3rd party libraries
-//
-// The following sass modules are shared with all .scss files:
-// - [Breakpoint](http://breakpoint-sass.com/)
-// - [Typey](https://github.com/jptaranto/typey)
-//
-// Additional pre-built libraries can be found on the [Sache website](http://www.sache.in/).
-//
-// Style guide: sass.modules
 
 // Add typey to manage font sizes and margins.
 @import 'typey';
 
-
-// Mixins
-//
 // Custom mixins used on this site.
-//
-// Weight: 1
-//
-// Style guide: sass.mixins
+@import 'init/breakpoint/respond-to';
 @import 'init/clearfix/clearfix';
 @import 'init/rtl/rtl';
 @import 'init/visually-hidden/visually-hidden';
 
-// Functions
-//
 // Custom functions used on this site.
-//
-// Weight: 1
-//
-// Style guide: sass.functions
 @import 'init/image-url/image-url';

@@ -1,10 +1,5 @@
 // Zen custom styles
 
-p,
-pre {
-  @include margin(.75 0);
-}
-
 // Page
 
 body {
@@ -245,33 +240,6 @@ figcaption {
   text-decoration: none;
 }
 
-// Messages
-
-.message {
-  padding: 10px;
-  border-width: 1px;
-  border-style: solid;
-  width: 95%;
-
-  &.status {
-    background-color: $status-bg;
-    color: $status;
-    border-color: $status;
-  }
-
-  &.warning {
-    background-color: $warning-bg;
-    color: $warning;
-    border-color: $warning;
-  }
-
-  &.error {
-    background-color: $error-bg;
-    color: $error;
-    border-color: $error;
-  }
-}
-
 // Search
 
 .search-form {
@@ -280,22 +248,6 @@ figcaption {
 
 .search-text {
   @include type-layout(l, 1);
-}
-
-// Language selector
-
-.language-selector {
-  .navbar {
-    &::before {
-      content: '';
-      background-image: url('../images/language-icon.png');
-      background-size: 24px;
-      background-repeat: no-repeat;
-      height: 24px;
-      width: 24px;
-      margin-right: 8px;
-    }
-  }
 }
 
 // Form

@@ -17,8 +17,6 @@ summary {
 menu {
   // Set 1 unit of vertical rhythm on the top and bottom margin.
   @include margin(1 0);
-  // Add the correct display in IE 9-.
-  display: block;
   // Set consistent space for the list style image.
   padding: 0 0 0 $indent-amount;
 

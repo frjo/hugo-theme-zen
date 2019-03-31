@@ -1,0 +1,26 @@
+// Messages
+
+.message {
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  width: 95%;
+
+  &.status {
+    background-color: $status-bg;
+    color: $status;
+    border-color: $status;
+  }
+
+  &.warning {
+    background-color: $warning-bg;
+    color: $warning;
+    border-color: $warning;
+  }
+
+  &.error {
+    background-color: $error-bg;
+    color: $error;
+    border-color: $error;
+  }
+}

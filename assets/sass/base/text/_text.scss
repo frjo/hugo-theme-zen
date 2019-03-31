@@ -1,8 +1,6 @@
 // Text-level semantics
 //
 // The elements in this section give semantics to inline text.
-//
-// Weight: 1
 
 // Abbreviation / Acroynym
 //
@@ -25,8 +23,6 @@ abbr[title] {
 //
 // Feel free to use `<b>` in HTML5. `<b>` is meant to highlight words or phrases
 // without conveying additional importance.
-//
-// Weight: -1
 
 // Prevent the duplicate application of `bolder` by the next rule in Safari 6.
 
@@ -76,8 +72,7 @@ del {
 // The `<dfn>` element represents the defining instance of a term.
 
 dfn {
-  // Add the correct font style in Android 4.3-.
-  font-style: italic;
+  // Add your styles.
 }
 
 // Italics
@@ -87,8 +82,6 @@ dfn {
 //
 // Feel free to use `<i>` element in HTML5. `<i>` is meant to convey voice,
 // technical terms, etc.
-//
-// Weight: -1
 
 i,
 em {
@@ -109,9 +102,7 @@ ins {
 // context.
 
 mark {
-  // Add the correct background and color in IE 9-.
-  background-color: $mark-bg;
-  color: $text;
+  // Add your styles.
 }
 
 // Quote

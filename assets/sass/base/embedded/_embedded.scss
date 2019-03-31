@@ -1,18 +1,9 @@
 // Embedded content
-//
-// Weight: 2
 
 // Audio
 
 audio {
-  // Add the correct display in IE 9-.
-  display: inline-block;
-}
-
-// Add the correct display in iOS 4-7.
-audio:not([controls]) {
-  display: none;
-  height: 0;
+  // Add your styles.
 }
 
 // Image
@@ -20,8 +11,7 @@ audio:not([controls]) {
 // An `<img>` element represents an image.
 
 img {
-  // Remove the border on images inside links in IE 10-.
-  border-style: none;
+  // Add your styles.
 }
 
 img,
@@ -34,18 +24,8 @@ svg {
   height: auto;
 }
 
-// Scalable vector
-//
-// A `<svg>` element represents an image encoded as a Scalable Vector Graphic.
-
-svg:not(:root) {
-  // Hide the overflow in IE.
-  overflow: hidden;
-}
-
 // Video
 
 video {
-  // Add the correct display in IE 9-.
-  display: inline-block;
+  // Add your styles.
 }

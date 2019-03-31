@@ -2,8 +2,6 @@
 @import 'components/divider/divider';
 
 // Grouping content
-//
-// Weight: 1
 
 
 // Block quotes
@@ -24,8 +22,6 @@ blockquote {
 
 // Lists
 //
-// Weight: -1
-//
 // Style guide: base.grouping.lists
 
 // Unordered list
@@ -41,8 +37,6 @@ blockquote {
 // Description list
 //
 // The `<dl>` element is a list of terms with their associated descriptions.
-//
-// Weight: 1
 
 dl,
 ol,
@@ -86,15 +80,11 @@ ul {
 // caption of the figure.
 
 figure {
-  // Add the correct margin in IE 8.
-  @include margin(1 0);
-  // Add the correct display in IE 9-.
-  display: block;
+  // Add your styles.
 }
 
 figcaption {
-  // Add the correct display in IE 9-.
-  display: block;
+  // Add your styles.
 }
 
 // Horizontal rule
@@ -117,8 +107,7 @@ hr {
 // The `<main>` element represents the main content of the page.
 
 main {
-  // Add the correct display in IE.
-  display: block;
+  // Add your styles.
 }
 
 // Body copy
@@ -126,13 +115,10 @@ main {
 // The default `font-size` and `line-height` properties are applied to the
 // `<body>` element and all paragraphs. In addition, `<p>` (paragraphs) receive
 // a top and bottom margin.
-//
-// Weight: -2
 
 p,
 pre {
-  // Set 1 unit of vertical rhythm on the top and bottom margin.
-  @include margin(1 0);
+  @include margin(.75 0);
 }
 
 // Preformatted text

@@ -4,12 +4,9 @@
 // We categorize our components by creating headings in this file. See the
 // description on the style guide home page for more information.
 
-
 // Colors and Sass
 //
 // Documentation for colors and Sass mixins and variables.
-//
-// Weight: -1
 
 @import 'init';
 
@@ -36,8 +33,6 @@
 //
 // Design components are reusable designs that can be applied using just the CSS
 // class names specified in the component.
-//
-// Weight: 1
 
 @import 'components/box/box';
 @import 'components/clearfix/clearfix';
@@ -47,7 +42,9 @@
 @import 'components/inline-links/inline-links';
 @import 'components/inline-sibling/inline-sibling';
 @import 'components/inverted-box/inverted-box';
+@import 'components/language-selector/language-selector';
 @import 'components/list-straight-left/list-straight-left';
+@import 'components/messages/messages';
 @import 'components/responsive-video/responsive-video';
 @import 'components/visually-hidden/visually-hidden';
 @import 'components/watermark/watermark';
@@ -57,8 +54,6 @@
 //
 // Navigation components are specialized design components that are used for
 // page navigation.
-//
-// Weight: 2
 
 @import 'navigation/more-link/more-link';
 @import 'navigation/navbar/navbar';

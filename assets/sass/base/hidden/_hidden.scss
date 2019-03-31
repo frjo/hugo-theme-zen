@@ -1,8 +1,0 @@
-// Hidden
-//
-// Some older browsers do not hide elements that have a `hidden` attribute.
-
-[hidden] {
-  // Add the correct display in IE 10-.
-  display: none;
-}

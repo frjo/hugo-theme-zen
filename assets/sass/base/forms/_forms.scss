@@ -6,8 +6,6 @@
 //
 // Component classes can override these styles, but if no class applies a style
 // to an HTML form element, these styles will be the ones displayed.
-//
-// Weight: -1
 
 //
 // The following rules are from normalize.css and help to fix inconsistencies
@@ -216,8 +214,6 @@ select {
 // The `<progress>` element represents the completion progress of a task.
 
 progress {
-  // Add the correct display in IE 9-.
-  display: inline-block;
   // Add the correct vertical alignment in Chrome, Firefox, and Opera.
   vertical-align: baseline;
 }

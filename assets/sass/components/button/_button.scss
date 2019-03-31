@@ -8,21 +8,6 @@
 // :hover  - Hover styling.
 // :active - Depressed button styling.
 
-// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
-//    controls in Android 4.
-// 2. Correct the inability to style clickable types in iOS and Safari.
-.button,
-%button,
-button,
-// 1
-html [type='button'],
-[type='reset'],
-[type='submit'] {
-  // sass-lint:disable no-vendor-prefixes
-  -moz-appearance: button;
-  -webkit-appearance: button; // 2
-}
-
 .button,
 %button,
 button,
@@ -53,8 +38,11 @@ button,
   border-bottom-color: #b4b4b4;
   border-radius: 2px;
 
-
   // sass-lint:disable no-vendor-prefixes
+  // Correct the inability to style clickable types in iOS and Safari.
+  -moz-appearance: button;
+  -webkit-appearance: button;
+
   // Remove the inner border and padding in Firefox.
   &::-moz-focus-inner {
     border-style: none;

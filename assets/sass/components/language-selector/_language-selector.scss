@@ -1,0 +1,15 @@
+// Language selector
+
+.language-selector {
+  .navbar {
+    &::before {
+      content: '';
+      background-image: url('../images/language-icon.png');
+      background-size: 24px;
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px;
+      margin-right: 8px;
+    }
+  }
+}
