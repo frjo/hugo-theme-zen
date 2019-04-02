@@ -6,7 +6,7 @@
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
 {{ block "meta" . }}{{ end }}
 {{- partial "meta.html" . -}}
-{{- partial "styles.html" . -}}
+{{- partialCached "styles.html" . -}}
 {{ block "header" . }}{{ end }}
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "matomo.html" . }}{{ end -}}
 </head>
