@@ -77,7 +77,9 @@ Add any new layouts to the root layout directory as well. This way they will not
 
 Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
 
-To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets directory.
+To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/sass directory.
+
+The default styles in "_zen.scss" are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
 
 By default the sass files are built for production, compressed with fingerprint. By setting the Hugo enviroment variable to "dev" they will instead be nested with sourcemaps.
 
