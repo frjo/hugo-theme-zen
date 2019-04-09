@@ -32,6 +32,19 @@ This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme
 * Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
 
 
+## Performance
+
+Performance should be excellent.
+
+* Minimal and compliant HTML5
+* Styles 17,7 kB (4,3 kB when gzipped)
+* JavaScript 8,4 kB (2,7 kB when gzipped)
+* All scripts loaded in head with "defer"
+* Optimised for HTTP/2
+
+Some performance tools will complain about to many files (js and css files are not concatenated) but with HTTP/2 that can be ignored.
+
+
 ## Sites using the Hugo Zen theme
 
 * [Combonetwork development](https://combonet.se/) (multilingual)

@@ -8,6 +8,7 @@
 {{- partial "meta.html" . -}}
 {{- partialCached "styles.html" . -}}
 {{ block "header" . }}{{ end }}
+{{ partial "scripts.html" . -}}
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "matomo.html" . }}{{ end -}}
 </head>
 
@@ -39,6 +40,5 @@
 
 </div>
 {{ if $.Param "mobilemenu" }}{{ partial "mobilemenu.html" . }}{{ end -}}
-{{ partial "scripts.html" . -}}
 </body>
 </html>
