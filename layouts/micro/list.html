@@ -1,0 +1,22 @@
+{{ define "meta" }}
+{{- partial "section_meta.html" . -}}
+{{- partial "opengraph_meta.html" . -}}
+{{ end }}
+
+{{ define "header" }}
+{{- partial "section_json_ld.html" . -}}
+{{ end }}
+
+{{ define "main" -}}
+<main class="main layout__main">
+<h1 class="title">Micro posts</h1>
+<p class="micro__follow"><a href="https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}">{{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }}</a></p>
+
+{{ $paginator := .Paginate (.Data.Pages) -}}
+{{ range $paginator.Pages -}}
+{{ .Render "summary"}}
+{{ end -}}
+
+{{ partial "pagination.html" . }}
+</main>
+{{ end }}
