@@ -1,1 +1,1 @@
-<div class="{{ .Get 0 }}">{{ .Inner }}</div>
+<div class="{{ .Get 0 }}">{{ if eq (.Get 1) "nomarkdown" }}{{ .Inner }}{{ else }}{{ .Inner | markdownify }}{{ end }}</div>

@@ -216,19 +216,41 @@ blablabla # Displayed below of the image.
 
 ### Wrapper
 
-A simple, but useful, shortcode to wrap content in a div with a class.
+A simple, but useful, shortcode to wrap content in a div with a class. The content will be run through "markdownify".
 
 ```
-{{% wrapper class-name-you-want %}}
+{{< wrapper class-name-you-want markdown >}}
 The **content** that should be wrapped.
-{{% /wrapper %}}
+
+Some more content.
+{{< /wrapper >}}
 ```
 
 This will produce:
 
 ```
 <div class="class-name-you-want">
-The <strong>content</strong> that should be wrapped.
+<p>The <strong>content</strong> that should be wrapped.</p>
+
+<p>Some more content.</p>
+</div>
+```
+
+If the content should be left untouched add "nomarkdown" after the class name.
+
+```
+{{< wrapper class-name-you-want nomarkdown >}}
+The **content** that should be wrapped.
+
+Some more content.
+{{< /wrapper >}}
+```
+
+This will produce:
+
+```
+<div class="class-name-you-want">
+The **content** that should be wrapped. Some more content.
 </div>
 ```
 
