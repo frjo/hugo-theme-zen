@@ -108,6 +108,7 @@ All the "params" are optional.
 ```
 baseurl: "https://example.org/"
 title: "SiteTitle"
+theme: "zen"
 
 params:
   contact: "info@example.org"
