@@ -25,9 +25,9 @@
     {{ $height := (mul ($.Scratch.Get "realheight") (div (add ($.Scratch.Get "width") 0.0) ($.Scratch.Get "realwidth"))) -}}
     {{ $.Scratch.Set "height" (math.Round $height) -}}
 {{ end -}}
-<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
+<figure class="image {{ .Get "class" | default "" }}">
 {{ with .Get "link" }}<a href="{{ . }}">{{ end -}}
-<img src="{{ $.Get "src" | relURL }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $.Scratch.Get "width" }} width="{{ . }}"{{ end }}{{ with $.Scratch.Get "height" }} height="{{ . }}"{{ end }}>
+<img src="{{ .Get "src" | relURL }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $.Scratch.Get "width" }} width="{{ . }}"{{ end }}{{ with $.Scratch.Get "height" }} height="{{ . }}"{{ end }}>
 {{- if .Get "link" }}</a>{{ end }}
 {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
 <figcaption>{{ if isset .Params "title" }}

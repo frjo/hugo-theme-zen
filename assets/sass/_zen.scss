@@ -161,46 +161,56 @@ article {
 }
 
 figure {
-  @include respond-to(s) {
-    display: table;
+  margin: 0;
 
-    img {
-      display: block;
+  &.image {
+    figcaption {
+      @include respond-to(s) {
+        display: table-caption;
+        caption-side: bottom;
+      }
+
+      h4,
+      p {
+        margin: 0;
+      }
     }
 
-    &.left {
-      @include padding(0 .5 .5 0);
-      margin: 0;
-      float: left;
-      clear: both;
+    @include respond-to(s) {
+      display: table;
 
-      figcaption {
+      img {
+        display: block;
+      }
+
+      &.left {
         @include padding(0 .5 .5 0);
+        margin: 0;
+        float: left;
+        clear: both;
+
+        figcaption {
+          @include padding(0 .5 .5 0);
+        }
       }
-    }
 
-    &.right {
-      @include padding(0 0 .5 .5);
-      margin: 0;
-      float: right;
-      clear: both;
-
-      figcaption {
+      &.right {
         @include padding(0 0 .5 .5);
+        margin: 0;
+        float: right;
+        clear: both;
+
+        figcaption {
+          @include padding(0 0 .5 .5);
+        }
       }
     }
   }
-}
 
-figcaption {
-  @include respond-to(s) {
-    display: table-caption;
-    caption-side: bottom;
-  }
-
-  h4,
-  p {
-    margin: 0;
+  &.podcast {
+    audio {
+      width: 95%;
+    }
   }
 }
 

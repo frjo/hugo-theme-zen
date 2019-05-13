@@ -1,0 +1,24 @@
+{{ define "meta" }}
+{{- partial "single_meta.html" . -}}
+{{- partial "opengraph_meta.html" . -}}
+{{ end }}
+
+{{ define "header" }}
+{{- partial "single_json_ld.html" . -}}
+{{ end }}
+
+{{ define "main" -}}
+<main class="main layout__main">
+<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+<header>
+<h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
+{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
+{{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
+</header>
+{{ partial "podcast.html" . -}}
+<div class="content">
+{{ .Content }}
+</div>
+</article>
+</main>
+{{ end }}

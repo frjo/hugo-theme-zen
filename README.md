@@ -25,6 +25,7 @@ This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme
 * Meta tags and JSON-LD
 * Multilingual (i18n)
 * Normalize CSS
+* Podcast
 * Responsive design
 * RSS and JSON feeds with full content
 * Search with DuckDuckGo
@@ -129,13 +130,35 @@ params:
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens.
   piwikSiteId:              # Matamo site id
-  piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.com/matamo).
+  piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   poweredby: true           # Show powered by hugo in footer
   search: true              # Site search with DuckDuckGo.
   searchSize: 20            # Search field size, default 20.
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
+
+  podcast:
+    title:                  # * Feed title, defaults to site title (iTunes).
+    description:            # * Feed description/summary, defaults to  site description (iTunes).
+    image:                  # * Feed image, place inside assets directory (iTunes).
+    category:
+      name:                 # * Feed category (iTunes).
+      subcategories: []     # Feed sub category (iTunes).
+    explicit: false/true    # Feed explicit settting, default to false (iTunes).
+    author:                 # Feed author (iTunes).
+    owner:
+      name:                 # Feed owner name (iTunes).
+      email:                # Feed owner e-mail (iTunes).
+    lang:                   # Feed language, defaults to site language (iTunes).
+    block: no/yes           # Block the feed from iTunes, default to no (iTunes).
+    complete: no/yes        # Set the feed as complete, defaults to no (iTunes).
+    type: episodic/serial   # Podcast type, defaults to episodic (iTunes).
+    newfeed:                # Are you moving? Set the new feed url here (iTunes).
+    cdn:                    # CDN url, no slash on end (https://cdn.example.org).
+    preload: none/metadata/auto # Set on the HTML5 audio tag, defaults to "metadata".
 ```
+
+The site will work without setting any of the podcast parameters but your podcast feed will not be accepted by iTunes. At a minimum you need to set the first four, title, description, image and category name. Read more in the podcast section below.
 
 
 ## Multilingual
@@ -183,6 +206,37 @@ If "lastmod" is set in the frontmatter on a post that value will be used in the 
 With "lastmod" set a date section will also appear at the bottom of post telling the reader the created and modification dates.
 
 
+## Podcast
+
+The Zen theme supports podcasting.
+
+* RSS feed with all the needed iTunes tags.
+* Single and full layouts with HTML 5 audio player.
+* Archetype with required parameters.
+
+
+Here follow all the possible podcast frontmatter parameters. Only the first two is mandatory and are in the podcast archetype.
+
+```
+podcast:
+    mp3:                    # * The path to the mp3 file, 
+    duration:               # * Episode duration, e.g 1:04:02 (iTunes).
+    image:
+        src:                # Episode image src, place inside the assets directory (iTunes).
+        alt:                # Alt text for the image, explain what is on the image.
+        width:              # Image width in the article, defaults to 250px.
+        class:              # Image wrapper class.
+    explicit: true/false    # Episode explicit setting, default to false (iTunes).
+    episode:                # Episode number (iTunes).
+    episodeType: full/trailer/bonus # Episode type, defaults to full (iTunes).
+    season:                 # Episode season (iTunes).
+    block:                  # Block the episode from iTunes, default to no (iTunes).
+```
+
+* [Apple Podcasts categories](https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12)
+* [Apple - A podcaster’s guide to RSS](https://help.apple.com/itc/podcasts_connect/#/itcb54353390)
+
+
 ## Shortcodes
 
 ### Contact
@@ -201,6 +255,7 @@ Zen comes with a improved version of the built in "figure" shortcut.
 * If width and height is not set the real dimensions of the image will be used.
 * If only width or height is set the other value will be proportionally calculated.
 
+
 ### Clear
 
 Break float.
@@ -214,6 +269,25 @@ blablabla # Displayed left of the image.
 
 blablabla # Displayed below of the image.
 ```
+
+
+### Audio and Video
+
+```
+{{< audio src="/audio/audio.mp3" class="something" >}}
+
+{{< video src="/video/video.mp4" class="something" >}}
+```
+
+Possible parameters are:
+
+* src
+* class
+* preload (none/metadata/auto, default metadata)
+* width (only video)
+
+The audio and video tags will be wrapped with a figure tag.
+
 
 ### Wrapper
 

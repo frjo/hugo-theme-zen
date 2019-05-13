@@ -1,0 +1,12 @@
+{{ $src := (.Params.podcast.mp3 | absURL) -}}
+{{ if .Site.Params.Podcast.cdn -}}
+{{ $src = add $.Site.Params.Podcast.cdn (.Params.podcast.mp3 | relURL) -}}
+{{ end -}}
+<figure class="podcast">
+<audio controls preload="{{ .Site.Params.Podcast.preload | default "metadata" }}"><source src="{{ $src }}" type="audio/mpeg"></audio>
+<figcaption><a href="{{ $src }}">{{ .Title }}</a></figcaption>
+</figure>
+{{ with .Params.podcast.image }}
+{{ $resource := resources.Get .src }}{{ $size := "250x" }}{{ with .width }}{{ $size = (add (string .) "x") }}{{ end }}{{ $image := $resource.Resize $size -}}
+<figure class="image {{ .class | default "right" }}"><img src="{{ $image.RelPermalink }}" width="{{ .width | default "250" }}" alt="{{ .alt }}"></figure>
+{{ end -}}
