@@ -3,12 +3,12 @@
 <ul class="navbar">
 {{ if .IsTranslated -}}
 {{ range .Translations }}
-<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Site.Language.Params.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
 {{ end -}}
 {{ else -}}
 {{ range .Site.Languages -}}
 {{ if ne $.Site.Language.Lang .Lang }}
-<li><a rel="alternate" href="/{{ .Lang }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Params.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
 {{ end -}}
 {{ end -}}
 {{ end -}}

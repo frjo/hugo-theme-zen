@@ -165,7 +165,7 @@ The site will work without setting any of the podcast parameters but your podcas
 
 English and Swedish translations are included and you can easily add more to the `i18n` site directory.
 
-A language selector will be included on sites with more than one language. Add a `LanguageName` parameter to your language configuration, this is what will be displayed in the selector.
+A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
 The language selector will link to a translation of the current page if it exist and to the front page if it does not.
 
@@ -173,12 +173,10 @@ The language selector will link to a translation of the current page if it exist
 languages:
   sv:
     weight: 1
-    params:
-      LanguageName: "Svenska"
+    languageName: "Svenska"
   en:
     weight: 2
-    params:
-      LanguageName: "English"
+    languageName: "English"
 ```
 
 
