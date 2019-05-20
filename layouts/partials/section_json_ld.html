@@ -2,28 +2,28 @@
   {
     "@context": "http://schema.org",
     "@type": "WebSite",
-    "url" : "{{ .Permalink }}",
-    "name": {{ .Title | jsonify }},
+    "url" : {{ .Permalink }},
+    "name": "{{ .Title }}",
     {{ with $.Param "description" -}}
-    "description": {{ . | jsonify }},
+    "description": "{{ . }}",
     {{ end -}}
     {{ with $.Param "image" -}}
-    "image" : "{{ . | absURL }}",
+    "image" : {{ . | absURL }},
     {{ end -}}
     {{ with $.Param "author" -}}
     "author": {
       "@type": "Person",
-      "name": {{ . | jsonify }}
+      "name": "{{ . }}"
     },
     {{ end -}}
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "{{ .Site.BaseURL }}"
+      "@id": {{ .Site.BaseURL }}
     },
     "publisher": {
       "@type": "Organization",
-      "name": {{ .Site.Title | jsonify }},
-      "url": "{{ .Site.BaseURL }}"
+      "name": "{{ .Site.Title }}",
+      "url": {{ .Site.BaseURL }}
     }
   }
 </script>
