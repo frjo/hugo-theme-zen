@@ -33,6 +33,21 @@ This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme
 * Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
 
 
+## Installation
+
+You can download and unpack the theme manually from Github but it's easier to use git to clone the repo.
+
+```
+$ git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
+```
+
+If you use git to version control your site, highly recommended, it's best to add the zen theme as a submodule.
+
+```
+git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
+```
+
+
 ## Performance
 
 Performance should be excellent.
@@ -68,16 +83,6 @@ Some performance tools will complain about to many files (js and css files are n
 ## The mobile menu
 
 ![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil_menu.png)
-
-
-## Installation
-
-```
-$ cd themes
-$ git clone https://github.com/frjo/hugo-theme-zen.git zen
-```
-
-[Hugo - Installing Hugo](https://gohugo.io/getting-started/installing/)
 
 
 ## Customise layouts
