@@ -1,5 +1,6 @@
 {{ .Hugo.Generator }}
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 {{ with .Site.Params.piwikTrackerUrl }}<link rel="dns-prefetch" href="//{{ . }}">{{ end }}
+{{ with $.Param "microusername" }}<link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}">
