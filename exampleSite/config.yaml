@@ -28,11 +28,9 @@ params:
   feedlinks: true
   footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen)."
   icon: "apple-touch-icon-180.png"
-  image: "xdeb-org.jpg"
+  image: "apple-touch-icon-180.png"
   imageMaxWidth: 400
   jquery: true
-  languageDir: "ltr"
-  logo: false
   mobileMenu: true
   poweredby: false
   search: true
