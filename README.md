@@ -159,10 +159,13 @@ params:
   piwikSiteId:              # Matamo site id
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   poweredby: true           # Show powered by hugo in footer
+  realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
+  safariPinnedColor:        # Hex color value, used in meta tags, default "#000000".
   search: true              # Site search with DuckDuckGo.
   searchSize: 20            # Search field size, default 20.
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
+  themeColor:               # Hex color value, used in meta tags, default "#ffffff".
 
   podcast:
     title:                  # * Feed title, defaults to site title (iTunes).
@@ -190,6 +193,7 @@ The site will work without setting any of the podcast parameters but your podcas
 
 ## Customise
 
+
 ### Logo
 
 Place your logo at `static/images/logo.png`. If you don't provide a logo, then the default theme logo will be used.
@@ -198,6 +202,8 @@ Place your logo at `static/images/logo.png`. If you don't provide a logo, then t
 ### Favicons
 
 Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`.
+
+Then set the "realfavicongenerator" param to true to add the needed meta tags. Also good to set the "themeColor" and "safariPinnedColor" params to correct colours.
 
 
 ### Layouts
