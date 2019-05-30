@@ -6,7 +6,27 @@ It uses HTML5 with a modern CSS grid and flex layout. Recent versions of all the
 
 Sass is processed with Hugo pipes that was added in Hugo 0.46. To make using npm optional I have added the stylesheets from the excellent sass plugin [typey](https://www.npmjs.com/package/typey) to the theme directly.
 
-This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme by [JohnAlbin](https://www.drupal.org/u/johnalbin), a very popular base theme for Drupal.
+
+## Table of contents
+
+* [Features](#features)
+* [Installation](#installation)
+* [Updating](#updating)
+* [Run example site](#run-example-site)
+* [Performance](#performance)
+* [Sites using the Hugo Zen theme](#sites-using-the-hugo-zen-theme)
+* [Screenshots](#screenshots)
+* [Configuration](#configuration)
+* [Customise](#customise)
+* [Multilingual](#multilingual)
+* [Contact form](#contact-form)
+* [Dates](#dates)
+* [Podcast](#podcast)
+* [Shortcodes](#shortcodes)
+* [Choose between using jQuery or Umbrella JS](#choose-between-using-jquery-or-umbrella-js)
+* [Use Gulp to lint Sass and JavaScript](#use-gulp-to-lint-sass-and-javascript)
+* [Getting help](#getting-help)
+* [Credits](#credits)
 
 
 ## Features
@@ -37,14 +57,36 @@ This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme
 
 You can download and unpack the theme manually from Github but it's easier to use git to clone the repo.
 
+From the root of your site:
+
 ```
 $ git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
 If you use git to version control your site, highly recommended, it's best to add the zen theme as a submodule.
 
+From the root of your site:
+
 ```
 git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
+```
+
+
+## Updating
+
+From the root of your site:
+
+```
+git submodule update --remote --merge
+```
+
+
+## Run example site
+
+From the root of `themes/zen/exampleSite`:
+
+```
+hugo server --themesDir ../..
 ```
 
 
@@ -70,46 +112,26 @@ Some performance tools will complain about to many files (js and css files are n
 * [xdeb.net](https://xdeb.net/)
 
 
-## On the large screen
+## Screenshots
+
+### On the large screen
 
 ![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn.png)
 
 
-## On the small screen
+### On the small screen
 
 ![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
 
 
-## The mobile menu
+### The mobile menu
 
 ![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil_menu.png)
 
 
-## Customise layouts
+## Configuration
 
-To customise a layout included in the zen theme, copy it to the root layout directory and edit it there. Make sure to maintain the directory structure inside the layouts directory. 
-
-Add any new layouts to the root layout directory as well. This way they will not be overwritten when updating the theme.
-
-
-## Customise styles and scripts
-
-Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
-
-To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/sass directory.
-
-The default styles in "_zen.scss" are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
-
-By default the sass files are built for production, compressed with fingerprint. By setting the Hugo enviroment variable to "dev" they will instead be nested with sourcemaps.
-
-```
-§ hugo serve watch --environment=dev
-```
-
-
-## config.yaml example
-
-All the "params" are optional.
+Configurations parameters for the sites config file, in yaml format. All the "params" are optional.
 
 ```
 baseurl: "https://example.org/"
@@ -166,6 +188,40 @@ params:
 The site will work without setting any of the podcast parameters but your podcast feed will not be accepted by iTunes. At a minimum you need to set the first four, title, description, image and category name. Read more in the podcast section below.
 
 
+## Customise
+
+### Logo
+
+Place your logo at `static/images/logo.png`. If you don't provide a logo, then the default theme logo will be used.
+
+
+### Favicons
+
+Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`.
+
+
+### Layouts
+
+To customise a layout included in the zen theme, copy it to the root layout directory and edit it there. Make sure to maintain the directory structure inside the layouts directory. 
+
+Add any new layouts to the root layout directory as well. This way they will not be overwritten when updating the theme.
+
+
+### Styles and scripts
+
+Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
+
+To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/sass directory.
+
+The default styles in "_zen.scss" are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
+
+By default the sass files are built for production, compressed with fingerprint. By setting the Hugo enviroment variable to "dev" they will instead be nested with sourcemaps.
+
+```
+§ hugo serve watch --environment=dev
+```
+
+
 ## Multilingual
 
 English and Swedish translations are included and you can easily add more to the `i18n` site directory.
@@ -216,7 +272,6 @@ The Zen theme supports podcasting.
 * RSS feed with all the needed iTunes tags.
 * Single and full layouts with HTML 5 audio player.
 * Archetype with required parameters.
-
 
 Here follow all the possible podcast frontmatter parameters. Only the first two is mandatory and are in the podcast archetype.
 
@@ -403,16 +458,13 @@ To run the default gulp task, type:
         gulp watch
 
 
-## Create a zen subtheme
+## Getting help
 
-Since Hugo 0.42 there is sub them support via [Theme Components](https://gohugo.io/themes/theme-components/). A nice feature if you want to extend an existing theme, like zen.
+If you run into an issue that isn't answered by this documentation or the [`exampleSite`](https://github.com/frjo/hugo-theme-zen/tree/master/exampleSite), then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132). Feel free to tag me in your question, my forum username is [@frjo](https://discourse.gohugo.io/u/frjo/summary).
 
-If all you want is customise layouts, styles and scripts for a site it's easier to copy the needed files to the root layout and assets directories and edit them there. See instructions above.
 
-The included "create_sub_theme.sh" script makes it easy to get started on a sub theme. Navigate to the theme directory where you have placed the zen base theme and run the script like this.
+## Credits
 
-```
-$ ./zen/create_sub_theme.sh
-```
+This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme by [JohnAlbin](https://www.drupal.org/u/johnalbin), a very popular base theme for Drupal.
 
-Enter a name for your sub theme when asked for. In the site config file add your sub theme name first and "zen" after it. Hugo will now first look in the sub theme for files and if they are not there look in the zen base theme.
+Thanks to the [Cupper Hugo theme](https://github.com/zwbetz-gh/cupper-hugo-theme/) for a really good Readme, have copied a lot from it.
