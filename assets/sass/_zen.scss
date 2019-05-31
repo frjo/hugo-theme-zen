@@ -161,8 +161,6 @@ article {
 }
 
 figure {
-  margin: 0;
-
   &.image {
     figcaption {
       @include respond-to(s) {

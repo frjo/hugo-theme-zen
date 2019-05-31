@@ -41,6 +41,7 @@ blockquote {
 dl,
 ol,
 ul {
+  // Add vertical rhythm margins.
   @include margin(1 0);
 }
 
@@ -80,7 +81,8 @@ ul {
 // caption of the figure.
 
 figure {
-  // Add your styles.
+  // Add vertical rhythm margins.
+  @include margin(1 0);
 }
 
 figcaption {
