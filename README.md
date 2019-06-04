@@ -148,7 +148,7 @@ params:
   favicon: ""               # Relative path to favicon in json feed, no leading slash.
   feedlinks: true           # Show feed links in the footer.
   footer: "A [example.org](https://example.org/) production."
-  icon: ""                  # Relative path to icon in json feed, no leading slash.
+  icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.
   jquery: true              # Add jQuery
