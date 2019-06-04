@@ -2,11 +2,11 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "{{ .Title }}",
+    "headline": {{ .Title }},
     "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" }},
     "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
     "url" : {{ .Permalink }},
-    "description": {{ with (.Description | default (replaceRE "\n" " " .Summary)) }}"{{ . }}"{{ end }},
+    "description": {{ with (.Description | default (replaceRE "\n" " " .Summary)) }}{{ . }}{{ end }},
     {{ with $.Param "image" -}}
     "image" : {{ . | absURL }},
     {{ end -}}
@@ -16,7 +16,7 @@
     {{ with $.Param "author" -}}
     "author": {
       "@type": "Person",
-      "name": "{{ . }}"
+      "name": {{ . }}
     },
     {{ end -}}
     "mainEntityOfPage": {
@@ -25,7 +25,7 @@
     },
     "publisher": {
       "@type": "Organization",
-      "name": "{{ .Site.Title  }}",
+      "name": {{ .Site.Title  }},
       "url": {{ .Site.BaseURL }}
     }
   }

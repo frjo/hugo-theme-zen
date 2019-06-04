@@ -3,9 +3,9 @@
     "@context": "http://schema.org",
     "@type": "WebSite",
     "url" : {{ .Permalink }},
-    "name": "{{ .Title }}",
+    "name": {{ .Title }},
     {{ with $.Param "description" -}}
-    "description": "{{ . }}",
+    "description": {{ . }},
     {{ end -}}
     {{ with $.Param "image" -}}
     "image" : {{ . | absURL }},
@@ -13,7 +13,7 @@
     {{ with $.Param "author" -}}
     "author": {
       "@type": "Person",
-      "name": "{{ . }}"
+      "name": {{ . }}
     },
     {{ end -}}
     "mainEntityOfPage": {
@@ -22,7 +22,7 @@
     },
     "publisher": {
       "@type": "Organization",
-      "name": "{{ .Site.Title }}",
+      "name": {{ .Site.Title }},
       "url": {{ .Site.BaseURL }}
     }
   }
