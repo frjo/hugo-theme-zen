@@ -9,9 +9,9 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 
 ## Table of contents
 
+* [Features](#features)
 * [Demo](#demo)
 * [Minimum Hugo version](#minimum-hugo-version)
-* [Features](#features)
 * [Installation](#installation)
 * [Updating](#updating)
 * [Run example site](#run-example-site)
