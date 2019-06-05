@@ -1,4 +1,4 @@
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <meta name="msapplication-TileColor" content="{{ $.Param "themecolor" | default "#ffffff" }}">
 <meta name="theme-color" content="{{ $.Param "themecolor" | default "#ffffff" }}">
