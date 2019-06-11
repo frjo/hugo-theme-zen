@@ -26,13 +26,13 @@
     "publisher": {
       "@type": "Organization",
       "name": {{ .Site.Title  }},
-      "url": {{ .Site.BaseURL }},
       {{ with $.Param "icon" -}}
       "logo" : {
         "@type": "ImageObject",
         "url": {{ . | absURL }}
-      }
+      },
       {{ end -}}
+      "url": {{ .Site.BaseURL }}
     }
   }
 </script>
