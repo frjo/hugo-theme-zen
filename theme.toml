@@ -1,5 +1,5 @@
 name = "Zen"
-description = "A solid base for your custom Hugo theme with libsass and gulp support."
+description = "A solid base for your custom Hugo theme with pipes support for Sass and Javascript."
 homepage = "https://github.com/frjo/hugo-theme-zen"
 license = "GPLv2"
 licenselink = "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
