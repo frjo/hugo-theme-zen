@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
-{{ block "meta" . }}{{ end }}
-{{- partial "meta.html" . -}}
-{{- partialCached "styles.html" . -}}
-{{ block "header" . }}{{ end }}
-{{ partial "scripts.html" . -}}
+{{ partial "meta.html" . }}
+{{ partialCached "styles.html" . }}
+{{- block "head" . }}{{ end }}
+{{ partial "meta_json_ld.html" . }}
+{{ partial "scripts.html" . }}
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "matomo.html" . }}{{ end -}}
 </head>
 
@@ -20,8 +20,8 @@
 <a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
 <div class="region header__region">
-{{ if .Site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end }}
-{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}
+{{ if .Site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end -}}
+{{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end -}}
 </div>
 </header>
 
@@ -29,7 +29,7 @@
 
 {{ block "main" . }}{{ end }}
 
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . }}{{ end -}}
 
 <footer class="footer layout__footer">
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}

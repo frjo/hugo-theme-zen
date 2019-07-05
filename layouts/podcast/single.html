@@ -1,12 +1,3 @@
-{{ define "meta" }}
-{{- partial "single_meta.html" . -}}
-{{- partial "opengraph_meta.html" . -}}
-{{ end }}
-
-{{ define "header" }}
-{{- partial "single_json_ld.html" . -}}
-{{ end }}
-
 {{ define "main" -}}
 <main class="main layout__main">
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
