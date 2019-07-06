@@ -1,4 +1,3 @@
-{{ $home := relLangURL "/" -}}
 {{ $currentSection := .Section -}}
 {{ $currentID := "" -}}
 {{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
@@ -13,13 +12,11 @@
     <nav class="mobile-nav__main-menu">
     <h2 class="visually-hidden">{{ i18n "menu_title" }}</h2>
     <ul class="mobile-nav__navbar">
-    <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ $home }}">{{ i18n "menu_home" }}</a></li>
-    {{ range where .Site.Pages "Section" "" -}}
-    {{ if ne .RelPermalink (string $home) -}}
+    {{ with .Site.Home }}<li><a class="{{ if eq $currentID .File.UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "menu_home" }}</a></li>{{ end }}
+    {{ range where .Site.RegularPages "Section" "" -}}
     <li><a class="{{ if eq $currentID .File.UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end -}}
-    {{ end -}}
-    {{ range $.Site.Home.Sections -}}
+    {{ range .Site.Sections -}}
     <li><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end -}}
     </ul>

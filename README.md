@@ -225,6 +225,15 @@ To customise a layout included in the zen theme, copy it to the root layout dire
 Add any new layouts to the root layout directory as well. This way they will not be overwritten when updating the theme.
 
 
+#### Menu and sidebar layouts
+
+The default menu will automatically have entries for the home page, each root page and each section, in that order.
+
+If the default sidebar is activated it will display each section with all its pages listed below.
+
+They are set up in `layouts/partials/menu.html`, `layouts/partials/mobilmenu.html` and `layouts/partials/sidebar.html`. The default works nicely for small sites but in many cases they will need to be customised.
+
+
 ### Styles and scripts
 
 Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.

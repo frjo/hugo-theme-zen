@@ -2,7 +2,7 @@
 {{ $currentID := "" -}}
 {{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
 <aside class="sidebar layout__second-sidebar">
-{{ range $.Site.Home.Sections -}}
+{{ range .Site.Sections -}}
 <section>
 <h4 class="menu"><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
 <ul class="menu">
