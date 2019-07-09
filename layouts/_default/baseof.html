@@ -9,7 +9,7 @@
 {{- block "head" . }}{{ end }}
 {{ partial "meta_json_ld.html" . }}
 {{ partial "scripts.html" . }}
-{{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID }}{{ partialCached "matomo.html" . }}{{ end -}}
+{{ partialCached "matomo.html" . }}
 </head>
 
 <body>
