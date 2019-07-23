@@ -5,12 +5,12 @@
 {{ $mobile_style := resources.Get "sass/mobile.scss" | toCSS $mobile_options | fingerprint -}}
 {{ $print_style := resources.Get "sass/print.scss" | toCSS $print_options | fingerprint -}}
 {{ if eq hugo.Environment "development" -}}
-{{ $main_options = (dict "targetPath" "css/styles.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
-{{ $mobile_options = (dict "targetPath" "css/mobile.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
-{{ $print_options = (dict "targetPath" "css/print.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
-{{ $main_style = resources.Get "sass/styles.scss" | toCSS $main_options -}}
-{{ $mobile_style = resources.Get "sass/mobile.scss" | toCSS $mobile_options -}}
-{{ $print_style = resources.Get "sass/print.scss" | toCSS $print_options -}}
+  {{ $main_options = (dict "targetPath" "css/styles.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
+  {{ $mobile_options = (dict "targetPath" "css/mobile.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
+  {{ $print_options = (dict "targetPath" "css/print.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
+  {{ $main_style = resources.Get "sass/styles.scss" | toCSS $main_options -}}
+  {{ $mobile_style = resources.Get "sass/mobile.scss" | toCSS $mobile_options -}}
+  {{ $print_style = resources.Get "sass/print.scss" | toCSS $print_options -}}
 {{ end -}}
 {{ if $.Param "mobilemenu" -}}
 <link rel="stylesheet" href="{{ $mobile_style.RelPermalink }}" media="screen">
