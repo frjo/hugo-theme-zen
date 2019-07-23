@@ -117,6 +117,7 @@ Some performance tools will complain about to many files (js and css files are n
 
 ## Sites using the Hugo Zen theme
 
+* [BypassCensorship](https://www.bypasscensorship.org/) (multilingual)
 * [Combonetwork development](https://combonet.se/) (multilingual)
 * [Drejargården](https://www.drejargarden.se/)
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
