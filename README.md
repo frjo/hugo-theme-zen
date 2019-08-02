@@ -241,16 +241,22 @@ Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
 
 To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/sass directory.
 
-The default styles in "_zen.scss" are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
+The default styles in `assets/sass/_zen.scss` are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
 
-The sass files are be default built for production, compressed with fingerprint.
+The sass files are by default built for production, compressed with fingerprint.
 
 By setting the Hugo environment variable to "development" (default when running `hugo server`) they will instead be nested with sourcemaps.
+
+### CSS grid for layout
+
+Modern CSS grid is the easiest and cleanest way to layout your pages.
+
+The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be done by just reordering "grid-template-rows". 
 
 
 ## Multilingual
 
-English and Swedish translations are included and you can easily add more to the `i18n` site directory.
+English, French, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. French and Portugis are contributed by users.
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
