@@ -210,6 +210,13 @@ The site will work without setting any of the podcast parameters but your podcas
 ## Customise
 
 
+### Front page
+
+This is a part that almost everyone will like to customise in some manner. The template file is `layouts/index.html`. By default it will include any text you put in `content/_index.md` and below that list the posts in "mainSections" as summaries.
+
+If you do not specify any sections in the "mainSections" param (see configuration above) it will list the section with the most posts. If you do not want to list anything, set it but leave the value empty.
+
+
 ### Logo
 
 Place your logo at `static/images/logo.png`. If you don't provide a logo, then the default theme logo will be used.
@@ -243,6 +250,8 @@ They are set up in `layouts/partials/menu.html`, `layouts/partials/mobilmenu.htm
 Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
 
 To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/sass directory.
+
+There is an `assets/sass/_custom.scss` file meant for your custom styles. Copy it to the root `assets/sass/_custom.scss` to use it.
 
 The default styles in `assets/sass/_zen.scss` are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
 
