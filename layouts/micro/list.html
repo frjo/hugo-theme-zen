@@ -3,7 +3,7 @@
 <h1 class="title">Micro posts</h1>
 <p class="micro__follow"><a href="https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}">{{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }}</a></p>
 
-{{ $paginator := .Paginate (.Data.Pages) -}}
+{{ $paginator := .Paginate (.Pages) -}}
 {{ range $paginator.Pages -}}
 {{ .Render "summary"}}
 {{ end -}}

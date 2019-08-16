@@ -1,4 +1,4 @@
-{{ $list := .Data.Pages -}}
+{{ $list := .Pages -}}
 {{ $length := (len $list) -}}
 {
     "version" : "https://jsonfeed.org/version/1",

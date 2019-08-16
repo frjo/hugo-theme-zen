@@ -7,5 +7,11 @@
 {{ .Content }}
 </div>
 </article>
+
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ range $pages -}}
+{{ .Render "summary"}}
+{{ end -}}
+
 </main>
 {{ end }}

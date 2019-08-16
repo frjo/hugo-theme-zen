@@ -39,7 +39,7 @@
     {{ with .Site.Params.Podcast.Complete }}<itunes:complete>{{ . }}</itunes:complete>{{ end }}
     {{ with .Site.Params.Podcast.NewFeed }}<itunes:new-feed-url>{{ . }}</itunes:new-feed-url>{{ end }}
     <itunes:explicit>{{ if .Site.Params.Podcast.Explicit }}true{{ else }}false{{ end }}</itunes:explicit>
-    {{ range .Data.Pages }}
+    {{ range .Pages }}
     <item>
       <title>{{ .Title }}</title>
       <itunes:title>{{ .Title }}</itunes:title>

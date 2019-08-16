@@ -1,7 +1,7 @@
 {{ define "main" -}}
 <main class="main layout__main">
 <h1 class="title">{{ .Title }}</h1>
-{{ $paginator := .Paginate (.Data.Pages) -}}
+{{ $paginator := .Paginate (.Pages) -}}
 {{ range $paginator.Pages -}}
 {{ .Render "summary"}}
 {{ end -}}
