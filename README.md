@@ -167,6 +167,9 @@ params:
   jquery: true              # Add jQuery
   languageDir: ""           # Set ltr or rtl, defaults to ltr.
   logo: false               # Turn off the logo.
+  mainSections:             # The sections you want to have listed on the front page.
+    - "section1"            # Default to the section with most content if not set.
+    - "section2"            # Set to empty if no section should be listed.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens.
   piwikSiteId:              # Matamo site id
