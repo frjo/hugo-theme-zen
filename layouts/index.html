@@ -2,6 +2,7 @@
 
 {{ define "main" -}}
 <main class="main layout__main">
+{{ .Site.Params.Description }}
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <div class="content">
 {{ .Content }}
