@@ -2,9 +2,19 @@
 {{ $currentID := "" -}}
 {{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
 <aside class="sidebar layout__second-sidebar">
+<section>
+<h4 class="menu">{{ i18n "taxo_tags" }}</h4>
+<ul class="menu">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <li><a href="{{ .Permalink }}">{{ $name | humanize }}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>
+</section>
 {{ range .Site.Sections -}}
 <section>
-<h4 class="menu"><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+<h4 class="menu"><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ i18n .Title }}</a></h4>
 <ul class="menu">
 {{ range .Pages -}}
 <li><a class="{{ if eq $currentID .File.UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
