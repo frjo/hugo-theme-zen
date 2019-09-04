@@ -6,6 +6,8 @@ It uses HTML5 with a modern CSS grid and flex layout. Recent versions of all the
 
 Sass is processed with Hugo pipes. To make using npm optional I have added the stylesheets from the excellent sass plugin [typey](https://www.npmjs.com/package/typey) directly to the theme.
 
+![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/lighthouse_report.png)
+
 
 ## Table of contents
 
