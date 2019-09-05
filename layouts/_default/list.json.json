@@ -1,5 +1,11 @@
-{{ $list := .Pages -}}
-{{ $length := (len $list) -}}
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := $pctx.RegularPages -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{ $length := (len $pages) -}}
 {
     "version" : "https://jsonfeed.org/version/1",
     "title" : "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ .Site.Title }}{{ end }}",
@@ -22,7 +28,7 @@
     },
     {{ end -}}
     "items" : [
-    {{ range $index, $element := $list -}}
+    {{ range $index, $element := $pages -}}
     {
         "title" : {{ .Title | jsonify }},
         "date_published" : "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
