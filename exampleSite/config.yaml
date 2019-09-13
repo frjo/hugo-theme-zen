@@ -4,7 +4,6 @@ baseURL: "https://example.org/"
 theme: "zen"
 languageCode: "en-GB"
 defaultContentLanguage: "en"
-metaDataFormat: "yaml"
 pluralizelisttitles: false
 removePathAccents: true
 paginate: 10
