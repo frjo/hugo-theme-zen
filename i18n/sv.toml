@@ -16,6 +16,12 @@ other = "Föregående"
 [taxo_tags]
 other = "Taggar"
 
+[last_mod]
+other = "Senast ändrad:"
+
+[created]
+other = "Skapad:"
+
 [search_placeholder]
 other = "Sök"
 
