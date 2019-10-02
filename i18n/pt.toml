@@ -16,6 +16,12 @@ other = "Anterior"
 [taxo_tags]
 other = "Tags"
 
+[last_mod]
+other = "Última modificação:"
+
+[created]
+other = "Criado:"
+
 [search_placeholder]
 other = "Procurar"
 

@@ -1,0 +1,89 @@
+[menu_title]
+other = "Hauptmenü"
+
+[menu_home]
+other = "Home"
+
+[menu_mobile]
+other = "Menü"
+
+[pager_next]
+other = "Weiter"
+
+[pager_prev]
+other = "Zurück"
+
+[taxo_tags]
+other = "Tags"
+
+[last_mod]
+other = "Zuletzt geändert:"
+
+[created]
+other = "Erstellt:"
+
+[search_placeholder]
+other = "Suche"
+
+[search_title]
+other = "Suchbegriffe hier eingeben."
+
+[string_at]
+other = "auf"
+
+[string_by]
+other = "von"
+
+[string_follow]
+other = "folgen"
+
+[string_in]
+other = "in"
+
+[string_on]
+other = "auf"
+
+[string_recent_content]
+other = "Aktuelle Inhalte"
+
+[contact_js]
+other = "Javascript muss aktiviert sein um dieses Kontaktformular zu nutzen."
+
+[contact_submitted]
+other = "Die Nachricht wurde versendet."
+
+[contact_error]
+other = "Beim Senden der Nachricht ist ein Fehler aufgetreten."
+
+[contact_name]
+other = "Name"
+
+[contact_name_placeholder]
+other = "Dein Name"
+
+[contact_mail]
+other = "E-Mail Adresse"
+
+[contact_mail_placeholder]
+other = "Deine E-Mail Adresse"
+
+[contact_subject]
+other = "Betreff"
+
+[contact_subject_placeholder]
+other = "Eine kurze Beschreibung"
+
+[contact_message]
+other = "Nachricht"
+
+[contact_message_placeholder]
+other = "Hier den Nachrichtentext eingeben…"
+
+[contact_submit]
+other = "Nachricht senden"
+
+[contact_honypot]
+other = "Überspringen, wenn du ein Mensch bist"
+
+[lang_select_title]
+other = "Sprachauswahl"
