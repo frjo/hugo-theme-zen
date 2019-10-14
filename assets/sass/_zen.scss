@@ -121,9 +121,14 @@ article {
     }
   }
 
+  .content-dates {
+    color: $text-meta;
+    text-align: right;
+  }
+
   code {
     @include type-layout(xs, 1);
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     @include respond-to(xxl) {
       @include type-layout(xs-2, 1);
@@ -140,8 +145,17 @@ article {
     max-height: 300px;
     max-width: 90vw;
 
+    &.chroma {
+      max-height: initial;
+      overflow-x: scroll;
+    }
+
     @include respond-to(s) {
       max-width: 600px;
+
+      &.chroma {
+        max-width: initial;
+      }
     }
 
     & > code {
@@ -150,9 +164,8 @@ article {
     }
   }
 
-  .content-dates {
-    color: $text-meta;
-    text-align: right;
+  .js-clipboard-button {
+    display: block;
   }
 }
 
@@ -279,10 +292,6 @@ figure {
     &:not(:placeholder-shown):invalid {
       background-color: $error-bg;
     }
-  }
-
-  button {
-    display: block;
   }
 }
 
