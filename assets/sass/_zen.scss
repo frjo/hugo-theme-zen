@@ -150,14 +150,6 @@ article {
       overflow-x: scroll;
     }
 
-    @include respond-to(s) {
-      max-width: 600px;
-
-      &.chroma {
-        max-width: initial;
-      }
-    }
-
     & > code {
       display: inline-block;
       white-space: pre;
