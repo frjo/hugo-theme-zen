@@ -762,11 +762,6 @@ article pre {
   article pre.chroma {
     max-height: initial;
     overflow-x: scroll; }
-  @media (min-width: 666px) {
-    article pre {
-      max-width: 600px; }
-      article pre.chroma {
-        max-width: initial; } }
   article pre > code {
     display: inline-block;
     white-space: pre; }
