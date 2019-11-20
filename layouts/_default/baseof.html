@@ -29,7 +29,7 @@
 
 {{ block "main" . }}{{ end }}
 
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . }}{{ end -}}
+{{ if $.Param "sidebar" }}{{ partial "sidebar.html" . }}{{ end -}}
 
 <footer class="footer layout__footer">
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
