@@ -276,6 +276,8 @@ A language selector will be included on sites with more than one language. Add `
 
 The language selector will link to a translation of the current page if it exist and to the front page if it does not.
 
+For "rtl" languages add a `dir` parameter to the language configuration. If not added it will default to "ltr".
+
 ```
 languages:
   sv:
@@ -284,6 +286,11 @@ languages:
   en:
     weight: 2
     languageName: "English"
+  ar:
+    weight: 3
+    languageName: "العربية"
+    params:
+      dir: "rtl"
 ```
 
 
