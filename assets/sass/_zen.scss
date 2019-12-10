@@ -86,11 +86,6 @@ article {
 
   & > header {
     color: $text-meta;
-
-    p {
-      @include margin(.2 0);
-    }
-
   }
 
   .submitted,
@@ -103,20 +98,14 @@ article {
 
   .tags {
     ul {
+      display: inline-flex;
+      flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
 
-    ul,
-    li {
-      display: inline;
-    }
-
     li {
       list-style-type: none;
-    }
-
-    a {
       @include padding-right(.2);
     }
   }
