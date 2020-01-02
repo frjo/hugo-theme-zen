@@ -4,10 +4,10 @@
 <aside class="sidebar layout__second-sidebar">
 {{ range .Site.Sections -}}
 <section>
-<h4 class="menu"><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+<h4 class="menu"><a class="{{ if eq $currentSection .Section }}active" aria-current="page{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
 <ul class="menu">
 {{ range .Pages -}}
-<li><a class="{{ if eq $currentID .File.UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+<li><a class="{{ if eq $currentID .File.UniqueID }}active" aria-current="page{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 {{ end -}}
 </ul>
 </section>

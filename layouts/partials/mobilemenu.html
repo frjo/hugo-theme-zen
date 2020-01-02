@@ -12,12 +12,12 @@
     <nav class="mobile-nav__main-menu">
     <h2 class="visually-hidden">{{ i18n "menu_title" }}</h2>
     <ul class="mobile-nav__navbar">
-    {{ with .Site.Home }}<li><a class="{{ if eq $currentID .File.UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "menu_home" }}</a></li>{{ end }}
+    {{ with .Site.Home }}<li><a class="{{ if eq $currentID .File.UniqueID }}active" aria-current="page{{ end }}" href="{{ .RelPermalink }}">{{ i18n "menu_home" }}</a></li>{{ end }}
     {{ range where .Site.RegularPages "Section" "" -}}
-    <li><a class="{{ if eq $currentID .File.UniqueID }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li><a class="{{ if eq $currentID .File.UniqueID }}active" aria-current="page{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end -}}
     {{ range .Site.Sections -}}
-    <li><a class="{{ if eq $currentSection .Section }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li><a class="{{ if eq $currentSection .Section }}active" aria-current="page{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end -}}
     </ul>
     </nav>
