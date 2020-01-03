@@ -1,15 +1,26 @@
-{{ $currentSection := .Section -}}
-{{ $currentID := "" -}}
-{{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
 <nav class="main-menu layout__navigation">
 <h2 class="visually-hidden">{{ i18n "menu_title" }}</h2>
 <ul class="navbar">
+{{ if .Site.Menus.main -}}
+
+{{ $currentPage := . -}}
+{{ range .Site.Menus.main -}}
+<li><a href="{{ .URL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+{{ end -}}
+
+{{ else -}}
+
+{{ $currentSection := .Section -}}
+{{ $currentID := "" -}}
+{{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
 {{ with .Site.Home }}<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} class="active" aria-current="page"{{ end }}>{{ i18n "menu_home" }}</a></li>{{ end }}
 {{ range where .Site.RegularPages "Section" "" -}}
 <li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} class="active" aria-current="page"{{ end }}>{{ .Title }}</a></li>
 {{ end -}}
 {{ range .Site.Sections -}}
 <li><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} class="active" aria-current="page"{{ end }}>{{ .Title }}</a></li>
+{{ end -}}
+
 {{ end -}}
 </ul>
 </nav>
