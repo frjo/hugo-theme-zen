@@ -7,7 +7,7 @@
 <h4 class="menu"><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} class="active" aria-current="page"{{ end }}>{{ .Title }}</a></h4>
 <ul class="menu">
 {{ range .Pages -}}
-<li><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} class="active" aria-current="page"{{ end }}>{{ .Title }}</a></li>
+<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} class="active" aria-current="page"{{ end }}>{{ .Title }}</a></li>
 {{ end -}}
 </ul>
 </section>
