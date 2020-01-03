@@ -1,33 +1,37 @@
 {{ $maxwidth := .Site.Params.imageMaxWidth -}}
+{{ $realwidth := 0 -}}
+{{ $realheight := 0 -}}
+{{ $width := 0 -}}
+{{ $height := 0 -}}
 {{ with (imageConfig (add "/static/" (.Get "src"))) -}}
-    {{ $.Scratch.Set "realwidth" .Width -}}
-    {{ $.Scratch.Set "realheight" .Height -}}
-    {{ $.Scratch.Set "width" .Width -}}
-    {{ $.Scratch.Set "height" .Height -}}
+    {{ $realwidth = .Width -}}
+    {{ $realheight = .Height -}}
+    {{ $width = .Width -}}
+    {{ $height = .Height -}}
 {{ end -}}
 {{ if and (.Get "width") (.Get "height") -}}
-    {{ $.Scratch.Set "width" (int (.Get "width")) -}}
-    {{ $.Scratch.Set "height" (int (.Get "height")) -}}
+    {{ $width = (int (.Get "width")) -}}
+    {{ $height = (int (.Get "height")) -}}
 {{ else if (.Get "width") -}}
-    {{ $.Scratch.Set "width" (int (.Get "width")) -}}
-    {{ if lt ($.Scratch.Get "width") ($.Scratch.Get "realwidth") -}}
-        {{ $height := (mul ($.Scratch.Get "realheight") (div (add ($.Scratch.Get "width") 0.0) ($.Scratch.Get "realwidth"))) -}}
-        {{ $.Scratch.Set "height" (math.Round $height) -}}
+    {{ $width = (int (.Get "width")) -}}
+    {{ if lt ($width) ($realwidth) -}}
+        {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
+        {{ $height = (math.Round $height) -}}
     {{ end -}}
 {{ else if (.Get "height") -}}
-    {{ $.Scratch.Set "height" (int (.Get "height")) -}}
-    {{ if lt ($.Scratch.Get "height") ($.Scratch.Get "realheight") -}}
-        {{ $width := (mul ($.Scratch.Get "realwidth") (div (add ($.Scratch.Get "height") 0.0) ($.Scratch.Get "realheight"))) -}}
-        {{ $.Scratch.Set "width" (math.Round $width) -}}
+    {{ $height = (int (.Get "height")) -}}
+    {{ if lt ($height) ($realheight) -}}
+        {{ $width = (mul ($realwidth) (div (add ($height) 0.0) ($realheight))) -}}
+        {{ $width = (math.Round $width) -}}
     {{ end -}}
-{{ else if and $maxwidth (lt $maxwidth ($.Scratch.Get "width")) -}}
-    {{ $.Scratch.Set "width" $maxwidth -}}
-    {{ $height := (mul ($.Scratch.Get "realheight") (div (add ($.Scratch.Get "width") 0.0) ($.Scratch.Get "realwidth"))) -}}
-    {{ $.Scratch.Set "height" (math.Round $height) -}}
+{{ else if and ($maxwidth) (lt ($maxwidth) ($width)) -}}
+    {{ $width = ($maxwidth) -}}
+    {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
+    {{ $height = (math.Round $height) -}}
 {{ end -}}
 <figure class="image {{ .Get "class" | default "" }}">
 {{ with .Get "link" }}<a href="{{ . }}">{{ end -}}
-<img src="{{ .Get "src" | relURL }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $.Scratch.Get "width" }} width="{{ . }}"{{ end }}{{ with $.Scratch.Get "height" }} height="{{ . }}"{{ end }}>
+<img src="{{ .Get "src" | relURL }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{- if .Get "link" }}</a>{{ end }}
 {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
 <figcaption>{{ if isset .Params "title" }}
@@ -35,7 +39,7 @@
 {{ if or (.Get "caption") (.Get "attr") -}}
 <p>
 {{- .Get "caption" -}}
-{{ with .Get "attrlink" }} <a href="{{ . }}">{{ end }}{{ .Get "attr" }}{{ if .Get "attrlink" }}</a>{{ end -}}
+{{ with .Get "attrlink" }}<a href="{{ . }}">{{ end }}{{ .Get "attr" }}{{ if .Get "attrlink" }}</a>{{ end -}}
 </p>
 {{ end -}}
 </figcaption>
