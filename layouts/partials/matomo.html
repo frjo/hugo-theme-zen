@@ -1,14 +1,5 @@
 {{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID -}}
-<script>
-  var _paq = window._paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://{{ .Site.Params.piwikTrackerUrl }}/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '{{ .Site.Params.piwikSiteID }}']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
+{{ $script := resources.Get "js/tracking.js" | resources.ExecuteAsTemplate "js/tracking.js" . | minify | fingerprint -}}
+<script src="{{ $script.RelPermalink }}"></script>
+<script defer src="https://{{ .Site.Params.piwikTrackerUrl }}/matomo.js"></script>
 {{ end -}}
