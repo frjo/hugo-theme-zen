@@ -240,11 +240,11 @@ Add any new layouts to the root layout directory as well. This way they will not
 
 #### Menu and sidebar layouts
 
-The default menu will automatically have entries for the home page, each root page and each section, in that order.
+If a Hugo main menu is defined (.Sites.Menu.main) the menu template will use it to build a navigation menu. If not, the template will automatically add entries for the home page, each root page and each section, in that order. 
 
 If the default sidebar is activated it will display each section with all its pages listed below.
 
-They are set up in `layouts/partials/menu.html`, `layouts/partials/mobilmenu.html` and `layouts/partials/sidebar.html`. The default works nicely for small sites but in many cases they will need to be customised.
+They are set up in `layouts/partials/menu.html`, `layouts/partials/mobilmenu.html` and `layouts/partials/sidebar.html`.
 
 
 ### Styles and scripts
@@ -306,14 +306,14 @@ If you have a SPF record for your domain, make sure the web server is listed or 
 
 Two types of spam protection is implemented. The form can only be posted after the user have moved the mouse or pressed the tab or enter key. The form have a "honypot" field that is invisible to humans but not to most spam boots. If that field is filled in the mail will not be sent.
 
-Form validation is handeld by HTML5 and there is some CSS to make it look nice.
+Form validation is handled by HTML5 and there is some CSS to make it look nice.
 
 Javascript is used for spam protection and to display error/success messages.
 
 
 ## Dates
 
-If "lastmod" is set in the frontmatter on a post that value will be used in the "submitted" section. If not "date" is used.
+If "lastmod" is set in the frontmatter on a post that value will be used in the "submitted" section. If not, "date" is used.
 
 With "lastmod" set a date section will also appear at the bottom of post telling the reader the created and modification dates.
 
