@@ -88,6 +88,10 @@ article {
     color: $text-meta;
   }
 
+  .submitted {
+    margin-bottom: .5rem;
+  }
+
   .submitted,
   .tags {
     @include respond-to(l) {
