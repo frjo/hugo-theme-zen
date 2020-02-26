@@ -3,7 +3,7 @@
 <h2 class="hidden">{{ .Title }}</h2>
 <p><a href="{{ .RelPermalink }}">
 {{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
-<time class="modified-date" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format ($.Param "dateformat" | default "2 January, 2006") }}</time>
+<time class="created-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</time>
 </a></p>
 </header>
 <div class="content">

@@ -1,1 +1,1 @@
-<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> – <time class="modified-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</time></li>
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> – <time class="created-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</time></li>
