@@ -179,6 +179,11 @@ figure {
         display: block;
       }
 
+      &.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       &.left {
         @include padding(0 .5 .5 0);
         margin: 0;
