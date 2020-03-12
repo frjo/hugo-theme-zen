@@ -12,7 +12,7 @@
 {{ partialCached "matomo.html" . }}
 </head>
 
-<body>
+<body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}">
 <div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar-second{{ end }}">
 <header class="header layout__header">
 {{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ "/images/logo.png" | relURL }}" alt="Home" class="header__logo-image"></a>{{ end }}
