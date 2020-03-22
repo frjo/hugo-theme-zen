@@ -64,7 +64,7 @@ https://themes.gohugo.io/theme/hugo-theme-zen/
 
 ## Minimum Hugo version
 
-Hugo version 0.55.0 or higher is required.
+Hugo version 0.57.0 or higher is required.
 
 
 ## Installation
@@ -276,7 +276,7 @@ A language selector will be included on sites with more than one language. Add `
 
 The language selector will link to a translation of the current page if it exist and to the front page if it does not.
 
-For "rtl" languages add a `dir` parameter to the language configuration. If not added it will default to "ltr".
+For "rtl" languages add a `languageDirection` parameter (added in Hugo v0.67.1) to the language configuration. If not added it will default to "ltr".
 
 ```
 languages:
@@ -289,8 +289,7 @@ languages:
   ar:
     weight: 3
     languageName: "العربية"
-    params:
-      dir: "rtl"
+    languageDirection: "rtl"
 ```
 
 
