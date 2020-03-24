@@ -1,6 +1,0 @@
-{{ $domain := .Site.BaseURL | replaceRE "^https?://(www\\.)?([^/]+)/?" "$2" }}
-<form class="search-form" method="get" action="https://duckduckgo.com/" role="search">
-<input type="search" name="q" class="search-text" placeholder="{{ i18n "search_placeholder" }}" title="{{ i18n "search_title" }}" size="{{ $.Param "searchSize" | default "20" }}" maxlength="128">
-<input type="hidden" name="sites" value="{{ $domain }}">
-<input type="submit" value="DuckDuckGo Search" class="hidden">
-</form>

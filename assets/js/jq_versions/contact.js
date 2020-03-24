@@ -15,8 +15,6 @@
 
     // Display the hidden form.
     $contact_form.removeClass('hidden');
-    // Remove the "no javascript" messages
-    $('.contact-no-js').detach();
 
     // Wait for a mouse to move, indicating they are human.
     $('body').mousemove(function () {

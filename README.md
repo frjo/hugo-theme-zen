@@ -23,6 +23,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * [Configuration](#configuration)
 * [Customise](#customise)
 * [Multilingual](#multilingual)
+* [Search](#search)
 * [Contact form](#contact-form)
 * [Dates](#dates)
 * [Podcast](#podcast)
@@ -52,7 +53,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * Podcast
 * Responsive design
 * RSS and JSON feeds with full content
-* Search with DuckDuckGo
+* Search with FlexSearch.js
 * Sub theme support (Theme Components)
 * Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
 
@@ -179,8 +180,7 @@ params:
   poweredby: true           # Show powered by hugo in footer
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   safariPinnedColor:        # Hex color value, used in meta tags, default "#000000".
-  search: true              # Site search with DuckDuckGo.
-  searchSize: 20            # Search field size, default 20.
+  searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
@@ -291,6 +291,33 @@ languages:
     languageName: "العربية"
     languageDirection: "rtl"
 ```
+
+
+## Search
+
+Built in integration with the excellent [FlexSearch.js](https://github.com/nextapps-de/flexsearch). A fast full text search that reads a JSON file created by Hugo to index and search the site.
+
+Here is the three steps needed to create a search page.
+
+1. Add a new output format in your configuration file.
+    ```
+    outputFormats:
+      SearchIndex:
+        mediaType: "application/json"
+        baseName: "searchindex"
+        isPlainText: true
+        notAlternative: true
+    ```
+2. Add the new output format to output setting for "home".
+    ```
+    outputs:
+      home: ["HTML", "SearchIndex", "[other formats you need]"]
+    ```
+3. Add the shortcode `{{< search >}}` to a page. Also set `searchform: true` in the front matter for that page so the search and flexsearch js files gets loaded.
+
+Your search page will now have a search field where all the posts of the site can be searched.
+
+The only setting is "searchLimit" that defaults to 20.
 
 
 ## Contact form

@@ -253,12 +253,13 @@ figure {
 
 // Search
 
-.search-form {
-  @include padding(.5 0);
+.search-input {
+  @include margin(1 0);
 }
 
 .search-text {
   @include type-layout(l, 1);
+  max-width: 80%;
 }
 
 // Form

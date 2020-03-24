@@ -1,8 +1,8 @@
 {{ if $.Param "jquery" -}}
-{{ $jquery := resources.Get "js/jquery.slim.min.js" | fingerprint -}}
+{{ $jquery := resources.Get "js/lib/jquery.slim.min.js" | fingerprint -}}
 <script defer src="{{ $jquery.RelPermalink }}"></script>
 {{ end -}}
-{{ $umbrella := resources.Get "js/umbrella.min.js" | fingerprint -}}
+{{ $umbrella := resources.Get "js/lib/umbrella.min.js" | fingerprint -}}
 <script defer src="{{ $umbrella.RelPermalink }}"></script>
 {{ if $.Param "mobilemenu" -}}
 {{ $mobilemenu := resources.Get "js/mobile.js" | minify | fingerprint -}}
@@ -11,6 +11,12 @@
 {{ if $.Param "contactform" -}}
 {{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
 <script defer src="{{ $contact.RelPermalink }}"></script>
+{{ end -}}
+{{ if $.Param "searchform" -}}
+{{ $flexsearch := resources.Get "js/lib/flexsearch.min.js" | fingerprint -}}
+<script defer src="{{ $flexsearch.RelPermalink }}"></script>
+{{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . | minify | fingerprint -}}
+<script defer src="{{ $search.RelPermalink }}"></script>
 {{ end -}}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
 <script defer src="{{ $script.RelPermalink }}"></script>

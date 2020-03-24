@@ -23,10 +23,13 @@ other = "Uppdaterad:"
 other = "Skapad:"
 
 [search_placeholder]
-other = "Sök"
+other = "Ange de ord du vill söka efter."
 
 [search_title]
-other = "Ange de villkor du vill söka efter."
+other = "Sök"
+
+[search_loading]
+other = "Laddar sökindex…"
 
 [string_at]
 other = "på"
@@ -46,8 +49,8 @@ other = "på"
 [string_recent_content]
 other = "Senaste innehåll"
 
-[contact_js]
-other = "Du behöver ha Javascript aktiverat för att använda detta kontaktformulär."
+[js_required]
+other = "Du behöver ha Javascript aktiverat för att använda denna funktion."
 
 [contact_submitted]
 other = "Ditt meddelande har skickats."

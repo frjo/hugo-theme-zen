@@ -23,10 +23,13 @@ other = "Dernière modification:"
 other = "Établi:"
 
 [search_placeholder]
-other = "Rechercher"
+other = "Entrez les termes de la recherche."
 
 [search_title]
-other = "Entrez les termes de la recherche."
+other = "Rechercher"
+
+[search_loading]
+other = "Loading search index…"
 
 [string_at]
 other = "à"
@@ -46,7 +49,7 @@ other = "sur"
 [string_recent_content]
 other = "Contenu récent"
 
-[contact_js]
+[js_required]
 other = "Javascript doit être activé pour utiliser ce formulaire de contact."
 
 [contact_submitted]

@@ -4,7 +4,6 @@
   <div class="mobile-nav__sheet">
     <div class="mobile-nav__region">
     {{ if .Site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end }}
-    {{ if $.Param "search" }}{{ partialCached "search.html" . }}{{ end }}
     </div>
     <nav class="mobile-nav__main-menu">
     <h2 class="visually-hidden">{{ i18n "menu_title" }}</h2>

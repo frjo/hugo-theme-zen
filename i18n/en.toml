@@ -23,10 +23,13 @@ other = "Updated:"
 other = "Created:"
 
 [search_placeholder]
-other = "Search"
+other = "Enter the terms you wish to search for."
 
 [search_title]
-other = "Enter the terms you wish to search for."
+other = "Search"
+
+[search_loading]
+other = "Loading search index…"
 
 [string_at]
 other = "at"
@@ -46,8 +49,8 @@ other = "on"
 [string_recent_content]
 other = "Recent content"
 
-[contact_js]
-other = "You must have Javascript enabled to use this contact form."
+[js_required]
+other = "You must have Javascript enabled to use this function."
 
 [contact_submitted]
 other = "Your message was sent."
