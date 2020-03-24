@@ -1,5 +1,7 @@
 ---
 title: "Contact"
-author: "Fredrik Jonsson"
+contactform: true
 
 ---
+
+{{< contact >}}

@@ -14,8 +14,15 @@ author:
   url: "https://example.org/somepage"
   avatar: "path/to/some-image.jpg"
 
+outputFormats:
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
 outputs:
-  home: ["HTML","RSS", "JSON"]
+  home: ["HTML","RSS", "JSON", "SearchIndex"]
   section: ["HTML","RSS", "JSON"]
 
 params:
@@ -31,7 +38,5 @@ params:
   imageMaxWidth: 400
   mobileMenu: true
   poweredby: false
-  search: true
-  searchSize: 20
   sidebar: true
   submitted: true
