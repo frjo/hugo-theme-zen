@@ -10,6 +10,7 @@
 {{ partial "meta_json_ld.html" . }}
 {{ partial "scripts.html" . }}
 {{ partialCached "matomo.html" . }}
+{{ template "_internal/google_analytics.html" . }}
 </head>
 
 <body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}">
