@@ -3,43 +3,46 @@
 {{ $realheight := 0 -}}
 {{ $width := 0 -}}
 {{ $height := 0 -}}
-{{ with (imageConfig (add "/static/" (.Get "src"))) -}}
+{{ $height := 0 -}}
+{{ if (fileExists (add "/static" (.Get "src"))) -}}
+  {{ with (imageConfig (add "/static" (.Get "src"))) -}}
     {{ $realwidth = .Width -}}
     {{ $realheight = .Height -}}
     {{ $width = .Width -}}
     {{ $height = .Height -}}
+  {{ end -}}
 {{ end -}}
 {{ if and (.Get "width") (.Get "height") -}}
     {{ $width = (int (.Get "width")) -}}
     {{ $height = (int (.Get "height")) -}}
-{{ else if (.Get "width") -}}
-    {{ $width = (int (.Get "width")) -}}
-    {{ if lt ($width) ($realwidth) -}}
-        {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
-        {{ $height = (math.Round $height) -}}
-    {{ end -}}
-{{ else if (.Get "height") -}}
-    {{ $height = (int (.Get "height")) -}}
-    {{ if lt ($height) ($realheight) -}}
-        {{ $width = (mul ($realwidth) (div (add ($height) 0.0) ($realheight))) -}}
-        {{ $width = (math.Round $width) -}}
-    {{ end -}}
-{{ else if and ($maxwidth) (lt ($maxwidth) ($width)) -}}
-    {{ $width = ($maxwidth) -}}
+{{ else if (.Get "width")  -}}
+  {{ $width = (int (.Get "width")) -}}
+  {{ if and ($realwidth) (lt ($width) ($realwidth)) -}}
     {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
     {{ $height = (math.Round $height) -}}
+  {{ end -}}
+{{ else if (.Get "height") -}}
+  {{ $height = (int (.Get "height")) -}}
+  {{ if and ($realheight) (lt ($height) ($realheight)) -}}
+    {{ $width = (mul ($realwidth) (div (add ($height) 0.0) ($realheight))) -}}
+    {{ $width = (math.Round $width) -}}
+  {{ end -}}
+{{ else if and ($maxwidth) (lt ($maxwidth) ($width)) -}}
+  {{ $width = ($maxwidth) -}}
+  {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
+  {{ $height = (math.Round $height) -}}
 {{ end -}}
 <figure class="image {{ .Get "class" | default "" }}">
 {{ with .Get "link" }}<a href="{{ . }}">{{ end -}}
-<img src="{{ .Get "src" | relURL }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+<img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{- if .Get "link" }}</a>{{ end }}
-{{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+{{ if or (or (.Get "title") (.Get "caption" | markdownify)) (.Get "attr") -}}
 <figcaption>{{ if isset .Params "title" }}
 <h4>{{ .Get "title" }}</h4>{{ end }}
 {{ if or (.Get "caption") (.Get "attr") -}}
 <p>
 {{- .Get "caption" -}}
-{{ with .Get "attrlink" }}<a href="{{ . }}">{{ end }}{{ .Get "attr" }}{{ if .Get "attrlink" }}</a>{{ end -}}
+{{ with .Get "attrlink" }}<a href="{{ . }}">{{ end }}{{ .Get "attr" | markdownify }}{{ if .Get "attrlink" }}</a>{{ end -}}
 </p>
 {{ end -}}
 </figcaption>
