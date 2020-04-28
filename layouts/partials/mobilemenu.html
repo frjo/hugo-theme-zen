@@ -12,7 +12,7 @@
 
     {{ $currentPage := . -}}
     {{ range .Site.Menus.main -}}
-    <li><a href="{{ .URL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+    <li><a href="{{ .URL | relLangURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
     {{ end -}}
 
     {{ else -}}
