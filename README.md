@@ -122,6 +122,7 @@ Some performance tools will complain about to many files (js and css files are n
 
 * [BypassCensorship](https://www.bypasscensorship.org/) (multilingual)
 * [Combonetwork development](https://combonet.se/) (multilingual)
+* [DevSecOps Talks](https://devsecops.fm)
 * [Drejargården](https://www.drejargarden.se/)
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
