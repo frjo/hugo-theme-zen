@@ -15,7 +15,7 @@
 {{ if and (.Get "width") (.Get "height") -}}
     {{ $width = (int (.Get "width")) -}}
     {{ $height = (int (.Get "height")) -}}
-{{ else if (.Get "width")  -}}
+{{ else if (.Get "width") -}}
   {{ $width = (int (.Get "width")) -}}
   {{ if and ($realwidth) (lt ($width) ($realwidth)) -}}
     {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
