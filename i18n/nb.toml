@@ -1,0 +1,92 @@
+[menu_title]
+other = "Hovedmeny"
+
+[menu_home]
+other = "Forsiden"
+
+[menu_mobile]
+other = "Meny"
+
+[pager_next]
+other = "Neste"
+
+[pager_prev]
+other = "Forrige"
+
+[taxo_tags]
+other = "Tagger"
+
+[last_mod]
+other = "Oppdatert:"
+
+[created]
+other = "Oprettet:"
+
+[search_placeholder]
+other = "Legg inn dine søkeord."
+
+[search_title]
+other = "Søk"
+
+[search_loading]
+other = "Henter søkeindeks…"
+
+[string_at]
+other = "på"
+
+[string_by]
+other = "av"
+
+[string_follow]
+other = "følg"
+
+[string_in]
+other = "i"
+
+[string_on]
+other = "på"
+
+[string_recent_content]
+other = "Siste innhold"
+
+[js_required]
+other = "Du må ha skrudd på Javascript for å bruke denne funksjonen."
+
+[contact_submitted]
+other = "Din melding har blitt sendt."
+
+[contact_error]
+other = "En feil oppstod da meldingen skulle sendes."
+
+[contact_name]
+other = "Navn"
+
+[contact_name_placeholder]
+other = "Ditt navn"
+
+[contact_mail]
+other = "E-postadresse"
+
+[contact_mail_placeholder]
+other = "Din e-postadresse"
+
+[contact_subject]
+other = "Emne"
+
+[contact_subject_placeholder]
+other = "En kort emnetekst"
+
+[contact_message]
+other = "Melding"
+
+[contact_message_placeholder]
+other = "Skriv inn meldingen din her…"
+
+[contact_submit]
+other = "Send meldingen"
+
+[contact_honypot]
+other = "Hopp over om du er menneske."
+
+[lang_select_title]
+other = "Velg språk"
