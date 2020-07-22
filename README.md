@@ -271,7 +271,7 @@ The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be don
 
 ## Multilingual
 
-English, French, German, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. French, German and Portugis are contributed by users.
+English, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users.
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
