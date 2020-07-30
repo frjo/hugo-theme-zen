@@ -470,7 +470,7 @@ The **content** that should be wrapped. Some more content.
 
 ## Choose between using jQuery or Umbrella JS
 
-Umbrella JS is always added and it's used for all theme JavaScript. To add jQuery, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having both libraries loaded on the same page.
+[Umbrella JS](https://umbrellajs.com/) (a tiny jQuery replacement) is always added and it's used for all theme JavaScript. To add jQuery, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having both libraries loaded on the same page.
 
 This is the way I construct my JavaScript files.
 
