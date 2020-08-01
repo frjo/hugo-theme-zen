@@ -65,7 +65,7 @@ https://themes.gohugo.io/theme/hugo-theme-zen/
 
 ## Minimum Hugo version
 
-Hugo Extended version 0.57.0 or higher is required.
+Hugo Extended version 0.67.1 or higher is required.
 
 
 ## Installation
