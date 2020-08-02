@@ -1,0 +1,92 @@
+[menu_title]
+other = "Menu Utama"
+
+[menu_home]
+other = "Beranda"
+
+[menu_mobile]
+other = "Menu"
+
+[pager_next]
+other = "Berikutnya"
+
+[pager_prev]
+other = "Sebelumnya"
+
+[taxo_tags]
+other = "Tags"
+
+[last_mod]
+other = "Diperbarui:"
+
+[created]
+other = "Dibuat:"
+
+[search_placeholder]
+other = "Masukkan kata/istilah yang ingin anda cari."
+
+[search_title]
+other = "Cari"
+
+[search_loading]
+other = "Memuat index pencarian…"
+
+[string_at]
+other = "pada"
+
+[string_by]
+other = "dengan"
+
+[string_follow]
+other = "ikuti"
+
+[string_in]
+other = "dalam"
+
+[string_on]
+other = "pada"
+
+[string_recent_content]
+other = "Konten Terkini"
+
+[js_required]
+other = "Anda harus mengaktifkan Javascript untuk menggunakan fasilitas ini."
+
+[contact_submitted]
+other = "Pesan anda telah terkirim."
+
+[contact_error]
+other = "Ada error saat mengirim pesan."
+
+[contact_name]
+other = "Nama"
+
+[contact_name_placeholder]
+other = "Nama anda"
+
+[contact_mail]
+other = "E-mail"
+
+[contact_mail_placeholder]
+other = "E-mail anda"
+
+[contact_subject]
+other = "Judul"
+
+[contact_subject_placeholder]
+other = "Judul ringkas"
+
+[contact_message]
+other = "Pesan"
+
+[contact_message_placeholder]
+other = "Pesan anda di sini…"
+
+[contact_submit]
+other = "Kirim pesan"
+
+[contact_honypot]
+other = "Lewati jika anda manusia"
+
+[lang_select_title]
+other = "Pilihan Bahasa"
