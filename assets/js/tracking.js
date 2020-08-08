@@ -11,3 +11,9 @@ _paq.push(['setTrackerUrl', matomoTrackingApiUrl]);
 _paq.push(['setSiteId', idSite]);
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
+
+var googleAnalytics = {{ .Site.GoogleAnalytics }};
+
+var _gaq = window._gaq || [];
+_gaq.push(['_setAccount', googleAnalytics]);
+_gaq.push(['_trackPageView']);
