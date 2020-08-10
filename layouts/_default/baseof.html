@@ -9,7 +9,7 @@
 {{- block "head" . }}{{ end }}
 {{ partial "meta_json_ld.html" . }}
 {{ partial "scripts.html" . }}
-{{ partialCached "matomo.html" . }}
+{{ partialCached "tracking.html" . }}
 </head>
 
 <body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}">

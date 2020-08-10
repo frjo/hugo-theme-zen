@@ -1,6 +1,6 @@
 /**
  * @file
- * A JavaScript file for matomo analytic tracking.
+ * A JavaScript file for analytic tracking.
  */
 
 var idSite = {{ .Site.Params.piwikSiteID }};
