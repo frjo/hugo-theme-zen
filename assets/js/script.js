@@ -7,7 +7,6 @@
 
   'use strict';
 
-  // Add a js class to the html-tag when JavsScript is active.
-  $('html').removeClass('nojs').addClass('js');
+  // Place your code here.
 
 })(u);
