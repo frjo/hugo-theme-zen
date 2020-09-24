@@ -277,7 +277,7 @@ A language selector will be included on sites with more than one language. Add `
 
 The language selector will link to a translation of the current page if it exist and to the front page if it does not.
 
-For "rtl" languages add a `languageDirection` parameter (added in Hugo v0.67.1) to the language configuration. If not added it will default to "ltr".
+For "rtl" languages add a `languageDirection` parameter to the language configuration. If not added it will default to "ltr".
 
 ```
 languages:
