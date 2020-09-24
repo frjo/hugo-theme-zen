@@ -314,7 +314,7 @@ Here is the three steps needed to create a search page.
     outputs:
       home: ["HTML", "SearchIndex", "[other formats you need]"]
     ```
-3. Add the shortcode `{{< search >}}` to a page. Also set `searchform: true` in the front matter for that page so the search and flexsearch js files gets loaded.
+3. Add the shortcode `{{< search >}}` to a page. The search and flexsearch js files gets loaded automatically on pages that use the shortcode.
 
 Your search page will now have a search field where all the posts of the site can be searched.
 
@@ -327,7 +327,7 @@ If your server support php with the mail() command (very common) you can use the
 
 1. Copy the file `themes/zen/php/contact.php.example` to `static/php/contact.php`.
 2. Edit the contact.php file so it has your own e-mail address. You may also change the mail subject prefix.
-3. Add the shortcode `{{< contact >}}` to a page. Also set `contactform: true` in the front matter for that page so the contact.js file gets loaded.
+3. Add the shortcode `{{< contact >}}` to a page. The contact.js file gets loaded automatically on pages that use the shortcode.
 
 If you have a SPF record for your domain, make sure the web server is listed or other mail server may mark the mail as spam.
 

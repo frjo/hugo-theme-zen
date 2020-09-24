@@ -10,11 +10,11 @@
 {{ $mobilemenu := resources.Get "js/mobile.js" | minify | fingerprint -}}
 <script defer src="{{ $mobilemenu.RelPermalink }}"></script>
 {{ end -}}
-{{ if $.Param "contactform" -}}
+{{ if .HasShortcode "contact" -}}
 {{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
 <script defer src="{{ $contact.RelPermalink }}"></script>
 {{ end -}}
-{{ if $.Param "searchform" -}}
+{{ if .HasShortcode "search" -}}
 {{ $flexsearch := resources.Get "js/lib/flexsearch.min.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
 {{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . | minify | fingerprint -}}
