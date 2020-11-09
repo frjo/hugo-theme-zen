@@ -548,3 +548,5 @@ If you run into an issue that isn't answered by this documentation or the [`exam
 This is originally a port of the [Zen](https://www.drupal.org/project/zen) theme by [JohnAlbin](https://www.drupal.org/u/johnalbin), a very popular base theme for Drupal.
 
 Thanks to the [Cupper Hugo theme](https://github.com/zwbetz-gh/cupper-hugo-theme/) for a really good Readme, have copied a lot from it.
+
+Icons from [tabler/tabler-icons: A set of over 850 free MIT-licensed high-quality SVG icons for you to use in your web projects.](https://github.com/tabler/tabler-icons) and [Language Icon](http://www.languageicon.org/).
