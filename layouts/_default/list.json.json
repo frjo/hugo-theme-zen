@@ -7,7 +7,7 @@
 {{- end -}}
 {{ $length := (len $pages) -}}
 {
-    "version" : "https://jsonfeed.org/version/1",
+    "version" : "https://jsonfeed.org/version/1.1",
     "title" : "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ .Site.Title }}{{ end }}",
     "description": "{{ i18n "string_recent_content" }} {{ if ne  .Title  .Site.Title }}{{ with .Title }}{{ i18n "string_in" }} {{ . }} {{ end }}{{ end }}{{ i18n "string_on" }} {{ .Site.Title }}",
     "home_page_url" : "{{ .Site.BaseURL }}",
@@ -21,27 +21,31 @@
     "favicon" : "{{ . | absURL }}",
     {{ end -}}
     {{ with .Site.Author.name -}}
-    "author" : {
-        "name" : "{{ . }}"{{ with $.Site.Author.url }},
-        "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
-        "avatar": "{{ . | absURL }}"{{ end }}
-    },
+    "authors" : [
+        {
+            "name" : "{{ . }}"{{ with $.Site.Author.url }},
+            "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
+            "avatar": "{{ . | absURL }}"{{ end }}
+        }
+    ],
     {{ end -}}
     "items" : [
-    {{ range $index, $element := $pages -}}
-    {
-        "title" : {{ .Title | jsonify }},
-        "date_published" : "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-        "date_modified" : "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-        "id" : "{{ .Permalink }}",
-        "url" : "{{ .Permalink }}",
-        {{ with .Params.author -}}
-        "author" : {
-          "name" : "{{ . }}"
-        },
+        {{ range $index, $element := $pages -}}
+        {
+            "title" : {{ .Title | jsonify }},
+            "date_published" : "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+            "date_modified" : "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+            "id" : "{{ .Permalink }}",
+            "url" : "{{ .Permalink }}",
+            {{ with .Params.author -}}
+            "authors" : [
+                {
+                  "name" : "{{ . }}"
+                }
+            ],
+            {{ end -}}
+            "content_html" : {{ .Content | jsonify }}
+        }{{ if ne (add $index 1) $length }},{{ end }}
         {{ end -}}
-        "content_html" : {{ .Content | jsonify }}
-    }{{ if ne (add $index 1) $length }},{{ end }}
-    {{ end -}}
     ]
 }
