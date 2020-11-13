@@ -298,3 +298,24 @@ figure {
     }
   }
 }
+
+// Header anchor links
+
+.anchor-link {
+  opacity: 0;
+  transition: all 130ms ease-in;
+}
+
+.anchor-header {
+  &:focus,
+  &:hover {
+    .anchor-link {
+      opacity: .3;
+
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
