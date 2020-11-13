@@ -154,6 +154,7 @@ Configurations parameters for the sites config file, in yaml format. All the "pa
 baseurl: "https://example.org/"
 title: "SiteTitle"
 theme: "zen"
+languageCode: "en-GB"       # Set your language code (only needed for none multilingual sites).
 
 params:
   contact: "info@example.org"
@@ -279,7 +280,7 @@ The language selector will link to a translation of the current page if it exist
 
 For "rtl" languages add a `languageDirection` parameter to the language configuration. If not added it will default to "ltr".
 
-Best to add a `languageCode` parameter as well, that is used to set the correct language attribute in the `html` tag and in feeds.
+Add a `languageCode` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `languageCode` is then not needed.
 
 ```
 languages:
@@ -290,7 +291,7 @@ languages:
   en:
     weight: 2
     languageName: "English"
-    languageCode: "en-gb"
+    languageCode: "en-GB"
   ar:
     weight: 3
     languageName: "العربية"
