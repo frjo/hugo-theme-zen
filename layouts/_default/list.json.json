@@ -7,44 +7,47 @@
 {{- end -}}
 {{ $length := (len $pages) -}}
 {
-    "version" : "https://jsonfeed.org/version/1.1",
-    "title" : "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ .Site.Title }}{{ end }}",
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ .Site.Title }}{{ end }}",
     "description": "{{ i18n "string_recent_content" }} {{ if ne  .Title  .Site.Title }}{{ with .Title }}{{ i18n "string_in" }} {{ . }} {{ end }}{{ end }}{{ i18n "string_on" }} {{ .Site.Title }}",
-    "home_page_url" : "{{ .Site.BaseURL }}",
+    "home_page_url": "{{ .Site.BaseURL }}",
     {{ with .OutputFormats.Get "JSON" -}}
-    "feed_url" : "{{ .Permalink }}",
+    "feed_url": "{{ .Permalink }}",
+    {{ end -}}
+    {{ with .Site.LanguageCode -}}
+    "language": "{{ . }}",
     {{ end -}}
     {{ with $.Param "icon" -}}
-    "icon" : "{{ . | absURL }}",
+    "icon": "{{ . | absURL }}",
     {{ end -}}
     {{ with $.Param "favicon" -}}
-    "favicon" : "{{ . | absURL }}",
+    "favicon": "{{ . | absURL }}",
     {{ end -}}
     {{ with .Site.Author.name -}}
-    "authors" : [
+    "authors": [
         {
-            "name" : "{{ . }}"{{ with $.Site.Author.url }},
+            "name": "{{ . }}"{{ with $.Site.Author.url }},
             "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
             "avatar": "{{ . | absURL }}"{{ end }}
         }
     ],
     {{ end -}}
-    "items" : [
+    "items": [
         {{ range $index, $element := $pages -}}
         {
-            "title" : {{ .Title | jsonify }},
-            "date_published" : "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-            "date_modified" : "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-            "id" : "{{ .Permalink }}",
-            "url" : "{{ .Permalink }}",
+            "title": {{ .Title | jsonify }},
+            "date_published": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+            "date_modified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+            "id": "{{ .Permalink }}",
+            "url": "{{ .Permalink }}",
             {{ with .Params.author -}}
-            "authors" : [
+            "authors": [
                 {
-                  "name" : "{{ . }}"
+                  "name": "{{ . }}"
                 }
             ],
             {{ end -}}
-            "content_html" : {{ .Content | jsonify }}
+            "content_html": {{ .Content | jsonify }}
         }{{ if ne (add $index 1) $length }},{{ end }}
         {{ end -}}
     ]
