@@ -279,18 +279,23 @@ The language selector will link to a translation of the current page if it exist
 
 For "rtl" languages add a `languageDirection` parameter to the language configuration. If not added it will default to "ltr".
 
+Best to add a `languageCode` parameter as well, that is used to set the correct language attribute in the `html` tag and in feeds.
+
 ```
 languages:
   sv:
     weight: 1
     languageName: "Svenska"
+    languageCode: "sv-SE"
   en:
     weight: 2
     languageName: "English"
+    languageCode: "en-gb"
   ar:
     weight: 3
     languageName: "العربية"
     languageDirection: "rtl"
+    languageCode: "ar"
 ```
 
 
