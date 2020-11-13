@@ -280,7 +280,7 @@ The language selector will link to a translation of the current page if it exist
 
 For "rtl" languages add a `languageDirection` parameter to the language configuration. If not added it will default to "ltr".
 
-Add a `languageCode` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `languageCode` is then not needed.
+Add a `languageCode` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `languageCode` is then not needed. If not set the language key (e.g. "en") will be used.
 
 ```
 languages:
