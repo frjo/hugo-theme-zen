@@ -22,6 +22,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * [Screenshots](#screenshots)
 * [Configuration](#configuration)
 * [Customise](#customise)
+* [Render hook templates](#render-hook-templates)
 * [Multilingual](#multilingual)
 * [Search](#search)
 * [Contact form](#contact-form)
@@ -235,14 +236,14 @@ Then set the "realfavicongenerator" param to true to add the needed meta tags. A
 
 ### Layouts
 
-To customise a layout included in the zen theme, copy it to the root layout directory and edit it there. Make sure to maintain the directory structure inside the layouts directory. 
+To customise a layout included in the zen theme, copy it to the root layout directory and edit it there. Make sure to maintain the directory structure inside the layouts directory.
 
 Add any new layouts to the root layout directory as well. This way they will not be overwritten when updating the theme.
 
 
 #### Menu and sidebar layouts
 
-If a Hugo main menu is defined (.Sites.Menu.main) the menu template will use it to build a navigation menu. If not, the template will automatically add entries for the home page, each root page and each section, in that order. 
+If a Hugo main menu is defined (.Sites.Menu.main) the menu template will use it to build a navigation menu. If not, the template will automatically add entries for the home page, each root page and each section, in that order.
 
 If the default sidebar is activated it will display each section with all its pages listed below.
 
@@ -267,7 +268,16 @@ By setting the Hugo environment variable to "development" (default when running 
 
 Modern CSS grid is the easiest and cleanest way to layout your pages.
 
-The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be done by just reordering "grid-template-rows". 
+The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be done by just reordering "grid-template-rows".
+
+
+## Render hook templates
+
+### Add anchor links to headers
+
+An example render hook template for templates will add anchor links to all headers. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-heading.html.example` to `layouts/_default/_markup/render-heading.html`.
+
+Needed styles are in the `_zen.scss` file.
 
 
 ## Multilingual
@@ -395,7 +405,7 @@ Insert a html5 contact form, see more above.
 
 Zen comes with a improved version of the built in "figure" shortcut.
 
-* You can set a max width for images with parameter "imageMaxWidth". 
+* You can set a max width for images with parameter "imageMaxWidth".
 * If width and height is not set the real dimensions of the image will be used.
 * If only width or height is set the other value will be proportionally calculated.
 
