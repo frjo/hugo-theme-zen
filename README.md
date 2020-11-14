@@ -29,6 +29,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * [Dates](#dates)
 * [Podcast](#podcast)
 * [Shortcodes](#shortcodes)
+* [Content security policy headers](#Content-security-policy-headers)
 * [Choose between using jQuery or Umbrella JS](#choose-between-using-jquery-or-umbrella-js)
 * [Use Gulp to lint Sass and JavaScript](#use-gulp-to-lint-sass-and-javascript)
 * [Getting help](#getting-help)
@@ -483,6 +484,10 @@ The **content** that should be wrapped. Some more content.
 </div>
 ```
 
+
+## Content security policy headers
+
+Includes tracking code for Matomo or Google in a way that supports Content security policy headers. Read more in my blog post [Content security policy headers when using Matomo or Google analytics](https://xdeb.org/post/2020/01/14/content-security-policy-headers-when-using-matomo-or-google-analytics/).
 
 ## Choose between using jQuery or Umbrella JS
 
