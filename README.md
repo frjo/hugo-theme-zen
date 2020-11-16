@@ -394,21 +394,22 @@ podcast:
 
 ## Shortcodes
 
-### Contact
-
-Insert a html5 contact form, see more above.
+### Audio and Video
 
 ```
-{{< contact >}}
+{{< audio src="/audio/audio.mp3" class="something" >}}
+
+{{< video src="/video/video.mp4" class="something" >}}
 ```
 
-### Figure
+Possible parameters are:
 
-Zen comes with a improved version of the built in "figure" shortcut.
+* src
+* class
+* preload (none/metadata/auto, default metadata)
+* width (only video)
 
-* You can set a max width for images with parameter "imageMaxWidth".
-* If width and height is not set the real dimensions of the image will be used.
-* If only width or height is set the other value will be proportionally calculated.
+The audio and video tags will be wrapped with a figure tag.
 
 
 ### Clear
@@ -426,22 +427,55 @@ blablabla # Displayed below of the image.
 ```
 
 
-### Audio and Video
+### Contact
+
+Insert a html5 contact form, [see more above](#contact-form).
 
 ```
-{{< audio src="/audio/audio.mp3" class="something" >}}
-
-{{< video src="/video/video.mp4" class="something" >}}
+{{< contact >}}
 ```
+
+
+### Figure and Img
+
+Zen comes with a improved version of the built in "figure" shortcut and a very similar "img" shortcode.
+
+```
+{{< figure src="/images/image.jpg" alt="Example image." caption="Lorem ipsum dolor sit amet." >}}
+
+{{< img src="/images/image.jpg" alt="Example image." size="600x" >}}
+```
+
 
 Possible parameters are:
 
-* src
+* alt
+* attr (only figure)
+* attrlink (only figure)
+* caption (only figure)
 * class
-* preload (none/metadata/auto, default metadata)
-* width (only video)
+* height
+* link (only figure)
+* size (only works if image is inside /assets dir)
+* src
+* title (only figure)
+* width
 
-The audio and video tags will be wrapped with a figure tag.
+Only "src" is none optional but you really should set "alt" as well.
+
+* If the images is inside the /assets dir and "size" is set the shortcode will use the resize command.
+* You can set a max width for images with parameter "imageMaxWidth". Only used for images where size, width and height is not set.
+* If width and height is not set the real dimensions of the image will be used.
+* If only width or only height is set the other value will be proportionally calculated.
+
+
+### Search
+
+Creates a search page for the site, [see more above](#search).
+
+```
+{{< search >}}
+```
 
 
 ### Wrapper
