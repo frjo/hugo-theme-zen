@@ -1,13 +1,8 @@
 {{ $alt := .Get "alt" -}}
-{{ $attr := .Get "attr" -}}
-{{ $attrlink := .Get "attrlink" -}}
-{{ $caption := .Get "caption" -}}
 {{ $class := .Get "class" -}}
 {{ $height := .Get "height" -}}
-{{ $link := .Get "link" -}}
 {{ $size := .Get "size" -}}
 {{ $src := .Get "src" -}}
-{{ $title := .Get "title" -}}
 {{ $width := .Get "width" -}}
 {{ $maxwidth := .Site.Params.imageMaxWidth -}}
 {{ $realwidth := 0 -}}
@@ -52,15 +47,4 @@
   {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
   {{ $height = (math.Round $height) -}}
 {{ end -}}
-<figure class="image{{ with $class }} {{ . }}{{ end }}">
-{{ with $link }}<a href="{{ . }}">{{ end -}}
-<img src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
-{{- if $link }}</a>{{ end }}
-{{ if or $title $caption $attr -}}
-<figcaption>
-{{ with $title }}<h4>{{ . }}</h4>{{ end -}}
-{{- $caption | markdownify }}{{ if and $caption $attr }} {{ end -}}
-{{ with $attrlink }}<a href="{{ . }}">{{ end }}{{ $attr | markdownify }}{{ if $attrlink }}</a>{{ end -}}
-</figcaption>
-{{ end -}}
-</figure>
+<img class="image{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
