@@ -1,0 +1,11 @@
+{{ $class := .Get "class" -}}
+{{ $name := .Get "name" -}}
+{{ $src := .Get "src" -}}
+{{ if and $src (fileExists (add "/assets" $src)) -}}
+  {{ $original := resources.Get $src -}}
+  {{ $src = $original.RelPermalink -}}
+{{ end -}}
+{{ if not $name -}}
+  {{ $name = path.Base $src -}}
+{{ end -}}
+<a class="file{{ with $class }} {{ . }}{{ end }}" href="{{ $src }}">{{ $name }}</a>

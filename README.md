@@ -455,7 +455,7 @@ Possible parameters are:
 * caption (only figure)
 * class
 * height
-* link (only figure)
+* link
 * size (only works if image is inside /assets dir)
 * src
 * title (only figure)
@@ -467,6 +467,17 @@ Only "src" is none optional but you really should set "alt" as well.
 * You can set a max width for images with parameter "imageMaxWidth". Only used for images where size, width and height is not set.
 * If width and height is not set the real dimensions of the image will be used.
 * If only width or only height is set the other value will be proportionally calculated.
+
+
+### File
+
+Creates a link to a file in static or in assets directory.
+
+Possible parameters are:
+
+* class
+* name
+* src
 
 
 ### Search

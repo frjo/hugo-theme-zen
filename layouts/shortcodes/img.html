@@ -1,13 +1,14 @@
 {{ $alt := .Get "alt" -}}
 {{ $class := .Get "class" -}}
 {{ $height := .Get "height" -}}
+{{ $link := .Get "link" -}}
 {{ $size := .Get "size" -}}
 {{ $src := .Get "src" -}}
 {{ $width := .Get "width" -}}
 {{ $maxwidth := .Site.Params.imageMaxWidth -}}
 {{ $realwidth := 0 -}}
 {{ $realheight := 0 -}}
-{{ if (fileExists (add "/assets" $src)) -}}
+{{ if and $src (fileExists (add "/assets" $src)) -}}
   {{ $original := resources.Get $src -}}
   {{ if $size -}}
     {{ $image := $original.Resize $size -}}
@@ -19,7 +20,7 @@
     {{ $realwidth = $original.Width -}}
     {{ $realheight = $original.Height -}}
   {{ end -}}
-{{ else if (fileExists (add "/static" $src)) -}}
+{{ else if and $src (fileExists (add "/static" $src)) -}}
   {{ with (imageConfig (add "/static" $src)) -}}
     {{ $realwidth = .Width -}}
     {{ $realheight = .Height -}}
@@ -47,4 +48,6 @@
   {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
   {{ $height = (math.Round $height) -}}
 {{ end -}}
+{{ with $link }}<a class="image-link" href="{{ . }}">{{ end -}}
 <img class="image{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+{{- if $link }}</a>{{ end }}
