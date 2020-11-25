@@ -1,11 +1,12 @@
 {{ $class := .Get "class" -}}
-{{ $name := .Get "name" -}}
+{{ $newtab := .Get "newtab" | default false -}}
 {{ $src := .Get "src" -}}
+{{ $text := .Get "text" -}}
 {{ if and $src (fileExists (add "/assets" $src)) -}}
   {{ $original := resources.Get $src -}}
   {{ $src = $original.RelPermalink -}}
 {{ end -}}
-{{ if not $name -}}
-  {{ $name = path.Base $src -}}
+{{ if not $text -}}
+  {{ $text = path.Base $src -}}
 {{ end -}}
-<a class="file{{ with $class }} {{ . }}{{ end }}" href="{{ $src }}">{{ $name }}</a>
+<a class="file{{ with $class }} {{ . }}{{ end }}" href="{{ $src }}"{{ if $newtab }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ $text }}</a>

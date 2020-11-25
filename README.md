@@ -476,8 +476,9 @@ Creates a link to a file in static or in assets directory.
 Possible parameters are:
 
 * class
-* name
+* newtab (default false)
 * src
+* text
 
 
 ### Search
