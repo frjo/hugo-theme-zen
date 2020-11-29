@@ -495,7 +495,7 @@ Creates a search page for the site, [see more above](#search).
 A simple, but useful, shortcode to wrap content in a div with a class. The content will be run through "markdownify".
 
 ```
-{{< wrapper class-name-you-want markdown >}}
+{{< wrapper class-name-you-want >}}
 The **content** that should be wrapped.
 
 Some more content.
