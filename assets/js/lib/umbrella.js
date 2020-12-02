@@ -1,7 +1,7 @@
 // Umbrella JS  http://umbrellajs.com/
 // -----------
 // Small, lightweight jQuery alternative
-// @author Francisco Presencia Fandos http://francisco.io/
+// @author Francisco Presencia Fandos https://francisco.io/
 // @inspiration http://youmightnotneedjquery.com/
 
 // Initialize the library
@@ -189,7 +189,9 @@ u.prototype.clone = function () {
 
     this.getAll(node).each(function (src, i) {
       for (var key in this.mirror) {
-        this.mirror[key](src, dest.nodes[i]);
+        if (this.mirror[key]) {
+          this.mirror[key](src, dest.nodes[i]);
+        }
       }
     });
 
@@ -220,8 +222,8 @@ u.prototype.mirror.events = function (src, dest) {
   if (!src._e) return;
 
   for (var type in src._e) {
-    src._e[type].forEach(function (event) {
-      u(dest).on(type, event);
+    src._e[type].forEach(function (ref) {
+      u(dest).on(type, ref.callback);
     });
   }
 };
@@ -307,7 +309,7 @@ u.prototype.empty = function () {
 // .filter(selector)
 // Delete all of the nodes that don't pass the selector
 u.prototype.filter = function (selector) {
-  // The default function if it's a css selector
+  // The default function if it's a CSS selector
   // Cannot change name to 'selector' since it'd mess with it inside this fn
   var callback = function (node) {
     // Make it compatible with some other browsers
@@ -437,10 +439,20 @@ u.prototype.not = function (filter) {
 
 
 // Removes the callback to the event listener for each node
-u.prototype.off = function (events) {
+u.prototype.off = function (events, cb, cb2) {
+  var cb_filter_off = (cb == null && cb2 == null);
+  var sel = null;
+  var cb_to_be_removed = cb;
+  if (typeof cb === 'string') {
+    sel = cb;
+    cb_to_be_removed = cb2;
+  }
+
   return this.eacharg(events, function (node, event) {
-    u(node._e ? node._e[event] : []).each(function (cb) {
-      node.removeEventListener(event, cb);
+    u(node._e ? node._e[event] : []).each(function (ref) {
+      if (cb_filter_off || (ref.orig_callback === cb_to_be_removed && ref.selector === sel)) {
+        node.removeEventListener(event, ref.callback);
+      }
     });
   });
 };
@@ -448,22 +460,34 @@ u.prototype.off = function (events) {
 
 // Attach a callback to the specified events
 u.prototype.on = function (events, cb, cb2) {
+  var sel = null;
+  var orig_callback = cb;
   if (typeof cb === 'string') {
-    var sel = cb;
+    sel = cb;
+    orig_callback = cb2;
     cb = function (e) {
       var args = arguments;
-      u(e.currentTarget).find(sel).each(function (target) {
-        if (target === e.target || target.contains(e.target)) {
-          try {
-            Object.defineProperty(e, 'currentTarget', {
-              get: function () {
-                return target;
-              }
-            });
-          } catch (err) {}
-          cb2.apply(target, args);
-        }
-      });
+      var targetFound = false;
+      u(e.currentTarget)
+        .find(sel)
+        .each(function (target) {
+          if (target === e.target || target.contains(e.target)) {
+            targetFound = true;
+            try {
+              Object.defineProperty(e, 'currentTarget', {
+                get: function () {
+                  return target;
+                }
+              });
+            } catch (err) { }
+            cb2.apply(target, args);
+          }
+        });
+      // due to e.currentEvent reassigning a second (or subsequent) handler may
+      // not be fired for a single event, so chekc and apply if needed.
+      if (!targetFound && e.currentTarget === e.target) {
+        cb2.apply(e.target, args);
+      }
     };
   }
 
@@ -478,7 +502,11 @@ u.prototype.on = function (events, cb, cb2) {
     // Store it so we can dereference it with `.off()` later on
     node._e = node._e || {};
     node._e[event] = node._e[event] || [];
-    node._e[event].push(callback);
+    node._e[event].push({
+      callback: callback,
+      orig_callback: orig_callback,
+      selector: sel
+    });
   });
 };
 
@@ -757,5 +785,7 @@ u.prototype.wrap = function (selector) {
 
 // Export it for webpack
 if (typeof module === 'object' && module.exports) {
-  module.exports = { u: u };
+  // Avoid breaking it for `import { u } from ...`. Add `import u from ...`
+  module.exports = u;
+  module.exports.u = u;
 }
