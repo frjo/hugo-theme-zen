@@ -109,8 +109,8 @@ article {
     }
 
     li {
-      list-style-type: none;
       @include padding-right(.2);
+      list-style-type: none;
     }
   }
 
