@@ -1,0 +1,96 @@
+[menu_title]
+other = "القائمة الرئيسية"
+
+[menu_home]
+other = "الرئيسية"
+
+[menu_mobile]
+other = "القائمة"
+
+[pager_next]
+other = "التالي"
+
+[pager_prev]
+other = "السابق"
+
+[taxo_tags]
+other = "وسوم"
+
+[last_mod]
+other = "آخِر تحديث:"
+
+[created]
+other = "تاريخ الانشاء:"
+
+[search_placeholder]
+other = "أدخل مفاتيح البحث."
+
+[search_title]
+other = "بحث"
+
+[search_loading]
+other = "جاري تحميل دليل البحث…"
+
+[string_at]
+other = "عند"
+
+[string_by]
+other = "بقلم"
+
+[string_follow]
+other = "اتبع"
+
+[string_in]
+other = "في"
+
+[string_on]
+other = "على"
+
+[string_recent_content]
+other = "محتوى حديث"
+
+[js_required]
+other = "يجب تفعيل جافاسكريبت في المتصفح لاستخدام هذه الوظيفة."
+
+[contact_submitted]
+other = "تم ارسال رسالتك."
+
+[contact_error]
+other = "صادفنا خطأ بارسال الرسالة."
+
+[contact_name]
+other = "الاسم"
+
+[contact_name_placeholder]
+other = "اسمك"
+
+[contact_mail]
+other = "البريد الالكتروني"
+
+[contact_mail_placeholder]
+other = "بريدك الالكتروني"
+
+[contact_subject]
+other = "العنوان"
+
+[contact_subject_placeholder]
+other = "عنوان قصير"
+
+[contact_message]
+other = "الرسالة"
+
+[contact_message_placeholder]
+other = "هنا تكتب رسالتك…"
+
+[contact_submit]
+other = "ارسل"
+
+[contact_honypot]
+other = "تجاهل"
+
+[lang_select_title]
+other = "اختيار اللغات"
+
+
+[posts]
+other = "المنشورات"
