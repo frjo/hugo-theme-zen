@@ -283,7 +283,7 @@ Needed styles are in the `_zen.scss` file.
 
 ## Multilingual
 
-English, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users.
+Arabic, English, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
