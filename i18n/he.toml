@@ -1,0 +1,93 @@
+[menu_title]
+other = "תפריט ראשית"
+
+[menu_home]
+other = "בית"
+
+[menu_mobile]
+other = "Menu"
+
+[pager_next]
+other = "הבא"
+
+[pager_prev]
+other = "קודם"
+
+[taxo_tags]
+other = "תגיות"
+
+[last_mod]
+other = "מעודכן:"
+
+[created]
+other = "נוצר:"
+
+[search_placeholder]
+other = “הכנס מונחים לחיפוש”
+
+[search_title]
+other = "חיפוש"
+
+[search_loading]
+other = "טוען אינדקס חיפוש…"
+
+[string_at]
+other = "...ב"
+
+[string_by]
+other = "על יד"
+
+[string_follow]
+other = "עקוב אחרי"
+
+[string_in]
+other = "בתוך"
+
+[string_on]
+other = "על"
+
+[string_recent_content]
+other = "תוכן מעודכן"
+
+[js_required]
+other = "javascript פונקציה זו חייבת"
+
+[contact_submitted]
+other = "הסר שלך נשלח"
+
+[contact_error]
+other = "קרתה שגיאה בשליחת המסר"
+
+[contact_name]
+other = "שם"
+
+[contact_name_placeholder]
+other = "שמך"
+
+[contact_mail]
+other = "כתובת אימייל"
+
+[contact_mail_placeholder]
+other = "כתובת אימייל שלך"
+
+[contact_subject]
+other = "נושא"
+
+[contact_subject_placeholder]
+other = "נושא מקוצר"
+
+[contact_message]
+other = "מסר"
+
+[contact_message_placeholder]
+other = "…הכנס מסר כאן"
+
+[contact_submit]
+other = "שליחת מסר"
+
+[contact_honypot]
+other = "דלג אם אתה בן אנוש"
+
+[lang_select_title]
+other = "בחירת שפה"
+
