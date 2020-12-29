@@ -1,0 +1,3 @@
+{{ with $.Param "author" }}<span class="author" itemprop="author">{{ . }}</span>{{ end -}}
+{{ if and .Date ($.Param "author") }} - {{ end -}}
+{{ with .Date }}<time class="created-date" datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ .Format ($.Param "dateformat" | default "2 January, 2006") }}</time>{{ end }}

@@ -4,8 +4,7 @@
 <header>
 <h1 class="hidden">{{ .Title }}</h1>
 <p>
-{{ with $.Param "author" }}<span class="author">{{ . }}</span> – {{ end -}}
-<time class="created-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</time>
+{{ partial "author-date" . }}
 </p>
 </header>
 <div class="content">
