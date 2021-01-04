@@ -184,7 +184,6 @@ params:
   poweredby: true           # Show powered by hugo in footer
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   related: false            # Show related post under a "See also" section, default false.
-  safariPinnedColor:        # Hex color value, used in meta tags, default "#000000".
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
@@ -233,7 +232,7 @@ Place your logo at `static/images/logo.png`. If you don't provide a logo, then t
 
 Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`.
 
-Then set the "realfavicongenerator" param to true to add the needed meta tags. Also good to set the "themeColor" and "safariPinnedColor" params to correct colours.
+Then set the "realfavicongenerator" param to true to add the needed meta tags. Also good to set the "themeColor" param to correct colour.
 
 
 ### Layouts
