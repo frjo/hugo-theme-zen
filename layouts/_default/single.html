@@ -9,6 +9,8 @@
 <div class="content">
 {{ .Content }}
 
+{{ if $.Param "related" | default false }}{{ partial "related.html" . }}{{ end -}}
+
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
 </div>
 </article>

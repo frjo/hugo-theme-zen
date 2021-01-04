@@ -49,6 +49,9 @@ other = "על"
 [string_recent_content]
 other = "תוכן מעודכן"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "javascript פונקציה זו חייבת"
 

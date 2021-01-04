@@ -49,6 +49,9 @@ other = "على"
 [string_recent_content]
 other = "محتوى حديث"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "يجب تفعيل جافاسكريبت في المتصفح لاستخدام هذه الوظيفة."
 

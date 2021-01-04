@@ -49,6 +49,9 @@ other = "auf"
 [string_recent_content]
 other = "Aktuelle Inhalte"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "Javascript muss aktiviert sein um dieses Kontaktformular zu nutzen."
 

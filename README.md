@@ -183,6 +183,7 @@ params:
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   poweredby: true           # Show powered by hugo in footer
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
+  related: false            # Show related post under a "See also" section, default false.
   safariPinnedColor:        # Hex color value, used in meta tags, default "#000000".
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right

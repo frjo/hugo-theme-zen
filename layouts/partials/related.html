@@ -1,0 +1,11 @@
+<aside class="related layout__related">
+{{ $related := .Site.RegularPages.Related . | first 3 -}}
+{{ with $related -}}
+<h2>{{ i18n "string_see_also" }}</h2>
+<ul>
+{{ range . -}}
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end -}}
+</ul>
+{{ end -}}
+</aside>

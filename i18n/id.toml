@@ -49,6 +49,9 @@ other = "pada"
 [string_recent_content]
 other = "Konten Terkini"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "Anda harus mengaktifkan Javascript untuk menggunakan fasilitas ini."
 

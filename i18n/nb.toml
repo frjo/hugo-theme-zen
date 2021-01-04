@@ -49,6 +49,9 @@ other = "på"
 [string_recent_content]
 other = "Siste innhold"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "Du må ha skrudd på Javascript for å bruke denne funksjonen."
 

@@ -49,6 +49,9 @@ other = "on"
 [string_recent_content]
 other = "Recent content"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "You must have Javascript enabled to use this function."
 

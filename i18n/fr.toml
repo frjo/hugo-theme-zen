@@ -49,6 +49,9 @@ other = "sur"
 [string_recent_content]
 other = "Contenu récent"
 
+[string_see_also]
+other = "See also"
+
 [js_required]
 other = "Javascript doit être activé pour utiliser ce formulaire de contact."
 
