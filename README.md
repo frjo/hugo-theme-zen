@@ -6,7 +6,7 @@ It uses HTML5 with a modern CSS grid and flex layout. Recent versions of all the
 
 Sass is processed with Hugo pipes. To make using npm optional I have added the stylesheets from the excellent sass plugin [typey](https://www.npmjs.com/package/typey) directly to the theme.
 
-![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/lighthouse_report.png)
+![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/lighthouse_report.png)
 
 
 ## Table of contents
@@ -26,6 +26,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * [Multilingual](#multilingual)
 * [Search](#search)
 * [Contact form](#contact-form)
+* [Cookie consent](#cookie-consent)
 * [Dates](#dates)
 * [Podcast](#podcast)
 * [Shortcodes](#shortcodes)
@@ -41,6 +42,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * A mobile menu
 * Analytics with Matamo (Piwik)
 * Automatic linting of css and js
+* Cookie consent
 * Contact form (PHP)
 * CSS grid and flex for layout
 * Gulp.js (only for sass/js lint)
@@ -135,17 +137,17 @@ Some performance tools will complain about to many files (js and css files are n
 
 ### On the large screen
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/tn.png)
 
 
 ### On the small screen
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/tn_mobil.png)
 
 
 ### The mobile menu
 
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil_menu.png)
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/tn_mobil_menu.png)
 
 
 ## Configuration
@@ -159,6 +161,7 @@ theme: "zen"
 languageCode: "en-GB"       # Set your language code (only needed for none multilingual sites).
 
 params:
+  cookieConsent: true       # Show cookie consent form, default false.
   contact: "info@example.org"
   copyright: "This site is licensed under a 
               (https://creativecommons.org/licenses/by-sa/4.0/)."
@@ -182,8 +185,10 @@ params:
   piwikSiteId:              # Matamo site id
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   poweredby: true           # Show powered by hugo in footer
+  privacyPolicyUrl: ""      # If set will add link to cookie consent form.
+
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
-  related: false            # Show related post under a "See also" section, default false.
+  related: true             # Show related post under a "See also" section, default false.
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
@@ -353,6 +358,16 @@ Two types of spam protection is implemented. The form can only be posted after t
 Form validation is handled by HTML5 and there is some CSS to make it look nice.
 
 Javascript is used for spam protection and to display error/success messages.
+
+## Cookie consent
+
+Allow users to opt-in to tracking. Matomo and Google analytic are supported out of the box.
+
+See `assets/js/tracking.js` for example how to implement it.
+
+The name of the cookie set is "cookieconsent" and it can have the values "accept" or "decline" depending on what button the visitor clicks.
+
+![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/cookieconsent.png)
 
 
 ## Dates
@@ -607,7 +622,7 @@ To run the default gulp task, type:
 
 ## Getting help
 
-If you run into an issue that isn't answered by this documentation or the [`exampleSite`](https://github.com/frjo/hugo-theme-zen/tree/master/exampleSite), then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132). Feel free to tag me in your question, my forum username is [@frjo](https://discourse.gohugo.io/u/frjo/summary).
+If you run into an issue that isn't answered by this documentation or the [`exampleSite`](https://github.com/frjo/hugo-theme-zen/tree/main/exampleSite), then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132). Feel free to tag me in your question, my forum username is [@frjo](https://discourse.gohugo.io/u/frjo/summary).
 
 
 ## Credits
