@@ -94,3 +94,15 @@ other = "Pular se você é humano"
 
 [lang_select_title]
 other = "Seletor de idioma"
+
+[cookieconsent_message]
+other = "This website uses non essential cookies for tracking and analytics that you can accept or decline."
+
+[cookieconsent_accept]
+other = "Accept tracking"
+
+[cookieconsent_decline]
+other = "Decline tracking"
+
+[privacy_policy]
+other = "Privacy policy"

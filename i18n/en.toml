@@ -93,3 +93,15 @@ other = "Skip if you are a human"
 
 [lang_select_title]
 other = "Language selector"
+
+[cookieconsent_message]
+other = "This website uses non essential cookies for tracking and analytics that you can accept or decline."
+
+[cookieconsent_accept]
+other = "Accept tracking"
+
+[cookieconsent_decline]
+other = "Decline tracking"
+
+[privacy_policy]
+other = "Privacy policy"

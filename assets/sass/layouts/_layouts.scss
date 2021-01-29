@@ -17,7 +17,8 @@
   &__first-sidebar,
   &__second-sidebar,
   &__page-top,
-  &__page-bottom {
+  &__page-bottom,
+  &__cookieconsent {
     padding: 0 $zen-gutters / 2;
     min-width: 0;  // With display grid defaults to auto, making <pre> overflow.
 
@@ -39,11 +40,13 @@
                            'side1'
                            'side2'
                            'bottom'
-                           'foot';
+                           'foot'
+                           'notice';
       grid-template-rows: auto
                           auto
                           auto
                           1fr
+                          auto
                           auto
                           auto
                           auto
@@ -58,6 +61,7 @@
                               auto
                               1fr
                               auto
+                              auto
                               auto;
       }
 
@@ -67,7 +71,8 @@
                                'side1 top'
                                'side1 main'
                                'side1 bottom'
-                               'foot foot';
+                               'foot foot'
+                               'notice notice';
           grid-template-columns: 1fr
                                  2fr;
       }
@@ -78,7 +83,8 @@
                                'top side2'
                                'main side2'
                                'bottom side2'
-                               'foot foot';
+                               'foot foot'
+                               'notice notice';
           grid-template-columns: 2fr
                                  1fr;
       }
@@ -89,7 +95,8 @@
                                'side1 top side2'
                                'side1 main side2'
                                'side1 bottom side2'
-                               'foot foot foot';
+                               'foot foot foot'
+                               'notice notice notice';
           grid-template-columns: 1fr
                                  2fr
                                  1fr;
@@ -127,6 +134,11 @@
     &__footer {
       grid-area: foot;
     }
+
+    &__cookieconsent {
+      grid-area: notice;
+    }
+
   }
 
 }

@@ -74,6 +74,13 @@ button,
 // Add button variations here.
 .button,
 %button {
+  &--small {
+    @include type-layout(xs, 1);
+    @include margin-right(.3);
+    @include margin-bottom(.3);
+    padding: 0 6px;
+  }
+
   &--variant-name {
     // Add styles here.
   }

@@ -93,3 +93,15 @@ other = "Hoppa över ifall du är människa."
 
 [lang_select_title]
 other = "Språkväljare"
+
+[cookieconsent_message]
+other = "Denna webb-plats använder valfria cookies för analys och spårning av besökare."
+
+[cookieconsent_accept]
+other = "Godkänn spårning"
+
+[cookieconsent_decline]
+other = "Avstå spårning"
+
+[privacy_policy]
+other = "Personuppgiftsbehandling"
