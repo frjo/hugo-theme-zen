@@ -184,6 +184,8 @@ params:
   mobileMenu: true          # Turn on a mobile menu on small screens.
   piwikSiteId:              # Matamo site id
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
+  plausibleSiteID: ""       # Plausible site id/domain.
+  plausibleTrackerURL: ""   # Plausible url, schemaless and no slash on end. Optional, defaults to "plausible.io/…"
   poweredby: true           # Show powered by hugo in footer
   privacyPolicyUrl: ""      # If set will add link to cookie consent form.
 
