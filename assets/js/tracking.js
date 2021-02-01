@@ -16,13 +16,13 @@ _paq.push(['setTrackerUrl', matomoTrackingApiUrl]);
 _paq.push(['setSiteId', idSite]);
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
-if (typeof window.Cookies !== 'undefined' && Cookies.get('cookieconsent') === 'accept') {
+if (typeof Cookies !== 'undefined' && Cookies.get('cookieconsent') === 'accept') {
   _paq.push(['setConsentGiven']);
 }
 
 var googleAnalytics = '{{ .Site.GoogleAnalytics }}';
 if (cookieConsent) {
-  if (typeof window.Cookies === 'undefined' || Cookies.get('cookieconsent') !== 'accept') {
+  if (typeof Cookies === 'undefined' || Cookies.get('cookieconsent') !== 'accept') {
     window['ga-disable-' + googleAnalytics] = true;
   }
 }

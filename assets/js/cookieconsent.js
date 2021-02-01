@@ -2,10 +2,10 @@
 
   'use strict';
 
-  if (typeof window.Cookies !== 'undefined') {
+  if (typeof Cookies !== 'undefined') {
     const cookieconsent = document.querySelector('.cookieconsent');
 
-    if (typeof window.Cookies.get('cookieconsent') === 'undefined' && cookieconsent) {
+    if (typeof Cookies.get('cookieconsent') === 'undefined' && cookieconsent) {
       cookieconsent.classList.add('js-cookieconsent-open');
     }
 
@@ -25,10 +25,10 @@
     cookie_buttons.forEach(function (button) {
       button.addEventListener('click', function () {
         if (button.getAttribute('data-consent') === 'true') {
-          window.Cookies.set('cookieconsent', 'accept', cookie_options);
+          Cookies.set('cookieconsent', 'accept', cookie_options);
         }
         else {
-          window.Cookies.set('cookieconsent', 'decline', cookie_options);
+          Cookies.set('cookieconsent', 'decline', cookie_options);
         }
         cookieconsent.classList.remove('js-cookieconsent-open');
       });
