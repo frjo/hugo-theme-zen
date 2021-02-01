@@ -1,20 +1,20 @@
 // Cookieconsent
 
 .cookieconsent {
-    @include type-layout(s, 1);
-    position: sticky;
-    bottom:  0;
-    width: 100%;
-    color: $warning;
-    background-color: $warning-bg;
-    border-top:  4px solid $warning-border;
-    text-align: center;
-    transform: translateY(100vh);
-    transition: all 130ms ease-in;
+  @include type-layout(s, 1);
+  position: sticky;
+  bottom:  0;
+  width: 100%;
+  color: $warning;
+  background-color: $warning-bg;
+  border-top:  4px solid $warning-border;
+  text-align: center;
+  transform: translateY(100vh);
+  transition: all 130ms ease-in;
 
-    a {
-        color: inherit;
-    }
+  a {
+    color: inherit;
+  }
 }
 
 .button {
@@ -28,5 +28,5 @@
 }
 
 .js-cookieconsent-open {
-    transform: translateY(0);
+  transform: translateY(0);
 }
