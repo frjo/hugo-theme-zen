@@ -214,6 +214,7 @@ params:
     type: episodic/serial   # Podcast type, defaults to episodic (iTunes).
     newfeed:                # Are you moving? Set the new feed url here (iTunes).
     cdn:                    # CDN url, no slash on end (https://cdn.example.org).
+    local: false            # Are the audio files local (true) or remote (false), default to true.
     preload: none/metadata/auto # Set on the HTML5 audio tag, defaults to "metadata".
 ```
 

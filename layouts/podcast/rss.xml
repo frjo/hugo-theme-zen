@@ -50,7 +50,11 @@
       <author>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</author>
       {{ end -}}
       <description>{{ .Content | html }}</description>
+      {{ if $.Site.Params.Podcast.local | default true -}}
       {{ with .Params.podcast.mp3 }}{{ $file_stat := os.Stat (add "/static" (. | relURL)) }}<enclosure url="{{ if $.Site.Params.Podcast.cdn }}{{ add $.Site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" length="{{ $file_stat.Size }}" type="audio/mpeg" />{{ end }}
+      {{ else -}}
+      {{ with .Params.podcast.mp3 }}<enclosure url="{{ if $.Site.Params.Podcast.cdn }}{{ add $.Site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" type="audio/mpeg" />{{ end }}
+      {{ end -}}
       {{ with .Params.podcast.duration }}<itunes:duration>{{ . }}</itunes:duration>{{ end }}
       {{ with .Params.podcast.image.src }}{{ $image := resources.Get . }}<itunes:image href="{{ $image.Permalink }}" />{{ end }}
       {{ with .Params.podcast.episode }}<itunes:episode>{{ . }}</itunes:episode>{{ end }}
