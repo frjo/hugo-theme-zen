@@ -2,8 +2,8 @@
 <link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} title="{{ .Name }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 <meta name="description" content="{{ with (.Description | default (replaceRE "\n" " " (.Plain | truncate 170))) }}{{ . }}{{ end }}">
-<meta name="created" {{printf "content=%q" (.Date.Format "2006-01-02T15:04:05-0700") | safeHTMLAttr }}>
-<meta name="modified" {{printf "content=%q" (.Lastmod.Format "2006-01-02T15:04:05-0700") | safeHTMLAttr }}>
+<meta name="created" {{ printf "content=%q" (.Date.Format "2006-01-02T15:04:05-0700") | safeHTMLAttr }}>
+<meta name="modified" {{ printf "content=%q" (.Lastmod.Format "2006-01-02T15:04:05-0700") | safeHTMLAttr }}>
 {{ with $.Param "author" }}<meta name="author" content="{{ . }}">{{ end }}
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
