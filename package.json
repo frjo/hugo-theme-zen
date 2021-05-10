@@ -15,7 +15,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
-    "gulp-load-plugins": "^2.0.0",
+    "gulp-load-plugins": "^2.0.6",
     "gulp-sass-lint": "^1.4.0"
   },
   "engines": {
