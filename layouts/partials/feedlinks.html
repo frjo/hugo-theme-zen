@@ -1,7 +1,7 @@
 {{ $list := .AlternativeOutputFormats -}}
 {{ $length := (len $list) -}}
 {{ if $list -}}
-<p>Subscribe{{ with .Section }} to section {{ . }}{{ end }}: {{ range $index, $element := $list -}}
+<p>{{ i18n "string_follow" }}{{ with .Section }} {{ . }}{{ end }}: {{ range $index, $element := $list -}}
 <a rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">{{ .Name }}</a>{{ if ne (add $index 1) $length }} | {{ end }}
 {{- end -}}
 </p>

@@ -52,6 +52,9 @@ other = "תוכן מעודכן"
 [string_see_also]
 other = "See also"
 
+[string_follow]
+other = "Follow"
+
 [js_required]
 other = "javascript פונקציה זו חייבת"
 
