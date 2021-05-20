@@ -52,9 +52,6 @@ other = "Aktuelle Inhalte"
 [string_see_also]
 other = "See also"
 
-[string_follow]
-other = "Follow"
-
 [js_required]
 other = "Javascript muss aktiviert sein um dieses Kontaktformular zu nutzen."
 

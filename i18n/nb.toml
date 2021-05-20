@@ -52,9 +52,6 @@ other = "Siste innhold"
 [string_see_also]
 other = "See also"
 
-[string_follow]
-other = "Follow"
-
 [js_required]
 other = "Du må ha skrudd på Javascript for å bruke denne funksjonen."
 

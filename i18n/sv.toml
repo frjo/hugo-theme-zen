@@ -52,9 +52,6 @@ other = "Senaste innehåll"
 [string_see_also]
 other = "Se också"
 
-[string_follow]
-other = "Följ"
-
 [js_required]
 other = "Du behöver ha Javascript aktiverat för att använda denna funktion."
 
