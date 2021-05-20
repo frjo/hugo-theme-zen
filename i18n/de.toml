@@ -50,7 +50,7 @@ other = "auf"
 other = "Aktuelle Inhalte"
 
 [string_see_also]
-other = "See also"
+other = "Siehe auch"
 
 [js_required]
 other = "Javascript muss aktiviert sein um dieses Kontaktformular zu nutzen."
@@ -95,13 +95,13 @@ other = "Überspringen, wenn du ein Mensch bist"
 other = "Sprachauswahl"
 
 [cookieconsent_message]
-other = "This website uses non essential cookies for tracking and analytics that you can accept or decline."
+other = "Diese Website nutzt nicht nicht essentielle Cookies für Tracking und Analysen, die Sie akzeptieren oder ablehnen können."
 
 [cookieconsent_accept]
-other = "Accept tracking"
+other = "Tracking akzeptieren"
 
 [cookieconsent_decline]
-other = "Decline tracking"
+other = "Tracking ablehnen"
 
 [privacy_policy]
-other = "Privacy policy"
+other = "Datenschutzrichtlinie"
