@@ -26,7 +26,3 @@ if (cookieConsent) {
     window['ga-disable-' + googleAnalytics] = true;
   }
 }
-
-var _gaq = window._gaq || [];
-_gaq.push(['_setAccount', googleAnalytics]);
-_gaq.push(['_trackPageView']);

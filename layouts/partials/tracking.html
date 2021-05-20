@@ -11,5 +11,5 @@
 {{ if .Site.GoogleAnalytics -}}
 {{ $script := resources.Get "js/tracking.js" | resources.ExecuteAsTemplate "js/tracking.js" . | minify | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
-<script defer src="https://ssl.google-analytics.com/ga.js"></script>
+{{ template "_internal/google_analytics.html" . }}
 {{ end -}}
