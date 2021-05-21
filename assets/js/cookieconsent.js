@@ -6,6 +6,7 @@
     const cookieconsent = document.querySelector('.cookieconsent');
 
     if (typeof Cookies.get('cookieconsent') === 'undefined' && cookieconsent) {
+      cookieconsent.classList.remove('hidden');
       cookieconsent.classList.add('js-cookieconsent-open');
     }
 
@@ -31,6 +32,7 @@
           Cookies.set('cookieconsent', 'decline', cookie_options);
         }
         cookieconsent.classList.remove('js-cookieconsent-open');
+        cookieconsent.classList.add('hidden');
       });
     });
   }
