@@ -3,10 +3,10 @@
  * A JavaScript file for the theme.
  */
 
-(function ($) {
+(function () {
 
   'use strict';
 
   // Place your code here.
 
-})(u);
+})();

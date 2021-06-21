@@ -3,11 +3,11 @@
 .cookieconsent {
   @include type-layout(s, 1);
   position: sticky;
-  bottom:  0;
+  bottom: 0;
   width: 100%;
   color: $warning;
   background-color: $warning-bg;
-  border-top:  4px solid $warning-border;
+  border-top: 4px solid $warning-border;
   text-align: center;
   transform: translateY(100vh);
   transition: all 130ms ease-in;

@@ -2,9 +2,16 @@
   "name": "zen",
   "version": "1.0.0",
   "description": "The node.js requirements to build this project.",
-  "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp"
+    "lint-theme:css": "stylelint \"assets/sass/**/*.scss\"",
+    "lint-theme:js": "eslint \"assets/js/**/*.js\"",
+    "lint-project:css": "stylelint \"../../assets/sass/**/*.scss\"",
+    "lint-project:js": "eslint \"../../assets/js/**/*.js\"",
+    "lint-theme": "npm run lint-theme:css && npm run lint-theme:js",
+    "lint-project": "npm run lint-project:css && npm run lint-project:js",
+    "lint:css": "npm run lint-theme:css && npm run lint-project:css",
+    "lint:js": "npm run lint-theme:js && npm run lint-project:js",
+    "lint": "npm run lint:css && npm run lint:js"
   },
   "repository": {
     "type": "git",
@@ -13,10 +20,10 @@
   "author": "Fredrik Jonsson",
   "license": "GPL-2.0",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-load-plugins": "^2.0.6",
-    "gulp-sass-lint": "^1.4.0"
+    "eslint": "^7.29.0",
+    "eslint-plugin-template": "^0.4.0",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.19.0"
   },
   "engines": {
     "node": ">=12.0.0"

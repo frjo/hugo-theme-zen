@@ -102,7 +102,7 @@ $typefaces: (
     // We could also specify the following property:
     // letter-spacing: .5px,
   ),
-);
+); // stylelint-disable indentation
 
 // Output a horizontal grid to help with debugging typography.
 $typey-debug: false;

@@ -1,7 +1,11 @@
-extends: eslint:recommended
 env:
-  browser: true,
-  es6: true
+  browser: true
+  es2021: true
+extends: 'eslint:recommended'
+plugins:
+  - template
+parserOptions:
+  ecmaVersion: 12
 globals:
   jQuery: true
   u: true
@@ -17,7 +21,6 @@ rules:
   comma-dangle:
     - "error"
     - never
-  comma-spacing: "error"
   comma-style:
     - "error"
     - last

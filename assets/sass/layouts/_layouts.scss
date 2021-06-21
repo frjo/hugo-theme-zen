@@ -1,4 +1,4 @@
-// sass-lint:disable indentation
+// stylelint-disable indentation
 
 .layout {
   &__page {
@@ -29,7 +29,6 @@
 }
 
 @supports (display: grid) {
-
   .layout {
     &__page {
       display: grid;

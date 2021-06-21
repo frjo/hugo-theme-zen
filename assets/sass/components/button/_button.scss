@@ -14,7 +14,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  // sass-lint:disable no-color-hex, no-color-literals
+  // stylelint-disable color-no-hex, color-named
   @extend %button--disabled;
   @include typeface(headings);
   @include margin-right(.75);
@@ -38,7 +38,7 @@ button,
   border-bottom-color: #b4b4b4;
   border-radius: 2px;
 
-  // sass-lint:disable no-vendor-prefixes
+  // stylelint-disable property-no-vendor-prefix
   // Correct the inability to style clickable types in iOS and Safari.
   -moz-appearance: button;
   -webkit-appearance: button;
@@ -53,7 +53,7 @@ button,
   &:-moz-focusring {
     outline: 1px dotted ButtonText;
   }
-  // sass-lint:enable no-vendor-prefixes
+  // sass-lint:enable property-no-vendor-prefix
 
   &:hover,
   &:focus,

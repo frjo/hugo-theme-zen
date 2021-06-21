@@ -10,7 +10,7 @@
 abbr[title] {
   // Remove the bottom border in Chrome 57- and Firefox 39-.
   border-bottom: 0;
-  // sass-lint:disable no-duplicate-properties
+  // stylelint-disable no-duplicate-properties
   // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   text-decoration: underline;
   text-decoration: underline dotted;
@@ -31,7 +31,7 @@ strong {
   font-weight: inherit;
 }
 
-// sass-lint:disable no-mergeable-selectors
+// stylelint-disable no-mergeable-selectors
 b,
 strong {
   // Add the correct font weight in Chrome, Edge, and Safari.

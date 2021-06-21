@@ -9,7 +9,6 @@ $with-wireframes: false !default;
 // variable: `$with-wireframes: true;`
 
 @if $with-wireframes {
-
   .wireframe,
   %wireframe {
     outline: 1px solid $border;
@@ -31,5 +30,4 @@ $with-wireframes: false !default;
       @extend %wireframe;
     }
   }
-
 }

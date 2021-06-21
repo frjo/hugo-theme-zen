@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 /**
  * @file
  * A JavaScript file for flexsearch.
@@ -36,7 +38,7 @@
     results.appendChild(fragment);
   }
 
-  function doSearch () {
+  function doSearch() {
     const query = document.querySelector('.search-text').value.trim();
     const results = flexSearch.search({
       query: query,
@@ -45,21 +47,21 @@
     showResults(results);
   }
 
-  function enableUI () {
+  function enableUI() {
     const searchform = document.querySelector('.search-form');
     searchform.addEventListener('submit', function (e) {
       e.preventDefault();
       doSearch();
-    })
+    });
     searchform.addEventListener('keyup', function () {
       doSearch();
-    })
+    });
     document.querySelector('.search-loading').classList.add('hidden');
     document.querySelector('.search-input').classList.remove('hidden');
     document.querySelector('.search-text').focus();
   }
 
-  function buildIndex () {
+  function buildIndex() {
     document.querySelector('.search-loading').classList.remove('hidden');
     fetch('/searchindex.json')
       .then(function (response) {
