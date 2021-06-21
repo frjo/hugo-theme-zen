@@ -32,7 +32,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * [Shortcodes](#shortcodes)
 * [Content security policy headers](#Content-security-policy-headers)
 * [Choose between using jQuery or Umbrella JS](#choose-between-using-jquery-or-umbrella-js)
-* [Use Gulp to lint Sass and JavaScript](#use-gulp-to-lint-sass-and-javascript)
+* [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
@@ -41,16 +41,14 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 
 * A mobile menu
 * Analytics with Matamo (Piwik)
-* Automatic linting of css and js
 * Cookie consent
+* Commands for linting of css and js
 * Contact form (PHP)
 * CSS grid and flex for layout
-* Gulp.js (only for sass/js lint)
 * HTML5
 * Hugo Pipes for js and sass
 * jQuery 3
 * Micro.blog
-* Minify css
 * Meta tags and JSON-LD
 * Multilingual (i18n)
 * Normalize CSS
@@ -586,41 +584,25 @@ This is the way I construct my JavaScript files.
 ```
 
 
-## Use Gulp to lint Sass and JavaScript
+## Use npm to lint Sass and JavaScript
 
-* Lint your Sass using sass-lint.
+* Lint your Sass using stylelint.
 * Lint your JavaScript using eslint.
-* Will lint files in the theme as well as the root assets directory.
-* Watch all of your files as you develop and re-build everything on the fly.
+* Can lint files in the theme as well as the project assets directory.
 
 Set up your front-end development build tools:
 
 1. Install Node.js and npm, the Node.js package manager.
-
-    Detailed instructions are available on the "npm quick start guide":
-    https://github.com/kss-node/kss-node/wiki/npm-quick-start-guide
-
 2. The package.json file in your new sub-theme contains the versions of all the
 Node.js software you need. To install them run:
 
         npm install
 
-3. Install the gulp-cli tool globally. Normally, installing a Node.js globally
-is not recommended, which is why both Gulp and Grunt have created wrapper
-commands that will allow you to run "gulp" or "grunt" from anywhere, while
-using the local version of gulp or grunt that is installed in your project.
-To install gulp's global wrapper, run:
+3. Run the following commands to lint your theme and projects Sass and JavaScript code.
 
-        npm install -g gulp-cli
-
-5. The default gulp task will lint your Sass and JavaScript.
-To run the default gulp task, type:
-
-        gulp
-
-    To watch all your files as you develop, type:
-
-        gulp watch
+        npm run lint-theme
+        npm run lint-project
+        nmp run list (project + theme)
 
 
 ## Getting help
