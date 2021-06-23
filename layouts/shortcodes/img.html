@@ -4,6 +4,8 @@
 {{ $link := .Get "link" -}}
 {{ $size := .Get "size" -}}
 {{ $src := .Get "src" -}}
+{{ $srcset := .Get "srcset" -}}
+{{ $srcsetw := (slice) }}
 {{ $width := .Get "width" -}}
 {{ $maxwidth := .Site.Params.imageMaxWidth -}}
 {{ $realwidth := 0 -}}
@@ -19,6 +21,14 @@
     {{ $src = $original.RelPermalink -}}
     {{ $realwidth = $original.Width -}}
     {{ $realheight = $original.Height -}}
+  {{ end -}}
+  {{ if $srcset -}}
+    {{ range $set := split $srcset " " -}}
+      {{ $image := $original.Resize (printf "%sx" $set) -}}
+      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) }}
+    {{ end }}
+    {{ $width = "" -}}
+    {{ $height = "" -}}
   {{ end -}}
 {{ else if and $src (fileExists (add "/static" $src)) -}}
   {{ with (imageConfig (add "/static" $src)) -}}
@@ -49,5 +59,5 @@
   {{ $height = (math.Round $height) -}}
 {{ end -}}
 {{ with $link }}<a class="image-link" href="{{ . }}">{{ end -}}
-<img class="image{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+<img class="image{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{- if $link }}</a>{{ end }}

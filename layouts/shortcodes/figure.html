@@ -7,6 +7,8 @@
 {{ $link := .Get "link" -}}
 {{ $size := .Get "size" -}}
 {{ $src := .Get "src" -}}
+{{ $srcset := .Get "srcset" -}}
+{{ $srcsetw := (slice) }}
 {{ $title := .Get "title" -}}
 {{ $width := .Get "width" -}}
 {{ $maxwidth := .Site.Params.imageMaxWidth -}}
@@ -23,6 +25,14 @@
     {{ $src = $original.RelPermalink -}}
     {{ $realwidth = $original.Width -}}
     {{ $realheight = $original.Height -}}
+  {{ end -}}
+  {{ if $srcset -}}
+    {{ range $set := split $srcset " " -}}
+      {{ $image := $original.Resize (printf "%sx" $set) -}}
+      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) }}
+    {{ end }}
+    {{ $width = "" -}}
+    {{ $height = "" -}}
   {{ end -}}
 {{ else if and $src (fileExists (add "/static" $src)) -}}
   {{ with (imageConfig (add "/static" $src)) -}}
@@ -54,7 +64,7 @@
 {{ end -}}
 <figure class="image{{ with $class }} {{ . }}{{ end }}">
 {{ with $link }}<a href="{{ . }}">{{ end -}}
-<img src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+<img src="{{ $src }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{- if $link }}</a>{{ end }}
 {{ if or $title $caption $attr -}}
 <figcaption>
