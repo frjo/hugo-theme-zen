@@ -16,6 +16,18 @@
 {{ $cookieconsent := resources.Get "js/cookieconsent.js" | minify | fingerprint -}}
 <script defer src="{{ $cookieconsent.RelPermalink }}"></script>
 {{ end -}}
+{{ if $.Param "lazyload" -}}
+{{ $lozadmin := resources.Get "js/lib/lozad.min.js" | fingerprint -}}
+<script defer src="{{ $lozadmin.RelPermalink }}"></script>
+{{ $lozad := resources.Get "js/lozadinit.js" | fingerprint -}}
+<script defer src="{{ $lozad.RelPermalink }}"></script>
+{{ end -}}
+{{ if $.Param "listsort" -}}
+{{ $listmin := resources.Get "js/lib/list.min.js" | fingerprint -}}
+<script defer src="{{ $listmin.RelPermalink }}"></script>
+{{ $listsort := resources.Get "js/listsort.js" | fingerprint -}}
+<script defer src="{{ $listsort.RelPermalink }}"></script>
+{{ end -}}
 {{ if .HasShortcode "contact" -}}
 {{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
 <script defer src="{{ $contact.RelPermalink }}"></script>
@@ -28,3 +40,8 @@
 {{ end -}}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
 <script defer src="{{ $script.RelPermalink }}"></script>
+
+
+
+
+
