@@ -596,7 +596,7 @@ Node.js software you need. To install them run:
 
         npm run lint-theme
         npm run lint-project
-        nmp run list (project + theme)
+        nmp run lint (project + theme)
 
 
 ## Getting help
