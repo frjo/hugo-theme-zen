@@ -12,7 +12,6 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 ## Table of contents
 
 * [Features](#features)
-* [Demo](#demo)
 * [Minimum Hugo version](#minimum-hugo-version)
 * [Installation](#installation)
 * [Updating](#updating)
@@ -58,11 +57,6 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * Search with FlexSearch.js
 * Sub theme support (Theme Components)
 * Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
-
-
-## Demo
-
-https://themes.gohugo.io/theme/hugo-theme-zen/
 
 
 ## Minimum Hugo version
