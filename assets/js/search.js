@@ -9,10 +9,10 @@
 
   'use strict';
 
-  const flexSearch = new FlexSearch({
-    doc: {
+  const index = new FlexSearch.Document({
+    document: {
       id: 'id',
-      field: ['title','tags','content','date'],
+      index: ['title','tags','content','date'],
       store: ['title','summary','date','permalink']
     }
   });
@@ -24,7 +24,8 @@
     const results = document.querySelector('.search-results');
     results.textContent = '';
 
-    for (const item of items) {
+    for (const id in items) {
+      const item = items[id];
       const result = template.cloneNode(true);
       const a = result.querySelector('a');
       const time = result.querySelector('time');
@@ -40,11 +41,18 @@
 
   function doSearch() {
     const query = document.querySelector('.search-text').value.trim();
-    const results = flexSearch.search({
+    const results = index.search({
       query: query,
+      enrich: true,
       limit: {{ .Site.Params.searchLimit | default 20 }}
     });
-    showResults(results);
+    const items = {};
+    results.forEach( function(result) {
+        result.result.forEach( function(r) {
+          items[r.id] = r.doc;
+        });
+    });
+    showResults(items);
   }
 
   function enableUI() {
@@ -53,7 +61,7 @@
       e.preventDefault();
       doSearch();
     });
-    searchform.addEventListener('keyup', function () {
+    searchform.addEventListener('input', function () {
       doSearch();
     });
     document.querySelector('.search-loading').classList.add('hidden');
@@ -68,7 +76,9 @@
         return response.json();
       })
       .then(function (data) {
-        flexSearch.add(data);
+        data.forEach(function (item) {
+          index.add(item);
+        })
       });
   }
 

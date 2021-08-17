@@ -33,15 +33,10 @@
 <script defer src="{{ $contact.RelPermalink }}"></script>
 {{ end -}}
 {{ if .HasShortcode "search" -}}
-{{ $flexsearch := resources.Get "js/lib/flexsearch.min.js" | fingerprint -}}
+{{ $flexsearch := resources.Get "js/lib/flexsearch.compact.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
 {{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . | minify | fingerprint -}}
 <script defer src="{{ $search.RelPermalink }}"></script>
 {{ end -}}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
 <script defer src="{{ $script.RelPermalink }}"></script>
-
-
-
-
-
