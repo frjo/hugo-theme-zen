@@ -223,6 +223,13 @@ This is a part that almost everyone will like to customise in some manner. The t
 If you do not specify any sections in the "mainSections" param (see configuration above) it will list the section with the most posts. If you do not want to list anything, set it but leave the value empty.
 
 
+### Colours and variables
+
+This is another part that almost everyone will like to customise.
+
+They are found in the `assets/sass/init/_colors.scss` and `assets/sass/init/_variables.scss` files. Copy them to the root `assets/sass/init/` directory to set your own values.
+
+
 ### Logo
 
 Place your logo at `static/images/logo.png`. If you don't provide a logo, then the default theme logo will be used.
@@ -251,7 +258,14 @@ If the default sidebar is activated it will display each section with all its pa
 They are set up in `layouts/partials/menu.html`, `layouts/partials/mobilmenu.html` and `layouts/partials/sidebar.html`.
 
 
-### Styles and scripts
+### CSS grid for layout
+
+Modern CSS grid is the easiest and cleanest way to layout your pages.
+
+The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be done by just reordering "grid-template-rows".
+
+
+### Other styles and scripts
 
 Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
 
@@ -265,12 +279,6 @@ The sass files are by default built for production, compressed with fingerprint.
 
 By setting the Hugo environment variable to "development" (default when running `hugo server`) they will instead be nested with sourcemaps.
 
-### CSS grid for layout
-
-Modern CSS grid is the easiest and cleanest way to layout your pages.
-
-The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be done by just reordering "grid-template-rows".
-
 
 ## Render hook templates
 
@@ -283,7 +291,7 @@ Needed styles are in the `_zen.scss` file.
 
 ## Multilingual
 
-Arabic, English, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
+Arabic, English, Hebrew, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
