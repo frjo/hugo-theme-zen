@@ -1,0 +1,107 @@
+[menu_title]
+other = "Päävalikko"
+
+[menu_home]
+other = "Koti"
+
+[menu_mobile]
+other = "Valikko"
+
+[pager_next]
+other = "Seuraava"
+
+[pager_prev]
+other = "Edellinen"
+
+[taxo_tags]
+other = "Avainsanat"
+
+[last_mod]
+other = "Päivitetty:"
+
+[created]
+other = "Luotu:"
+
+[search_placeholder]
+other = "Hakusana."
+
+[search_title]
+other = "Hae"
+
+[search_loading]
+other = "Ladataan hakuindeksiä…"
+
+[string_at]
+other = ""
+
+[string_by]
+other = ""
+
+[string_follow]
+other = "seuraa"
+
+[string_in]
+other = ""
+
+[string_on]
+other = ""
+
+[string_recent_content]
+other = "Viimeaikainen sisältö"
+
+[string_see_also]
+other = "Lue myös"
+
+[js_required]
+other = "Javascript-teknologia täytyy olla tuettuna jotta tämä toiminto on käytössä."
+
+[contact_submitted]
+other = "Viestisi on lähetetty."
+
+[contact_error]
+other = "Viestisi lähettämisessä tapahtui virhe."
+
+[contact_name]
+other = "Nimi"
+
+[contact_name_placeholder]
+other = "Sinun nimesi"
+
+[contact_mail]
+other = "sähköpostiosoite"
+
+[contact_mail_placeholder]
+other = "sähköpostiosoitteesi"
+
+[contact_subject]
+other = "Otsikko"
+
+[contact_subject_placeholder]
+other = "Lyhyt otsikko"
+
+[contact_message]
+other = "Viesti"
+
+[contact_message_placeholder]
+other = "Viesti kirjoitetaan tähän..."
+
+[contact_submit]
+other = "Lähetä viesti"
+
+[contact_honypot]
+other = "Jätä tämä väliin jos olet ihminen."
+
+[lang_select_title]
+other = "Kielenvalitsin"
+
+[cookieconsent_message]
+other = "Tämä sivusto käyttää evästeitä käytön ja kävijöiden analysointiin."
+
+[cookieconsent_accept]
+other = "Hyväksy seuranta"
+
+[cookieconsent_decline]
+other = "Hylkää seuranta"
+
+[privacy_policy]
+other = "Yksityisyyskäytäntö"
