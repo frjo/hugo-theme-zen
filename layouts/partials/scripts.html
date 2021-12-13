@@ -11,8 +11,6 @@
 <script defer src="{{ $mobilemenu.RelPermalink }}"></script>
 {{ end -}}
 {{ if $.Param "cookieconsent" -}}
-{{ $jscookie := resources.Get "js/lib/js.cookie.min.js" | fingerprint -}}
-<script src="{{ $jscookie.RelPermalink }}"></script>
 {{ $cookieconsent := resources.Get "js/cookieconsent.js" | minify | fingerprint -}}
 <script defer src="{{ $cookieconsent.RelPermalink }}"></script>
 {{ end -}}
