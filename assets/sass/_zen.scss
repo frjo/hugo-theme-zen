@@ -3,11 +3,11 @@
 // Page
 
 body {
-  background-color: $backdrop;
+  background-color: var(--color-backdrop);
 }
 
 .page {
-  background-color: $body-bg;
+  background-color: var(--color-body-bg);
 }
 
 .header {
@@ -22,7 +22,7 @@ body {
   @include margin-top(1.5);
   @include padding(.5 0);
   text-align: center;
-  border-top: 2px solid $brand;
+  border-top: 2px solid var(--color-brand);
 
   p {
     margin: 0;
@@ -67,7 +67,7 @@ article > header,
 .header,
 .footer {
   @include typeface(headings);
-  color: $headings;
+  color: var(--color-headings);
   font-weight: normal;
 }
 
@@ -84,7 +84,7 @@ aside {
 
 article {
   & > header {
-    color: $text-meta;
+    color: var(--color-text-meta);
   }
 
   .submitted {
@@ -114,7 +114,7 @@ article {
   }
 
   .content-dates {
-    color: $text-meta;
+    color: var(--color-text-meta);
     text-align: right;
   }
 
@@ -128,11 +128,11 @@ article {
   }
 
   pre {
-    color: $code;
+    color: var(--color-code);
     border-radius: 3px;
     padding: 5px;
-    border: 1px solid $border;
-    background-color: $text-bg;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-text-bg);
     overflow: auto;
     max-height: 300px;
     max-width: 90vw;
@@ -228,19 +228,19 @@ figure {
 
   a {
     display: block;
-    background-color: $brand;
-    color: $text-bg;
+    background-color: var(--color-brand);
+    color: var(--color-text-bg);
     padding: 2px 8px;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      background-color: $brand-dark;
+      background-color: var(--color-brand-dark);
     }
 
     &:active,
     &.active {
-      background-color: $brand;
+      background-color: var(--color-brand);
       text-decoration: underline;
     }
   }
@@ -271,16 +271,16 @@ figure {
 
     &:required+span::after {
       content: ' *';
-      color: $red;
+      color: var(--color-red);
       vertical-align: top;
     }
 
     &:not(:placeholder-shown):valid {
-      background-color: $status-bg;
+      background-color: var(--color-status-bg);
     }
 
     &:not(:placeholder-shown):invalid {
-      background-color: $error-bg;
+      background-color: var(--color-error-bg);
     }
   }
 }
@@ -289,11 +289,11 @@ figure {
   input,
   textarea {
     &:valid {
-      background-color: $status-bg;
+      background-color: var(--color-status-bg);
     }
 
     &:invalid {
-      background-color: $error-bg;
+      background-color: var(--color-error-bg);
     }
   }
 }

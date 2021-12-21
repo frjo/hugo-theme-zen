@@ -34,7 +34,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: $mobile-menu-cover;
+    background-color: var(--color-mobile-menu-cover);
     opacity: 0;
 
     .js-nav-open & {
@@ -53,9 +53,9 @@
     text-decoration: none;
     font-weight: bold;
     line-height: 1;
-    border: 1px solid $border;
+    border: 1px solid var(--color-border);
     border-radius: 3px;
-    color: $text;
+    color: var(--color-text);
     pointer-events: auto;
 
     @include respond-to(s) {
@@ -63,7 +63,7 @@
     }
 
     .js-nav-open & {
-      color: $text-bg;
+      color: var(--color-text-bg);
     }
 
     &::after {
@@ -72,17 +72,17 @@
       margin-left: $zen-gutters / 4;
       width: $zen-gutters;
       height: $zen-gutters;
-      border-top: 12px double $text;
-      border-bottom: 4px solid $text;
+      border-top: 12px double var(--color-text);
+      border-bottom: 4px solid var(--color-text);
     }
 
     .js-nav-open &::after {
-      border-color: $text-bg;
+      border-color: var(--color-text-bg);
     }
   }
 
   &__sheet {
-    background-color: $mobile-menu;
+    background-color: var(--color-mobile-menu);
     width: 90vw;
     height: 100vh;
     padding: 2rem;
@@ -90,18 +90,18 @@
     z-index: 21;
 
     a {
-      color: $text-bg;
+      color: var(--color-text-bg);
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: $text-bg;
+        color: var(--color-text-bg);
       }
     }
 
     .js-nav-open & {
       pointer-events: auto;
-      box-shadow: -10px 0 10px -10px $nearblack;
+      box-shadow: -10px 0 10px -10px var(--color-nearblack);
       transform: translateX(10vw);
     }
   }

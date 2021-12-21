@@ -5,9 +5,9 @@
   position: sticky;
   bottom: 0;
   width: 100%;
-  color: $warning;
-  background-color: $warning-bg;
-  border-top: 4px solid $warning-border;
+  color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+  border-top: 4px solid var(--color-warning-border);
   text-align: center;
   transform: translateY(100vh);
   transition: all 130ms ease-in;
@@ -19,11 +19,11 @@
 
 .button {
   &--accept {
-    border-color: $status;
+    border-color: var(--color-status);
   }
 
   &--decline {
-    border-color: $warning-border;
+    border-color: var(--color-warning-border);
   }
 }
 

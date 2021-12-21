@@ -44,7 +44,7 @@
     const results = index.search({
       query: query,
       enrich: true,
-      limit: {{ .Site.Params.searchLimit | default 20 }}
+      limit: {{ site.Params.searchLimit | default 20 }}
     });
     const items = {};
     results.forEach( function(result) {

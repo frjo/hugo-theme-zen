@@ -3,13 +3,13 @@
 .inverted-box,
 %inverted-box {
   @include padding(.5);
-  background: $brand;
-  color: $text-bg;
+  background: var(--color-brand);
+  color: var(--color-text-bg);
   border-radius: 5px;
 
   :link,
   :visited {
-    color: $text-bg;
+    color: var(--color-text-bg);
   }
 
   p,

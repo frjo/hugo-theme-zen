@@ -10,6 +10,10 @@
 
 @import 'init';
 
+// Ensure fonts get loaded first to minimize front-end performance impact.
+
+@import 'fonts';
+
 // Defaults
 //
 // These are the default base styles applied to HTML elements.
@@ -17,9 +21,6 @@
 // Component classes can override these styles, but if no class applies a style
 // to an HTML element, these styles will be the ones displayed.
 
-// Ensure fonts get loaded first to minimize front-end performance impact.
-
-@import 'base/fonts';
 @import 'base/normalize';
 
 // Layouts

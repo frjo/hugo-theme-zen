@@ -5,11 +5,11 @@
  * A JavaScript file for analytic tracking.
  */
 
-var cookiebanner = {{ .Site.Params.cookieConsent | default false }};
+var cookiebanner = {{ site.Params.cookieConsent | default false }};
 var cookieconsent = localStorage.getItem('cookieconsent');
-var idSite = '{{ .Site.Params.piwikSiteID }}';
-var matomoTrackingApiUrl = 'https://{{ .Site.Params.piwikTrackerUrl }}/matomo.php';
-var googleAnalytics = '{{ .Site.GoogleAnalytics }}';
+var idSite = '{{ site.Params.piwikSiteID }}';
+var matomoTrackingApiUrl = 'https://{{ site.Params.piwikTrackerUrl }}/matomo.php';
+var googleAnalytics = '{{ site.GoogleAnalytics }}';
 
 if (idSite) {
   var _paq = window._paq || [];

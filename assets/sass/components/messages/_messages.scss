@@ -7,20 +7,20 @@
   width: 95%;
 
   &.status {
-    background-color: $status-bg;
-    color: $status;
-    border-color: $status;
+    background-color: var(--color-status-bg);
+    color: var(--color-status);
+    border-color: var(--color-status);
   }
 
   &.warning {
-    background-color: $warning-bg;
-    color: $warning;
-    border-color: $warning;
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning);
+    border-color: var(--color-warning);
   }
 
   &.error {
-    background-color: $error-bg;
-    color: $error;
-    border-color: $error;
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+    border-color: var(--color-error);
   }
 }

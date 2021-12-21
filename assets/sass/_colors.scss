@@ -1,0 +1,87 @@
+// stylelint-disable color-no-hex, color-named
+
+// Base colors.
+$black:                 #000;
+$nearblack:             lighten($black, 20%); // #333
+$grey-dark:             lighten($black, 40%); // #666
+$grey:                  lighten($black, 60%); // #999
+$grey-light:            lighten($black, 80%); // #ccc
+$grey-extra-light:      lighten($black, 93.33%); // #eee
+$white:                 #fff;
+
+$blue:                  #0072b9;
+$red:                   #c00;
+$green:                 #43a808;
+$yellow:                #fd0;
+
+$brand:                 $nearblack;
+$brand-alt:             $grey;
+$brand-dark:            $grey-dark;
+
+// Colour map.
+$colors: (
+  brand:                  $brand,
+  brand-alt:              $brand-alt,
+  brand-dark:             $brand-dark,
+  text:                   $black,
+  text-bg:                $white,
+  text-meta:              $grey-dark,
+
+  link:                   $black,
+  link-visited:           $black,
+  link-hover:             $nearblack,
+  link-active:            $red,
+
+  border:                 $grey-light,
+  border-dark:            $nearblack,
+
+  autocomplete:           $black,
+  autocomplete-bg:        $white,
+  autocomplete-select:    $white,
+  autocomplete-select-bg: $blue,
+
+  body-bg:                $white,
+  header-bg:              $nearblack,
+  backdrop:               $grey-extra-light,
+
+  mobile-menu:            $nearblack,
+  mobile-menu-cover:      rgba($black, .2),
+
+  button:                 $nearblack,
+  button-disabled:        $grey,
+
+  form-error:             $red,
+
+  mark-highlight:         $red,
+  mark-bg:                $yellow,
+
+  menu-active:            $black,
+
+  preview-bg:             lighten($yellow, 43%),
+
+  row-stripe:             $white,
+  row-disabled:           $grey-light,
+
+  status:                 $green,
+  status-bg:              lighten($green, 62%),
+  status-highlight:       $black,
+  warning:                $black,
+  warning-bg:             lighten($yellow, 45%),
+  warning-border:         $yellow,
+  error:                  $red,
+  error-bg:               lighten($red, 57%),
+
+  watermark:              $grey-extra-light,
+
+  headings:               $nearblack,
+
+  code:                   $nearblack,
+);
+
+// Convert colour map to css4 variables.
+// Use like this: var(--color-brand)
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+}
