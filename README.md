@@ -9,6 +9,18 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 ![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/lighthouse_report.png)
 
 
+## Version 2.0
+
+* Use of css4 variables. Colours are now used like this `var(--color-brand)`.
+* The colors, fonts and variables sass files are now in the root sass directory.
+* Use `site` instead of `.Site` and `$.Site`.
+
+### Todo
+
+* Implement more use of css4 variables.
+* Modernise the normalise css.
+* Make css4 variables change based on breakpoints. The zen-gutters e.g. can be set to 10px for mobile and increase to 20px for larger displays.
+
 ## Table of contents
 
 * [Features](#features)
