@@ -1,17 +1,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>{{ .Site.Params.Podcast.Title | default .Site.Title }}</title>
+    <title>{{ site.Params.Podcast.Title | default site.Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>{{ .Site.Params.Podcast.Description | default .Site.Params.Description }}</description>
+    <description>{{ site.Params.Podcast.Description | default site.Params.Description }}</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>{{ .Site.Params.Podcast.Lang | default .Site.LanguageCode }}</language>
-    {{ with .Site.Author.email -}}
-    <managingEditor>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{end}}</managingEditor>
+    <language>{{ site.Params.Podcast.Lang | default site.LanguageCode }}</language>
+    {{ with site.Author.email -}}
+    <managingEditor>{{ . }}{{ with site.Author.name }} ({{ . }}){{end}}</managingEditor>
     {{ end -}}
-    {{ with .Site.Author.email -}}
-    <webMaster>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{end}}</webMaster>
+    {{ with site.Author.email -}}
+    <webMaster>{{ . }}{{ with site.Author.name }} ({{ . }}){{end}}</webMaster>
     {{ end -}}
-    {{ with .Site.Copyright -}}
+    {{ with site.Copyright -}}
     <copyright>{{ . }}</copyright>
     {{ end -}}
     {{ if not .Date.IsZero -}}
@@ -20,25 +20,25 @@
     {{ with .OutputFormats.Get "RSS" -}}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end -}}
-    {{ with .Site.Params.Podcast.Image }}{{ $image := resources.Get . }}<itunes:image href="{{ $image.Permalink }}" />{{ end }}
-    {{ with .Site.Params.Podcast.Category -}}
+    {{ with site.Params.Podcast.Image }}{{ $image := resources.Get . }}<itunes:image href="{{ $image.Permalink }}" />{{ end }}
+    {{ with site.Params.Podcast.Category -}}
     <itunes:category {{ if .name }}text="{{ .name }}"{{end}}>
       {{ range .subcategories }}<itunes:category text="{{ . }}" />{{ end }}
     </itunes:category>
     {{ end -}}
-    {{ with .Site.Params.Podcast.Owner -}}
+    {{ with site.Params.Podcast.Owner -}}
     <itunes:owner>
     {{ with .name }}<itunes:name>{{ . }}</itunes:name>{{ end }}
     {{ with .email }}<itunes:email>{{ . }}</itunes:email>{{ end }}
     </itunes:owner>
     {{ end -}}
-    {{ with .Site.Params.Podcast.Description }}<itunes:summary>{{ . }}</itunes:summary>{{ end }}
-    {{ with .Site.Params.Podcast.Author }}<itunes:author>{{ . }}</itunes:author>{{ end }}
-    {{ with .Site.Params.Podcast.Type }}<itunes:type>{{ . }}</itunes:type>{{ end }}
-    {{ with .Site.Params.Podcast.Block }}<itunes:block>{{ . }}</itunes:block>{{ end }}
-    {{ with .Site.Params.Podcast.Complete }}<itunes:complete>{{ . }}</itunes:complete>{{ end }}
-    {{ with .Site.Params.Podcast.NewFeed }}<itunes:new-feed-url>{{ . }}</itunes:new-feed-url>{{ end }}
-    <itunes:explicit>{{ if .Site.Params.Podcast.Explicit }}true{{ else }}false{{ end }}</itunes:explicit>
+    {{ with site.Params.Podcast.Description }}<itunes:summary>{{ . }}</itunes:summary>{{ end }}
+    {{ with site.Params.Podcast.Author }}<itunes:author>{{ . }}</itunes:author>{{ end }}
+    {{ with site.Params.Podcast.Type }}<itunes:type>{{ . }}</itunes:type>{{ end }}
+    {{ with site.Params.Podcast.Block }}<itunes:block>{{ . }}</itunes:block>{{ end }}
+    {{ with site.Params.Podcast.Complete }}<itunes:complete>{{ . }}</itunes:complete>{{ end }}
+    {{ with site.Params.Podcast.NewFeed }}<itunes:new-feed-url>{{ . }}</itunes:new-feed-url>{{ end }}
+    <itunes:explicit>{{ if site.Params.Podcast.Explicit }}true{{ else }}false{{ end }}</itunes:explicit>
     {{ range .Pages }}
     <item>
       <title>{{ .Title }}</title>
@@ -46,14 +46,14 @@
       <link>{{ .Permalink }}</link>
       <guid>{{ .Permalink }}</guid>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Author.email -}}
-      <author>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</author>
+      {{ with site.Author.email -}}
+      <author>{{ . }}{{ with site.Author.name }} ({{ . }}){{ end }}</author>
       {{ end -}}
       <description>{{ .Content | html }}</description>
-      {{ if $.Site.Params.Podcast.local | default true -}}
-      {{ with .Params.podcast.mp3 }}{{ $file_stat := os.Stat (add "/static" (. | relURL)) }}<enclosure url="{{ if $.Site.Params.Podcast.cdn }}{{ add $.Site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" length="{{ $file_stat.Size }}" type="audio/mpeg" />{{ end }}
+      {{ if site.Params.Podcast.local | default true -}}
+      {{ with .Params.podcast.mp3 }}{{ $file_stat := os.Stat (add "/static" (. | relURL)) }}<enclosure url="{{ if site.Params.Podcast.cdn }}{{ add site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" length="{{ $file_stat.Size }}" type="audio/mpeg" />{{ end }}
       {{ else -}}
-      {{ with .Params.podcast.mp3 }}<enclosure url="{{ if $.Site.Params.Podcast.cdn }}{{ add $.Site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" type="audio/mpeg" />{{ end }}
+      {{ with .Params.podcast.mp3 }}<enclosure url="{{ if site.Params.Podcast.cdn }}{{ add site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" type="audio/mpeg" />{{ end }}
       {{ end -}}
       {{ with .Params.podcast.duration }}<itunes:duration>{{ . }}</itunes:duration>{{ end }}
       {{ with .Params.podcast.image.src }}{{ $image := resources.Get . }}<itunes:image href="{{ $image.Permalink }}" />{{ end }}

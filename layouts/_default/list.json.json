@@ -1,20 +1,20 @@
 {{- $pctx := . -}}
 {{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
 {{- $pages := $pctx.RegularPages -}}
-{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
 {{- end -}}
 {{ $length := (len $pages) -}}
 {
     "version": "https://jsonfeed.org/version/1.1",
-    "title": "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ .Site.Title }}{{ end }}",
-    "description": "{{ i18n "string_recent_content" }} {{ if ne  .Title  .Site.Title }}{{ with .Title }}{{ i18n "string_in" }} {{ . }} {{ end }}{{ end }}{{ i18n "string_on" }} {{ .Site.Title }}",
-    "home_page_url": "{{ .Site.BaseURL }}",
+    "title": "{{ if eq  .Title  site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ site.Title }}{{ end }}",
+    "description": "{{ i18n "string_recent_content" }} {{ if ne  .Title  site.Title }}{{ with .Title }}{{ i18n "string_in" }} {{ . }} {{ end }}{{ end }}{{ i18n "string_on" }} {{ site.Title }}",
+    "home_page_url": "{{ site.BaseURL }}",
     {{ with .OutputFormats.Get "JSON" -}}
     "feed_url": "{{ .Permalink }}",
     {{ end -}}
-    {{ with .Site.LanguageCode -}}
+    {{ with site.LanguageCode -}}
     "language": "{{ . }}",
     {{ end -}}
     {{ with $.Param "icon" -}}
@@ -23,11 +23,11 @@
     {{ with $.Param "favicon" -}}
     "favicon": "{{ . | absURL }}",
     {{ end -}}
-    {{ with .Site.Author.name -}}
+    {{ with site.Author.name -}}
     "authors": [
         {
-            "name": "{{ . }}"{{ with $.Site.Author.url }},
-            "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
+            "name": "{{ . }}"{{ with site.Author.url }},
+            "url": "{{ . }}"{{ end }}{{ with site.Author.avatar }},
             "avatar": "{{ . | absURL }}"{{ end }}
         }
     ],

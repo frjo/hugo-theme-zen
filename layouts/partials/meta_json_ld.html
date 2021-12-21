@@ -30,18 +30,18 @@
     {{ end -}}
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": {{ .Site.BaseURL }}
+      "@id": {{ site.BaseURL }}
     },
     "publisher": {
       "@type": "Organization",
-      "name": {{ .Site.Title }},
+      "name": {{ site.Title }},
       {{ with $.Param "icon" -}}
       "logo" : {
         "@type": "ImageObject",
         "url": {{ . | absURL }}
       },
       {{ end -}}
-      "url": {{ .Site.BaseURL }}
+      "url": {{ site.BaseURL }}
     }
   }
 </script>

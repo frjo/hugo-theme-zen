@@ -1,14 +1,14 @@
-{{ if and .Site.Params.piwikTrackerUrl .Site.Params.piwikSiteID -}}
+{{ if and site.Params.piwikTrackerUrl site.Params.piwikSiteID -}}
 {{ $script := resources.Get "js/tracking.js" | resources.ExecuteAsTemplate "js/tracking.js" . | minify | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
-<script defer src="https://{{ .Site.Params.piwikTrackerUrl }}/matomo.js"></script>
+<script defer src="https://{{ site.Params.piwikTrackerUrl }}/matomo.js"></script>
 {{ end -}}
 
-{{ if .Site.Params.plausibleSiteID -}}
-<script async defer data-domain="{{ .Site.Params.plausibleSiteID }}" src="{{ .Site.Params.plausibleTrackerURL | default "https://plausible.io/js/plausible.js" }}"></script>
+{{ if site.Params.plausibleSiteID -}}
+<script async defer data-domain="{{ site.Params.plausibleSiteID }}" src="{{ site.Params.plausibleTrackerURL | default "https://plausible.io/js/plausible.js" }}"></script>
 {{ end -}}
 
-{{ if .Site.GoogleAnalytics -}}
+{{ if site.GoogleAnalytics -}}
 {{ $script := resources.Get "js/tracking.js" | resources.ExecuteAsTemplate "js/tracking.js" . | minify | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
 {{ template "_internal/google_analytics.html" . }}

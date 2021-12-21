@@ -11,7 +11,7 @@
 {{ $srcsetw := (slice) }}
 {{ $title := .Get "title" -}}
 {{ $width := .Get "width" -}}
-{{ $maxwidth := .Site.Params.imageMaxWidth -}}
+{{ $maxwidth := site.Params.imageMaxWidth -}}
 {{ $realwidth := 0 -}}
 {{ $realheight := 0 -}}
 {{ if and $src (fileExists (add "/assets" $src)) -}}

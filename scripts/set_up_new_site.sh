@@ -15,8 +15,9 @@ fi
 
 mkdir -p "assets/sass/init"
 
-copy_files=("themes/zen/assets/sass/init/_colors.scss:assets/sass/init/_colors.scss"
-            "themes/zen/assets/sass/init/_variables.scss:assets/sass/init/_variables.scss"
+copy_files=("themes/zen/assets/sass/_colors.scss:assets/sass/_colors.scss"
+            "themes/zen/assets/sass/_variables.scss:assets/sass/_variables.scss"
+            "themes/zen/assets/sass/_fonts.scss:assets/sass/_fonts.scss"
             "themes/zen/assets/sass/_custom.scss:assets/sass/_custom.scss"
             "themes/zen/assets/sass/_zen.scss:assets/sass/_zen.scss"
             "themes/zen/layouts/index.html:layouts/index.html"
