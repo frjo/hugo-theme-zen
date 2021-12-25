@@ -1,12 +1,8 @@
 //
 // The major stylesheet for this theme.
 //
-// We categorize our components by creating headings in this file. See the
-// description on the style guide home page for more information.
 
 // Colors and Sass
-//
-// Documentation for colors and Sass mixins and variables.
 
 @import 'init';
 
@@ -14,19 +10,11 @@
 
 @import 'fonts';
 
-// Defaults
-//
-// These are the default base styles applied to HTML elements.
-//
-// Component classes can override these styles, but if no class applies a style
-// to an HTML element, these styles will be the ones displayed.
+// Reset browsers to some sane defaults.
 
-@import 'base/normalize';
+@import 'reset/reset';
 
 // Layouts
-//
-// The layout styling for major parts of the page that are included with the
-// theme.
 
 @import 'layouts/layouts';
 
@@ -36,8 +24,10 @@
 // class names specified in the component.
 
 @import 'components/box/box';
+@import 'components/button/button';
 @import 'components/clearfix/clearfix';
 @import 'components/cookieconsent/cookieconsent';
+@import 'components/divider/divider';
 @import 'components/header/header';
 @import 'components/hidden/hidden';
 @import 'components/highlight-mark/highlight-mark';
@@ -47,22 +37,22 @@
 @import 'components/language-selector/language-selector';
 @import 'components/list-straight-left/list-straight-left';
 @import 'components/messages/messages';
+@import 'components/monospace/monospace';
 @import 'components/responsive-video/responsive-video';
 @import 'components/visually-hidden/visually-hidden';
 @import 'components/watermark/watermark';
 @import 'components/wireframe/wireframe';
 
 // Navigation
-//
-// Navigation components are specialized design components that are used for
-// page navigation.
 
 @import 'navigation/more-link/more-link';
 @import 'navigation/navbar/navbar';
 @import 'navigation/pager/pager';
 
-// zen
+// Zen
+
 @import 'zen';
 
 // Custom
+
 @import 'custom';

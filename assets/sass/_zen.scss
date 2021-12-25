@@ -298,6 +298,13 @@ figure {
   }
 }
 
+// Icons.
+
+.icon {
+  // Reset set SVG to block but icons are normally inline.
+  display: inline;
+}
+
 // Header anchor links
 
 .anchor-link {

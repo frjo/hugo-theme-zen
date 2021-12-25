@@ -1,0 +1,10 @@
+// Monospace
+
+.monospace,
+%monospace {
+  // Correct the inheritance and scaling of font size in all browsers.
+  // The font-family value ends with ", serif".
+  @include typeface(monospace);
+  // Correct the odd `em` font sizing in all browsers.
+  font-size: 1em;
+}

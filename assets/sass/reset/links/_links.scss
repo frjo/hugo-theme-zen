@@ -14,9 +14,6 @@
 a,
 %link {
   color: var(--color-link);
-  // stylelint-disable property-no-vendor-prefix
-  // Remove gaps in links underline in iOS 8+ and Safari 8+.
-  -webkit-text-decoration-skip: objects;
 }
 
 // Any element can receive focus, but only links can be visited, so we can

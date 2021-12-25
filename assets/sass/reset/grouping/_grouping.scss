@@ -1,0 +1,78 @@
+// Grouping content
+
+
+// Block quotes
+//
+// The `<blockquote>` element is for quoting blocks of content from another
+// source within your document. Wrap the `<blockquote>` around any <abbr
+// title="HyperText Markup Language">HTML</abbr> as the quote. For straight
+// quotes, we recommend a `<p>`.
+//
+// Optionally, add a `<footer>` to identify the source of the quote, wrapping
+// the name of the source work in `<cite>`.
+
+blockquote {
+  // Add vertical rhythm margins.
+  // Also indent the quote on both sides.
+  @include margin(1 $indent-amount);
+}
+
+// Lists
+
+dl,
+ol,
+ul {
+  // Add vertical rhythm margins.
+  @include margin(1 0);
+}
+
+dd {
+  margin: 0 0 0 $indent-amount;
+
+  @include rtl {
+    margin: 0 $indent-amount 0 0;
+  }
+}
+
+ol,
+ul {
+  padding: 0 0 0 $indent-amount;
+
+  @include rtl {
+    padding: 0 $indent-amount 0 0;
+  }
+
+  // Turn off margins on nested lists.
+  ol,
+  ul {
+    margin: 0;
+  }
+}
+
+// Figures
+
+figure {
+  // Add vertical rhythm margins.
+  @include margin(1 0);
+}
+
+// Horizontal rule
+
+hr {
+  @extend %divider;
+  height: 0;
+}
+
+
+// Paragraphs
+
+p,
+pre {
+  @include margin(.75 0);
+}
+
+// Preformatted text
+
+pre {
+  @extend %monospace;
+}

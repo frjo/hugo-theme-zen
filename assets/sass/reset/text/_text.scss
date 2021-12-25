@@ -1,0 +1,38 @@
+// Text-level semantics
+//
+// The elements in this section give semantics to inline text.
+
+// Code
+
+code,
+kbd,
+samp {
+  @extend %monospace;
+}
+
+// Small text
+
+small {
+  // Add the correct font size in all browsers.
+  @include font-size(s);
+}
+
+// Superscript / Subscript
+
+sub,
+sup {
+  // Prevent `sub` and `sup` elements from affecting the line height in
+  // all browsers.
+  @include font-size(xs);
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}

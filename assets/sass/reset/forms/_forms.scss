@@ -1,0 +1,25 @@
+// Form defaults.
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  max-width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+}
+
+[type='search'] {
+  // Correct the odd appearance in Chrome and Safari.
+  -webkit-appearance: textfield;
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+}
