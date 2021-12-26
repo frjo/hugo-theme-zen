@@ -1,1 +1,0 @@
-@media print{.print-none,.pager,aside,nav,footer{display:none}}@media print{html{font-size:12pt}body,.page{background-color:#fff}.main{width:100%}:link,:visited{text-decoration:underline}abbr[title]::after{content:" (" attr(title) ")"}}
