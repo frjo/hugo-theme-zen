@@ -6,6 +6,14 @@
 
 @import 'init';
 
+// Convert colour map to css4 variables.
+// Use like this: var(--color-brand)
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+}
+
 // Ensure fonts get loaded first to minimize front-end performance impact.
 
 @import 'fonts';

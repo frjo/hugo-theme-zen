@@ -78,11 +78,3 @@ $colors: (
 
   code:                   $nearblack,
 );
-
-// Convert colour map to css4 variables.
-// Use like this: var(--color-brand)
-:root {
-  @each $name, $color in $colors {
-    --color-#{$name}: #{$color};
-  }
-}
