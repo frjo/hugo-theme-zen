@@ -271,7 +271,7 @@ figure {
 
     &:required+span::after {
       content: ' *';
-      color: var(--color-red);
+      color: var(--color-mark-highlight);
       vertical-align: top;
     }
 
