@@ -11,6 +11,7 @@
   text-align: center;
   transform: translateY(100vh);
   transition: all 130ms ease-in;
+  z-index: 99;
 
   a {
     color: inherit;
