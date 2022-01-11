@@ -129,7 +129,7 @@ article {
 
   pre {
     color: var(--color-code);
-    border-radius: 3px;
+    border-radius: $s-radius;
     padding: 5px;
     border: 1px solid var(--color-border);
     background-color: var(--color-text-bg);

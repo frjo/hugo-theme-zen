@@ -28,7 +28,7 @@ button,
   color: var(--color-button-text);
   background-color: var(--color-button);
   border: 1px solid var(--color-button);
-  border-radius: .3rem;
+  border-radius: $m-radius;
 
   &:hover,
   &:focus,

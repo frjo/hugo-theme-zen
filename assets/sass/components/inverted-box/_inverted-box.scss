@@ -5,7 +5,7 @@
   @include padding(.5);
   background: var(--color-brand);
   color: var(--color-text-bg);
-  border-radius: .3rem;
+  border-radius: $m-radius;
 
   :link,
   :visited {
