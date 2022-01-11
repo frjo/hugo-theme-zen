@@ -95,13 +95,13 @@ other = "Hoppa över ifall du är människa."
 other = "Språkväljare"
 
 [cookieconsent_message]
-other = "Denna webb-plats använder valfria cookies för analys och spårning av besökare."
+other = "Vi använder cookies. En del är nödvändiga för webb-platsens funktion. Cookies för analys och spårning av besökare är valfria."
 
 [cookieconsent_accept]
-other = "Godkänn spårning"
+other = "Godkänn alla"
 
 [cookieconsent_decline]
-other = "Avstå spårning"
+other = "Bara nödvändiga"
 
 [privacy_policy]
 other = "Personuppgiftsbehandling"
