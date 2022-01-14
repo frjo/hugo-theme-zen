@@ -13,10 +13,6 @@
       @include padding-right(.5);
       display: table-cell;
       content: '\2022';
-
-      @include respond-to(xxl) {
-        @include font-size(s-2);
-      }
     }
   }
 }
@@ -36,10 +32,6 @@
       display: table-cell;
       content: counter(table-ol) '.';
       text-align: right;
-
-      @include respond-to(xxl) {
-        @include font-size(s-2);
-      }
     }
   }
 }

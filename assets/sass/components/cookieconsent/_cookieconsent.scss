@@ -1,7 +1,7 @@
 // Cookieconsent
 
 .cookieconsent {
-  @include type-layout(s, 1);
+  @include font-size(s);
   position: sticky;
   bottom: 0;
   width: 100%;

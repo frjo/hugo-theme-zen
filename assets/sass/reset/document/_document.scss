@@ -6,8 +6,10 @@
 html {
   // Change the default font family in all browsers (opinionated).
   @include typeface(body);
+  // Set base font size in percent.
+  font-size: $base-font-size / $browser-font-size * 100%;
   // Correct the line height in all browsers.
-  @include define-type-sizing();
+  line-height: 1.5;
   // Prevent adjustments of font size.
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
@@ -20,10 +22,6 @@ html {
   scroll-behavior: smooth;
   // Improve text rendering.
   -webkit-font-smoothing: antialiased;
-
-  @include respond-to(xxl) {
-    @include define-type-sizing($base-font-size-2, $base-line-height-2);
-  }
 }
 
 

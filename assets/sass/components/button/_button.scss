@@ -44,7 +44,7 @@ button,
 .button,
 %button {
   &--small {
-    @include type-layout(xs, 1);
+    @include font-size(xs);
     @include margin-right(.3);
     @include margin-bottom(.3);
     @include padding(.1 .5);
