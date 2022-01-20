@@ -1,8 +1,8 @@
 <div class="tags">
 {{ i18n "taxo_tags" }}:
 <ul>
-{{ range .Params.tags -}}
-<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ range (.GetTerms "tags") -}}
+<li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
 {{ end -}}
 </ul>
 </div>
