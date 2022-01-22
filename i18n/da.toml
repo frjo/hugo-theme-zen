@@ -1,0 +1,107 @@
+[menu_title]
+other = "Hovedmenu"
+
+[menu_home]
+other = "Hjem"
+
+[menu_mobile]
+other = "Menu"
+
+[pager_next]
+other = "Næste"
+
+[pager_prev]
+other = "Forige"
+
+[taxo_tags]
+other = "Tags"
+
+[last_mod]
+other = "Opdateret:"
+
+[created]
+other = "Oprettet:"
+
+[search_placeholder]
+other = "Indtast det du søger efter"
+
+[search_title]
+other = "Søg"
+
+[search_loading]
+other = "Henter søge indeks…"
+
+[string_at]
+other = "på"
+
+[string_by]
+other = "ved"
+
+[string_follow]
+other = "følg"
+
+[string_in]
+other = "i"
+
+[string_on]
+other = "på"
+
+[string_recent_content]
+other = "Seneste indhold"
+
+[string_see_also]
+other = "Se også"
+
+[js_required]
+other = "Du skal have Javascript slået til at bruge denne funktion."
+
+[contact_submitted]
+other = "Din besked er sendt."
+
+[contact_error]
+other = "Der skete en fejl ved afsendelsen af beskeden."
+
+[contact_name]
+other = "Navn"
+
+[contact_name_placeholder]
+other = "Dit navn"
+
+[contact_mail]
+other = "E-mail adresse"
+
+[contact_mail_placeholder]
+other = "Din e-mail adresse"
+
+[contact_subject]
+other = "Emne"
+
+[contact_subject_placeholder]
+other = "Et kort emne"
+
+[contact_message]
+other = "Besked"
+
+[contact_message_placeholder]
+other = "Beskeden send til her..."
+
+[contact_submit]
+other = "Send besked"
+
+[contact_honypot]
+other = "Skip hvis du er et meneske"
+
+[lang_select_title]
+other = "Sprog vælger"
+
+[cookieconsent_message]
+other = "Denne side bruger ikke-essentielle cookies til tracking og analyse som du kan acceptere eller afvise."
+
+[cookieconsent_accept]
+other = "Accepter tracking"
+
+[cookieconsent_decline]
+other = "Afvis tracking"
+
+[privacy_policy]
+other = "Privat politik"
