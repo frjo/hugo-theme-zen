@@ -11,7 +11,7 @@ other = "Menu"
 other = "Næste"
 
 [pager_prev]
-other = "Forige"
+other = "Forrige"
 
 [taxo_tags]
 other = "Tags"
@@ -53,7 +53,7 @@ other = "Seneste indhold"
 other = "Se også"
 
 [js_required]
-other = "Du skal have Javascript slået til at bruge denne funktion."
+other = "Du skal have Javascript slået til for at bruge denne funktion."
 
 [contact_submitted]
 other = "Din besked er sendt."
@@ -83,19 +83,19 @@ other = "Et kort emne"
 other = "Besked"
 
 [contact_message_placeholder]
-other = "Beskeden send til her..."
+other = "Skriv din beskeden her…"
 
 [contact_submit]
 other = "Send besked"
 
 [contact_honypot]
-other = "Skip hvis du er et meneske"
+other = "Spring over hvis du er et meneske"
 
 [lang_select_title]
-other = "Sprog vælger"
+other = "Vælg sprog"
 
 [cookieconsent_message]
-other = "Denne side bruger ikke-essentielle cookies til tracking og analyse som du kan acceptere eller afvise."
+other = "Denne side bruger valgfrie cookies til tracking og analyse som du kan acceptere eller afvise."
 
 [cookieconsent_accept]
 other = "Accepter tracking"
