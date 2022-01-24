@@ -16,6 +16,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 * The colors, fonts and variables sass files are now in the root sass directory.
 * Use `site` instead of `.Site` and `$.Site`.
 * Use a default line-height of unitless 1.5. For headers it is set to 1.3.
+* Added `_extra.scss` where variables can be overridden.
 
 ### Todo
 
