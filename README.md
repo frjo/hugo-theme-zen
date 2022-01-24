@@ -11,15 +11,17 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 
 ## Version 2.0
 
+* Replaced "normalize" with slimmer and updated "reset". Removed everything for old IE versions.
 * Use of css4 variables. Colours are now used like this `var(--color-brand)`.
 * The colors, fonts and variables sass files are now in the root sass directory.
 * Use `site` instead of `.Site` and `$.Site`.
+* Use a default line-height of unitless 1.5. For headers it is set to 1.3.
 
 ### Todo
 
 * Implement more use of css4 variables.
-* Modernise the normalise css.
 * Make css4 variables change based on breakpoints. The zen-gutters e.g. can be set to 10px for mobile and increase to 20px for larger displays.
+* Remove all use of "typey". (low priority)
 
 ## Table of contents
 
@@ -73,7 +75,7 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 
 ## Minimum Hugo version
 
-Hugo Extended version 0.67.1 or higher is required.
+Hugo Extended version 0.88.1 or higher is required.
 
 
 ## Installation
@@ -304,7 +306,7 @@ Needed styles are in the `_zen.scss` file.
 
 ## Multilingual
 
-Arabic, Finnish, English, Hebrew, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
+Arabic, Danish, Finnish, English, Hebrew, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
@@ -329,6 +331,19 @@ languages:
     languageName: "العربية"
     languageDirection: "rtl"
     languageCode: "ar"
+```
+
+### Non English site
+
+If you want to have a site in another language than English but do not need multiple languages the following settings are needed.
+
+Set `defaultContentLanguage` to your language code, otherwise it will default to "en" . Also set `languageCode` so browsers are informed of what language the site is in.
+
+Here how it looks for a site in Swedish.
+
+```
+languageCode: "sv-SE"
+defaultContentLanguage: "sv"
 ```
 
 
