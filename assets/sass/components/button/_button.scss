@@ -27,7 +27,7 @@ button,
   cursor: pointer;
   color: var(--color-button-text);
   background-color: var(--color-button);
-  border: 1px solid var(--color-button);
+  border: 0;
   border-radius: $m-radius;
 
   &:hover,
@@ -65,6 +65,7 @@ button,
   &--outline {
     color: var(--color-button);
     background-color: var(--color-button-text);
+    border: 1px solid var(--color-button);
 
     &:hover,
     &:focus,
