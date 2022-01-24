@@ -29,7 +29,7 @@ $colors: (
 
   link:                   $black,
   link-visited:           $black,
-  link-hover:             $nearblack,
+  link-hover:             $brand,
   link-active:            $red,
 
   border:                 $grey-light,
@@ -41,14 +41,16 @@ $colors: (
   autocomplete-select-bg: $blue,
 
   body-bg:                $white,
-  header-bg:              $nearblack,
+  header-bg:              $brand,
   backdrop:               $grey-extra-light,
 
-  mobile-menu:            $nearblack,
+  mobile-menu:            $brand,
   mobile-menu-cover:      rgba($black, .2),
 
-  button:                 $nearblack,
+  button:                 $brand,
+  button-hover:           $brand-dark,
   button-text:            $white,
+  button-text-hover:      $white,
   button-disabled:        $grey,
 
   form-error:             $red,

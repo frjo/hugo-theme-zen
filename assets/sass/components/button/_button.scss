@@ -35,8 +35,8 @@ button,
   &:active {
     // Override any link underlines and color changes.
     text-decoration: none;
-    color: var(--color-button);
-    background-color: var(--color-button-text);
+    color: var(--color-button-text-hover);
+    background-color: var(--color-button-hover);
   }
 }
 
@@ -48,6 +48,18 @@ button,
     @include margin-right(.3);
     @include margin-bottom(.3);
     @include padding(.1 .5);
+  }
+
+  &--alt {
+    color: var(--color-button-text-hover);
+    background-color: var(--color-button-hover);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color-button-text);
+      background-color: var(--color-button);
+    }
   }
 
   &--outline {
