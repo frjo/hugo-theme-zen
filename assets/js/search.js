@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable no-undef, guard-for-in */
 
 /**
  * @file
@@ -47,10 +47,10 @@
       limit: {{ site.Params.searchLimit | default 20 }}
     });
     const items = {};
-    results.forEach( function(result) {
-        result.result.forEach( function(r) {
-          items[r.id] = r.doc;
-        });
+    results.forEach(function (result) {
+      result.result.forEach(function (r) {
+        items[r.id] = r.doc;
+      });
     });
     showResults(items);
   }
@@ -78,7 +78,7 @@
       .then(function (data) {
         data.forEach(function (item) {
           index.add(item);
-        })
+        });
       });
   }
 

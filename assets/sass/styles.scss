@@ -1,6 +1,6 @@
-//
-// The major stylesheet for this theme.
-//
+// stylelint-disable no-invalid-position-at-import-rule
+
+// The main stylesheet for this theme.
 
 // Colors and Sass
 
@@ -31,7 +31,7 @@
 @import 'layouts/layouts';
 
 // Components
-//
+
 // Design components are reusable designs that can be applied using just the CSS
 // class names specified in the component.
 

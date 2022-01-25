@@ -1,10 +1,12 @@
+// stylelint-disable value-keyword-case
+
 // Variables
-//
+
 // Set variables for this site before a library sets its !default value.
 
 
 // Font faces, stacks and sizes.
-//
+
 // Font styling and line heights are controlled by the several variables that
 // used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
 // These variable and mixins are documented on the [Typey
@@ -102,7 +104,7 @@ $rem-fallback:      false;
 $auto-print-sizing: false;
 
 // Breakpoints
-//
+
 // Use the `respond-to()` mixin to use named breakpoints.
 
 $breakpoints: (
@@ -132,9 +134,9 @@ $l-radius: 1rem;
 
 
 // Miscellaneous variables
-//
+
 // `$indent-amount` controls the amount lists, blockquotes and comments are indented.
-//
+
 // `$include-rtl` controls whether RTL styles are output.
 
 $indent-amount: 2 * $base-font-size;

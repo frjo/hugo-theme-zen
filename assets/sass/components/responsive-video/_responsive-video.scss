@@ -10,7 +10,7 @@
 .responsive-video,
 %responsive-video {
   position: relative;
-  padding-bottom: (9/16)*100%; // 16:9 aspect ratio
+  padding-bottom: (9 / 16) * 100%; // 16:9 aspect ratio
   padding-top: 25px; // Height of video controls
   height: 0;
 
@@ -27,6 +27,6 @@
   }
 
   &--4-3 {
-    padding-bottom: (3/4)*100%; // 4:3 aspect ratio
+    padding-bottom: (3 / 4) * 100%; // 4:3 aspect ratio
   }
 }
