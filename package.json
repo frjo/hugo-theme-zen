@@ -20,10 +20,10 @@
   "author": "Fredrik Jonsson",
   "license": "GPL-2.0",
   "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-plugin-template": "^0.4.0",
-    "stylelint": "^13.13.1",
-    "stylelint-scss": "^3.19.0"
+    "eslint": "^8.7.0",
+    "eslint-plugin-template": "^0.6.0",
+    "stylelint": "^14.3.0",
+    "stylelint-scss": "^4.1.0"
   },
   "engines": {
     "node": ">=12.0.0"
