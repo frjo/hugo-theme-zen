@@ -189,7 +189,7 @@ params:
     - "section1"            # Default to the section with most content if not set.
     - "section2"            # Set to empty if no section should be listed.
   microUsername: ""         # Your micro.blog username.
-  mobileMenu: true          # Turn on a mobile menu on small screens.
+  mobileMenu: true          # Turn on a mobile menu on small screens, default false.
   piwikSiteId:              # Matamo site id
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   plausibleSiteID: ""       # Plausible site id/domain.
@@ -200,7 +200,7 @@ params:
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   relatedposts: true        # Show related posts under a "See also" section, default false.
   searchLimit: 20           # Max number of search hits, default 20.
-  sidebar: true             # Show a sidebar to the right
+  sidebar: true             # Show a sidebar to the right, default false.
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
 
