@@ -1,19 +1,17 @@
-//
-// The major stylesheet for this theme.
-//
-// We categorize our components by creating headings in this file. See the
-// description on the style guide home page for more information.
+// stylelint-disable no-invalid-position-at-import-rule
+
+// The main stylesheet for this theme.
 
 // Colors and Sass
-//
+
 // Documentation for colors and Sass mixins and variables.
 
 @import 'init';
 
 // Defaults
-//
+
 // These are the default base styles applied to HTML elements.
-//
+
 // Component classes can override these styles, but if no class applies a style
 // to an HTML element, these styles will be the ones displayed.
 
@@ -30,7 +28,7 @@
 @import 'layouts/layouts';
 
 // Components
-//
+
 // Design components are reusable designs that can be applied using just the CSS
 // class names specified in the component.
 
@@ -52,7 +50,7 @@
 @import 'components/wireframe/wireframe';
 
 // Navigation
-//
+
 // Navigation components are specialized design components that are used for
 // page navigation.
 

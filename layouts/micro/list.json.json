@@ -2,9 +2,9 @@
 {{ $length := (len $list) -}}
 {
     "version" : "https://jsonfeed.org/version/1",
-    "title" : "Micro posts {{ i18n "string_on" }} {{ .Site.Title }}",
-    "description": "Micro blog {{ i18n "string_by" }} {{ with $.Site.Author.name }}{{ . }}{{end}}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}",
-    "home_page_url" : "{{ .Site.BaseURL }}",
+    "title" : "Micro posts {{ i18n "string_on" }} {{ site.Title }}",
+    "description": "Micro blog {{ i18n "string_by" }} {{ with site.Author.name }}{{ . }}{{end}}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}",
+    "home_page_url" : "{{ site.BaseURL }}",
     {{ with .OutputFormats.Get "JSON" -}}
     "feed_url" : "{{ .Permalink }}",
     {{ end -}}
@@ -14,10 +14,10 @@
     {{ with $.Param "favicon" -}}
     "favicon" : "{{ . | absURL }}",
     {{ end -}}
-    {{ with .Site.Author.name -}}
+    {{ with site.Author.name -}}
     "author" : {
-        "name" : "{{ . }}"{{ with $.Site.Author.url }},
-        "url": "{{ . }}"{{ end }}{{ with $.Site.Author.avatar }},
+        "name" : "{{ . }}"{{ with site.Author.url }},
+        "url": "{{ . }}"{{ end }}{{ with site.Author.avatar }},
         "avatar": "{{ . | absURL }}"{{ end }}
     },
     {{ end -}}

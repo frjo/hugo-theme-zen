@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Micro posts {{ i18n "string_on" }} {{ .Site.Title }}</title>
+    <title>Micro posts {{ i18n "string_on" }} {{ site.Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>Micro blog {{ i18n "string_by" }} {{ with $.Site.Author.name }}{{ . }}{{end}}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}</description>
+    <description>Micro blog {{ i18n "string_by" }} {{ with site.Author.name }}{{ . }}{{end}}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}</description>
     <generator>Hugo -- gohugo.io</generator>
-    {{ with .Site.LanguageCode -}}
+    {{ with site.LanguageCode -}}
     <language>{{ . }}</language>
     {{ end -}}
-    {{ with .Site.Author.email -}}
-    <managingEditor>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{end}}</managingEditor>
+    {{ with site.Author.email -}}
+    <managingEditor>{{ . }}{{ with site.Author.name }} ({{ . }}){{end}}</managingEditor>
     {{ end -}}
-    {{ with .Site.Author.email -}}
-    <webMaster>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{end}}</webMaster>
+    {{ with site.Author.email -}}
+    <webMaster>{{ . }}{{ with site.Author.name }} ({{ . }}){{end}}</webMaster>
     {{ end -}}
-    {{ with .Site.Copyright -}}
+    {{ with site.Copyright -}}
     <copyright>{{ . }}</copyright>
     {{ end -}}
     {{ if not .Date.IsZero -}}

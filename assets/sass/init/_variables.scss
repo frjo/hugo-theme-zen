@@ -1,10 +1,12 @@
+// stylelint-disable value-keyword-case
+
 // Variables
-//
+
 // Set variables for this site before a library sets its !default value.
 
 
 // Font faces, stacks and sizes.
-//
+
 // Font styling and line heights are controlled by the several variables that
 // used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
 // These variable and mixins are documented on the [Typey
@@ -63,7 +65,7 @@ $font-weight: (
 $times-new-roman: 'Times New Roman', Times, Georgia, 'DejaVu Serif', serif;
 $times:           Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
 $georgia:         Georgia, 'Times New Roman', 'DejaVu Serif', serif;
-$garamond:        'Garamond Premier Pro', Charter, 'Times New Roman', serif;
+$garamond:        'Garamond Premier Pro', Garamond, Charter, 'Times New Roman', serif;
 
 // Sans-serif font stacks.
 $verdana:         Verdana, Tahoma, 'DejaVu Sans', sans-serif;
@@ -119,7 +121,7 @@ $rem-fallback:      false;
 $auto-print-sizing: false;
 
 // Breakpoints
-//
+
 // Use the `respond-to()` mixin to use named breakpoints.
 
 $breakpoints: (
@@ -144,9 +146,9 @@ $zen-gutters: 20px;
 
 
 // Miscellaneous variables
-//
+
 // `$indent-amount` controls the amount lists, blockquotes and comments are indented.
-//
+
 // `$include-rtl` controls whether RTL styles are output.
 
 $indent-amount: 2 * $base-font-size;

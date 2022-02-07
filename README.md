@@ -174,7 +174,7 @@ params:
     - "section1"            # Default to the section with most content if not set.
     - "section2"            # Set to empty if no section should be listed.
   microUsername: ""         # Your micro.blog username.
-  mobileMenu: true          # Turn on a mobile menu on small screens.
+  mobileMenu: true          # Turn on a mobile menu on small screens, default false.
   piwikSiteId:              # Matamo site id
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   plausibleSiteID: ""       # Plausible site id/domain.
@@ -185,7 +185,7 @@ params:
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   relatedposts: true        # Show related posts under a "See also" section, default false.
   searchLimit: 20           # Max number of search hits, default 20.
-  sidebar: true             # Show a sidebar to the right
+  sidebar: true             # Show a sidebar to the right, default false.
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
 
@@ -292,7 +292,7 @@ Needed styles are in the `_zen.scss` file.
 
 ## Multilingual
 
-Arabic, Finnish, English, Hebrew, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
+Arabic, Danish, Finnish, English, Hebrew, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
@@ -317,6 +317,19 @@ languages:
     languageName: "العربية"
     languageDirection: "rtl"
     languageCode: "ar"
+```
+
+### Non English site
+
+If you want to have a site in another language than English but do not need multiple languages the following settings are needed.
+
+Set `defaultContentLanguage` to your language code, otherwise it will default to "en" . Also set `languageCode` so browsers are informed of what language the site is in.
+
+Here how it looks for a site in Swedish.
+
+```
+languageCode: "sv-SE"
+defaultContentLanguage: "sv"
 ```
 
 

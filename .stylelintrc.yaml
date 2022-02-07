@@ -1,9 +1,11 @@
 plugins:
   - stylelint-scss
+extends:
+  - stylelint-config-standard-scss
 rules:
   at-rule-disallowed-list:
     - debug
-  at-rule-no-unknown:
+  at-rule-no-unknown: null
   at-rule-no-vendor-prefix: true
   block-no-empty: true
   block-opening-brace-space-before: always
@@ -46,6 +48,7 @@ rules:
       - include
   media-feature-name-no-vendor-prefix: true
   media-feature-parentheses-space-inside: never
+  no-descending-specificity: null
   no-missing-end-of-source-newline: true
   number-leading-zero: never
   number-no-trailing-zeros: true
@@ -64,9 +67,11 @@ rules:
   - scss
   scss/at-mixin-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
   scss/at-rule-no-unknown: true
+  scss/comment-no-empty: null
   #scss/dollar-variable-colon-space-after: always
   scss/dollar-variable-colon-space-before: never
   scss/dollar-variable-pattern: "^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  scss/no-global-function-names: null
   #scss/percent-placeholder-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
   #scss/selector-no-redundant-nesting-selector: true
   selector-class-pattern:

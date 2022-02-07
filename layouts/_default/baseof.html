@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="nojs" lang="{{ .Site.LanguageCode | default .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+<html class="nojs" lang="{{ site.LanguageCode | default site.Language.Lang }}" dir="{{ site.Language.LanguageDirection | default "ltr" }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+<title>{{ block "title" . }}{{ .Title }} – {{ site.Title }}{{ end }}</title>
 {{ partial "meta.html" . }}
 {{ partialCached "styles.html" . }}
 {{- block "head" . }}{{ end }}
@@ -12,15 +12,15 @@
 {{ partialCached "tracking.html" . }}
 </head>
 
-<body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}">
-<div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar-second{{ end }}">
+<body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}{{ with $.Param "bodyclass" }} {{ . }}{{ end }}">
+<div class="page layout__page{{ if $.Param "sidebar" }} layout__sidebar-second{{ end }}">
 <header class="header layout__header">
 {{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ with $.Param "logopath" }}{{ . | relURL }}{{ else }}{{ "/images/logo.png" | relURL }}{{ end }}" alt="Home" class="header__logo-image"></a>{{ end }}
 <h1 class="header__site-name">
-<a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
+<a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ site.Title }}</span></a>
 </h1>
 <div class="region header__region">
-{{ if .Site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end -}}
+{{ if site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end -}}
 </div>
 </header>
 
@@ -32,7 +32,7 @@
 
 <footer class="footer layout__footer">
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
-<p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ .Site.Title }}</span>{{ end }}</p>
+<p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ site.Title }}</span>{{ end }}</p>
 {{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}
 {{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a> and the <a href="https://github.com/frjo/hugo-theme-zen">Zen theme</a>.</p>{{ end }}
 </footer>
