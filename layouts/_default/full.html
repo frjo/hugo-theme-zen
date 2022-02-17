@@ -1,4 +1,4 @@
-<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}full-view">
+<article class="full-view{{ with .Section }} full-view--{{ . | urlize }}{{ end }}">
 <header>
 <h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}

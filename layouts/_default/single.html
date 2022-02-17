@@ -1,6 +1,6 @@
 {{ define "main" -}}
 <main class="main layout__main">
-<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+<article class="single-view{{ with .Section }} single-view--{{ . | urlize }}{{ end }}">
 <header>
 <h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}

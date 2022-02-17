@@ -2,7 +2,7 @@
 
 {{ define "main" -}}
 <main class="main layout__main">
-<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+<article class="single-view{{ with .Section }} single-view--{{ . | urlize }}{{ end }}">
 <div class="content">
 {{ .Content }}
 </div>

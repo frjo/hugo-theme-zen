@@ -1,4 +1,4 @@
-<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}list-view">
+<article class="list-view{{ with .Section }} list-view--{{ . | urlize }}{{ end }}">
 <header>
 <h2 class="hidden">{{ .Title }}</h2>
 <p><a href="{{ .RelPermalink }}">
