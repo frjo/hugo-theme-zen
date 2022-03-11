@@ -243,8 +243,9 @@ If you do not specify any sections in the "mainSections" param (see configuratio
 
 This is another part that almost everyone will like to customise.
 
-They are found in the `assets/sass/init/_colors.scss` and `assets/sass/init/_variables.scss` files. Copy them to the root `assets/sass/init/` directory to set your own values.
+They are found in the theme `assets/sass/_colors.scss` and `assets/sass/_variables.scss` files. Copy them to the root `assets/sass/` directory to set your own values.
 
+If you only want to override a few variables copy the theme `assets/sass/_extra.scss` to the root `assets/sass/_extra.scss` and set the new values there. Anything in the extra file will override values in the variables file.
 
 ### Logo
 
