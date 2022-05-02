@@ -80,7 +80,7 @@ header('Location: ' . $contact_form_url . '?' . $status, TRUE, 302);
 exit;
 
 function _contact_ff_wrap(&$line) {
-  $line = wordwrap($line, 72, " \n");
+  $line = wordwrap($line, 72, "  \n");
 }
 
 function _contact_clean_str($str, $quotes, $strip = false, $encode = false) {
