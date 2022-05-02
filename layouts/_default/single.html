@@ -8,7 +8,9 @@
 </header>
 <div class="content">
 {{ .Content }}
+</div>
 
+<div class="content content--bottom">
 {{ if $.Param "relatedposts" | default false }}{{ partial "related.html" . }}{{ end -}}
 
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
