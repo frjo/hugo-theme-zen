@@ -1,4 +1,4 @@
-// stylelint-disable indentation
+// stylelint-disable indentation, declaration-colon-newline-after
 
 .layout {
   &__page {
@@ -137,7 +137,5 @@
     &__cookieconsent {
       grid-area: notice;
     }
-
   }
-
 }

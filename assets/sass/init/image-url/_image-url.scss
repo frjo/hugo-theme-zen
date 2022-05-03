@@ -45,5 +45,6 @@ $image-url-subdirectory: 'components' !default;
     $path: $subdirectory;
     $subdirectory: $image-url-subdirectory;
   }
+
   @return url(unquote($path-to-source + '/' + $subdirectory + '/' + $path));
 }

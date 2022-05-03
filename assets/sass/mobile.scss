@@ -6,6 +6,7 @@
 .main-menu,
 .header__region { // stylelint-disable selector-class-pattern
   display: none;
+
   @include respond-to(s) {
     display: block;
   }

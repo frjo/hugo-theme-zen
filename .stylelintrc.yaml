@@ -7,7 +7,7 @@ rules:
     - debug
   at-rule-no-unknown: null
   at-rule-no-vendor-prefix: true
-  block-no-empty: true
+  block-no-empty: null
   block-opening-brace-space-before: always
   color-hex-case: lower
   color-hex-length: short
@@ -16,12 +16,14 @@ rules:
   color-no-invalid-hex: true
   declaration-bang-space-after: never
   declaration-bang-space-before: always
+  declaration-block-no-redundant-longhand-properties: null
   declaration-block-semicolon-newline-after: always
   declaration-block-semicolon-space-before: never
   declaration-block-single-line-max-declarations: 1
   declaration-block-trailing-semicolon: always
   declaration-colon-space-after: always-single-line
   declaration-colon-space-before: never
+  declaration-empty-line-before: null
   declaration-no-important: true
   declaration-property-value-disallowed-list:
     border:
@@ -34,6 +36,7 @@ rules:
       - none
     border-left:
       - none
+  font-family-name-quotes: null
   function-comma-space-after: always-single-line
   function-parentheses-space-inside: never
   function-url-quotes: always
@@ -66,13 +69,15 @@ rules:
   scss/at-import-partial-extension-blacklist:
   - scss
   scss/at-mixin-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  scss/at-mixin-argumentless-call-parentheses: null
   scss/at-rule-no-unknown: true
   scss/comment-no-empty: null
-  #scss/dollar-variable-colon-space-after: always
+  scss/dollar-variable-colon-space-after: always
   scss/dollar-variable-colon-space-before: never
   scss/dollar-variable-pattern: "^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  scss/double-slash-comment-empty-line-before: null
   scss/no-global-function-names: null
-  #scss/percent-placeholder-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  scss/percent-placeholder-pattern: "^[a-z0-9-_]+$"
   #scss/selector-no-redundant-nesting-selector: true
   selector-class-pattern:
     - "^[a-z0-9\\-]+$"

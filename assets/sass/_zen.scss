@@ -257,7 +257,7 @@ figure {
     @include margin-bottom(.75);
     width: 92%;
 
-    &:required+span::after {
+    &:required + span::after {
       content: ' *';
       color: var(--color-mark-highlight);
       vertical-align: top;

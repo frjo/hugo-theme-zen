@@ -1,9 +1,8 @@
-// stylelint-disable value-keyword-case
+// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after, max-line-length
 
 // Variables
 
 // Set variables for this site before a library sets its !default value.
-
 
 // Font faces, stacks and sizes.
 
@@ -65,7 +64,7 @@ $system-ui:       system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 // Monospace font stacks.
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-//$menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier New', monospace, sans-serif;
+// $menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier New', monospace, sans-serif;
 $menlo:           Menlo, 'Ubuntu Mono', 'DejaVu Sans Mono', 'Courier New', Courier, monospace, sans-serif;
 
 // The font faces you specify in the $typefaces map can be used in the
@@ -132,13 +131,10 @@ $s-radius: 3px;
 $m-radius: .3rem;
 $l-radius: 1rem;
 
-
 // Miscellaneous variables
 
 // `$indent-amount` controls the amount lists, blockquotes and comments are indented.
-
-// `$include-rtl` controls whether RTL styles are output.
-
 $indent-amount: 2 * $base-font-size;
 
+// `$include-rtl` controls whether RTL styles are output.
 $include-rtl: false;
