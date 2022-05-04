@@ -1,0 +1,107 @@
+[menu_title]
+other = "Главни мени"
+
+[menu_home]
+other = "Почетна"
+
+[menu_mobile]
+other = "Мени"
+
+[pager_next]
+other = "Следећа"
+
+[pager_prev]
+other = "Претходна"
+
+[taxo_tags]
+other = "Тагови"
+
+[last_mod]
+other = "Ажурирано:"
+
+[created]
+other = "Креирано:"
+
+[search_placeholder]
+other = "Упишите речи које желите да тражите."
+
+[search_title]
+other = "Тражи"
+
+[search_loading]
+other = "Учитавам индекс за претраживање…"
+
+[string_at]
+other = "при"
+
+[string_by]
+other = "креирао"
+
+[string_follow]
+other = "прати"
+
+[string_in]
+other = "у"
+
+[string_on]
+other = "на"
+
+[string_recent_content]
+other = "Скорашњи садржај"
+
+[string_see_also]
+other = "Такође погледајте"
+
+[js_required]
+other = "Морате имати омогућен Јаваскрипт да би користили ову функцију."
+
+[contact_submitted]
+other = "Ваша порука је послана."
+
+[contact_error]
+other = "Појавила се греша при слању поруке."
+
+[contact_name]
+other = "Име"
+
+[contact_name_placeholder]
+other = "Ваше име"
+
+[contact_mail]
+other = "Адреса ел.поште"
+
+[contact_mail_placeholder]
+other = "Ваша адреса ел.поште"
+
+[contact_subject]
+other = "Тема"
+
+[contact_subject_placeholder]
+other = "Кратки опис теме"
+
+[contact_message]
+other = "Порука"
+
+[contact_message_placeholder]
+other = "Овде иде порука…"
+
+[contact_submit]
+other = "Пошаљи поруку"
+
+[contact_honypot]
+other = "Прескочи уколико си људско биће"
+
+[lang_select_title]
+other = "Избор језика"
+
+[cookieconsent_message]
+other = "Овај сајт користи колачиће. Неки су неопходни да би сајт функционисао. Колаћићи за праћење и аналитику су опциони."
+
+[cookieconsent_accept]
+other = "Прихватите све"
+
+[cookieconsent_decline]
+other = "Само неопходне"
+
+[privacy_policy]
+other = "Правила о приватности"
