@@ -81,6 +81,26 @@ Hugo Extended version 0.88.1 or higher is required.
 
 ## Installation
 
+### Hugo module
+
+First of all, you need to turn your new or existing site into a hugo module.
+
+From the root of your site:
+
+```
+$ hugo mod init github.com/me/my-site
+```
+
+Afterwards, declare the `zen` theme module as a dependency of your site:
+
+From the root of your site:
+
+```
+$ hugo mod get github.com/frjo/hugo-theme-zen
+```
+
+### Git submodule
+
 You can download and unpack the theme manually from Github but it's easier to use git to clone the repo.
 
 From the root of your site:
@@ -99,6 +119,16 @@ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 
 
 ## Updating
+
+### Hugo module
+
+From the root of your site:
+
+```
+hugo mod get -u github.com/frjo/hugo-theme-zen
+```
+
+### Git submodule
 
 From the root of your site:
 
@@ -211,7 +241,7 @@ params:
     category:
       name:                 # * Feed category (iTunes).
       subcategories: []     # Feed sub category (iTunes).
-    explicit: false/true    # Feed explicit settting, default to false (iTunes).
+    explicit: false/true    # Feed explicit setting, default to false (iTunes).
     author:                 # Feed author (iTunes).
     owner:
       name:                 # Feed owner name (iTunes).
@@ -290,7 +320,7 @@ To customise a js or sass file, copy it to the root assets directory and edit it
 
 There is an `assets/sass/_custom.scss` file meant for your custom styles. Copy it to the root `assets/sass/_custom.scss` to use it.
 
-The default styles in `assets/sass/_zen.scss` are boring but functional. You can easily overide them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
+The default styles in `assets/sass/_zen.scss` are boring but functional. You can easily override them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
 
 The sass files are by default built for production, compressed with fingerprint.
 
@@ -308,7 +338,7 @@ Needed styles are in the `_zen.scss` file.
 
 ## Multilingual
 
-Arabic, Danish, Finnish, English, Hebrew, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
+Arabic, Danish, Finnish, English, Hebrew, French, German, Norwegian, Portuguese and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
@@ -386,7 +416,7 @@ If your server support php with the mail() command (very common) you can use the
 
 If you have a SPF record for your domain, make sure the web server is listed or other mail server may mark the mail as spam.
 
-Two types of spam protection is implemented. The form can only be posted after the user have moved the mouse or pressed the tab or enter key. The form have a "honypot" field that is invisible to humans but not to most spam boots. If that field is filled in the mail will not be sent.
+Two types of spam protection are implemented. The form can only be posted after the user moved the mouse or pressed the tab or enter key. The form has a "honypot" field that is invisible to humans but not to most spam boots. If that field is filled in the mail will not be sent.
 
 Form validation is handled by HTML5 and there is some CSS to make it look nice.
 
