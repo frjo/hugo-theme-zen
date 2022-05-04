@@ -88,7 +88,7 @@ other = "Pesan anda di sini…"
 [contact_submit]
 other = "Kirim pesan"
 
-[contact_honypot]
+[contact_honeypot]
 other = "Lewati jika anda manusia"
 
 [lang_select_title]

@@ -89,7 +89,7 @@ other = "As mensagens vão aqui…"
 [contact_submit]
 other = "Enviar menssagem"
 
-[contact_honypot]
+[contact_honeypot]
 other = "Pular se você é humano"
 
 [lang_select_title]

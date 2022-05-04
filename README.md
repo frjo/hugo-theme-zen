@@ -416,7 +416,7 @@ If your server support php with the mail() command (very common) you can use the
 
 If you have a SPF record for your domain, make sure the web server is listed or other mail server may mark the mail as spam.
 
-Two types of spam protection are implemented. The form can only be posted after the user moved the mouse or pressed the tab or enter key. The form has a "honypot" field that is invisible to humans but not to most spam boots. If that field is filled in the mail will not be sent.
+Two types of spam protection are implemented. The form can only be posted after the user moved the mouse or pressed the tab or enter key. The form has a "honeypot" field that is invisible to humans but not to most spam boots. If that field is filled in the mail will not be sent.
 
 Form validation is handled by HTML5 and there is some CSS to make it look nice.
 
