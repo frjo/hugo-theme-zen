@@ -88,7 +88,7 @@ other = "Овде иде порука…"
 [contact_submit]
 other = "Пошаљи поруку"
 
-[contact_honypot]
+[contact_honeypot]
 other = "Прескочи уколико си људско биће"
 
 [lang_select_title]

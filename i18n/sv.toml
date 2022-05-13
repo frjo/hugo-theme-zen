@@ -88,7 +88,7 @@ other = "Meddelandet skrivs här…"
 [contact_submit]
 other = "Skicka meddelande"
 
-[contact_honypot]
+[contact_honeypot]
 other = "Hoppa över ifall du är människa."
 
 [lang_select_title]

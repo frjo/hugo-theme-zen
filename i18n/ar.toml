@@ -88,7 +88,7 @@ other = "هنا تكتب رسالتك…"
 [contact_submit]
 other = "ارسل"
 
-[contact_honypot]
+[contact_honeypot]
 other = "تجاهل"
 
 [lang_select_title]

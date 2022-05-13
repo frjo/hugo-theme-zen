@@ -88,7 +88,7 @@ other = "Contenu du message"
 [contact_submit]
 other = "Envoyer"
 
-[contact_honypot]
+[contact_honeypot]
 other = "Ne faites pas attention à ça si vous êtes humain"
 
 [lang_select_title]

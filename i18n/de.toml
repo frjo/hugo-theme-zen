@@ -88,7 +88,7 @@ other = "Hier den Nachrichtentext eingeben…"
 [contact_submit]
 other = "Nachricht senden"
 
-[contact_honypot]
+[contact_honeypot]
 other = "Überspringen, wenn du ein Mensch bist"
 
 [lang_select_title]
