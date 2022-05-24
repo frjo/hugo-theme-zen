@@ -1,6 +1,13 @@
 {{ define "main" -}}
 <main class="main layout__main">
 <h1 class="title">{{ .Title }}</h1>
+
+{{ with .Content }}
+<div class="content">
+{{ . }}
+</div>
+{{ end }}
+
 {{ $paginator := .Paginate (.Pages) -}}
 {{ range $paginator.Pages -}}
 {{ .Render "summary"}}
