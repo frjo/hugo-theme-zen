@@ -1,0 +1,5 @@
+{{ $class := .Get "class" -}}
+{{ $newtab := .Get "newtab" | default false -}}
+{{ $src := .Get "src" -}}
+{{ $text := .Get "text" -}}
+<a class="button{{ with $class }} {{ . }}{{ end }}" href="{{ $src }}"{{ if $newtab }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ $text }}</a>
