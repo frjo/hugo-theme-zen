@@ -21,6 +21,8 @@ html {
   scroll-behavior: smooth;
   // Improve text rendering.
   -webkit-font-smoothing: antialiased;
+  // Text color.
+  color: var(--color-text);
 }
 
 // Use the saner border-box model for all elements.
