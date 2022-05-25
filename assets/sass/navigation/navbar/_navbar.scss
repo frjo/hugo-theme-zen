@@ -6,6 +6,7 @@
 %navbar {
   display: flex;
   flex-wrap: wrap;
+  gap: .5rem;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -13,17 +14,11 @@
   @include rtl() {
     flex-direction: row-reverse;
     text-align: right;
-    padding: 0;
   }
 
   &__item,
   li {
-    padding: 0 10px 0 0;
     list-style-type: none;
     list-style-image: none;
-
-    @include rtl() {
-      padding: 0 0 0 10px;
-    }
   }
 }

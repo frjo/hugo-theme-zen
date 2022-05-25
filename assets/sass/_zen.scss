@@ -209,7 +209,6 @@ figure {
   outline: 0;
 
   li {
-    @include margin-right(.5);
     @include margin-bottom(.5);
     padding: 0;
   }
