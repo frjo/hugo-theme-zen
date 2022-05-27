@@ -2,5 +2,5 @@
 {{ $summary := .Get "summary" -}}
 <details{{ with $class }} class="{{ . }}"{{ end }}>
 {{ with $summary }}<summary>{{ . }}</summary>{{ end }}
-{{ .Inner | markdownify }}
+{{ .Inner | $.Page.RenderString (dict "display" "block") }}
 </details>
