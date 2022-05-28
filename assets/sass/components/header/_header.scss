@@ -24,7 +24,7 @@
 
   // The name of the website.
   &__site-name {
-    @extend %h1;
+    @include font-size(xxl);
     margin: 0;
   }
 
