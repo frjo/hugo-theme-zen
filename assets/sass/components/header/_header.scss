@@ -8,10 +8,12 @@
 
   // Wrapping link for logo.
   &__logo {
-    margin: 0 $zen-gutters 0 0;
+    @include respond-to(s) {
+      margin: 0 $zen-gutters 0 0;
 
-    @include rtl() {
-      margin: 0 0 0 $zen-gutters;
+      @include rtl() {
+        margin: 0 0 0 $zen-gutters;
+      }
     }
   }
 
