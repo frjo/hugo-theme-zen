@@ -1,0 +1,40 @@
+{{ $alt := .Get "alt" -}}
+{{ $caption := .Get "caption" -}}
+{{ $class := .Get "class" -}}
+{{ $height := .Get "height" -}}
+{{ $inline := .Get "inline" | default false -}}
+{{ $link := .Get "link" -}}
+{{ $src := .Get "src" -}}
+{{ $width := .Get "width" -}}
+{{ if and $src (fileExists (add "/assets" $src)) -}}
+  {{ $original := resources.Get $src -}}
+  {{ if $inline -}}
+    {{ $src = $original.Content -}}
+  {{ else -}}
+    {{ $src = $original.RelPermalink -}}
+  {{ end -}}
+{{ else if and $src $inline (fileExists (add "/static" $src)) -}}
+  {{ $src =  readFile (add "/static" $src) -}}
+{{ end -}}
+{{ if and $width $height -}}
+    {{ $width = int $width -}}
+    {{ $height = int $height -}}
+{{ else if $width -}}
+  {{ $width = int $width -}}
+{{ else if $height -}}
+  {{ $height = int $height -}}
+{{ end -}}
+{{ if $caption }}<figure class="image image--svg{{ with $class }} {{ . }}{{ end }}">{{ end -}}
+{{ with $link }}<a class="image-link" href="{{ . }}">{{ end -}}
+{{ if $inline -}}
+<div class="image image--svg{{ with $class }} {{ . }}{{ end }}">{{ $src | safeHTML }}</div>
+{{ else -}}
+<img class="image image--svg{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+{{ end -}}
+{{- if $link }}</a>{{ end }}
+{{ if $caption -}}
+<figcaption>
+{{ $caption | markdownify -}}
+</figcaption>
+</figure>
+{{ end -}}
