@@ -67,3 +67,14 @@ h6,
   @include margin-bottom(1, xs);
   line-height: 1.3;
 }
+
+// Set max text line width for redability.
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  max-width: $max-line-width;
+}
