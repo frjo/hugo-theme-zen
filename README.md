@@ -277,6 +277,13 @@ They are found in the theme `assets/sass/_colors.scss` and `assets/sass/_variabl
 
 If you only want to override a few variables copy the theme `assets/sass/_extra.scss` to the root `assets/sass/_extra.scss` and set the new values there. Anything in the extra file will override values in the variables file.
 
+Examples of variables found in `assets/sass/_variables.scss`:
+
+* $base-font-size: 18px;
+* $max-content-width: 960px;
+* $max-line-width: 70ch;
+
+
 ### Logo
 
 Place your logo at `static/images/logo.png`. If you don't provide a logo, then the default theme logo will be used.
@@ -482,12 +489,24 @@ podcast:
 
 Possible parameters are:
 
-* src
 * class
 * preload (none/metadata/auto, default metadata)
+* src
 * width (only video)
 
 The audio and video tags will be wrapped with a figure tag.
+
+
+### Button
+
+Creates a link with the class "button". If "newtab" is true the link will open in a new tab.
+
+Possible parameters are:
+
+* class
+* newtab
+* src
+* text
 
 
 ### Clear
@@ -513,10 +532,27 @@ Insert a html5 contact form, [see more above](#contact-form).
 {{< contact >}}
 ```
 
+### Details and Summary
+
+Insert a html5 contact form, [see more above](#contact-form).
+
+```
+{{< details summary="The summary text here" >}}
+The details text here.
+
+It can be long and **contain** markdown.
+{{< /details >}}
+```
+
+Possible parameters are:
+
+* class
+* summary
+
 
 ### Figure and Img
 
-Zen comes with a improved version of the built in "figure" shortcut and a very similar "img" shortcode.
+Zen comes with a improved version of the built in "figure" shortcut and a very similar "img" shortcode. Support for images both in "assets" and in "static".
 
 ```
 {{< figure src="/images/image.jpg" alt="Example image." caption="Lorem ipsum dolor sit amet." >}}
@@ -559,9 +595,45 @@ Possible parameters are:
 * text
 
 
+### Reflink
+
+Creates a link to an internal page.
+
+```
+{{< reflink "some-page.md" >}}
+```
+
+This will output:
+
+```
+<a href="/path/to/page/">The title of the page</a>
+```
+
+
+### SVG
+
+SVG shortcode with inline support. Support for images both in "assets" and in "static".
+
+```
+{{< svg src="/images/image.svg" alt="Example image." caption="Lorem ipsum dolor sit amet." >}}
+
+{{< img src="/images/image.svg" inline="true" >}}
+```
+
+Possible parameters are:
+
+* alt (not for inline)
+* caption
+* class
+* height (not for inline)
+* link
+* src
+* width (not for inline)
+
+
 ### Search
 
-Creates a search page for the site, [see more above](#search).
+Add a search form for the site, [see more above](#search).
 
 ```
 {{< search >}}
