@@ -11,11 +11,7 @@ body {
 }
 
 .header {
-  padding-top: $zen-gutters / 2;
-
-  @include respond-to(s) {
-    padding-top: $zen-gutters;
-  }
+  padding-top: $zen-gutters;
 }
 
 .footer {
@@ -142,7 +138,7 @@ article {
 }
 
 .title-submitted {
-  margin-bottom: 0;
+  margin-bottom: .2rem;
 }
 
 figure {

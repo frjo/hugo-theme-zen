@@ -47,9 +47,9 @@
   &__toggle {
     display: block;
     position: absolute;
-    top: $zen-gutters / 2;
-    right: $zen-gutters / 2;
-    padding: 6px ($zen-gutters + $zen-gutters / 4 + 4px) 4px 4px;
+    top: $zen-gutters;
+    right: $zen-gutters;
+    padding: 6px 30px 6px 6px;
     z-index: 22;
     text-decoration: none;
     font-weight: bold;
@@ -70,9 +70,9 @@
     &::after {
       position: absolute;
       content: '';
-      margin-left: $zen-gutters / 4;
-      width: $zen-gutters;
-      height: $zen-gutters;
+      margin-left: 4px;
+      width: 20px;
+      height: 20px;
       border-top: 12px double var(--color-text);
       border-bottom: 4px solid var(--color-text);
     }

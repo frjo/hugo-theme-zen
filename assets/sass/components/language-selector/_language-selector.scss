@@ -5,9 +5,10 @@
 }
 
 .language-icon {
-  margin: 0 ($zen-gutters / 2) 0 0;
+  @include margin-right(.5);
 
   @include rtl() {
-    margin: 0 0 0 ($zen-gutters / 2);
+    @include margin-left(.5);
+    margin-right: 0;
   }
 }

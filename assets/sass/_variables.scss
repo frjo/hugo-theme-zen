@@ -19,7 +19,7 @@ $base-line-height:  $base-font-size * 1.5;
 
 // The font sizes in our type hierarchy as tee shirt sizes.
 $font-size: (
-  xxl:              34px,
+  xxl:              36px,
   xl:               28px,
   l:                22px,
   m:                $base-font-size,
@@ -121,13 +121,13 @@ $breakpoints: (
 // Layout
 
 // The max content width.
-$max-content-width: 960px;
+$max-content-width: 1000px;
 
 // The max line width for redability.
 $max-line-width: 70ch;
 
 // The default left/right gutter/padding.
-$zen-gutters: 20px;
+$zen-gutters: calc(5px + 1.5625vw);
 
 // Border radius.
 $s-radius: 3px;
