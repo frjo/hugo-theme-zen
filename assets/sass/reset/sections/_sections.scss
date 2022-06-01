@@ -70,11 +70,13 @@ h6,
 
 // Set max text line width for redability.
 
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  max-width: $max-line-width;
+.main {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-width: $max-line-width;
+  }
 }

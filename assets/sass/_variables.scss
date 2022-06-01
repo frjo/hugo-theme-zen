@@ -128,6 +128,7 @@ $max-line-width: 70ch;
 
 // The default left/right gutter/padding.
 $zen-gutters: calc(5px + 1.5625vw);
+$zen-gutters-reverse: calc(0px - (5px + 1.5625vw));
 
 // Border radius.
 $s-radius: 3px;
