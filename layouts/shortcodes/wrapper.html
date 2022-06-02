@@ -1,1 +1,3 @@
-<div class="{{ .Get 0 }}">{{ if eq (.Get 1) "nomarkdown" }}{{ .Inner }}{{ else }}{{ .Inner | $.Page.RenderString (dict "display" "block") }}{{ end }}</div>
+{{ $display := "inline" -}}
+{{ if eq (.Get 1) "block" }}{{ $display = "block" }}{{ end -}}
+<div class="{{ .Get 0 }}">{{ if eq (.Get 1) "nomarkdown" }}{{ .Inner }}{{ else }}{{ .Inner | $.Page.RenderString (dict "display" $display) }}{{ end }}</div>
