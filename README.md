@@ -91,7 +91,7 @@ First of all, you need to turn your new or existing site into a hugo module.
 From the root of your site:
 
 ```shell
-$ hugo mod init github.com/me/my-site
+hugo mod init github.com/me/my-site
 ```
 
 Afterwards, declare the `zen` theme module as a dependency of your site:
@@ -99,7 +99,7 @@ Afterwards, declare the `zen` theme module as a dependency of your site:
 From the root of your site:
 
 ```shell
-$ hugo mod get github.com/frjo/hugo-theme-zen
+hugo mod get github.com/frjo/hugo-theme-zen
 ```
 
 ### Git submodule
@@ -109,7 +109,7 @@ You can download and unpack the theme manually from Github but it's easier to us
 From the root of your site:
 
 ```shell
-$ git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
+git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
 If you use git to version control your site, highly recommended, it's best to add the zen theme as a submodule.
@@ -117,7 +117,7 @@ If you use git to version control your site, highly recommended, it's best to ad
 From the root of your site:
 
 ```shell
-$ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
+git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
 
@@ -128,7 +128,7 @@ $ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 From the root of your site:
 
 ```shell
-$ hugo mod get -u github.com/frjo/hugo-theme-zen
+hugo mod get -u github.com/frjo/hugo-theme-zen
 ```
 
 ### Git submodule
@@ -136,7 +136,7 @@ $ hugo mod get -u github.com/frjo/hugo-theme-zen
 From the root of your site:
 
 ```shell
-$ git submodule update --remote --merge
+git submodule update --remote --merge
 ```
 
 
@@ -145,7 +145,7 @@ $ git submodule update --remote --merge
 From the root of `themes/zen/exampleSite`:
 
 ```shell
-$ hugo server --themesDir ../..
+hugo server --themesDir ../..
 ```
 
 
