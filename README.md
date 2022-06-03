@@ -90,7 +90,7 @@ First of all, you need to turn your new or existing site into a hugo module.
 
 From the root of your site:
 
-```
+```shell
 $ hugo mod init github.com/me/my-site
 ```
 
@@ -98,7 +98,7 @@ Afterwards, declare the `zen` theme module as a dependency of your site:
 
 From the root of your site:
 
-```
+```shell
 $ hugo mod get github.com/frjo/hugo-theme-zen
 ```
 
@@ -108,7 +108,7 @@ You can download and unpack the theme manually from Github but it's easier to us
 
 From the root of your site:
 
-```
+```shell
 $ git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
@@ -116,8 +116,8 @@ If you use git to version control your site, highly recommended, it's best to ad
 
 From the root of your site:
 
-```
-git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
+```shell
+$ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
 
@@ -127,16 +127,16 @@ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 
 From the root of your site:
 
-```
-hugo mod get -u github.com/frjo/hugo-theme-zen
+```shell
+$ hugo mod get -u github.com/frjo/hugo-theme-zen
 ```
 
 ### Git submodule
 
 From the root of your site:
 
-```
-git submodule update --remote --merge
+```shell
+$ git submodule update --remote --merge
 ```
 
 
@@ -144,8 +144,8 @@ git submodule update --remote --merge
 
 From the root of `themes/zen/exampleSite`:
 
-```
-hugo server --themesDir ../..
+```shell
+$ hugo server --themesDir ../..
 ```
 
 
