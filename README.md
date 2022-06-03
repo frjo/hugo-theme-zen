@@ -194,7 +194,7 @@ Some performance tools will complain about to many files (js and css files are n
 
 Configurations parameters for the sites config file, in yaml format. All the "params" are optional.
 
-```
+```yaml
 baseurl: "https://example.org/"
 title: "SiteTitle"
 theme: "zen"
@@ -358,7 +358,7 @@ For "rtl" languages add a `languageDirection` parameter to the language configur
 
 Add a `languageCode` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `languageCode` is then not needed. If not set the language key (e.g. "en") will be used.
 
-```
+```yaml
 languages:
   sv:
     weight: 1
@@ -383,7 +383,7 @@ Set `defaultContentLanguage` to your language code, otherwise it will default to
 
 Here how it looks for a site in Swedish.
 
-```
+```yaml
 languageCode: "sv-SE"
 defaultContentLanguage: "sv"
 ```
@@ -396,7 +396,7 @@ Built in integration with the excellent [FlexSearch.js](https://github.com/nexta
 Here is the three steps needed to create a search page.
 
 1. Add a new output format in your configuration file.
-    ```
+    ```yaml
     outputFormats:
       SearchIndex:
         mediaType: "application/json"
@@ -405,7 +405,7 @@ Here is the three steps needed to create a search page.
         notAlternative: true
     ```
 2. Add the new output format to output setting for "home".
-    ```
+    ```yaml
     outputs:
       home: ["HTML", "SearchIndex", "[other formats you need]"]
     ```
@@ -460,7 +460,7 @@ The Zen theme supports podcasting.
 
 Here follow all the possible podcast frontmatter parameters. Only the first two is mandatory and are in the podcast archetype.
 
-```
+```yaml
 podcast:
     mp3:                    # * The path to the mp3 file, 
     duration:               # * Episode duration, e.g 1:04:02 (iTunes).
@@ -608,7 +608,7 @@ Creates a link to an internal page.
 
 This will output:
 
-```
+```html
 <a href="/path/to/page/">The title of the page</a>
 ```
 
@@ -657,7 +657,7 @@ Some more content.
 
 This will produce:
 
-```
+```html
 <div class="class-name-you-want">
 <p>The <strong>content</strong> that should be wrapped.</p>
 
@@ -677,7 +677,7 @@ Some more content.
 
 This will produce:
 
-```
+```html
 <div class="class-name-you-want">
 The **content** that should be wrapped. Some more content.
 </div>
@@ -696,7 +696,7 @@ This is the way I construct my JavaScript files.
 
 **Umbrella JS:**
 
-```
+```js
 (function ($) {
 
   'use strict';
@@ -709,7 +709,7 @@ This is the way I construct my JavaScript files.
 
 **jQuery:**
 
-```
+```js
 (function ($) {
 
   'use strict';
