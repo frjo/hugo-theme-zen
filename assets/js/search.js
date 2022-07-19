@@ -5,6 +5,8 @@
  * A JavaScript file for flexsearch.
  */
 
+import * as params from '@params';
+
 (function () {
 
   'use strict';
@@ -44,7 +46,7 @@
     const results = index.search({
       query: query,
       enrich: true,
-      limit: {{ site.Params.searchLimit | default 20 }}
+      limit: params.searchLimit
     });
     const items = {};
     results.forEach(function (result) {

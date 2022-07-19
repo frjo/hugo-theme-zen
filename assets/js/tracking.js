@@ -5,14 +5,17 @@
  * A JavaScript file for analytic tracking.
  */
 
-var cookiebanner = {{ site.Params.cookieConsent | default false }};
-var cookieconsent = localStorage.getItem('cookieconsent');
-var idSite = '{{ site.Params.piwikSiteID }}';
-var matomoTrackingApiUrl = 'https://{{ site.Params.piwikTrackerUrl }}/matomo.php';
-var googleAnalytics = '{{ site.GoogleAnalytics }}';
+import * as params from '@params';
+
+const cookiebanner = params.cookieConsent;
+const cookieconsent = localStorage.getItem('cookieconsent');
+const idSite = params.piwikSiteID;
+const matomoTrackingApiUrl = 'https://' + params.piwikTrackerUrl + '/matomo.php';
+const googleAnalytics = params.GoogleAnalytics;
 
 if (idSite) {
-  var _paq = window._paq || [];
+  let _paq = window._paq = window._paq || [];
+
   if (cookiebanner) {
     _paq.push(['requireConsent']);
   }

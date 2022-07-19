@@ -1,5 +1,13 @@
+{{ $opts := dict
+  "minify" true
+  "params" (dict
+    "cookieConsent" site.Params.cookieConsent
+    "piwikTrackerUrl" site.Params.piwikTrackerUrl
+    "piwikSiteID" site.Params.piwikSiteID
+    "plausibleSiteID" site.Params.plausibleSiteID
+    "GoogleAnalytics" site.GoogleAnalytics) -}}
 {{ if and site.Params.piwikTrackerUrl site.Params.piwikSiteID -}}
-{{ $script := resources.Get "js/tracking.js" | resources.ExecuteAsTemplate "js/tracking.js" . | minify | fingerprint -}}
+{{ $script := resources.Get "js/tracking.js" | js.Build $opts | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
 <script defer src="https://{{ site.Params.piwikTrackerUrl }}/matomo.js"></script>
 {{ end -}}
@@ -9,7 +17,7 @@
 {{ end -}}
 
 {{ if site.GoogleAnalytics -}}
-{{ $script := resources.Get "js/tracking.js" | resources.ExecuteAsTemplate "js/tracking.js" . | minify | fingerprint -}}
+{{ $script := resources.Get "js/tracking.js" | js.Build $opts | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
 {{ template "_internal/google_analytics.html" . }}
 {{ end -}}

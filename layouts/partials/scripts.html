@@ -37,7 +37,8 @@
 {{ if .HasShortcode "search" -}}
 {{ $flexsearch := resources.Get "js/lib/flexsearch.compact.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
-{{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . | minify | fingerprint -}}
+{{ $search_opts := dict "minify" true "params" (dict "searchLimit" (site.Params.searchLimit | default 20)) -}}
+{{ $search := resources.Get "js/search.js" | js.Build $search_opts | fingerprint -}}
 <script defer src="{{ $search.RelPermalink }}"></script>
 {{ end -}}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
