@@ -6,15 +6,15 @@
 {{ $link := .Get "link" -}}
 {{ $src := .Get "src" -}}
 {{ $width := .Get "width" -}}
-{{ if and $src (fileExists (add "/assets" $src)) -}}
+{{ if and $src (fileExists (path.Join "/assets" $src)) -}}
   {{ $original := resources.Get $src -}}
   {{ if $inline -}}
     {{ $src = $original.Content -}}
   {{ else -}}
     {{ $src = $original.RelPermalink -}}
   {{ end -}}
-{{ else if and $src $inline (fileExists (add "/static" $src)) -}}
-  {{ $src =  readFile (add "/static" $src) -}}
+{{ else if and $src $inline (fileExists (path.Join "/static" $src)) -}}
+  {{ $src =  readFile (path.Join "/static" $src) -}}
 {{ end -}}
 {{ if and $width $height -}}
     {{ $width = int $width -}}

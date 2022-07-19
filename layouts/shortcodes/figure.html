@@ -14,7 +14,7 @@
 {{ $maxwidth := site.Params.imageMaxWidth -}}
 {{ $realwidth := 0 -}}
 {{ $realheight := 0 -}}
-{{ if and $src (fileExists (add "/assets" $src)) -}}
+{{ if and $src (fileExists (path.Join "/assets" $src)) -}}
   {{ $original := resources.Get $src -}}
   {{ if $size -}}
     {{ $image := $original.Resize $size -}}
@@ -34,8 +34,8 @@
     {{ $width = "" -}}
     {{ $height = "" -}}
   {{ end -}}
-{{ else if and $src (fileExists (add "/static" $src)) -}}
-  {{ with (imageConfig (add "/static" $src)) -}}
+{{ else if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ with (imageConfig (path.Join "/static" $src)) -}}
     {{ $realwidth = .Width -}}
     {{ $realheight = .Height -}}
   {{ end -}}

@@ -2,7 +2,7 @@
 {{ $newtab := .Get "newtab" | default false -}}
 {{ $src := .Get "src" -}}
 {{ $text := .Get "text" -}}
-{{ if and $src (fileExists (add "/assets" $src)) -}}
+{{ if and $src (fileExists (path.Join "/assets" $src)) -}}
   {{ $original := resources.Get $src -}}
   {{ $src = $original.RelPermalink -}}
 {{ end -}}
