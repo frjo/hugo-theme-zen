@@ -36,7 +36,9 @@ params:
   icon: "apple-touch-icon.png"
   image: "apple-touch-icon.png"
   imageMaxWidth: 400
+  logoWidth: 64
   mobileMenu: true
   poweredby: false
+  realfavicongenerator: true
   sidebar: true
   submitted: true
