@@ -99,7 +99,7 @@ Afterwards, declare the `zen` theme module as a dependency of your site:
 From the root of your site:
 
 ```shell
-hugo mod get github.com/frjo/hugo-theme-zen
+hugo mod get -u github.com/frjo/hugo-theme-zen/v2
 ```
 
 ### Git submodule
@@ -112,7 +112,7 @@ From the root of your site:
 git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
-If you use git to version control your site, highly recommended, it's best to add the zen theme as a submodule.
+If you use git to version control your site you can add the zen theme as a submodule.
 
 From the root of your site:
 
