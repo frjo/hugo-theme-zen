@@ -17,6 +17,7 @@ import * as params from '@params';
       index: ['title','tags','content','date'],
       store: ['title','summary','date','permalink']
     }
+    tokenize: 'forward'
   });
 
   function showResults(items) {
