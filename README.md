@@ -9,6 +9,11 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 ![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/lighthouse_report.png)
 
 
+## Demo site
+
+Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https://github.com/frjo/zen-demo)).
+
+
 ## Version 2.0
 
 * Replaced "normalize" with slimmer and updated "reset". Removed everything for old IE versions.
