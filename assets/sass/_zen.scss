@@ -141,6 +141,32 @@ article {
   margin-bottom: .2rem;
 }
 
+figure,
+img {
+  &.image {
+    @include respond-to(s) {
+      &.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.left {
+        @include padding(0 .5 .5 0);
+        margin: 0;
+        float: left;
+        clear: both;
+      }
+
+      &.right {
+        @include padding(0 0 .5 .5);
+        margin: 0;
+        float: right;
+        clear: both;
+      }
+    }
+  }
+}
+
 figure {
   &.image {
     figcaption {
@@ -162,28 +188,13 @@ figure {
         display: block;
       }
 
-      &.center {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
       &.left {
-        @include padding(0 .5 .5 0);
-        margin: 0;
-        float: left;
-        clear: both;
-
         figcaption {
           @include padding(0 .5 .5 0);
         }
       }
 
       &.right {
-        @include padding(0 0 .5 .5);
-        margin: 0;
-        float: right;
-        clear: both;
-
         figcaption {
           @include padding(0 0 .5 .5);
         }
