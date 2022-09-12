@@ -29,7 +29,6 @@ Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https:/
 ### Todo
 
 * Implement more use of css4 variables.
-* Make css4 variables change based on breakpoints. The zen-gutters e.g. can be set to 10px for mobile and increase to 20px for larger displays.
 * Remove all use of "typey". (low priority)
 
 ## Table of contents
