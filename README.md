@@ -227,6 +227,7 @@ params:
   mainSections:             # The sections you want to have listed on the front page.
     - "section1"            # Default to the section with most content if not set.
     - "section2"            # Set to empty if no section should be listed.
+  menuInHeader: true        # Move the main menu to the header, default false.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens, default false.
   piwikSiteId:              # Matamo site id

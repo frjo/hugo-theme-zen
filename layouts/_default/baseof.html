@@ -21,10 +21,11 @@
 </h1>
 <div class="region header__region">
 {{ if site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end -}}
+{{ if $.Param "menuinheader" }}{{ partial "menu.html" . }}{{ end -}}
 </div>
 </header>
 
-{{ partial "menu.html" . }}
+{{ if not ($.Param "menuinheader") }}{{ partial "menu.html" . }}{{ end -}}
 
 {{ block "main" . }}{{ end }}
 
