@@ -1,14 +1,8 @@
 // @file
 // The print stylesheet for this theme.
 
-// Colors and Sass
-//
-// Documentation for colors and Sass mixins and variables.
-
 @import 'init';
-
-// Components
-
+@import 'extra';
 @import 'components/print-none/print-none';
 
 .pager,
