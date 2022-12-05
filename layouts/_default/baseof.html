@@ -15,7 +15,7 @@
 <body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}{{ with $.Param "bodyclass" }} {{ . }}{{ end }}">
 <div class="page layout__page{{ if $.Param "sidebar" }} layout__sidebar-second{{ end }}">
 <header class="header layout__header">
-{{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ with $.Param "logopath" }}{{ . | relURL }}{{ else }}{{ "/images/logo.png" | relURL }}{{ end }}"{{ with $.Param "logowidth" }} width="{{ . }}"{{ end }} alt="Home" class="header__logo-image"></a>{{ end }}
+{{ if $.Param "logo" | default true }}<a href="{{ "" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ with $.Param "logopath" }}{{ . | relURL }}{{ else }}{{ "images/logo.png" | relURL }}{{ end }}"{{ with $.Param "logowidth" }} width="{{ . }}"{{ end }} alt="Home" class="header__logo-image"></a>{{ end }}
 <h1 class="header__site-name">
 <a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ site.Title }}</span></a>
 </h1>
