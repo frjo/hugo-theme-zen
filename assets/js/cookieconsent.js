@@ -11,10 +11,7 @@
     cookiebanner.classList.add('js-cookieconsent-open');
   }
 
-  const cookie_buttons = Array.prototype.slice.call(
-    document.querySelectorAll('button[data-consent]')
-  );
-
+  const cookie_buttons = document.querySelectorAll('button[data-consent]');
   cookie_buttons.forEach(function (button) {
     button.addEventListener('click', function () {
       if (button.getAttribute('data-consent') === 'true') {

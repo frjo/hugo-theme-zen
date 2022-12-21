@@ -11,7 +11,7 @@
   @include respond-to(s) {
     display: block;
   }
-}
+} // stylelint-enable selector-class-pattern
 
 .mobile-nav {
   @include typeface(headings);
@@ -46,18 +46,18 @@
   }
 
   &__toggle {
-    display: block;
+    @include padding(0 .2);
+    display: flex;
+    align-items: center;
     position: absolute;
     top: $zen-gutters;
     right: $zen-gutters;
-    padding: 6px 30px 6px 6px;
-    z-index: 22;
-    text-decoration: none;
+    margin: 0;
     font-weight: bold;
-    line-height: 1;
-    border: 1px solid var(--color-border);
-    border-radius: $s-radius;
+    background-color: transparent;
     color: var(--color-text);
+    z-index: 22;
+    border: 1px solid var(--color-border);
     pointer-events: auto;
 
     @include respond-to(s) {
@@ -68,22 +68,45 @@
       color: var(--color-text-bg);
     }
 
-    &::after {
-      position: absolute;
-      content: '';
-      margin-left: 4px;
-      width: 20px;
-      height: 20px;
-      border-top: 12px double var(--color-text);
-      border-bottom: 4px solid var(--color-text);
-    }
-
-    .js-nav-open &::after {
-      border-color: var(--color-text-bg);
+    &:hover svg,
+    &:focus svg {
+      fill: var(--color-text-bg);
     }
   }
 
+  &__hamburger {
+    display: inline-block;
+    fill: var(--color-text);
+    width: 1.6rem;
+    margin-left: 0.1rem;
+
+    rect {
+      transform-origin: center;
+    }
+
+    .js-nav-open & { // stylelint-disable max-nesting-depth
+      fill: var(--color-text-bg);
+
+      rect {
+        y: 45;
+
+        &:nth-of-type(1) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    } // stylelint-enable max-nesting-depth
+  }
+
   &__sheet {
+    visibility: hidden;
     background-color: var(--color-mobile-menu);
     width: 90vw;
     height: 100vh;
@@ -102,6 +125,7 @@
     }
 
     .js-nav-open & {
+      visibility: visible;
       pointer-events: auto;
       box-shadow: -10px 0 10px -10px var(--color-nearblack);
       transform: translateX(10vw);
@@ -122,7 +146,7 @@
 
   &__cover,
   &__toggle,
-  &__toggle::after,
+  &__hamburger rect,
   &__sheet {
     transition: all 130ms ease-in;
 
