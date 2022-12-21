@@ -6,7 +6,7 @@
 
 .language-icon {
   @include margin-right(.5);
-  fill: var(--color-text-bg);
+  fill: var(--color-text);
 
   @include rtl() {
     @include margin-left(.5);
