@@ -61,6 +61,7 @@ Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https:/
 ## Features
 
 * A mobile menu
+* AlpineJS 3
 * Analytics with Matamo (Piwik)
 * Cookie consent
 * Commands for linting of css and js
@@ -205,6 +206,7 @@ theme: "zen"
 languageCode: "en-GB"       # Set your language code (only needed for none multilingual sites).
 
 params:
+  alpine:                   # Add AlpineJS, default false.
   cookieConsent: true       # Show cookie consent form, default false.
   contact: "info@example.org"
   copyright: "This site is licensed under a 
@@ -218,7 +220,7 @@ params:
   icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.
-  jquery: true              # Add jQuery
+  jquery: true              # Add jQuery, default false.
   languageDir: ""           # Set ltr or rtl, defaults to ltr.
   logo: false               # Turn off the logo.
   logoPath:                 # Relative path to site logo, defaults to "images/logo.png", no leading slash.
@@ -235,13 +237,13 @@ params:
   plausibleTrackerURL: ""   # Plausible url, schemaless and no slash on end. Optional, defaults to "plausible.io/…"
   poweredby: true           # Show powered by hugo in footer
   privacyPolicyUrl: ""      # If set will add link to cookie consent form.
-
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   relatedposts: true        # Show related posts under a "See also" section, default false.
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right, default false.
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
+  umbrella: true            # Add Umbrella JS, default false.
 
   podcast:
     title:                  # * Feed title, defaults to site title (iTunes).
@@ -694,9 +696,9 @@ The **content** that should be wrapped. Some more content.
 
 Includes tracking code for Matomo or Google in a way that supports Content security policy headers. Read more in my blog post [Content security policy headers when using Matomo or Google analytics](https://xdeb.org/post/2020/01/14/content-security-policy-headers-when-using-matomo-or-google-analytics/).
 
-## Choose between using jQuery or Umbrella JS
+## Choose between using AlpineJS, jQuery or Umbrella JS
 
-[Umbrella JS](https://umbrellajs.com/) (a tiny jQuery replacement) is always added and it's used for all theme JavaScript. To add jQuery, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having both libraries loaded on the same page.
+To add AlpineJS, jQuery or Umbrella JS, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having them loaded on the same page.
 
 This is the way I construct my JavaScript files.
 
