@@ -700,7 +700,23 @@ Includes tracking code for Matomo or Google in a way that supports Content secur
 
 To add AlpineJS, jQuery or Umbrella JS, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having them loaded on the same page.
 
+Personally I use vanilla JS nowadays and I'm playing around with AlpineJS.
+
 This is the way I construct my JavaScript files.
+
+**Vanilla JS:**
+
+```js
+(function () {
+
+  'use strict';
+
+  // Add a js class to the html-tag when JavsScript is active.
+  document.querySelector('html').classList.replace('nojs', 'js');
+
+})();
+```
+
 
 **Umbrella JS:**
 
