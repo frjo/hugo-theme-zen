@@ -258,16 +258,17 @@ figure {
 // Form
 
 .content {
+  label:has(+ :required) {
+    &::after {
+      content: '*';
+      color: var(--color-mark-highlight);
+    }
+  }
+
   input,
   textarea {
     @include margin-bottom(.75);
     width: 92%;
-
-    &:required + span::after {
-      content: ' *';
-      color: var(--color-mark-highlight);
-      vertical-align: top;
-    }
 
     &:not(:placeholder-shown):valid {
       background-color: var(--color-status-bg);

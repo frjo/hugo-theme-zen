@@ -11,13 +11,13 @@
   const sheet = document.querySelector('.mobile-nav__sheet');
   const toggle = document.querySelector('.mobile-nav__toggle');
 
-  function navopen () {
+  function navopen() {
     body.classList.add('js-nav-open');
     sheet.setAttribute('aria-hidden', 'false');
     toggle.setAttribute('aria-expanded', 'true');
   }
 
-  function navclose () {
+  function navclose() {
     body.classList.remove('js-nav-open');
     sheet.setAttribute('aria-hidden', 'true');
     toggle.setAttribute('aria-expanded', 'false');
@@ -29,10 +29,10 @@
     toggle.addEventListener('click', function (e) {
       e.preventDefault();
       if (body.classList.contains('js-nav-open')) {
-        navclose ();
+        navclose();
       }
       else {
-        navopen ();
+        navopen();
       }
     });
   });
@@ -41,7 +41,7 @@
   const links = document.querySelectorAll('.mobile-nav__sheet a');
   links.forEach(function (link) {
     link.addEventListener('click', function (e) {
-      navclose ();
+      navclose();
     });
   });
 
