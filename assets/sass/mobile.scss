@@ -32,6 +32,10 @@
     position: fixed;
   }
 
+  .language-icon {
+    fill: var(--color-text-bg);
+  }
+
   &__cover {
     position: absolute;
     width: 100vw;
