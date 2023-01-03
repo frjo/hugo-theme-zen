@@ -6,16 +6,34 @@
 {{ $link := .Get "link" -}}
 {{ $src := .Get "src" -}}
 {{ $width := .Get "width" -}}
-{{ if and $src (fileExists (path.Join "/assets" $src)) -}}
-  {{ $original := resources.Get $src -}}
-  {{ if $inline -}}
-    {{ $src = $original.Content -}}
-  {{ else -}}
-    {{ $src = $original.RelPermalink -}}
+
+{{ $resource := false -}}
+{{ $static := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+  {{ if $inline }}
+    {{ $src = readFile (path.Join "/static" $src) -}}
   {{ end -}}
-{{ else if and $src $inline (fileExists (path.Join "/static" $src)) -}}
-  {{ $src =  readFile (path.Join "/static" $src) -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
 {{ end -}}
+
+{{ if $resource -}}
+  {{ if $inline -}}
+    {{ $src = $resource.Content -}}
+  {{ else -}}
+    {{ $src = $resource.RelPermalink -}}
+  {{ end -}}
+{{ end -}}
+
 {{ if and $width $height -}}
     {{ $width = int $width -}}
     {{ $height = int $height -}}
@@ -24,6 +42,13 @@
 {{ else if $height -}}
   {{ $height = int $height -}}
 {{ end -}}
+
+{{ if not $src -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ else if not (or $static $resource) -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" has an error in the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ end -}}
+
 {{ if $caption }}<figure class="image image--svg{{ with $class }} {{ . }}{{ end }}">{{ end -}}
 {{ with $link }}<a class="image-link" href="{{ . }}">{{ end -}}
 {{ if $inline -}}

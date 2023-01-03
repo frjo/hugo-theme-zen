@@ -1,6 +1,65 @@
-<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-<video controls preload="{{ .Get "preload" | default "metadata" }}" {{ with .Get "width" }}width="{{ . }}"{{ end }} {{ with .Get "autoplay" }}autoplay="{{ . }}"{{ end }} {{ with .Get "loop" }}loop="{{ . }}"{{ end }}>
-{{ with .Get "src" }}<source src="{{ . | relURL }}" type="video/mp4">{{ end }}
+{{ $autoplay := .Get "autoplay" -}}
+{{ $caption := .Get "caption" -}}
+{{ $class := .Get "class" -}}
+{{ $loop := .Get "loop" -}}
+{{ $poster := .Get "poster" -}}
+{{ $preload := .Get "preload" | default "metadata" -}}
+{{ $src := .Get "src" -}}
+{{ $width := .Get "width" -}}
+
+{{ $posterres := false -}}
+{{ $resource := false -}}
+{{ $static := false -}}
+{{ $type := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if $resource -}}
+  {{ $src = $resource.RelPermalink -}}
+  {{ $type = $resource.MediaType }}
+{{ end -}}
+
+{{ if and $poster (fileExists (path.Join "/static" $poster)) -}}
+  {{ $poster = relURL $poster -}}
+{{ else if $poster -}}
+  {{ $poster = strings.TrimLeft "/" $poster -}}
+  {{ with resources.Get $poster -}}
+    {{ $posterres = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $poster -}}
+    {{ $posterres = . -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if $posterres -}}
+  {{ if $width -}}
+    {{ $image := $posterres.Resize (printf "%sx" $width) -}}
+    {{ $poster = $image.RelPermalink -}}
+  {{ else -}}
+    {{ $poster = $posterres.RelPermalink -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if not $src -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ else if not (or $static $resource) -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" has an error in the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ end -}}
+
+<figure class="video{{ with $class }} {{ . }}{{ end }}">
+<video controls preload="{{ $preload }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $poster }}poster="{{ . }}"{{ end }} {{ with $autoplay }}autoplay="{{ . }}"{{ end }} {{ with $loop }}loop="{{ . }}"{{ end }}>
+<source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
 </video>
-{{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+{{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
 </figure>
