@@ -1,6 +1,39 @@
-<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-<audio controls preload="{{ .Get "preload" | default "metadata" }}">
-{{ with .Get "src" }}<source src="{{ . | relURL }}" type="audio/mpeg">{{ end }}
+{{ $caption := .Get "caption" -}}
+{{ $class := .Get "class" -}}
+{{ $preload := .Get "preload" | default "metadata" -}}
+{{ $src := .Get "src" -}}
+
+{{ $resource := false -}}
+{{ $static := false -}}
+{{ $type := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if $resource -}}
+  {{ $src = $resource.RelPermalink -}}
+  {{ $type = $resource.MediaType }}
+{{ end -}}
+
+{{ if not $src -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ else if not (or $static $resource) -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" has an error in the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ end -}}
+
+<figure class="audio{{ with $class }} {{ . }}{{ end }}">
+<audio controls preload="{{ $preload }}">
+<source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
 </audio>
-{{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+{{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
 </figure>

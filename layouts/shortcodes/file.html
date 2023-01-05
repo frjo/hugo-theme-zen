@@ -2,11 +2,35 @@
 {{ $newtab := .Get "newtab" | default false -}}
 {{ $src := .Get "src" -}}
 {{ $text := .Get "text" -}}
-{{ if and $src (fileExists (path.Join "/assets" $src)) -}}
-  {{ $original := resources.Get $src -}}
-  {{ $src = $original.RelPermalink -}}
+
+{{ $resource := false -}}
+{{ $static := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
 {{ end -}}
+
+{{ if $resource -}}
+  {{ $src = $resource.RelPermalink -}}
+{{ end -}}
+
 {{ if not $text -}}
   {{ $text = path.Base $src -}}
 {{ end -}}
+
+{{ if not $src -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ else if not (or $static $resource) -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" has an error in the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ end -}}
+
 <a class="file{{ with $class }} {{ . }}{{ end }}" href="{{ $src }}"{{ if $newtab }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ $text }}</a>

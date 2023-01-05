@@ -8,38 +8,54 @@
 {{ $size := .Get "size" -}}
 {{ $src := .Get "src" -}}
 {{ $srcset := .Get "srcset" -}}
-{{ $srcsetw := (slice) }}
 {{ $title := .Get "title" -}}
 {{ $width := .Get "width" -}}
+
 {{ $maxwidth := site.Params.imageMaxWidth -}}
 {{ $realwidth := 0 -}}
 {{ $realheight := 0 -}}
-{{ if and $src (fileExists (path.Join "/assets" $src)) -}}
-  {{ $original := resources.Get $src -}}
+{{ $resource := false -}}
+{{ $srcsetw := (slice) }}
+{{ $static := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ with (imageConfig (path.Join "/static" $src)) -}}
+    {{ $realwidth = .Width -}}
+    {{ $realheight = .Height -}}
+  {{ end -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if $resource -}}
   {{ if $size -}}
-    {{ $image := $original.Resize $size -}}
+    {{ $image := $resource.Resize $size -}}
     {{ $src = $image.RelPermalink -}}
     {{ $width = $image.Width -}}
     {{ $height = $image.Height -}}
   {{ else -}}
-    {{ $src = $original.RelPermalink -}}
-    {{ $realwidth = $original.Width -}}
-    {{ $realheight = $original.Height -}}
+    {{ $src = $resource.RelPermalink -}}
+    {{ $realwidth = $resource.Width -}}
+    {{ $realheight = $resource.Height -}}
   {{ end -}}
   {{ if $srcset -}}
     {{ range $set := split $srcset " " -}}
-      {{ $image := $original.Resize (printf "%sx" $set) -}}
+      {{ $image := $resource.Resize (printf "%sx" $set) -}}
       {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) }}
     {{ end }}
     {{ $width = "" -}}
     {{ $height = "" -}}
   {{ end -}}
-{{ else if and $src (fileExists (path.Join "/static" $src)) -}}
-  {{ with (imageConfig (path.Join "/static" $src)) -}}
-    {{ $realwidth = .Width -}}
-    {{ $realheight = .Height -}}
-  {{ end -}}
 {{ end -}}
+
 {{ if and $width $height -}}
     {{ $width = int $width -}}
     {{ $height = int $height -}}
@@ -62,6 +78,13 @@
   {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
   {{ $height = (math.Round $height) -}}
 {{ end -}}
+
+{{ if not $src -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ else if not (or $static $resource) -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" has an error in the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ end -}}
+
 <figure class="image{{ with $class }} {{ . }}{{ end }}">
 {{ with $link }}<a href="{{ . }}">{{ end -}}
 <img src="{{ $src }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
