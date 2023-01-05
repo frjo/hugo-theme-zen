@@ -492,15 +492,21 @@ podcast:
 
 ### Audio and Video
 
+Support for files in global assets directory, static directory and page resources.
+
 ```
 {{< audio src="/audio/audio.mp3" class="something" >}}
 
-{{< video src="/video/video.mp4" class="something" >}}
+{{< video src="/video/video.mp4" poster="/images/poster.jpeg" class="something" >}}
 ```
 
 Possible parameters are:
 
+* autoplay (only video)
+* caption
 * class
+* loop (only video)
+* poster (only video)
 * preload (none/metadata/auto, default metadata)
 * src
 * width (only video)
@@ -563,7 +569,7 @@ Possible parameters are:
 
 ### Figure and Img
 
-Zen comes with a improved version of the built in "figure" shortcut and a very similar "img" shortcode. Support for images both in "assets" and in "static".
+Zen comes with a improved version of the built in "figure" shortcut and a very similar "img" shortcode. Support for images in global assets directory, static directory and page resources.
 
 ```
 {{< figure src="/images/image.jpg" alt="Example image." caption="Lorem ipsum dolor sit amet." >}}
@@ -581,14 +587,14 @@ Possible parameters are:
 * class
 * height
 * link
-* size (only works if image is inside /assets dir)
+* size (not for images in static directory)
+* srcset (not for images in static directory)
 * src
 * title (only figure)
 * width
 
 Only "src" is none optional but you really should set "alt" as well.
 
-* If the images is inside the /assets dir and "size" is set the shortcode will use the resize command.
 * You can set a max width for images with parameter "imageMaxWidth". Only used for images where size, width and height is not set.
 * If width and height is not set the real dimensions of the image will be used.
 * If only width or only height is set the other value will be proportionally calculated.
@@ -596,7 +602,7 @@ Only "src" is none optional but you really should set "alt" as well.
 
 ### File
 
-Creates a link to a file in static or in assets directory.
+Creates a link to a file in global assets directory, static directory and page resources.
 
 Possible parameters are:
 
@@ -623,7 +629,7 @@ This will output:
 
 ### SVG
 
-SVG shortcode with inline support. Support for images both in "assets" and in "static".
+SVG shortcode with inline support. Support for images in global assets directory, static directory and page resources.
 
 ```
 {{< svg src="/images/image.svg" alt="Example image." caption="Lorem ipsum dolor sit amet." >}}
@@ -637,6 +643,7 @@ Possible parameters are:
 * caption
 * class
 * height (not for inline)
+* inline
 * link
 * src
 * width (not for inline)
