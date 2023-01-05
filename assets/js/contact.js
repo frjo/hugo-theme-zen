@@ -12,13 +12,13 @@
   const action = form.getAttribute('data-protect');
   const body = document.querySelector('body');
 
-  // Display the hidden form.
-  form.classList.remove('hidden');
-
   function activateForm() {
     form.setAttribute('action', action);
     button.removeAttribute('disabled');
   }
+
+  // Display the hidden form.
+  form.classList.remove('hidden');
 
   // Wait for a mouse to move, indicating they are human.
   body.addEventListener('mousemove', () => activateForm());
