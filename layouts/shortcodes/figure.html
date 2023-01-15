@@ -87,11 +87,11 @@
 
 <figure class="image{{ with $class }} {{ . }}{{ end }}">
 {{ with $link }}<a href="{{ . }}">{{ end -}}
-<img src="{{ $src }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+<img src="{{ $src }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ if isset .Params "alt" }} alt="{{ $alt }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{- if $link }}</a>{{ end }}
 {{ if or $title $caption $attr -}}
 <figcaption>
-{{ with $title }}<h4>{{ . }}</h4>{{ end -}}
+{{ with $title }}<strong>{{ . }}</strong><br>{{ end -}}
 {{- $caption | markdownify }}{{ if and $caption $attr }} {{ end -}}
 {{ with $attrlink }}<a href="{{ . }}">{{ end }}{{ $attr | markdownify }}{{ if $attrlink }}</a>{{ end -}}
 </figcaption>

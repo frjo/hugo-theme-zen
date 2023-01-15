@@ -54,7 +54,7 @@
 {{ if $inline -}}
 <div class="image image--svg{{ with $class }} {{ . }}{{ end }}">{{ $src | safeHTML }}</div>
 {{ else -}}
-<img class="image image--svg{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ with $alt }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+<img class="image image--svg{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}"{{ if isset .Params "alt" }} alt="{{ $alt }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{ end -}}
 {{- if $link }}</a>{{ end }}
 {{ if $caption -}}
