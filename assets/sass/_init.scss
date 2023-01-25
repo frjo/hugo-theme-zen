@@ -8,15 +8,12 @@
 // Colours and variables.
 @import 'colors';
 @import 'variables';
+@import 'extra';
 
-// Add typey to manage font sizes and margins.
-@import 'typey';
-
-// Custom mixins used on this site.
-@import 'init/breakpoint/respond-to';
-@import 'init/clearfix/clearfix';
-@import 'init/rtl/rtl';
-@import 'init/visually-hidden/visually-hidden';
-
-// Custom functions used on this site.
-@import 'init/image-url/image-url';
+// Mixins and functions.
+@import 'mixins/breakpoint/respond-to';
+@import 'mixins/clearfix/clearfix';
+@import 'mixins/flex-calc/flex-calc';
+@import 'mixins/image-url/image-url';
+@import 'mixins/rtl/rtl';
+@import 'mixins/spacing/spacing';

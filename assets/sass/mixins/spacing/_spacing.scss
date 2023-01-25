@@ -1,0 +1,58 @@
+@mixin spacing($property, $spacing) {
+  $converted-list: ();
+
+  @each $x in $spacing {
+    $spacing: #{$x * $base-line-height + 'rem'};
+    $converted-list: join($converted-list, $spacing, $separator: space);
+  }
+
+  #{$property}: $converted-list;
+}
+
+@mixin gap($x) {
+  @include spacing(gap, $x);
+}
+
+@mixin margin($x) {
+  @include spacing(margin, $x);
+}
+@mixin margin-inline($x) {
+  @include spacing(margin-inline, $x);
+}
+@mixin margin-block($x) {
+  @include spacing(margin-block, $x);
+}
+@mixin margin-top($x) {
+  @include spacing(margin-top, $x);
+}
+@mixin margin-bottom($x) {
+  @include spacing(margin-bottom, $x);
+}
+@mixin margin-left($x) {
+  @include spacing(margin-left, $x);
+}
+@mixin margin-right($x) {
+  @include spacing(margin-right, $x);
+}
+
+@mixin padding($x) {
+  @include spacing(padding, $x);
+}
+@mixin padding-inline($x) {
+  @include spacing(padding-inline, $x);
+}
+@mixin padding-block($x) {
+  @include spacing(padding-block, $x);
+}
+@mixin padding-top($x) {
+  @include spacing(padding-top, $x);
+}
+@mixin padding-bottom($x) {
+  @include spacing(padding-bottom, $x);
+}
+@mixin padding-left($x) {
+  @include spacing(padding-left, $x);
+}
+@mixin padding-right($x) {
+  @include spacing(padding-right, $x);
+}
