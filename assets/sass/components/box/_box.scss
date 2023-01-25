@@ -19,32 +19,17 @@
 
 .box,
 %box {
-  @include margin-bottom(1);
+  // Add vertical rhythm margins.
+  @include margin-block(1);
+  @include padding(.5);
   border: 5px solid var(--color-border);
-  padding: 1em;
 
   // Sass compiles this to the selector: .box__title, %box__title {}
   // The "__" (double underscore) is part of a BEM naming convention that
   // indicates the "title" is an _element_ of (a piece of) the "box" component.
-  &__title {
-    margin: 0;
-  }
-
-  // Sass compiles this nested ruleset's selector into:
-  // .box:focus, .box:hover, .box.is-focus, .box--is-focus,
-  // %box:focus, %box:hover, %box.is-focus, %box--is-focus {}
-  //
-  // The ".box--is-focus" class is a stray class we don't actually want, but we
-  // deal with it because we often want a placeholder selector like
-  // %box--is-focus in case we need to use @extends later.
-  //
-  // The ".is-" part of the class name is a Drupal 8 BEM naming convention that
-  // indicates the "focus" is a _state_ of the "box" component.
-  &:focus,
-  &:hover,
-  &.is-focus,
-  &--is-focus {
-    border-color: var(--color-text);
+  &__title,
+  .title {
+    margin-top: 0;
   }
 
   // Sass compiles this to the selector: .box--highlight, %box--highlight {}
@@ -52,6 +37,22 @@
   // the "highlight" is a _modifier_, creating a new variation of the standard
   // "box" component.
   &--highlight {
-    border-color: var(--color-link);
+    border-color: var(--color-highlight);
+  }
+
+  &--inverted {
+    @extend %link-inverted;
+    background: var(--color-border);
+    color: var(--color-text-bg);
+  }
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

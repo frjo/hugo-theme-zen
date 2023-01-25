@@ -3,49 +3,30 @@
 // Paged navigation is a list of page numbers when more than 1 page of content
 // is available.
 
+.pagination,
 .pager,
 %pager {
-  @include margin-top(.5);
-  @include margin-bottom(.5);
-  clear: both;
-  padding: 0;
-  text-align: center;
+  @extend %flex-inline;
+  @extend %link-nav;
+  // Add vertical rhythm margins.
+  @include margin-block(1);
+  justify-content: center;
 
-  // A page item in the pager list.
-  &__item {
-    display: inline;
-    padding: 0 .5em;
-    list-style-type: none;
-    background-image: none;
+  .page-item {
   }
 
-  // The current page's list item.
-  &__current-item {
-    @extend %pager__item;
-    font-weight: bold;
+  &__item,
+  .page-link {
+    padding-inline: 2px;
   }
-}
 
-//
-// Zen selectors.
-//
+  .active {
+    font-weight: var(--fw-bold);
+  }
 
-// .pager-item     - A list item containing a page number in the list of pages.
-// .pager-first    - The first page's list item.
-// .pager-previous - The previous page's list item.
-// .pager-next     - The next page's list item.
-// .pager-last     - The last page's list item.
-// .pager-ellipsis - A concatenation of several list items using an ellipsis.
-
-.pager-item,
-.pager-first,
-.pager-previous,
-.pager-next,
-.pager-last,
-.pager-ellipsis {
-  @extend %pager__item;
-}
-
-.pager-current {
-  @extend %pager__current-item;
+  .disabled {
+    .page-link {
+      @extend %disabled;
+    }
+  }
 }

@@ -1,9 +1,6 @@
 // Sections
 
 body {
-  // Output a horizontal grid to help with debugging typography. The
-  // $typey-debug variable will toggle its output.
-  @include typey-debug-grid();
   // Remove the margin in all browsers (opinionated).
   margin: 0;
   padding: 0;
@@ -14,62 +11,49 @@ body {
 // All HTML headings, `<h1>` through `<h6>`, are available. `%h1` through `%h6`
 // classes are also available, for when you want to match the font styling of a
 // heading but still want your text to be displayed inline.
-
-// Correct the font size and margin on `h1` elements within `section` and
-// `article` contexts in Chrome, Firefox, and Safari.
 h1,
 %h1 {
-  // Set the font-size while keeping a proper vertical rhythm.
-  @include font-size(xxl);
-
-  // Set 1 unit of vertical rhythm on the top and bottom margins.
-  @include margin-top(1, xxl);
-  @include margin-bottom(1, xxl);
-  line-height: 1.3;
+  @include margin-block(1);
+  font-size: var(--fs-xxl);
+  line-height: var(--heading-line-height);
 }
 
 h2,
 %h2 {
-  @include font-size(xl);
-  @include margin-top(1, xl);
-  @include margin-bottom(1, xl);
-  line-height: 1.3;
+  @include margin-block(1);
+  font-size: var(--fs-xl);
+  line-height: var(--heading-line-height);
 }
 
 h3,
 %h3 {
-  @include font-size(l);
-  @include margin-top(1, l);
-  @include margin-bottom(1, l);
-  line-height: 1.3;
+  @include margin-block(1);
+  font-size: var(--fs-l);
+  line-height: var(--heading-line-height);
 }
 
 h4,
 %h4 {
-  @include font-size(m);
-  @include margin-top(1, m);
-  @include margin-bottom(1, m);
-  line-height: 1.3;
+  @include margin-block(1);
+  font-size: var(--fs-m);
+  line-height: var(--heading-line-height);
 }
 
 h5,
 %h5 {
-  @include font-size(s);
-  @include margin-top(1, s);
-  @include margin-bottom(1, s);
-  line-height: 1.3;
+  @include margin-block(1);
+  font-size: var(--fs-s);
+  line-height: var(--heading-line-height);
 }
 
 h6,
 %h6 {
-  @include font-size(xs);
-  @include margin-top(1, xs);
-  @include margin-bottom(1, xs);
-  line-height: 1.3;
+  @include margin-block(1);
+  font-size: var(--fs-xs);
+  line-height: var(--heading-line-height);
 }
 
 // Set max text line width for readability.
-
 .main {
   h2,
   h3,
@@ -80,6 +64,6 @@ h6,
   ol,
   dl,
   p {
-    max-width: $max-line-width;
+    max-width: var(--max-line-width);
   }
 }

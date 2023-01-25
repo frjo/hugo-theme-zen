@@ -31,3 +31,36 @@ a:focus {
 a:active {
   color: var(--color-link-active);
 }
+
+.link-nav,
+%link-nav {
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Inverted links, for dark backgrounds.
+.link-inverted,
+%link-inverted {
+  a {
+    color: var(--color-link-inverted);
+
+    &:visited {
+      color: var(--color-link-visited-inverted);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-link-hover-inverted);
+    }
+
+    &:active {
+      color: var(--color-link-active-inverted);
+    }
+  }
+}

@@ -2,7 +2,6 @@
 // The mobile navigation stylesheet for this theme.
 
 @import 'init';
-@import 'extra';
 
 .main-menu,
 .header__region { // stylelint-disable selector-class-pattern
@@ -14,13 +13,13 @@
 } // stylelint-enable selector-class-pattern
 
 .mobile-nav {
-  @include typeface(headings);
   position: absolute;
   right: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  font-family: var(--ff-headings);
   z-index: 20;
   pointer-events: none;
 
@@ -54,10 +53,10 @@
     display: flex;
     align-items: center;
     position: absolute;
-    top: $zen-gutters;
-    right: $zen-gutters;
+    top: var(--gutters);
+    right: var(--gutters);
     margin: 0;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
     background-color: transparent;
     color: var(--color-text);
     z-index: 22;
@@ -110,11 +109,11 @@
   }
 
   &__sheet {
+    @include padding(1.5);
     visibility: hidden;
     background-color: var(--color-mobile-menu);
     width: 90vw;
     height: 100vh;
-    padding: 2rem;
     transform: translateX(100vw);
     z-index: 21;
 
@@ -143,7 +142,7 @@
     margin: 0;
 
     li {
-      list-style-type: none;
+      list-style: none;
       margin: .4rem 0;
     }
   }

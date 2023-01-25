@@ -12,38 +12,42 @@
 
 blockquote {
   // Add vertical rhythm margins.
+  @include margin-block(1);
   // Also indent the quote on both sides.
-  @include margin(1 $indent-amount);
+  margin-inline: var(--indent-amount);
 }
 
 // Lists
 
 dl,
 ol,
-ul {
+ul,
+menu {
   // Add vertical rhythm margins.
-  @include margin(1 0);
+  @include margin-block(1);
 }
 
 dd {
-  margin: 0 0 0 $indent-amount;
+  margin: 0 0 0 var(--indent-amount);
 
   @include rtl {
-    margin: 0 $indent-amount 0 0;
+    margin: 0 var(--indent-amount) 0 0;
   }
 }
 
 ol,
-ul {
-  padding: 0 0 0 $indent-amount;
+ul,
+menu {
+  padding: 0 0 0 var(--indent-amount);
 
   @include rtl {
-    padding: 0 $indent-amount 0 0;
+    padding: 0 var(--indent-amount) 0 0;
   }
 
   // Turn off margins on nested lists.
   ol,
-  ul {
+  ul,
+  menu {
     margin: 0;
   }
 }
@@ -52,7 +56,7 @@ ul {
 
 figure {
   // Add vertical rhythm margins.
-  @include margin(1 0);
+  @include margin-block(1);
 }
 
 // Horizontal rule
@@ -66,11 +70,12 @@ hr {
 
 p,
 pre {
-  @include margin(.75 0);
+  // Add vertical rhythm margins.
+  @include margin-block(.75);
 }
 
 // Preformatted text
 
 pre {
-  @extend %monospace;
+  font-family: var(--ff-monospace);
 }

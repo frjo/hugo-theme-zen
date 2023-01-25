@@ -4,7 +4,7 @@
 
 table {
   // Add vertical rhythm margins.
-  @include margin(1 0);
+  @include margin-block(1);
   // Remove most spacing between table cells.
   border-collapse: collapse;
   border-spacing: 0;

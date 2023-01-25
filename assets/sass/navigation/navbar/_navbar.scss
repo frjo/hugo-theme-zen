@@ -1,24 +1,6 @@
 // Navbar
-//
-// A simple method to get navigation links to appear in one line.
 
-.navbar,
-%navbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-
-  @include rtl() {
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-
-  &__item,
-  li {
-    list-style-type: none;
-    list-style-image: none;
-  }
+.navbar {
+  @extend %flex-inline;
+  margin-block: 0;
 }

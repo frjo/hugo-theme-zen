@@ -11,12 +11,12 @@ body {
 }
 
 .header {
-  padding-top: $zen-gutters;
+  padding-top: var(--gutters);
 }
 
 .footer {
   @include margin-top(1.5);
-  @include padding(.5 0);
+  @include padding(.3);
   text-align: center;
   border-top: 2px solid var(--color-brand);
 
@@ -31,14 +31,14 @@ th,
 label,
 legend,
 figcaption {
-  @include font-size(s);
+  font-size: var(--fs-s);
 }
 
 .language-selector,
 article > header,
 .content-dates,
 .footer {
-  @include font-size(xs);
+  font-size: var(--fs-xs);
 }
 
 // Apply heading font stack to heading, labels etc.
@@ -54,9 +54,9 @@ article > header,
 .content-dates,
 .header,
 .footer {
-  @include typeface(headings);
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-normal);
   color: var(--color-headings);
-  font-weight: normal;
 }
 
 article > .content,
@@ -72,16 +72,13 @@ aside {
 
 article {
   & > header {
+    @include margin-bottom(.75);
     color: var(--color-text-meta);
-  }
-
-  .submitted {
-    margin-bottom: .5rem;
   }
 
   .submitted,
   .tags {
-    @include respond-to(l) {
+    @include respond-to(s) {
       display: inline-block;
       padding-right: 1rem;
     }
@@ -96,8 +93,8 @@ article {
     }
 
     li {
-      @include padding-right(.2);
-      list-style-type: none;
+      list-style: none;
+      padding-right: .4rem;
     }
   }
 
@@ -107,13 +104,13 @@ article {
   }
 
   code {
-    @include font-size(xs);
+    font-size: var(--fs-xs);
     overflow-wrap: break-word;
   }
 
   pre {
     color: var(--color-code);
-    border-radius: $s-radius;
+    border-radius: var(--radius-s);
     padding: 5px;
     border: 1px solid var(--color-border);
     background-color: var(--color-text-bg);
@@ -131,10 +128,6 @@ article {
       white-space: pre;
     }
   }
-
-  .js-clipboard-button {
-    display: block;
-  }
 }
 
 .title-submitted {
@@ -146,8 +139,7 @@ img {
   &.image {
     @include respond-to(s) {
       &.center {
-        margin-left: auto;
-        margin-right: auto;
+        margin-inline: auto;
       }
 
       &.left {
@@ -246,11 +238,11 @@ figure {
 // Search
 
 .search-input {
-  @include margin(1 0);
+  @include margin-block(1);
 }
 
 .search-text {
-  @include font-size(l);
+  font-size: var(--fs-l);
   max-width: 80%;
 }
 

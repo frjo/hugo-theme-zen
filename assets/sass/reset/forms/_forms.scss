@@ -2,6 +2,11 @@
 
 // Form defaults.
 
+form {
+  // Add vertical rhythm margins.
+  @include margin-block(1);
+}
+
 input,
 button,
 textarea,
@@ -12,7 +17,7 @@ select {
 
 label {
   display: block;
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 fieldset {

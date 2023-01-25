@@ -4,7 +4,8 @@
 
 .divider,
 %divider {
-  @include margin(1 0);
+  // Add vertical rhythm margins.
+  @include margin-block(1);
   border: 0;
   border-top: 1px solid var(--color-border);
 
