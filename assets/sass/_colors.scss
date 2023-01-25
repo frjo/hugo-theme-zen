@@ -33,8 +33,13 @@ $colors: (
   link-hover:             $brand,
   link-active:            $red,
 
-  border:                 $grey-light,
-  border-dark:            $nearblack,
+  link-inverted:          $white,
+  link-visited-inverted:  $white,
+  link-hover-inverted:    $white,
+  link-active-inverted:   $red,
+
+  border:                 $brand,
+  border-dark:            $brand-dark,
 
   autocomplete:           $black,
   autocomplete-bg:        $white,
@@ -80,4 +85,6 @@ $colors: (
   headings:               $nearblack,
 
   code:                   $nearblack,
+
+  highlight:              $brand-alt,
 );
