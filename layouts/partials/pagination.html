@@ -1,11 +1,14 @@
+{{ if $.Param "internalpagination" -}}
+{{ template "_internal/pagination.html" . }}
+{{ else -}}
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) -}}
 <nav class="pager">
 {{ if .Paginator.HasPrev -}}
-<a href="{{ .Paginator.Prev.URL }}" rel="prev" class="pager-item pager-prev">{{ i18n "pager_prev" }}</a>
+<a href="{{ .Paginator.Prev.URL }}" rel="prev" class="pager__item pager__item--prev"><span aria-hidden="true">« </span>{{ i18n "pager_prev" }}</a>
 {{ end -}}
-
 {{ if .Paginator.HasNext -}}
-<a href="{{ .Paginator.Next.URL }}" rel="next" class="pager-item pager-next">{{ i18n "pager_next" }}</a>
+<a href="{{ .Paginator.Next.URL }}" rel="next" class="pager__item pager__item--next">{{ i18n "pager_next" }}<span aria-hidden="true"> »</span></a>
 {{ end -}}
 </nav>
+{{ end -}}
 {{ end -}}

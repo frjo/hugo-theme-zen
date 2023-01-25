@@ -1,4 +1,4 @@
-<nav class="main-menu layout__navigation" aria-label="{{ i18n "menu_title" }}">
+<nav class="main-menu{{ if not ($.Param "menuinheader") }} layout__navigation{{ end }}" aria-label="{{ i18n "menu_title" }}">
 <ul class="navbar">
 {{ if site.Menus.main -}}
 

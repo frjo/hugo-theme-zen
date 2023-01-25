@@ -2,11 +2,9 @@
 
 {{ define "main" -}}
 <main class="main layout__main">
-<article class="single-view{{ with .Section }} single-view--{{ . | urlize }}{{ end }}">
 <div class="content">
 {{ .Content }}
 </div>
-</article>
 
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ $paginator := .Paginate $pages -}}

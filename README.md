@@ -220,6 +220,7 @@ params:
   icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.
+  internalPagination: true  # Use Hugos internal pagination template, default false.
   jquery: true              # Add jQuery, default false.
   languageDir: ""           # Set ltr or rtl, defaults to ltr.
   logo: false               # Turn off the logo.
@@ -239,6 +240,7 @@ params:
   privacyPolicyUrl: ""      # If set will add link to cookie consent form.
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   relatedposts: true        # Show related posts under a "See also" section, default false.
+  sassTranspiler: "dartsass"# The Sass transpiler to use, default "libsass".
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right, default false.
   submitted: true           # Show author and date information for a post.
