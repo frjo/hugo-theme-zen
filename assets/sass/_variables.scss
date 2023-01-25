@@ -1,4 +1,5 @@
-// stylelint-disable value-keyword-case, scss/dollar-variable-colon-space-after, max-line-length
+// stylelint-disable max-line-length, number-leading-zero, number-no-trailing-zeros
+// stylelint-disable scss/dollar-variable-colon-space-after, value-keyword-case
 
 // Variables
 
@@ -22,6 +23,7 @@ $print-font-size:     12pt;
 
 // The font sizes in our type hierarchy as tee shirt sizes.
 // Size m is base.
+// Use like this: var(--fs-m)
 $font-size-fixed: (
   xxxxl:      2.778rem,
   xxxl:       2.335rem,
@@ -35,6 +37,7 @@ $font-size-fixed: (
 
 // The responsive font sizes in our type hierarchy as tee shirt sizes.
 // Size m is base.
+// Use like this: var(--fs-m)
 $font-size-fluid: (
   xxxxl:      clamp(1.80rem, calc(1.45rem + 1.73vw), 2.80rem),
   xxxl:       clamp(1.60rem, calc(1.35rem + 1.27vw), 2.33rem),
@@ -48,9 +51,10 @@ $font-size-fluid: (
 
 // Set the font sizes to use, fixed or fluid.
 $font-size: $font-size-fixed;
-//$font-size: $font-size-fluid;
+// $font-size: $font-size-fluid;
 
 // Font weights.
+// Use like this: var(--fw-normal)
 $font-weight: (
   bolder:     900,
   bold:       700,
@@ -88,6 +92,8 @@ $system-ui:       system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $menlo:           Menlo, 'Ubuntu Mono', 'DejaVu Sans Mono', 'Courier New', Courier, monospace, sans-serif;
 
+// Font family.
+// Use like this: var(--ff-body)
 $font-family: (
   body:       $garamond,
   headings:   $futura,
@@ -96,7 +102,7 @@ $font-family: (
 );
 
 // Breakpoints
-// Use the `respond-to()` mixin to use named breakpoints.
+// Use the `respond-to(s)` mixin to use named breakpoints.
 $breakpoints: (
   'xxxl':     1222px,
   'xxl':      1111px,
@@ -110,6 +116,7 @@ $breakpoints: (
 );
 
 // Border radius.
+// Use like this: var(--radius-m)
 $border-radius: (
   l:          1rem,
   m:          0.3rem,
@@ -117,6 +124,7 @@ $border-radius: (
 );
 
 // Spacing.
+// Use like this: var(--space-m)
 $spacing: (
   xxxl:       5rem,
   xxl:        3rem,
@@ -135,7 +143,7 @@ $max-content-width:   1111px;
 // The max page width. Defaults to max-content-width.
 // Setting this to a larger value than max-content-width allows
 // content with class "stetch" to strech out to the page edge.
-//$max-page-width:      1111px;
+// $max-page-width:      1111px;
 
 // The max line width for readability.
 $max-line-width:      70ch;

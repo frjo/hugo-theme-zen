@@ -1,6 +1,7 @@
 .flex-group,
 %flex-group {
   $gap: 1;
+
   @include gap($gap);
   display: flex;
   flex-wrap: wrap;

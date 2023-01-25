@@ -5,8 +5,7 @@
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
-  }
-  @else {
+  } @else {
     @media (min-width: $breakpoint) {
       @content;
     }
