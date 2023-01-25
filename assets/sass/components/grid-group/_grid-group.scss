@@ -1,0 +1,48 @@
+.grid-group,
+%grid-group {
+  --column-min: 250px;
+  $gap: 1;
+  @include gap($gap);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--column-min), 1fr));
+
+  &--fit {
+    grid-template-columns: repeat(auto-fit, minmax(var(--column-min), 1fr));
+  }
+
+  &--100 {
+    --column-min: 100px;
+  }
+
+  &--150 {
+    --column-min: 150px;
+  }
+
+  &--200 {
+    --column-min: 200px;
+  }
+
+  &--250 {
+    --column-min: 250px;
+  }
+
+  &--300 {
+    --column-min: 300px;
+  }
+
+  &--350 {
+    --column-min: 350px;
+  }
+
+  &--400 {
+    --column-min: 400px;
+  }
+
+  &--500 {
+    --column-min: 500px;
+  }
+
+  &--600 {
+    --column-min: 600px;
+  }
+}
