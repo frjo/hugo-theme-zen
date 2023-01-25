@@ -2,9 +2,7 @@
 
 **Zen** theme strives to be as clean and standard compliant as possible with some neat features. A solid base for your custom [Hugo](https://gohugo.io/) theme.
 
-It uses HTML5 with a modern CSS grid and flex layout. Recent versions of all the mayor browsers support it, see [Can I use css grid](http://caniuse.com/#search=grid).
-
-Sass is processed with Hugo pipes. To make using npm optional I have added the stylesheets from the excellent sass plugin [typey](https://www.npmjs.com/package/typey) directly to the theme.
+It uses HTML5 with a modern CSS grid and flex layout. Care has ben taken to produce semantic and accessible code.
 
 ![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/lighthouse_report.png)
 
@@ -13,8 +11,23 @@ Sass is processed with Hugo pipes. To make using npm optional I have added the s
 
 Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https://github.com/frjo/zen-demo)).
 
+## Quickstart
 
-## Version 2.0
+Quickstart a new site with the Zen theme by using the [Zen demo repo as a template](https://github.com/frjo/zen-demo/generate).
+
+
+## Version 3.x
+
+* Implement more modern CSS.
+* Use css variables throughout.
+* Remove all use of "typey" lib.
+* Add setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
+* Add setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
+
+When upgrading make sure to update overridden versions of any sass files. All variables can now be accessed as css variables and several have changed names.
+
+
+## Version 2.x
 
 * Replaced "normalize" with slimmer and updated "reset". Removed everything for old IE versions.
 * Use of css4 variables. Colours are now used like this `var(--color-brand)`.
@@ -26,10 +39,6 @@ Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https:/
 * Added max-line-width for readability, default to 70ch.
 * New shortcodes: button, svg, reflink and details.
 
-### Todo
-
-* Implement more use of css4 variables.
-* Remove all use of "typey". (low priority)
 
 ## Table of contents
 
