@@ -11,7 +11,7 @@ other = "Menu"
 other = "Next"
 
 [pager_prev]
-other = "Prev"
+other = "Previous"
 
 [taxo_tags]
 other = "Tags"
