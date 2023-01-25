@@ -1,0 +1,37 @@
+$max-page-width: $max-content-width !default;
+
+:root {
+  // Convert sass variables to css4 variables.
+  // Use like this: var(--color-brand).
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+
+  @each $name, $size in $font-size {
+    --fs-#{$name}: #{$size};
+  }
+
+  @each $name, $weight in $font-weight {
+    --fw-#{$name}: #{$weight};
+  }
+
+  @each $name, $family in $font-family {
+    --ff-#{$name}: #{$family};
+  }
+
+  @each $name, $radius in $border-radius {
+    --radius-#{$name}: #{$radius};
+  }
+
+  @each $name, $space in $spacing {
+    --space-#{$name}: #{$space};
+  }
+
+  --heading-line-height: #{$heading-line-height};
+  --max-content-width: #{$max-content-width};
+  --max-page-width: #{$max-page-width};
+  --max-line-width: #{$max-line-width};
+  --gutters: #{$gutters};
+  --gutters-reverse: #{$gutters-reverse};
+  --indent-amount: #{$indent-amount};
+}

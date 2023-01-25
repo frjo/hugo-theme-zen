@@ -6,19 +6,11 @@
 
 @import 'init';
 
-// Convert colour map to css4 variables.
-// Use like this: var(--color-brand)
-:root {
-  @each $name, $color in $colors {
-    --color-#{$name}: #{$color};
-  }
-}
+// Declaring global CSS variables in :root.
 
-// Site specific variables.
+@import 'root';
 
-@import 'extra';
-
-// Ensure fonts get loaded first to minimize front-end performance impact.
+// Ensure fonts get loaded early to minimize front-end performance impact.
 
 @import 'fonts';
 
@@ -37,27 +29,25 @@
 
 @import 'components/box/box';
 @import 'components/button/button';
+@import 'components/cards/cards';
 @import 'components/clearfix/clearfix';
 @import 'components/cookieconsent/cookieconsent';
 @import 'components/divider/divider';
+@import 'components/disabled/disabled';
+@import 'components/flex-group/flex-group';
+@import 'components/flex-inline/flex-inline';
 @import 'components/header/header';
 @import 'components/hidden/hidden';
 @import 'components/highlight-mark/highlight-mark';
-@import 'components/inline-links/inline-links';
-@import 'components/inline-sibling/inline-sibling';
-@import 'components/inverted-box/inverted-box';
 @import 'components/language-selector/language-selector';
 @import 'components/list-straight-left/list-straight-left';
 @import 'components/messages/messages';
-@import 'components/monospace/monospace';
 @import 'components/responsive-video/responsive-video';
+@import 'components/stretch/stretch';
 @import 'components/visually-hidden/visually-hidden';
-@import 'components/watermark/watermark';
-@import 'components/wireframe/wireframe';
 
 // Navigation
 
-@import 'navigation/more-link/more-link';
 @import 'navigation/navbar/navbar';
 @import 'navigation/pager/pager';
 
