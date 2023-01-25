@@ -2,11 +2,11 @@
 // The print stylesheet for this theme.
 
 @import 'init';
-@import 'extra';
 @import 'components/print-none/print-none';
 
 .pager,
 %pager,
+.mobile-nav,
 aside,
 nav,
 footer {
@@ -18,9 +18,13 @@ footer {
     font-size: $print-font-size;
   }
 
+  html,
   body,
   .page {
-    background-color: var(--color-white);
+    background-color: white;
+    border-color: black;
+    box-shadow: none;
+    color: black;
   }
 
   .main {
