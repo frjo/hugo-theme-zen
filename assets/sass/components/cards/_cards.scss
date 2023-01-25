@@ -1,0 +1,36 @@
+// Cards
+//
+// A simple cards style.
+
+.cards,
+%cards {
+  @extend %flex-group;
+  // Add vertical rhythm margins.
+  @include margin-block(1);
+}
+
+.card,
+%card {
+  @include padding(.5);
+  border: 1px solid var(--color-border);
+
+  &--highlight {
+    border-color: var(--color-highlight);
+  }
+
+  &--inverted {
+    @extend %link-inverted;
+    background: var(--color-border);
+    color: var(--color-text-bg);
+  }
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// Stretch content to the page edge.
+//
+// Requeried: Set max-page-width to a larger value than max-content-width.
+
+.stretch,
+%stretch {
+  width: 100%;
+
+  .main & {
+    max-width: none;
+  }
+}
