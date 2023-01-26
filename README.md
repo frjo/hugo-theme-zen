@@ -20,9 +20,11 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 * Implement more modern CSS.
 * Use css variables throughout.
+* New setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
+* New setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
+* New flex and grid components.
 * Remove all use of "typey" lib.
-* Add setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
-* Add setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
+* Remove unused/outdated components.
 
 When upgrading make sure to update overridden versions of any sass files. All variables can now be accessed as css variables and several have changed names.
 
