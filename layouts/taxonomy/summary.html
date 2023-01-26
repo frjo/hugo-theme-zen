@@ -1,0 +1,6 @@
+<article class="list-view{{ with .Section }} list-view--{{ . | urlize }}{{ end }}">
+<h2 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="meta">({{ .Data.Pages.Len }})</span></h2>
+<div class="content">
+<p>{{ .Description }}</p>
+</div>
+</article>

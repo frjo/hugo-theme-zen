@@ -59,6 +59,8 @@ article > header,
   color: var(--color-headings);
 }
 
+// Article and content.
+
 article > .content,
 aside {
   ul {
@@ -133,6 +135,13 @@ article {
 .title-submitted {
   margin-bottom: .2rem;
 }
+
+.meta {
+  color: var(--color-text-meta);
+  font-size: var(--fs-s);
+}
+
+// Figure and image.
 
 figure,
 img {
