@@ -18,15 +18,28 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Version 3.x
 
-* Implement more modern CSS.
-* Use css variables throughout.
+* Implement modern CSS like flex, grid and variables throughout.
+* All sass variables now have a css variable version. All styles use the css variable version.
 * New setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
 * New setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
-* New flex and grid components.
+* New sass components:
+    * disabled
+    * cards
+    * flex-group
+    * flex-inline
+    * icon-inline
+    * stretch
 * Remove all use of "typey" lib.
 * Remove unused/outdated components.
 
-When upgrading make sure to update overridden versions of any sass files. All variables can now be accessed as css variables and several have changed names.
+
+### Upgrade to 3.x
+
+* Update your projects `_colors.scss` to add the new colours.
+* Update overridden variables in projects `_extra.scss` so they match changes in themes `_variables.scss`.
+* Replace `@include font-size(s);` with `font-size: var(--fs-s);`.
+* Replace `@include typeface(headings);` with `font-family: var(--ff-headings);`.
+* Replace sass variable with css variables, e.g. `$zen-gutters` with `var(--gutters)`.
 
 
 ## Version 2.x
