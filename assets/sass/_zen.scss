@@ -292,31 +292,3 @@ figure {
     }
   }
 }
-
-// Icons.
-
-.icon {
-  // Reset set SVG to block but icons are normally inline.
-  display: inline;
-}
-
-// Header anchor links
-
-.anchor-link {
-  opacity: 0;
-  transition: all 130ms ease-in;
-}
-
-.anchor-header {
-  &:focus,
-  &:hover {
-    .anchor-link {
-      opacity: .3;
-
-      &:focus,
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-}

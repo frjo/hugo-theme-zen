@@ -1,0 +1,78 @@
+{{/* Control how the image is rendered with these variables.  */}}
+{{ $class := "" -}}
+{{ $size := "" -}}
+{{ $srcset := "" -}}
+{{ $width := "" -}}
+
+{{/* Only change the below code if you know what you are doing. */}}
+{{ $height := "" -}}
+{{ $maxwidth := site.Params.imageMaxWidth -}}
+{{ $realwidth := 0 -}}
+{{ $realheight := 0 -}}
+{{ $resource := false -}}
+{{ $src := .Destination -}}
+{{ $srcsetw := (slice) }}
+{{ $static := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ with (imageConfig (path.Join "/static" $src)) -}}
+    {{ $realwidth = .Width -}}
+    {{ $realheight = .Height -}}
+  {{ end -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if $resource -}}
+  {{ if $size -}}
+    {{ $image := $resource.Resize $size -}}
+    {{ $src = $image.RelPermalink -}}
+    {{ $width = $image.Width -}}
+    {{ $height = $image.Height -}}
+  {{ else -}}
+    {{ $src = $resource.RelPermalink -}}
+    {{ $realwidth = $resource.Width -}}
+    {{ $realheight = $resource.Height -}}
+  {{ end -}}
+  {{ if $srcset -}}
+    {{ range $set := split $srcset " " -}}
+      {{ $image := $resource.Resize (printf "%sx" $set) -}}
+      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) }}
+    {{ end }}
+    {{ $width = "" -}}
+    {{ $height = "" -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if and $width $height -}}
+    {{ $width = int $width -}}
+    {{ $height = int $height -}}
+{{ else if $width -}}
+  {{ $width = int $width -}}
+  {{ $height = $realheight -}}
+  {{ if and ($realwidth) (lt ($width) ($realwidth)) -}}
+    {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
+    {{ $height = (math.Round $height) -}}
+  {{ end -}}
+{{ else if $height -}}
+  {{ $width = $realwidth -}}
+  {{ $height = int $height -}}
+  {{ if and ($realheight) (lt ($height) ($realheight)) -}}
+    {{ $width = (mul ($realwidth) (div (add ($height) 0.0) ($realheight))) -}}
+    {{ $width = (math.Round $width) -}}
+  {{ end -}}
+{{ else if and ($maxwidth) (lt ($maxwidth) ($realwidth)) -}}
+  {{ $width = ($maxwidth) -}}
+  {{ $height = (mul ($realheight) (div (add ($width) 0.0) ($realwidth))) -}}
+  {{ $height = (math.Round $height) -}}
+{{ end -}}
+
+<img class="image{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}" alt="{{ .Text }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}{{ with .Title}} title="{{ . }}"{{ end }}>
