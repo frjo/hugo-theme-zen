@@ -57,6 +57,9 @@ menu {
 figure {
   // Add vertical rhythm margins.
   @include margin-block(1);
+
+  // Remove defult inline margins.
+  @include margin-inline(0);
 }
 
 // Horizontal rule
