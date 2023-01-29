@@ -17,13 +17,16 @@ $yellow:                #fd0;
 
 $brand:                 $nearblack;
 $brand-alt:             $grey;
+$brand-light:           $grey-light;
 $brand-dark:            $grey-dark;
 
 // Colour map.
 $colors: (
   brand:                  $brand,
   brand-alt:              $brand-alt,
+  brand-light:            $brand-light,
   brand-dark:             $brand-dark,
+
   text:                   $black,
   text-bg:                $white,
   text-meta:              $grey-dark,
@@ -38,8 +41,9 @@ $colors: (
   link-hover-inverted:    $white,
   link-active-inverted:   $red,
 
-  border:                 $grey-light,
-  border-dark:            $brand,
+  border:                 $brand,
+  border-light:           $brand-light,
+  border-dark:            $brand-dark,
 
   autocomplete:           $black,
   autocomplete-bg:        $white,
