@@ -1,15 +1,14 @@
 .grid-group,
 %grid-group {
-  $gap: 1;
+  --column-min: 200px;
+  --gap: 1.5rem;
 
-  --column-min: 250px;
-
-  @include gap($gap);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--column-min), 1fr));
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--column-min), 1fr));
 
-  &--fit {
-    grid-template-columns: repeat(auto-fit, minmax(var(--column-min), 1fr));
+  &--fill {
+    grid-template-columns: repeat(auto-fill, minmax(var(--column-min), 1fr));
   }
 
   &--100 {

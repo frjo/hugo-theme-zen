@@ -4,7 +4,7 @@
 
 .cards,
 %cards {
-  @extend %flex-group;
+  @extend %grid-group;
   // Add vertical rhythm margins.
   @include margin-block(1);
 }
@@ -16,6 +16,11 @@
 
   &--highlight {
     border-color: var(--color-highlight);
+  }
+
+  &--featured {
+    grid-row: span 2;
+    grid-column: span 2;
   }
 
   &--inverted {
