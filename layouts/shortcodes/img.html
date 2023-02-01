@@ -37,6 +37,9 @@
     {{ $src = $image.RelPermalink -}}
     {{ $width = $image.Width -}}
     {{ $height = $image.Height -}}
+    {{ if $srcset -}}
+      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $src (strings.TrimRight "x" $size)) }}
+    {{ end -}}
   {{ else -}}
     {{ $src = $resource.RelPermalink -}}
     {{ $realwidth = $resource.Width -}}
