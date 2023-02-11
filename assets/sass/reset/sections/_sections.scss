@@ -1,7 +1,7 @@
 // Sections
 
 body {
-  // Remove the margin in all browsers (opinionated).
+  // Remove the margin in all browsers.
   margin: 0;
   padding: 0;
 }
@@ -10,47 +10,54 @@ body {
 //
 // All HTML headings, `<h1>` through `<h6>`, are available. `%h1` through `%h6`
 // classes are also available, for when you want to match the font styling of a
-// heading but still want your text to be displayed inline.
+// heading but not be a heading.
+h1,
+%h1,
+h2,
+%h2,
+h3,
+%h3,
+h4,
+%h4,
+h5,
+%h5,
+h6,
+%h6 {
+  @include margin-block(1);
+  color: var(--color-headings);
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-headings);
+  line-height: var(--heading-line-height);
+}
+
 h1,
 %h1 {
-  @include margin-block(1);
   font-size: var(--fs-xxl);
-  line-height: var(--heading-line-height);
 }
 
 h2,
 %h2 {
-  @include margin-block(1);
   font-size: var(--fs-xl);
-  line-height: var(--heading-line-height);
 }
 
 h3,
 %h3 {
-  @include margin-block(1);
   font-size: var(--fs-l);
-  line-height: var(--heading-line-height);
 }
 
 h4,
 %h4 {
-  @include margin-block(1);
   font-size: var(--fs-m);
-  line-height: var(--heading-line-height);
 }
 
 h5,
 %h5 {
-  @include margin-block(1);
   font-size: var(--fs-s);
-  line-height: var(--heading-line-height);
 }
 
 h6,
 %h6 {
-  @include margin-block(1);
   font-size: var(--fs-xs);
-  line-height: var(--heading-line-height);
 }
 
 // Set max text line width for readability.

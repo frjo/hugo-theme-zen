@@ -56,6 +56,7 @@ $font-size: $font-size-fixed;
 // Font weights.
 // Use like this: var(--fw-normal)
 $font-weight: (
+  headings:   700,
   bolder:     900,
   bold:       700,
   medium:     500,
@@ -71,34 +72,31 @@ $font-weight: (
 // monospace) hints at what type of font to use if the web browser doesn't
 // find any of the fonts in the list.
 
+// System-ui font stack.
+$system-ui:       system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 'Liberation Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
 // Serif font stacks.
-$times-new-roman: 'Times New Roman', Times, Georgia, 'DejaVu Serif', serif;
-$times:           Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
-$georgia:         Georgia, 'Times New Roman', 'DejaVu Serif', serif;
-$garamond:        Garamond, Charter, 'Times New Roman', serif;
+$ui-serif:        ui-serif, Constantia, 'Noto Serif', Georgia, serif;
+$times:           'Times New Roman', 'Liberation Serif', 'Nimbus Roman No9 L', serif;
+$georgia:         Georgia, 'Noto Serif', ui-serif, serif;
+$garamond:        Garamond, Charter, Cambria, 'Noto Serif', ui-serif, serif;
 
 // Sans-serif font stacks.
-$verdana:         Verdana, Tahoma, 'DejaVu Sans', sans-serif;
-$tahoma:          Tahoma, Verdana, 'DejaVu Sans', sans-serif;
-$helvetica:       Helvetica, Arial, 'Nimbus Sans L', sans-serif;
-$lucida:          'Lucida Grande', 'Lucida Sans Unicode', Lucida, Verdana, sans-serif;
-$futura:          Futura, 'Century Gothic', AppleGothic, sans-serif;
-
-// System-ui font stack.
-$system-ui:       system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$ui-sans-serif:   ui-sans-serif, $system-ui;
+$helvetica:       'Helvetica Neue', Helvetica, 'Liberation Sans', 'Nimbus Sans L', Arial, sans-serif;
+$futura:          Futura, 'Century Gothic', Montserrat, Calibri, ui-sans-serif, sans-serif;
 
 // Monospace font stacks.
-// For an explanation of why "sans-serif" is at the end of this list, see
-// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$menlo:           Menlo, 'Ubuntu Mono', 'DejaVu Sans Mono', 'Courier New', Courier, monospace, sans-serif;
+$ui-monospace:    ui-monospace, Menlo, 'Cascadia Mono', 'Segoe UI Mono', 'Noto Sans Mono', 'Liberation Mono', Monaco, Consolas, monospace;
+
 
 // Font family.
 // Use like this: var(--ff-body)
 $font-family: (
-  body:       $garamond,
-  headings:   $futura,
+  body:       $ui-serif,
+  headings:   $ui-sans-serif,
   alt:        $system-ui,
-  monospace:  $menlo,
+  monospace:  $ui-monospace,
 );
 
 // Breakpoints

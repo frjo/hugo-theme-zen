@@ -3,12 +3,14 @@
 // Document
 
 html {
-  // Change the default font family in all browsers (opinionated).
+  // Change the default font family in all browsers.
   font-family: var(--ff-body);
   // Set base font size in percent.
   font-size: calc(#{$base-font-size} / 16 * 100%);
   // Correct the line height in all browsers.
   line-height: $base-line-height;
+  // Set text colour.
+  color: var(--color-text);
   // Prevent adjustments of font size.
   -webkit-text-size-adjust: none;
   text-size-adjust: none;

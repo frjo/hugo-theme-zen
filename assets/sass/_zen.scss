@@ -41,11 +41,8 @@ article > header,
   font-size: var(--fs-xs);
 }
 
-// Apply heading font stack to heading, labels etc.
+// Apply heading font stack and colour to labels etc.
 
-h1,
-h2,
-h3,
 th,
 nav,
 label,
@@ -54,9 +51,9 @@ article > header,
 .content-dates,
 .header,
 .footer {
-  font-family: var(--ff-headings);
-  font-weight: var(--fw-normal);
   color: var(--color-headings);
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-headings);
 }
 
 // Article and content.
@@ -111,7 +108,6 @@ article {
   }
 
   pre {
-    color: var(--color-code);
     border-radius: var(--radius-s);
     padding: 5px;
     border: 1px solid var(--color-border-light);
