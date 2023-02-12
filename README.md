@@ -20,26 +20,29 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 * Implement modern CSS like flex, grid and variables throughout.
 * All sass variables now have a css variable version. All styles use the css variable version.
+* Defaults to a System-ui font stack (like GitHub and Stack overflow among others).
 * New setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
 * New setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
 * New sass components:
-    * disabled
     * cards
+    * center
+    * disabled
     * flex-group
     * flex-inline
     * icon-inline
     * stretch
 * Remove all use of "typey" lib.
 * Remove unused/outdated components.
+* Only a few small changes to templates.
 
 
 ### Upgrade to 3.x
 
-* Update your projects `_colors.scss` to add the new colours.
-* Update overridden variables in projects `_extra.scss` so they match changes in themes `_variables.scss`.
-* Replace `@include font-size(s);` with `font-size: var(--fs-s);`.
-* Replace `@include typeface(headings);` with `font-family: var(--ff-headings);`.
-* Replace sass variable with css variables, e.g. `$zen-gutters` with `var(--gutters)`.
+1. Update your projects `_colors.scss` to add the new colours.
+2. Update overridden variables in projects `_extra.scss` so they match changes in themes `_variables.scss`.
+3. Replace `@include font-size(s);` with `font-size: var(--fs-s);`.
+4. Replace `@include typeface(headings);` with `font-family: var(--ff-headings);`.
+5. Replace sass variables with css variables, e.g. `$zen-gutters` with `var(--gutters)`.
 
 
 ## Version 2.x
