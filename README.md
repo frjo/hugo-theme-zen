@@ -16,6 +16,35 @@ Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https:/
 Quickstart a new site with the Zen theme by using the [Zen demo repo as a template](https://github.com/frjo/zen-demo/generate).
 
 
+## Table of contents
+
+* [Version 3.x](#version-3x)
+* [Version 2.x](#version-2x)
+* [Features](#features)
+* [Minimum Hugo version](#minimum-hugo-version)
+* [Installation](#installation)
+* [Updating](#updating)
+* [Run example site](#run-example-site)
+* [Performance](#performance)
+* [Sites using the Hugo Zen theme](#sites-using-the-hugo-zen-theme)
+* [Screenshots](#screenshots)
+* [Configuration](#configuration)
+* [Customise](#customise)
+* [Render hook templates](#render-hook-templates)
+* [Multilingual](#multilingual)
+* [Search](#search)
+* [Contact form](#contact-form)
+* [Cookie consent](#cookie-consent)
+* [Dates](#dates)
+* [Podcast](#podcast)
+* [Shortcodes](#shortcodes)
+* [Content security policy headers](#Content-security-policy-headers)
+* [Choose between using AlpineJS, jQuery or Umbrella JS](#choose-between-using-alpinejs-jquery-or-umbrella-js)
+* [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
+* [Getting help](#getting-help)
+* [Credits](#credits)
+
+
 ## Version 3.x
 
 * Implement modern CSS like flex, grid and variables throughout.
@@ -56,33 +85,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * The zen-gutters variable is now a calculated value based on window width.
 * Added max-line-width for readability, default to 70ch.
 * New shortcodes: button, svg, reflink and details.
-
-
-## Table of contents
-
-* [Features](#features)
-* [Minimum Hugo version](#minimum-hugo-version)
-* [Installation](#installation)
-* [Updating](#updating)
-* [Run example site](#run-example-site)
-* [Performance](#performance)
-* [Sites using the Hugo Zen theme](#sites-using-the-hugo-zen-theme)
-* [Screenshots](#screenshots)
-* [Configuration](#configuration)
-* [Customise](#customise)
-* [Render hook templates](#render-hook-templates)
-* [Multilingual](#multilingual)
-* [Search](#search)
-* [Contact form](#contact-form)
-* [Cookie consent](#cookie-consent)
-* [Dates](#dates)
-* [Podcast](#podcast)
-* [Shortcodes](#shortcodes)
-* [Content security policy headers](#Content-security-policy-headers)
-* [Choose between using jQuery or Umbrella JS](#choose-between-using-jquery-or-umbrella-js)
-* [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
-* [Getting help](#getting-help)
-* [Credits](#credits)
 
 
 ## Features
