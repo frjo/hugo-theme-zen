@@ -53,6 +53,10 @@ article > header,
 .footer {
   color: var(--color-headings);
   font-family: var(--ff-headings);
+}
+
+th,
+label {
   font-weight: var(--fw-headings);
 }
 
