@@ -1,0 +1,371 @@
+# Global settings.
+
+_inputs:
+  title:
+    type: text
+    comment: The title of your page.
+  date:
+    type: datetime
+    comment: Date of this page.
+  description:
+    type: textarea
+    comment: Short desciption, for search engines and sharing.
+  image:
+    type: image
+  src:
+    type: image
+  summary:
+    type: textarea
+    comment: A short summary of the post.
+  submitted:
+    type: switch
+    comment: Show author and date.
+  lazyload:
+    type: switch
+    comment: Lazyload images on this page.
+  sidebar:
+    type: switch
+    comment: Show sidebar.
+  tags:
+    type: array
+    comment: Tags for this page.
+  tags[*]:
+    type: text
+  aliases:
+    type: array
+    comment: Aliases for this page.
+  aliases[*]:
+    type: text
+  content_inner:
+    type: markdown
+
+collections_config:
+  pages:
+    schemas:
+      default:
+        path: archetypes/default.md
+  micro:
+    schemas:
+      default:
+        path: archetypes/micro.md
+  podcast:
+    schemas:
+      default:
+        path: archetypes/podcast.md
+
+# Add custom Hugo shortcodes.
+_snippets:
+  zen_audio:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: audiotrack
+      text: Audio
+      subtext:
+        - key: src
+    definitions:
+      shortcode_name: audio
+      named_args:
+        - editor_key: src
+          type: string
+        - editor_key: text
+          type: string
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: caption
+          type: string
+          optional: true
+        - editor_key: preload
+          type: string
+          optional: true
+
+  zen_button:
+    template: hugo_shortcode_named_args
+    inline: true
+    preview:
+      icon: smart_button
+      text: Button
+      subtext:
+        - key: src
+    definitions:
+      shortcode_name: button
+      named_args:
+        - editor_key: src
+          type: boolean
+        - editor_key: text
+          type: boolean
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: newtab
+          type: boolean
+          optional: true
+
+  zen_clear:
+    template: hugo_shortcode
+    inline: false
+    preview:
+      icon: clear_all
+      text: Clear
+    definitions:
+      shortcode_name: clear
+
+  zen_contact:
+    template: hugo_shortcode
+    inline: false
+    preview:
+      icon: email
+      text: Contact form
+    definitions:
+      shortcode_name: contact
+
+  zen_details:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    preview:
+      icon: expand_more
+      text: Details
+      subtext:
+        - key: summary
+    definitions:
+      shortcode_name: details
+      content_key: content_inner
+      named_args:
+        - editor_key: summary
+          type: string
+        - editor_key: class
+          type: string
+          optional: true
+
+  zen_figure:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      view: gallery
+      icon: image
+      text: Figure
+      subtext:
+        - key: alt
+        - No alt
+      gallery:
+        image:
+          - key: src
+        text: No preview available
+        fit: contain
+    definitions:
+      shortcode_name: figure
+      named_args:
+        - editor_key: src
+          type: string
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: title
+          type: string
+          optional: true
+        - editor_key: caption
+          type: string
+          optional: true
+        - editor_key: alt
+          type: string
+          optional: true
+        - editor_key: height
+          type: string
+          optional: true
+        - editor_key: width
+          type: string
+          optional: true
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: size
+          type: string
+          optional: true
+        - editor_key: srcset
+          type: string
+          optional: true
+        - editor_key: attr
+          type: string
+          optional: true
+        - editor_key: attrlink
+          type: string
+          optional: true
+
+  zen_file:
+    template: hugo_shortcode_named_args
+    inline: true
+    preview:
+      icon: upload_file
+      text: File
+      subtext:
+        - key: src
+    definitions:
+      shortcode_name: file
+      named_args:
+        - editor_key: src
+          type: string
+        - editor_key: text
+          type: string
+          optional: true
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: newtab
+          type: boolean
+          optional: true
+
+  zen_img:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      view: gallery
+      icon: image
+      text: Image
+      subtext:
+        - key: alt
+        - No alt
+      gallery:
+        image:
+          - key: src
+        text: No preview available
+        fit: contain
+    definitions:
+      shortcode_name: img
+      named_args:
+        - editor_key: src
+          type: string
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: alt
+          type: string
+          optional: true
+        - editor_key: height
+          type: string
+          optional: true
+        - editor_key: width
+          type: string
+          optional: true
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: size
+          type: string
+          optional: true
+        - editor_key: srcset
+          type: string
+          optional: true
+
+  zen_reflink:
+    template: hugo_shortcode_positional_args
+    inline: true
+    preview:
+      icon: link
+      text: Reference link
+      subtext:
+        - key: page
+    definitions:
+      shortcode_name: reflink
+      positional_args:
+        - editor_key: page
+          type: string
+
+  zen_search:
+    template: hugo_shortcode
+    inline: false
+    preview:
+      icon: search
+      text: Search form
+    definitions:
+      shortcode_name: search
+
+  zen_svg:
+    template: hugo_shortcode_named_args
+    inline: true
+    preview:
+      view: gallery
+      icon: image
+      text: SVG
+      subtext:
+        - key: alt
+        - No alt
+      gallery:
+        image:
+          - key: src
+        text: No preview available
+        fit: contain
+    definitions:
+      shortcode_name: svg
+      named_args:
+        - editor_key: src
+          type: string
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: alt
+          type: string
+          optional: true
+        - editor_key: height
+          type: string
+          optional: true
+        - editor_key: width
+          type: string
+          optional: true
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: caption
+          type: string
+          optional: true
+        - editor_key: inline
+          type: boolean
+          optional: true
+
+  zen_video:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: videocam
+      text: Video
+      subtext:
+        - key: src
+    definitions:
+      shortcode_name: video
+      named_args:
+        - editor_key: src
+          type: string
+        - editor_key: class
+          type: string
+          optional: true
+        - editor_key: preload
+          type: string
+          optional: true
+        - editor_key: width
+          type: string
+          optional: true
+        - editor_key: autoplay
+          type: boolean
+          optional: true
+        - editor_key: loop
+          type: boolean
+          optional: true
+        - editor_key: caption
+          type: string
+          optional: true
+
+  zen_wrapper:
+    template: hugo_paired_shortcode_positional_args
+    inline: false
+    preview:
+      icon: wrap_text
+      text: Wrapper
+      subtext:
+        - key: class
+        - No class
+    definitions:
+      shortcode_name: wrapper
+      content_key: content_inner
+      positional_args:
+        - editor_key: class
+          type: string
