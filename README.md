@@ -133,7 +133,7 @@ Afterwards, declare the `zen` theme module as a dependency of your site:
 From the root of your site:
 
 ```shell
-hugo mod get -u github.com/frjo/hugo-theme-zen/v2
+hugo mod get -u github.com/frjo/hugo-theme-zen/v3
 ```
 
 ### Git submodule
@@ -209,19 +209,7 @@ Some performance tools will complain about to many files (js and css files are n
 
 ## Screenshots
 
-### On the large screen
-
 ![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/tn.png)
-
-
-### On the small screen
-
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/tn_mobil.png)
-
-
-### The mobile menu
-
-![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/tn_mobil_menu.png)
 
 
 ## Configuration
