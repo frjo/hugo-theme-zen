@@ -2,7 +2,7 @@
 
 **Zen** theme strives to be as clean and standard compliant as possible with some neat features. A solid base for your custom [Hugo](https://gohugo.io/) theme.
 
-It uses HTML5 with a modern CSS grid and flex layout. Care has ben taken to produce semantic and accessible code.
+It uses HTML5 with a modern CSS grid and flex layout. Care has been taken to produce semantic and accessible code.
 
 ![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/lighthouse_report.png)
 
