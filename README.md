@@ -2,7 +2,7 @@
 
 **Zen** theme strives to be as clean and standard compliant as possible with some neat features. A solid base for your custom [Hugo](https://gohugo.io/) theme.
 
-It uses HTML5 with a modern CSS grid and flex layout. Care has ben taken to produce semantic and accessible code.
+It uses HTML5 with a modern CSS grid and flex layout. Care has been taken to produce semantic and accessible code.
 
 ![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/lighthouse_report.png)
 
@@ -227,8 +227,8 @@ params:
   cookieConsent: true       # Show cookie consent form, default false.
   contact: "info@example.org"
   copyright: "This site is licensed under a 
-              (https://creativecommons.org/licenses/by-sa/4.0/)."
-              [Creative Commons Attribution-ShareAlike 4.0 International License]
+              [Creative Commons Attribution-ShareAlike 4.0 International
+              License](https://creativecommons.org/licenses/by-sa/4.0/)."
   dateformat: ""            # Set the date format, default to "2 January, 2006"
   description: ""           # Set site description, used in meta tags and JSON-LD
   favicon: ""               # Relative path to favicon in json feed, no leading slash.
