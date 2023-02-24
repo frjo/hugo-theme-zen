@@ -6,6 +6,7 @@ _inputs:
     comment: The title of your page.
   date:
     type: datetime
+    instance_value: NOW
     comment: Date of this page.
   description:
     type: textarea
@@ -44,14 +45,17 @@ collections_config:
     schemas:
       default:
         path: archetypes/default.md
+        remove_extra_inputs: false
   micro:
     schemas:
       default:
         path: archetypes/micro.md
+        remove_extra_inputs: false
   podcast:
     schemas:
       default:
         path: archetypes/podcast.md
+        remove_extra_inputs: false
 
 # Add custom Hugo shortcodes.
 _snippets:
