@@ -19,7 +19,7 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .IsTranslated -}}
 {{ range .Translations }}
-<link rel="alternate" hreflang="{{ .Language.Params.LanguageCode | default .Lang }}" href="{{ .RelPermalink }}">
+<link rel="alternate" hreflang="{{ .Language.Params.LanguageCode | default .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
 {{ end -}}
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
