@@ -240,8 +240,9 @@ params:
   internalPagination: true  # Use Hugos internal pagination template, default false.
   jquery: true              # Add jQuery, default false.
   languageDir: ""           # Set ltr or rtl, defaults to ltr.
-  logo: false               # Turn off the logo.
+  logo: false               # Turn off the logo, defaults to true.
   logoPath:                 # Relative path to site logo, defaults to "images/logo.png", no leading slash.
+  logoHeight:               # Set logo height, defaults to none.
   logoWidth:                # Set logo width, defaults to none.
   mainSections:             # The sections you want to have listed on the front page.
     - "section1"            # Default to the section with most content if not set.
