@@ -1,6 +1,6 @@
-<div class="tags">
+<div class="tags meta">
 {{ i18n "taxo_tags" }}:
-<ul>
+<ul class="flex-inline flex-inline--inline">
 {{ range (.GetTerms "tags") -}}
 <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
 {{ end -}}

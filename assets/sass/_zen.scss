@@ -35,8 +35,6 @@ figcaption {
 }
 
 .language-selector,
-article > header,
-.content-dates,
 .footer {
   font-size: var(--fs-xs);
 }
@@ -47,8 +45,6 @@ th,
 nav,
 label,
 legend,
-article > header,
-.content-dates,
 .header,
 .footer {
   color: var(--color-headings);
@@ -74,11 +70,6 @@ aside {
 }
 
 article {
-  & > header {
-    @include margin-bottom(.75);
-    color: var(--color-text-meta);
-  }
-
   .submitted,
   .tags {
     @include respond-to(s) {
@@ -89,21 +80,8 @@ article {
 
   .tags {
     ul {
-      display: inline-flex;
-      flex-wrap: wrap;
       margin: 0;
-      padding: 0;
     }
-
-    li {
-      list-style: none;
-      padding-right: .4rem;
-    }
-  }
-
-  .content-dates {
-    color: var(--color-text-meta);
-    text-align: right;
   }
 
   code {
@@ -136,10 +114,10 @@ article {
   margin-bottom: .2rem;
 }
 
-.meta {
-  color: var(--color-text-meta);
-  font-size: var(--fs-s);
+.content-dates {
+  text-align: right;
 }
+
 
 // Figure and image.
 
