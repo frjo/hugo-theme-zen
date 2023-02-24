@@ -2,19 +2,18 @@
 
 .header,
 %header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutters);
+  background-color: var(--color-header-bg);
+
   @include respond-to(s) {
-    display: flex;
+    flex-direction: row;
   }
 
   // Wrapping link for logo.
   &__logo {
-    @include respond-to(s) {
-      margin: 0 var(--gutters) 0 0;
-
-      @include rtl() {
-        margin: 0 0 0 var(--gutters);
-      }
-    }
+    width: fit-content;
   }
 
   // Logo image.
