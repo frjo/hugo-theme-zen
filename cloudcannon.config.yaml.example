@@ -11,6 +11,8 @@ _inputs:
   description:
     type: textarea
     comment: Short desciption, for search engines and sharing.
+  draft:
+    type: switch
   image:
     type: image
   src:
