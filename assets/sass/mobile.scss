@@ -26,7 +26,7 @@
     display: none;
   }
 
-  .js-nav-open & {
+  &.js-nav-open {
     position: fixed;
   }
 
@@ -136,12 +136,16 @@
   &__navbar {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
+    padding-left: 0;
+    margin-block: 0;
 
     li {
       list-style: none;
-      margin: .4rem 0;
+    }
+
+    a {
+      display: inline-block;
+      padding-block: .5rem;
     }
   }
 

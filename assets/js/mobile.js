@@ -7,18 +7,18 @@
 
   'use strict';
 
-  const body = document.querySelector('body');
+  const nav = document.querySelector('.mobile-nav');
   const sheet = document.querySelector('.mobile-nav__sheet');
   const toggle = document.querySelector('.mobile-nav__toggle');
 
   function navopen() {
-    body.classList.add('js-nav-open');
+    nav.classList.add('js-nav-open');
     sheet.setAttribute('aria-hidden', 'false');
     toggle.setAttribute('aria-expanded', 'true');
   }
 
   function navclose() {
-    body.classList.remove('js-nav-open');
+    nav.classList.remove('js-nav-open');
     sheet.setAttribute('aria-hidden', 'true');
     toggle.setAttribute('aria-expanded', 'false');
   }
@@ -28,7 +28,7 @@
   toggles.forEach(function (toggle) {
     toggle.addEventListener('click', function (e) {
       e.preventDefault();
-      if (body.classList.contains('js-nav-open')) {
+      if (nav.classList.contains('js-nav-open')) {
         navclose();
       }
       else {
