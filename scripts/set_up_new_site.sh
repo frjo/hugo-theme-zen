@@ -9,7 +9,7 @@ set -euo pipefail
 
 if [[ ! "$0" =~ "themes/zen/scripts/set_up_new_site.sh" ]]; then
   echo "Error: This script must be run from the project root directory."
-  echo "Usage: ./theme/zen/set_up_new_site.sh"
+  echo "Usage: ./themes/zen/scripts/set_up_new_site.sh"
   exit 1
 fi
 
