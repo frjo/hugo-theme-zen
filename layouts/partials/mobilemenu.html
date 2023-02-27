@@ -9,9 +9,7 @@
     </svg>
   </button>
   <div class="mobile-nav__sheet" id="sheet" aria-hidden="true">
-    <div class="mobile-nav__region">
-    {{ if site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end }}
-    </div>
+    <div class="mobile-nav__region">{{ if site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end }}</div>
     <nav class="mobile-nav__main-menu" aria-label="{{ i18n "menu_title" }}">
     <ul class="mobile-nav__navbar">
     {{ if site.Menus.main -}}
