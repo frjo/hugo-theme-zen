@@ -15,5 +15,9 @@
 {{ if $.Param "mobilemenu" -}}
 <link rel="stylesheet" href="{{ $mobile_style.RelPermalink }}" media="screen">
 {{ end -}}
+{{ if $.Param "math" -}}
+{{ $katex_style := resources.Get "vendor/katex/katex.min.css" -}}
+<link rel="stylesheet" href="{{ $katex_style.RelPermalink }}" >
+{{ end -}}
 <link rel="stylesheet" href="{{ $main_style.RelPermalink }}">
 <link rel="stylesheet" href="{{ $print_style.RelPermalink }}" media="print">
