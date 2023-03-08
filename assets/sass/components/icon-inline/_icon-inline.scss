@@ -8,12 +8,12 @@
     text-decoration: none;
   }
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     .icon-link {
       opacity: .3;
 
-      &:focus,
+      &:focus-visible,
       &:hover {
         opacity: 1;
       }

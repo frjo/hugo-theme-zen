@@ -71,7 +71,7 @@
     }
 
     &:hover svg,
-    &:focus svg {
+    &:focus-visible svg {
       fill: var(--color-text-bg);
     }
   }
