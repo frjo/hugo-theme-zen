@@ -53,12 +53,5 @@
 <script defer src="{{ $search.RelPermalink }}"></script>
 {{ end -}}
 
-{{ if $.Param "math" -}}
-{{ $katex := resources.Get "vendor/katex/katex.min.js" }}
-<script defer src="{{ $katex.RelPermalink }}" crossorigin="anonymous"></script>
-{{ $auto_render := resources.Get "vendor/katex/auto-render.min.js" }}
-<script defer src="{{ $auto_render.RelPermalink }}" crossorigin="anonymous"></script>
-{{ end -}}
-
 {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
 <script defer src="{{ $script.RelPermalink }}"></script>
