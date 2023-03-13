@@ -26,13 +26,6 @@
 <script defer src="{{ $cookieconsent.RelPermalink }}"></script>
 {{ end -}}
 
-{{ if $.Param "lazyload" -}}
-{{ $lozadmin := resources.Get "vendor/lozad.min.js" | fingerprint -}}
-<script defer src="{{ $lozadmin.RelPermalink }}"></script>
-{{ $lozad := resources.Get "js/lozadinit.js" | fingerprint -}}
-<script defer src="{{ $lozad.RelPermalink }}"></script>
-{{ end -}}
-
 {{ if $.Param "listsort" -}}
 {{ $listmin := resources.Get "vendor/list.min.js" | fingerprint -}}
 <script defer src="{{ $listmin.RelPermalink }}"></script>
