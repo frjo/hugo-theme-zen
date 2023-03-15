@@ -1,11 +1,3 @@
-// Sections
-
-body {
-  // Remove the margin in all browsers.
-  margin: 0;
-  padding: 0;
-}
-
 // Headings
 //
 // All HTML headings, `<h1>` through `<h6>`, are available. `%h1` through `%h6`
@@ -23,11 +15,16 @@ h5,
 %h5,
 h6,
 %h6 {
-  @include margin-block(1);
+  @include margin-block(1 .5);
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
   line-height: var(--heading-line-height);
+
+  // Set max text line width in main for readability.
+  .main & {
+    max-width: var(--max-line-width);
+  }
 }
 
 h1,
@@ -58,19 +55,4 @@ h5,
 h6,
 %h6 {
   font-size: var(--fs-xs);
-}
-
-// Set max text line width for readability.
-.main {
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
-  ol,
-  dl,
-  p {
-    max-width: var(--max-line-width);
-  }
 }

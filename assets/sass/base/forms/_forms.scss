@@ -1,0 +1,53 @@
+// stylelint-disable property-no-vendor-prefix
+
+// Form defaults.
+
+form {
+  // Add vertical rhythm margins.
+  @include margin-block(1);
+
+  // Set max text line width in main for readability.
+  .main & {
+    max-width: var(--max-line-width);
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  @include margin-bottom(.75);
+}
+
+label {
+  &:has(+ :required) {
+    &::after {
+      content: '*';
+      color: var(--color-mark-highlight);
+    }
+  }
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+}
+
+input {
+  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
+  // stylelint-disable-next-line function-name-case
+  width: Min(20em, 100%);
+}
+
+[type='text'],
+textarea {
+  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
+  // stylelint-disable-next-line function-name-case
+  width: Min(30em, 100%);
+}
+
+input:not(:only-of-type),
+textarea {
+  & + [type='submit'] {
+    display: block;
+  }
+}

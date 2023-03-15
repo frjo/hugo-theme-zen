@@ -1,0 +1,111 @@
+// stylelint-disable property-no-vendor-prefix
+// Reset browsers to some sane defaults.
+
+// Document
+
+html {
+  // Prevent adjustments of font size.
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  // On short pages, we want any background gradients to fill the entire height
+  // of the browser.
+  min-height: 100%;
+  // Use the saner border-box model.
+  box-sizing: border-box;
+  // Use smooth scrolling.
+  scroll-behavior: smooth;
+  // Improve text rendering.
+  -webkit-font-smoothing: antialiased;
+}
+
+// Use the saner border-box model for all elements.
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Sections
+
+body {
+  // Remove the margin in all browsers.
+  margin: 0;
+  padding: 0;
+}
+
+// Embedded content
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+svg {
+  height: auto;
+}
+
+// Form defaults.
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  max-width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: var(--fw-bold);
+}
+
+[type='search'] {
+  // Correct the odd appearance in Chrome and Safari.
+  -webkit-appearance: textfield;
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+}
+
+// Text-level semantics
+//
+// The elements in this section give semantics to inline text.
+
+// Code
+
+code,
+kbd,
+samp {
+  color: var(--color-code);
+  font-family: var(--ff-monospace);
+}
+
+// Mark text
+
+mark {
+  @extend %highlight-mark;
+}
+
+// Superscript / Subscript
+
+sub,
+sup {
+  // Prevent `sub` and `sup` elements from affecting the line height in
+  // all browsers.
+  font-size: var(--fs-xs);
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
