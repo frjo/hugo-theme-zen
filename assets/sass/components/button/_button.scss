@@ -15,20 +15,20 @@ button,
 [type='reset'],
 [type='submit'] {
   @extend %button--disabled;
-  @include margin-right(.75);
-  @include margin-bottom(.75);
-  @include padding(.2 1);
   // Some styles don't apply to <a> links since they are inline elements by default.
   display: inline-block;
   font-family: var(--ff-headings);
   text-decoration: none;
   text-align: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: .2rem 1rem;
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
   color: var(--color-button-text);
   background-color: var(--color-button);
   border: 0;
-  border-radius: var(--radius-m);
+  border-radius: var(--radius-s);
 
   &:hover,
   &:focus,
@@ -44,10 +44,10 @@ button,
 .button,
 %button {
   &--small {
-    @include margin-right(.3);
-    @include margin-bottom(.3);
-    @include padding(.1 .5);
     font-size: var(--fs-xs);
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    padding: .2rem .75rem;
   }
 
   &--alt {

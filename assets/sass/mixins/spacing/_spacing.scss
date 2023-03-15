@@ -1,8 +1,12 @@
-@mixin spacing($property, $spacing) {
+@mixin spacing($property, $spacing, $unit: 'rem') {
   $converted-list: ();
 
   @each $x in $spacing {
-    $spacing: #{$x * $base-line-height + 'rem'};
+    @if $x == 0 {
+      $unit: '';
+    }
+
+    $spacing: #{$x * $base-line-height + $unit};
     $converted-list: join($converted-list, $spacing, $separator: space);
   }
 

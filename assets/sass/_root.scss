@@ -23,10 +23,6 @@ $max-page-width: $max-content-width !default;
     --radius-#{$name}: #{$radius};
   }
 
-  @each $name, $space in $spacing {
-    --space-#{$name}: #{$space};
-  }
-
   --heading-line-height: #{$heading-line-height};
   --max-content-width: #{$max-content-width};
   --max-page-width: #{$max-page-width};

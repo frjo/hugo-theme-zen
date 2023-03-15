@@ -115,23 +115,24 @@ $breakpoints: (
 // Border radius.
 // Use like this: var(--radius-m)
 $border-radius: (
-  l:          1rem,
-  m:          0.3rem,
-  s:          3px,
+  xl:         1rem,
+  l:          0.75rem,
+  m:          0.5rem,
+  s:          0.3rem,
+  xs:         0.125rem,
 );
 
 // Spacing.
-// Use like this: var(--space-m)
+// Generates mt-m (mt = margin-top) and mb-m (mb = margin-bottom) classes.
 $spacing: (
-  xxxl:       5rem,
-  xxl:        3rem,
-  xl:         2rem,
-  l:          1.5rem,
-  m:          1rem,
-  s:          0.75rem,
-  xs:         0.5rem,
-  xxs:        0.4rem,
-  xxxs:       0.3rem,
+  xxl:        3,
+  xl:         2,
+  l:          1.5,
+  m:          1,
+  s:          0.75,
+  xs:         0.5,
+  xxs:        0.3,
+  0:          0,
 );
 
 // The max content width. (Consider using one of the breakpoints.)
@@ -154,3 +155,7 @@ $indent-amount:       2rem;
 
 // Control whether RTL styles are added.
 $include-rtl: false;
+
+// Show horizontal grid to help with debugging typography
+$debug: true;
+$debug-color: $grey-extra-light;

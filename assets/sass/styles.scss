@@ -16,7 +16,11 @@
 
 // Reset browsers to some sane defaults.
 
-@import 'reset/reset';
+@import 'reset';
+
+// Base styles.
+
+@import 'base/base';
 
 // Layouts
 
@@ -37,6 +41,7 @@
 @import 'components/disabled/disabled';
 @import 'components/flex-group/flex-group';
 @import 'components/flex-inline/flex-inline';
+@import 'components/footer/footer';
 @import 'components/grid-group/grid-group';
 @import 'components/grid-stack/grid-stack';
 @import 'components/header/header';
@@ -48,7 +53,9 @@
 @import 'components/messages/messages';
 @import 'components/meta/meta';
 @import 'components/responsive-video/responsive-video';
+@import 'components/spacing/spacing';
 @import 'components/stretch/stretch';
+@import 'components/tags/tags';
 @import 'components/visually-hidden/visually-hidden';
 
 // Navigation

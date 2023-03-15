@@ -48,13 +48,13 @@
   }
 
   &__toggle {
-    @include padding(0 .2);
     display: flex;
     align-items: center;
     position: absolute;
     top: var(--gutters);
     right: var(--gutters);
     margin: 0;
+    padding: 0 .3rem;
     font-weight: var(--fw-bold);
     background-color: var(--color-text-bg);
     color: var(--color-text);
@@ -107,11 +107,11 @@
   }
 
   &__sheet {
-    @include padding(1.5);
     visibility: hidden;
     background-color: var(--color-mobile-menu);
     width: 90vw;
     height: 100vh;
+    padding: 2.25rem;
     transform: translateX(100vw);
     z-index: 21;
 

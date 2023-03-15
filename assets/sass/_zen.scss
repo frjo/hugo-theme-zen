@@ -10,19 +10,8 @@ body {
   background-color: var(--color-body-bg);
 }
 
-.header {
-  padding-top: var(--gutters);
-}
-
 .footer {
-  @include margin-top(1.5);
-  @include padding(.3);
-  text-align: center;
   border-top: 2px solid var(--color-brand);
-
-  p {
-    margin: 0;
-  }
 }
 
 // Apply smaller text to blocks, footer etc.
@@ -78,19 +67,13 @@ article {
     }
   }
 
-  .tags {
-    ul {
-      margin: 0;
-    }
-  }
-
   code {
     font-size: var(--fs-xs);
     overflow-wrap: break-word;
   }
 
   pre {
-    border-radius: var(--radius-s);
+    border-radius: var(--radius-xs);
     padding: 5px;
     border: 1px solid var(--color-border-light);
     background-color: var(--color-text-bg);
@@ -110,10 +93,6 @@ article {
   }
 }
 
-.title-submitted {
-  margin-bottom: .2rem;
-}
-
 .content-dates {
   text-align: right;
 }
@@ -129,14 +108,14 @@ img {
       }
 
       &.left {
-        @include padding(0 .5 .5 0);
+        padding: 0 .75rem .75rem 0;
         margin: 0;
         float: left;
         clear: both;
       }
 
       &.right {
-        @include padding(0 0 .5 .5);
+        padding: 0 0 .75rem .75rem;
         margin: 0;
         float: right;
         clear: both;
@@ -167,13 +146,13 @@ figure {
 
       &.left {
         figcaption {
-          @include padding(0 .5 .5 0);
+          padding: 0 .75rem .75rem 0;
         }
       }
 
       &.right {
         figcaption {
-          @include padding(0 0 .5 .5);
+          padding: 0 0 .75rem .75rem;
         }
       }
     }
@@ -189,11 +168,11 @@ figure {
 // Navigation
 
 .main-menu {
-  @include margin-top(.5);
+  margin-top: .75rem;
   outline: 0;
 
   li {
-    @include margin-bottom(.5);
+    margin-bottom: .75rem;
     padding: 0;
   }
 
@@ -224,6 +203,7 @@ figure {
 // Search
 
 .search-input {
+  // Add vertical rhythm margins.
   @include margin-block(1);
 }
 
@@ -235,18 +215,8 @@ figure {
 // Form
 
 .content {
-  label:has(+ :required) {
-    &::after {
-      content: '*';
-      color: var(--color-mark-highlight);
-    }
-  }
-
   input,
   textarea {
-    @include margin-bottom(.75);
-    width: 92%;
-
     &:not(:placeholder-shown):valid {
       background-color: var(--color-status-bg);
     }
