@@ -1,11 +1,6 @@
-{{ $katex_style := resources.Get "vendor/katex/katex.min.css" -}}
-<link rel="stylesheet" href="{{ $katex_style.RelPermalink }}" >
-
-{{ $katex := resources.Get "vendor/katex/katex.min.js" }}
-<script defer src="{{ $katex.RelPermalink }}" crossorigin="anonymous"></script>
-
-{{ $auto_render := resources.Get "vendor/katex/auto-render.min.js" }}
-<script defer src="{{ $auto_render.RelPermalink }}" crossorigin="anonymous"></script>
-
-{{ $customized_render := resources.Get "js/math.js" }}
-<script defer src="{{ $customized_render.RelPermalink }}" crossorigin="anonymous"></script>
+{{ $katex_style := resources.Get "vendor/katex/katex.min.css" | fingerprint -}}
+<link rel="stylesheet" href="{{ $katex_style.RelPermalink }}">
+{{ $katex := resources.Get "vendor/katex/katex.min.js" | fingerprint -}}
+<script defer src="{{ $katex.RelPermalink }}"></script>
+{{ $auto_render := resources.Get "vendor/katex/contrib/auto-render.min.js" | fingerprint -}}
+<script defer src="{{ $auto_render.RelPermalink }}" onload="renderMathInElement(document.body);"></script>

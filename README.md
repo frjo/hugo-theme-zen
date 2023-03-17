@@ -247,6 +247,7 @@ params:
   mainSections:             # The sections you want to have listed on the front page.
     - "section1"            # Default to the section with most content if not set.
     - "section2"            # Set to empty if no section should be listed.
+  math: true                # Turn on math typesetting with Katex, default false.
   menuInHeader: true        # Move the main menu to the header, default false.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens, default false.
@@ -792,6 +793,12 @@ Node.js software you need. To install them run:
         npm run lint-project
         nmp run lint (project + theme)
 
+
+## Math typesetting with Katex
+
+Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `assets/vendor` directory.
+
+The resulting path should be `assets/vendor/katex`. Then set the `math` param to true and write some math to be typeset.
 
 ## Getting help
 
