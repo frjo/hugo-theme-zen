@@ -28,6 +28,7 @@
 {{ if $.Param "menuinheader" }}{{ partial "menu.html" . }}{{ end -}}
 </div>
 {{ if $.Param "mobilemenu" }}{{ partial "mobilemenu.html" . }}{{ end -}}
+{{ if $.Param "math" }}{{ partial "math.html" . }}{{ end -}}
 </header>
 
 {{ if not ($.Param "menuinheader") }}{{ partial "menu.html" . }}{{ end -}}
