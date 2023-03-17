@@ -796,9 +796,10 @@ Node.js software you need. To install them run:
 
 ## Math typesetting with Katex
 
-Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `assets/vendor` directory.
+Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `static` directory.
 
-The resulting path should be `assets/vendor/katex`. Then set the `math` param to true and write some math to be typeset.
+The resulting path should be `static/katex`. Then set the `math` param to "true" and write some math to be typeset.
+
 
 ## Getting help
 

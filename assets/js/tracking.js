@@ -1,12 +1,13 @@
-/* eslint-disable no-undef */
-
 /**
  * @file
  * A JavaScript file for analytic tracking.
  */
 
+/* eslint-disable */
 import * as params from '@params';
+/* eslint-enable */
 
+/* eslint-disable no-undef */
 const cookiebanner = params.cookieConsent;
 const cookieconsent = localStorage.getItem('cookieconsent');
 const idSite = params.piwikSiteID;

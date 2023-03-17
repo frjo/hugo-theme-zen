@@ -1,6 +1,5 @@
-{{ $katex_style := resources.Get "vendor/katex/katex.min.css" | fingerprint -}}
-<link rel="stylesheet" href="{{ $katex_style.RelPermalink }}">
-{{ $katex := resources.Get "vendor/katex/katex.min.js" | fingerprint -}}
-<script defer src="{{ $katex.RelPermalink }}"></script>
-{{ $auto_render := resources.Get "vendor/katex/contrib/auto-render.min.js" | fingerprint -}}
-<script defer src="{{ $auto_render.RelPermalink }}" onload="renderMathInElement(document.body);"></script>
+<link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
+<script defer src="{{ "katex/katex.min.js" | relURL }}"></script>
+<script defer src="{{ "katex/contrib/auto-render.min.js" | relURL }}"></script>
+{{ $math := resources.Get "js/math.js" | minify | fingerprint -}}
+<script defer src="{{ $math.RelPermalink }}"></script>
