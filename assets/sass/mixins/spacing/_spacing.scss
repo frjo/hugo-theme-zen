@@ -1,7 +1,8 @@
-@mixin spacing($property, $spacing, $unit: 'rem') {
+@mixin spacing($property, $spacing) {
   $converted-list: ();
 
   @each $x in $spacing {
+    $unit: 'rem';
     @if $x == 0 {
       $unit: '';
     }
