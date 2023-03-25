@@ -41,6 +41,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Content security policy headers](#Content-security-policy-headers)
 * [Choose between using AlpineJS, jQuery or Umbrella JS](#choose-between-using-alpinejs-jquery-or-umbrella-js)
 * [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
+* [Nice forks of the Zen theme](#nice-forks-of-the-zen-theme)
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
@@ -799,6 +800,11 @@ Node.js software you need. To install them run:
 Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `static` directory.
 
 The resulting path should be `static/katex`. Then set the `math` param to "true" and write some math to be typeset.
+
+
+## Nice forks of the Zen theme
+
+* [DFD-Zen theme for Hugo](https://gitlab.com/danielfdickinson/dfd-hugo-theme-zen)
 
 
 ## Getting help
