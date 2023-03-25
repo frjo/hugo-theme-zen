@@ -3,6 +3,7 @@
 
   @each $x in $spacing {
     $unit: 'rem';
+
     @if $x == 0 {
       $unit: '';
     }
