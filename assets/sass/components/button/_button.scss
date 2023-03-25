@@ -40,11 +40,11 @@ button,
   }
 
   &:hover {
-    box-shadow: 2px 2px 5px 0px var(--color-button-hover);
+    box-shadow: 2px 2px 5px 1px var(--color-button-hover);
   }
 
   &:active {
-    box-shadow: none;
+    box-shadow: inset 2px 2px 5px 1px var(--color-button);
   }
 }
 
