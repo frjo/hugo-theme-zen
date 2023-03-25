@@ -1,0 +1,107 @@
+[menu_title]
+other = "Menyu Kuu"
+
+[menu_home]
+other = "Mwanzo"
+
+[menu_mobile]
+other = "Menyu"
+
+[pager_next]
+other = "Mbele"
+
+[pager_prev]
+other = "Nyuma"
+
+[taxo_tags]
+other = "Vitambulisho"
+
+[last_mod]
+other = "Imesasishwa:"
+
+[created]
+other = "Imeundwa:"
+
+[search_placeholder]
+other = "Weka masharti unayotaka kutafuta."
+
+[search_title]
+other = "Tafuta"
+
+[search_loading]
+other = "Inapakia faharasa ya utafutaji..."
+
+[string_at]
+other = "katika"
+
+[string_by]
+other = "kwa"
+
+[string_follow]
+other = "fuata"
+
+[string_in]
+other = "katika"
+
+[string_on]
+other = "juu"
+
+[string_recent_content]
+other = "Maudhui ya hivi majuzi"
+
+[string_see_also]
+other = "Angalia pia"
+
+[js_required]
+other = "Javascript lazima iwezeshwe ili kutumia chaguo hili la kukokotoa."
+
+[contact_submitted]
+other = "Ujumbe wako ulitumwa."
+
+[contact_error]
+other = "Kulikuwa na hitilafu katika kutuma ujumbe."
+
+[contact_name]
+other = "Jina"
+
+[contact_name_placeholder]
+other = "Jina Lako"
+
+[contact_mail]
+other = "Barua Pepe"
+
+[contact_mail_placeholder]
+other = "Anwani yako ya barua pepe"
+
+[contact_subject]
+other = "Mada"
+
+[contact_subject_placeholder]
+other = "Mada Fupi"
+
+[contact_message]
+other = "Ujumbe"
+
+[contact_message_placeholder]
+other = "Ujumbe unaenda hapa..."
+
+[contact_submit]
+other = "Tuma Ujumbe"
+
+[contact_honeypot]
+other = "Ruka kama wewe ni binadamu"
+
+[lang_select_title]
+other = "Kiteuzi cha lugha"
+
+[cookieconsent_message]
+other = "Tovuti hii hutumia vidakuzi. Baadhi ni muhimu kwa tovuti kufanya kazi. Vidakuzi vya kufuatilia na uchanganuzi ni vya hiari."
+
+[cookieconsent_accept]
+other = "Kubali yote"
+
+[cookieconsent_decline]
+other = "Ni muhimu tu"
+
+[privacy_policy]
+other = "Sera ya faragha"
