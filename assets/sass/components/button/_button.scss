@@ -38,6 +38,14 @@ button,
     color: var(--color-button-text-hover);
     background-color: var(--color-button-hover);
   }
+
+  &:hover {
+    box-shadow: 2px 2px 5px 0px var(--color-button-hover);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
 }
 
 // Add button variations here.
