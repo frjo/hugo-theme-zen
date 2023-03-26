@@ -27,6 +27,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Run example site](#run-example-site)
 * [Performance](#performance)
 * [Sites using the Hugo Zen theme](#sites-using-the-hugo-zen-theme)
+* [Nice forks of the Zen theme](#nice-forks-of-the-zen-theme)
 * [Screenshots](#screenshots)
 * [Configuration](#configuration)
 * [Customise](#customise)
@@ -41,7 +42,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Content security policy headers](#Content-security-policy-headers)
 * [Choose between using AlpineJS, jQuery or Umbrella JS](#choose-between-using-alpinejs-jquery-or-umbrella-js)
 * [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
-* [Nice forks of the Zen theme](#nice-forks-of-the-zen-theme)
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
@@ -206,6 +206,11 @@ Some performance tools will complain about to many files (js and css files are n
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
 * [xdeb.net](https://xdeb.net/)
+
+
+## Nice forks of the Zen theme
+
+* [DFD-Zen theme for Hugo](https://gitlab.com/danielfdickinson/dfd-hugo-theme-zen)
 
 
 ## Screenshots
@@ -800,11 +805,6 @@ Node.js software you need. To install them run:
 Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `static` directory.
 
 The resulting path should be `static/katex`. Then set the `math` param to "true" and write some math to be typeset.
-
-
-## Nice forks of the Zen theme
-
-* [DFD-Zen theme for Hugo](https://gitlab.com/danielfdickinson/dfd-hugo-theme-zen)
 
 
 ## Getting help
