@@ -2,17 +2,17 @@
 <script src="{{ $early.RelPermalink }}"></script>
 
 {{ if $.Param "alpine" -}}
-{{ $alpine := resources.Get "vendor/alpine.min.js" | fingerprint -}}
+{{ $alpine := resources.Get "libs/alpine.min.js" | fingerprint -}}
 <script defer src="{{ $alpine.RelPermalink }}"></script>
 {{ end -}}
 
 {{ if $.Param "jquery" -}}
-{{ $jquery := resources.Get "vendor/jquery.slim.min.js" | fingerprint -}}
+{{ $jquery := resources.Get "libs/jquery.slim.min.js" | fingerprint -}}
 <script defer src="{{ $jquery.RelPermalink }}"></script>
 {{ end -}}
 
 {{ if $.Param "umbrella" -}}
-{{ $umbrella := resources.Get "vendor/umbrella.min.js" | fingerprint -}}
+{{ $umbrella := resources.Get "libs/umbrella.min.js" | fingerprint -}}
 <script defer src="{{ $umbrella.RelPermalink }}"></script>
 {{ end -}}
 
@@ -27,7 +27,7 @@
 {{ end -}}
 
 {{ if $.Param "listsort" -}}
-{{ $listmin := resources.Get "vendor/list.min.js" | fingerprint -}}
+{{ $listmin := resources.Get "libs/list.min.js" | fingerprint -}}
 <script defer src="{{ $listmin.RelPermalink }}"></script>
 {{ $listsort := resources.Get "js/listsort.js" | fingerprint -}}
 <script defer src="{{ $listsort.RelPermalink }}"></script>
@@ -39,7 +39,7 @@
 {{ end -}}
 
 {{ if .HasShortcode "search" -}}
-{{ $flexsearch := resources.Get "vendor/flexsearch.compact.js" | fingerprint -}}
+{{ $flexsearch := resources.Get "libs/flexsearch.compact.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
 {{ $search_opts := dict "minify" true "params" (dict "searchLimit" (site.Params.searchLimit | default 20)) -}}
 {{ $search := resources.Get "js/search.js" | js.Build $search_opts | fingerprint -}}
