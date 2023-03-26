@@ -53,14 +53,22 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Defaults to a System-ui font stack (like GitHub and Stack overflow among others).
 * New setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
 * New setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
+* Split sass "reset" dir into "base" dir and pure "reset" file.
+* Added margin top/bottom/block classes, mt--m/mb--m/mtb--m, for all "spacing" variables.
 * New sass components:
     * cards
     * center
     * disabled
     * flex-group
     * flex-inline
+    * footer
+    * grid-group
+    * grid-stack
     * icon-inline
+    * meta
+    * spacing
     * stretch
+    * tags
 * Remove all use of "typey" lib.
 * Remove unused/outdated components.
 * Only a few small changes to templates.
@@ -70,8 +78,8 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 1. Update your projects `_colors.scss` to add the new colours.
 2. Update overridden variables in projects `_extra.scss` so they match changes in themes `_variables.scss`.
-3. Replace `@include font-size(s);` with `font-size: var(--fs-s);`.
-4. Replace `@include typeface(headings);` with `font-family: var(--ff-headings);`.
+3. Replace `@include font-size(s);` with `font-size: var(--fs-s);` etc.
+4. Replace `@include typeface(headings);` with `font-family: var(--ff-headings);` etc.
 5. Replace sass variables with css variables, e.g. `$zen-gutters` with `var(--gutters)`.
 
 
