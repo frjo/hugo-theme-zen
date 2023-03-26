@@ -374,16 +374,19 @@ By setting the Hugo environment variable to "development" (default when running 
 
 ## Render hook templates
 
-### Add anchor links to headers
+### Add anchor links to headings
 
-An example render hook template for templates will add anchor links to all headers. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-heading.html.example` to `layouts/_default/_markup/render-heading.html`.
+Example render hook template for headings that will add anchor links. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-heading.html.example` to `layouts/_default/_markup/render-heading.html`.
 
-Needed styles are in the `_zen.scss` file.
+### Process Markdown images
 
+Example render hook that process images in the same way as the "img" shortcode. See top of the file for settings to adjust it to your needs. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-image.html.example` to `layouts/_default/_markup/render-image.html`.
+
+### Make external links open in a new tab.
+
+Example render hook to rewrite external links so they open in a new tab. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-link.html.example` to `layouts/_default/_markup/render-link.html`.
 
 ## Multilingual
-
-Arabic, Danish, Finnish, English, Hebrew, French, German, Norwegian, Portuguese and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
@@ -409,6 +412,23 @@ languages:
     languageDirection: "rtl"
     languageCode: "ar"
 ```
+
+The Zen theme templates has some strings that needs translation, e.g. "Home" and "Menu". Many translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
+
+* Arabic
+* Danish
+* English
+* Finnish
+* French
+* German
+* Hebrew
+* Indonesian
+* Norwegian
+* Portuguese
+* Serbian
+* Swahili
+* Swedish
+
 
 ### Non English site
 
