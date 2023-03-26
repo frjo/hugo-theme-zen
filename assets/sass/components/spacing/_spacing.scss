@@ -6,4 +6,8 @@
   .mb--#{$name} {
     @include margin-bottom($space);
   }
+
+  .mtb--#{$name} {
+    @include margin-block($space);
+  }
 }
