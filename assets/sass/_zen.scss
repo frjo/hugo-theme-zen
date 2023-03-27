@@ -11,7 +11,7 @@ body {
 }
 
 .footer {
-  border-top: 2px solid var(--color-brand);
+  border-top: 2px solid var(--color-border);
 }
 
 // Apply smaller text to blocks, footer etc.
@@ -201,11 +201,6 @@ figure {
 }
 
 // Search
-
-.search-input {
-  // Add vertical rhythm margins.
-  @include margin-block(1);
-}
 
 .search-text {
   font-size: var(--fs-l);

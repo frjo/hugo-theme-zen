@@ -18,6 +18,7 @@ select {
   @include margin-bottom(.75);
 }
 
+// Mark field as required if needed.
 label {
   &:has(+ :required) {
     &::after {
@@ -44,9 +45,17 @@ textarea {
   width: Min(30em, 100%);
 }
 
+// For forms with multibple fields show submit button below the form.
 input:not(:only-of-type),
 textarea {
   & + [type='submit'] {
     display: block;
+  }
+}
+
+// For forms with single field add space between it and the submit button.
+input:only-of-type {
+  &:has(+ [type='submit']) {
+    margin-right: .5rem;
   }
 }
