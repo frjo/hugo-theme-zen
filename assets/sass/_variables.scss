@@ -5,11 +5,6 @@
 
 // Font faces, stacks and sizes.
 
-// Font styling and line heights are controlled by the several variables that
-// used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
-// These variable and mixins are documented on the [Typey
-// homepage](https://github.com/jptaranto/typey).
-
 // The font size set on the root html element.
 // Specify unitless, it will be recalculated as %.
 $base-font-size:      18;
@@ -122,8 +117,9 @@ $border-radius: (
   xs:         0.125rem,
 );
 
-// Spacing.
-// Generates mt-m (mt = margin-top) and mb-m (mb = margin-bottom) classes.
+// Spacing
+// Generates mt-m (mt = margin-top), mb-m (mb = margin-bottom) and
+// mtb-m (mtb = margin-block) classes.
 $spacing: (
   xxl:        3,
   xl:         2,
@@ -147,15 +143,17 @@ $max-content-width:   1111px;
 $max-line-width:      70ch;
 
 // The left/right gutter/padding.
+// Use like this: var(--gutters)
 $gutters:             calc(5px + 1.5625vw);
 $gutters-reverse:     calc(0px - (5px + 1.5625vw));
 
 // The amount lists, blockquotes and comments are indented.
+// Use like this: var(--indent-amount)
 $indent-amount:       2rem;
 
 // Control whether RTL styles are added.
 $include-rtl: false;
 
-// Show horizontal grid to help with debugging typography
+// Show horizontal grid to help with debugging typography.
 $debug: false;
 $debug-color: $grey-extra-light;
