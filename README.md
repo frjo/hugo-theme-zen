@@ -42,6 +42,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Content security policy headers](#Content-security-policy-headers)
 * [Choose between using AlpineJS, jQuery or Umbrella JS](#choose-between-using-alpinejs-jquery-or-umbrella-js)
 * [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
+* [Math typesetting with KaTeX](#math-typesetting-with-katex)
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
@@ -104,19 +105,19 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Cookie consent
 * Commands for linting of css and js
 * Contact form (PHP)
-* CSS grid and flex for layout
+* CSS grid and flex throughout
 * HTML5
-* Hugo Pipes for js and sass
+* Hugo Pipes for images, js and sass
 * jQuery 3
+* Math typesetting with KaTeX
 * Micro.blog
 * Meta tags and JSON-LD
 * Multilingual (i18n)
-* Normalize CSS
+* Modern CSS reset
 * Podcast
 * Responsive design
 * RSS and JSON feeds with full content
 * Search with FlexSearch.js
-* Sub theme support (Theme Components)
 * Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
 
 
@@ -261,7 +262,7 @@ params:
   mainSections:             # The sections you want to have listed on the front page.
     - "section1"            # Default to the section with most content if not set.
     - "section2"            # Set to empty if no section should be listed.
-  math: true                # Turn on math typesetting with Katex, default false.
+  math: true                # Turn on math typesetting with KaTeX, default false.
   menuInHeader: true        # Move the main menu to the header, default false.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens, default false.
@@ -828,7 +829,7 @@ Node.js software you need. To install them run:
         nmp run lint (project + theme)
 
 
-## Math typesetting with Katex
+## Math typesetting with KaTeX
 
 Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `static` directory.
 
