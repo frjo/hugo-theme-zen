@@ -101,7 +101,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 * A mobile menu
 * AlpineJS 3
-* Analytics with Matamo (Piwik)
+* Analytics with Matomo (Piwik)
 * Cookie consent
 * Commands for linting of css and js
 * Contact form (PHP)
@@ -266,8 +266,8 @@ params:
   menuInHeader: true        # Move the main menu to the header, default false.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens, default false.
-  piwikSiteId:              # Matamo site id
-  piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
+  piwikSiteId:              # Matomo site id
+  piwikTrackerUrl: ""       # Matomo url, schemaless and no slash on end (example.org/matomo).
   plausibleSiteID: ""       # Plausible site id/domain.
   plausibleTrackerURL: ""   # Plausible url, schemaless and no slash on end. Optional, defaults to "plausible.io/…"
   poweredby: true           # Show powered by hugo in footer
