@@ -1,0 +1,6 @@
+{{ .Page.Store.Set "math" true -}}
+<p{{ with .Attributes.class }} class="{{ . }}"{{ end }}>
+$$
+{{ .Inner }}
+$$
+</p>
