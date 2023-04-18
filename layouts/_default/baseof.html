@@ -9,8 +9,8 @@
 {{- block "head" . }}{{ end }}
 {{ partial "meta_json_ld.html" . }}
 {{ partial "scripts.html" . }}
+{{ partial "math.html" . }}
 {{ partialCached "tracking.html" . }}
-{{ partialCached "math.html" . }}
 </head>
 
 <body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}{{ with $.Param "bodyclass" }} {{ . }}{{ end }}">
