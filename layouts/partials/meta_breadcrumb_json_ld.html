@@ -25,4 +25,5 @@
 {{- $breadcrumbScratch.SetInMap "breadcrumb" "@context" "https://schema.org" -}}
 {{- $breadcrumbScratch.SetInMap "breadcrumb" "@type" "BreadcrumbList" -}}
 {{- $breadcrumbScratch.SetInMap "breadcrumb" "itemListElement" ($crumbScratch.Get "itemListElement") -}}
-{{- return ($breadcrumbScratch.Get "breadcrumb") | jsonify -}}
+{{- $jsonifiedBreadcrumb := $breadcrumbScratch.Get "breadcrumb" | jsonify (dict "indent" "  " "prefix" "    ") -}}
+{{- return $jsonifiedBreadcrumb -}}
