@@ -3,7 +3,7 @@
     "@context": "https://schema.org",
     {{ if .IsPage -}}
     "@type": {{ if or (eq .Section "blog") (eq .Section "post") }}"BlogPosting"{{ else }}"WebPage"{{ end }},
-    {{ if not (or (eq .Section "blog") (eq .Section "post")) }}"breadcrumb": {{ partial "meta_breadcrumb_json_ld.html" . }}{{ end }},
+    {{ if not (or (eq .Section "blog") (eq .Section "post")) }}"breadcrumb": {{ partial "meta_breadcrumb_json_ld.html" . }},{{ end }}
     "headline": {{ .Title }},
     "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" }},
     "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
