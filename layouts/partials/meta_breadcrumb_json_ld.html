@@ -1,10 +1,10 @@
-{{- $breadcrumbScratch := newScratch -}}
-{{- $crumbScratch := newScratch -}}
-{{- $crumbScratch.Set "itemListElement" (slice) -}}
-{{- $breadPos := 0 -}}
-{{- range .Ancestors.Reverse -}}
-  {{- $breadPos = (add $breadPos 1) -}}
-  {{- $crumbScratch.Add "itemListElement" (dict
+{{ $breadcrumbScratch := newScratch -}}
+{{ $crumbScratch := newScratch -}}
+{{ $crumbScratch.Set "itemListElement" (slice) -}}
+{{ $breadPos := 0 -}}
+{{ range .Ancestors.Reverse -}}
+  {{ $breadPos = (add $breadPos 1) -}}
+  {{ $crumbScratch.Add "itemListElement" (dict
     "@type" "ListItem"
     "position" $breadPos
     "item" (dict
@@ -12,9 +12,9 @@
       "name" .LinkTitle
     )
   ) -}}
-{{- end -}}
-{{- $breadPos = (add $breadPos 1) -}}
-{{- $crumbScratch.Add "itemListElement" (dict
+{{ end -}}
+{{ $breadPos = (add $breadPos 1) -}}
+{{ $crumbScratch.Add "itemListElement" (dict
   "@type" "ListItem"
   "position" $breadPos
   "item" (dict
@@ -22,8 +22,8 @@
     "name" .LinkTitle
   )
 ) -}}
-{{- $breadcrumbScratch.SetInMap "breadcrumb" "@context" "https://schema.org" -}}
-{{- $breadcrumbScratch.SetInMap "breadcrumb" "@type" "BreadcrumbList" -}}
-{{- $breadcrumbScratch.SetInMap "breadcrumb" "itemListElement" ($crumbScratch.Get "itemListElement") -}}
-{{- $jsonifiedBreadcrumb := $breadcrumbScratch.Get "breadcrumb" | jsonify (dict "indent" "  " "prefix" "    ") -}}
-{{- return $jsonifiedBreadcrumb -}}
+{{ $breadcrumbScratch.SetInMap "breadcrumb" "@context" "https://schema.org" -}}
+{{ $breadcrumbScratch.SetInMap "breadcrumb" "@type" "BreadcrumbList" -}}
+{{ $breadcrumbScratch.SetInMap "breadcrumb" "itemListElement" ($crumbScratch.Get "itemListElement") -}}
+{{ $jsonifiedBreadcrumb := $breadcrumbScratch.Get "breadcrumb" | jsonify (dict "indent" "  " "prefix" "    ") -}}
+{{ return ($jsonifiedBreadcrumb | safeJS) -}}
