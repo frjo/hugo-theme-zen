@@ -1,0 +1,50 @@
+.zebra-table,
+%zebra-table {
+  --padding: .5rem;
+
+  th,
+  td {
+    padding: var(--padding);
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--color-row-odd);
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--color-row-even);
+  }
+
+  // Add first-of-type to increase specificity.
+  tr:first-of-type:has(th) {
+    background-color: var(--color-row-header);
+  }
+}
+
+.responsive-table,
+%responsive-table {
+  --padding: .5rem;
+
+  @include respond-to-max(s) {
+    th,
+    td {
+      padding: var(--padding);
+    }
+
+    th {
+      display: none;
+    }
+
+    td {
+      display: grid;
+      gap: var(--padding);
+      grid-template-columns: 12ch auto;
+
+      &::before {
+        content: attr(aria-label) ':';
+        font-weight: var(--fw-bold);
+      }
+    }
+  }
+
+}

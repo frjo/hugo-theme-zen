@@ -5,9 +5,8 @@
 table {
   // Add vertical rhythm margins.
   @include margin-block(1);
-  // Remove most spacing between table cells.
+  // Remove default spacing between table cells.
   border-collapse: collapse;
-  border-spacing: 0;
   // Prevent cramped-looking tables
   width: 100%;
 }
@@ -16,4 +15,17 @@ td,
 th {
   // Remove most spacing between table cells.
   padding: 0;
+  // Align content to top of cells.
+  vertical-align: text-top;
+}
+
+th {
+  // Align content to bottom of headers.
+  vertical-align: bottom;
+}
+
+caption,
+th {
+  // Align all text the same.
+  text-align: start;
 }
