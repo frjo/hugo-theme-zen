@@ -239,6 +239,13 @@ languageCode: "en-GB"       # Set your language code (only needed for none multi
 
 params:
   alpine:                   # Add AlpineJS, default false.
+  blogSections:             # Sections whose <schema.org> `JSON+LD` in the page `<head>`
+    - blog                  # will be `@type: BlogPosting`.
+    - post                  # Defaults to a list including only 'post' and 'blog'.
+  breadcrumbSections:       # Sections in which pages will have a `BreadcrumbListing`
+    - section2              # in the <schema.org> `JSON+LD` in the page's `<head>`.
+    - section3              # This theme requires Hugo `v0.109.0` or higher to
+                            # generate the `BreadcrumbListing`.
   cookieConsent: true       # Show cookie consent form, default false.
   contact: "info@example.org"
   copyright: "This site is licensed under a 
