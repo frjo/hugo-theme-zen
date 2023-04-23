@@ -8,6 +8,7 @@ $grey-dark:             lighten($black, 40%); // #666
 $grey:                  lighten($black, 60%); // #999
 $grey-light:            lighten($black, 80%); // #ccc
 $grey-extra-light:      lighten($black, 93.33%); // #eee
+$nearwhite:             lighten($black, 97%); // #f7f7f7
 $white:                 #fff;
 
 $blue:                  #0072b9;
@@ -73,8 +74,9 @@ $colors: (
 
   preview-bg:             lighten($yellow, 43%),
 
-  row-stripe:             $white,
-  row-disabled:           $grey-light,
+  row-header:             transparent,
+  row-odd:                $nearwhite,
+  row-even:               transparent,
 
   status:                 $green,
   status-bg:              lighten($green, 62%),
