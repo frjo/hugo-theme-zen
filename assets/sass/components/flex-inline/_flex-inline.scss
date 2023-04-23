@@ -6,11 +6,10 @@
   flex-wrap: wrap;
   gap: var(--gap);
   padding: 0;
-  text-align: left;
+  text-align: start;
 
   @include rtl() {
     flex-direction: row-reverse;
-    text-align: right;
   }
 
   &__item,

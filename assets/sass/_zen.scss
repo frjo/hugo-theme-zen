@@ -63,7 +63,7 @@ article {
   .tags {
     @include respond-to(s) {
       display: inline-block;
-      padding-right: 1rem;
+      padding-inline-end: 1rem;
     }
   }
 
@@ -94,7 +94,7 @@ article {
 }
 
 .content-dates {
-  text-align: right;
+  text-align: end;
 }
 
 // Figure and image.

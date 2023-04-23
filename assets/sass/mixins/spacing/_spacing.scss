@@ -47,6 +47,14 @@
   @include spacing(margin-right, $x);
 }
 
+@mixin margin-inline-start($x) {
+  @include spacing(margin-inline-start, $x);
+}
+
+@mixin margin-inline-end($x) {
+  @include spacing(margin-inline-end, $x);
+}
+
 @mixin padding($x) {
   @include spacing(padding, $x);
 }
@@ -73,4 +81,12 @@
 
 @mixin padding-right($x) {
   @include spacing(padding-right, $x);
+}
+
+@mixin padding-inline-start($x) {
+  @include spacing(padding-inline-start, $x);
+}
+
+@mixin padding-inline-end($x) {
+  @include spacing(padding-inline-end, $x);
 }
