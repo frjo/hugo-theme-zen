@@ -2,14 +2,16 @@
 
 {{ define "main" -}}
 <main class="main layout__main">
+{{ with .Content -}}
 <div class="content">
-{{ .Content }}
+{{ . }}
 </div>
+{{ end -}}
 
-{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
 {{ $paginator := .Paginate $pages -}}
 {{ range $paginator.Pages -}}
-{{ .Render "summary"}}
+{{ .Render "summary" }}
 {{ end -}}
 
 {{ partial "pagination.html" . }}
