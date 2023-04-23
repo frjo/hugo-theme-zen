@@ -45,12 +45,7 @@
   // Wrapper for any blocks placed in the header region.
   &__region {
     @include respond-to(s) {
-      margin-left: auto;
-
-      @include rtl() {
-        margin-right: auto;
-        margin-left: 0;
-      }
+      margin-inline-start: auto;
     }
   }
 }

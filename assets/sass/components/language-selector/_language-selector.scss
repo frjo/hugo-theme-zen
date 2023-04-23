@@ -5,11 +5,6 @@
 }
 
 .language-icon {
-  @include margin-right(.5);
+  @include margin-inline-end(.5);
   fill: var(--color-text);
-
-  @include rtl() {
-    @include margin-left(.5);
-    margin-right: 0;
-  }
 }

@@ -28,21 +28,15 @@ menu {
 }
 
 dd {
-  margin: 0 0 0 var(--indent-amount);
-
-  @include rtl {
-    margin: 0 var(--indent-amount) 0 0;
-  }
+  margin: 0;
+  margin-inline-start: var(--indent-amount);
 }
 
 ol,
 ul,
 menu {
-  padding: 0 0 0 var(--indent-amount);
-
-  @include rtl {
-    padding: 0 var(--indent-amount) 0 0;
-  }
+  padding: 0;
+  padding-inline-start: var(--indent-amount);
 
   // Turn off margins on nested lists.
   ol,
