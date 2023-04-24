@@ -13,7 +13,7 @@ $include-rtl: true !default;
 @mixin rtl($selector: ':dir(rtl)') {
   @if $include-rtl {
     @if & {
-       &#{$selector} {
+      &#{$selector} {
         @content;
       }
     }

@@ -1,3 +1,8 @@
+/**
+ * @file
+ * A JavaScript file for cookie consent.
+ */
+
 (function () {
 
   'use strict';

@@ -1,6 +1,6 @@
 /**
  * @file
- * A JavaScript file for the theme. Runs first, before jQuery etc. have loaded.
+ * A JavaScript file for the theme. Runs first, before other things have loaded.
  */
 
 (function () {
