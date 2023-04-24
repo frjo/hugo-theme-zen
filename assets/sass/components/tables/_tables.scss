@@ -2,6 +2,10 @@
 %zebra-table {
   --padding: .5rem;
 
+  @include respond-to-max(s) {
+    --padding: .3rem;
+  }
+
   th,
   td {
     padding: var(--padding);
@@ -28,7 +32,7 @@
 
 .responsive-table,
 %responsive-table {
-  --padding: .5rem;
+  --gap: .5rem;
 
   @include respond-to-max(s) {
     th {
@@ -37,7 +41,7 @@
 
     td {
       display: grid;
-      gap: var(--padding);
+      gap: var(--gap);
       grid-template-columns: 12ch auto;
 
       &::before {
@@ -46,11 +50,11 @@
       }
 
       &:first-of-type {
-        padding-block-start: var(--padding);
+        padding-block-start: var(--gap);
       }
 
       &:last-of-type {
-        padding-block-end: var(--padding);
+        padding-block-end: var(--gap);
       }
     }
   }
