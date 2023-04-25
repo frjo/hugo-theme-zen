@@ -22,9 +22,9 @@
   "devDependencies": {
     "eslint": "^8.27.0",
     "eslint-plugin-template": "^0.7.0",
-    "stylelint": "^14.14.1",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-scss": "^4.3.0"
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "stylelint-scss": "^4.6.0"
   },
   "engines": {
     "node": ">=16.0.0"
