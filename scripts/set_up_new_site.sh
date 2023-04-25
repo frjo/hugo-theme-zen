@@ -22,7 +22,8 @@ copy_files=("themes/zen/assets/sass/_colors.scss:assets/sass/_colors.scss"
             "themes/zen/assets/sass/_custom.scss:assets/sass/_custom.scss"
             "themes/zen/assets/sass/_zen.scss:assets/sass/_zen.scss"
             "themes/zen/layouts/index.html:layouts/index.html"
-            "themes/zen/exampleSite/config.yaml:config.yaml")
+            "themes/zen/exampleSite/config.yaml:config.yaml"
+            "themes/zen/.editorconfig:.editorconfig")
 
 for files in "${copy_files[@]}" ; do
   if [[ ! -f "${files##*:}" ]]; then
