@@ -44,6 +44,11 @@
     @extend %link-inverted;
     background: var(--color-border);
     color: var(--color-text-bg);
+
+    // Make sure headings etc. also gets inverted.
+    * {
+      color: inherit;
+    }
   }
 
   > * {

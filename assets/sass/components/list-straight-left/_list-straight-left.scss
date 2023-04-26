@@ -1,5 +1,6 @@
 // Lists with a straight left margin.
 
+.ul-straight-left,
 %ul-straight-left {
   display: table;
   list-style: none;
@@ -17,6 +18,7 @@
   }
 }
 
+.ol-straight-left,
 %ol-straight-left {
   display: table;
   list-style: none;
@@ -36,6 +38,7 @@
   }
 }
 
+.ul-straight-left--off,
 %ul-straight-left--off {
   display: block;
   list-style: inherit;
