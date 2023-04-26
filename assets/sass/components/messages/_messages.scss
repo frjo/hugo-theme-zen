@@ -2,26 +2,36 @@
 
 .message,
 %message {
-  padding: 10px;
-  border-width: 1px;
-  border-style: solid;
+  padding: .5rem;
+  outline-width: 2px;
+  outline-style: solid;
   width: 95%;
 
   &.status {
     background-color: var(--color-status-bg);
     color: var(--color-status);
-    border-color: var(--color-status);
+    outline-color: var(--color-status);
   }
 
   &.warning {
     background-color: var(--color-warning-bg);
     color: var(--color-warning);
-    border-color: var(--color-warning);
+    outline-color: var(--color-warning-border);
   }
 
   &.error {
     background-color: var(--color-error-bg);
     color: var(--color-error);
-    border-color: var(--color-error);
+    outline-color: var(--color-error);
+  }
+
+  &--highlight {
+    animation: 2s linear infinite outline-highlight;
+  }
+
+  @keyframes outline-highlight {
+    50% {
+      outline-width: .3rem;
+    }
   }
 }
