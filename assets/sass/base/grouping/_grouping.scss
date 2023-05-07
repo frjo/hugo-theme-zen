@@ -89,3 +89,12 @@ pre {
   @include margin-block(.75);
   font-family: var(--ff-monospace);
 }
+
+// Code
+
+// Do not set colour for code with syntax highlighting.
+code:not([data-lang]),
+kbd,
+samp {
+  color: var(--color-code);
+}
