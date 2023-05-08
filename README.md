@@ -273,6 +273,7 @@ params:
   menuInHeader: true        # Move the main menu to the header, default false.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens, default false.
+  mobileMenuOutline: true   # Mobil menu button as outline, default false.
   piwikSiteId:              # Matomo site id
   piwikTrackerUrl: ""       # Matomo url, schemaless and no slash on end (example.org/matomo).
   plausibleSiteID: ""       # Plausible site id/domain.

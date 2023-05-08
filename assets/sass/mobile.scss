@@ -55,41 +55,43 @@
     right: var(--gutters);
     margin: 0;
     padding: 0 .3rem;
+    border-color: var(--color-button-text-hover);
     font-weight: var(--fw-bold);
-    background-color: var(--color-text-bg);
-    color: var(--color-text);
     z-index: 22;
-    border: 1px solid var(--color-border);
     pointer-events: auto;
 
     @include respond-to(s) {
       display: none;
     }
 
-    .js-nav-open & {
-      color: var(--color-text-bg);
-    }
+    &:hover,
+    &:focus-visible {
+      svg {
+        fill: var(--color-button-text-hover);
+      }
 
-    &:hover svg,
-    &:focus-visible svg {
-      fill: var(--color-text-bg);
+      &.button--outline {
+        border-color: var(--color-button-text-hover);
+      }
     }
   }
 
   &__hamburger {
-    fill: var(--color-text);
+    fill: var(--color-button-text-hover);
     width: 1.6rem;
     margin-left: .1rem;
+
+    .button--outline & {
+      fill: var(--color-button);
+    }
 
     rect {
       transform-origin: center;
     }
 
     .js-nav-open & { // stylelint-disable max-nesting-depth
-      fill: var(--color-text-bg);
-
       rect {
-        y: 45;
+        y: 45px;
 
         &:nth-of-type(1) {
           transform: rotate(45deg);
@@ -114,16 +116,6 @@
     padding: 2.25rem;
     transform: translateX(100vw);
     z-index: 21;
-
-    a {
-      color: var(--color-text-bg);
-      text-decoration: none;
-
-      &:hover,
-      &:focus {
-        color: var(--color-text-bg);
-      }
-    }
 
     .js-nav-open & {
       visibility: visible;

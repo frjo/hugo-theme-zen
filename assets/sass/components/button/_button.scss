@@ -27,24 +27,16 @@ button,
   cursor: pointer;
   color: var(--color-button-text);
   background-color: var(--color-button);
-  border: 0;
+  border: 1px solid var(--color-button);
   border-radius: var(--radius-s);
 
   &:hover,
-  &:focus,
+  &:focus-visible,
   &:active {
     // Override any link underlines and color changes.
     text-decoration: none;
     color: var(--color-button-text-hover);
     background-color: var(--color-button-hover);
-  }
-
-  &:hover {
-    box-shadow: 2px 2px 5px 1px var(--color-button-hover);
-  }
-
-  &:active {
-    box-shadow: inset 2px 2px 5px 1px var(--color-button);
   }
 }
 
@@ -63,7 +55,7 @@ button,
     background-color: var(--color-button-hover);
 
     &:hover,
-    &:focus,
+    &:focus-visible,
     &:active {
       color: var(--color-button-text);
       background-color: var(--color-button);
@@ -73,13 +65,23 @@ button,
   &--outline {
     color: var(--color-button);
     background-color: var(--color-button-text);
-    border: 1px solid var(--color-button);
+    border-color: var(--color-button);
 
     &:hover,
-    &:focus,
+    &:focus-visible,
     &:active {
       color: var(--color-button-text);
       background-color: var(--color-button);
+    }
+  }
+
+  &--shadow {
+    &:hover {
+      box-shadow: 2px 2px 5px 1px var(--color-button-hover);
+    }
+
+    &:active {
+      box-shadow: inset 2px 2px 5px 1px var(--color-button);
     }
   }
 }
