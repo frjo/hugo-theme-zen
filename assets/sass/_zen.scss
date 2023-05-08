@@ -227,6 +227,10 @@ figure {
       background-color: var(--color-error-bg);
     }
   }
+
+  button {
+    @extend %button--shadow;
+  }
 }
 
 .js-submitted {
