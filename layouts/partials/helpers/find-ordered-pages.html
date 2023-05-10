@@ -1,0 +1,26 @@
+{{- $siblings := (slice) -}}
+{{- $ctx := . -}}
+{{- $pctx := .Page -}}
+{{- $pagesIn := .Pages -}}
+{{- $ignoreWeight := .ignoreWeight | default false -}}
+{{- $omittableList := .omittableList | default false -}}
+{{- $pagesOldestFirst := .pagesOldestFirst -}}
+{{- with $pagesIn -}}
+  {{- $siblingsTop := (.ByWeight).GroupBy "Weight" -}}
+  {{- if $ignoreWeight -}}
+    {{- $siblings = $siblings | append (partial "helpers/sort-pages-by-date.html" (dict
+      "Pages" .
+      "omittableList" $omittableList
+      "pagesOldestFirst" $pagesOldestFirst
+    )) }}
+  {{- else -}}
+    {{- range $siblingsTop -}}
+      {{- $siblings = $siblings | append (partial "helpers/sort-pages-by-date.html" (dict
+        "Pages" .
+        "omittableList" $omittableList
+        "pagesOldestFirst" $pagesOldestFirst
+      )) }}
+      {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $siblings -}}

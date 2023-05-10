@@ -1,0 +1,5 @@
+{{- $pagesOldestFirst := .Page.Param "pagesOldestFirst" | default false -}}
+<section class="sitemap-view">
+{{ partial "walk.html" (dict "Page" site.Home "Pages" site.Home.Data.Pages "maxDepth" 99999 "curDepth" 1 "showNumBelow" false "pagesOldestFirst" $pagesOldestFirst "maxDepth" 99999999) }}
+</section>
+{{- /* Remove trailing newlines */ -}}

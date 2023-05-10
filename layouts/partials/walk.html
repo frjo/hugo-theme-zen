@@ -1,0 +1,29 @@
+{{- $ctx := . -}}
+{{- $maxDepth := .maxDepth -}}
+{{- $curDepth := .curDepth -}}
+{{- $curPage := .Page -}}
+{{- $curPages := .Pages }}
+{{- $showNumBelow := .showNumBelow -}}
+{{- $pagesOldestFirst := .pagesOldestFirst -}}
+<ul>
+{{- $pages := partial "helpers/find-ordered-pages.html" (dict "Page" $curPage "Pages" $curPages "pagesOldestFirst" $pagesOldestFirst) -}}
+{{- range $pages -}}
+  {{- $pageMetadata := .Title }}
+  <li{{ if .IsSection }} class="section-list-item"{{ end }}>
+    <a{{ if .IsSection }} class="section-link"{{ end }} href="{{ .RelPermalink }}"><span>{{ .Title -}}</span>
+  {{- if or .Pages .Sections -}}
+    {{- $numBelow := len (union .Pages .Sections) -}}
+    {{- if and $showNumBelow (gt $numBelow 1) (gt $curDepth 1) }} ({{ $numBelow }}){{ end }}
+  {{- end -}}</a>
+  {{- if .Pages -}}
+    {{- $newDepth := add $curDepth 1 -}}
+    {{- if le $newDepth $maxDepth }}
+    {{ partial "walk.html" (dict "Page" . "Pages" .Pages "maxDepth" $maxDepth "curDepth" $newDepth "showNumBelow" $showNumBelow  "pagesOldestFirst" $pagesOldestFirst) }}
+  </li>
+    {{- end -}}
+  {{- else }}
+</li>
+  {{- end -}}
+{{- end -}}
+  </ul>
+{{- /* Remove trailing newlines */ -}}
