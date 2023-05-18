@@ -6,12 +6,12 @@
 <ul class="navbar">
 {{ if .IsTranslated -}}
 {{ range .Translations }}
-<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Language.Params.LanguageCode | default .Lang }}" lang="{{ .Language.Params.LanguageCode | default .Lang }}">{{ .Language.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
 {{ end -}}
 {{ else -}}
 {{ range site.Languages -}}
 {{ if ne site.Language.Lang .Lang }}
-<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Params.LanguageCode | default .Lang }}" lang="{{ .Params.LanguageCode | default .Lang }}">{{ .LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
 {{ end -}}
 {{ end -}}
 {{ end -}}
