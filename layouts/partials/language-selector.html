@@ -5,12 +5,12 @@
 </svg>
 <ul class="navbar">
 {{ if .IsTranslated -}}
-{{ range .Translations }}
+{{ range .Translations -}}
 <li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Site.LanguageCode | default .Lang }}" lang="{{ .Site.LanguageCode | default .Lang }}">{{ .Language.LanguageName }}</a></li>
 {{ end -}}
 {{ else -}}
 {{ range site.Languages -}}
-{{ if ne site.Language.Lang .Lang }}
+{{ if ne site.Language.Lang .Lang -}}
 <li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
 {{ end -}}
 {{ end -}}

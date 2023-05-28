@@ -27,7 +27,7 @@
 
 {{ if $resource -}}
   {{ $src = $resource.RelPermalink -}}
-  {{ $type = $resource.MediaType }}
+  {{ $type = $resource.MediaType -}}
 {{ end -}}
 
 {{ if and $poster (fileExists (path.Join "/static" $poster)) -}}
@@ -61,5 +61,7 @@
 <video controls preload="{{ $preload }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $poster }}poster="{{ . }}"{{ end }} {{ with $autoplay }}autoplay="{{ . }}"{{ end }} {{ with $loop }}loop="{{ . }}"{{ end }}>
 <source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
 </video>
-{{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+{{ with $caption -}}
+<figcaption>{{ . | markdownify }}</figcaption>
+{{ end -}}
 </figure>

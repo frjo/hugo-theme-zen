@@ -35,5 +35,7 @@
 <audio controls preload="{{ $preload }}">
 <source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
 </audio>
-{{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+{{ with $caption -}}
+<figcaption>{{ . | markdownify }}</figcaption>
+{{ end -}}
 </figure>

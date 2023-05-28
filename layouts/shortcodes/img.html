@@ -11,7 +11,7 @@
 {{ $realwidth := 0 -}}
 {{ $realheight := 0 -}}
 {{ $resource := false -}}
-{{ $srcsetw := (slice) }}
+{{ $srcsetw := (slice) -}}
 {{ $static := false -}}
 
 {{ if and $src (fileExists (path.Join "/static" $src)) -}}
@@ -38,7 +38,7 @@
     {{ $width = $image.Width -}}
     {{ $height = $image.Height -}}
     {{ if $srcset -}}
-      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $src (strings.TrimRight "x" $size)) }}
+      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $src (strings.TrimRight "x" $size)) -}}
     {{ end -}}
   {{ else -}}
     {{ $src = $resource.RelPermalink -}}
@@ -48,8 +48,8 @@
   {{ if $srcset -}}
     {{ range $set := split $srcset " " -}}
       {{ $image := $resource.Resize (printf "%sx" $set) -}}
-      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) }}
-    {{ end }}
+      {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) -}}
+    {{ end -}}
     {{ $width = "" -}}
     {{ $height = "" -}}
   {{ end -}}

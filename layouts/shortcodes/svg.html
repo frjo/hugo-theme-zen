@@ -13,7 +13,7 @@
 {{ if and $src (fileExists (path.Join "/static" $src)) -}}
   {{ $static = true -}}
   {{ $src = relURL $src -}}
-  {{ if $inline }}
+  {{ if $inline -}}
     {{ $src = readFile (path.Join "/static" $src) -}}
   {{ end -}}
 {{ else if $src -}}

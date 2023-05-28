@@ -30,7 +30,7 @@
     {{ with .OutputFormats.Get "RSS" -}}
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end -}}
-    {{ range $pages }}
+    {{ range $pages -}}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
@@ -41,6 +41,6 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
     </item>
-    {{ end }}
+    {{ end -}}
   </channel>
 </rss>
