@@ -6,7 +6,7 @@
 <ul class="navbar">
 {{ if .IsTranslated -}}
 {{ range .Translations }}
-<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Site.LanguageCode | default .Lang }}" lang="{{ .Site.LanguageCode | default .Lang }}">{{ .Language.LanguageName }}</a></li>
 {{ end -}}
 {{ else -}}
 {{ range site.Languages -}}

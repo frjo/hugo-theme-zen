@@ -18,8 +18,8 @@
 {{ with $.Param "microusername" }}<link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .IsTranslated -}}
-{{ range .Translations }}
-<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ range .Translations -}}
+<link rel="alternate" hreflang="{{ .Site.LanguageCode | default .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
 {{ end -}}
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
