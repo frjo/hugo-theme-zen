@@ -196,15 +196,11 @@ figure {
     }
 
     &:active,
-    &.active {
+    &[aria-current] {
       background-color: var(--color-brand);
       text-decoration: underline;
     }
   }
-}
-
-.menu a.active {
-  text-decoration: none;
 }
 
 // Search

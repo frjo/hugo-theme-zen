@@ -32,6 +32,12 @@ a:active {
   color: var(--color-link-active);
 }
 
+// Remove underline from links to current page to
+// indicate that there is no need to click on it.
+[aria-current] {
+  text-decoration: none;
+}
+
 .link-nav,
 %link-nav {
   a {
