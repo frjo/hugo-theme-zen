@@ -1,92 +1,108 @@
-@mixin spacing($property, $spacing) {
+@mixin spacing($property, $spacing, $unit) {
   $converted-list: ();
 
   @each $x in $spacing {
-    $unit: 'rem';
+    $xunit: $unit;
 
     @if $x == 0 {
-      $unit: '';
+      $xunit: '';
     }
 
-    $spacing: #{$x * $base-line-height + $unit};
+    $spacing: #{$x * $base-line-height + $xunit};
     $converted-list: join($converted-list, $spacing, $separator: space);
   }
 
   #{$property}: $converted-list;
 }
 
-@mixin gap($x) {
-  @include spacing(gap, $x);
+@mixin gap($x, $unit: 'rem') {
+  @include spacing(gap, $x, $unit);
 }
 
-@mixin margin($x) {
-  @include spacing(margin, $x);
+@mixin margin($x, $unit: 'rem') {
+  @include spacing(margin, $x, $unit);
 }
 
-@mixin margin-inline($x) {
-  @include spacing(margin-inline, $x);
+@mixin margin-inline($x, $unit: 'rem') {
+  @include spacing(margin-inline, $x, $unit);
 }
 
-@mixin margin-block($x) {
-  @include spacing(margin-block, $x);
+@mixin margin-inline-start($x, $unit: 'rem') {
+  @include spacing(margin-inline-start, $x, $unit);
 }
 
-@mixin margin-top($x) {
-  @include spacing(margin-top, $x);
+@mixin margin-inline-end($x, $unit: 'rem') {
+  @include spacing(margin-block-end, $x, $unit);
 }
 
-@mixin margin-bottom($x) {
-  @include spacing(margin-bottom, $x);
+@mixin margin-block($x, $unit: 'rem') {
+  @include spacing(margin-block, $x, $unit);
 }
 
-@mixin margin-left($x) {
-  @include spacing(margin-left, $x);
+@mixin margin-block-start($x, $unit: 'rem') {
+  @include spacing(margin-block-start, $x, $unit);
 }
 
-@mixin margin-right($x) {
-  @include spacing(margin-right, $x);
+@mixin margin-block-end($x, $unit: 'rem') {
+  @include spacing(margin-inline-end, $x, $unit);
 }
 
-@mixin margin-inline-start($x) {
-  @include spacing(margin-inline-start, $x);
+@mixin margin-top($x, $unit: 'rem') {
+  @include spacing(margin-top, $x, $unit);
 }
 
-@mixin margin-inline-end($x) {
-  @include spacing(margin-inline-end, $x);
+@mixin margin-bottom($x, $unit: 'rem') {
+  @include spacing(margin-bottom, $x, $unit);
 }
 
-@mixin padding($x) {
-  @include spacing(padding, $x);
+@mixin margin-left($x, $unit: 'rem') {
+  @include spacing(margin-left, $x, $unit);
 }
 
-@mixin padding-inline($x) {
-  @include spacing(padding-inline, $x);
+@mixin margin-right($x, $unit: 'rem') {
+  @include spacing(margin-right, $x, $unit);
 }
 
-@mixin padding-block($x) {
-  @include spacing(padding-block, $x);
+@mixin padding($x, $unit: 'rem') {
+  @include spacing(padding, $x, $unit);
 }
 
-@mixin padding-top($x) {
-  @include spacing(padding-top, $x);
+@mixin padding-inline($x, $unit: 'rem') {
+  @include spacing(padding-inline, $x, $unit);
 }
 
-@mixin padding-bottom($x) {
-  @include spacing(padding-bottom, $x);
+@mixin padding-inline-start($x, $unit: 'rem') {
+  @include spacing(padding-inline-start, $x, $unit);
 }
 
-@mixin padding-left($x) {
-  @include spacing(padding-left, $x);
+@mixin padding-inline-end($x, $unit: 'rem') {
+  @include spacing(padding-inline-end, $x, $unit);
 }
 
-@mixin padding-right($x) {
-  @include spacing(padding-right, $x);
+@mixin padding-block($x, $unit: 'rem') {
+  @include spacing(padding-block, $x, $unit);
 }
 
-@mixin padding-inline-start($x) {
-  @include spacing(padding-inline-start, $x);
+@mixin padding-block-start($x, $unit: 'rem') {
+  @include spacing(padding-block-start, $x, $unit);
 }
 
-@mixin padding-inline-end($x) {
-  @include spacing(padding-inline-end, $x);
+@mixin padding-block-end($x, $unit: 'rem') {
+  @include spacing(padding-block-end, $x, $unit);
+}
+
+@mixin padding-top($x, $unit: 'rem') {
+  @include spacing(padding-top, $x, $unit);
+}
+
+@mixin padding-bottom($x, $unit: 'rem') {
+  @include spacing(padding-bottom, $x, $unit);
+}
+
+@mixin padding-left($x, $unit: 'rem') {
+  @include spacing(padding-left, $x, $unit);
+}
+
+@mixin padding-right($x, $unit: 'rem') {
+  @include spacing(padding-right, $x, $unit);
 }
