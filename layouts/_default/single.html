@@ -2,7 +2,7 @@
 <main class="main layout__main">
 <article class="single-view{{ with .Section }} single-view--{{ . | urlize }}{{ end }}">
 <header>
-<h1 class="title mt--m{{ if $.Param "submitted" | default false }} mb--xxs{{ end }}">{{ .Title }}</h1>
+<h1 class="title{{ if $.Param "submitted" | default false }} mb--xxs{{ end }}">{{ .Title }}</h1>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
 {{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
 </header>

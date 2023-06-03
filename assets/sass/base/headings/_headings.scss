@@ -29,6 +29,8 @@ h6,
 
 h1,
 %h1 {
+  // h1 only on top of page so different margins.
+  @include margin-block(1 .5, 'rem');
   font-size: var(--fs-xxl);
 }
 
