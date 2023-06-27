@@ -20,6 +20,7 @@ h6,
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
   line-height: var(--heading-line-height);
+  text-wrap: balance;
 
   // Set max text line width in main for readability.
   .main & {
