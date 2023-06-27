@@ -6,6 +6,9 @@
     "piwikSiteID" site.Params.piwikSiteID
     "plausibleSiteID" site.Params.plausibleSiteID
     "GoogleAnalytics" site.GoogleAnalytics) -}}
+{{ if eq hugo.Environment "development" -}}
+  {{ $opts = merge $opts (dict "minify" false) -}}
+{{ end -}}
 {{ if and site.Params.piwikTrackerUrl site.Params.piwikSiteID -}}
 {{ $script := resources.Get "js/tracking.js" | js.Build $opts | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>

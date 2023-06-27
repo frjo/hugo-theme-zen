@@ -1,4 +1,9 @@
-{{ $early := resources.Get "js/script-early.js" | minify | fingerprint -}}
+{{ $opts := dict "minify" true -}}
+{{ if eq hugo.Environment "development" -}}
+  {{ $opts = merge $opts (dict "minify" false) -}}
+{{ end -}}
+
+{{ $early := resources.Get "js/script-early.js" | js.Build $opts | fingerprint -}}
 <script src="{{ $early.RelPermalink }}"></script>
 
 {{ if $.Param "alpine" -}}
@@ -17,12 +22,12 @@
 {{ end -}}
 
 {{ if $.Param "mobilemenu" -}}
-{{ $mobilemenu := resources.Get "js/mobile.js" | minify | fingerprint -}}
+{{ $mobilemenu := resources.Get "js/mobile.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $mobilemenu.RelPermalink }}"></script>
 {{ end -}}
 
 {{ if $.Param "cookieconsent" -}}
-{{ $cookieconsent := resources.Get "js/cookieconsent.js" | minify | fingerprint -}}
+{{ $cookieconsent := resources.Get "js/cookieconsent.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $cookieconsent.RelPermalink }}"></script>
 {{ end -}}
 
@@ -34,22 +39,22 @@
 {{ end -}}
 
 {{ if $.Param "tables" -}}
-{{ $tables := resources.Get "js/tables.js" | minify | fingerprint -}}
+{{ $tables := resources.Get "js/tables.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $tables.RelPermalink }}"></script>
 {{ end -}}
 
 {{ if .HasShortcode "contact" -}}
-{{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
+{{ $contact := resources.Get "js/contact.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $contact.RelPermalink }}"></script>
 {{ end -}}
 
 {{ if .HasShortcode "search" -}}
 {{ $flexsearch := resources.Get "libs/flexsearch.compact.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
-{{ $search_opts := dict "minify" true "params" (dict "searchLimit" (site.Params.searchLimit | default 20)) -}}
+{{ $search_opts := merge $opts (dict "params" (dict "searchLimit" (site.Params.searchLimit | default 20))) -}}
 {{ $search := resources.Get "js/search.js" | js.Build $search_opts | fingerprint -}}
 <script defer src="{{ $search.RelPermalink }}"></script>
 {{ end -}}
 
-{{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
+{{ $script := resources.Get "js/script.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $script.RelPermalink }}"></script>
