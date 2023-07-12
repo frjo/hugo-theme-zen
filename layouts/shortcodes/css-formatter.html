@@ -1,0 +1,8 @@
+<textarea class="css-input css-textbox" placeholder="Enter your CSS here"></textarea>
+<button onclick="formatCSS()">Format</button>
+<button onclick="downloadCSS()">Download</button>
+<button onclick="clearInput()">Clear</button>
+<textarea class="css-input css-textbox" placeholder="Formatted CSS" readonly></textarea>
+
+{{ $script := resources.Get "js/css-formatter.js" | fingerprint -}}
+<script src="{{ $script.RelPermalink }}"></script>

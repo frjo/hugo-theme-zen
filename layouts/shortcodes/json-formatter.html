@@ -1,0 +1,8 @@
+<textarea class="json-input json-textbox" placeholder="Enter your JSON here"></textarea>
+<button onclick="formatJSON()">Format</button>
+<button onclick="downloadJSON()">Download</button>
+<button onclick="clearInput()">Clear</button>
+<textarea class="json-input json-textbox" placeholder="Formatted JSON" readonly></textarea>
+
+{{ $script := resources.Get "js/json-formatter.js" | fingerprint -}}
+<script src="{{ $script.RelPermalink }}"></script>
