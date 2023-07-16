@@ -7,10 +7,10 @@
 
   'use strict';
 
-  const form = document.querySelector('.contact-form');
-  const button = form.querySelector('.form-submit');
-  const action = form.getAttribute('data-protect');
   const body = document.querySelector('body');
+  const form = document.querySelector('.contact-form');
+  const button = form.querySelector('[type=submit]');
+  const action = form.getAttribute('data-protect');
 
   function activateForm() {
     form.setAttribute('action', action);
