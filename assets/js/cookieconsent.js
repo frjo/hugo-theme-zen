@@ -29,4 +29,16 @@
     });
   });
 
+  const clear_buttons = document.querySelectorAll('.clearcookieconsent');
+  clear_buttons.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (cookiebanner && cookieconsent) {
+        localStorage.removeItem('cookieconsent');
+        cookiebanner.classList.remove('hidden');
+        cookiebanner.classList.add('js-cookieconsent-open');
+      }
+    });
+  });
+
 })();
