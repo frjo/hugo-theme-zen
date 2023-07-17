@@ -508,6 +508,8 @@ Javascript is used for spam protection and to display error/success messages.
 
 Allow users to opt-in to tracking. Matomo and Google analytic are supported out of the box.
 
+Set `cookieConsent` param to true to activate. Also set `privacyPolicyUrl` to include a link to your privacy policy in the cookieconsent dialog.
+
 See `assets/js/tracking.js` for example how to implement it for other cookies.
 
 The users choice is stored in localStorage item "cookieconsent".
