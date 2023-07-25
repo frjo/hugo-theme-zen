@@ -238,7 +238,7 @@ theme: "zen"
 languageCode: "en-GB"       # Set your language code (only needed for none multilingual sites).
 
 params:
-  alpine:                   # Add AlpineJS, default false.
+  alpine: true              # Add AlpineJS, default false.
   blogSections:             # Sections whose <schema.org> `JSON+LD` in the page `<head>`
     - blog                  # will be `@type: BlogPosting`.
     - post                  # Defaults to a list including only 'post' and 'blog'.

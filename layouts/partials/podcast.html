@@ -1,6 +1,6 @@
 {{ $src := (.Params.podcast.mp3 | absURL) -}}
 {{ if site.Params.Podcast.cdn -}}
-{{ $src = path.Join site.Params.Podcast.cdn (.Params.podcast.mp3 | relURL) -}}
+{{ $src = add site.Params.Podcast.cdn (.Params.podcast.mp3 | relURL) -}}
 {{ end -}}
 <figure class="podcast">
 <audio controls preload="{{ site.Params.Podcast.preload | default "metadata" }}"><source src="{{ $src }}" type="audio/mpeg"></audio>
