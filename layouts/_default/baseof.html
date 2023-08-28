@@ -17,12 +17,12 @@
 <div class="page layout__page{{ if $.Param "sidebar" }} layout__sidebar-second{{ end }}">
 <header class="header layout__header mb--m">
 {{ if $.Param "logo" | default true -}}
-<a href="{{ "" | relLangURL }}" title="Home" rel="home" class="header__logo">
+<a href="{{ site.Home.RelPermalink }}" title="Home" rel="home" class="header__logo">
 <img src="{{ with $.Param "logopath" }}{{ . | relURL }}{{ else }}{{ "images/logo.png" | relURL }}{{ end }}"{{ with $.Param "logowidth" }} width="{{ . }}"{{ end }}{{ with $.Param "logoheight" }} height="{{ . }}"{{ end }} alt="Home" class="header__logo-image">
 </a>
 {{ end -}}
 <h1 class="header__site-name">
-<a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ site.Title }}</span></a>
+<a href="{{ site.Home.RelPermalink }}" title="Home" class="header__site-link" rel="home"><span>{{ site.Title }}</span></a>
 </h1>
 <div class="region header__region">
 {{ if site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end -}}
