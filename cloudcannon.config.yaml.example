@@ -375,3 +375,6 @@ _snippets:
       positional_args:
         - editor_key: class
           type: string
+        - editor_key: display
+          type: string
+          optional: true
