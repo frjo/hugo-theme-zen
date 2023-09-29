@@ -7,10 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>{{ site.Params.Podcast.Lang | default site.LanguageCode }}</language>
     {{ with site.Author.email -}}
-    <managingEditor>{{ . }}{{ with site.Author.name }} ({{ . }}){{end}}</managingEditor>
+    <managingEditor>{{ . }}{{ with site.Author.name }} ({{ . }}){{ end }}</managingEditor>
     {{ end -}}
     {{ with site.Author.email -}}
-    <webMaster>{{ . }}{{ with site.Author.name }} ({{ . }}){{end}}</webMaster>
+    <webMaster>{{ . }}{{ with site.Author.name }} ({{ . }}){{ end }}</webMaster>
     {{ end -}}
     {{ with site.Copyright -}}
     <copyright>{{ . }}</copyright>
@@ -20,7 +20,7 @@
     {{ end -}}
     {{ with site.Params.Podcast.Image }}{{ $image := resources.Get . }}<itunes:image href="{{ $image.Permalink }}" />{{ end }}
     {{ with site.Params.Podcast.Category -}}
-    <itunes:category {{ if .name }}text="{{ .name }}"{{end}}>
+    <itunes:category {{ if .name }}text="{{ .name }}"{{ end }}>
       {{ range .subcategories }}<itunes:category text="{{ . }}" />{{ end }}
     </itunes:category>
     {{ end -}}
@@ -37,7 +37,7 @@
     {{ with site.Params.Podcast.Complete }}<itunes:complete>{{ . }}</itunes:complete>{{ end }}
     {{ with site.Params.Podcast.NewFeed }}<itunes:new-feed-url>{{ . }}</itunes:new-feed-url>{{ end }}
     <itunes:explicit>{{ if site.Params.Podcast.Explicit }}true{{ else }}false{{ end }}</itunes:explicit>
-    {{ range .Pages }}
+    {{ range .Pages -}}
     <item>
       <title>{{ .Title }}</title>
       <itunes:title>{{ .Title }}</itunes:title>
@@ -61,6 +61,6 @@
       {{ with .Params.podcast.block }}<itunes:block>{{ . }}</itunes:block>{{ end }}
       <itunes:explicit>{{ if .Params.podcast.explicit }}true{{ else }}false{{ end }}</itunes:explicit>
     </item>
-    {{ end }}
+    {{ end -}}
   </channel>
 </rss>

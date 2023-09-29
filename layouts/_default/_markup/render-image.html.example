@@ -49,7 +49,7 @@
     {{ range $set := split $srcset " " -}}
       {{ $image := $resource.Resize (printf "%sx" $set) -}}
       {{ $srcsetw = $srcsetw | append (printf "%s %sw" $image.RelPermalink $set) -}}
-    {{ end }}
+    {{ end -}}
     {{ $width = "" -}}
     {{ $height = "" -}}
   {{ end -}}

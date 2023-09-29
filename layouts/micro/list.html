@@ -3,15 +3,15 @@
 <h1 class="title">Micro posts</h1>
 <p class="micro__follow"><a href="https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}">{{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }}</a></p>
 
-{{ with .Content }}
+{{ with .Content -}}
 <div class="content">
 {{ . }}
 </div>
-{{ end }}
+{{ end -}}
 
 {{ $paginator := .Paginate (.Pages) -}}
 {{ range $paginator.Pages -}}
-{{ .Render "summary"}}
+{{ .Render "summary" }}
 {{ end -}}
 
 {{ partial "pagination.html" . }}
