@@ -8,10 +8,6 @@
   padding: 0;
   text-align: start;
 
-  @include rtl() {
-    flex-direction: row-reverse;
-  }
-
   &__item,
   li {
     list-style: none;
