@@ -198,8 +198,8 @@ hugo server --themesDir ../..
 Performance should be excellent.
 
 * Minimal and compliant HTML5
-* Styles 17,7 kB (4,3 kB when gzipped)
-* JavaScript 8,4 kB (2,7 kB when gzipped)
+* Styles 23,2 kB (6,7 kB when gzipped)
+* JavaScript 1 kB (with only mobile menu active, 4 Kb with all features active)
 * All scripts loaded in head with "defer"
 * Optimised for HTTP/2
 
