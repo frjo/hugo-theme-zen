@@ -185,19 +185,19 @@ figure {
 
   a {
     display: block;
-    background-color: var(--color-brand);
+    background-color: var(--color-button);
     color: var(--color-text-bg);
     padding: 2px 8px;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      background-color: var(--color-brand-dark);
+      background-color: var(--color-button-hover);
     }
 
     &:active,
     &[aria-current] {
-      background-color: var(--color-brand);
+      background-color: var(--color-button);
       text-decoration: underline;
     }
   }
