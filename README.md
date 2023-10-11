@@ -285,6 +285,7 @@ params:
   sassTranspiler: "dartsass"# The Sass transpiler to use, default "libsass".
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right, default false.
+  siteName: false           # Hide the site name (visually-hidden), default true.
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
   umbrella: true            # Add Umbrella JS, default false.
