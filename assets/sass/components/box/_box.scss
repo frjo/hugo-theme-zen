@@ -40,6 +40,10 @@
     border-color: var(--color-highlight);
   }
 
+  &--fit {
+    width: fit-content;
+  }
+
   &--inverted {
     @extend %link-inverted;
     background: var(--color-border);
