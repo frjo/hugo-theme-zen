@@ -352,6 +352,15 @@ Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) t
 Then set the "realfavicongenerator" param to true to add the needed meta tags. Also good to set the "themeColor" param to correct colour.
 
 
+### Head and footer partials
+
+If you create partials named `head.html` and/or `footer.html` they will be used. They do not exist in the theme but are supported as a convenience.
+
+Content in the "head" partial will be added to the end of the "head" tag, perhaps some extra css or javascript.
+
+Content in the "footer" partial will replace all the default content in the "footer" tag.
+
+
 ### Layouts
 
 To customise a layout included in the zen theme, copy it to the root layout directory and edit it there. Make sure to maintain the directory structure inside the layouts directory.

@@ -6,11 +6,14 @@
 <title>{{ block "title" . }}{{ .Title }} – {{ site.Title }}{{ end }}</title>
 {{ partial "meta.html" . }}
 {{ partialCached "styles.html" . }}
-{{- block "head" . }}{{ end }}
 {{ partial "meta_json_ld.html" . }}
 {{ partial "scripts.html" . }}
 {{ partial "math.html" . }}
 {{ partialCached "tracking.html" . }}
+{{ if templates.Exists "partials/head.html" -}}
+{{ partial "head.html" . }}
+{{ end -}}
+{{ block "head" . }}{{ end }}
 </head>
 
 <body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}{{ with $.Param "bodyclass" }} {{ . }}{{ end }}">
@@ -38,10 +41,14 @@
 {{ if $.Param "sidebar" }}{{ partial "sidebar.html" . }}{{ end -}}
 
 <footer class="footer layout__footer mt--l">
+{{ if templates.Exists "partials/footer.html" -}}
+{{ partial "footer.html" . }}
+{{ else -}}
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
 <p>{{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}<span>© {{ site.Title }}</span>{{ end }}</p>
 {{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}
 {{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a> and the <a href="https://github.com/frjo/hugo-theme-zen">Zen theme</a>.</p>{{ end }}
+{{ end -}}
 </footer>
 
 {{ if $.Param "cookieconsent" }}{{ partialCached "cookieconsent.html" . }}{{ end -}}
