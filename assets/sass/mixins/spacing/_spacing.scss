@@ -32,7 +32,7 @@
 }
 
 @mixin margin-inline-end($x, $unit: 'rem') {
-  @include spacing(margin-block-end, $x, $unit);
+  @include spacing(margin-inline-end, $x, $unit);
 }
 
 @mixin margin-block($x, $unit: 'rem') {
