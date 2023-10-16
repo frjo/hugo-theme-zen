@@ -378,3 +378,27 @@ _snippets:
         - editor_key: display
           type: string
           optional: true
+
+  zen_wrapper_start:
+    template: hugo_markdown_shortcode_positional_args
+    inline: false
+    preview:
+      icon: wrap_text
+      text: Wrapper start
+      subtext:
+        - key: class
+        - No class
+    definitions:
+      shortcode_name: wrapper-start
+      positional_args:
+        - editor_key: class
+          type: string
+
+  zen_wrapper_end:
+    template: hugo_markdown_shortcode
+    inline: false
+    preview:
+      icon: wrap_text
+      text: Wrapper end
+    definitions:
+      shortcode_name: wrapper-end
