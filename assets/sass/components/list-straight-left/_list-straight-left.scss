@@ -12,7 +12,7 @@
     &::before {
       @include padding-inline-end(.5);
       display: table-cell;
-      content: '\2022';
+      content: '\2981';
       font-size: var(--fs-s);
     }
   }
