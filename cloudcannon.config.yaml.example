@@ -8,6 +8,9 @@ _inputs:
     type: datetime
     instance_value: NOW
     comment: Date of this page.
+  author:
+    type: text
+    comment: The author of the page.
   description:
     type: textarea
     comment: Short desciption, for search engines and sharing.
