@@ -74,8 +74,9 @@ import * as params from '@params';
   }
 
   function buildIndex() {
+    const searchindex = params.basePath + 'searchindex.json';
     document.querySelector('.search-loading').classList.remove('hidden');
-    fetch('/searchindex.json')
+    fetch(searchindex)
       .then(function (response) {
         return response.json();
       })

@@ -51,7 +51,7 @@
 {{ if .HasShortcode "search" -}}
 {{ $flexsearch := resources.Get "libs/flexsearch.compact.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
-{{ $search_opts := merge $opts (dict "params" (dict "searchLimit" (site.Params.searchLimit | default 20))) -}}
+{{ $search_opts := merge $opts (dict "params" (dict "searchLimit" (site.Params.searchLimit | default 20) "basePath" site.Home.RelPermalink)) -}}
 {{ $search := resources.Get "js/search.js" | js.Build $search_opts | fingerprint -}}
 <script defer src="{{ $search.RelPermalink }}"></script>
 {{ end -}}
