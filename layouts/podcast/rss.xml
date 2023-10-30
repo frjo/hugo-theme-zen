@@ -6,11 +6,11 @@
     <description>{{ site.Params.Podcast.Description | default site.Params.Description }}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>{{ site.Params.Podcast.Lang | default site.LanguageCode }}</language>
-    {{ with site.Author.email -}}
-    <managingEditor>{{ . }}{{ with site.Author.name }} ({{ . }}){{ end }}</managingEditor>
+    {{ with site.Params.author.email -}}
+    <managingEditor>{{ . }}{{ with site.Params.author.name }} ({{ . }}){{ end }}</managingEditor>
     {{ end -}}
-    {{ with site.Author.email -}}
-    <webMaster>{{ . }}{{ with site.Author.name }} ({{ . }}){{ end }}</webMaster>
+    {{ with site.Params.author.email -}}
+    <webMaster>{{ . }}{{ with site.Params.author.name }} ({{ . }}){{ end }}</webMaster>
     {{ end -}}
     {{ with site.Copyright -}}
     <copyright>{{ . }}</copyright>
@@ -44,9 +44,7 @@
       <link>{{ .Permalink }}</link>
       <guid>{{ .Permalink }}</guid>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with site.Author.email -}}
-      <author>{{ . }}{{ with site.Author.name }} ({{ . }}){{ end }}</author>
-      {{ end -}}
+      {{ width site.Params.Podcast.Author }}<author>{{ . }}</author>{{ end }}
       <description>{{ .Content | html }}</description>
       {{ if site.Params.Podcast.local | default true -}}
       {{ with .Params.podcast.mp3 }}{{ $file_stat := os.Stat (path.Join "/static" .) }}<enclosure url="{{ if site.Params.Podcast.cdn }}{{ path.Join site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" length="{{ $file_stat.Size }}" type="audio/mpeg" />{{ end }}

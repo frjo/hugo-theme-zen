@@ -1,3 +1,4 @@
+{{ $gaid := (or site.Config.Services.GoogleAnalytics.ID site.GoogleAnalytics) -}}
 {{ $opts := dict
   "minify" true
   "params" (dict
@@ -5,7 +6,7 @@
     "piwikTrackerUrl" site.Params.piwikTrackerUrl
     "piwikSiteID" site.Params.piwikSiteID
     "plausibleSiteID" site.Params.plausibleSiteID
-    "GoogleAnalytics" site.GoogleAnalytics) -}}
+    "GoogleAnalytics" $gaid) -}}
 {{ if eq hugo.Environment "development" -}}
   {{ $opts = merge $opts (dict "minify" false) -}}
 {{ end -}}
@@ -19,7 +20,7 @@
 <script async defer data-domain="{{ site.Params.plausibleSiteID }}" src="{{ site.Params.plausibleTrackerURL | default "https://plausible.io/js/plausible.js" }}"></script>
 {{ end -}}
 
-{{ if site.GoogleAnalytics -}}
+{{ if $gaid -}}
 {{ $script := resources.Get "js/tracking.js" | js.Build $opts | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
 {{ template "_internal/google_analytics.html" . }}
