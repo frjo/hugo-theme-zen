@@ -34,11 +34,11 @@ $font-size-fixed: (
 // Size m is base.
 // Use like this: var(--fs-m)
 $font-size-fluid: (
-  xxxxl:      clamp(1.80rem, calc(1.37rem + 2.17vw), 3.05rem),
-  xxxl:       clamp(1.60rem, calc(1.31rem + 1.46vw), 2.44rem),
-  xxl:        clamp(1.42rem, calc(1.24rem + 0.92vw), 1.95rem),
-  xl:         clamp(1.27rem, calc(1.16rem + 0.52vw), 1.56rem),
-  l:          clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem),
+  xxxxl:      clamp(1.80rem, 1.37rem + 2.17vw, 3.05rem),
+  xxxl:       clamp(1.60rem, 1.31rem + 1.46vw, 2.44rem),
+  xxl:        clamp(1.42rem, 1.24rem + 0.92vw, 1.95rem),
+  xl:         clamp(1.27rem, 1.16rem + 0.52vw, 1.56rem),
+  l:          clamp(1.13rem, 1.08rem + 0.22vw, 1.25rem),
   m:          1rem,
   s:          0.889rem,
   xs:         0.778rem,
