@@ -47,13 +47,13 @@ label {
 
 // Article and content.
 
-article > .content,
+article,
 aside {
-  ul {
+  & > ul {
     @extend %ul-straight-left;
   }
 
-  ol {
+  & > ol {
     @extend %ol-straight-left;
   }
 }
@@ -212,7 +212,7 @@ figure {
 
 // Form
 
-.content {
+main {
   input,
   textarea {
     &:not(:placeholder-shown):valid {

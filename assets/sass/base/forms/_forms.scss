@@ -5,11 +5,6 @@
 form {
   // Add vertical rhythm margins.
   @include margin-block(1);
-
-  // Set max text line width in main for readability.
-  .main & {
-    max-width: var(--max-line-width);
-  }
 }
 
 input,
@@ -26,6 +21,14 @@ label {
       color: var(--color-mark-highlight);
     }
   }
+}
+
+// Set max text line width in main for readability.
+input,
+label,
+textarea,
+select {
+  max-width: var(--max-line-width);
 }
 
 fieldset {

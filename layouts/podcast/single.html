@@ -6,10 +6,10 @@
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
 {{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
 </header>
+
 {{ partial "podcast.html" . -}}
-<div class="content">
+
 {{ .Content }}
-</div>
 </article>
 </main>
 {{ end -}}

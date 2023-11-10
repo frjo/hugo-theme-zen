@@ -3,13 +3,10 @@
 <article class="single-view{{ with .Section }} single-view--{{ . | urlize }}{{ end }}">
 <header>
 <h1 class="hidden">{{ .Title }}</h1>
-<p>
-{{ partial "author-date" . }}
-</p>
+<p>{{ partial "author-date" . }}</p>
 </header>
-<div class="content">
+
 {{ .Content }}
-</div>
 </article>
 </main>
 {{ end -}}

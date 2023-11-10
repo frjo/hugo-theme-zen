@@ -1,5 +1,6 @@
 // stylelint-disable indentation, declaration-colon-newline-after
 
+// Initial layout setup.
 .layout {
   &__page {
     max-width: var(--max-page-width);
@@ -23,135 +24,155 @@
     padding-inline: var(--gutters);
     min-width: 0;  // With display grid defaults to auto, making <pre> overflow.
   }
+}
 
-  @if $max-page-width > $max-content-width {
-    &__main {
-      padding-inline: 0;
-    }
-
-    &__navigation > *,
-    &__main > * {
+// If page width is bigger then content with,
+// setup grid with breakout and stretch for main section.
+@if $max-page-width > $max-content-width {
+  .layout {
+    &__navigation > * {
       max-width: var(--max-content-width);
-
-      &:not(.stretch) {
-        padding-inline: var(--gutters);
-      }
 
       @include respond-to(s) {
         margin-inline: auto;
       }
     }
+
+    &__main,
+    &__grid {
+      display: grid;
+      // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
+      grid-template-columns:
+        [stretch-start] minmax(var(--gutters), 1fr)
+        [breakout-start] minmax(0, var(--breakout))
+        [content-start] Min(calc(100% - var(--gutters) * 2), var(--max-content-width)) [content-end]
+        minmax(0, var(--breakout)) [breakout-end]
+        minmax(var(--gutters), 1fr) [stretch-end];
+      padding-inline: 0;
+
+      & > :not(.breakout, .stretch) {
+        grid-column: content;
+      }
+
+      & > .breakout {
+        grid-column: breakout;
+      }
+
+      & > .stretch {
+        grid-column: stretch;
+        padding-inline: var(--gutters);
+      }
+    }
   }
 }
 
-@supports (display: grid) {
-  .layout {
+// Setup template areas/rown/columns for page.
+.layout {
+  &__page {
+    display: grid;
+    grid-template-areas: 'head'
+                         'nav'
+                         'top'
+                         'main'
+                         'side1'
+                         'side2'
+                         'bottom'
+                         'foot'
+                         'notice';
+    grid-template-rows: auto
+                        auto
+                        auto
+                        1fr
+                        auto
+                        auto
+                        auto
+                        auto
+                        auto;
+    grid-template-columns: 1fr;
+  }
+
+  @include respond-to(xl) {
     &__page {
-      display: grid;
-      grid-template-areas: 'head'
-                           'nav'
-                           'top'
-                           'main'
-                           'side1'
-                           'side2'
-                           'bottom'
-                           'foot'
-                           'notice';
-      grid-template-rows: auto
-                          auto
-                          auto
-                          1fr
-                          auto
-                          auto
-                          auto
-                          auto
-                          auto;
-      grid-template-columns: 1fr;
+        grid-template-rows: auto
+                            auto
+                            auto
+                            1fr
+                            auto
+                            auto
+                            auto;
     }
 
-    @include respond-to(xl) {
-      &__page {
-          grid-template-rows: auto
-                              auto
-                              auto
-                              1fr
-                              auto
-                              auto
-                              auto;
-      }
-
-      &__sidebar-first {
-          grid-template-areas: 'head head'
-                               'nav nav'
-                               'side1 top'
-                               'side1 main'
-                               'side1 bottom'
-                               'foot foot'
-                               'notice notice';
-          grid-template-columns: 1fr
-                                 2fr;
-      }
-
-      &__sidebar-second {
-          grid-template-areas: 'head head'
-                               'nav nav'
-                               'top side2'
-                               'main side2'
-                               'bottom side2'
-                               'foot foot'
-                               'notice notice';
-          grid-template-columns: 2fr
-                                 1fr;
-      }
-
-      &__sidebar-two {
-          grid-template-areas: 'head head head'
-                               'nav nav nav'
-                               'side1 top side2'
-                               'side1 main side2'
-                               'side1 bottom side2'
-                               'foot foot foot'
-                               'notice notice notice';
-          grid-template-columns: 1fr
-                                 2fr
-                                 1fr;
-      }
+    &__sidebar-first {
+        grid-template-areas: 'head head'
+                             'nav nav'
+                             'side1 top'
+                             'side1 main'
+                             'side1 bottom'
+                             'foot foot'
+                             'notice notice';
+        grid-template-columns: 1fr
+                               2fr;
     }
 
-    &__header {
-      grid-area: head;
+    &__sidebar-second {
+        grid-template-areas: 'head head'
+                             'nav nav'
+                             'top side2'
+                             'main side2'
+                             'bottom side2'
+                             'foot foot'
+                             'notice notice';
+        grid-template-columns: 2fr
+                               1fr;
     }
 
-    &__navigation {
-      grid-area: nav;
+    &__sidebar-two {
+        grid-template-areas: 'head head head'
+                             'nav nav nav'
+                             'side1 top side2'
+                             'side1 main side2'
+                             'side1 bottom side2'
+                             'foot foot foot'
+                             'notice notice notice';
+        grid-template-columns: 1fr
+                               2fr
+                               1fr;
     }
+  }
 
-    &__page-top {
-      grid-area: top;
-    }
+  &__header {
+    grid-area: head;
+  }
 
-    &__main {
-      grid-area: main;
-    }
+  &__navigation {
+    grid-area: nav;
+  }
 
-    &__first-sidebar {
-      grid-area: side1;
-    }
+  &__page-top {
+    grid-area: top;
+  }
 
-    &__second-sidebar {
-      grid-area: side2;
-    }
+  &__main {
+    grid-area: main;
+  }
 
-    &__page-bottom {
-      grid-area: bottom;
-    }
+  &__first-sidebar {
+    grid-area: side1;
+  }
 
-    &__footer {
-      grid-area: foot;
-    }
+  &__second-sidebar {
+    grid-area: side2;
+  }
 
-    &__cookieconsent {
-      grid-area: notice;
-    }
+  &__page-bottom {
+    grid-area: bottom;
+  }
+
+  &__footer {
+    grid-area: foot;
+  }
+
+  &__cookieconsent {
+    grid-area: notice;
   }
 }

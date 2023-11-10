@@ -147,6 +147,10 @@ $max-line-width:      70ch;
 $gutters:             calc(5px + 1.5625vw);
 $gutters-reverse:     calc(0px - (5px + 1.5625vw));
 
+// Breakout amount.
+// How much should the "breakout" be. Defaults to gutters value.
+// $breakout:             calc(5px + 1.5625vw);
+
 // The amount lists, blockquotes and comments are indented.
 // Use like this: var(--indent-amount)
 $indent-amount:       2rem;

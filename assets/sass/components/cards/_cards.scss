@@ -23,6 +23,10 @@
     grid-column: span 2;
   }
 
+  &--gutter {
+    padding-inline: var(--gutters);
+  }
+
   &--inverted {
     @extend %link-inverted;
     background: var(--color-border);

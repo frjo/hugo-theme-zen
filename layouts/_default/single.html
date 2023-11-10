@@ -6,15 +6,12 @@
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
 {{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
 </header>
-<div class="content">
-{{ .Content }}
-</div>
 
-<div class="content content--bottom">
+{{ .Content }}
+
 {{ if $.Param "relatedposts" | default false }}{{ partial "related.html" . }}{{ end -}}
 
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
-</div>
 </article>
 </main>
 {{ end -}}

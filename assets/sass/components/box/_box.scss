@@ -44,6 +44,10 @@
     width: fit-content;
   }
 
+  &--gutter {
+    padding-inline: var(--gutters);
+  }
+
   &--inverted {
     @extend %link-inverted;
     background: var(--color-border);
@@ -51,7 +55,7 @@
 
     // Make sure headings etc. also gets inverted.
     * {
-      color: inherit;
+      color: var(--color-text-bg);
     }
   }
 

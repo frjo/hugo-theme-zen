@@ -2,11 +2,7 @@
 
 {{ define "main" -}}
 <main class="main layout__main">
-{{ with .Content -}}
-<div class="content">
-{{ . }}
-</div>
-{{ end -}}
+{{ .Content }}
 
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
 {{ $paginator := .Paginate $pages -}}

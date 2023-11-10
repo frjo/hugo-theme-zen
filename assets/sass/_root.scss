@@ -1,3 +1,4 @@
+$breakout: $gutters !default;
 $max-page-width: $max-content-width !default;
 
 :root {
@@ -23,11 +24,12 @@ $max-page-width: $max-content-width !default;
     --radius-#{$name}: #{$radius};
   }
 
-  --heading-line-height: #{$heading-line-height};
-  --max-content-width: #{$max-content-width};
-  --max-page-width: #{$max-page-width};
-  --max-line-width: #{$max-line-width};
-  --gutters: #{$gutters};
+  --breakout: #{$breakout};
   --gutters-reverse: #{$gutters-reverse};
+  --gutters: #{$gutters};
+  --heading-line-height: #{$heading-line-height};
   --indent-amount: #{$indent-amount};
+  --max-content-width: #{$max-content-width};
+  --max-line-width: #{$max-line-width};
+  --max-page-width: #{$max-page-width};
 }
