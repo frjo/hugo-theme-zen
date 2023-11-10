@@ -44,7 +44,7 @@
       <link>{{ .Permalink }}</link>
       <guid>{{ .Permalink }}</guid>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ width site.Params.Podcast.Author }}<author>{{ . }}</author>{{ end }}
+      {{ with site.Params.Podcast.Author }}<author>{{ . }}</author>{{ end }}
       <description>{{ .Content | html }}</description>
       {{ if site.Params.Podcast.local | default true -}}
       {{ with .Params.podcast.mp3 }}{{ $file_stat := os.Stat (path.Join "/static" .) }}<enclosure url="{{ if site.Params.Podcast.cdn }}{{ path.Join site.Params.Podcast.cdn (. | relURL) }}{{ else }}{{ . | absURL }}{{ end }}" length="{{ $file_stat.Size }}" type="audio/mpeg" />{{ end }}
