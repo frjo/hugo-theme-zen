@@ -1,4 +1,4 @@
-// stylelint-disable indentation, declaration-colon-newline-after
+// stylelint-disable indentation, declaration-colon-newline-after, no-duplicate-selectors
 
 // Initial layout setup.
 .layout {
@@ -42,12 +42,14 @@
     &__grid {
       display: grid;
       // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
+      // stylelint-disable function-name-case
       grid-template-columns:
         [stretch-start] minmax(var(--gutters), 1fr)
         [breakout-start] minmax(0, var(--breakout))
         [content-start] Min(calc(100% - var(--gutters) * 2), var(--max-content-width)) [content-end]
         minmax(0, var(--breakout)) [breakout-end]
         minmax(var(--gutters), 1fr) [stretch-end];
+      // stylelint-enable function-name-case
       padding-inline: 0;
 
       & > :not(.breakout, .stretch) {
