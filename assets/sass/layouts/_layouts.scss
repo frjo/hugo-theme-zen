@@ -95,50 +95,50 @@
 
   @include respond-to(xl) {
     &__page {
-        grid-template-rows: auto
-                            auto
-                            auto
-                            1fr
-                            auto
-                            auto
-                            auto;
+      grid-template-rows: auto
+                          auto
+                          auto
+                          1fr
+                          auto
+                          auto
+                          auto;
     }
 
     &__sidebar-first {
-        grid-template-areas: 'head head'
-                             'nav nav'
-                             'side1 top'
-                             'side1 main'
-                             'side1 bottom'
-                             'foot foot'
-                             'notice notice';
-        grid-template-columns: 1fr
-                               2fr;
+      grid-template-areas: 'head head'
+                           'nav nav'
+                           'side1 top'
+                           'side1 main'
+                           'side1 bottom'
+                           'foot foot'
+                           'notice notice';
+      grid-template-columns: 1fr
+                             2fr;
     }
 
     &__sidebar-second {
-        grid-template-areas: 'head head'
-                             'nav nav'
-                             'top side2'
-                             'main side2'
-                             'bottom side2'
-                             'foot foot'
-                             'notice notice';
-        grid-template-columns: 2fr
-                               1fr;
+      grid-template-areas: 'head head'
+                           'nav nav'
+                           'top side2'
+                           'main side2'
+                           'bottom side2'
+                           'foot foot'
+                           'notice notice';
+      grid-template-columns: 2fr
+                             1fr;
     }
 
     &__sidebar-two {
-        grid-template-areas: 'head head head'
-                             'nav nav nav'
-                             'side1 top side2'
-                             'side1 main side2'
-                             'side1 bottom side2'
-                             'foot foot foot'
-                             'notice notice notice';
-        grid-template-columns: 1fr
-                               2fr
-                               1fr;
+      grid-template-areas: 'head head head'
+                           'nav nav nav'
+                           'side1 top side2'
+                           'side1 main side2'
+                           'side1 bottom side2'
+                           'foot foot foot'
+                           'notice notice notice';
+      grid-template-columns: 1fr
+                             2fr
+                             1fr;
     }
   }
 
