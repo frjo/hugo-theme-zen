@@ -34,7 +34,7 @@ $colors: (
 
   link:                   $brand,
   link-visited:           $brand,
-  link-hover:             $brand-light,
+  link-hover:             $brand-alt,
   link-active:            $red,
 
   link-inverted:          $white,
@@ -60,7 +60,7 @@ $colors: (
   mobile-menu-cover:      rgba($black, .2),
 
   button:                 $brand,
-  button-hover:           $brand-light,
+  button-hover:           $brand-alt,
   button-text:            $white,
   button-text-hover:      $white,
   button-disabled:        $grey,
