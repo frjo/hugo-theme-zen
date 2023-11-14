@@ -65,4 +65,10 @@ figure {
       }
     }
   }
+
+  &.podcast {
+    audio {
+      width: 95%;
+    }
+  }
 }
