@@ -44,7 +44,7 @@
 }
 
 @mixin margin-block-end($x, $unit: 'rem') {
-  @include spacing(margin-inline-end, $x, $unit);
+  @include spacing(margin-block-end, $x, $unit);
 }
 
 @mixin margin-top($x, $unit: 'rem') {

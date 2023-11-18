@@ -2,6 +2,9 @@
 
 figure,
 img {
+  // Add vertical rhythm margins.
+  @include margin-block(0 1);
+
   &.image {
     --image-padding: .75rem;
 
@@ -30,6 +33,14 @@ img {
 }
 
 figure {
+  // Remove defult inline margins.
+  @include margin-inline(0);
+
+  // Remove margin from img inside figure.
+  img {
+    margin: 0;
+  }
+
   &.image {
     figcaption {
       padding-block-start: var(--image-padding);

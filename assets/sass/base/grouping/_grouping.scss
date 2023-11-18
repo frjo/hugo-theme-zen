@@ -53,14 +53,11 @@ li {
   }
 }
 
-// Figures
+// Header
 
-figure {
+header {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
-
-  // Remove defult inline margins.
-  @include margin-inline(0);
+  @include margin-block(0 .3);
 }
 
 // Horizontal rule

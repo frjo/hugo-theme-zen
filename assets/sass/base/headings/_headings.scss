@@ -15,12 +15,17 @@ h5,
 %h5,
 h6,
 %h6 {
-  @include margin-block(1 0.375, 'em');
+  @include margin-block(1 .3, 'em');
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
   line-height: var(--heading-line-height);
   text-wrap: balance;
+
+  // Smaller margin when a headeing is right after another heading.
+  & + & {
+    @include margin-block-start(.5, 'em');
+  }
 
   // Set max text line width in main for readability.
   .main & {
