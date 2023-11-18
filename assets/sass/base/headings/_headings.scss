@@ -15,7 +15,7 @@ h5,
 %h5,
 h6,
 %h6 {
-  @include margin-block(1 0, 'em');
+  @include margin-block(1 0.375, 'em');
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
@@ -25,26 +25,6 @@ h6,
   // Set max text line width in main for readability.
   .main & {
     max-width: var(--max-line-width);
-  }
-}
-
-// Move content closer up to related header.
-h2,
-%h2,
-h3,
-%h3,
-h4,
-%h4,
-h5,
-%h5,
-h6,
-%h6 {
-  & + :is(p, ul, ol) {
-    @include margin-block-start(0.375);
-  }
-
-  & + & {
-    @include margin-block-start(0.5);
   }
 }
 

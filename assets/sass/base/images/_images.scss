@@ -3,7 +3,7 @@
 figure,
 img {
   &.image {
-    --padding: .75rem;
+    --image-padding: .75rem;
 
     @include respond-to(s) {
       &.center {
@@ -11,16 +11,16 @@ img {
       }
 
       &.left {
-        padding-inline-end: var(--padding);
-        padding-block-end: var(--padding);
+        padding-inline-end: var(--image-padding);
+        padding-block-end: var(--image-padding);
         margin: 0;
         float: left;
         clear: both;
       }
 
       &.right {
-        padding-inline-start: var(--padding);
-        padding-block-end: var(--padding);
+        padding-inline-start: var(--image-padding);
+        padding-block-end: var(--image-padding);
         margin: 0;
         float: right;
         clear: both;
@@ -31,10 +31,8 @@ img {
 
 figure {
   &.image {
-    --padding: .75rem;
-
     figcaption {
-      padding-block-start: var(--padding);
+      padding-block-start: var(--image-padding);
 
       @include respond-to(s) {
         display: table-caption;
@@ -52,15 +50,15 @@ figure {
 
       &.left {
         figcaption {
-          padding-inline-end: var(--padding);
-          padding-block-end: var(--padding);
+          padding-inline-end: var(--image-padding);
+          padding-block-end: var(--image-padding);
         }
       }
 
       &.right {
         figcaption {
-          padding-inline-start: var(--padding);
-          padding-block-end: var(--padding);
+          padding-inline-start: var(--image-padding);
+          padding-block-end: var(--image-padding);
         }
       }
     }

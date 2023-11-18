@@ -4,7 +4,7 @@
 
 form {
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  @include margin-block(0 1);
 }
 
 input,

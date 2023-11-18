@@ -12,7 +12,7 @@
 
 blockquote {
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  @include margin-block(0 1);
   // Also indent the quote on both sides.
   margin-inline: var(--indent-amount);
 }
@@ -24,7 +24,7 @@ ol,
 ul,
 menu {
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  @include margin-block(0 1);
 }
 
 dd {
@@ -57,7 +57,7 @@ li {
 
 figure {
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  @include margin-block(0 1);
 
   // Remove defult inline margins.
   @include margin-inline(0);
@@ -74,7 +74,7 @@ hr {
 
 p {
   // Add vertical rhythm margins.
-  @include margin-block(.75);
+  @include margin-block(0 .75);
 
   // Set max text line width in main for readability.
   .main & {
@@ -86,7 +86,7 @@ p {
 
 pre {
   // Add vertical rhythm margins.
-  @include margin-block(.75);
+  @include margin-block(0 .75);
   font-family: var(--ff-monospace);
 }
 

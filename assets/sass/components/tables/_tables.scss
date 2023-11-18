@@ -1,14 +1,14 @@
 .zebra-table,
 %zebra-table {
-  --padding: .5rem;
+  --cell-padding: .5rem;
 
   @include respond-to-max(s) {
-    --padding: .3rem;
+    --cell-padding: .3rem;
   }
 
   th,
   td {
-    padding: var(--padding);
+    padding: var(--cell-padding);
   }
 
   thead {
