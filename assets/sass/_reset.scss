@@ -65,10 +65,10 @@ label {
 }
 
 [type='search'] {
-  // Correct the odd appearance in Chrome and Safari.
-  -webkit-appearance: textfield;
-  // Correct the outline style in Safari.
-  outline-offset: -2px;
+  @include respond-to(s) {
+    // Correct the odd appearance in Safari on desktop.
+    -webkit-appearance: textfield;
+  }
 }
 
 // Text-level semantics
