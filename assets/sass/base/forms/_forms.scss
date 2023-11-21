@@ -56,9 +56,11 @@ textarea {
   }
 }
 
-// For forms with single field add space between it and the submit button.
-input:only-of-type {
-  &:has(+ [type='submit']) {
-    margin-right: .5rem;
+// For forms none mobile with single field add space between it and the submit button.
+@include respond-to(s) {
+  input:only-of-type {
+    &:has(+ [type='submit']) {
+      margin-right: .5rem;
+    }
   }
 }
