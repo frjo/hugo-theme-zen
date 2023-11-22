@@ -57,7 +57,7 @@ li {
 
 header {
   // Add vertical rhythm margins.
-  @include margin-block(0 .3);
+  @include margin-block(0 .33);
 }
 
 // Horizontal rule
@@ -71,7 +71,7 @@ hr {
 
 p {
   // Add vertical rhythm margins.
-  @include margin-block(0 .75);
+  @include margin-block(0 1);
 
   // Set max text line width in main for readability.
   .main & {
@@ -83,7 +83,7 @@ p {
 
 pre {
   // Add vertical rhythm margins.
-  @include margin-block(0 .75);
+  @include margin-block(0 1);
   font-family: var(--ff-monospace);
 }
 

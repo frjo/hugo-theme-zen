@@ -10,7 +10,7 @@ form {
 input,
 textarea,
 select {
-  @include margin-bottom(.75);
+  @include margin-block(0 1);
 }
 
 // Mark field as required if needed.

@@ -15,7 +15,7 @@ h5,
 %h5,
 h6,
 %h6 {
-  @include margin-block(1 .3, 'em');
+  @include margin-block(1 .33, 'em');
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
@@ -38,16 +38,19 @@ h1,
   // h1 only on top of page so different margins.
   @include margin-block(1 .5, 'rem');
   font-size: var(--fs-xxl);
+  letter-spacing: -.01em;
 }
 
 h2,
 %h2 {
   font-size: var(--fs-xl);
+  letter-spacing: -.01em;
 }
 
 h3,
 %h3 {
   font-size: var(--fs-l);
+  letter-spacing: -.01em;
 }
 
 h4,
