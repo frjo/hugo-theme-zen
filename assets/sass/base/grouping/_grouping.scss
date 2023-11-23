@@ -72,6 +72,8 @@ hr {
 p {
   // Add vertical rhythm margins.
   @include margin-block(0 1);
+  // Nicer text wrap, e.g. no lone work on last line.
+  text-wrap: pretty;
 
   // Set max text line width in main for readability.
   .main & {
