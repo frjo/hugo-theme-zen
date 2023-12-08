@@ -101,9 +101,9 @@ _snippets:
       shortcode_name: button
       named_args:
         - editor_key: src
-          type: boolean
+          type: string
         - editor_key: text
-          type: boolean
+          type: string
         - editor_key: class
           type: string
           optional: true
@@ -383,7 +383,7 @@ _snippets:
           optional: true
 
   zen_wrapper_start:
-    template: hugo_markdown_shortcode_positional_args
+    template: hugo_shortcode_positional_args
     inline: false
     preview:
       icon: wrap_text
@@ -398,7 +398,7 @@ _snippets:
           type: string
 
   zen_wrapper_end:
-    template: hugo_markdown_shortcode
+    template: hugo_shortcode
     inline: false
     preview:
       icon: wrap_text
