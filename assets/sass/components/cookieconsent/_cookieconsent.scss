@@ -1,21 +1,21 @@
 // Cookieconsent
 
 .cookieconsent {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: .5rem;
   position: sticky;
   bottom: 0;
   width: 100%;
+  padding-block-start: .5rem;
   color: var(--color-warning);
   background-color: var(--color-warning-bg);
   border-top: 4px solid var(--color-warning-border);
   font-size: var(--fs-s);
-  text-align: center;
   transform: translateY(100vh);
   transition: all 130ms ease-out;
   z-index: 99;
-
-  a {
-    color: inherit;
-  }
 }
 
 .button {

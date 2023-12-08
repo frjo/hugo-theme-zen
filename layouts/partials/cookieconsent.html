@@ -1,10 +1,10 @@
 <div class="cookieconsent layout__cookieconsent hidden">
   <div class="cookieconsent__message">
     {{ i18n "cookieconsent_message" }}
-    {{ with site.Params.privacyPolicyUrl }}<a href="{{ . }}">{{ i18n "privacy_policy" }}</a>{{ end }}
   </div>
   <div class="cookieconsent__actions">
-    <button class="button button--small button--cookieconsent button--decline" type="button" data-consent="false">{{ i18n "cookieconsent_decline" }}</button>
-    <button class="button button--small button--cookieconsent button--accept" type="button" data-consent="true">{{ i18n "cookieconsent_accept" }}</button>
+    <button class="button button--small button--decline" type="button" data-consent="false">{{ i18n "cookieconsent_decline" }}</button>
+    <button class="button button--small button--accept" type="button" data-consent="true">{{ i18n "cookieconsent_accept" }}</button>
+    {{ with site.Params.privacyPolicyUrl }}<a class="button  button--small" href="{{ . }}">{{ i18n "privacy_policy" }}</a>{{ end }}
   </div>
 </div>
