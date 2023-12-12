@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
   // Improve text rendering.
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // Use the saner border-box model for all elements.

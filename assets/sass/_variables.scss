@@ -60,6 +60,8 @@ $font-weight: (
   lighter:    200,
 );
 
+// Modern font stacks. See how they look at https://modernfontstacks.com/.
+//
 // The following font family declarations use widely available fonts.
 // A user's web browser will look at the comma-separated list and will
 // attempt to use each font in turn until it finds one that is available
@@ -67,22 +69,33 @@ $font-weight: (
 // monospace) hints at what type of font to use if the web browser doesn't
 // find any of the fonts in the list.
 
+// Emojis font stack. Add to end of other stacks when needed.
+$emojis:           'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
 // System-ui font stack.
-$system-ui:       system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 'Liberation Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+$system-ui:       system-ui, sans-serif;
 
 // Serif font stacks.
-$ui-serif:        ui-serif, Constantia, 'Noto Serif', Georgia, serif;
-$times:           'Times New Roman', 'Liberation Serif', 'Nimbus Roman No9 L', serif;
-$georgia:         Georgia, 'Noto Serif', ui-serif, serif;
-$garamond:        Garamond, Charter, Cambria, 'Noto Serif', ui-serif, serif;
+$ui-serif:        ui-serif, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+$transitional:    Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+$old:             'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+$slab:            Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+$antique:         Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+$didone:          Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 
 // Sans-serif font stacks.
-$ui-sans-serif:   ui-sans-serif, $system-ui;
-$helvetica:       'Helvetica Neue', Helvetica, 'Liberation Sans', 'Nimbus Sans L', Arial, sans-serif;
-$futura:          Futura, 'Century Gothic', Montserrat, Calibri, ui-sans-serif, sans-serif;
+$ui-sans-serif:   ui-sans-serif, system-ui, sans-serif;
+$humanist:        Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+$geometric:       Futura, Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+$classical:       Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+$neo:             Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+$industrial:      Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+
+// Rounded Sans-serif font stacks.
+$ui-rounded:         ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
 // Monospace font stacks.
-$ui-monospace:    ui-monospace, Menlo, 'Cascadia Mono', 'Segoe UI Mono', 'Noto Sans Mono', 'Liberation Mono', Monaco, Consolas, monospace;
+$ui-monospace:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 
 // Font family.
 // Use like this: var(--ff-body)
