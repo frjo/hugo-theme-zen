@@ -151,10 +151,13 @@
   &__toggle,
   &__hamburger rect,
   &__sheet {
-    transition: all 130ms ease-in;
+    // Add some transitions unless user prefer less motion.
+    @media (prefers-reduced-motion: no-preference) {
+      transition: all 130ms ease-in;
 
-    .js-nav-open & {
-      transition: all 330ms ease-out;
+      .js-nav-open & {
+        transition: all 330ms ease-out;
+      }
     }
   }
 }

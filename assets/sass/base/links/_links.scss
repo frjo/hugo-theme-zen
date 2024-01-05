@@ -38,6 +38,14 @@ a:active {
   text-decoration: none;
 }
 
+// Use smooth scrolling unless user prefer less motion.
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: var(--gutters);
+  }
+}
+
 .link-nav,
 %link-nav {
   a {
