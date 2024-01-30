@@ -95,7 +95,7 @@
 
 <figure class="image{{ with $class }} {{ . }}{{ end }}">
 {{ with $link }}<a href="{{ . }}">{{ end -}}
-<img src="{{ $src }}"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ if isset .Params "alt" }} alt="{{ $alt }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
+<img src="{{ $src }}" loading="lazy"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ if isset .Params "alt" }} alt="{{ $alt }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
 {{- if $link }}</a>{{ end }}
 {{ if or $title $caption $attr -}}
 <figcaption>
