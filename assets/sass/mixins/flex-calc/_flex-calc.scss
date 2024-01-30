@@ -1,4 +1,3 @@
-@mixin flex($c, $x) {
-  flex-basis: calc(100% / #{$c} - #{$x * $base-line-height + 'rem'});
-  flex-grow: 0;
+@mixin flex($col, $gap) {
+  flex-basis: calc(100% / #{$col} - #{$gap * $base-line-height + 'rem'});
 }
