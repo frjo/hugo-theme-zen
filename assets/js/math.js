@@ -11,8 +11,10 @@
     // eslint-disable-next-line no-undef
     renderMathInElement(document.body, {
       delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false}
+        {left: '\\[', right: '\\]', display: true},   // block
+        {left: '$$', right: '$$', display: true},     // block
+        {left: '\\(', right: '\\)', display: false},  // inline
+        {left: '$', right: '$', display: false}       // inline
       ],
       throwOnError: false
     });
