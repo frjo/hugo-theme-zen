@@ -15,13 +15,22 @@
     nav.classList.add('js-nav-open');
     sheet.setAttribute('aria-hidden', 'false');
     toggle.setAttribute('aria-expanded', 'true');
+    document.body.addEventListener('keydown', closeonesc);
   }
 
   function navclose() {
     nav.classList.remove('js-nav-open');
     sheet.setAttribute('aria-hidden', 'true');
     toggle.setAttribute('aria-expanded', 'false');
+    document.body.removeEventListener('keydown', closeonesc);
   }
+
+  // Close the nav sheet with "esc" key.
+  function closeonesc(e) {
+    if (e.key === 'Escape') {
+      navclose();
+    }
+  };
 
   // Toggle the mobile nav sheet.
   const toggles = document.querySelectorAll('.mobile-nav__cover, .mobile-nav__toggle');
