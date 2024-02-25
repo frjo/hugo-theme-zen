@@ -31,10 +31,10 @@
 {{ if site.IsMultiLingual }}{{ partial "language-selector.html" . }}{{ end -}}
 {{ if $.Param "menuinheader" }}{{ partial "menu.html" . }}{{ end -}}
 </div>
-{{ if $.Param "mobilemenu" }}{{ partial "mobilemenu.html" . }}{{ end -}}
 </header>
 
 {{ if not ($.Param "menuinheader") }}{{ partial "menu.html" . }}{{ end -}}
+{{ if $.Param "mobilemenu" }}{{ partial "mobilemenu.html" . }}{{ end -}}
 
 {{ block "main" . }}{{ end }}
 
