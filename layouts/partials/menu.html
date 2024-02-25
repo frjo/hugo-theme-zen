@@ -14,10 +14,10 @@
 {{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
 {{ with site.Home }}<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ i18n "menu_home" }}</a></li>{{ end }}
 {{ range where site.RegularPages "Section" "" -}}
-<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
 {{ end -}}
 {{ range site.Sections -}}
-<li><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+<li><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
 {{ end -}}
 
 {{ end -}}

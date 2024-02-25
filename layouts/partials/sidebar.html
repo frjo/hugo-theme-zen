@@ -3,13 +3,13 @@
 {{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
 <aside class="sidebar layout__second-sidebar">
 {{ range site.Sections -}}
-<section class="menu">
-<p class="title"><strong><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} aria-current="page"{{ end }}>{{ .Title }}</a></strong></p>
+<nav class="menu">
+<p class="title"><strong><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></strong></p>
 <ul>
 {{ range .Pages -}}
-<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
 {{ end -}}
 </ul>
-</section>
+</nav>
 {{ end -}}
 </aside>
