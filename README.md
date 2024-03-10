@@ -130,7 +130,9 @@ Hugo Extended version 0.93.0 or higher is required.
 
 ### Hugo module
 
-First of all, you need to turn your new or existing site into a hugo module.
+You need to have `go` installed to use Hugo modules.
+
+Turn your new or existing site into a hugo module.
 
 From the root of your site:
 
@@ -138,15 +140,15 @@ From the root of your site:
 hugo mod init github.com/me/my-site
 ```
 
-Afterwards, declare the `zen` theme module as a dependency of your site:
+Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v3".
 
 From the root of your site:
 
 ```shell
-hugo mod get -u github.com/frjo/hugo-theme-zen/v3
+hugo mod get -u
 ```
 
-### Git submodule
+### Git clone
 
 You can download and unpack the theme manually from Github but it's easier to use git to clone the repo.
 
@@ -156,6 +158,10 @@ From the root of your site:
 git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
+Then set the "theme" setting to "zen".
+
+### Git submodule
+
 If you use git to version control your site you can add the zen theme as a submodule.
 
 From the root of your site:
@@ -164,6 +170,7 @@ From the root of your site:
 git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
+Then set the "theme" setting to "zen".
 
 ## Updating
 
@@ -172,7 +179,7 @@ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 From the root of your site:
 
 ```shell
-hugo mod get -u github.com/frjo/hugo-theme-zen
+hugo mod get -u
 ```
 
 ### Git submodule
@@ -215,11 +222,6 @@ Some performance tools will complain about to many files (js and css files are n
 * [Helmer Grundström](https://www.helmergrundstrom.se/)
 * [xdeb.org](https://xdeb.org/)
 * [xdeb.net](https://xdeb.net/)
-
-
-## Nice forks of the Zen theme
-
-* [DFD-Zen theme for Hugo](https://gitlab.com/danielfdickinson/dfd-hugo-theme-zen)
 
 
 ## Screenshots
@@ -412,6 +414,8 @@ Example render hook that process images in the same way as the "img" shortcode. 
 ### Make external links open in a new tab.
 
 Example render hook to rewrite external links so they open in a new tab. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-link.html.example` to `layouts/_default/_markup/render-link.html`.
+
+I rarely use this one, I think the user should decide how links open.
 
 ## Multilingual
 
