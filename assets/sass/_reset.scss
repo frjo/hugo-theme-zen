@@ -85,29 +85,3 @@ kbd,
 samp {
   font-family: var(--ff-monospace);
 }
-
-// Mark text
-
-mark {
-  @extend %highlight-mark;
-}
-
-// Superscript / Subscript
-
-sub,
-sup {
-  // Prevent `sub` and `sup` elements from affecting the line height in
-  // all browsers.
-  font-size: var(--fs-xs);
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -.25em;
-}
-
-sup {
-  top: -.5em;
-}
