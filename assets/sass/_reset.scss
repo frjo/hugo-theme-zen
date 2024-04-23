@@ -62,21 +62,12 @@ select {
   max-width: 100%;
 }
 
-label {
-  display: block;
-  font-weight: var(--fw-bold);
-}
-
 [type='search'] {
   @include respond-to(s) {
     // Correct the odd appearance in Safari on desktop.
     -webkit-appearance: textfield;
   }
 }
-
-// Text-level semantics
-//
-// The elements in this section give semantics to inline text.
 
 // Code
 

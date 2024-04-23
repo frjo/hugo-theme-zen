@@ -13,8 +13,11 @@ select {
   @include margin-block(0 1);
 }
 
-// Mark field as required if needed.
 label {
+  display: block;
+  font-weight: var(--fw-bold);
+
+  // Mark field as required if needed.
   &:has(+ :required) {
     &::after {
       content: '*';
@@ -23,7 +26,7 @@ label {
   }
 }
 
-// Set max text line width in main for readability.
+// Set max text line width for readability.
 input,
 label,
 textarea,
