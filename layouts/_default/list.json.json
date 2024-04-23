@@ -1,10 +1,15 @@
-{{- $pctx := . -}}
-{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
-{{- $pages := $pctx.RegularPages -}}
-{{- $limit := site.Config.Services.RSS.Limit -}}
-{{- if ge $limit 1 -}}
-{{- $pages = $pages | first $limit -}}
-{{- end -}}
+{{- $pctx := . }}
+{{- if .IsHome }}{{ $pctx = .Site }}{{ end }}
+{{- $pages := slice }}
+{{- if or $.IsHome $.IsSection }}
+{{- $pages = $pctx.RegularPages }}
+{{- else }}
+{{- $pages = $pctx.Pages }}
+{{- end }}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
 {{ $length := (len $pages) -}}
 {
     "version": "https://jsonfeed.org/version/1.1",
