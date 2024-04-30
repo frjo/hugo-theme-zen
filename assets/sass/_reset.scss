@@ -35,16 +35,21 @@ body {
 // Embedded content
 
 img,
+svg,
 picture,
+audio,
 video,
 canvas,
-svg {
+iframe,
+embed,
+object {
   display: block;
-  max-width: 100%;
 }
 
 img,
-svg {
+svg,
+video {
+  max-width: 100%;
   height: auto;
 }
 
@@ -59,7 +64,8 @@ button,
 textarea,
 select {
   font: inherit;
-  max-width: 100%;
+  letter-spacing: inherit;
+  word-spacing: inherit;
 }
 
 [type='search'] {
