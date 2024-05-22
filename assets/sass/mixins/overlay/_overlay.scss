@@ -1,0 +1,8 @@
+@mixin overlay($opacity: '0.5', $color: $nearblack, $color2: $grey-light) {
+  --color-overlay: $color;
+  --color-overlay2: $color2;
+  border-image: linear-gradient(
+    rgba(var(--color-overlay) / $opacity),
+    rgba(var(--color-overlay2) / $opacity))
+  fill 1;
+}
