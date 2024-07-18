@@ -9,10 +9,6 @@ removePathAccents: true
 paginate: 10
 paginatePath: "page"
 rssLimit: 20
-author:
-  name: "Your Name"
-  url: "https://example.org/somepage"
-  avatar: "path/to/some-image.jpg"
 
 outputFormats:
   SearchIndex:
@@ -40,3 +36,7 @@ params:
   realfavicongenerator: true
   sidebar: true
   submitted: true
+  author:
+    name: "Your Name"
+    url: "https://example.org/somepage"
+    avatar: "path/to/some-image.jpg"
