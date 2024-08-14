@@ -22,7 +22,7 @@ copy_files=("themes/zen/assets/sass/_colors.scss:assets/sass/_colors.scss"
             "themes/zen/assets/sass/_custom.scss:assets/sass/_custom.scss"
             "themes/zen/assets/sass/_zen.scss:assets/sass/_zen.scss"
             "themes/zen/layouts/index.html:layouts/index.html"
-            "themes/zen/exampleSite/config.yaml:config.yaml"
+            "themes/zen/exampleSite/hugo.yaml:hugo.yaml"
             "themes/zen/.editorconfig:.editorconfig")
 
 for files in "${copy_files[@]}" ; do
@@ -34,6 +34,6 @@ for files in "${copy_files[@]}" ; do
   fi
 done
 
-if [[ -f "config.toml" && -f "config.yaml" ]]; then
-  mv config.toml config.toml.old
+if [[ -f "hugo.toml" && -f "hugo.yaml" ]]; then
+  mv hugo.toml hugo.toml.old
 fi
