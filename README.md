@@ -18,6 +18,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Table of contents
 
+* [Version 4.x](#version-4x)
 * [Version 3.x](#version-3x)
 * [Version 2.x](#version-2x)
 * [Features](#features)
@@ -46,6 +47,12 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
+
+## Version 4.x
+
+* Minimum Hugo version is now v0.124.0. This is the reson for making this v4.
+* Updated a number of things to remove all "WARN  deprecated".
+* No other significant changes.
 
 ## Version 3.x
 
@@ -123,7 +130,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Minimum Hugo version
 
-Hugo Extended version 0.93.0 or higher is required.
+Hugo Extended version 0.124.0 or higher is required.
 
 
 ## Installation
@@ -140,7 +147,7 @@ From the root of your site:
 hugo mod init github.com/me/my-site
 ```
 
-Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v3".
+Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v4".
 
 From the root of your site:
 
@@ -241,6 +248,10 @@ languageCode: "en-GB"       # Set your language code (only needed for none multi
 
 params:
   alpine: true              # Add AlpineJS, default false.
+  author:
+    name:                   # Your Name
+    url:                    # https://example.org/somepage
+    avatar:                 # path/to/some-image.jpg
   blogSections:             # Sections whose <schema.org> `JSON+LD` in the page `<head>`
     - blog                  # will be `@type: BlogPosting`.
     - post                  # Defaults to a list including only 'post' and 'blog'.
