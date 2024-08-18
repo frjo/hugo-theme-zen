@@ -1,0 +1,107 @@
+[menu_title]
+other = "主菜单"
+
+[menu_home]
+other = "主页"
+
+[menu_mobile]
+other = "菜单"
+
+[pager_next]
+other = "下一页"
+
+[pager_prev]
+other = "上一页"
+
+[taxo_tags]
+other = "标签"
+
+[last_mod]
+other = "更新于 "
+
+[created]
+other = "创建于 "
+
+[search_placeholder]
+other = "输入想要搜索的内地."
+
+[search_title]
+other = "搜索"
+
+[search_loading]
+other = "加载索引…"
+
+[string_at]
+other = "于"
+
+[string_by]
+other = "由"
+
+[string_follow]
+other = "跟随"
+
+[string_in]
+other = "在"
+
+[string_on]
+other = "在"
+
+[string_recent_content]
+other = "近期文章"
+
+[string_see_also]
+other = "参见"
+
+[js_required]
+other = "要使用此功能, 必须先启用 JavaScript"
+
+[contact_submitted]
+other = "已发送"
+
+[contact_error]
+other = "发送信息时出现错误"
+
+[contact_name]
+other = "名称"
+
+[contact_name_placeholder]
+other = "你的名称"
+
+[contact_mail]
+other = "电子邮件地址"
+
+[contact_mail_placeholder]
+other = "你的电子邮件地址"
+
+[contact_subject]
+other = "主题"
+
+[contact_subject_placeholder]
+other = "简短的主题"
+
+[contact_message]
+other = "信息"
+
+[contact_message_placeholder]
+other = "在此填写信息"
+
+[contact_submit]
+other = "发送信息"
+
+[contact_honeypot]
+other = "如果你是人类, 跳过"
+
+[lang_select_title]
+other = "选择语言"
+
+[cookieconsent_message]
+other = "此网站使用 cookies 以运行正常功能. 用于跟踪或分析的 cookies 是可选的"
+
+[cookieconsent_accept]
+other = "全部允许"
+
+[cookieconsent_decline]
+other = "只允许必要的"
+
+[privacy_policy]
+other = "隐私政策"

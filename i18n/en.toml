@@ -83,7 +83,7 @@ other = "A short subject"
 other = "Message"
 
 [contact_message_placeholder]
-other = "The messages goes here…"
+other = "The messages go here…"
 
 [contact_submit]
 other = "Send message"
