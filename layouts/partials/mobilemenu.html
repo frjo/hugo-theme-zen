@@ -12,26 +12,9 @@
     <div class="mobile-nav__region">{{ if hugo.IsMultilingual }}{{ partial "language-selector.html" . }}{{ end }}</div>
     <nav class="mobile-nav__main-menu" aria-label="{{ i18n "menu_title" }}">
     <ul class="mobile-nav__navbar">
-    {{ if site.Menus.main -}}
-
     {{ $currentPage := . -}}
     {{ range site.Menus.main -}}
     <li><a href="{{ .URL | relLangURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span>{{ .Post }}</a></li>
-    {{ end -}}
-
-    {{ else -}}
-
-    {{ $currentSection := .Section -}}
-    {{ $currentID := "" -}}
-    {{ with .File }}{{ $currentID = .UniqueID }}{{ end -}}
-    {{ with site.Home }}<li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ i18n "menu_home" }}</a></li>{{ end }}
-    {{ range where site.RegularPages "Section" "" -}}
-    <li><a href="{{ .RelPermalink }}"{{ if eq $currentID .File.UniqueID }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
-    {{ end -}}
-    {{ range site.Sections -}}
-    <li><a href="{{ .RelPermalink }}"{{ if eq $currentSection .Section }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
-    {{ end -}}
-
     {{ end -}}
     </ul>
     </nav>
