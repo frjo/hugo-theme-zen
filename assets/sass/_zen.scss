@@ -146,6 +146,10 @@ main {
     &:not(:placeholder-shown):invalid {
       background-color: var(--color-error-bg);
     }
+
+    &:focus:invalid {
+      background-color: var(--color-warning-bg);
+    }
   }
 
   button {
