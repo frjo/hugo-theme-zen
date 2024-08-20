@@ -55,7 +55,9 @@
   });
 
   // Move focus back to button efter user tab out of last link.
-  const lastlink = [].slice.call(links).pop();
-  lastlink.addEventListener('blur', () => toggle.focus());
+  if (links.length) {
+    const lastlink = [].slice.call(links).pop();
+    lastlink.addEventListener('blur', () => toggle.focus());
+  }
 
 })();
