@@ -383,7 +383,7 @@ Add any new layouts to the root layout directory as well. This way they will not
 
 #### Menu and sidebar layouts
 
-If a Hugo main menu is defined (.Sites.Menu.main) the menu template will use it to build a navigation menu. If not, the template will automatically add entries for the home page, each root page and each section, in that order.
+If a Hugo main menu is defined (.Sites.Menu.main) the menu template will use it to build a navigation menu.
 
 If the default sidebar is activated it will display each section with all its pages listed below.
 
