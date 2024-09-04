@@ -36,6 +36,11 @@ figure {
   &.image {
     figcaption {
       padding-block-start: var(--image-padding);
+      // Set max text line width in main for readability.
+      max-width: var(--max-line-width);
+      // Nicer text wrap, e.g. no lone work on last line.
+      text-wrap: pretty;
+
 
       @include respond-to(s) {
         display: table-caption;
