@@ -6,9 +6,10 @@ languageCode: "en-GB"
 defaultContentLanguage: "en"
 pluralizelisttitles: false
 removePathAccents: true
-paginate: 10
-paginatePath: "page"
 rssLimit: 20
+pagination:
+  pagerSize: 10
+  path: page
 
 outputFormats:
   SearchIndex:

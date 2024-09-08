@@ -41,7 +41,6 @@ figure {
       // Nicer text wrap, e.g. no lone work on last line.
       text-wrap: pretty;
 
-
       @include respond-to(s) {
         display: table-caption;
         caption-side: bottom;
