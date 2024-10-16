@@ -3,25 +3,22 @@
 
 // Document
 
-html {
-  // Prevent adjustments of font size.
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  // On short pages, we want any background gradients to fill the entire height
-  // of the browser.
-  min-height: 100%;
-  // Use the saner border-box model.
-  box-sizing: border-box;
-  // Improve text rendering.
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // Use the saner border-box model for all elements.
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  // Prevent adjustments of font size.
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  // Improve text rendering.
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // Activate transition to intrinsic sizes like auto and fit-content.
+  interpolate-size: allow-keywords;
 }
 
 // Sections
@@ -30,6 +27,9 @@ body {
   // Remove the margin in all browsers.
   margin: 0;
   padding: 0;
+  // On short pages, we want the body to fill the entire height
+  // of the browser.
+  min-height: 100vh;
 }
 
 // Embedded content
@@ -81,4 +81,12 @@ code,
 kbd,
 samp {
   font-family: var(--ff-monospace);
+}
+
+// Numbers
+
+td,
+math,
+time[datetime*=":"] {
+  font-variant-numeric: tabular-nums lining-nums;
 }

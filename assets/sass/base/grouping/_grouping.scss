@@ -13,7 +13,7 @@
 blockquote {
   // Add vertical rhythm margins.
   @include margin-block(0 1);
-  // Nicer text wrap, e.g. no lone work on last line.
+  // Nicer text wrap, e.g. no lone word on last line.
   text-wrap: pretty;
   // Also indent the quote on both sides.
   margin-inline: var(--indent-amount);
@@ -51,7 +51,7 @@ menu {
 }
 
 li {
-  // Nicer text wrap, e.g. no lone work on last line.
+  // Nicer text wrap, e.g. no lone word on last line.
   text-wrap: pretty;
   // Set max text line width in main for readability.
   .main & {
@@ -78,7 +78,7 @@ hr {
 p {
   // Add vertical rhythm margins.
   @include margin-block(0 1);
-  // Nicer text wrap, e.g. no lone work on last line.
+  // Nicer text wrap, e.g. no lone word on last line.
   text-wrap: pretty;
 
   // Set max text line width in main for readability.

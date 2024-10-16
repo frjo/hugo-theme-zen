@@ -38,7 +38,7 @@ figure {
       padding-block-start: var(--image-padding);
       // Set max text line width in main for readability.
       max-width: var(--max-line-width);
-      // Nicer text wrap, e.g. no lone work on last line.
+      // Nicer text wrap, e.g. no lone word on last line.
       text-wrap: pretty;
 
       @include respond-to(s) {

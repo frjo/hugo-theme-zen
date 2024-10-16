@@ -51,6 +51,12 @@ textarea {
   width: Min(30em, 100%);
 }
 
+
+// Make sure textareas without a rows attribute are not tiny.
+textarea:not([rows]) {
+  min-height: 10em
+}
+
 // For forms with multibple fields show submit button below the form.
 input:not(:only-of-type),
 textarea {
