@@ -59,13 +59,6 @@ li {
   }
 }
 
-// Header
-
-header {
-  // Add vertical rhythm margins.
-  @include margin-block(0 .33);
-}
-
 // Horizontal rule
 
 hr {
