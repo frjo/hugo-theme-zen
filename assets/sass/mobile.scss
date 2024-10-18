@@ -26,7 +26,7 @@
     display: none;
   }
 
-  &.js-nav-open {
+  &[data-navopen] {
     position: fixed;
   }
 
@@ -41,7 +41,7 @@
     background-color: var(--color-mobile-menu-cover);
     opacity: 0;
 
-    .js-nav-open & {
+    [data-navopen] & {
       opacity: 1;
       pointer-events: auto;
     }
@@ -89,7 +89,7 @@
       transform-origin: center;
     }
 
-    .js-nav-open & { // stylelint-disable max-nesting-depth
+    [data-navopen] & { // stylelint-disable max-nesting-depth
       rect {
         y: 45px;
 
@@ -117,7 +117,7 @@
     transform: translateX(100vw);
     z-index: 21;
 
-    .js-nav-open & {
+    [data-navopen] & {
       visibility: visible;
       pointer-events: auto;
       box-shadow: -10px 0 10px -10px var(--color-nearblack);
@@ -149,13 +149,13 @@
 
   &__cover,
   &__toggle,
-  &__hamburger rect,
+  &__hamburger > rect,
   &__sheet {
     // Add some transitions unless user prefer less motion.
     @media (prefers-reduced-motion: no-preference) {
       transition: all 130ms ease-in;
 
-      .js-nav-open & {
+      [data-navopen] & {
         transition: all 330ms ease-out;
       }
     }

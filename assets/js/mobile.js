@@ -12,14 +12,14 @@
   const toggle = document.querySelector('.mobile-nav__toggle');
 
   function navopen() {
-    nav.classList.add('js-nav-open');
+    nav.dataset.navopen='true';
     sheet.setAttribute('aria-hidden', 'false');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.addEventListener('keydown', closeonesc);
   }
 
   function navclose() {
-    nav.classList.remove('js-nav-open');
+    delete nav.dataset.navopen;
     sheet.setAttribute('aria-hidden', 'true');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.removeEventListener('keydown', closeonesc);
@@ -37,7 +37,7 @@
   toggles.forEach(function (toggle) {
     toggle.addEventListener('click', function (e) {
       e.preventDefault();
-      if (nav.classList.contains('js-nav-open')) {
+      if (nav.dataset.navopen) {
         navclose();
       }
       else {
