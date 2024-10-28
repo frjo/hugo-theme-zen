@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Lists with a straight left margin.
 
 .ul-straight-left,
@@ -10,7 +12,7 @@
     display: table-row;
 
     &::before {
-      @include padding-inline-end(.5);
+      @include spacing.padding-inline-end(.5);
       display: table-cell;
       content: '\2981';
       font-size: var(--fs-s);
@@ -29,7 +31,7 @@
     counter-increment: table-ol;
 
     &::before {
-      @include padding-inline-end(.5);
+      @include spacing.padding-inline-end(.5);
       display: table-cell;
       content: counter(table-ol) '.';
       font-size: var(--fs-s);
