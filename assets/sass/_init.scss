@@ -6,14 +6,14 @@
 // project.
 
 // Colours and variables.
-@import 'colors';
-@import 'variables';
-@import 'extra';
+@use 'colors';
+@use 'variables';
+@use 'extra';
 
 // Mixins and functions.
-@import 'mixins/breakpoint/respond-to';
-@import 'mixins/clearfix/clearfix';
-@import 'mixins/debug/debug';
-@import 'mixins/flex-calc/flex-calc';
-@import 'mixins/rtl/rtl';
-@import 'mixins/spacing/spacing';
+@use 'mixins/breakpoint/respond-to';
+@use 'mixins/clearfix/clearfix';
+@use 'mixins/debug/debug';
+@use 'mixins/flex-calc/flex-calc';
+@use 'mixins/rtl/rtl';
+@use 'mixins/spacing/spacing';
