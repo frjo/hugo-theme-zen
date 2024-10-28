@@ -6,5 +6,5 @@
   $slope: strip-units(math.div($maxsize - $minsize, $maxbreakpoint - $minbreakpoint));
   $intersection: $minsize - $slope * $minbreakpoint;
 
-  @return clamp($minsize, calc(#{$intersection} + #{$slope * 100vw}), $maxsize);
+  @return clamp($minsize, #{$intersection} + #{$slope * 100vw}, $maxsize);
 }
