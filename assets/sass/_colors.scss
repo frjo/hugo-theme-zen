@@ -1,13 +1,18 @@
+<<<<<<< HEAD
+=======
+@use "sass:color";
+// stylelint-disable color-no-hex, color-named, value-list-max-empty-lines
+>>>>>>> acc1e79 (First run of sass-migrator to dartsass.)
 // stylelint-disable scss/dollar-variable-colon-space-after, scss/dollar-variable-empty-line-before
 
 // Base colors.
 $black:                 #000;
-$nearblack:             lighten($black, 20%); // #333
-$grey-dark:             lighten($black, 40%); // #666
-$grey:                  lighten($black, 60%); // #999
-$grey-light:            lighten($black, 80%); // #ccc
-$grey-extra-light:      lighten($black, 93.33%); // #eee
-$nearwhite:             lighten($black, 97%); // #f7f7f7
+$nearblack:             color.adjust($black, $lightness: 20%); // #333
+$grey-dark:             color.adjust($black, $lightness: 40%); // #666
+$grey:                  color.adjust($black, $lightness: 60%); // #999
+$grey-light:            color.adjust($black, $lightness: 80%); // #ccc
+$grey-extra-light:      color.adjust($black, $lightness: 93.33%); // #eee
+$nearwhite:             color.adjust($black, $lightness: 97%); // #f7f7f7
 $white:                 #fff;
 
 $blue:                  #0072b9;
@@ -69,19 +74,19 @@ $colors: (
 
   menu-active:            $black,
 
-  preview-bg:             lighten($yellow, 43%),
+  preview-bg:             color.adjust($yellow, $lightness: 43%),
 
   row-header:             transparent,
   row-odd:                $nearwhite,
   row-even:               transparent,
 
   status:                 $green,
-  status-bg:              lighten($green, 62%),
+  status-bg:              color.adjust($green, $lightness: 62%),
   warning:                $black,
-  warning-bg:             lighten($yellow, 45%),
+  warning-bg:             color.adjust($yellow, $lightness: 45%),
   warning-border:         $yellow,
   error:                  $red,
-  error-bg:               lighten($red, 57%),
+  error-bg:               color.adjust($red, $lightness: 57%),
 
   watermark:              $grey-extra-light,
 

@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Language selector
 
 .language-selector {
@@ -5,6 +7,6 @@
 }
 
 .language-icon {
-  @include margin-inline-end(.5);
+  @include spacing.margin-inline-end(.5);
   fill: var(--color-text);
 }
