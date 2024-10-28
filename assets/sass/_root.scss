@@ -1,9 +1,6 @@
 @use "colors";
 @use "variables";
 
-$breakout: variables.$gutters !default;
-$max-page-width: variables.$max-content-width !default;
-
 :root {
   // Convert sass variables to css4 variables.
   // Use like this: var(--color-gutters).
@@ -24,12 +21,12 @@ $max-page-width: variables.$max-content-width !default;
     --radius-#{$name}: #{$radius};
   }
 
-  --breakout: #{$breakout};
+  --breakout: #{variables.$breakout};
   --gutters-reverse: #{variables.$gutters-reverse};
   --gutters: #{variables.$gutters};
   --heading-line-height: #{variables.$heading-line-height};
   --indent-amount: #{variables.$indent-amount};
   --max-content-width: #{variables.$max-content-width};
   --max-line-width: #{variables.$max-line-width};
-  --max-page-width: #{$max-page-width};
+  --max-page-width: #{variables.$max-page-width};
 }
