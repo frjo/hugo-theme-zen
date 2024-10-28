@@ -153,7 +153,8 @@ $max-content-width:   1111px;
 // The max page width. Defaults to max-content-width.
 // Setting this to a larger value than max-content-width allows
 // content with class "stretch" to stretch out to the page edge.
-// $max-page-width:      1111px;
+$max-page-width: $max-content-width !default;
+
 
 // The max line width for readability.
 $max-line-width:      70ch;
@@ -165,7 +166,7 @@ $gutters-reverse:     calc(0px - (5px + 1.5625vw));
 
 // Breakout amount.
 // How much should the "breakout" be. Defaults to gutters value.
-// $breakout:             calc(5px + 1.5625vw);
+$breakout: $gutters !default;
 
 // The amount lists, blockquotes and comments are indented.
 // Use like this: var(--indent-amount)
