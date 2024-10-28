@@ -1,3 +1,6 @@
+@use "../../mixins/breakpoint/respond-to";
+@use "../../mixins/spacing/spacing";
+
 // Figure and image.
 
 figure,
@@ -5,7 +8,7 @@ img {
   &.image {
     --image-padding: .75rem;
 
-    @include respond-to(s) {
+    @include respond-to.respond-to(s) {
       &.center {
         margin-inline: auto;
       }
@@ -31,7 +34,7 @@ img {
 
 figure {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
 
   &.image {
     figcaption {
@@ -41,7 +44,7 @@ figure {
       // Nicer text wrap, e.g. no lone word on last line.
       text-wrap: pretty;
 
-      @include respond-to(s) {
+      @include respond-to.respond-to(s) {
         display: table-caption;
         caption-side: bottom;
         padding-block-start: 0;
@@ -52,7 +55,7 @@ figure {
       }
     }
 
-    @include respond-to(s) {
+    @include respond-to.respond-to(s) {
       display: table;
 
       &.left {
@@ -81,6 +84,6 @@ figure {
 img {
   &.image {
     // Add vertical rhythm margins.
-    @include margin-block(0 1);
+    @include spacing.margin-block(0 1);
   }
 }

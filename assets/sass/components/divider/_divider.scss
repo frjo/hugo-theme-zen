@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Divider
 //
 // Can be used as an `<hr>`, an empty `<div>` or as a container.
@@ -5,12 +7,12 @@
 .divider,
 %divider {
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  @include spacing.margin-block(1);
   border: 0;
   border-block-start: 1px solid var(--color-border);
 
   // If used as a container, add a top margin to the first child.
   > :first-child {
-    @include margin-top(1);
+    @include spacing.margin-top(1);
   }
 }

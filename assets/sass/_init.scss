@@ -1,18 +1,13 @@
 // Initialization partial
 
-// To make it easier to use all variables and mixins in any Sass file in this
-// project, each .scss file has a `@import 'init';` declaration. The _init.scss
-// file is in charge of importing all the other partials needed for the
-// project.
-
 // Variables.
-@import 'variables';
-@import 'extra';
+@use 'variables';
+@use 'extra';
 
 // Mixins and functions.
-@import 'mixins/breakpoint/respond-to';
-@import 'mixins/clearfix/clearfix';
-@import 'mixins/debug/debug';
-@import 'mixins/flex-calc/flex-calc';
-@import 'mixins/rtl/rtl';
-@import 'mixins/spacing/spacing';
+@use 'mixins/breakpoint/respond-to';
+@use 'mixins/clearfix/clearfix';
+@use 'mixins/debug/debug';
+@use 'mixins/flex-calc/flex-calc';
+@use 'mixins/rtl/rtl';
+@use 'mixins/spacing/spacing';

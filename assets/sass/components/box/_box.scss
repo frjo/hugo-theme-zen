@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Box
 //
 // A simple box style.
@@ -20,8 +22,8 @@
 .box,
 %box {
   // Add vertical rhythm margins.
-  @include margin-block(1);
-  @include padding(.5);
+  @include spacing.margin-block(1);
+  @include spacing.padding(.5);
   border: 5px solid var(--color-border);
 
   // Sass compiles this to the selector: .box__title, %box__title {}

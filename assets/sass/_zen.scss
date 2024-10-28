@@ -1,3 +1,5 @@
+@use "mixins/breakpoint/respond-to";
+
 // Zen custom styles
 
 // Page
@@ -61,7 +63,7 @@ aside {
 article {
   .submitted,
   .tags {
-    @include respond-to(s) {
+    @include respond-to.respond-to(s) {
       display: inline-block;
       padding-inline-end: 1rem;
     }

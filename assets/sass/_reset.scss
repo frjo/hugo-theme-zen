@@ -1,3 +1,5 @@
+@use "mixins/breakpoint/respond-to";
+
 // stylelint-disable property-no-vendor-prefix
 
 // Reset browsers to some sane defaults.
@@ -78,7 +80,7 @@ select {
 }
 
 [type='search'] {
-  @include respond-to(s) {
+  @include respond-to.respond-to(s) {
     // Correct the odd appearance in Safari on desktop.
     -webkit-appearance: textfield;
   }

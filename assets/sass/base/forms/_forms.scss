@@ -1,14 +1,17 @@
+@use "../../mixins/breakpoint/respond-to";
+@use "../../mixins/spacing/spacing";
+
 // Form defaults.
 
 form {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
 }
 
 input,
 textarea,
 select {
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
 }
 
 label {
@@ -64,7 +67,7 @@ textarea {
 }
 
 // For forms none mobile with single field add space between it and the submit button.
-@include respond-to(s) {
+@include respond-to.respond-to(s) {
   input:only-of-type {
     &:has(+ [type='submit']) {
       margin-inline-end: .5rem;

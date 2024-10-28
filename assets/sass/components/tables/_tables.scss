@@ -1,8 +1,10 @@
+@use "../../mixins/breakpoint/respond-to";
+
 .zebra-table,
 %zebra-table {
   --cell-padding: .5rem;
 
-  @include respond-to-max(s) {
+  @include respond-to.respond-to-max(s) {
     --cell-padding: .3rem;
   }
 
@@ -34,7 +36,7 @@
 %responsive-table {
   --gap: .5rem;
 
-  @include respond-to-max(s) {
+  @include respond-to.respond-to-max(s) {
     th {
       display: none;
     }

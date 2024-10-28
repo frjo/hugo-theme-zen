@@ -1,31 +1,35 @@
-$breakout: $gutters !default;
-$max-page-width: $max-content-width !default;
+@use "colors";
+@use "variables";
+
+$breakout: variables.$gutters !default;
+$max-page-width: variables.$max-content-width !default;
 
 :root {
   // Convert sass variables to css4 variables.
   // Use like this: var(--color-gutters).
-  @each $name, $size in $font-size {
+
+  @each $name, $size in variables.$font-size {
     --fs-#{$name}: #{$size};
   }
 
-  @each $name, $weight in $font-weight {
+  @each $name, $weight in variables.$font-weight {
     --fw-#{$name}: #{$weight};
   }
 
-  @each $name, $family in $font-family {
+  @each $name, $family in variables.$font-family {
     --ff-#{$name}: #{$family};
   }
 
-  @each $name, $radius in $border-radius {
+  @each $name, $radius in variables.$border-radius {
     --radius-#{$name}: #{$radius};
   }
 
   --breakout: #{$breakout};
-  --gutters-reverse: #{$gutters-reverse};
-  --gutters: #{$gutters};
-  --heading-line-height: #{$heading-line-height};
-  --indent-amount: #{$indent-amount};
-  --max-content-width: #{$max-content-width};
-  --max-line-width: #{$max-line-width};
+  --gutters-reverse: #{variables.$gutters-reverse};
+  --gutters: #{variables.$gutters};
+  --heading-line-height: #{variables.$heading-line-height};
+  --indent-amount: #{variables.$indent-amount};
+  --max-content-width: #{variables.$max-content-width};
+  --max-line-width: #{variables.$max-line-width};
   --max-page-width: #{$max-page-width};
 }

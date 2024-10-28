@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Pager
 //
 // Paged navigation is a list of page numbers when more than 1 page of content
@@ -9,7 +11,7 @@
   @extend %flex-inline;
   @extend %link-nav;
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  @include spacing.margin-block(1);
   justify-content: center;
 
   .page-item {

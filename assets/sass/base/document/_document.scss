@@ -1,18 +1,21 @@
+@use "../../mixins/debug/debug";
+@use "../../variables";
+
 // Document
 
 html {
   // Change the default font family in all browsers.
   font-family: var(--ff-body);
   // Set base font size in percent.
-  font-size: calc(#{$base-font-size} / 16 * 100%);
+  font-size: calc(#{variables.$base-font-size} / 16 * 100%);
   // Set text colour.
   color: var(--color-text);
 }
 
 body {
   // Correct the line height in all browsers.
-  line-height: $base-line-height;
+  line-height: variables.$base-line-height;
   // Output a horizontal grid to help with debugging typography. The
   // $debug variable will toggle its output.
-  @include debug-grid();
+  @include debug.debug-grid();
 }

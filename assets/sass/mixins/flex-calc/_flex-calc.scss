@@ -1,3 +1,5 @@
+@use "../../variables";
+
 @mixin flex($col, $gap) {
-  flex-basis: calc(100% / #{$col} - #{$gap * $base-line-height + 'rem'});
+  flex-basis: calc(100% / #{$col} - #{$gap * variables.$base-line-height + 'rem'});
 }

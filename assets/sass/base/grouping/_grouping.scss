@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Grouping content
 
 // Block quotes
@@ -12,7 +14,7 @@
 
 blockquote {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
   // Nicer text wrap, e.g. no lone word on last line.
   text-wrap: pretty;
   // Also indent the quote on both sides.
@@ -28,7 +30,7 @@ ol,
 ul,
 menu {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
 }
 
 dt {
@@ -76,7 +78,7 @@ hr {
 
 p {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
   // Nicer text wrap, e.g. no lone word on last line.
   text-wrap: pretty;
 
@@ -90,7 +92,7 @@ p {
 
 pre {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  @include spacing.margin-block(0 1);
   font-family: var(--ff-monospace);
 }
 

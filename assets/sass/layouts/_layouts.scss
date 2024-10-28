@@ -1,3 +1,7 @@
+@use "../mixins/breakpoint/respond-to";
+@use "../root";
+@use "../variables";
+
 // stylelint-disable no-duplicate-selectors
 
 // Initial layout setup.
@@ -5,7 +9,7 @@
   &__page {
     max-width: var(--max-page-width);
 
-    @include respond-to(s) {
+    @include respond-to.respond-to(s) {
       margin-inline: auto;
       min-height: 100vh;
       min-height: 100svh;
@@ -28,12 +32,12 @@
 
 // If page width is bigger then content with,
 // setup grid with breakout and stretch for main section.
-@if $max-page-width > $max-content-width {
+@if root.$max-page-width > variables.$max-content-width {
   .layout {
     &__navigation > * {
       max-width: var(--max-content-width);
 
-      @include respond-to(s) {
+      @include respond-to.respond-to(s) {
         margin-inline: auto;
       }
     }
@@ -95,7 +99,7 @@
     grid-template-columns: 1fr;
   }
 
-  @include respond-to(xl) {
+  @include respond-to.respond-to(xl) {
     &__page {
       grid-template-rows: auto
                           auto
