@@ -30,34 +30,7 @@
 
 // Components
 
-// Design components are reusable designs that can be applied using just the CSS
-// class names specified in the component.
-
-@use 'components/box/box';
-@use 'components/button/button';
-@use 'components/cards/cards';
-@use 'components/center/center';
-@use 'components/clearfix/clearfix';
-@use 'components/cookieconsent/cookieconsent';
-@use 'components/divider/divider';
-@use 'components/disabled/disabled';
-@use 'components/flex-group/flex-group';
-@use 'components/flex-inline/flex-inline';
-@use 'components/footer/footer';
-@use 'components/grid-group/grid-group';
-@use 'components/grid-stack/grid-stack';
-@use 'components/header/header';
-@use 'components/hidden/hidden';
-@use 'components/icon-inline/icon-inline';
-@use 'components/language-selector/language-selector';
-@use 'components/list-straight-left/list-straight-left';
-@use 'components/messages/messages';
-@use 'components/meta/meta';
-@use 'components/responsive-video/responsive-video';
-@use 'components/spacing/spacing';
-@use 'components/tables/tables';
-@use 'components/tags/tags';
-@use 'components/visually-hidden/visually-hidden';
+@use 'components/components';
 
 // Navigation
 
