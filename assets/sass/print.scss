@@ -1,8 +1,7 @@
 
 // The print stylesheet for this theme.
 
-@import 'init';
-@import 'components/print-none/print-none';
+@use 'variables';
 
 .pager,
 %pager,
@@ -10,12 +9,12 @@
 aside,
 nav,
 footer {
-  @extend %print-none;
+  display: none;
 }
 
 @media print {
   html {
-    font-size: $print-font-size;
+    font-size: variables.$print-font-size;
   }
 
   html,

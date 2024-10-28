@@ -1,12 +1,12 @@
-// The mobile navigation stylesheet for this theme.
+@use "mixins/breakpoint/respond-to";
 
-@import 'init';
+// The mobile navigation stylesheet for this theme.
 
 .main-menu,
 .header__region { // stylelint-disable selector-class-pattern
   display: none;
 
-  @include respond-to(s) {
+  @include respond-to.respond-to(s) {
     display: block;
   }
 } // stylelint-enable selector-class-pattern
@@ -22,7 +22,7 @@
   z-index: 20;
   pointer-events: none;
 
-  @include respond-to(s) {
+  @include respond-to.respond-to(s) {
     display: none;
   }
 
@@ -60,7 +60,7 @@
     z-index: 22;
     pointer-events: auto;
 
-    @include respond-to(s) {
+    @include respond-to.respond-to(s) {
       display: none;
     }
 
