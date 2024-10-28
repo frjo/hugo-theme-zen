@@ -5,13 +5,10 @@
 
   display: grid;
   gap: var(--gap);
-  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
-  // stylelint-disable-next-line function-name-case
-  grid-template-columns: repeat(auto-fit, minmax(Min(var(--column-min), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--column-min), 100%), 1fr));
 
   &--fill {
-    // stylelint-disable-next-line function-name-case
-    grid-template-columns: repeat(auto-fill, minmax(Min(var(--column-min), 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--column-min), 100%), 1fr));
   }
 
   &--100 {
