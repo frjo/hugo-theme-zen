@@ -1,11 +1,13 @@
+@use "../../variables";
+
 // Output a horizontal grid to help with debugging typography.
 @mixin debug-grid() {
-  @if $debug == true {
-    $grid-height: #{$base-line-height + 'rem'};
+  @if variables.$debug == true {
+    $grid-height: #{variables.$base-line-height + 'rem'};
 
     position: relative;
     // stylelint-disable-next-line  max-line-length
-    background-image: repeating-linear-gradient(180deg, $debug-color, $debug-color 1px, transparent 1px, transparent $grid-height);
+    background-image: repeating-linear-gradient(180deg, variables.$debug-color, variables.$debug-color 1px, transparent 1px, transparent $grid-height);
 
     &::after {
       content: '';
@@ -14,7 +16,7 @@
       left: 0;
       height: 1px;
       width: 100%;
-      background-color: $debug-color;
+      background-color: variables.$debug-color;
     }
   }
 }
