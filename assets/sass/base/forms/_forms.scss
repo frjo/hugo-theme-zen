@@ -40,16 +40,12 @@ fieldset {
 }
 
 input {
-  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
-  // stylelint-disable-next-line function-name-case
-  width: Min(20em, 100%);
+  width: min(20em, 100%);
 }
 
 [type='text'],
 textarea {
-  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
-  // stylelint-disable-next-line function-name-case
-  width: Min(30em, 100%);
+  width: min(30em, 100%);
 }
 
 
