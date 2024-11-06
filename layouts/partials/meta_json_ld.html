@@ -33,7 +33,7 @@
     {{ with $.Param "image" -}}
     "image" : {{ . | absURL }},
     {{ end -}}
-    {{ with $.Param "author" -}}
+    {{ with .Params.author | default site.Params.author.name -}}
     "author": {
       "@type": "Person",
       "name": {{ . }}
