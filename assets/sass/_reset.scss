@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  // Activate transition to intrinsic sizes like auto and fit-content.
+  interpolate-size: allow-keywords;
+}
+
 html {
   // Prevent adjustments of font size.
   -webkit-text-size-adjust: none;
@@ -17,8 +22,6 @@ html {
   // Improve text rendering.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // Activate transition to intrinsic sizes like auto and fit-content.
-  interpolate-size: allow-keywords;
 }
 
 // Sections
