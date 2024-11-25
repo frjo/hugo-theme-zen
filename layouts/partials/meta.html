@@ -23,9 +23,3 @@
 <link rel="alternate" hreflang="{{ .Site.LanguageCode | default .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
 {{ end -}}
-<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
-{{ if $.Param "realfavicongenerator" -}}
-<link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon-96x96.png" | relURL }}">
-<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
-<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
-{{ end -}}

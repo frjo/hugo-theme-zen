@@ -293,7 +293,6 @@ params:
   plausibleTrackerURL: ""   # Plausible url, schemaless and no slash on end. Optional, defaults to "plausible.io/…"
   poweredby: true           # Show powered by hugo in footer
   privacyPolicyUrl: ""      # If set will add link to cookie consent form.
-  realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
   relatedposts: true        # Show related posts under a "See also" section, default false.
   sassTranspiler: "dartsass"# The Sass transpiler to use, default "libsass".
   searchLimit: 20           # Max number of search hits, default 20.
@@ -360,9 +359,9 @@ Place your logo at `static/images/logo.png`. If you don't provide a logo, then t
 
 ### Favicons
 
-Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`.
+Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy the generated favicon files in to the `static` directory. (Do not place them in a sub directory.)
 
-Then set the "realfavicongenerator" param to true to add the needed meta tags. Also good to set the "themeColor" param to correct colour.
+The theme will autodetect them and add the needed code.
 
 
 ### Head and footer partials

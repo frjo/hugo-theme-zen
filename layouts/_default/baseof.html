@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ block "title" . }}{{ .Title }} – {{ site.Title }}{{ end }}</title>
 {{ partial "meta.html" . }}
+{{ partialCached "favicons.html" . }}
 {{ partialCached "styles.html" . }}
 {{ partial "meta_json_ld.html" . }}
 {{ partial "scripts.html" . }}

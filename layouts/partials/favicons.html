@@ -1,0 +1,17 @@
+{{ if fileExists (path.Join "/static" "apple-touch-icon.png") -}}
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+{{ end -}}
+{{ if fileExists (path.Join "/static" "favicon.svg") -}}
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+{{ end -}}
+{{ if fileExists (path.Join "/static" "site.webmanifest") -}}
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+{{ end -}}
+{{ $favname := "" -}}
+{{ $favsizes := slice "128x128" "96x96" "48x48" "32x32" "16x16" -}}
+{{ range $favsizes -}}
+{{ $favname = (printf "favicon-%s.png" .) -}}
+{{ if fileExists (path.Join "/static" $favname) -}}
+<link rel="icon" type="image/png" {{ printf "sizes=%q" . | safeHTMLAttr }} href="{{ $favname | relURL }}">
+{{ end -}}
+{{ end -}}
