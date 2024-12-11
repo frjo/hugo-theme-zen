@@ -11,7 +11,7 @@ body {
 }
 
 .footer {
-  border-top: 2px solid var(--color-border);
+  border-block-start: 2px solid var(--color-border);
 }
 
 // Apply smaller text to blocks, footer etc.
@@ -100,11 +100,11 @@ article {
 // Navigation
 
 .main-menu {
-  margin-top: .75rem;
+  margin-block-start: .75rem;
   outline: 0;
 
   li {
-    margin-bottom: .75rem;
+    margin-block-end: .75rem;
     padding: 0;
   }
 

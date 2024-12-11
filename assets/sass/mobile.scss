@@ -79,7 +79,7 @@
   &__hamburger {
     fill: var(--color-button-text);
     width: 1.6rem;
-    margin-left: .1rem;
+    margin-inline-start: .1rem;
 
     .button--outline & {
       fill: var(--color-button);
@@ -127,7 +127,7 @@
 
   &__region {
     &:not(:empty) {
-      margin-bottom: .5rem;
+      margin-block-end: .5rem;
     }
   }
 

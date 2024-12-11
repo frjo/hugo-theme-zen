@@ -11,7 +11,7 @@
   padding-block-start: .5rem;
   color: var(--color-warning);
   background-color: var(--color-warning-bg);
-  border-top: 4px solid var(--color-warning-border);
+  border-block-start: 4px solid var(--color-warning-border);
   font-size: var(--fs-s);
   transform: translateY(100vh);
   transition: all 130ms ease-out;

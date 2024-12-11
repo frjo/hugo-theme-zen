@@ -21,8 +21,8 @@ button,
   text-decoration: none;
   text-align: center;
   width: fit-content;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-inline-end: 1rem;
+  margin-block-end: 1rem;
   padding: .2rem 1rem;
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
@@ -46,8 +46,8 @@ button,
 %button {
   &--small {
     font-size: var(--fs-xs);
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    margin-inline-end: .5rem;
+    margin-block-end: .5rem;
     padding: .2rem .75rem;
   }
 

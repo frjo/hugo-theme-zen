@@ -12,8 +12,8 @@
   --aspect-ratio: 9 / 16; // 16:9 aspect ratio
 
   position: relative;
-  padding-bottom: calc(var(--aspect-ratio) * 100%); // 16:9 aspect ratio
-  padding-top: 25px; // Height of video controls
+  padding-block-end: calc(var(--aspect-ratio) * 100%); // 16:9 aspect ratio
+  padding-block-start: 25px; // Height of video controls
   height: 0;
 
   iframe {
@@ -22,8 +22,8 @@
 
   &__embed {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 100%;
     height: 100%;
   }

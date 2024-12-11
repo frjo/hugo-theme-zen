@@ -69,7 +69,7 @@ textarea {
 @include respond-to(s) {
   input:only-of-type {
     &:has(+ [type='submit']) {
-      margin-right: .5rem;
+      margin-inline-end: .5rem;
     }
   }
 }
