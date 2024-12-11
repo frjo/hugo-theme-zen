@@ -78,11 +78,27 @@ button,
 
   &--shadow {
     &:hover {
-      box-shadow: 2px 2px 5px 1px var(--color-button-hover);
+      box-shadow: 2px 2px 5px 1px var(--color-button-disabled);
     }
 
     &:active {
       box-shadow: inset 2px 2px 5px 1px var(--color-button);
+    }
+  }
+
+  &--plain {
+    appearance: none;
+    padding: .5rem;
+    color: currentcolor;
+    background-color: unset;
+    border: unset;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: currentcolor;
+      background-color: unset;
+      scale: 1.15;
     }
   }
 }

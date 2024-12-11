@@ -151,10 +151,6 @@ main {
       background-color: var(--color-warning-bg);
     }
   }
-
-  button {
-    @extend %button--shadow;
-  }
 }
 
 .js-submitted {
