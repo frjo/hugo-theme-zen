@@ -31,6 +31,10 @@ menu {
   @include margin-block(0 1);
 }
 
+dt {
+  font-weight: var(--fw-bold);
+}
+
 dd {
   margin: 0;
   margin-inline-start: var(--indent-amount);
