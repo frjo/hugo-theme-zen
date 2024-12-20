@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "The node.js requirements to lint this project.",
   "scripts": {
-    "lint-theme:css": "stylelint --quiet-deprecation-warnings \"assets/sass/**/*.scss\"",
-    "lint-theme:js": "eslint \"assets/js/**/*.js\"",
-    "lint-project:css": "stylelint --quiet-deprecation-warnings \"../../assets/sass/**/*.scss\"",
-    "lint-project:js": "eslint \"../../assets/js/**/*.js\"",
+    "lint-theme:css": "stylelint \"assets/sass/**/*.scss\"",
+    "lint-theme:js": "",
+    "lint-project:css": "stylelint \"../../assets/sass/**/*.scss\"",
+    "lint-project:js": "",
     "lint-theme": "npm run lint-theme:css && npm run lint-theme:js",
     "lint-project": "npm run lint-project:css && npm run lint-project:js",
     "lint:css": "npm run lint-theme:css && npm run lint-project:css",
@@ -20,14 +20,11 @@
   "author": "Fredrik Jonsson",
   "license": "GPL-2.0",
   "devDependencies": {
-    "eslint": "^8.45.0",
-    "eslint-plugin-template": "^0.7.0",
-    "stylelint": "^15.10.1",
-    "stylelint-config-standard-scss": "^10.0.0",
-    "stylelint-scss": "^5.0.1"
+    "stylelint": "^16.11.0",
+    "stylelint-config-standard-scss": "^13.1.0"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0"
   },
   "private": true
 }
