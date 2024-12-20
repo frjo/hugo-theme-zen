@@ -1,4 +1,5 @@
-// stylelint-disable property-no-vendor-prefix
+// stylelint-disable property-no-vendor-prefix, property-no-unknown
+
 // Reset browsers to some sane defaults.
 
 // Document
@@ -90,6 +91,6 @@ samp {
 
 td,
 math,
-time[datetime*=":"] {
+time[datetime*=':'] {
   font-variant-numeric: tabular-nums lining-nums;
 }
