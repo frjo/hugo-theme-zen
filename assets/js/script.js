@@ -4,7 +4,5 @@
  */
 
 (function () {
-
   // Place your code here.
-
 })();

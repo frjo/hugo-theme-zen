@@ -10,7 +10,6 @@
     "ignoreUnknown": true,
     "include": ["assets/**/*.js"],
     "ignore": ["**/*.min.js", "assets/libs/**/*.js"]
-
   },
   "formatter": {
     "enabled": true,
@@ -34,7 +33,8 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single"
+      "quoteStyle": "single",
+      "lineWidth": 100
     },
     "globals": ["define", "htmx", "jQuery", "Alpine"]
   }

@@ -3,7 +3,6 @@
  * A JavaScript file for analytic tracking.
  */
 
-
 import * as params from '@params';
 
 const cookiebanner = params.cookieConsent;
@@ -13,9 +12,8 @@ const matomoTrackingApiUrl = 'https://' + params.piwikTrackerUrl + '/matomo.php'
 const googleAnalytics = params.GoogleAnalytics;
 
 if (idSite) {
-  // biome-ignore lint/style/useConst: Google code.
-  // biome-ignore lint/suspicious/noAssignInExpressions: Google code.
-  let _paq = window._paq = window._paq || [];
+  // biome-ignore lint: Google code.
+  let _paq = (window._paq = window._paq || []);
 
   if (cookiebanner) {
     _paq.push(['requireConsent']);

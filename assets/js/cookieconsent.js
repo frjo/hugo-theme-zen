@@ -17,8 +17,7 @@
     button.addEventListener('click', function () {
       if (button.getAttribute('data-consent') === 'true') {
         localStorage.setItem('cookieconsent', 'accept');
-      }
-      else {
+      } else {
         localStorage.setItem('cookieconsent', 'decline');
       }
       cookiebanner.classList.remove('js-cookieconsent-open');
@@ -37,5 +36,4 @@
       }
     });
   });
-
 })();

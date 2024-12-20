@@ -10,9 +10,9 @@ import * as params from '@params';
     document: {
       id: 'id',
       index: ['title', 'tags', 'content', 'date'],
-      store: ['title', 'summary', 'date', 'permalink']
+      store: ['title', 'summary', 'date', 'permalink'],
     },
-    tokenize: 'forward'
+    tokenize: 'forward',
   });
 
   function showResults(items) {
@@ -42,7 +42,7 @@ import * as params from '@params';
     const results = index.search({
       query: query,
       enrich: true,
-      limit: params.searchLimit
+      limit: params.searchLimit,
     });
     const items = {};
     results.forEach(function (result) {

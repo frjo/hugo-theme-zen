@@ -14,12 +14,11 @@
       const cells = row.querySelectorAll('td');
 
       cells.forEach(function (cell, i) {
-        cell.setAttribute('role','cell');
+        cell.setAttribute('role', 'cell');
         if (headers[i].innerText) {
           cell.setAttribute('aria-label', headers[i].innerText);
         }
       });
     });
   });
-
 })();

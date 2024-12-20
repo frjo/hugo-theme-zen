@@ -9,7 +9,7 @@
   const toggle = document.querySelector('.mobile-nav__toggle');
 
   function navopen() {
-    nav.dataset.navopen='true';
+    nav.dataset.navopen = 'true';
     sheet.setAttribute('aria-hidden', 'false');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.addEventListener('keydown', closeonesc);
@@ -27,7 +27,7 @@
     if (e.key === 'Escape') {
       navclose();
     }
-  };
+  }
 
   // Toggle the mobile nav sheet.
   const toggles = document.querySelectorAll('.mobile-nav__cover, .mobile-nav__toggle');
@@ -36,8 +36,7 @@
       e.preventDefault();
       if (nav.dataset.navopen) {
         navclose();
-      }
-      else {
+      } else {
         navopen();
       }
     });
@@ -56,5 +55,4 @@
     const lastlink = [].slice.call(links).pop();
     lastlink.addEventListener('blur', () => toggle.focus());
   }
-
 })();
