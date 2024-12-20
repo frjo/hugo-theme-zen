@@ -4,9 +4,6 @@
  */
 
 (function () {
-
-  'use strict';
-
   const cookiebanner = document.querySelector('.cookieconsent');
   const cookieconsent = localStorage.getItem('cookieconsent');
 

@@ -3,11 +3,7 @@
  * A JavaScript file for responsive tables.
  */
 
-/* eslint-disable max-nested-callbacks */
 (function () {
-
-  'use strict';
-
   const tables = document.querySelectorAll('.responsive-table');
 
   tables.forEach(function (table) {

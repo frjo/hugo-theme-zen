@@ -4,9 +4,6 @@
  */
 
 (function () {
-
-  'use strict';
-
   const nav = document.querySelector('.mobile-nav');
   const sheet = document.querySelector('.mobile-nav__sheet');
   const toggle = document.querySelector('.mobile-nav__toggle');

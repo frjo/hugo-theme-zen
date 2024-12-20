@@ -5,8 +5,6 @@
 
 (function () {
 
-  'use strict';
-
   // Place your code here.
 
 })();

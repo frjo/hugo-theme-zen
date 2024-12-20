@@ -4,9 +4,6 @@
  */
 
 (function () {
-
-  'use strict';
-
   const form = document.querySelector('.contact-form');
   const button = form.querySelector('[type=submit]');
   const action = form.getAttribute('data-protect');

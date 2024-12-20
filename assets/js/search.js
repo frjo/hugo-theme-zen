@@ -3,15 +3,9 @@
  * A JavaScript file for flexsearch.
  */
 
-/* eslint-disable */
 import * as params from '@params';
-/* eslint-enable */
 
-/* eslint-disable no-undef, guard-for-in */
 (function () {
-
-  'use strict';
-
   const index = new FlexSearch.Document({
     document: {
       id: 'id',

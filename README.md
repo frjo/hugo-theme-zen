@@ -815,8 +815,6 @@ This is the way I construct my JavaScript files.
 ```js
 (function () {
 
-  'use strict';
-
   // Add a js class to the html-tag when JavsScript is active.
   document.querySelector('html').classList.replace('nojs', 'js');
 
@@ -829,8 +827,6 @@ This is the way I construct my JavaScript files.
 ```js
 (function ($) {
 
-  'use strict';
-
   // Add your code here.
   $('html').removeClass('nojs').addClass('js');
 
@@ -841,8 +837,6 @@ This is the way I construct my JavaScript files.
 
 ```js
 (function ($) {
-
-  'use strict';
 
   // Add your code here.
   $('html').removeClass('nojs').addClass('js');
