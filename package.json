@@ -4,9 +4,9 @@
   "description": "The node.js requirements to lint this project.",
   "scripts": {
     "lint-theme:css": "stylelint \"assets/sass/**/*.scss\"",
-    "lint-theme:js": "",
+    "lint-theme:js": "biome check",
     "lint-project:css": "stylelint \"../../assets/sass/**/*.scss\"",
-    "lint-project:js": "",
+    "lint-project:js": "biome check \"../../assets/js/**/*.js\"",
     "lint-theme": "npm run lint-theme:css && npm run lint-theme:js",
     "lint-project": "npm run lint-project:css && npm run lint-project:js",
     "lint:css": "npm run lint-theme:css && npm run lint-project:css",
