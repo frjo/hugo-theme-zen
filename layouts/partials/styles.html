@@ -1,4 +1,4 @@
-{{ $main_options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" false "transpiler" (site.Params.sassTranspiler | default "libsass")) -}}
+{{ $main_options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" false "transpiler" (site.Params.sassTranspiler | default "dartsass")) -}}
 {{ if eq hugo.Environment "development" -}}
   {{ $main_options = merge $main_options (dict "outputStyle" "nested" "enableSourceMap" true) -}}
 {{ end -}}

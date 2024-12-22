@@ -32,7 +32,7 @@
 
 // If page width is bigger then content with,
 // setup grid with breakout and stretch for main section.
-@if root.$max-page-width > variables.$max-content-width {
+@if variables.$max-page-width > variables.$max-content-width {
   .layout {
     &__navigation > * {
       max-width: var(--max-content-width);
