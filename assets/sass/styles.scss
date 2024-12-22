@@ -1,5 +1,9 @@
 // The main stylesheet for this theme.
 
+// Allow variables to be overridden.
+
+@use 'extra';
+
 // Declaring global CSS variables in :root.
 
 @use 'root';
