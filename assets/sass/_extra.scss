@@ -1,6 +1,6 @@
 @use "variables";
 
-// Add and override variables. This file loads last during init.
+// Override site sass variables. This file loads first.
 
 // Overrride a variable like this.
 // variables.$font-size: variables.$font-size-fluid;

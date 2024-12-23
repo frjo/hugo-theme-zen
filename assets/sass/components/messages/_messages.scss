@@ -7,6 +7,12 @@
   outline-style: solid;
   width: 95%;
 
+  &.info {
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+    outline-color: var(--color-info);
+  }
+
   &.status {
     background-color: var(--color-status-bg);
     color: var(--color-status);

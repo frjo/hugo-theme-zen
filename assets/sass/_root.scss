@@ -1,9 +1,8 @@
-@use "colors";
 @use "variables";
 
 :root {
   // Convert sass variables to css4 variables.
-  // Use like this: var(--color-gutters).
+  // Use like this: var(--gutters).
 
   @each $name, $size in variables.$font-size {
     --fs-#{$name}: #{$size};
