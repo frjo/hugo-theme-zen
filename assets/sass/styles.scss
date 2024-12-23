@@ -8,6 +8,10 @@
 
 @use 'root';
 
+// Theme colours.
+
+@use 'colors';
+
 // Ensure fonts get loaded early to minimize front-end performance impact.
 
 @use 'fonts';
