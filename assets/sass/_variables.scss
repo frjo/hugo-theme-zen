@@ -1,5 +1,3 @@
-@use "colors";
-
 // stylelint-disable scss/dollar-variable-colon-space-after, value-keyword-case
 // stylelint-disable scss/double-slash-comment-empty-line-before
 
@@ -177,4 +175,3 @@ $include-rtl: false;
 
 // Show horizontal grid to help with debugging typography.
 $debug: false;
-$debug-color: colors.$grey-extra-light;
