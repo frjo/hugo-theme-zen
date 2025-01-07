@@ -28,7 +28,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Run example site](#run-example-site)
 * [Performance](#performance)
 * [Sites using the Hugo Zen theme](#sites-using-the-hugo-zen-theme)
-* [Nice forks of the Zen theme](#nice-forks-of-the-zen-theme)
 * [Screenshots](#screenshots)
 * [Configuration](#configuration)
 * [Customise](#customise)
