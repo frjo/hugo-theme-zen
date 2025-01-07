@@ -1,3 +1,5 @@
+@use "../../mixins/spacing/spacing";
+
 // Headings
 //
 // All HTML headings, `<h1>` through `<h6>`, are available. `%h1` through `%h6`
@@ -15,7 +17,7 @@ h5,
 %h5,
 h6,
 %h6 {
-  @include margin-block(1 .33, 'em');
+  @include spacing.margin-block(1 .33, 'em');
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
@@ -24,7 +26,7 @@ h6,
 
   // Smaller margin when a headeing is right after another heading.
   & + & {
-    @include margin-block-start(.5, 'em');
+    @include spacing.margin-block-start(.5, 'em');
   }
 
   // Set max text line width in main for readability.
@@ -36,7 +38,7 @@ h6,
 h1,
 %h1 {
   // h1 only on top of page so different margins.
-  @include margin-block(1 .5, 'rem');
+  @include spacing.margin-block(1 .5, 'rem');
   font-size: var(--fs-xxl);
   letter-spacing: -.01em;
 }
