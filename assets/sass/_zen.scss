@@ -128,6 +128,36 @@ article {
   }
 }
 
+// Anchor
+
+.anchor {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: .5rem;
+
+  a {
+    opacity: 0;
+    text-decoration: none;
+  }
+
+  &:focus-visible,
+  &:hover {
+    a {
+      opacity: .4;
+
+      &:focus-visible,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  p:has(+ &) {
+    margin-block-end: 0;
+  }
+}
+
 // Search
 
 .search-text {
