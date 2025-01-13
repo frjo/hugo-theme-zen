@@ -53,10 +53,10 @@ other = "Maudhui ya hivi majuzi"
 other = "Angalia pia"
 
 [string_edit]
-other = "Edit"
+other = "Hariri"
 
 [string_view]
-other = "View"
+other = "Tazama"
 
 [js_required]
 other = "Javascript lazima iwezeshwe ili kutumia chaguo hili la kukokotoa."
