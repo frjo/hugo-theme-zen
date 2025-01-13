@@ -52,6 +52,12 @@ other = "Viimeaikainen sisältö"
 [string_see_also]
 other = "Lue myös"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "Javascript-teknologia täytyy olla tuettuna jotta tämä toiminto on käytössä."
 

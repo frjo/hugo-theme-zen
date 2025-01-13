@@ -52,6 +52,12 @@ other = "Скорашњи садржај"
 [string_see_also]
 other = "Такође погледајте"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "Морате имати омогућен Јаваскрипт да би користили ову функцију."
 

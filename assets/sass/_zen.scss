@@ -97,6 +97,15 @@ article {
   text-align: end;
 }
 
+.repository-links {
+  justify-content: end;
+  align-items: center;
+
+  svg {
+    order: 1;
+  }
+}
+
 // Navigation
 
 .main-menu {

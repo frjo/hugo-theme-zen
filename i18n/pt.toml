@@ -53,6 +53,12 @@ other = "Conteúdo recente"
 [string_see_also]
 other = "See also"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "Você deve ter o Javascript habilitado para usar este formulário de contato"
 

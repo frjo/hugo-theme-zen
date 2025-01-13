@@ -52,6 +52,12 @@ other = "Recent content"
 [string_see_also]
 other = "See also"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "You must have Javascript enabled to use this function."
 

@@ -52,6 +52,12 @@ other = "Seneste indhold"
 [string_see_also]
 other = "Se også"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "Du skal have Javascript slået til for at bruge denne funktion."
 

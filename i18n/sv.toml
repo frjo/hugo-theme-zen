@@ -52,6 +52,12 @@ other = "Senaste innehåll"
 [string_see_also]
 other = "Se också"
 
+[string_edit]
+other = "Redigera"
+
+[string_view]
+other = "Visa"
+
 [js_required]
 other = "Du behöver ha Javascript aktiverat för att använda denna funktion."
 

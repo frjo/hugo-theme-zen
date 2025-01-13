@@ -9,9 +9,9 @@
 
 {{ .Content }}
 
-{{ if $.Param "relatedposts" | default false }}{{ partial "relatedposts.html" . }}{{ end -}}
-
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
+{{ if site.Params.repository | default false }}{{ partial "repository-links.html" . }}{{ end -}}
+{{ if $.Param "relatedposts" | default false }}{{ partial "relatedposts.html" . }}{{ end -}}
 </article>
 </main>
 {{ end -}}

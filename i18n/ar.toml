@@ -52,6 +52,12 @@ other = "محتوى حديث"
 [string_see_also]
 other = "See also"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "يجب تفعيل جافاسكريبت في المتصفح لاستخدام هذه الوظيفة."
 

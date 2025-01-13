@@ -52,6 +52,12 @@ other = "近期文章"
 [string_see_also]
 other = "参见"
 
+[string_edit]
+other = "Edit"
+
+[string_view]
+other = "View"
+
 [js_required]
 other = "要使用此功能, 必须先启用 JavaScript"
 

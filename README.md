@@ -42,6 +42,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Content security policy headers](#Content-security-policy-headers)
 * [Choose between using AlpineJS, jQuery or Umbrella JS](#choose-between-using-alpinejs-jquery-or-umbrella-js)
 * [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
+* [Repository links](#repository-links)
 * [Math typesetting with KaTeX](#math-typesetting-with-katex)
 * [Getting help](#getting-help)
 * [Credits](#credits)
@@ -864,6 +865,21 @@ Node.js software you need. To install them run:
         npm run lint-project
         nmp run lint (project + theme)
 
+
+## Repository links
+
+Add view and edit repo links on your post. Activates when you add repository settings, see example for GitHub below. See more in the partial `repository-links.html`.
+
+```yaml
+repository:
+    branch: "main"
+    owner: "kalle"
+    repo: "myhugowebsite"
+    urlPatternEdit: "https://github.com/%s/%s/edit/%s/%s"
+    urlPatternView: "https://github.com/%s/%s/blob/%s/%s"
+```
+
+Copied from example by [jmooring](https://discourse.gohugo.io/t/hugo-v0-112-0-new-template-functions/44512)
 
 ## Math typesetting with KaTeX
 
