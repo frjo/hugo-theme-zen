@@ -45,9 +45,7 @@
   // Close the nav sheet after click (needed for anchor links).
   const links = document.querySelectorAll('.mobile-nav__sheet a');
   links.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      navclose();
-    });
+    link.addEventListener('click', () => navclose());
   });
 
   // Move focus back to button efter user tab out of last link.

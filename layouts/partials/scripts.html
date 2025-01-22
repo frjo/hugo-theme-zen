@@ -22,7 +22,7 @@
 {{ end -}}
 
 {{ if $.Param "mobilemenu" -}}
-{{ $mobilemenu := resources.Get "js/mobile.js" | js.Build $opts | fingerprint -}}
+{{ $mobilemenu := resources.Get "js/mobilemenu.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $mobilemenu.RelPermalink }}"></script>
 {{ end -}}
 
