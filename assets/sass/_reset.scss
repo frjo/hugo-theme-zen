@@ -16,6 +16,11 @@
   interpolate-size: allow-keywords;
 }
 
+// Transitioning page view.
+@view-transition {
+  navigation: auto;
+}
+
 html {
   // Prevent adjustments of font size.
   -webkit-text-size-adjust: none;
