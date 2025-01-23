@@ -1,7 +1,6 @@
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} title="{{ .Name }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
-<meta name="view-transition" content="same-origin">
 {{ if .IsHome -}}
 {{ with $.Param "description" }}<meta name="description" content="{{ . }}">{{ end }}
 {{ else -}}
