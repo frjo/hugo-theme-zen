@@ -131,7 +131,7 @@ article {
 
     &:active,
     &[aria-current] {
-      background-color: var(--color-button);
+      background-color: var(--color-button-hover);
       text-decoration: underline;
     }
   }

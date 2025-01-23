@@ -15,10 +15,10 @@ $red:                   #c00;
 $green:                 #43a808;
 $yellow:                #fd0;
 
-$brand:                 $nearblack;
+$brand:                 $grey-dark;
 $brand-alt:             $grey;
 $brand-light:           $grey-light;
-$brand-dark:            $grey-dark;
+$brand-dark:            $nearblack;
 
 // Colour map.
 $colors: (
@@ -31,9 +31,9 @@ $colors: (
   text-bg:                $white,
   text-meta:              $grey-dark,
 
-  link:                   $brand,
-  link-visited:           $brand,
-  link-hover:             $brand-alt,
+  link:                   $brand-dark,
+  link-visited:           $brand-dark,
+  link-hover:             $brand,
   link-active:            $red,
 
   link-inverted:          $white,
