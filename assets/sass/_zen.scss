@@ -57,6 +57,20 @@ aside {
     @extend %ol-straight-left;
   }
 }
+@media (max-width: 768px) {
+  article,
+  aside {
+    & ul {
+      padding-left: 0;
+    }
+
+    & ol {
+      padding-left: 0;
+    }
+
+    word-break: break-all;
+  }
+}
 
 article {
   .submitted,
