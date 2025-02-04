@@ -5,7 +5,7 @@
     <link>{{ .Permalink }}</link>
     <description>{{ site.Params.Podcast.Description | default site.Params.Description }}</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>{{ site.Params.Podcast.Lang | default site.LanguageCode }}</language>
+    <language>{{ site.Params.Podcast.Lang | default site.Language.LanguageCode }}</language>
     {{ with site.Params.author.email -}}
     <managingEditor>{{ . }}{{ with site.Params.author.name }} ({{ . }}){{ end }}</managingEditor>
     {{ end -}}

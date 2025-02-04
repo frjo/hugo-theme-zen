@@ -4,7 +4,7 @@
     <link>{{ .Permalink }}</link>
     <description>Micro blog {{ i18n "string_by" }} {{ with site.Params.author.name }}{{ . }}{{ end }}, {{ i18n "string_follow" }} @{{ with $.Param "microusername" }}{{ . }}{{ end }} {{ i18n "string_at" }} https://micro.blog/{{ with $.Param "microusername" }}{{ . }}{{ end }}</description>
     <generator>Hugo -- gohugo.io</generator>
-    {{ with site.LanguageCode -}}
+    {{ with site.Language.LanguageCode -}}
     <language>{{ . }}</language>
     {{ end -}}
     {{ with site.Params.author.email -}}

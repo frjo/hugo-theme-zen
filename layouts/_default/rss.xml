@@ -17,7 +17,7 @@
     <link>{{ .Permalink }}</link>
     <description>{{ i18n "string_recent_content" }} {{ if ne .Title site.Title }}{{ with .Title }}{{ i18n "string_in" }} {{ . }} {{ end }}{{ end }}{{ i18n "string_on" }} {{ site.Title }}</description>
     <generator>Hugo</generator>
-    {{- with site.LanguageCode }}
+    {{- with site.Language.LanguageCode }}
     <language>{{ . }}</language>
     {{- end }}
     {{- with site.Params.author.email }}
