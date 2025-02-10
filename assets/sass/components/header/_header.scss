@@ -1,3 +1,5 @@
+@use "../../mixins/breakpoint/respond-to";
+
 // Branding header
 
 .header,
@@ -8,7 +10,7 @@
   gap: var(--gutters);
   background-color: var(--color-header-bg);
 
-  @include respond-to(s) {
+  @include respond-to.respond-to(s) {
     flex-direction: row;
   }
 
@@ -44,7 +46,7 @@
 
   // Wrapper for any blocks placed in the header region.
   &__region {
-    @include respond-to(s) {
+    @include respond-to.respond-to(s) {
       margin-inline-start: auto;
     }
   }

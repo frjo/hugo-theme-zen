@@ -1,13 +1,16 @@
-@each $name, $space in $spacing {
+@use "../../mixins/spacing/spacing";
+@use "../../variables";
+
+@each $name, $space in variables.$spacing {
   .mt--#{$name} {
-    @include margin-block-start($space);
+    @include spacing.margin-block-start($space);
   }
 
   .mb--#{$name} {
-    @include margin-block-end($space);
+    @include spacing.margin-block-end($space);
   }
 
   .mtb--#{$name} {
-    @include margin-block($space);
+    @include spacing.margin-block($space);
   }
 }
