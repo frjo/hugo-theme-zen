@@ -100,8 +100,8 @@
 {{ if or $title $caption $attr -}}
 <figcaption>
 {{ with $title }}<strong>{{ . }}</strong><br>{{ end -}}
-{{- $caption | markdownify }}{{ if and $caption $attr }} {{ end -}}
-{{ with $attrlink }}<a href="{{ . }}">{{ end }}{{ $attr | markdownify }}{{ if $attrlink }}</a>{{ end -}}
+{{- $caption | .Page.RenderString }}{{ if and $caption $attr }} {{ end -}}
+{{ with $attrlink }}<a href="{{ . }}">{{ end }}{{ $attr | .Page.RenderString }}{{ if $attrlink }}</a>{{ end -}}
 </figcaption>
 {{ end -}}
 </figure>

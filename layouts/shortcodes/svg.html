@@ -59,7 +59,7 @@
 {{- if $link }}</a>{{ end }}
 {{ if $caption -}}
 <figcaption>
-{{ $caption | markdownify -}}
+{{ $caption | .Page.RenderString -}}
 </figcaption>
 </figure>
 {{ end -}}

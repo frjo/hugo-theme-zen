@@ -62,6 +62,6 @@
 <source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
 </video>
 {{ with $caption -}}
-<figcaption>{{ . | markdownify }}</figcaption>
+<figcaption>{{ . | .Page.RenderString }}</figcaption>
 {{ end -}}
 </figure>

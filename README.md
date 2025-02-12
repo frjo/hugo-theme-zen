@@ -756,7 +756,7 @@ Add a search form for the site, [see more above](#search).
 
 ### Wrapper
 
-A simple, but useful, shortcode to wrap content in a div with a class. The content will be run through "markdownify".
+A simple, but useful, shortcode to wrap content in a div with a class. The content can use markdown.
 
 ```
 {{< wrapper class-name-you-want >}}
