@@ -2,7 +2,7 @@
 <ul class="navbar">
 {{ $currentPage := . -}}
 {{ range site.Menus.main -}}
-<li><a href="{{ .URL | relLangURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span>{{ .Post }}</a></li>
+<li><a href="{{ .URL | relLangURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Pre }}<span>{{ or (i18n .Identifier) .Name | safeHTML }}</span>{{ .Post }}</a></li>
 {{ end -}}
 </ul>
 </nav>
