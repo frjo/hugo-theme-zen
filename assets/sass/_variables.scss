@@ -34,11 +34,11 @@ $font-size-fixed: (
 // Size m is base.
 // Use like this: var(--fs-m)
 $font-size-fluid: (
-  xxxxl:      clamp(2.4881rem, calc(1.8896rem + 2.9924vw), 4.2088rem),
-  xxxl:       clamp(2.0738rem, calc(1.6968rem + 1.8848vw), 3.1575rem),
-  xxl:        clamp(1.7281rem, calc(1.5053rem + 1.1141vw), 2.3688rem),
-  xl:         clamp(1.44rem, calc(1.3228rem + 0.5859vw), 1.7769rem),
-  l:          clamp(1.2rem, calc(1.1537rem + 0.2315vw), 1.3331rem),
+  xxxxl:      clamp(2.4881rem, 1.8896rem + 2.9924vw, 4.2088rem),
+  xxxl:       clamp(2.0738rem, 1.6968rem + 1.8848vw, 3.1575rem),
+  xxl:        clamp(1.7281rem, 1.5053rem + 1.1141vw, 2.3688rem),
+  xl:         clamp(1.44rem, 1.3228rem + 0.5859vw, 1.7769rem),
+  l:          clamp(1.2rem, 1.1537rem + 0.2315vw, 1.3331rem),
   m:          1rem,
   s:          0.889rem,
   xs:         0.778rem,
@@ -70,7 +70,7 @@ $font-weight: (
 // find any of the fonts in the list.
 
 // Emojis font stack. Add to end of other stacks when needed.
-$emojis:           'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$emojis:          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 // System-ui font stack.
 $system-ui:       system-ui, sans-serif;
@@ -93,7 +93,7 @@ $industrial:      Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbu
 $futura:          Futura, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 
 // Rounded Sans-serif font stacks.
-$ui-rounded:         ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+$ui-rounded:      ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
 // Monospace font stacks.
 $ui-monospace:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
@@ -151,7 +151,8 @@ $max-content-width:   1111px;
 // The max page width. Defaults to max-content-width.
 // Setting this to a larger value than max-content-width allows
 // content with class "stretch" to stretch out to the page edge.
-// $max-page-width:      1111px;
+$max-page-width: $max-content-width !default;
+
 
 // The max line width for readability.
 $max-line-width:      70ch;
@@ -163,7 +164,7 @@ $gutters-reverse:     calc(0px - (5px + 1.5625vw));
 
 // Breakout amount.
 // How much should the "breakout" be. Defaults to gutters value.
-// $breakout:             calc(5px + 1.5625vw);
+$breakout: $gutters !default;
 
 // The amount lists, blockquotes and comments are indented.
 // Use like this: var(--indent-amount)
@@ -174,4 +175,3 @@ $include-rtl: false;
 
 // Show horizontal grid to help with debugging typography.
 $debug: false;
-$debug-color: $grey-extra-light;
