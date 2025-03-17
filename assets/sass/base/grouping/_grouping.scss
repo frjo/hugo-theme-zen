@@ -38,6 +38,8 @@ dt {
 dd {
   margin: 0;
   margin-inline-start: var(--indent-amount);
+  // Nicer text wrap, e.g. no lone word on last line.
+  text-wrap: pretty;
 }
 
 ol,
