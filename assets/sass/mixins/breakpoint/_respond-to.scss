@@ -1,8 +1,11 @@
+@use "sass:map";
+@use "../../variables";
+
 @mixin respond-to($breakpoint) {
   // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
+  @if map.has-key(variables.$breakpoints, $breakpoint) {
     // Prints a media query based on the value
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @media (min-width: map.get(variables.$breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
@@ -14,9 +17,9 @@
 
 @mixin respond-to-max($breakpoint) {
   // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
+  @if map.has-key(variables.$breakpoints, $breakpoint) {
     // Prints a media query based on the value
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @media (max-width: map.get(variables.$breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
