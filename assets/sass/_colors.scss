@@ -10,6 +10,7 @@
   --color-grey-400:               oklch(71% 0 0);
   --color-grey-300:               oklch(80% 0 0);
   --color-grey-200:               oklch(89% 0 0);
+  --color-grey-100:               oklch(95% 0 0);
   --color-nearwhite:              oklch(98% 0 0);
   --color-white:                  oklch(100% 0 0);
   --color-red:                    oklch(65% 0.2 24);
@@ -57,7 +58,7 @@
   --color-header-bg:              var(--color-white);
   --color-body-bg:                var(--color-white);
   --color-footer-bg:              var(--color-white);
-  --color-backdrop:               var(--color-grey-200);
+  --color-backdrop:               var(--color-grey-100);
 
   // Mobil menu colours.
   --color-mobile-menu:            var(--color-brand);
