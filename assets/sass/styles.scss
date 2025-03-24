@@ -4,7 +4,11 @@
 
 @import 'init';
 
-// Declaring global CSS variables in :root.
+// Declaring CSS colour variables in :root.
+
+@import 'colors';
+
+// Declaring CSS misc variables in :root.
 
 @import 'root';
 
@@ -60,10 +64,10 @@
 @import 'navigation/navbar/navbar';
 @import 'navigation/pager/pager';
 
-// Zen
+// Zen styles
 
 @import 'zen';
 
-// Custom
+// Custom styles
 
 @import 'custom';
