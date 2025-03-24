@@ -1,93 +1,96 @@
-// stylelint-disable scss/dollar-variable-colon-space-after, scss/dollar-variable-empty-line-before
+// Theme colours.
 
-// Base colors.
-$black:                 #000;
-$nearblack:             lighten($black, 20%); // #333
-$grey-dark:             lighten($black, 40%); // #666
-$grey:                  lighten($black, 60%); // #999
-$grey-light:            lighten($black, 80%); // #ccc
-$grey-extra-light:      lighten($black, 93.33%); // #eee
-$nearwhite:             lighten($black, 97%); // #f7f7f7
-$white:                 #fff;
+:root {
+  // Base colours.
+  --color-black:                  oklch(1% 0.01 0);
+  --color-nearblack:              oklch(25% 0.01 0);
+  --color-grey-700:               oklch(38% 0 0);
+  --color-grey-600:               oklch(49% 0 0);
+  --color-grey-500:               oklch(60% 0 0);
+  --color-grey-400:               oklch(71% 0 0);
+  --color-grey-300:               oklch(80% 0 0);
+  --color-grey-200:               oklch(89% 0 0);
+  --color-nearwhite:              oklch(98% 0 0);
+  --color-white:                  oklch(100% 0 0);
+  --color-red:                    oklch(65% 0.2 24);
+  --color-yellow:                 oklch(65% 0.12 80);
+  --color-green:                  oklch(65% 0.19 138);
+  --color-blue:                   oklch(65% 0.16 247);
 
-$blue:                  #0072b9;
-$red:                   #c00;
-$green:                 #43a808;
-$yellow:                #fd0;
+  // Transparent colours.
+  --color-black-60:               oklch(0% 0 0 / 0.6);
+  --color-black-40:               oklch(0% 0 0 / 0.4);
+  --color-black-20:               oklch(0% 0 0 / 0.2);
+  --color-black-10:               oklch(0% 0 0 / 0.1);
+  --color-white-20:               oklch(100% 0 0 / 0.2);
+  --color-white-10:               oklch(100% 0 0 / 0.1);
 
-$brand:                 $grey-dark;
-$brand-alt:             $grey;
-$brand-light:           $grey-light;
-$brand-dark:            $nearblack;
+  // Brand colours.
+  --color-brand:                  var(--color-nearblack);
+  --color-brand-alt:              var(--color-grey-500);
+  --color-brand-light:            var(--color-grey-300);
+  --color-brand-dark:             var(--color-grey-700);
 
-// Colour map.
-$colors: (
-  brand:                  $brand,
-  brand-alt:              $brand-alt,
-  brand-light:            $brand-light,
-  brand-dark:             $brand-dark,
+  // Text colours.
+  --color-text:                   var(--color-black);
+  --color-text-bg:                var(--color-white);
+  --color-text-meta:              var(--color-grey-dark);
+  --color-headings:               var(--color-nearblack);
+  --color-code:                   var(--color-nearblack);
 
-  text:                   $black,
-  text-bg:                $white,
-  text-meta:              $grey-dark,
+  // Link colours.
+  --color-link:                   var(--color-brand);
+  --color-link-visited:           var(--color-brand);
+  --color-link-hover:             var(--color-brand-alt);
+  --color-link-active:            var(--color-red);
+  --color-link-inverted:          var(--color-white);
+  --color-link-visited-inverted:  var(--color-white);
+  --color-link-hover-inverted:    var(--color-white);
+  --color-link-active-inverted:   var(--color-red);
 
-  link:                   $brand-dark,
-  link-visited:           $brand-dark,
-  link-hover:             $brand,
-  link-active:            $red,
+  // Border colours.
+  --color-border:                 var(--color-brand);
+  --color-border-light:           var(--color-brand-light);
+  --color-border-dark:            var(--color-brand-dark);
 
-  link-inverted:          $white,
-  link-visited-inverted:  $white,
-  link-hover-inverted:    $white,
-  link-active-inverted:   $red,
+  // Background colours.
+  --color-header-bg:              var(--color-white);
+  --color-body-bg:                var(--color-white);
+  --color-footer-bg:              var(--color-white);
+  --color-backdrop:               var(--color-grey-extra-light);
 
-  border:                 $brand,
-  border-light:           $brand-light,
-  border-dark:            $brand-dark,
+  // Mobil menu colours.
+  --color-mobile-menu:            var(--color-brand);
+  --color-mobile-menu-cover:      var(--color-black-20);
 
-  autocomplete:           $black,
-  autocomplete-bg:        $white,
-  autocomplete-select:    $white,
-  autocomplete-select-bg: $blue,
+  // Button colours.
+  --color-button:                 var(--color-brand);
+  --color-button-hover:           var(--color-brand-dark);
+  --color-button-text:            var(--color-white);
+  --color-button-text-hover:      var(--color-white);
+  --color-button-disabled:        var(--color-grey);
 
-  body-bg:                $white,
-  header-bg:              $white,
-  footer-bg:              $white,
-  backdrop:               $grey-extra-light,
+  // Row (e.g. in table) colours.
+  --color-row-header:             transparent;
+  --color-row-odd:                var(--color-nearwhite);
+  --color-row-even:               transparent;
 
-  mobile-menu:            $brand,
-  mobile-menu-cover:      rgba($black, .2),
+  // Status colours.
+  --color-info:                   var(--color-blue);
+  --color-info-bg:                oklch(from var(--color-blue) 100% 0.03 h);
+  --color-status:                 var(--color-green);
+  --color-status-bg:              oklch(from var(--color-green) 100% 0.03 h);
+  --color-warning:                var(--color-yellow);
+  --color-warning-bg:             oklch(from var(--color-yellow) 100% 0.03 h);
+  --color-error:                  var(--color-red);
+  --color-error-bg:               oklch(from var(--color-red) 100% 0.03 h);
 
-  button:                 $brand,
-  button-hover:           $brand-dark,
-  button-text:            $white,
-  button-text-hover:      $white,
-  button-disabled:        $grey,
+  // Highlight colours.
+  --color-highlight:              var(--color-brand-alt);
+  --color-mark-highlight:         var(--color-red);
+  --color-mark-bg:                var(--color-yellow);
 
-  mark-highlight:         $red,
-  mark-bg:                $yellow,
-
-  menu-active:            $black,
-
-  preview-bg:             lighten($yellow, 43%),
-
-  row-header:             transparent,
-  row-odd:                $nearwhite,
-  row-even:               transparent,
-
-  status:                 $green,
-  status-bg:              lighten($green, 62%),
-  warning:                $black,
-  warning-bg:             lighten($yellow, 45%),
-  warning-border:         $yellow,
-  error:                  $red,
-  error-bg:               lighten($red, 57%),
-
-  watermark:              $grey-extra-light,
-
-  headings:               $nearblack,
-
-  code:                   $nearblack,
-
-  highlight:              $brand-alt,
-);
+  // Misc colours.
+  --color-watermark:              var(--color-grey-extra-light);
+  --color-debug-color:            var(--color-grey-extra-light);
+}

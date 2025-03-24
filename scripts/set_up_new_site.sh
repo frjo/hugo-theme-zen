@@ -16,8 +16,7 @@ fi
 mkdir -p "assets/sass"
 mkdir -p "layouts"
 
-copy_files=("themes/zen/assets/sass/_colors.scss:assets/sass/_colors.scss"
-            "themes/zen/assets/sass/_extra.scss:assets/sass/_extra.scss"
+copy_files=("themes/zen/assets/sass/_extra.scss:assets/sass/_extra.scss"
             "themes/zen/assets/sass/_fonts.scss:assets/sass/_fonts.scss"
             "themes/zen/assets/sass/_custom.scss:assets/sass/_custom.scss"
             "themes/zen/assets/sass/_zen.scss:assets/sass/_zen.scss"

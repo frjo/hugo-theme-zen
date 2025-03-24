@@ -5,7 +5,7 @@
 
     position: relative;
     // stylelint-disable-next-line  max-line-length
-    background-image: repeating-linear-gradient(180deg, $debug-color, $debug-color 1px, transparent 1px, transparent $grid-height);
+    background-image: repeating-linear-gradient(180deg, var(--color-debug-color), var(--color-debug-color) 1px, transparent 1px, transparent $grid-height);
 
     &::after {
       content: '';
@@ -14,7 +14,7 @@
       left: 0;
       height: 1px;
       width: 100%;
-      background-color: $debug-color;
+      background-color: var(--color-debug-color);
     }
   }
 }

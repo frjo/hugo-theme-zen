@@ -13,10 +13,16 @@
     outline-color: var(--color-status);
   }
 
+  &.info {
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+    outline-color: var(--color-info);
+  }
+
   &.warning {
     background-color: var(--color-warning-bg);
     color: var(--color-warning);
-    outline-color: var(--color-warning-border);
+    outline-color: var(--color-warning);
   }
 
   &.error {
@@ -26,7 +32,7 @@
   }
 
   &--highlight {
-    animation: 2s linear infinite outline-highlight;
+    animation: 2s ease-in-out infinite outline-highlight;
   }
 
   @keyframes outline-highlight {

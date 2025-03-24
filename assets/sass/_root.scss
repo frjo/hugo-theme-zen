@@ -3,11 +3,7 @@ $max-page-width: $max-content-width !default;
 
 :root {
   // Convert sass variables to css4 variables.
-  // Use like this: var(--color-brand).
-  @each $name, $color in $colors {
-    --color-#{$name}: #{$color};
-  }
-
+  // Use like this: var(--color-gutters).
   @each $name, $size in $font-size {
     --fs-#{$name}: #{$size};
   }
