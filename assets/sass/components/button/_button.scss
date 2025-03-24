@@ -107,7 +107,7 @@ button,
 // other variations.
 %button--disabled[disabled] {
   @extend %disabled;
-  background-color: var(--color-grey-extra-light);
+  background-color: var(--color-grey-200);
   border: 1px solid var(--color-button-disabled);
   background-image: none;
   text-shadow: none;

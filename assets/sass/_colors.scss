@@ -34,7 +34,7 @@
   // Text colours.
   --color-text:                   var(--color-black);
   --color-text-bg:                var(--color-white);
-  --color-text-meta:              var(--color-grey-dark);
+  --color-text-meta:              var(--color-grey-600);
   --color-headings:               var(--color-nearblack);
   --color-code:                   var(--color-nearblack);
 
@@ -57,7 +57,7 @@
   --color-header-bg:              var(--color-white);
   --color-body-bg:                var(--color-white);
   --color-footer-bg:              var(--color-white);
-  --color-backdrop:               var(--color-grey-extra-light);
+  --color-backdrop:               var(--color-grey-200);
 
   // Mobil menu colours.
   --color-mobile-menu:            var(--color-brand);
@@ -68,7 +68,7 @@
   --color-button-hover:           var(--color-brand-dark);
   --color-button-text:            var(--color-white);
   --color-button-text-hover:      var(--color-white);
-  --color-button-disabled:        var(--color-grey);
+  --color-button-disabled:        var(--color-grey-400);
 
   // Row (e.g. in table) colours.
   --color-row-header:             transparent;
@@ -91,6 +91,6 @@
   --color-mark-bg:                var(--color-yellow);
 
   // Misc colours.
-  --color-watermark:              var(--color-grey-extra-light);
-  --color-debug-color:            var(--color-grey-extra-light);
+  --color-watermark:              var(--color-grey-200);
+  --color-debug-color:            var(--color-grey-200);
 }
