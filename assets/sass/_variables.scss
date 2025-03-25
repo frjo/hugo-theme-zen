@@ -169,8 +169,5 @@ $gutters-reverse:     calc(0px - (5px + 1.5625vw));
 // Use like this: var(--indent-amount)
 $indent-amount:       2rem;
 
-// Control whether RTL styles are added.
-$include-rtl: false;
-
 // Show horizontal grid to help with debugging typography.
 $debug: false;
