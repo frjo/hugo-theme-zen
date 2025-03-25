@@ -1,13 +1,13 @@
 @each $name, $space in $spacing {
-  .mt--#{$name} {
+  .mt-#{$name} {
     @include margin-block-start($space);
   }
 
-  .mb--#{$name} {
+  .mb-#{$name} {
     @include margin-block-end($space);
   }
 
-  .mtb--#{$name} {
+  .mx-#{$name} {
     @include margin-block($space);
   }
 }

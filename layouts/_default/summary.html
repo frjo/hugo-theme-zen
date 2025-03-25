@@ -1,6 +1,6 @@
 <article class="list-view{{ with .Section }} list-view--{{ . | urlize }}{{ end }}">
 <header>
-<h2 class="title mt--s{{ if $.Param "submitted" | default false }} mb--xxs{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+<h2 class="title mt-s{{ if $.Param "submitted" | default false }} mb-xxs{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
 </header>
 {{ .Summary }}

@@ -62,7 +62,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * New setting `params.internalPagination` to use the Hugo built in pagination template instead of the plain Zen version.
 * New setting `params.sassTranspiler`. Defaults to "libsass" but "dartsass" is also supported.
 * Split sass "reset" dir into "base" dir and pure "reset" file.
-* Added margin top/bottom/block classes, mt--m/mb--m/mtb--m, for all "spacing" variables.
+* Added margin top/bottom/block classes, mt-m/mb-m/mx-m, for all "spacing" variables.
 * New sass components:
     * cards
     * center
