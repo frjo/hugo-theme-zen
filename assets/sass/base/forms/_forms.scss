@@ -12,8 +12,13 @@ select {
 }
 
 label {
-  display: block;
   font-weight: var(--fw-bold);
+
+  // Display as block if before input.
+  &:has(+ input),
+  &:has(+ textarea){
+    display: block;
+  }
 
   // Mark field as required if needed.
   &:has(+ :required) {
@@ -21,6 +26,31 @@ label {
       content: '*';
       color: var(--color-mark-highlight);
     }
+  }
+}
+
+// Valid and invalid state.
+input,
+textarea {
+  &:user-valid {
+    border-color: var(--color-success);
+    border-style: solid;
+    background-color: var(--color-success-bg);
+  }
+
+  &:focus:user-valid {
+    border-color: transparent;
+  }
+
+  &:user-invalid {
+    border-color: var(--color-error);
+    border-style: solid;
+    background-color: var(--color-error-bg);
+  }
+
+  &:focus:user-invalid {
+    border-color: transparent;
+    background-color: var(--color-warning-bg);
   }
 }
 
@@ -36,12 +66,18 @@ fieldset {
   border: 1px solid var(--color-border);
 }
 
-input {
+// Make field where you enter more info a bit wider.
+[type='email'],
+[type='password'],
+[type='range'],
+[type='search'],
+[type='url'] {
   // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
   // stylelint-disable-next-line function-name-case
   width: Min(20em, 100%);
 }
 
+// Make field where you enter more info a bit wider.
 [type='text'],
 textarea {
   // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
@@ -49,10 +85,9 @@ textarea {
   width: Min(30em, 100%);
 }
 
-
 // Make sure textareas without a rows attribute are not tiny.
 textarea:not([rows]) {
-  min-height: 10em;
+  min-height: 7lh;
 }
 
 // For forms with multibple fields show submit button below the form.
@@ -63,7 +98,7 @@ textarea {
   }
 }
 
-// For forms none mobile with single field add space between it and the submit button.
+// For forms on mobile with single field add space between it and the submit button.
 @include respond-to(s) {
   input:only-of-type {
     &:has(+ [type='submit']) {

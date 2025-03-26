@@ -1,0 +1,35 @@
+// Anchor
+//
+// For heading anchor links. See render-heading.html.example.
+
+.anchor,
+%anchor {
+  --anchor-gap: .5rem;
+  --anchor-opacity: .4;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: var(--anchor-gap);
+
+  a {
+    opacity: 0;
+    text-decoration: none;
+  }
+
+  &:focus-visible,
+  &:hover {
+    a {
+      opacity: var(--anchor-opacity);
+
+      &:focus-visible,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  p:has(+ &) {
+    margin-block-end: 0;
+  }
+}
