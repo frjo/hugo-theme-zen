@@ -158,7 +158,7 @@ From the root of your site:
 hugo mod init github.com/me/my-site
 ```
 
-Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v4".
+Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v5".
 
 From the root of your site:
 
