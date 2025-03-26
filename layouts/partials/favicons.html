@@ -8,7 +8,7 @@
 <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 {{ end -}}
 {{ $favname := "" -}}
-{{ $favsizes := slice "128x128" "96x96" "48x48" "32x32" "16x16" -}}
+{{ $favsizes := slice "512x512" "256x256" "128x128" "96x96" "48x48" "32x32" "16x16" -}}
 {{ range $favsizes -}}
 {{ $favname = (printf "favicon-%s.png" .) -}}
 {{ if fileExists (path.Join "/static" $favname) -}}
