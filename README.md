@@ -338,21 +338,20 @@ If you do not specify any sections in the "mainSections" param (see configuratio
 
 This is another part that almost everyone will like to customise.
 
-They are found in the theme `assets/sass/_colors.scss` and `assets/sass/_variables.scss` files. Copy them to the root `assets/sass/` directory to set your own values.
+They are found in the theme `assets/sass/_colors.scss`, `assets/sass/_variables.scss` and `assets/sass/_sass_variables.scss` files. You can copy them to the root `assets/sass/` directory to set your own values. 
 
-If you only want to override a few variables copy the theme `assets/sass/_extra.scss` to the root `assets/sass/_extra.scss` and set the new values there. Anything in the extra file will override values in the variables file.
+In most cases you likely only need to override a few values and then it is easier to set these in the extra and custom sass files.
 
-Examples of variables found in `assets/sass/_variables.scss`:
+Root `assets/sass/_extra.scss`: Loaded first so use to override sass variables only.
 
-* $base-font-size: 18px;
-* $max-content-width: 960px;
-* $max-line-width: 70ch;
+Root `assets/sass/_custom.scss`: Loaded last so use to override css variables and add any custom styles you need.
 
 
 ### Logo
 
 Place your logo at `static/images/logo.png`. If you don't provide a logo, then the default theme logo will be used.
 
+There are also setting to set a custom `logoPath` as well as setting logo width and height.
 
 ### Favicons
 
