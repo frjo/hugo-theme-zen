@@ -1,7 +1,6 @@
 // The print stylesheet for this theme.
 
 @import 'init';
-@import 'components/print-none/print-none';
 
 .pager,
 %pager,
@@ -9,7 +8,7 @@
 aside,
 nav,
 footer {
-  @extend %print-none;
+  display: none;
 }
 
 @media print {
