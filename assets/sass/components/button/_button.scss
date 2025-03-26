@@ -21,13 +21,12 @@ button,
   text-decoration: none;
   text-align: center;
   width: fit-content;
-  margin-inline-end: 1rem;
-  margin-block-end: 1rem;
   padding: .2rem 1rem;
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
   color: var(--color-button-text);
-  background-color: var(--color-button);
+  text-shadow: var(--color-button) 0 1px 0;
+  background: linear-gradient(var(--color-button), var(--color-button-hover));
   border: 1px solid var(--color-button);
   border-radius: var(--radius-s);
 
@@ -37,7 +36,8 @@ button,
     // Override any link underlines and color changes.
     text-decoration: none;
     color: var(--color-button-text-hover);
-    background-color: var(--color-button-hover);
+    text-shadow: var(--color-button-hover) 0 1px 0;
+    background: linear-gradient(var(--color-button-hover), var(--color-button));
   }
 }
 
@@ -46,8 +46,6 @@ button,
 %button {
   &--small {
     font-size: var(--fs-xs);
-    margin-inline-end: .5rem;
-    margin-block-end: .5rem;
     padding: .2rem .75rem;
   }
 
