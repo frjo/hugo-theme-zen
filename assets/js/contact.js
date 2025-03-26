@@ -38,11 +38,11 @@
   if (location.search.substring(1) !== '') {
     switch (location.search.substring(1)) {
       case 'submitted':
-        document.querySelector(['data-contact-submitted']).classList.remove('hidden');
+        document.querySelector('[data-contact-submitted]').classList.remove('hidden');
         break;
 
       case 'error':
-        document.querySelector(['data-contact-error']).classList.remove('hidden');
+        document.querySelector('[data-contact-error]').classList.remove('hidden');
         break;
     }
   }
