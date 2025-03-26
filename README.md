@@ -48,11 +48,21 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Credits](#credits)
 
 
+## Version 5.x
+
+* Rearanged a lot of variables so some work to upgrade if you have customisations. This is the reson for making this v5.
+* Colours are now set directly as css variables. You no longer need to override `_colors.scss`, instead override select colours in `_custom.scss`. This simplification was the main motivation for v5.
+* Converted most sass settings in to pure css variables.
+* Split sass and css settings it to separate files.
+* No other significant changes.
+
+
 ## Version 4.x
 
 * Minimum Hugo version is now v0.124.0. This is the reson for making this v4.
 * Updated a number of things to remove all "WARN  deprecated".
 * No other significant changes.
+
 
 ## Version 3.x
 
