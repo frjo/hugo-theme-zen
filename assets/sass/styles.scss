@@ -10,15 +10,11 @@
 
 // Declaring CSS misc variables in :root.
 
-@import 'root';
+@import 'variables';
 
 // Ensure fonts get loaded early to minimize front-end performance impact.
 
 @import 'fonts';
-
-// Reset browsers to some sane defaults.
-
-@import 'reset';
 
 // Base styles.
 

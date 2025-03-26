@@ -1,0 +1,76 @@
+// Variables
+// Override sass variables in "assets/sass/_extra.scss"
+
+// Base line height, unitless.
+$base-line-height: 1.5;
+
+// The font sizes in our type hierarchy as tee shirt sizes.
+// Size m is base.
+// Use like this: var(--fs-m)
+$font-size-fixed: (
+  xxxxl:      3rem,
+  xxxl:       2.5rem,
+  xxl:        2rem,
+  xl:         1.5rem,
+  l:          1.25rem,
+  m:          1rem,
+  s:          0.889rem,
+  xs:         0.778rem,
+);
+
+// The responsive font sizes in our type hierarchy as tee shirt sizes.
+// Size m is base.
+// Use like this: var(--fs-m)
+$font-size-fluid: (
+  xxxxl:      clamp(2.4881rem, calc(1.8896rem + 2.9924vw), 4.2088rem),
+  xxxl:       clamp(2.0738rem, calc(1.6968rem + 1.8848vw), 3.1575rem),
+  xxl:        clamp(1.7281rem, calc(1.5053rem + 1.1141vw), 2.3688rem),
+  xl:         clamp(1.44rem, calc(1.3228rem + 0.5859vw), 1.7769rem),
+  l:          clamp(1.2rem, calc(1.1537rem + 0.2315vw), 1.3331rem),
+  m:          1rem,
+  s:          0.889rem,
+  xs:         0.778rem,
+);
+
+// Set the font sizes to use, fixed or fluid.
+// $font-size: $font-size-fluid;
+$font-size: $font-size-fixed;
+
+// Breakpoints
+// Use the `respond-to(s)` mixin to use named breakpoints.
+$breakpoints: (
+  'xxxl':     1222px,
+  'xxl':      1111px,
+  'xl':       999px,
+  'l':        888px,
+  'm':        777px,
+  's':        666px,
+  'xs':       555px,
+  'xxs':      444px,
+  'xxxs':     333px,
+);
+
+// Spacing
+// Generates mt-m (mt = margin-top), mb-m (mb = margin-bottom) and
+// mtb-m (mtb = margin-block) classes.
+$spacing: (
+  xxl:        3,
+  xl:         2,
+  l:          1.5,
+  m:          1,
+  s:          0.75,
+  xs:         0.5,
+  xxs:        0.3,
+  0:          0,
+);
+
+// The max content width. (Consider using one of the breakpoints.)
+$max-content-width: 1111px;
+
+// The max page width. Defaults to max-content-width.
+// Setting this to a larger value than max-content-width allows
+// content with class "stretch" to stretch out to the page edge.
+// $max-page-width: 1111px;
+
+// Show horizontal grid to help with debugging typography.
+$debug: false;

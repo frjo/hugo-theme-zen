@@ -4,14 +4,14 @@ html {
   // Change the default font family in all browsers.
   font-family: var(--ff-body);
   // Set base font size in percent.
-  font-size: calc(#{$base-font-size} / 16 * 100%);
+  font-size: calc(var(--base-font-size) / 16 * 100%);
   // Set text colour.
   color: var(--color-text);
 }
 
 body {
   // Correct the line height in all browsers.
-  line-height: $base-line-height;
+  line-height: var(--base-line-height);
   // Output a horizontal grid to help with debugging typography. The
   // $debug variable will toggle its output.
   @include debug-grid();

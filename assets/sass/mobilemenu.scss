@@ -89,7 +89,7 @@
       transform-origin: center;
     }
 
-    [data-navopen] & { // stylelint-disable max-nesting-depth
+    [data-navopen] & {
       rect {
         y: 45px;
 
@@ -105,7 +105,7 @@
           transform: rotate(-45deg);
         }
       }
-    } // stylelint-enable max-nesting-depth
+    }
   }
 
   &__sheet {
