@@ -1,17 +1,17 @@
 <p class="error message js-hidden">{{ i18n "js_required" }}</p>
-<p class="search-loading status message hidden">{{ i18n "search_loading" }}</p>
+<p class="info message hidden" data-search-loading>{{ i18n "search_loading" }}</p>
 
-<div class="search-input hidden">
-  <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+<div data-search-input class="hidden">
+  <form data-search-form id="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
     <label for="query" class="visually-hidden">{{ i18n "search_title" }}</label>
-    <input type="search" id="query" name="query" class="search-text" placeholder="{{ i18n "search_placeholder" }}" maxlength="128">
+    <input data-search-text type="search" id="query" name="query" placeholder="{{ i18n "search_placeholder" }}" maxlength="128">
   </form>
 </div>
 
-<div class="search-results"></div>
+<div data-search-results></div>
 
 <template>
-  <article class="search-result list-view">
+  <article data-search-result class="list-view">
     <header>
       <h2 class="title mt--s mb--xxs"><a href="#">Title here</a></h2>
       <div class="submitted"><time class="created-date">Date here</time></div>

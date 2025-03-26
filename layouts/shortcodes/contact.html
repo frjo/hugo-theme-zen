@@ -1,6 +1,6 @@
 <p class="error message js-hidden">{{ i18n "js_required" }}</p>
-<p class="contact-submitted status message hidden">{{ i18n "contact_submitted" }}</p>
-<p class="contact-error error message hidden">{{ i18n "contact_error" }}</p>
+<p class="success message hidden" data-contact-submitted>{{ i18n "contact_submitted" }}</p>
+<p class="error message hidden" data-contact-error>{{ i18n "contact_error" }}</p>
 
 <form class="contact-form hidden" data-protect="/php/contact.php" action="#" method="post" accept-charset="UTF-8">
   <label for="edit-name">{{ i18n "contact_name" }}</label>
