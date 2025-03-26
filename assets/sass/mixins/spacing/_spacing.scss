@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "../../sass_variables";
+
 @mixin spacing($property, $spacing, $unit) {
   $converted-list: ();
 
@@ -8,8 +11,8 @@
       $xunit: '';
     }
 
-    $spacing: #{$x * $base-line-height + $xunit};
-    $converted-list: join($converted-list, $spacing, $separator: space);
+    $spacing: #{$x * sass_variables.$base-line-height + $xunit};
+    $converted-list: list.join($converted-list, $spacing, $separator: space);
   }
 
   #{$property}: $converted-list;

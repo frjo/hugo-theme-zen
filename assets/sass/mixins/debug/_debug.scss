@@ -1,7 +1,9 @@
+@use "../../sass_variables";
+
 // Output a horizontal grid to help with debugging typography.
 @mixin debug-grid() {
-  @if $debug == true {
-    $grid-height: #{$base-line-height + 'rem'};
+  @if sass_variables.$debug == true {
+    $grid-height: #{sass_variables.$base-line-height + 'rem'};
 
     position: relative;
     // stylelint-disable-next-line  max-line-length

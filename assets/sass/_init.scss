@@ -6,13 +6,13 @@
 // project.
 
 // Variables.
-@import 'sass_variables';
-@import 'extra';
+@use 'sass_variables';
+@use 'extra';
 
 // Mixins and functions.
-@import 'mixins/breakpoint/respond-to';
-@import 'mixins/clearfix/clearfix';
-@import 'mixins/debug/debug';
-@import 'mixins/flex-calc/flex-calc';
-@import 'mixins/overlay/overlay';
-@import 'mixins/spacing/spacing';
+@use 'mixins/breakpoint/respond-to';
+@use 'mixins/clearfix/clearfix';
+@use 'mixins/debug/debug';
+@use 'mixins/flex-calc/flex-calc';
+@use 'mixins/overlay/overlay';
+@use 'mixins/spacing/spacing';

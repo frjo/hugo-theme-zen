@@ -1,6 +1,6 @@
 // The mobile navigation stylesheet for this theme.
 
-@import 'init';
+@use 'init';
 
 .main-menu,
 .header__region { // stylelint-disable selector-class-pattern
