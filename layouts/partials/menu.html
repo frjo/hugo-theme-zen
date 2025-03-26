@@ -1,5 +1,5 @@
 <nav class="main-menu{{ if not ($.Param "menuinheader") }} layout__navigation{{ end }}" aria-label="{{ i18n "menu_title" }}">
-<ul class="flex-inline mb-0">
+<ul class="flex-inline mx--0">
 {{ $currentPage := . -}}
 {{ range site.Menus.main -}}
 <li><a href="{{ .URL | relLangURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Pre }}<span>{{ or (i18n .Identifier) .Name | safeHTML }}</span>{{ .Post }}</a></li>

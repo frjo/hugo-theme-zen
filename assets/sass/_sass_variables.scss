@@ -51,8 +51,8 @@ $breakpoints: (
 );
 
 // Spacing
-// Generates mt-m (mt = margin-top), mb-m (mb = margin-bottom) and
-// mtb-m (mtb = margin-block) classes.
+// Generates mt--m (mt = margin-top), mb--m (mb = margin-bottom) and
+// mx--m (mx = margin-block) classes.
 $spacing: (
   xxl:        3,
   xl:         2,
