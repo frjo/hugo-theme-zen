@@ -1,14 +1,14 @@
 .zebra-table,
 %zebra-table {
-  --cell-padding: .5rem;
+  --table-cell-padding: .5rem;
 
   @include respond-to-max(s) {
-    --cell-padding: .3rem;
+    --table-cell-padding: .3rem;
   }
 
   th,
   td {
-    padding: var(--cell-padding);
+    padding: var(--table-cell-padding);
   }
 
   thead {
@@ -32,7 +32,7 @@
 
 .responsive-table,
 %responsive-table {
-  --gap: .5rem;
+  --table-gap: .5rem;
 
   @include respond-to-max(s) {
     th {
@@ -41,7 +41,7 @@
 
     td {
       display: grid;
-      gap: var(--gap);
+      gap: var(--table-gap);
       grid-template-columns: 12ch auto;
 
       &::before {
@@ -50,11 +50,11 @@
       }
 
       &:first-of-type {
-        padding-block-start: var(--gap);
+        padding-block-start: var(--table-gap);
       }
 
       &:last-of-type {
-        padding-block-end: var(--gap);
+        padding-block-end: var(--table-gap);
       }
     }
   }

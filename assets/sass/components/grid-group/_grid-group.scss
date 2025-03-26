@@ -1,52 +1,52 @@
 .grid-group,
 %grid-group {
-  --column-min: 200px;
-  --gap: 1.5rem;
+  --grid-group-column-min: 200px;
+  --grid-group-gap: 1.5rem;
 
   display: grid;
-  gap: var(--gap);
+  gap: var(--grid-group-gap);
   // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
   // stylelint-disable-next-line function-name-case
-  grid-template-columns: repeat(auto-fit, minmax(Min(var(--column-min), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(Min(var(--grid-group-column-min), 100%), 1fr));
 
   &--fill {
     // stylelint-disable-next-line function-name-case
-    grid-template-columns: repeat(auto-fill, minmax(Min(var(--column-min), 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(Min(var(--grid-group-column-min), 100%), 1fr));
   }
 
   &--100 {
-    --column-min: 100px;
+    --grid-group-column-min: 100px;
   }
 
   &--150 {
-    --column-min: 150px;
+    --grid-group-column-min: 150px;
   }
 
   &--200 {
-    --column-min: 200px;
+    --grid-group-column-min: 200px;
   }
 
   &--250 {
-    --column-min: 250px;
+    --grid-group-column-min: 250px;
   }
 
   &--300 {
-    --column-min: 300px;
+    --grid-group-column-min: 300px;
   }
 
   &--350 {
-    --column-min: 350px;
+    --grid-group-column-min: 350px;
   }
 
   &--400 {
-    --column-min: 400px;
+    --grid-group-column-min: 400px;
   }
 
   &--500 {
-    --column-min: 500px;
+    --grid-group-column-min: 500px;
   }
 
   &--600 {
-    --column-min: 600px;
+    --grid-group-column-min: 600px;
   }
 }

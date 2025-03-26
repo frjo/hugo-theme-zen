@@ -50,6 +50,13 @@
   --color-link-hover-inverted:    var(--color-white);
   --color-link-active-inverted:   var(--color-red);
 
+  // Button colours.
+  --color-button:                 var(--color-brand);
+  --color-button-hover:           var(--color-brand-alt);
+  --color-button-text:            var(--color-white);
+  --color-button-text-hover:      var(--color-white);
+  --color-button-disabled:        var(--color-grey-400);
+
   // Border colours.
   --color-border:                 var(--color-brand);
   --color-border-light:           var(--color-brand-light);
@@ -65,12 +72,8 @@
   --color-mobile-menu:            var(--color-brand);
   --color-mobile-menu-cover:      var(--color-black-20);
 
-  // Button colours.
-  --color-button:                 var(--color-brand);
-  --color-button-hover:           var(--color-brand-dark);
-  --color-button-text:            var(--color-white);
-  --color-button-text-hover:      var(--color-white);
-  --color-button-disabled:        var(--color-grey-400);
+  // Form colours.
+  --color-accent:                 var(--color-brand);
 
   // Row (e.g. in table) colours.
   --color-row-header:             transparent;
@@ -80,8 +83,8 @@
   // Status colours.
   --color-info:                   var(--color-blue);
   --color-info-bg:                oklch(from var(--color-blue) 100% 0.03 h);
-  --color-status:                 var(--color-green);
-  --color-status-bg:              oklch(from var(--color-green) 100% 0.03 h);
+  --color-success:                 var(--color-green);
+  --color-success-bg:              oklch(from var(--color-green) 100% 0.03 h);
   --color-warning:                var(--color-yellow);
   --color-warning-bg:             oklch(from var(--color-yellow) 100% 0.03 h);
   --color-error:                  var(--color-red);
