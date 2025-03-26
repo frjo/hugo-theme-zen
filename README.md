@@ -18,6 +18,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Table of contents
 
+* [Version 5.x](#version-5x)
 * [Version 4.x](#version-4x)
 * [Version 3.x](#version-3x)
 * [Version 2.x](#version-2x)
