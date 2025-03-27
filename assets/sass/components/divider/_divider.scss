@@ -5,12 +5,12 @@
 .divider,
 %divider {
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  margin-block: var(--spacing-m);
   border: 0;
   border-block-start: 1px solid var(--color-border);
 
   // If used as a container, add a top margin to the first child.
   > :first-child {
-    @include margin-top(1);
+    margin-block-start: var(--spacing-m);
   }
 }

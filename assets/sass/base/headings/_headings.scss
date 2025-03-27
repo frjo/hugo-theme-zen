@@ -15,7 +15,7 @@ h5,
 %h5,
 h6,
 %h6 {
-  @include margin-block(1 .33, 'em');
+  margin-block: 1.5em .5em;
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
@@ -24,7 +24,7 @@ h6,
 
   // Smaller margin when a headeing is right after another heading.
   & + & {
-    @include margin-block-start(.5, 'em');
+    margin-block-start: .75em
   }
 
   // Set max text line width in main for readability.
@@ -36,7 +36,8 @@ h6,
 h1,
 %h1 {
   // h1 only on top of page so different margins.
-  @include margin-block(1 .5, 'rem');
+  margin-block-start: var(--spacing-m);
+  margin-block-end: var(--spacing-xs);
   font-size: var(--fs-xxl);
   letter-spacing: -.01em;
 }

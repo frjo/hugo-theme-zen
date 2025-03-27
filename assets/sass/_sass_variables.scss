@@ -1,4 +1,5 @@
 // Variables
+// These need to be sass variables since they are used in sass functions and mixins.
 // Override sass variables in "assets/sass/_extra.scss"
 
 // Base line height, unitless.
@@ -70,7 +71,7 @@ $max-content-width: 1111px;
 // The max page width. Defaults to max-content-width.
 // Setting this to a larger value than max-content-width allows
 // content with class "stretch" to stretch out to the page edge.
-// $max-page-width: 1111px;
+$max-page-width: $max-content-width;
 
 // Show horizontal grid to help with debugging typography.
 $debug: false;

@@ -9,7 +9,7 @@
   @extend %flex-inline;
   @extend %link-nav;
   // Add vertical rhythm margins.
-  @include margin-block(1);
+  margin-block: var(--spacing-m);
   justify-content: center;
 
   .page-item {

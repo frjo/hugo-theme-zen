@@ -1,8 +1,5 @@
-$max-page-width: $max-content-width !default;
-
 :root {
   // Convert sass variables to css variables.
-  // These need to be sass variables sincethey are used in sass functions and mixins.
 
   @each $name, $size in $font-size {
     --fs-#{$name}: #{$size};
@@ -72,13 +69,22 @@ $max-page-width: $max-content-width !default;
   --ff-monospace: var(--ui-monospace);
 
   // Font weights.
-  --fw-headings:   700;
-  --fw-bolder:     900;
-  --fw-bold:       700;
-  --fw-medium:     500;
-  --fw-normal:     400;
-  --fw-light:      300;
-  --fw-lighter:    200;
+  --fw-headings: 700;
+  --fw-bolder: 900;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-normal: 400;
+  --fw-light: 300;
+  --fw-lighter: 200;
+
+  // Spacing.
+  --spacing-xxl: calc(3rem * var(--base-line-height));
+  --spacing-xl: calc(2rem * var(--base-line-height));
+  --spacing-l: calc(1.5rem * var(--base-line-height));
+  --spacing-m: calc(1rem * var(--base-line-height));
+  --spacing-s: calc(0.75rem * var(--base-line-height));
+  --spacing-xs: calc(0.5rem * var(--base-line-height));
+  --spacing-xxs: calc(0.3rem * var(--base-line-height));
 
   // Border radius.
   --radius-xl: 1rem;

@@ -5,6 +5,6 @@
 }
 
 .language-icon {
-  @include margin-inline-end(.5);
+  margin-inline-end: var(--spacing-xs);
   fill: var(--color-text);
 }

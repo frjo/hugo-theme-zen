@@ -20,8 +20,8 @@
 .box,
 %box {
   // Add vertical rhythm margins.
-  @include margin-block(1);
-  @include padding(.5);
+  margin-block: var(--spacing-m);
+  padding: var(--spacing-xs);
   border: 5px solid var(--color-border);
 
   // Sass compiles this to the selector: .box__title, %box__title {}

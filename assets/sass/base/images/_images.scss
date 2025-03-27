@@ -31,7 +31,7 @@ img {
 
 figure {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  margin-block: 0 var(--spacing-m);
 
   &.image {
     figcaption {
@@ -81,6 +81,6 @@ figure {
 img {
   &.image {
     // Add vertical rhythm margins.
-    @include margin-block(0 1);
+    margin-block: 0 var(--spacing-m);
   }
 }

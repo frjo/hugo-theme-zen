@@ -2,13 +2,13 @@
 
 form {
   // Add vertical rhythm margins.
-  @include margin-block(0 1);
+  margin-block: 0 var(--spacing-m);
 }
 
 input,
 textarea,
 select {
-  @include margin-block(0 1);
+  margin-block: 0 var(--spacing-m);
 }
 
 label {
