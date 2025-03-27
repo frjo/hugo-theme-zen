@@ -1,3 +1,5 @@
+@use "../../mixins/clearfix/clearfix";
+
 // Clearfix
 //
 // Allows the bottom of an element to extend to the bottom of all floated child
@@ -5,5 +7,5 @@
 
 .clearfix,
 %clearfix {
-  @include clearfix();
+  @include clearfix.clearfix();
 }

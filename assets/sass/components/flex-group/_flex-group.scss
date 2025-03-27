@@ -1,8 +1,11 @@
+@use "../../mixins/flex-calc/flex-calc";
+@use "../../mixins/spacing/spacing";
+
 .flex-group,
 %flex-group {
   $gap: 1;
 
-  @include gap($gap);
+  @include spacing.gap($gap);
   display: flex;
   flex-wrap: wrap;
 
@@ -18,23 +21,23 @@
 
   @media (min-width: 666px) {
     &--2 > * {
-      @include flex(2, $gap);
+      @include flex-calc.flex(2, $gap);
     }
 
     &--3 > * {
-      @include flex(3, $gap);
+      @include flex-calc.flex(3, $gap);
     }
 
     &--4 > * {
-      @include flex(4, $gap);
+      @include flex-calc.flex(4, $gap);
     }
 
     &--5 > * {
-      @include flex(5, $gap);
+      @include flex-calc.flex(5, $gap);
     }
 
     &--6 > * {
-      @include flex(6, $gap);
+      @include flex-calc.flex(6, $gap);
     }
   }
 }

@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../sass_variables";
 
 // stylelint-disable no-duplicate-selectors
 
@@ -30,7 +30,7 @@
 
 // If page width is bigger then content with,
 // setup grid with breakout and stretch for main section.
-@if variables.$max-page-width > $max-content-width {
+@if sass_variables.$max-page-width > sass_variables.$max-content-width {
   .layout {
     &__navigation > * {
       max-width: var(--max-content-width);
