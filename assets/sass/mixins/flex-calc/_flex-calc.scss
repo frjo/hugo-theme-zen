@@ -1,3 +1,5 @@
+@use "../../sass_variables";
+
 @mixin flex($col, $gap) {
-  flex-basis: calc(100% / #{$col} - #{$gap * $base-line-height + 'rem'});
+  flex-basis: calc(100% / #{$col} - #{$gap * sass_variables.$base-line-height + 'rem'});
 }

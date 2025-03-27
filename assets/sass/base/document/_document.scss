@@ -1,3 +1,5 @@
+@use "../../mixins/debug/debug";
+
 // Document
 
 html {
@@ -16,5 +18,5 @@ body {
   accent-color: var(--color-accent);
   // Output a horizontal grid to help with debugging typography. The
   // $debug variable will toggle its output.
-  @include debug-grid();
+  @include debug.debug-grid();
 }

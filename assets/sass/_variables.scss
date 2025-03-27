@@ -1,15 +1,17 @@
+@use "sass_variables";
+
 :root {
   // Convert sass variables to css variables.
 
-  @each $name, $size in $font-size {
+  @each $name, $size in sass_variables.$font-size {
     --fs-#{$name}: #{$size};
   }
 
-  --max-content-width: #{$max-content-width};
-  --max-page-width: #{$max-page-width};
+  --max-content-width: #{sass_variables.$max-content-width};
+  --max-page-width: #{sass_variables.$max-page-width};
 
   // Base line height, unitless.
-  --base-line-height: #{$base-line-height};
+  --base-line-height: #{sass_variables.$base-line-height};
 
 
   // Set theme css variables.

@@ -1,11 +1,11 @@
 // Base styles.
 
 // Broken into modular pieces to make it easier to edit.
-@import 'reset/reset';
-@import 'document/document';
-@import 'forms/forms';
-@import 'grouping/grouping';
-@import 'headings/headings';
-@import 'images/images';
-@import 'links/links';
-@import 'tables/tables';
+@use 'reset/reset';
+@use 'document/document';
+@use 'forms/forms';
+@use 'grouping/grouping';
+@use 'headings/headings';
+@use 'images/images';
+@use 'links/links';
+@use 'tables/tables';
