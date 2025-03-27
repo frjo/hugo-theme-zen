@@ -5,7 +5,7 @@ img {
   &.image {
     --image-padding: .75rem;
 
-    @include respond-to(s) {
+    @media (min-width: 666px) {
       &.center {
         margin-inline: auto;
       }
@@ -41,7 +41,7 @@ figure {
       // Nicer text wrap, e.g. no lone word on last line.
       text-wrap: pretty;
 
-      @include respond-to(s) {
+      @media (min-width: 666px) {
         display: table-caption;
         caption-side: bottom;
         padding-block-start: 0;
@@ -52,7 +52,7 @@ figure {
       }
     }
 
-    @include respond-to(s) {
+    @media (min-width: 666px) {
       display: table;
 
       &.left {

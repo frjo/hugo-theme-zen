@@ -55,6 +55,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Colours are now set directly as css variables. You no longer need to override `_colors.scss`, instead override select colours in `_custom.scss`. This simplification was the main motivation for v5.
 * Converted most sass settings in to pure css variables.
 * Split sass and css settings it to separate files.
+* The "respond-to" mixin is deprecated in v5, use css @media directly instead.
 * No other significant changes.
 
 

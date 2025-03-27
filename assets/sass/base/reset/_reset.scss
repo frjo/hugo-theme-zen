@@ -78,7 +78,7 @@ select {
 }
 
 [type='search'] {
-  @include respond-to(s) {
+  @media (min-width: 666px) {
     // Correct the odd appearance in Safari on desktop.
     -webkit-appearance: textfield;
   }

@@ -8,7 +8,7 @@
   gap: var(--gutters);
   background-color: var(--color-header-bg);
 
-  @include respond-to(s) {
+  @media (min-width: 666px) {
     flex-direction: row;
   }
 
@@ -44,7 +44,7 @@
 
   // Wrapper for any blocks placed in the header region.
   &__region {
-    @include respond-to(s) {
+    @media (min-width: 666px) {
       margin-inline-start: auto;
     }
   }

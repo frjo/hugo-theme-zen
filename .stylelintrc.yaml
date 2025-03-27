@@ -6,6 +6,7 @@ rules:
   declaration-block-no-redundant-longhand-properties: null
   declaration-empty-line-before: null
   hue-degree-notation: number
+  media-feature-range-notation: prefix
   no-descending-specificity: null
   selector-class-pattern:
     - "^[a-z0-9\\-]+$"

@@ -16,7 +16,7 @@
     flex-grow: 1;
   }
 
-  @include respond-to(s) {
+  @media (min-width: 666px) {
     &--2 > * {
       @include flex(2, $gap);
     }

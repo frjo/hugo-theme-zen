@@ -6,7 +6,7 @@
 .header__region { // stylelint-disable selector-class-pattern
   display: none;
 
-  @include respond-to(s) {
+  @media (min-width: 666px) {
     display: block;
   }
 } // stylelint-enable selector-class-pattern
@@ -22,7 +22,7 @@
   z-index: 20;
   pointer-events: none;
 
-  @include respond-to(s) {
+  @media (min-width: 666px) {
     display: none;
   }
 
@@ -60,7 +60,7 @@
     z-index: 22;
     pointer-events: auto;
 
-    @include respond-to(s) {
+    @media (min-width: 666px) {
       display: none;
     }
 

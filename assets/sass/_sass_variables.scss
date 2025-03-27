@@ -36,7 +36,7 @@ $font-size-fluid: (
 // $font-size: $font-size-fluid;
 $font-size: $font-size-fixed;
 
-// Breakpoints
+// Breakpoints (Deprecated in v5, use css @media directly instead.)
 // Use the `respond-to(s)` mixin to use named breakpoints.
 $breakpoints: (
   'xxxl':     1222px,

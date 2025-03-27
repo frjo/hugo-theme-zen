@@ -5,7 +5,7 @@
   &__page {
     max-width: var(--max-page-width);
 
-    @include respond-to(s) {
+    @media (min-width: 666px) {
       margin-inline: auto;
       min-height: 100vh;
       min-height: 100svh;
@@ -33,7 +33,7 @@
     &__navigation > * {
       max-width: var(--max-content-width);
 
-      @include respond-to(s) {
+      @media (min-width: 666px) {
         margin-inline: auto;
       }
     }
@@ -95,7 +95,7 @@
     grid-template-columns: 1fr;
   }
 
-  @include respond-to(xl) {
+  @media (min-width: 999px) {
     &__page {
       grid-template-rows: auto
                           auto

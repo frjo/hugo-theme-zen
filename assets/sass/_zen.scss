@@ -61,7 +61,7 @@ aside {
 article {
   .submitted,
   .tags {
-    @include respond-to(s) {
+    @media (min-width: 666px) {
       display: inline-block;
       padding-inline-end: 1rem;
     }

@@ -2,7 +2,7 @@
 %zebra-table {
   --table-cell-padding: .5rem;
 
-  @include respond-to-max(s) {
+  @media (max-width: 666px) {
     --table-cell-padding: .3rem;
   }
 
@@ -34,7 +34,7 @@
 %responsive-table {
   --table-gap: .5rem;
 
-  @include respond-to-max(s) {
+  @media (max-width: 666px) {
     th {
       display: none;
     }

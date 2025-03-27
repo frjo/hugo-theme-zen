@@ -99,7 +99,7 @@ textarea {
 }
 
 // For forms on mobile with single field add space between it and the submit button.
-@include respond-to(s) {
+@media (min-width: 666px) {
   input:only-of-type {
     &:has(+ [type='submit']) {
       margin-inline-end: .5rem;
