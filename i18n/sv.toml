@@ -58,6 +58,9 @@ other = "Redigera"
 [string_view]
 other = "Visa"
 
+[string_permalink]
+other = "Länk"
+
 [js_required]
 other = "Du behöver ha Javascript aktiverat för att använda denna funktion."
 

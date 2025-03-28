@@ -58,6 +58,9 @@ other = "Edit"
 [string_view]
 other = "View"
 
+[string_permalink]
+other = "Permalink"
+
 [js_required]
 other = "يجب تفعيل جافاسكريبت في المتصفح لاستخدام هذه الوظيفة."
 

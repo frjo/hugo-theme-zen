@@ -58,6 +58,9 @@ other = "Hariri"
 [string_view]
 other = "Tazama"
 
+[string_permalink]
+other = "Permalink"
+
 [js_required]
 other = "Javascript lazima iwezeshwe ili kutumia chaguo hili la kukokotoa."
 

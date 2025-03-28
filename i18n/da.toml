@@ -58,6 +58,9 @@ other = "Edit"
 [string_view]
 other = "View"
 
+[string_permalink]
+other = "Permalink"
+
 [js_required]
 other = "Du skal have Javascript slået til for at bruge denne funktion."
 

@@ -58,6 +58,9 @@ other = "Edit"
 [string_view]
 other = "View"
 
+[string_permalink]
+other = "Permalink"
+
 [js_required]
 other = "Javascript-teknologia täytyy olla tuettuna jotta tämä toiminto on käytössä."
 

@@ -59,6 +59,9 @@ other = "Edit"
 [string_view]
 other = "View"
 
+[string_permalink]
+other = "Permalink"
+
 [js_required]
 other = "Você deve ter o Javascript habilitado para usar este formulário de contato"
 

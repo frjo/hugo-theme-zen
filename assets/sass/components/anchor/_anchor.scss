@@ -15,9 +15,10 @@
   a {
     opacity: 0;
     text-decoration: none;
+    width: fit-content;
   }
 
-  &:focus-visible,
+  &:has(:focus-visible),
   &:hover {
     a {
       opacity: var(--anchor-opacity);

@@ -58,6 +58,9 @@ other = "Edit"
 [string_view]
 other = "View"
 
+[string_permalink]
+other = "Permalink"
+
 [js_required]
 other = "Javascript muss aktiviert sein um dieses Kontaktformular zu nutzen."
 
