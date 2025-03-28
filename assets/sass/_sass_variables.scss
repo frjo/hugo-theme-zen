@@ -72,6 +72,3 @@ $max-content-width: 1111px;
 // Setting this to a larger value than max-content-width allows
 // content with class "stretch" to stretch out to the page edge.
 $max-page-width: $max-content-width;
-
-// Show horizontal grid to help with debugging typography.
-$debug: false;
