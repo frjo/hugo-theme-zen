@@ -41,7 +41,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Podcast](#podcast)
 * [Shortcodes](#shortcodes)
 * [Content security policy headers](#Content-security-policy-headers)
-* [Choose between using AlpineJS, jQuery or Umbrella JS](#choose-between-using-alpinejs-jquery-or-umbrella-js)
 * [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
 * [Repository links](#repository-links)
 * [Math typesetting with KaTeX](#math-typesetting-with-katex)
@@ -134,7 +133,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * CSS grid and flex throughout
 * HTML5
 * Hugo Pipes for images, js and sass
-* jQuery 3
 * Math typesetting with KaTeX
 * Micro.blog
 * Meta tags and JSON-LD
@@ -144,7 +142,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Responsive design
 * RSS and JSON feeds with full content
 * Search with FlexSearch.js
-* Umbrella JS 3 (tiny jQuery replacement, 2.5kB when gzipped)
 
 
 ## Minimum Hugo version
@@ -442,6 +439,7 @@ Example render hook to rewrite external links so they open in a new tab. To acti
 
 I rarely use this one, I think the user should decide how links open.
 
+
 ## Multilingual
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
@@ -542,6 +540,7 @@ Two types of spam protection are implemented. The form can only be posted after 
 Form validation is handled by HTML5 and there is some CSS to make it look nice.
 
 Javascript is used for spam protection and to display error/success messages.
+
 
 ## Cookie consent
 
@@ -817,48 +816,6 @@ The **content** that should be wrapped. Some more content.
 
 Includes tracking code for Matomo or Google in a way that supports Content security policy headers. Read more in my blog post [Content security policy headers when using Matomo or Google analytics](https://xdeb.org/post/2020/01/14/content-security-policy-headers-when-using-matomo-or-google-analytics/).
 
-## Choose between using AlpineJS, jQuery or Umbrella JS
-
-To add AlpineJS, jQuery or Umbrella JS, set the related parameter to true in the configuration file or in the front matter of specific pages. No problem having them loaded on the same page.
-
-Personally I use vanilla JS nowadays and I'm playing around with AlpineJS.
-
-This is the way I construct my JavaScript files.
-
-**Vanilla JS:**
-
-```js
-(function () {
-
-  // Add a js class to the html-tag when JavsScript is active.
-  document.querySelector('html').classList.replace('nojs', 'js');
-
-})();
-```
-
-
-**Umbrella JS:**
-
-```js
-(function ($) {
-
-  // Add your code here.
-  $('html').removeClass('nojs').addClass('js');
-
-})(u);
-```
-
-**jQuery:**
-
-```js
-(function ($) {
-
-  // Add your code here.
-  $('html').removeClass('nojs').addClass('js');
-
-})(jQuery);
-```
-
 
 ## Use npm to lint Sass and JavaScript
 
@@ -896,6 +853,7 @@ repository:
 
 Copied from example by [jmooring](https://discourse.gohugo.io/t/hugo-v0-112-0-new-template-functions/44512)
 
+
 ## Math typesetting with KaTeX
 
 Download the latest release from <https://github.com/KaTeX/KaTeX/releases>. Unpack and place the resulting "katex" directory in the root `static` directory.
@@ -927,7 +885,6 @@ Lorem {{< math >}}E=mc^2{{< /math >}} ipsum
 `~~~~ math`  
 `[ \int_0^1 \frac{dx}{e^x} =  \frac{e-1}{e} ]`  
 `~~~~`
-
 
 
 ## Getting help
