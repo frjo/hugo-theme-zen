@@ -109,18 +109,14 @@ article {
 // Navigation
 
 .main-menu {
-  margin-block-start: .75rem;
-  outline: 0;
-
-  li {
-    margin-block-end: .75rem;
-    padding: 0;
+  .page > & {
+    margin-block: var(--spacing-xs);
   }
 
   a {
     display: block;
     background-color: var(--color-button);
-    color: var(--color-text-bg);
+    color: var(--color-button-text);
     padding: 2px 8px;
     text-decoration: none;
 
@@ -131,7 +127,6 @@ article {
 
     &:active,
     &[aria-current] {
-      background-color: var(--color-button-hover);
       text-decoration: underline;
     }
   }
