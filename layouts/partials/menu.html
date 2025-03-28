@@ -1,4 +1,4 @@
-<nav class="main-menu{{ if not ($.Param "menuinheader") }} layout__navigation{{ end }}" aria-label="{{ i18n "menu_title" }}">
+<nav class="main-menu{{ if not ($.Param "menuinheader") }} mx--xs layout__navigation{{ end }}" aria-label="{{ i18n "menu_title" }}">
 <ul class="flex-inline mx--0">
 {{ $currentPage := . -}}
 {{ range site.Menus.main -}}

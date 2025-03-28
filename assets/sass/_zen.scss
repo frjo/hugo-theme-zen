@@ -109,10 +109,6 @@ article {
 // Navigation
 
 .main-menu {
-  .page > & {
-    margin-block: var(--spacing-xs);
-  }
-
   a {
     display: block;
     background-color: var(--color-button);
