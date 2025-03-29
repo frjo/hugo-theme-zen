@@ -8,7 +8,8 @@
   --anchor-opacity: .4;
 
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
+  justify-content: start;
   align-items: baseline;
   gap: var(--anchor-gap);
 

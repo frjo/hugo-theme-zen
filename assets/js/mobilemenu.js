@@ -4,9 +4,20 @@
  */
 
 (function () {
+  const main_menu = document.querySelector('.main-menu');
+  const header_region = document.querySelector('.header__region');
   const nav = document.querySelector('.mobile-nav');
   const sheet = document.querySelector('.mobile-nav__sheet');
   const toggle = document.querySelector('.mobile-nav__toggle');
+
+  // Switch to mobil menu on small screens.
+  // The mobile menu depends on js so we use js to activate it.
+  const small_screen = window.matchMedia('(max-width: 666px)').matches;
+  if (small_screen) {
+    main_menu.hidden = true;
+    header_region.hidden = true;
+    nav.hidden = false;
+  }
 
   function navopen() {
     nav.dataset.navopen = 'true';

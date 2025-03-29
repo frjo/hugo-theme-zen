@@ -88,14 +88,16 @@ button,
     appearance: none;
     padding: .5rem;
     color: currentcolor;
-    background-color: unset;
+    background: unset;
     border: unset;
+    text-shadow: unset;
 
     &:hover,
     &:focus-visible,
     &:active {
       color: currentcolor;
-      background-color: unset;
+      background: unset;
+      text-shadow: unset;
       scale: 1.15;
     }
   }
