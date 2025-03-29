@@ -556,7 +556,7 @@ It it recommended to add a link or button to allow users to change their choice.
 
 ```html
 <button class="clearcookieconsent">Cookie settings</button>
-<a src="" class="clearcookieconsent">Cookie settings</a>
+<a href="#" class="clearcookieconsent">Cookie settings</a>
 ```
 
 When a user clickes the button/link the localStorage item "cookieconsent" is cleared and the cookieconsent dialog is shown again.
