@@ -27,7 +27,7 @@ button,
   color: var(--color-button-text);
   text-shadow: var(--color-button) 0 1px 0;
   background: linear-gradient(var(--color-button), var(--color-button-hover));
-  border: 1px solid var(--color-button);
+  border: 1px solid var(--color-button-hover);
   border-radius: var(--radius-s);
 
   &:hover,
@@ -38,6 +38,10 @@ button,
     color: var(--color-button-text-hover);
     text-shadow: var(--color-button-hover) 0 1px 0;
     background: linear-gradient(var(--color-button-hover), var(--color-button));
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 5px var(--color-black-40);
   }
 }
 
@@ -51,38 +55,21 @@ button,
 
   &--alt {
     color: var(--color-button-text-hover);
-    background-color: var(--color-button-hover);
+    background: var(--color-button-hover);
 
     &:hover,
     &:focus-visible,
     &:active {
       color: var(--color-button-text);
-      background-color: var(--color-button);
+      background: var(--color-button);
     }
   }
 
   &--outline {
     color: var(--color-button);
-    background-color: var(--color-button-text);
-    border-color: var(--color-button);
-
-    &:hover,
-    &:focus-visible,
-    &:active {
-      color: var(--color-button-text);
-      background-color: var(--color-button);
-    }
+    background: var(--color-button-text);
   }
 
-  &--shadow {
-    &:hover {
-      box-shadow: 2px 2px 5px 1px var(--color-button-disabled);
-    }
-
-    &:active {
-      box-shadow: inset 2px 2px 5px 1px var(--color-button);
-    }
-  }
 
   &--plain {
     appearance: none;
