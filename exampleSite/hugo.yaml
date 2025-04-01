@@ -6,10 +6,6 @@ languageCode: "en-GB"
 defaultContentLanguage: "en"
 pluralizelisttitles: false
 removePathAccents: true
-rssLimit: 20
-pagination:
-  pagerSize: 10
-  path: page
 
 outputFormats:
   SearchIndex:
@@ -34,10 +30,27 @@ params:
   logoWidth: 64
   mobileMenu: true
   poweredby: true
-  realfavicongenerator: true
   sidebar: true
   submitted: true
   author:
     name: "Your Name"
     url: "https://example.org/somepage"
     avatar: "path/to/some-image.jpg"
+
+menus:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 10
+    - name: Documentation
+      pageRef: /documentation
+      weight: 20
+    - name: About
+      pageRef: /about
+      weight: 30
+    - name: Contact
+      pageRef: /contact
+      weight: 40
+    - name: Search
+      pageRef: /search
+      weight: 50
