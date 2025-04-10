@@ -2,10 +2,11 @@
 
 .header,
 %header {
+  --header-gap: var(--spacing-s);
   padding-block: var(--gutters);
   display: flex;
   flex-direction: column;
-  gap: var(--gutters);
+  gap: var(--header-gap);
   background-color: var(--color-header-bg);
 
   @media (min-width: 666px) {
