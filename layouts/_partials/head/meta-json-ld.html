@@ -6,7 +6,7 @@
     {{ if .IsPage -}}
     "@type": {{ if in $blogSections .Section }}"BlogPosting",{{ else }}"WebPage",
     {{ if in $breadcrumbSections .Section -}}
-    "breadcrumb": {{ partial "meta-breadcrumb-json-ld.html" . }},
+    "breadcrumb": {{ partial "head/meta-breadcrumb-json-ld.html" . }},
     {{ end -}}
     {{ end -}}
     "headline": {{ .Title }},
@@ -24,7 +24,7 @@
     {{ else -}}
     "@type": "WebPage",
     {{ if in $breadcrumbSections .Section -}}
-    "breadcrumb": {{ partial "meta-breadcrumb-json-ld.html" . }},
+    "breadcrumb": {{ partial "head/meta-breadcrumb-json-ld.html" . }},
     {{ end -}}
     "url" : {{ .Permalink }},
     "name": {{ .Title }},

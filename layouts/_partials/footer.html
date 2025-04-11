@@ -1,0 +1,4 @@
+{{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
+<p>{{ with site.Copyright }}{{ . | site.Home.RenderString }}{{ else }}<span>© {{ site.Title }}</span>{{ end }}</p>
+{{ with $.Param "footer" }}<p>{{ . | site.Home.RenderString }}</p>{{ end }}
+{{ if $.Param "poweredby" }}<p>Powered by <a href="https://gohugo.io/">Hugo</a> and the <a href="https://github.com/frjo/hugo-theme-zen">Zen theme</a>.</p>{{ end }}

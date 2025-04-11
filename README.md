@@ -379,9 +379,9 @@ The theme will autodetect them and add the needed code.
 
 ### Head and footer partials
 
-If you create partials named `head.html` and/or `footer.html` they will be used. They do not exist in the theme but are supported as a convenience.
+If you create partials named `head/extra.html` and/or `footer.html` they will be used. They do not exist or are empty in the theme but are supported as a convenience.
 
-Content in the "head" partial will be added to the end of the "head" tag, perhaps some extra css or javascript.
+Content in the "head/extra" partial will be added to the end of the "head" tag, perhaps some extra css or javascript.
 
 Content in the "footer" partial will replace all the default content in the "footer" tag.
 
