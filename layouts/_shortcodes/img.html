@@ -91,4 +91,4 @@
 
 {{ with $link }}<a class="image-link" href="{{ . }}">{{ end -}}
 <img class="image{{ with $class }} {{ . }}{{ end }}" src="{{ $src }}" loading="lazy"{{ with $srcsetw }} srcset="{{ delimit  .  ", " }}"{{ end }}{{ if isset .Params "alt" }} alt="{{ $alt }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>
-{{- if $link }}</a>{{ end }}
+{{- if $link }}</a>{{ end -}}

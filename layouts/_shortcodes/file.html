@@ -34,3 +34,4 @@
 {{ end -}}
 
 <a class="file{{ with $class }} {{ . }}{{ end }}" href="{{ $src }}"{{ if $newtab }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ $text }}</a>
+{{- /* chomp trailing newline */ -}}
