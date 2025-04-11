@@ -20,7 +20,7 @@ copy_files=("themes/zen/assets/sass/_extra.scss:assets/sass/_extra.scss"
             "themes/zen/assets/sass/_fonts.scss:assets/sass/_fonts.scss"
             "themes/zen/assets/sass/_custom.scss:assets/sass/_custom.scss"
             "themes/zen/assets/sass/_zen.scss:assets/sass/_zen.scss"
-            "themes/zen/layouts/index.html:layouts/index.html"
+            "themes/zen/layouts/home.html:layouts/home.html"
             "themes/zen/exampleSite/hugo.yaml:hugo.yaml"
             "themes/zen/.editorconfig:.editorconfig")
 
