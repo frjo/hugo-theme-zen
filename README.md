@@ -50,6 +50,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Version 5.x
 
+* Minimum Hugo version is now v0.146.0.
 * Rearanged a lot of variables so some work to upgrade if you have customisations. This is the reson for making this v5. I'm working towards using vanilla css only.
 * Colours are now set directly as css variables. You no longer need to override `_colors.scss`, instead override select colours in `_custom.scss`. This simplification was the main motivation for v5.
 * Converted most sass settings in to pure css variables.
@@ -62,7 +63,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 1. Remove your projects `_colors.scss`, take note of the colours you have changed.
 2. Override colours and other css variables in projects `_custom.scss`.
-2. Update/remove/convert to css vars the variables you overridden in projects `_extra.scss` so they match changes in themes `_variables.scss` and `_sass_variables.scss`.
+3. Update/remove/convert to css vars the variables you overridden in projects `_extra.scss` so they match changes in themes `_variables.scss` and `_sass_variables.scss`.
 
 
 ## Version 4.x
@@ -146,7 +147,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Minimum Hugo version
 
-Hugo Extended version 0.124.0 or higher is required.
+Hugo Extended version 0.146.0 or higher is required.
 
 
 ## Installation
