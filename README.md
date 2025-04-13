@@ -52,7 +52,9 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 * Minimum Hugo version is now v0.146.0. This plus the rearanged variables are the reasons for making this v5.
 * Rearanged a lot of variables. This will require some work to upgrade if you have customisations. I'm working towards using vanilla css only.
+* Using the new template structure introduced in v0.146.0. If you have overriden templates you will need to use the same strucure in your root layout directory.
 * Colours are now set directly as css variables. You no longer need to override `_colors.scss`, instead override select colours in `_custom.scss`. This simplification was the main motivation for v5.
+* Homepage/frontpage template renamed from `index.html` to `home.html`.
 * Converted most sass settings in to pure css variables.
 * Split sass and css settings it to separate files.
 * The "respond-to" mixin is deprecated in v5, use css @media directly instead.
@@ -65,7 +67,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 2. Remove your projects `_colors.scss`, take note of the colours you have changed.
 3. Override colours and other css variables in projects `_custom.scss`.
 4. Update/remove/convert variables you overridden in projects `_extra.scss` so they match changes in themes `_variables.scss` and `_sass_variables.scss`.
-
+5. If you have overriden templates you will need to use the new template strucure in your root layout directory.
 
 ## Version 4.x
 
