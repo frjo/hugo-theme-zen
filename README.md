@@ -50,9 +50,9 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Version 5.x
 
-* Minimum Hugo version is now v0.146.0. This plus the rearanged variables are the reasons for making this v5.
-* Rearanged a lot of variables. This will require some work to upgrade if you have customisations. I'm working towards using vanilla css only.
-* Using the new template structure introduced in v0.146.0. If you have overriden templates you will need to use the same strucure in your root layout directory.
+* Minimum Hugo version is now v0.146.0. This plus the rearranged variables are the reasons for making this v5.
+* Rearranged a lot of variables. This will require some work to upgrade if you have customisations. I'm working towards using vanilla css only.
+* Using the new template structure introduced in v0.146.0. If you have overridden templates you will need to use the same structure in your root layout directory.
 * Colours are now set directly as css variables. You no longer need to override `_colors.scss`, instead override select colours in `_custom.scss`. This simplification was the main motivation for v5.
 * Homepage/frontpage template renamed from `index.html` to `home.html`.
 * Converted most sass settings in to pure css variables.
@@ -67,11 +67,11 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 2. Remove your projects `_colors.scss`, take note of the colours you have changed.
 3. Override colours and other css variables in projects `_custom.scss`.
 4. Update/remove/convert variables you overridden in projects `_extra.scss` so they match changes in themes `_variables.scss` and `_sass_variables.scss`.
-5. If you have overriden templates you will need to use the new template strucure in your root layout directory.
+5. If you have overridden templates you will need to use the new template structure in your root layout directory.
 
 ## Version 4.x
 
-* Minimum Hugo version is now v0.124.0. This is the reson for making this v4.
+* Minimum Hugo version is now v0.124.0. This is the reason for making this v4.
 * Updated a number of things to remove all "WARN  deprecated".
 * No other significant changes.
 
@@ -117,7 +117,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 * Replaced "normalize" with slimmer and updated "reset". Removed everything for old IE versions.
 * Use of css4 variables. Colours are now used like this `var(--color-brand)`.
-* The colors, fonts and variables sass files are now in the root sass directory.
+* The colours, fonts and variables sass files are now in the root sass directory.
 * Use `site` instead of `.Site` and `$.Site`.
 * Use a default line-height of unitless 1.5. For headers it is set to 1.3.
 * Added `_extra.scss` where variables can be overridden.
@@ -563,7 +563,7 @@ It it recommended to add a link or button to allow users to change their choice.
 <a href="#" class="clearcookieconsent">Cookie settings</a>
 ```
 
-When a user clickes the button/link the localStorage item "cookieconsent" is cleared and the cookieconsent dialog is shown again.
+When a user clicks the button/link the localStorage item "cookieconsent" is cleared and the cookieconsent dialog is shown again.
 
 ![Lighthouse report](https://raw.githubusercontent.com/frjo/hugo-theme-zen/main/images/cookieconsent.png)
 
@@ -824,7 +824,7 @@ Includes tracking code for Matomo or Google in a way that supports Content secur
 ## Use npm to lint Sass and JavaScript
 
 * Lint your Sass using stylelint.
-* Lint your JavaScript using eslint.
+* Lint your JavaScript using biome.
 * Can lint files in the theme as well as the project assets directory.
 
 Set up your front-end development build tools:
