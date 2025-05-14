@@ -73,7 +73,8 @@ button,
 
   &--plain {
     appearance: none;
-    padding: .5rem;
+    padding: 0;
+    margin: .5rem .75rem;
     color: currentcolor;
     background: unset;
     border: unset;
