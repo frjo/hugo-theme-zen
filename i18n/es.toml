@@ -1,0 +1,117 @@
+
+[menu_title]
+other = "Menú principal"
+
+[menu_home]
+other = "Inicio"
+
+[menu_mobile]
+other = "Menú"
+
+[pager_next]
+other = "Siguiente"
+
+[pager_prev]
+other = "Anterior"
+
+[taxo_tags]
+other = "Etiquetas"
+
+[last_mod]
+other = "Actualizado:"
+
+[created]
+other = "Creado:"
+
+[search_placeholder]
+other = "Ingresa los términos que deseas buscar."
+
+[search_title]
+other = "Buscar"
+
+[search_loading]
+other = "Cargando índice de búsqueda…"
+
+[string_at]
+other = "en"
+
+[string_by]
+other = "por"
+
+[string_follow]
+other = "seguir"
+
+[string_in]
+other = "en"
+
+[string_on]
+other = "el"
+
+[string_recent_content]
+other = "Contenido reciente"
+
+[string_see_also]
+other = "Ver también"
+
+[string_edit]
+other = "Editar"
+
+[string_view]
+other = "Ver"
+
+[string_permalink]
+other = "Enlace permanente"
+
+[js_required]
+other = "Debes tener JavaScript habilitado para usar esta función."
+
+[contact_submitted]
+other = "Tu mensaje fue enviado."
+
+[contact_error]
+other = "Hubo un error al enviar el mensaje."
+
+[contact_name]
+other = "Nombre"
+
+[contact_name_placeholder]
+other = "Tu nombre"
+
+[contact_mail]
+other = "Correo electrónico"
+
+[contact_mail_placeholder]
+other = "Tu correo electrónico"
+
+[contact_subject]
+other = "Asunto"
+
+[contact_subject_placeholder]
+other = "Un asunto breve"
+
+[contact_message]
+other = "Mensaje"
+
+[contact_message_placeholder]
+other = "Aquí va el mensaje…"
+
+[contact_submit]
+other = "Enviar mensaje"
+
+[contact_honeypot]
+other = "Omite esto si eres humano"
+
+[lang_select_title]
+other = "Selector de idioma"
+
+[cookieconsent_message]
+other = "Este sitio web usa cookies. Algunas son necesarias para su funcionamiento. Las cookies de seguimiento y análisis son opcionales."
+
+[cookieconsent_accept]
+other = "Aceptar todo"
+
+[cookieconsent_decline]
+other = "Solo las necesarias"
+
+[privacy_policy]
+other = "Política de privacidad"
