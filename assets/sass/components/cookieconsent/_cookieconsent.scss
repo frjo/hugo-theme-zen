@@ -21,6 +21,10 @@
     display: flex;
     gap: .5rem;
   }
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 .button {
