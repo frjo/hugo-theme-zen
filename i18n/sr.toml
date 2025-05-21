@@ -114,3 +114,6 @@ other = "Само неопходне"
 
 [privacy_policy]
 other = "Правила о приватности"
+
+[copy_code]
+other = "Copy code"

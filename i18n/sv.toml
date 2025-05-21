@@ -114,3 +114,6 @@ other = "Bara nödvändiga"
 
 [privacy_policy]
 other = "Personuppgiftsbehandling"
+
+[copy_code]
+other = "Kopiera kod"

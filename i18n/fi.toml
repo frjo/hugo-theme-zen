@@ -114,3 +114,6 @@ other = "Hylkää seuranta"
 
 [privacy_policy]
 other = "Yksityisyyskäytäntö"
+
+[copy_code]
+other = "Copy code"

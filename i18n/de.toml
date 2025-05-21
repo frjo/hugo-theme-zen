@@ -114,3 +114,6 @@ other = "Tracking ablehnen"
 
 [privacy_policy]
 other = "Datenschutzrichtlinie"
+
+[copy_code]
+other = "Copy code"

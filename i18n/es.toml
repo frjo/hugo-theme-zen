@@ -115,3 +115,6 @@ other = "Solo las necesarias"
 
 [privacy_policy]
 other = "Política de privacidad"
+
+[copy_code]
+other = "Copy code"

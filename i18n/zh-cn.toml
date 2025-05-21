@@ -114,3 +114,6 @@ other = "只允许必要的"
 
 [privacy_policy]
 other = "隐私政策"
+
+[copy_code]
+other = "Copy code"

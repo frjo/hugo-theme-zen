@@ -133,3 +133,47 @@ article {
 .search-text {
   font-size: var(--fs-l);
 }
+
+// Copy code
+
+[data-codeblock] {
+  position: relative;
+
+  & > pre {
+    padding-block-start: 1lh;
+  }
+}
+
+.codebutton {
+  position: absolute;
+  inset-inline-end: .2rem;
+  background: unset;
+  border: unset;
+  text-shadow: unset;
+  font-size: var(--fs-l);
+  color: var(--color-border);
+  rotate: 90deg;
+  cursor: pointer;
+
+  & > span {
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    scale: 1.15;
+  }
+}
+
+.flash-item {
+  animation: flash 500ms ease-in-out 1;
+}
+
+@keyframes flash {
+  50% {
+    border-color: var(--color-warning);
+    background-color: var(--color-warning-bg);
+  }
+}
+

@@ -1,0 +1,14 @@
+{{ $result := transform.HighlightCodeBlock . -}}
+<div data-codeblock itemscope itemtype="https://schema.org/SoftwareSourceCode" {{ range $k, $v := .Attributes }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }}>
+<button data-codebutton class="codebutton" title="{{ i18n "copy_code" }}"><span>⧉</span></button>
+<meta itemprop="codeSampleType" content="snippet">
+<meta data-codetext itemprop="text" content="{{ .Inner | jsonify }}">
+{{ if .Type -}}
+<meta itemprop="programmingLanguage" content="{{ .Type }}">
+<pre tabindex="0" class="chroma">
+<code class="language-{{ .Type }}" data-lang="{{ .Type }}">{{ $result.Inner }}</code>
+</pre>
+{{ else -}}
+{{ $result.Wrapped }}
+{{ end -}}
+</div>
