@@ -10,9 +10,7 @@
 
 .button,
 %button,
-button,
 [type='button'],
-[type='reset'],
 [type='submit'] {
   @extend %button--disabled;
   // Some styles don't apply to <a> links since they are inline elements by default.
@@ -68,26 +66,6 @@ button,
   &--outline {
     color: var(--color-button);
     background: var(--color-button-text);
-  }
-
-
-  &--plain {
-    appearance: none;
-    padding: 0;
-    margin: .5rem .75rem;
-    color: currentcolor;
-    background: unset;
-    border: unset;
-    text-shadow: unset;
-
-    &:hover,
-    &:focus-visible,
-    &:active {
-      color: currentcolor;
-      background: unset;
-      text-shadow: unset;
-      scale: 1.15;
-    }
   }
 }
 
