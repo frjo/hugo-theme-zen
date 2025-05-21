@@ -62,7 +62,9 @@ a:active {
 .link-inverted,
 %link-inverted {
   a {
-    color: var(--color-link-inverted);
+    &:link {
+      color: var(--color-link-inverted);
+    }
 
     &:visited {
       color: var(--color-link-visited-inverted);
