@@ -559,7 +559,7 @@ The users choice is stored in localStorage item "cookieconsent".
 It it recommended to add a link or button to allow users to change their choice. Adding the class "clearcookieconsent" is all that is needed.
 
 ```html
-<button class="clearcookieconsent">Cookie settings</button>
+<button class="button clearcookieconsent">Cookie settings</button>
 <a href="#" class="clearcookieconsent">Cookie settings</a>
 ```
 
