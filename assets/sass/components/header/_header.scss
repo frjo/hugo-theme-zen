@@ -3,7 +3,9 @@
 .header,
 %header {
   --header-gap: var(--spacing-s);
-  padding-block: var(--gutters);
+  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
+  // stylelint-disable-next-line function-name-case
+  padding-block: Min(var(--gutters), var(--spacing-m));
   display: flex;
   flex-direction: column;
   gap: var(--header-gap);
