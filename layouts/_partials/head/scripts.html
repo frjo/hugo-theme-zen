@@ -1,3 +1,5 @@
+{{ $noop := .WordCount -}}
+
 {{ $opts := dict "minify" true -}}
 {{ if eq hugo.Environment "development" -}}
   {{ $opts = merge $opts (dict "minify" false) -}}
@@ -41,6 +43,11 @@
 {{ if $.Param "tables" -}}
 {{ $tables := resources.Get "js/tables.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $tables.RelPermalink }}"></script>
+{{ end -}}
+
+{{ if or ($.Param "codeblocks") (.Page.Store.Get "codeblocks") -}}
+{{ $codeblocks := resources.Get "js/codeblocks.js" | js.Build $opts | fingerprint -}}
+<script defer src="{{ $codeblocks.RelPermalink }}"></script>
 {{ end -}}
 
 {{ if .HasShortcode "contact" -}}

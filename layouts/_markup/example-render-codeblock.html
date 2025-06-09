@@ -1,3 +1,4 @@
+{{ .Page.Store.Set "codeblocks" true -}}
 {{ $result := transform.HighlightCodeBlock . -}}
 <div data-codeblock itemscope itemtype="https://schema.org/SoftwareSourceCode" {{ range $k, $v := .Attributes }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }}>
 <button data-codebutton class="codebutton" title="{{ i18n "copy_code" }}"><span>⧉</span></button>
