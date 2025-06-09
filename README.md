@@ -447,8 +447,6 @@ I rarely use this one, I think the user should decide how links open.
 
 Example render hook to "Copy code" buttons to codeblocks". To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-codeblock.html` to `layouts/_default/_markup/render-codeblock.html`.
 
-I rarely use this one, I think the user should decide how links open.
-
 
 ## Multilingual
 
