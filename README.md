@@ -431,15 +431,21 @@ By setting the Hugo environment variable to "development" (default when running 
 
 ### Add anchor links to headings
 
-Example render hook template for headings that will add anchor links. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-heading.html.example` to `layouts/_default/_markup/render-heading.html`.
+Example render hook template for headings that will add anchor links. To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-heading.html` to `layouts/_default/_markup/render-heading.html`.
 
 ### Process Markdown images
 
-Example render hook that process images in the same way as the "img" shortcode. See top of the file for settings to adjust it to your needs. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-image.html.example` to `layouts/_default/_markup/render-image.html`.
+Example render hook that process images in the same way as the "img" shortcode. See top of the file for settings to adjust it to your needs. To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-image.html` to `layouts/_default/_markup/render-image.html`.
 
 ### Make external links open in a new tab.
 
-Example render hook to rewrite external links so they open in a new tab. To activate it copy the file `~/theme/zen/layouts/_default/_markup/render-link.html.example` to `layouts/_default/_markup/render-link.html`.
+Example render hook to rewrite external links so they open in a new tab. To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-link.html` to `layouts/_default/_markup/render-link.html`.
+
+I rarely use this one, I think the user should decide how links open.
+
+### Add "Copy code" button to codeblocks.
+
+Example render hook to "Copy code" buttons to codeblocks". To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-codeblock.html` to `layouts/_default/_markup/render-codeblock.html`.
 
 I rarely use this one, I think the user should decide how links open.
 
@@ -533,7 +539,7 @@ The only setting is "searchLimit" that defaults to 20.
 
 If your server support php with the mail() command (very common) you can use the included contact form feature to get a contact form for your site.
 
-1. Copy the file `themes/zen/php/contact.php.example` to `static/php/contact.php`.
+1. Copy the file `themes/zen/php/contact.php` to `static/php/contact.php`.
 2. Edit the contact.php file so it has your own e-mail address. You may also change the mail subject prefix.
 3. Add the shortcode `{{< contact >}}` to a page. The contact.js file gets loaded automatically on pages that use the shortcode.
 
