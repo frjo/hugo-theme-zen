@@ -431,21 +431,21 @@ By setting the Hugo environment variable to "development" (default when running 
 
 ### Add anchor links to headings
 
-Example render hook template for headings that will add anchor links. To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-heading.html` to `layouts/_default/_markup/render-heading.html`.
+Example render hook template for headings that will add anchor links. To activate it copy the file `~/theme/zen/layouts/markup_examples/render-heading.html` to `layouts/_markup/render-heading.html`.
 
 ### Process Markdown images
 
-Example render hook that process images in the same way as the "img" shortcode. See top of the file for settings to adjust it to your needs. To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-image.html` to `layouts/_default/_markup/render-image.html`.
+Example render hook that process images in the same way as the "img" shortcode. See top of the file for settings to adjust it to your needs. To activate it copy the file `~/theme/zen/layouts/_markup/render-image.html` to `layouts/_markup/render-image.html`.
 
 ### Make external links open in a new tab.
 
-Example render hook to rewrite external links so they open in a new tab. To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-link.html` to `layouts/_default/_markup/render-link.html`.
+Example render hook to rewrite external links so they open in a new tab. To activate it copy the file `~/theme/zen/layouts/markup_examples/render-link.html` to `layouts/_markup/render-link.html`.
 
 I rarely use this one, I think the user should decide how links open.
 
 ### Add "Copy code" button to codeblocks.
 
-Example render hook to "Copy code" buttons to codeblocks". To activate it copy the file `~/theme/zen/layouts/_default/_markup/example-render-codeblock.html` to `layouts/_default/_markup/render-codeblock.html`.
+Example render hook to "Copy code" buttons to codeblocks". To activate it copy the file `~/theme/zen/layouts/markup_examples/render-codeblock.html` to `layouts/_markup/render-codeblock.html`.
 
 
 ## Multilingual
