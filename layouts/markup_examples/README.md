@@ -1,0 +1,1 @@
+Move wanted render hook file to the project `layout/_markup` directory to activate.
