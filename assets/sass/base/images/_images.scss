@@ -36,14 +36,13 @@ figure {
   &.image {
     figcaption {
       padding-block-start: var(--image-padding);
+      contain: inline-size;
       // Set max text line width in main for readability.
       max-width: var(--max-line-width);
       // Nicer text wrap, e.g. no lone word on last line.
       text-wrap: pretty;
 
       @media (min-width: 666px) {
-        display: table-caption;
-        caption-side: bottom;
         padding-block-start: 0;
       }
 
@@ -53,7 +52,7 @@ figure {
     }
 
     @media (min-width: 666px) {
-      display: table;
+      inline-size: fit-content;
 
       &.left {
         figcaption {
