@@ -17,13 +17,13 @@
 .js-hidden,
 %js-hidden {
   html.js & {
-    @extend %hidden;
+    display: none;
   }
 }
 
 .nojs-hidden,
 %nojs-hidden {
   html.nojs & {
-    @extend %hidden;
+    display: none;
   }
 }
