@@ -1,6 +1,7 @@
 ---
 title: "Contact"
-contactform: true
+params:
+  contactform: true
 
 ---
 
