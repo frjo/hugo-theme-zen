@@ -1,6 +1,7 @@
 ---
 title: "Quickstart"
-author: "Fredrik Jonsson"
+params:
+  author: "Fredrik Jonsson"
 
 ---
 

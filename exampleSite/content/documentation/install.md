@@ -1,6 +1,7 @@
 ---
 title: "Installation"
-author: "Fredrik Jonsson"
+params:
+  author: "Fredrik Jonsson"
 
 ---
 
