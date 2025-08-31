@@ -1,6 +1,7 @@
 ---
 title: "Create a theme"
-author: "Fredrik Jonsson"
+params:
+  author: "Fredrik Jonsson"
 
 ---
 
