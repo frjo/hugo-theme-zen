@@ -1,6 +1,7 @@
 ---
 title: "Configuration"
-author: "Fredrik Jonsson"
+params:
+  author: "Fredrik Jonsson"
 
 ---
 
