@@ -13,7 +13,7 @@ _inputs:
     comment: The author of the page.
   description:
     type: textarea
-    comment: Short desciption, for search engines and sharing.
+    comment: Short description, for search engines and sharing.
   draft:
     type: switch
   image:

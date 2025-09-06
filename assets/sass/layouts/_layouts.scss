@@ -51,7 +51,7 @@
         minmax(var(--gutters), 1fr) [stretch-end];
       // stylelint-enable function-name-case
       padding-inline: 0;
-      // Stop content in main from streatching.
+      // Stop content in main from stretching.
       height: fit-content;
 
       & > :not(.breakout, .stretch) {
