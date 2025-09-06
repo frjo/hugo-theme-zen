@@ -289,7 +289,7 @@ params:
   icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.
-  internalPagination: true  # Use Hugos internal pagination template, default false.
+  internalPagination: true  # Use Hugo's internal pagination template, default false.
   jquery: true              # Add jQuery, default false.
   languageDir: ""           # Set ltr or rtl, defaults to ltr.
   logo: false               # Turn off the logo, defaults to true.
