@@ -16,8 +16,7 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{ with $.Param "image" }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 {{ hugo.Generator }}
-<meta name="msapplication-TileColor" content="{{ $.Param "themecolor" | default "#ffffff" }}">
-<meta name="theme-color" content="{{ $.Param "themecolor" | default "#ffffff" }}">
+{{ with $.Param "themecolor" }}<meta name="theme-color" content="{{ . }}">{{ end }}
 {{ with site.Params.piwikTrackerUrl }}<link rel="dns-prefetch" href="https://{{ . }}">{{ end }}
 {{ with $.Param "microusername" }}<link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
