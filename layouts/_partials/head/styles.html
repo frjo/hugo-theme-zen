@@ -5,8 +5,8 @@
 {{ $mobile_options := merge $main_options (dict "targetPath" "css/mobilemenu.css") -}}
 {{ $print_options := merge $main_options (dict "targetPath" "css/print.css") -}}
 {{ $main_style := resources.Get "sass/styles.scss" | toCSS $main_options -}}
-{{ $mobile_style := resources.Get "sass/mobilemenu.scss" | toCSS $mobile_options -}}
-{{ $print_style := resources.Get "sass/print.scss" | toCSS $print_options -}}
+{{ $mobile_style := resources.Get "sass/mobilemenu.css" | toCSS $mobile_options -}}
+{{ $print_style := resources.Get "sass/print.css" | toCSS $print_options -}}
 {{ if ne hugo.Environment "development" -}}
   {{ $main_style = $main_style | fingerprint -}}
   {{ $mobile_style = $mobile_style | fingerprint -}}
