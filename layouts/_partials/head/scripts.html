@@ -6,7 +6,9 @@
 {{ end -}}
 
 {{ $early := resources.Get "js/script-early.js" | js.Build $opts | fingerprint -}}
-<script src="{{ $early.RelPermalink }}"></script>
+<script>
+{{ $early.Content | safeJS }}
+</script>
 
 {{ if $.Param "alpine" -}}
 {{ $alpine := resources.Get "libs/alpine.min.js" | fingerprint -}}

@@ -1,6 +1,7 @@
 /**
  * @file
  * A JavaScript file for the theme. Runs first, before other things have loaded.
+ * Will be added inline for quick loading.
  */
 
 (function () {
