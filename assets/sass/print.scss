@@ -1,6 +1,9 @@
-/* The print stylesheet for this theme. */
+// The print stylesheet for this theme.
+
+@import 'init';
 
 .pager,
+%pager,
 .mobile-nav,
 aside,
 nav,
@@ -26,13 +29,13 @@ footer {
     width: 100%;
   }
 
-  /* Underline all links. */
+  // Underline all links.
   :link,
   :visited {
     text-decoration: underline;
   }
 
-  /* Add visible title after abbreviations. */
+  // Add visible title after abbreviations.
   abbr[title] {
     &::after {
       content: ' (' attr(title) ')';

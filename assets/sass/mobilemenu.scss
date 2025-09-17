@@ -1,4 +1,6 @@
-/* The mobile navigation stylesheet for this theme. */
+// The mobile navigation stylesheet for this theme.
+
+@import 'init';
 
 .mobile-nav {
   position: absolute;
@@ -127,7 +129,7 @@
   &__toggle,
   &__hamburger > rect,
   &__sheet {
-    /* Add some transitions unless user prefer less motion. */
+    // Add some transitions unless user prefer less motion.
     @media (prefers-reduced-motion: no-preference) {
       transition: all 130ms ease-in;
 
