@@ -7,18 +7,9 @@
 // build and document a CSS component.
 //
 // "box" is the name of our component, so we define a `.box` class that we can
-// apply to any HTML element that needs the box styling. We also provide a
-// `%box` placeholder selector so that we can easily extend the basic box
-// component with `@extend %box;`.
-//
-// Take a look at the source code for this component for more information about
-// building a good component.
-//
-// :hover - The hover/focus styling.
-// .box--highlight - The "highlight" box variant.
+// apply to any HTML element that needs the box styling.
 
-.box,
-%box {
+.box {
   // Add vertical rhythm margins.
   margin-block: var(--spacing-m);
   padding: var(--spacing-xs);

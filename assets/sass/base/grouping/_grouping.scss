@@ -68,7 +68,10 @@ li {
 // Horizontal rule
 
 hr {
-  @extend %divider;
+  // Add vertical rhythm margins.
+  margin-block: var(--spacing-m);
+  border: 0;
+  border-block-start: 1px solid var(--color-border);
   height: 0;
 }
 
