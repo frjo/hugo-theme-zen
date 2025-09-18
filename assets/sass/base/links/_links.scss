@@ -1,24 +1,24 @@
-// Links
-//
-// Hyperlinks are used to allow the user to navigate to other resources or to
-// download a resource.
-//
-// The order of link states are based on Eric Meyer's article:
-// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
-//
-// :visited - A link that has already been visited.
-// :hover   - A link that is being hovered over.
-// :focus   - A link that has been given keyboard focus.
-// :active  - A link that is being actively clicked.
+/* Links
+
+Hyperlinks are used to allow the user to navigate to other resources or to
+download a resource.
+
+The order of link states are based on Eric Meyer's article:
+http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+
+:visited - A link that has already been visited.
+:hover   - A link that is being hovered over.
+:focus   - A link that has been given keyboard focus.
+:active  - A link that is being actively clicked. */
 
 a,
 %link {
   color: var(--color-link);
 }
 
-// Any element can receive focus, but only links can be visited, so we can
-// safely lower this selector's specificity. This also ensures visited links
-// with additional styles won't have their styles overridden.
+/* Any element can receive focus, but only links can be visited, so we can
+safely lower this selector's specificity. This also ensures visited links
+with additional styles won't have their styles overridden. */
 :visited {
   color: var(--color-link-visited);
 }

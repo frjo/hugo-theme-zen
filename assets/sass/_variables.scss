@@ -23,14 +23,15 @@
   --base-font-size: 18;
 
   // stylelint-disable value-keyword-case
-  // Modern font stacks. See how they look at https://modernfontstacks.com/.
-  //
-  // The following font family declarations use widely available fonts.
-  // A user's web browser will look at the comma-separated list and will
-  // attempt to use each font in turn until it finds one that is available
-  // on the user's computer. The final "generic" font (sans-serif, serif or
-  // monospace) hints at what type of font to use if the web browser doesn't
-  // find any of the fonts in the list.
+
+  /* Modern font stacks. See how they look at https://modernfontstacks.com/.
+
+  The following font family declarations use widely available fonts.
+  A user's web browser will look at the comma-separated list and will
+  attempt to use each font in turn until it finds one that is available
+  on the user's computer. The final "generic" font (sans-serif, serif or
+  monospace) hints at what type of font to use if the web browser doesn't
+  find any of the fonts in the list. */
 
   // Emojis font stack. Add to end of other stacks when needed.
   --emojis:          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -93,8 +94,8 @@
   --radius-s: 0.3rem;
   --radius-xs: 0.125rem;
 
-  // Breakout amount.
-  // How much should the "breakout" be. Defaults to same as gutters value.
+  /* Breakout amount.
+  How much should the "breakout" be. Defaults to same as gutters value. */
   --breakout: calc(5px + 1.5625vw);
 
   // The left/right gutter/padding.

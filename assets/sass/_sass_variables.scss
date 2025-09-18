@@ -1,13 +1,13 @@
-// Variables
-// These need to be sass variables since they are used in sass functions and mixins.
-// Override sass variables in "assets/sass/_extra.scss"
+/* Variables
+These need to be sass variables since they are used in sass functions and mixins.
+Override sass variables in "assets/sass/_extra.scss" */
 
 // Base line height, unitless.
 $base-line-height: 1.5;
 
-// The font sizes in our type hierarchy as tee shirt sizes.
-// Size m is base.
-// Use like this: var(--fs-m)
+/* The font sizes in our type hierarchy as tee shirt sizes.
+Size m is base.
+Use like this: var(--fs-m) */
 $font-size-fixed: (
   xxxxl:      3rem,
   xxxl:       2.5rem,
@@ -19,9 +19,9 @@ $font-size-fixed: (
   xs:         0.778rem,
 );
 
-// The responsive font sizes in our type hierarchy as tee shirt sizes.
-// Size m is base.
-// Use like this: var(--fs-m)
+/* The responsive font sizes in our type hierarchy as tee shirt sizes.
+Size m is base.
+Use like this: var(--fs-m) */
 $font-size-fluid: (
   xxxxl:      clamp(2.4881rem, calc(1.8896rem + 2.9924vw), 4.2088rem),
   xxxl:       clamp(2.0738rem, calc(1.6968rem + 1.8848vw), 3.1575rem),
@@ -33,12 +33,12 @@ $font-size-fluid: (
   xs:         0.778rem,
 );
 
-// Set the font sizes to use, fixed or fluid.
-// $font-size: $font-size-fluid;
+/* Set the font sizes to use, fixed or fluid.
+$font-size: $font-size-fluid; */
 $font-size: $font-size-fixed;
 
-// Breakpoints (Deprecated in v5, use css @media directly instead.)
-// Use the `respond-to(s)` mixin to use named breakpoints.
+/* Breakpoints (Deprecated in v5, use css @media directly instead.)
+Use the `respond-to(s)` mixin to use named breakpoints. */
 $breakpoints: (
   'xxxl':     1222px,
   'xxl':      1111px,
@@ -51,9 +51,9 @@ $breakpoints: (
   'xxxs':     333px,
 );
 
-// Spacing
-// Generates mt--m (mt = margin-top), mb--m (mb = margin-bottom) and
-// mx--m (mx = margin-block) classes.
+/* Spacing
+Generates mt--m (mt = margin-top), mb--m (mb = margin-bottom) and
+mx--m (mx = margin-block) classes. */
 $spacing: (
   xxl:        3,
   xl:         2,
@@ -68,7 +68,7 @@ $spacing: (
 // The max content width. (Consider using one of the breakpoints.)
 $max-content-width: 1111px;
 
-// The max page width. Defaults to max-content-width.
-// Setting this to a larger value than max-content-width allows
-// content with class "stretch" to stretch out to the page edge.
+/* The max page width. Defaults to max-content-width.
+Setting this to a larger value than max-content-width allows
+content with class "stretch" to stretch out to the page edge. */
 $max-page-width: $max-content-width;

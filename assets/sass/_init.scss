@@ -1,9 +1,9 @@
-// Initialization partial
+/* Initialization partial
 
-// To make it easier to use all variables and mixins in any Sass file in this
-// project, each .scss file has a `@import 'init';` declaration. The _init.scss
-// file is in charge of importing all the other partials needed for the
-// project.
+To make it easier to use all variables and mixins in any Sass file in this
+project, each .scss file has a `@import 'init';` declaration. The _init.scss
+file is in charge of importing all the other partials needed for the
+project. */
 
 // Variables.
 @import 'sass_variables';

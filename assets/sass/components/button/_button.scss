@@ -61,8 +61,8 @@
   }
 }
 
-// The disabled variation should always go last, so that it overrides any
-// other variations.
+/* The disabled variation should always go last, so that it overrides any
+other variations. */
 %button--disabled[disabled] {
   @extend %disabled;
   background-color: var(--color-grey-200);

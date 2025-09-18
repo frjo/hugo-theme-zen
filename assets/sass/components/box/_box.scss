@@ -1,13 +1,4 @@
 // Box
-//
-// A simple box style.
-//
-// A block is often styled as a box. However, this design component is
-// not applied to any blocks by default; it is used as an example of how to
-// build and document a CSS component.
-//
-// "box" is the name of our component, so we define a `.box` class that we can
-// apply to any HTML element that needs the box styling.
 
 .box {
   // Add vertical rhythm margins.
@@ -15,18 +6,11 @@
   padding: var(--spacing-xs);
   border: 5px solid var(--color-border);
 
-  // Sass compiles this to the selector: .box__title, %box__title {}
-  // The "__" (double underscore) is part of a BEM naming convention that
-  // indicates the "title" is an _element_ of (a piece of) the "box" component.
   &__title,
   .title {
     margin-top: 0;
   }
 
-  // Sass compiles this to the selector: .box--highlight, %box--highlight {}
-  // The "--" (double dash) is part of a BEM naming convention that indicates
-  // the "highlight" is a _modifier_, creating a new variation of the standard
-  // "box" component.
   &--highlight {
     border-color: var(--color-highlight);
   }
