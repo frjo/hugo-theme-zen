@@ -1,6 +1,6 @@
-// Zen custom styles
+/* Zen custom styles */
 
-// Page
+/* Page */
 
 body {
   background-color: var(--color-backdrop);
@@ -14,7 +14,7 @@ body {
   border-block-start: 2px solid var(--color-border);
 }
 
-// Apply smaller text to blocks, footer etc.
+/* Apply smaller text to blocks, footer etc. */
 
 th,
 label,
@@ -28,7 +28,7 @@ figcaption {
   font-size: var(--fs-xs);
 }
 
-// Apply heading font stack and colour to labels etc.
+/* Apply heading font stack and colour to labels etc. */
 
 th,
 label,
@@ -45,7 +45,7 @@ label {
   font-weight: var(--fw-headings);
 }
 
-// Article and content.
+/* Article and content. */
 
 article,
 aside {
@@ -105,7 +105,7 @@ article {
   }
 }
 
-// Navigation
+/* Navigation */
 
 .main-menu {
   a {
@@ -127,13 +127,13 @@ article {
   }
 }
 
-// Search
+/* Search */
 
 .search-text {
   font-size: var(--fs-l);
 }
 
-// Copy code
+/* Copy code */
 
 [data-codeblock] {
   position: relative;

@@ -5,11 +5,11 @@ project, each .scss file has a `@import 'init';` declaration. The _init.scss
 file is in charge of importing all the other partials needed for the
 project. */
 
-// Variables.
+/* Variables. */
 @import 'sass_variables';
 @import 'extra';
 
-// Mixins and functions.
+/* Mixins and functions. */
 @import 'mixins/breakpoint/respond-to';
 @import 'mixins/flex-calc/flex-calc';
 @import 'mixins/spacing/spacing';

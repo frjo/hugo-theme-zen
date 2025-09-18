@@ -1,7 +1,7 @@
-// Box
+/* Box */
 
 .box {
-  // Add vertical rhythm margins.
+  /* Add vertical rhythm margins. */
   margin-block: var(--spacing-m);
   padding: var(--spacing-xs);
   border: 5px solid var(--color-border);
@@ -28,7 +28,7 @@
     background: var(--color-border);
     color: var(--color-text-bg);
 
-    // Make sure headings etc. also gets inverted.
+    /* Make sure headings etc. also gets inverted. */
     * {
       color: var(--color-text-bg);
     }

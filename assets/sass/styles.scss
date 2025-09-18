@@ -1,30 +1,30 @@
-// The main stylesheet for this theme.
+/* The main stylesheet for this theme. */
 
-// Sass init files.
+/* Sass init files. */
 
 @import 'init';
 
-// Declaring CSS colour variables in :root.
+/* Declaring CSS colour variables in :root. */
 
 @import 'colors';
 
-// Declaring CSS misc variables in :root.
+/* Declaring CSS misc variables in :root. */
 
 @import 'variables';
 
-// Ensure fonts get loaded early to minimize front-end performance impact.
+/* Ensure fonts get loaded early to minimize front-end performance impact. */
 
 @import 'fonts';
 
-// Base styles.
+/* Base styles. */
 
 @import 'base/base';
 
-// Layouts
+/* Layouts */
 
 @import 'layouts/layouts';
 
-// Components
+/* Components */
 
 /* Design components are reusable designs that can be applied using just the CSS
 class names specified in the component. */
@@ -58,10 +58,10 @@ class names specified in the component. */
 @import 'components/visually-hidden/visually-hidden';
 @import 'components/wrap/wrap';
 
-// Zen styles
+/* Zen styles */
 
 @import 'zen';
 
-// Custom styles
+/* Custom styles */
 
 @import 'custom';

@@ -5,12 +5,13 @@
 
   display: grid;
   gap: var(--grid-group-gap);
-  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
-  // stylelint-disable-next-line function-name-case
+
+  /* Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()". */
+  /* stylelint-disable-next-line function-name-case */
   grid-template-columns: repeat(auto-fit, minmax(Min(var(--grid-group-column-min), 100%), 1fr));
 
   &--fill {
-    // stylelint-disable-next-line function-name-case
+    /* stylelint-disable-next-line function-name-case */
     grid-template-columns: repeat(auto-fill, minmax(Min(var(--grid-group-column-min), 100%), 1fr));
   }
 

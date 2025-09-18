@@ -9,11 +9,11 @@ default 16:9 one. */
 
 .responsive-video,
 %responsive-video {
-  --aspect-ratio: 9 / 16; // 16:9 aspect ratio
+  --aspect-ratio: 9 / 16; /* 16:9 aspect ratio */
 
   position: relative;
-  padding-block-end: calc(var(--aspect-ratio) * 100%); // 16:9 aspect ratio
-  padding-block-start: 25px; // Height of video controls
+  padding-block-end: calc(var(--aspect-ratio) * 100%); /* 16:9 aspect ratio */
+  padding-block-start: 25px; /* Height of video controls */
   height: 0;
 
   iframe {
@@ -29,6 +29,6 @@ default 16:9 one. */
   }
 
   &--4-3 {
-    --aspect-ratio: 3 / 4; // 4:3 aspect ratio
+    --aspect-ratio: 3 / 4; /* 4:3 aspect ratio */
   }
 }

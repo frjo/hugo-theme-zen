@@ -1,10 +1,11 @@
-// Branding header
+/* Branding header */
 
 .header,
 %header {
   --header-gap: var(--spacing-s);
-  // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
-  // stylelint-disable-next-line function-name-case
+
+  /* Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()". */
+  /* stylelint-disable-next-line function-name-case */
   padding-block: Min(var(--gutters), var(--spacing-m));
   display: flex;
   flex-direction: column;
@@ -16,23 +17,23 @@
     align-items: center;
   }
 
-  // Wrapping link for logo.
+  /* Wrapping link for logo. */
   &__logo {
     width: fit-content;
   }
 
-  // Logo image.
+  /* Logo image. */
   &__logo-image {
     vertical-align: bottom;
   }
 
-  // The name of the website.
+  /* The name of the website. */
   &__site-name {
     margin: 0;
     line-height: 1;
   }
 
-  // The link around the name of the website.
+  /* The link around the name of the website. */
   &__site-link {
     &:link,
     &:visited {
@@ -46,7 +47,7 @@
     }
   }
 
-  // Wrapper for any blocks placed in the header region.
+  /* Wrapper for any blocks placed in the header region. */
   &__region {
     @media (min-width: 666px) {
       margin-inline-start: auto;

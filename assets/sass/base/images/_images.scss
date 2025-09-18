@@ -1,4 +1,4 @@
-// Figure and image.
+/* Figure and image. */
 
 figure,
 img {
@@ -30,16 +30,18 @@ img {
 }
 
 figure {
-  // Add vertical rhythm margins.
+  /* Add vertical rhythm margins. */
   margin-block: 0 var(--spacing-m);
 
   &.image {
     figcaption {
       padding-block-start: var(--image-padding);
       contain: inline-size;
-      // Set max text line width in main for readability.
+
+      /* Set max text line width in main for readability. */
       max-width: var(--max-line-width);
-      // Nicer text wrap, e.g. no lone word on last line.
+
+      /* Nicer text wrap, e.g. no lone word on last line. */
       text-wrap: pretty;
 
       @media (min-width: 666px) {
@@ -79,7 +81,7 @@ figure {
 
 img {
   &.image {
-    // Add vertical rhythm margins.
+    /* Add vertical rhythm margins. */
     margin-block: 0 var(--spacing-m);
   }
 }

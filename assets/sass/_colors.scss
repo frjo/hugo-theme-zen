@@ -1,8 +1,9 @@
-// Theme colours.
-// Override css variables in "assets/sass/_custom.scss"
+/* Theme colours. */
+
+/* Override css variables in "assets/sass/_custom.scss" */
 
 :root {
-  // Base colours.
+  /* Base colours. */
   --color-black:                  oklch(1% 0.01 0);
   --color-nearblack:              oklch(25% 0.01 0);
   --color-grey-700:               oklch(38% 0 0);
@@ -19,7 +20,7 @@
   --color-green:                  oklch(65% 0.19 138);
   --color-blue:                   oklch(65% 0.16 247);
 
-  // Transparent colours.
+  /* Transparent colours. */
   --color-black-60:               oklch(0% 0 0 / 0.6);
   --color-black-40:               oklch(0% 0 0 / 0.4);
   --color-black-20:               oklch(0% 0 0 / 0.2);
@@ -27,20 +28,20 @@
   --color-white-20:               oklch(100% 0 0 / 0.2);
   --color-white-10:               oklch(100% 0 0 / 0.1);
 
-  // Brand colours.
+  /* Brand colours. */
   --color-brand:                  var(--color-nearblack);
   --color-brand-alt:              var(--color-grey-500);
   --color-brand-light:            var(--color-grey-300);
   --color-brand-dark:             var(--color-grey-700);
 
-  // Text colours.
+  /* Text colours. */
   --color-text:                   var(--color-black);
   --color-text-bg:                var(--color-white);
   --color-text-meta:              var(--color-grey-600);
   --color-headings:               var(--color-nearblack);
   --color-code:                   var(--color-nearblack);
 
-  // Link colours.
+  /* Link colours. */
   --color-link:                   var(--color-brand);
   --color-link-visited:           var(--color-brand);
   --color-link-hover:             var(--color-brand-alt);
@@ -50,37 +51,37 @@
   --color-link-hover-inverted:    var(--color-white);
   --color-link-active-inverted:   var(--color-red);
 
-  // Button colours.
+  /* Button colours. */
   --color-button:                 var(--color-brand);
   --color-button-hover:           var(--color-brand-alt);
   --color-button-text:            var(--color-white);
   --color-button-text-hover:      var(--color-white);
   --color-button-disabled:        var(--color-grey-400);
 
-  // Border colours.
+  /* Border colours. */
   --color-border:                 var(--color-brand);
   --color-border-light:           var(--color-brand-light);
   --color-border-dark:            var(--color-brand-dark);
 
-  // Background colours.
+  /* Background colours. */
   --color-header-bg:              var(--color-white);
   --color-body-bg:                var(--color-white);
   --color-footer-bg:              var(--color-white);
   --color-backdrop:               var(--color-grey-100);
 
-  // Mobil menu colours.
+  /* Mobil menu colours. */
   --color-mobile-menu:            var(--color-brand);
   --color-mobile-menu-cover:      var(--color-black-20);
 
-  // Form colours.
+  /* Form colours. */
   --color-accent:                 var(--color-brand);
 
-  // Row (e.g. in table) colours.
+  /* Row (e.g. in table) colours. */
   --color-row-header:             transparent;
   --color-row-odd:                var(--color-nearwhite);
   --color-row-even:               transparent;
 
-  // Status colours.
+  /* Status colours. */
   --color-info:                   var(--color-blue);
   --color-info-bg:                oklch(from var(--color-blue) 100% 0.03 h);
   --color-success:                 var(--color-green);
@@ -90,7 +91,7 @@
   --color-error:                  var(--color-red);
   --color-error-bg:               oklch(from var(--color-red) 100% 0.03 h);
 
-  // Highlight colours.
+  /* Highlight colours. */
   --color-highlight:              var(--color-brand-alt);
   --color-mark-highlight:         var(--color-red);
 }

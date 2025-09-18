@@ -5,7 +5,8 @@ A simple cards style. */
 .cards,
 %cards {
   @extend %grid-group;
-  // Add vertical rhythm margins.
+
+  /* Add vertical rhythm margins. */
   margin-block: var(--spacing-m);
 }
 

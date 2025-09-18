@@ -32,13 +32,13 @@ a:active {
   color: var(--color-link-active);
 }
 
-// Remove underline from links to current page to
-// indicate that there is no need to click on it.
+/* Remove underline from links to current page to */
+/* indicate that there is no need to click on it. */
 [aria-current] {
   text-decoration: none;
 }
 
-// Use smooth scrolling unless user prefer less motion.
+/* Use smooth scrolling unless user prefer less motion. */
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
@@ -58,7 +58,7 @@ a:active {
   }
 }
 
-// Inverted links, for dark backgrounds.
+/* Inverted links, for dark backgrounds. */
 .link-inverted,
 %link-inverted {
   a {

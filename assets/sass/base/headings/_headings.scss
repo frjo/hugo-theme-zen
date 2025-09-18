@@ -23,12 +23,12 @@ h6,
   line-height: var(--heading-line-height);
   text-wrap: balance;
 
-  // Smaller margin when a headeing is right after another heading.
+  /* Smaller margin when a headeing is right after another heading. */
   & + & {
     margin-block-start: .75em
   }
 
-  // Set max text line width in main for readability.
+  /* Set max text line width in main for readability. */
   .main & {
     max-width: var(--max-line-width);
   }
@@ -36,7 +36,7 @@ h6,
 
 h1,
 %h1 {
-  // h1 only on top of page so different margins.
+  /* h1 only on top of page so different margins. */
   margin-block-start: var(--spacing-m);
   margin-block-end: var(--spacing-xs);
   font-size: var(--fs-xxl);

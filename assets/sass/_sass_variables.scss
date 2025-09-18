@@ -2,7 +2,7 @@
 These need to be sass variables since they are used in sass functions and mixins.
 Override sass variables in "assets/sass/_extra.scss" */
 
-// Base line height, unitless.
+/* Base line height, unitless. */
 $base-line-height: 1.5;
 
 /* The font sizes in our type hierarchy as tee shirt sizes.
@@ -33,8 +33,7 @@ $font-size-fluid: (
   xs:         0.778rem,
 );
 
-/* Set the font sizes to use, fixed or fluid.
-$font-size: $font-size-fluid; */
+/* Set the font sizes to use, fixed or fluid. */
 $font-size: $font-size-fixed;
 
 /* Breakpoints (Deprecated in v5, use css @media directly instead.)
@@ -65,7 +64,7 @@ $spacing: (
   0:          0,
 );
 
-// The max content width. (Consider using one of the breakpoints.)
+/* The max content width. (Consider using one of the breakpoints.) */
 $max-content-width: 1111px;
 
 /* The max page width. Defaults to max-content-width.

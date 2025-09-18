@@ -1,5 +1,5 @@
 :root {
-  // Convert sass variables to css variables.
+  /* Convert sass variables to css variables. */
 
   @each $name, $size in $font-size {
     --fs-#{$name}: #{$size};
@@ -8,21 +8,19 @@
   --max-content-width: #{$max-content-width};
   --max-page-width: #{$max-page-width};
 
-  // Base line height, unitless.
+  /* Base line height, unitless. */
   --base-line-height: #{$base-line-height};
 
 
-  // Set theme css variables.
-  // Override css variables in "assets/sass/_custom.scss"
+  /* Set theme css variables.
+  Override css variables in "assets/sass/_custom.scss" */
 
-  // Heading line height, unitless.
+  /* Heading line height, unitless. */
   --heading-line-height: 1.3;
 
-  // The font size set on the root html element.
-  // Specify unitless, it will be recalculated as %.
+  /* The font size set on the root html element.
+  Specify unitless, it will be recalculated as %. */
   --base-font-size: 18;
-
-  // stylelint-disable value-keyword-case
 
   /* Modern font stacks. See how they look at https://modernfontstacks.com/.
 
@@ -33,13 +31,15 @@
   monospace) hints at what type of font to use if the web browser doesn't
   find any of the fonts in the list. */
 
-  // Emojis font stack. Add to end of other stacks when needed.
+  /* stylelint-disable value-keyword-case */
+
+  /* Emojis font stack. Add to end of other stacks when needed. */
   --emojis:          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-  // System-ui font stack.
+  /* System-ui font stack. */
   --system-ui:       system-ui, sans-serif;
 
-  // Serif font stacks.
+  /* Serif font stacks. */
   --ui-serif:        ui-serif, Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   --transitional:    Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   --old:             'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
@@ -47,7 +47,7 @@
   --antique:         Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   --didone:          Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 
-  // Sans-serif font stacks.
+  /* Sans-serif font stacks. */
   --ui-sans-serif:   ui-sans-serif, system-ui, sans-serif;
   --humanist:        Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
   --geometric:       Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
@@ -56,20 +56,20 @@
   --industrial:      Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --futura:          Futura, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 
-  // Rounded Sans-serif font stacks.
+  /* Rounded Sans-serif font stacks. */
   --ui-rounded:      ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
-  // Monospace font stacks.
+  /* Monospace font stacks. */
   --ui-monospace:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  // stylelint-enable value-keyword-case
+  /* stylelint-enable value-keyword-case */
 
-  // Font family.
+  /* Font family. */
   --ff-body: var(--ui-serif);
   --ff-headings: var(--ui-sans-serif);
   --ff-alt: var(--system-ui);
   --ff-monospace: var(--ui-monospace);
 
-  // Font weights.
+  /* Font weights. */
   --fw-headings: 700;
   --fw-bolder: 900;
   --fw-bold: 700;
@@ -78,7 +78,7 @@
   --fw-light: 300;
   --fw-lighter: 200;
 
-  // Spacing.
+  /* Spacing. */
   --spacing-xxl: calc(3rem * var(--base-line-height));
   --spacing-xl: calc(2rem * var(--base-line-height));
   --spacing-l: calc(1.5rem * var(--base-line-height));
@@ -87,7 +87,7 @@
   --spacing-xs: calc(0.5rem * var(--base-line-height));
   --spacing-xxs: calc(0.3rem * var(--base-line-height));
 
-  // Border radius.
+  /* Border radius. */
   --radius-xl: 1rem;
   --radius-l: 0.75rem;
   --radius-m: 0.5rem;
@@ -98,16 +98,16 @@
   How much should the "breakout" be. Defaults to same as gutters value. */
   --breakout: calc(5px + 1.5625vw);
 
-  // The left/right gutter/padding.
+  /* The left/right gutter/padding. */
   --gutters: calc(5px + 1.5625vw);
   --gutters-reverse: calc(0px - (5px + 1.5625vw));
 
-  // The amount lists, blockquotes and comments are indented.
+  /* The amount lists, blockquotes and comments are indented. */
   --indent-amount: 2rem;
 
-  // The max line width for readability.
+  /* The max line width for readability. */
   --max-line-width: 70ch;
 
-  // The pt font-size to be used for printing.
+  /* The pt font-size to be used for printing. */
   --print-font-size: 12pt;
 }

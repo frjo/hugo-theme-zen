@@ -1,18 +1,20 @@
-// Button
+/* Button */
 
 .button,
 %button,
 [type='button'],
 [type='submit'] {
   @extend %button--disabled;
-  // Some styles don't apply to <a> links since they are inline elements by default.
+
+  /* Some styles don't apply to <a> links since they are inline elements by default. */
   display: inline-block;
   font-family: var(--ff-headings);
   text-decoration: none;
   text-align: center;
   width: fit-content;
   padding: .2rem 1rem;
-  // Improve usability and consistency of cursor style between image-type `input` and others.
+
+  /* Improve usability and consistency of cursor style between image-type `input` and others. */
   cursor: pointer;
   color: var(--color-button-text);
   text-shadow: var(--color-button) 0 1px 0;
@@ -23,7 +25,7 @@
   &:hover,
   &:focus-visible,
   &:active {
-    // Override any link underlines and color changes.
+    /* Override any link underlines and color changes. */
     text-decoration: none;
     color: var(--color-button-text-hover);
     text-shadow: var(--color-button-hover) 0 1px 0;
@@ -35,7 +37,7 @@
   }
 }
 
-// Add button variations here.
+/* Add button variations here. */
 .button,
 %button {
   &--small {

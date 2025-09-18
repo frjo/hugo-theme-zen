@@ -8,7 +8,8 @@ is available. */
 %pager {
   @extend %flex-inline;
   @extend %link-nav;
-  // Add vertical rhythm margins.
+
+  /* Add vertical rhythm margins. */
   margin-block: var(--spacing-m);
   justify-content: center;
 

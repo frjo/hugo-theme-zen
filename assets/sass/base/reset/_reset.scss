@@ -1,10 +1,10 @@
-// stylelint-disable property-no-vendor-prefix
+/* stylelint-disable property-no-vendor-prefix */
 
-// Reset browsers to some sane defaults.
+/* Reset browsers to some sane defaults. */
 
-// Document
+/* Document */
 
-// Use the saner border-box model for all elements.
+/* Use the saner border-box model for all elements. */
 *,
 *::before,
 *::after {
@@ -12,36 +12,38 @@
 }
 
 :root {
-  // Activate transition to intrinsic sizes like auto and fit-content.
+  /* Activate transition to intrinsic sizes like auto and fit-content. */
   interpolate-size: allow-keywords;
 }
 
-// Transitioning page view.
+/* Transitioning page view. */
 @view-transition {
   navigation: auto;
 }
 
 html {
-  // Prevent adjustments of font size.
+  /* Prevent adjustments of font size. */
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  // Improve text rendering.
+
+  /* Improve text rendering. */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Sections
+/* Sections */
 
 body {
-  // Remove the margin in all browsers.
+  /* Remove the margin in all browsers. */
   margin: 0;
   padding: 0;
-  // On short pages, we want the body to fill the entire height
-  // of the browser.
+
+  /* On short pages, we want the body to fill the entire height */
+  /* of the browser. */
   min-height: 100vh;
 }
 
-// Embedded content
+/* Embedded content */
 
 img,
 svg,
@@ -66,7 +68,7 @@ figure {
   margin-inline: 0;
 }
 
-// Form defaults.
+/* Form defaults. */
 
 input,
 button,
@@ -79,12 +81,12 @@ select {
 
 [type='search'] {
   @media (min-width: 666px) {
-    // Correct the odd appearance in Safari on desktop.
+    /* Correct the odd appearance in Safari on desktop. */
     -webkit-appearance: textfield;
   }
 }
 
-// Code
+/* Code */
 
 code,
 kbd,
@@ -92,7 +94,7 @@ samp {
   font-family: var(--ff-monospace);
 }
 
-// Numbers
+/* Numbers */
 
 td,
 math,

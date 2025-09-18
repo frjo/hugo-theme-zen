@@ -1,6 +1,6 @@
-// stylelint-disable no-duplicate-selectors
+/* stylelint-disable no-duplicate-selectors */
 
-// Initial layout setup.
+/* Initial layout setup. */
 .layout {
   &__page {
     max-width: var(--max-page-width);
@@ -22,12 +22,13 @@
   &__page-bottom,
   &__cookieconsent {
     padding-inline: var(--gutters);
-    min-width: 0;  // With display grid defaults to auto, making <pre> overflow.
+    min-width: 0;  /* With display grid defaults to auto, making <pre> overflow. */
   }
 }
 
-// If page width is bigger then content with,
-// setup grid with breakout and stretch for main section.
+/* If page width is bigger then content with, */
+
+/* setup grid with breakout and stretch for main section. */
 @if $max-page-width > $max-content-width {
   .layout {
     &__navigation > * {
@@ -41,17 +42,20 @@
     &__main,
     &__grid {
       display: grid;
-      // Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()".
-      // stylelint-disable function-name-case
+
+      /* Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()". */
+      /* stylelint-disable function-name-case */
       grid-template-columns:
         [stretch-start] minmax(var(--gutters), 1fr)
         [breakout-start] minmax(0, var(--breakout))
         [content-start] Min(calc(100% - var(--gutters) * 2), var(--max-content-width)) [content-end]
         minmax(0, var(--breakout)) [breakout-end]
         minmax(var(--gutters), 1fr) [stretch-end];
-      // stylelint-enable function-name-case
+      /* stylelint-enable function-name-case */
+
       padding-inline: 0;
-      // Stop content in main from stretching.
+
+      /* Stop content in main from stretching. */
       height: fit-content;
 
       & > :not(.breakout, .stretch) {
@@ -70,7 +74,7 @@
   }
 }
 
-// Setup template areas/rown/columns for page.
+/* Setup template areas/rown/columns for page. */
 .layout {
   &__page {
     display: grid;
