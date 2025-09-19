@@ -16,10 +16,7 @@ default 16:9 one. */
   padding-block-start: 25px; /* Height of video controls */
   height: 0;
 
-  iframe {
-    @extend %responsive-video__embed;
-  }
-
+  iframe,
   &__embed {
     position: absolute;
     inset-block-start: 0;
