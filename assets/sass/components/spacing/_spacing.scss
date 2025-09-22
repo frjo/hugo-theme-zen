@@ -1,13 +1,95 @@
-@each $name, $space in $spacing {
-  .mt--#{$name} {
-    @include margin-block-start($space);
-  }
+.mt--xxl {
+  margin-block-start: var(--spacing-xxl);
+}
 
-  .mb--#{$name} {
-    @include margin-block-end($space);
-  }
+.mt--xl {
+  margin-block-start: var(--spacing-xl);
+}
 
-  .mx--#{$name} {
-    @include margin-block($space);
-  }
+.mt--l {
+  margin-block-start: var(--spacing-l);
+}
+
+.mt--m {
+  margin-block-start: var(--spacing-m);
+}
+
+.mt--s {
+  margin-block-start: var(--spacing-s);
+}
+
+.mt--xs {
+  margin-block-start: var(--spacing-xs);
+}
+
+.mt--xss {
+  margin-block-start: var(--spacing-xss);
+}
+
+.mt--0 {
+  margin-block-start: 0;
+}
+
+.mb--xxl {
+  margin-block-end: var(--spacing-xll);
+}
+
+.mb--xl {
+  margin-block-end: var(--spacing-xl);
+}
+
+.mb--l {
+  margin-block-end: var(--spacing-l);
+}
+
+.mb--m {
+  margin-block-end: var(--spacing-m);
+}
+
+.mb--s {
+  margin-block-end: var(--spacing-s);
+}
+
+.mb--xs {
+  margin-block-end: var(--spacing-xs);
+}
+
+.mb--xxs {
+  margin-block-end: var(--spacing-xss);
+}
+
+.mb--0 {
+  margin-block-end: 0;
+}
+
+.mx--xxl {
+  margin-block: var(--spacing-xll);
+}
+
+.mx--xl {
+  margin-block: var(--spacing-xl);
+}
+
+.mx--l {
+  margin-block: var(--spacing-l);
+}
+
+.mx--m {
+  margin-block: var(--spacing-m);
+}
+
+.mx--s {
+  margin-block: var(--spacing-s);
+}
+
+.mx--xs {
+  margin-block: var(--spacing-xs);
+}
+
+.mx--xss {
+  margin-block: var(--spacing-xss);
+}
+
+.mx--0 {
+  margin-block: 0;
 }

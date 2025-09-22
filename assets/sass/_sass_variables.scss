@@ -50,9 +50,7 @@ $breakpoints: (
   'xxxs':     333px,
 );
 
-/* Spacing
-Generates mt--m (mt = margin-top), mb--m (mb = margin-bottom) and
-mx--m (mx = margin-block) classes. */
+/* Spacing (Deprecated in v5, use spacing css variables instead.)
 $spacing: (
   xxl:        3,
   xl:         2,

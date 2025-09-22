@@ -78,7 +78,9 @@
   --fw-light: 300;
   --fw-lighter: 200;
 
-  /* Spacing. */
+  /* Spacing.
+  Generates mt--m (mt = margin-top), mb--m (mb = margin-bottom) and
+  mx--m (mx = margin-block) classes. */
   --spacing-xxl: calc(3rem * var(--base-line-height));
   --spacing-xl: calc(2rem * var(--base-line-height));
   --spacing-l: calc(1.5rem * var(--base-line-height));
