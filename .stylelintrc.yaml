@@ -5,9 +5,6 @@ rules:
   block-no-empty: null
   declaration-block-no-redundant-longhand-properties: null
   declaration-empty-line-before: null
-  hue-degree-notation: number
-  media-feature-range-notation: prefix
-  no-descending-specificity: null
   comment-empty-line-before:
     - always
     - except:
@@ -15,6 +12,12 @@ rules:
       ignore:
         - stylelint-commands
         - after-comment
+  hue-degree-notation: number
+  keyframes-name-pattern:
+    - "--.+"
+    - message: Keyframe name should be written as <dashed-ident>
+  media-feature-range-notation: prefix
+  no-descending-specificity: null
   selector-class-pattern:
     - "^[a-z0-9\\-]+$"
     - message: Selector should be written in lowercase with hyphens (selector-class-pattern)

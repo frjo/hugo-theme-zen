@@ -32,10 +32,10 @@
   }
 
   &--highlight {
-    animation: 2s ease-in-out infinite outline-highlight;
+    animation: 2s ease-in-out infinite --outline-highlight;
   }
 
-  @keyframes outline-highlight {
+  @keyframes --outline-highlight {
     50% {
       outline-width: .3rem;
     }

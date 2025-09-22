@@ -166,10 +166,10 @@ article {
 }
 
 .flash-item {
-  animation: flash 500ms ease-in-out 1;
+  animation: --flash 500ms ease-in-out 1;
 }
 
-@keyframes flash {
+@keyframes --flash {
   50% {
     border-color: var(--color-warning);
     background-color: var(--color-warning-bg);
