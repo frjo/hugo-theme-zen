@@ -15,7 +15,7 @@
 {{ block "head" . }}{{ end }}
 </head>
 
-<body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}{{ with $.Param "bodyclass" }} {{ . }}{{ end }}">
+<body class="{{ if .IsPage }}single-page{{ else }}list-page{{ end }}{{ if .IsHome }} front{{ end }}{{ with .Section }} section-page--{{ . | urlize }}{{ end }}{{ with $.Param "bodyclass" }} {{ . }}{{ end }}">
 <div class="page layout__page{{ if $.Param "sidebar" }} layout__sidebar-second{{ end }}">
 <header class="header layout__header">
 {{ if $.Param "logo" | default true -}}
