@@ -31,8 +31,12 @@
     { once: true },
   );
 
-  // Mark the form as submitted.
-  button.addEventListener('click', () => form.classList.add('js-submitted'));
+  form.addEventListener('submit', function (e) {
+    // Set focus on first invalid field.
+    if (!e.target.validity.valid) {
+      form.querySelector(':invalid').focus();
+    }
+  });
 
   // Display messages.
   if (location.search.substring(1) !== '') {
