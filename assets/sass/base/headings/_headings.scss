@@ -30,7 +30,7 @@ h6,
 
   /* Set max text line width in main for readability. */
   .main & {
-    max-width: var(--max-line-width);
+    max-inline-size: var(--max-line-width);
   }
 }
 

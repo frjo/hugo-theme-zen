@@ -3,7 +3,7 @@
 /* Initial layout setup. */
 .layout {
   &__page {
-    max-width: var(--max-page-width);
+    max-inline-size: var(--max-page-width);
 
     @media (min-width: 666px) {
       margin-inline: auto;
@@ -22,7 +22,7 @@
   &__page-bottom,
   &__cookieconsent {
     padding-inline: var(--gutters);
-    min-width: 0;  /* With display grid defaults to auto, making <pre> overflow. */
+    min-inline-size: 0;  /* With display grid defaults to auto, making <pre> overflow. */
   }
 }
 
@@ -32,7 +32,7 @@
 @if $max-page-width > $max-content-width {
   .layout {
     &__navigation > * {
-      max-width: var(--max-content-width);
+      max-inline-size: var(--max-content-width);
 
       @media (min-width: 666px) {
         margin-inline: auto;
