@@ -39,7 +39,7 @@ figure {
       contain: inline-size;
 
       /* Set max text line width in main for readability. */
-      max-inline-size: var(--max-line-width);
+      max-width: var(--max-line-width);
 
       /* Nicer text wrap, e.g. no lone word on last line. */
       text-wrap: pretty;

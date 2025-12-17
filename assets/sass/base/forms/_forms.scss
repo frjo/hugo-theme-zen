@@ -59,7 +59,7 @@ input,
 label,
 textarea,
 select {
-  max-inline-size: var(--max-line-width);
+  max-width: var(--max-line-width);
 }
 
 fieldset {

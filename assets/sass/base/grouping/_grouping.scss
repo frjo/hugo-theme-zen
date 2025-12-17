@@ -13,7 +13,7 @@ blockquote {
   margin-inline: var(--indent-amount);
 
   /* Set max text line width in main for readability. */
-  max-inline-size: var(--max-line-width);
+  max-width: var(--max-line-width);
 }
 
 /* Lists */
@@ -58,7 +58,7 @@ li {
 
   /* Set max text line width in main for readability. */
   .main & {
-    max-inline-size: var(--max-line-width);
+    max-width: var(--max-line-width);
   }
 }
 
@@ -83,7 +83,7 @@ p {
 
   /* Set max text line width in main for readability. */
   .main & {
-    max-inline-size: var(--max-line-width);
+    max-width: var(--max-line-width);
   }
 }
 
