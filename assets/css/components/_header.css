@@ -1,0 +1,56 @@
+/* Branding header */
+
+.header,
+%header {
+  --header-gap: var(--spacing-s);
+
+  /* Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()". */
+  /* stylelint-disable-next-line function-name-case */
+  padding-block: Min(var(--gutters), var(--spacing-m));
+  display: flex;
+  flex-direction: column;
+  gap: var(--header-gap);
+  background-color: var(--color-header-bg);
+
+  @media (min-width: 666px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Wrapping link for logo. */
+  &__logo {
+    width: fit-content;
+  }
+
+  /* Logo image. */
+  &__logo-image {
+    vertical-align: bottom;
+  }
+
+  /* The name of the website. */
+  &__site-name {
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* The link around the name of the website. */
+  &__site-link {
+    &:link,
+    &:visited {
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  /* Wrapper for any blocks placed in the header region. */
+  &__region {
+    @media (min-width: 666px) {
+      margin-inline-start: auto;
+    }
+  }
+}

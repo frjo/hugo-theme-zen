@@ -1,0 +1,28 @@
+/* Font faces
+
+Instead of relying on the fonts that are available on a user's computer, you
+can use web fonts which, like images, are resources downloaded to the user's
+browser. Because of the bandwidth and rendering resources required, web fonts
+should be used with care.
+
+Numerous resources for web fonts can be found on the web. Here are a few
+websites where you can find Open Source fonts to download:
+- https://www.fontsquirrel.com/
+- https://www.theleagueofmoveabletype.com
+- https://fonts.google.com
+
+In order to use fonts on a web site you will need to convert them into woff2 format.
+Font Squirrel's Font-Face Generator is a good option:
+  https://www.fontsquirrel.com/tools/webfont-generator
+
+The following is an example @font-face declaration. This font can then be
+used in any ruleset using a property like this:  font-family: Example, serif;
+
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/

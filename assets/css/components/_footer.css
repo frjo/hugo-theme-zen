@@ -1,0 +1,12 @@
+/* Branding footer */
+
+.footer,
+%footer {
+  padding-block: var(--gutters);
+  background-color: var(--color-footer-bg);
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}

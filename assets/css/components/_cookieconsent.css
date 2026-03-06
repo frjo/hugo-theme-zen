@@ -1,0 +1,42 @@
+/* Cookieconsent */
+
+.cookieconsent {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: .5rem;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: var(--spacing-xs);
+  color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+  border-block-start: 4px solid var(--color-warning-border);
+  font-size: var(--fs-s);
+  transform: translateY(100vh);
+  transition: all 130ms ease-out;
+  z-index: 99;
+
+  &__actions {
+    display: flex;
+    gap: .5rem;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.button {
+  &--accept {
+    border-color: var(--color-success);
+  }
+
+  &--decline {
+    border-color: var(--color-warning-border);
+  }
+}
+
+[data-cookieconsentopen] {
+  transform: translateY(0);
+}

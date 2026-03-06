@@ -1,0 +1,19 @@
+.flex-inline,
+%flex-inline {
+  --flex-inline-gap: .5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-inline-gap);
+  padding: 0;
+  text-align: start;
+
+  &__item,
+  li {
+    list-style: none;
+  }
+
+  &--inline {
+    display: inline-flex;
+  }
+}

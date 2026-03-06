@@ -1,0 +1,82 @@
+/* Links
+
+Hyperlinks are used to allow the user to navigate to other resources or to
+download a resource.
+
+The order of link states are based on Eric Meyer's article:
+http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+
+:visited - A link that has already been visited.
+:hover   - A link that is being hovered over.
+:focus   - A link that has been given keyboard focus.
+:active  - A link that is being actively clicked. */
+
+a,
+%link {
+  color: var(--color-link);
+}
+
+/* Any element can receive focus, but only links can be visited, so we can
+safely lower this selector's specificity. This also ensures visited links
+with additional styles won't have their styles overridden. */
+:visited {
+  color: var(--color-link-visited);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+}
+
+a:active {
+  color: var(--color-link-active);
+}
+
+/* Remove underline from links to current page to */
+/* indicate that there is no need to click on it. */
+[aria-current] {
+  text-decoration: none;
+}
+
+/* Use smooth scrolling unless user prefer less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: var(--gutters);
+  }
+}
+
+.link-nav,
+%link-nav {
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Inverted links, for dark backgrounds. */
+.link-inverted,
+%link-inverted {
+  a {
+    &:link {
+      color: var(--color-link-inverted);
+    }
+
+    &:visited {
+      color: var(--color-link-visited-inverted);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-link-hover-inverted);
+    }
+
+    &:active {
+      color: var(--color-link-active-inverted);
+    }
+  }
+}

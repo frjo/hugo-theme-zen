@@ -1,0 +1,8 @@
+/* Style for meta content. */
+
+.meta,
+%meta {
+  font-family: var(--ff-headings);
+  font-size: var(--fs-xs);
+  color: var(--color-text-meta);
+}

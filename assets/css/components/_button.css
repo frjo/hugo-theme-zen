@@ -1,0 +1,74 @@
+/* Button */
+
+.button,
+%button,
+[type='button'],
+[type='submit'] {
+  @extend %button--disabled;
+
+  /* Some styles don't apply to <a> links since they are inline elements by default. */
+  display: inline-block;
+  font-family: var(--ff-headings);
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  padding: .2rem 1rem;
+
+  /* Improve usability and consistency of cursor style between image-type `input` and others. */
+  cursor: pointer;
+  color: var(--color-button-text);
+  text-shadow: var(--color-button) 0 1px 0;
+  background: linear-gradient(var(--color-button), var(--color-button-hover));
+  border: 1px solid var(--color-button-hover);
+  border-radius: var(--radius-s);
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    /* Override any link underlines and color changes. */
+    text-decoration: none;
+    color: var(--color-button-text-hover);
+    text-shadow: var(--color-button-hover) 0 1px 0;
+    background: linear-gradient(var(--color-button-hover), var(--color-button));
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 5px var(--color-black-40);
+  }
+}
+
+/* Add button variations here. */
+.button,
+%button {
+  &--small {
+    font-size: var(--fs-xs);
+    padding: .2rem .75rem;
+  }
+
+  &--alt {
+    color: var(--color-button-text-hover);
+    background: var(--color-button-hover);
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--color-button-text);
+      background: var(--color-button);
+    }
+  }
+
+  &--outline {
+    color: var(--color-button);
+    background: var(--color-button-text);
+  }
+}
+
+/* The disabled variation should always go last, so that it overrides any
+other variations. */
+%button--disabled[disabled] {
+  @extend %disabled;
+  background-color: var(--color-grey-200);
+  border: 1px solid var(--color-button-disabled);
+  background-image: none;
+  text-shadow: none;
+}

@@ -1,0 +1,46 @@
+/* Box */
+
+.box {
+  /* Add vertical rhythm margins. */
+  margin-block: var(--spacing-m);
+  padding: var(--spacing-xs);
+  border: 5px solid var(--color-border);
+
+  &__title,
+  .title {
+    margin-top: 0;
+  }
+
+  &--highlight {
+    border-color: var(--color-highlight);
+  }
+
+  &--fit {
+    width: fit-content;
+  }
+
+  &--gutter {
+    padding-inline: var(--gutters);
+  }
+
+  &--inverted {
+    @extend %link-inverted;
+    background: var(--color-border);
+    color: var(--color-text-bg);
+
+    /* Make sure headings etc. also gets inverted. */
+    * {
+      color: var(--color-text-bg);
+    }
+  }
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+}

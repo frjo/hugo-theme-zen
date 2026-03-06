@@ -1,0 +1,71 @@
+/* Headings
+
+All HTML headings, `<h1>` through `<h6>`, are available. `%h1` through `%h6`
+classes are also available, for when you want to match the font styling of a
+heading but not be a heading. */
+
+h1,
+%h1,
+h2,
+%h2,
+h3,
+%h3,
+h4,
+%h4,
+h5,
+%h5,
+h6,
+%h6 {
+  margin-block: 1.5em .5em;
+  color: var(--color-headings);
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-headings);
+  line-height: var(--heading-line-height);
+  text-wrap: balance;
+
+  /* Smaller margin when a headeing is right after another heading. */
+  & + & {
+    margin-block-start: .75em
+  }
+
+  /* Set max text line width in main for readability. */
+  .main & {
+    max-width: var(--max-line-width);
+  }
+}
+
+h1,
+%h1 {
+  /* h1 only on top of page so different margins. */
+  margin-block-start: var(--spacing-m);
+  margin-block-end: var(--spacing-xs);
+  font-size: var(--fs-xxl);
+  letter-spacing: -.01em;
+}
+
+h2,
+%h2 {
+  font-size: var(--fs-xl);
+  letter-spacing: -.01em;
+}
+
+h3,
+%h3 {
+  font-size: var(--fs-l);
+  letter-spacing: -.01em;
+}
+
+h4,
+%h4 {
+  font-size: var(--fs-m);
+}
+
+h5,
+%h5 {
+  font-size: var(--fs-s);
+}
+
+h6,
+%h6 {
+  font-size: var(--fs-xs);
+}

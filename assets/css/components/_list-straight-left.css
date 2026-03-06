@@ -1,0 +1,55 @@
+/* Lists with a straight left margin. */
+
+.ul-straight-left,
+%ul-straight-left {
+  display: table;
+  list-style: none;
+  padding: 0;
+
+  & > li {
+    display: table-row;
+
+    &::before {
+      padding-inline-end: var(--spacing-xs);
+      display: table-cell;
+      content: '\2981';
+      font-size: var(--fs-s);
+    }
+  }
+}
+
+.ol-straight-left,
+%ol-straight-left {
+  display: table;
+  list-style: none;
+  padding: 0;
+
+  & > li {
+    display: table-row;
+    counter-increment: table-ol;
+
+    &::before {
+      padding-inline-end: var(--spacing-xs);
+      display: table-cell;
+      content: counter(table-ol) '.';
+      font-size: var(--fs-s);
+      text-align: end;
+    }
+  }
+}
+
+.ul-straight-left--off,
+%ul-straight-left--off {
+  display: block;
+  list-style: inherit;
+
+  & > li {
+    display: list-item;
+
+    &::before {
+      content: '';
+      display: inline;
+      padding: inherit;
+    }
+  }
+}

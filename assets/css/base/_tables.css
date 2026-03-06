@@ -1,0 +1,32 @@
+/* Tables */
+
+table {
+  /* Add vertical rhythm margins. */
+  margin-block: 0 var(--spacing-m);
+
+  /* Remove default spacing between table cells. */
+  border-collapse: collapse;
+
+  /* Prevent cramped-looking tables */
+  width: 100%;
+}
+
+td,
+th {
+  /* Remove most spacing between table cells. */
+  padding: 0;
+
+  /* Align content to top of cells. */
+  vertical-align: text-top;
+}
+
+th {
+  /* Align content to bottom of headers. */
+  vertical-align: bottom;
+}
+
+caption,
+th {
+  /* Align all text the same. */
+  text-align: start;
+}

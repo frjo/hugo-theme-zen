@@ -1,0 +1,43 @@
+.flex-group,
+%flex-group {
+  --flex-gap: calc(var(--base-line-height) * 1rem);
+
+  display: flex;
+  gap: var(--flex-gap);
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 1;
+  }
+
+  @media (min-width: 666px) {
+    &--2 > * {
+      flex-basis: calc(100% / 2 - var(--flex-gap));
+      flex-grow: 0;
+    }
+
+    &--3 > * {
+      flex-basis: calc(100% / 3 - var(--flex-gap));
+      flex-grow: 0;
+    }
+
+    &--4 > * {
+      flex-basis: calc(100% / 4 - var(--flex-gap));
+      flex-grow: 0;
+    }
+
+    &--5 > * {
+      flex-basis: calc(100% / 5 - var(--flex-gap));
+      flex-grow: 0;
+    }
+
+    &--6 > * {
+      flex-basis: calc(100% / 6 - var(--flex-gap));
+      flex-grow: 0;
+    }
+
+    &--grow > * {
+      flex-grow: 1;
+    }
+  }
+}

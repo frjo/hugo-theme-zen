@@ -1,0 +1,20 @@
+/* Document */
+
+html {
+  /* Change the default font family in all browsers. */
+  font-family: var(--ff-body);
+
+  /* Set base font size in percent. */
+  font-size: calc(var(--base-font-size) / 16 * 100%);
+
+  /* Set text colour. */
+  color: var(--color-text);
+}
+
+body {
+  /* Correct the line height in all browsers. */
+  line-height: var(--base-line-height);
+
+  /* Accent colour for forms. */
+  accent-color: var(--color-accent);
+}

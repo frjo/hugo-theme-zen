@@ -1,0 +1,33 @@
+/* Pager
+
+Paged navigation is a list of page numbers when more than 1 page of content
+is available. */
+
+.pagination,
+.pager,
+%pager {
+  @extend %flex-inline;
+  @extend %link-nav;
+
+  /* Add vertical rhythm margins. */
+  margin-block: var(--spacing-m);
+  justify-content: center;
+
+  .page-item {
+  }
+
+  &__item,
+  .page-link {
+    padding-inline: 2px;
+  }
+
+  .active {
+    font-weight: var(--fw-bold);
+  }
+
+  .disabled {
+    .page-link {
+      @extend %disabled;
+    }
+  }
+}

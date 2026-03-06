@@ -1,0 +1,10 @@
+/* Language selector */
+
+.language-selector {
+  display: flex;
+}
+
+.language-icon {
+  margin-inline-end: var(--spacing-xs);
+  fill: var(--color-text);
+}

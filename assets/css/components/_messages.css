@@ -1,0 +1,43 @@
+/* Messages */
+
+.message,
+%message {
+  padding: .5rem;
+  outline-width: 2px;
+  outline-style: solid;
+  width: 95%;
+
+  &.success {
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+    outline-color: var(--color-success);
+  }
+
+  &.info {
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+    outline-color: var(--color-info);
+  }
+
+  &.warning {
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning);
+    outline-color: var(--color-warning);
+  }
+
+  &.error {
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+    outline-color: var(--color-error);
+  }
+
+  &--highlight {
+    animation: 2s ease-in-out infinite --outline-highlight;
+  }
+
+  @keyframes --outline-highlight {
+    50% {
+      outline-width: .3rem;
+    }
+  }
+}

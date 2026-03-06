@@ -1,0 +1,44 @@
+/* The print stylesheet for this theme. */
+
+@import 'init';
+
+.pager,
+%pager,
+.mobile-nav,
+aside,
+nav,
+footer {
+  display: none;
+}
+
+@media print {
+  html {
+    font-size: var(--print-font-size);
+  }
+
+  html,
+  body,
+  .page {
+    background-color: white;
+    border-color: black;
+    box-shadow: none;
+    color: black;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  /* Underline all links. */
+  :link,
+  :visited {
+    text-decoration: underline;
+  }
+
+  /* Add visible title after abbreviations. */
+  abbr[title] {
+    &::after {
+      content: ' (' attr(title) ')';
+    }
+  }
+}

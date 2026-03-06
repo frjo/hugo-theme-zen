@@ -1,0 +1,87 @@
+/* Figure and image. */
+
+figure,
+img {
+  &.image {
+    --image-padding: .75rem;
+
+    @media (min-width: 666px) {
+      &.center {
+        margin-inline: auto;
+      }
+
+      &.left {
+        padding-inline-end: var(--image-padding);
+        padding-block-end: var(--image-padding);
+        margin: 0;
+        float: left;
+        clear: both;
+      }
+
+      &.right {
+        padding-inline-start: var(--image-padding);
+        padding-block-end: var(--image-padding);
+        margin: 0;
+        float: right;
+        clear: both;
+      }
+    }
+  }
+}
+
+figure {
+  /* Add vertical rhythm margins. */
+  margin-block: 0 var(--spacing-m);
+
+  &.image {
+    figcaption {
+      padding-block-start: var(--image-padding);
+      contain: inline-size;
+
+      /* Set max text line width in main for readability. */
+      max-width: var(--max-line-width);
+
+      /* Nicer text wrap, e.g. no lone word on last line. */
+      text-wrap: pretty;
+
+      @media (min-width: 666px) {
+        padding-block-start: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 666px) {
+      inline-size: fit-content;
+
+      &.left {
+        figcaption {
+          padding-inline-end: var(--image-padding);
+          padding-block-end: var(--image-padding);
+        }
+      }
+
+      &.right {
+        figcaption {
+          padding-inline-start: var(--image-padding);
+          padding-block-end: var(--image-padding);
+        }
+      }
+    }
+  }
+
+  &.podcast {
+    audio {
+      width: 95%;
+    }
+  }
+}
+
+img {
+  &.image {
+    /* Add vertical rhythm margins. */
+    margin-block: 0 var(--spacing-m);
+  }
+}

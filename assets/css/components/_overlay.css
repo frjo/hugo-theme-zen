@@ -1,0 +1,6 @@
+.overlay,
+%overlay {
+  --color-overlay: var(--color-black-20);
+  --color-overlay2: var(--color-black-10);
+  border-image: linear-gradient(var(--color-overlay), var(--color-overlay2)) fill 1;
+}
