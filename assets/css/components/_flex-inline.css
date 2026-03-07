@@ -12,9 +12,9 @@
     li {
       list-style: none;
     }
+  }
 
-    .flex-inline--inline {
-      display: inline-flex;
-    }
+  .flex-inline--inline {
+    display: inline-flex;
   }
 }

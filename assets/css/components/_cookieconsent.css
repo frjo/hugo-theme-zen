@@ -12,7 +12,7 @@
     padding: var(--spacing-xs);
     color: var(--color-warning);
     background-color: var(--color-warning-bg);
-    border-block-start: 4px solid var(--color-warning-border);
+    border-block-start: 4px solid var(--color-warning);
     font-size: var(--fs-s);
     transform: translateY(100vh);
     transition: all 130ms ease-out;
@@ -25,16 +25,6 @@
 
     &[hidden] {
       display: none;
-    }
-  }
-
-  .button {
-    .button--accept {
-      border-color: var(--color-success);
-    }
-
-    .button--decline {
-      border-color: var(--color-warning-border);
     }
   }
 

@@ -20,50 +20,50 @@ A simple cards style. */
     padding: var(--spacing-xs);
     border: 1px solid var(--color-border);
 
-    .card--highlight {
-      border-color: var(--color-highlight);
-    }
-
-    .card--featured {
-      grid-row: span 2;
-      grid-column: span 2;
-    }
-
-    .card--gutter {
-      padding-inline: var(--gutters);
-    }
-
-    .card--inverted {
-      background: var(--color-border);
-      color: var(--color-text-bg);
-
-      a {
-        &:link {
-          color: var(--color-link-inverted);
-        }
-
-        &:visited {
-          color: var(--color-link-visited-inverted);
-        }
-
-        &:hover,
-        &:focus {
-          color: var(--color-link-hover-inverted);
-        }
-
-        &:active {
-          color: var(--color-link-active-inverted);
-        }
-      }
-    }
-
-    > * {
+    & > * {
       &:first-child {
         margin-top: 0;
       }
 
       &:last-child {
         margin-block-end: 0;
+      }
+    }
+  }
+
+  .card--highlight {
+    border-color: var(--color-highlight);
+  }
+
+  .card--featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .card--gutter {
+    padding-inline: var(--gutters);
+  }
+
+  .card--inverted {
+    background: var(--color-border);
+    color: var(--color-text-bg);
+
+    a {
+      &:link {
+        color: var(--color-link-inverted);
+      }
+
+      &:visited {
+        color: var(--color-link-visited-inverted);
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover-inverted);
+      }
+
+      &:active {
+        color: var(--color-link-active-inverted);
       }
     }
   }

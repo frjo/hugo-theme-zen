@@ -24,9 +24,9 @@ default 16:9 one. */
       width: 100%;
       height: 100%;
     }
+  }
 
-    .responsive-video--4-3 {
-      --aspect-ratio: 3 / 4; /* 4:3 aspect ratio */
-    }
+  .responsive-video--4-3 {
+    --aspect-ratio: 3 / 4; /* 4:3 aspect ratio */
   }
 }
