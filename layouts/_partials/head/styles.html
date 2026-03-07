@@ -1,12 +1,9 @@
-{{ $main_options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" false "transpiler" (site.Params.sassTranspiler | default "libsass")) -}}
-{{ if eq hugo.Environment "development" -}}
-  {{ $main_options = merge $main_options (dict "outputStyle" "nested" "enableSourceMap" true) -}}
-{{ end -}}
-{{ $mobile_options := merge $main_options (dict "targetPath" "css/mobilemenu.css") -}}
-{{ $print_options := merge $main_options (dict "targetPath" "css/print.css") -}}
-{{ $main_style := resources.Get "sass/styles.scss" | toCSS $main_options -}}
-{{ $mobile_style := resources.Get "sass/mobilemenu.scss" | toCSS $mobile_options -}}
-{{ $print_style := resources.Get "sass/print.scss" | toCSS $print_options -}}
+{{ $main_style := resources.Match "css/**/_*.css" }}
+{{ $main_style = $main_style | append (resources.Match "css/_*.css") | resources.Concat "css/styles.css" }}
+
+
+{{ $mobile_style := resources.Get "css/mobilemenu.css" -}}
+{{ $print_style := resources.Get "css/print.css" -}}
 {{ if ne hugo.Environment "development" -}}
   {{ $main_style = $main_style | fingerprint -}}
   {{ $mobile_style = $mobile_style | fingerprint -}}

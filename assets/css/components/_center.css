@@ -1,12 +1,14 @@
-.grid-center {
-  display: grid;
-  place-items: center;
-}
+@layer components {
+  .grid-center {
+    display: grid;
+    place-items: center;
+  }
 
-.text-center {
-  text-align: center;
-}
+  .text-center {
+    text-align: center;
+  }
 
-.margin-center {
-  margin-inline: auto;
+  .margin-center {
+    margin-inline: auto;
+  }
 }

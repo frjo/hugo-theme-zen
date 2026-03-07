@@ -1,9 +1,6 @@
 /* The print stylesheet for this theme. */
 
-@import 'init';
-
 .pager,
-%pager,
 .mobile-nav,
 aside,
 nav,

@@ -9,21 +9,20 @@ from a user.
 For anything you want to hide on page load when JavaScript is enabled, use
 the `.js-hidden` class. */
 
-.hidden,
-%hidden {
-  display: none;
-}
-
-.js-hidden,
-%js-hidden {
-  html.js & {
+@layer components {
+  .hidden {
     display: none;
   }
-}
 
-.nojs-hidden,
-%nojs-hidden {
-  html.nojs & {
-    display: none;
+  .js-hidden {
+    html.js & {
+      display: none;
+    }
+  }
+
+  .nojs-hidden {
+    html.nojs & {
+      display: none;
+    }
   }
 }

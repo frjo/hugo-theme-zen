@@ -3,31 +3,56 @@
 Paged navigation is a list of page numbers when more than 1 page of content
 is available. */
 
-.pagination,
-.pager,
-%pager {
-  @extend %flex-inline;
-  @extend %link-nav;
+@layer components {
+  .pagination,
+  .pager {
+    --flex-inline-gap: .5rem;
 
-  /* Add vertical rhythm margins. */
-  margin-block: var(--spacing-m);
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--flex-inline-gap);
+    padding: 0;
+    text-align: start;
 
-  .page-item {
-  }
+    /* Add vertical rhythm margins. */
+    margin-block: var(--spacing-m);
+    justify-content: center;
 
-  &__item,
-  .page-link {
-    padding-inline: 2px;
-  }
+    a {
+      text-decoration: none;
 
-  .active {
-    font-weight: var(--fw-bold);
-  }
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
 
-  .disabled {
+    .pager__item,
     .page-link {
-      @extend %disabled;
+      padding-inline: 2px;
+    }
+
+    .page-item {
+    }
+
+    .active {
+      font-weight: var(--fw-bold);
+    }
+
+    .disabled {
+      .page-link {
+        /* Re-set default cursor for disabled elements. */
+        cursor: default;
+        color: var(--color-button-disabled);
+
+        &:hover,
+        &:focus,
+        &:active {
+          /* Override any link underlines and color changes. */
+          color: var(--color-button-disabled);
+          text-decoration: none;
+        }
+      }
     }
   }
 }

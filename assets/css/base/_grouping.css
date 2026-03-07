@@ -1,105 +1,107 @@
 /* Grouping content */
 
-/* Block quotes */
+@layer base {
+  /* Block quotes */
 
-blockquote {
-  /* Add vertical rhythm margins. */
-  margin-block: 0 var(--spacing-m);
+  blockquote {
+    /* Add vertical rhythm margins. */
+    margin-block: 0 var(--spacing-m);
 
-  /* Nicer text wrap, e.g. no lone word on last line. */
-  text-wrap: pretty;
+    /* Nicer text wrap, e.g. no lone word on last line. */
+    text-wrap: pretty;
 
-  /* Also indent the quote on both sides. */
-  margin-inline: var(--indent-amount);
+    /* Also indent the quote on both sides. */
+    margin-inline: var(--indent-amount);
 
-  /* Set max text line width in main for readability. */
-  max-width: var(--max-line-width);
-}
+    /* Set max text line width in main for readability. */
+    max-width: var(--max-line-width);
+  }
 
-/* Lists */
+  /* Lists */
 
-dl,
-ol,
-ul,
-menu {
-  /* Add vertical rhythm margins. */
-  margin-block: 0 var(--spacing-m);
-}
-
-dt {
-  font-weight: var(--fw-bold);
-}
-
-dd {
-  margin: 0;
-  margin-inline-start: var(--indent-amount);
-
-  /* Nicer text wrap, e.g. no lone word on last line. */
-  text-wrap: pretty;
-}
-
-ol,
-ul,
-menu {
-  padding: 0;
-  padding-inline-start: var(--indent-amount);
-
-  /* Turn off margins on nested lists. */
+  dl,
   ol,
   ul,
   menu {
+    /* Add vertical rhythm margins. */
+    margin-block: 0 var(--spacing-m);
+  }
+
+  dt {
+    font-weight: var(--fw-bold);
+  }
+
+  dd {
     margin: 0;
+    margin-inline-start: var(--indent-amount);
+
+    /* Nicer text wrap, e.g. no lone word on last line. */
+    text-wrap: pretty;
   }
-}
 
-li {
-  /* Nicer text wrap, e.g. no lone word on last line. */
-  text-wrap: pretty;
+  ol,
+  ul,
+  menu {
+    padding: 0;
+    padding-inline-start: var(--indent-amount);
 
-  /* Set max text line width in main for readability. */
-  .main & {
-    max-width: var(--max-line-width);
+    /* Turn off margins on nested lists. */
+    ol,
+    ul,
+    menu {
+      margin: 0;
+    }
   }
-}
 
-/* Horizontal rule */
+  li {
+    /* Nicer text wrap, e.g. no lone word on last line. */
+    text-wrap: pretty;
 
-hr {
-  /* Add vertical rhythm margins. */
-  margin-block: var(--spacing-m);
-  border: 0;
-  border-block-start: 1px solid var(--color-border);
-  height: 0;
-}
-
-/* Paragraphs */
-
-p {
-  /* Add vertical rhythm margins. */
-  margin-block: 0 var(--spacing-m);
-
-  /* Nicer text wrap, e.g. no lone word on last line. */
-  text-wrap: pretty;
-
-  /* Set max text line width in main for readability. */
-  .main & {
-    max-width: var(--max-line-width);
+    /* Set max text line width in main for readability. */
+    .main & {
+      max-width: var(--max-line-width);
+    }
   }
-}
 
-/* Preformatted text */
+  /* Horizontal rule */
 
-pre {
-  /* Add vertical rhythm margins. */
-  margin-block: 0 var(--spacing-m);
-  font-family: var(--ff-monospace);
-}
+  hr {
+    /* Add vertical rhythm margins. */
+    margin-block: var(--spacing-m);
+    border: 0;
+    border-block-start: 1px solid var(--color-border);
+    height: 0;
+  }
 
-/* Code */
+  /* Paragraphs */
 
-/* Do not set colour for code with syntax highlighting. */
-code:not([data-lang]),
-kbd,
-samp {
-  color: var(--color-code);
+  p {
+    /* Add vertical rhythm margins. */
+    margin-block: 0 var(--spacing-m);
+
+    /* Nicer text wrap, e.g. no lone word on last line. */
+    text-wrap: pretty;
+
+    /* Set max text line width in main for readability. */
+    .main & {
+      max-width: var(--max-line-width);
+    }
+  }
+
+  /* Preformatted text */
+
+  pre {
+    /* Add vertical rhythm margins. */
+    margin-block: 0 var(--spacing-m);
+    font-family: var(--ff-monospace);
+  }
+
+  /* Code */
+
+  /* Do not set colour for code with syntax highlighting. */
+  code:not([data-lang]),
+  kbd,
+  samp {
+    color: var(--color-code);
+  }
 }

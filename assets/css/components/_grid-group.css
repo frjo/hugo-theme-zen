@@ -1,53 +1,51 @@
-.grid-group,
-%grid-group {
-  --grid-group-column-min: 200px;
-  --grid-group-gap: 1.5rem;
-
-  display: grid;
-  gap: var(--grid-group-gap);
-
-  /* Writing "Min" instead of "min" to force use of css "min()" instead of sass "min()". */
-  /* stylelint-disable-next-line function-name-case */
-  grid-template-columns: repeat(auto-fit, minmax(Min(var(--grid-group-column-min), 100%), 1fr));
-
-  &--fill {
-    /* stylelint-disable-next-line function-name-case */
-    grid-template-columns: repeat(auto-fill, minmax(Min(var(--grid-group-column-min), 100%), 1fr));
-  }
-
-  &--100 {
-    --grid-group-column-min: 100px;
-  }
-
-  &--150 {
-    --grid-group-column-min: 150px;
-  }
-
-  &--200 {
+@layer components {
+  .grid-group {
     --grid-group-column-min: 200px;
-  }
+    --grid-group-gap: 1.5rem;
 
-  &--250 {
-    --grid-group-column-min: 250px;
-  }
+    display: grid;
+    gap: var(--grid-group-gap);
 
-  &--300 {
-    --grid-group-column-min: 300px;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-group-column-min), 100%), 1fr));
 
-  &--350 {
-    --grid-group-column-min: 350px;
-  }
+    .grid-group--fill {
+      grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-group-column-min), 100%), 1fr));
+    }
 
-  &--400 {
-    --grid-group-column-min: 400px;
-  }
+    .grid-group--100 {
+      --grid-group-column-min: 100px;
+    }
 
-  &--500 {
-    --grid-group-column-min: 500px;
-  }
+    .grid-group--150 {
+      --grid-group-column-min: 150px;
+    }
 
-  &--600 {
-    --grid-group-column-min: 600px;
+    .grid-group--200 {
+      --grid-group-column-min: 200px;
+    }
+
+    .grid-group--250 {
+      --grid-group-column-min: 250px;
+    }
+
+    .grid-group--300 {
+      --grid-group-column-min: 300px;
+    }
+
+    .grid-group--350 {
+      --grid-group-column-min: 350px;
+    }
+
+    .grid-group--400 {
+      --grid-group-column-min: 400px;
+    }
+
+    .grid-group--500 {
+      --grid-group-column-min: 500px;
+    }
+
+    .grid-group--600 {
+      --grid-group-column-min: 600px;
+    }
   }
 }

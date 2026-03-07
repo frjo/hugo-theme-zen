@@ -25,4 +25,10 @@ used in any ruleset using a property like this:  font-family: Example, serif;
   font-style: normal;
   font-display: swap;
 }
+
+The fonts layer is loaded early to minimize front-end performance impact.
 */
+
+@layer fonts {
+/* Add your fonts here. */
+}

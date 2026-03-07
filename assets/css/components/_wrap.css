@@ -1,7 +1,9 @@
-.wrap-any {
-  overflow-wrap: anywhere;
-}
+@layer components {
+  .wrap-any {
+    overflow-wrap: anywhere;
+  }
 
-.wrap-word {
-  overflow-wrap: break-word;
+  .wrap-word {
+    overflow-wrap: break-word;
+  }
 }

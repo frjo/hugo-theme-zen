@@ -1,7 +1,5 @@
 /* The mobile navigation stylesheet for this theme. */
 
-@import 'init';
-
 .mobile-nav {
   position: absolute;
   right: 0;
@@ -21,7 +19,7 @@
     fill: var(--color-text-bg);
   }
 
-  &__cover {
+  .mobile-nav__cover {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -34,7 +32,7 @@
     }
   }
 
-  &__toggle {
+  .mobile-nav__toggle {
     display: flex;
     align-items: center;
     position: absolute;
@@ -54,7 +52,7 @@
     }
   }
 
-  &__hamburger {
+  .mobile-nav__hamburger {
     fill: var(--color-button-text);
     width: 1.6rem;
     margin-inline-start: .1rem;
@@ -86,7 +84,7 @@
     }
   }
 
-  &__sheet {
+  .mobile-nav__sheet {
     visibility: hidden;
     background-color: var(--color-mobile-menu);
     width: 90vw;
@@ -103,13 +101,13 @@
     }
   }
 
-  &__region {
+  .mobile-nav__region {
     &:not(:empty) {
       margin-block-end: .5rem;
     }
   }
 
-  &__navbar {
+  .mobile-nav__navbar {
     display: flex;
     flex-direction: column;
     padding-inline-start: 0;
@@ -125,10 +123,10 @@
     }
   }
 
-  &__cover,
-  &__toggle,
-  &__hamburger > rect,
-  &__sheet {
+  .mobile-nav__cover,
+  .mobile-nav__toggle,
+  .mobile-nav__hamburger > rect,
+  .mobile-nav__sheet {
     /* Add some transitions unless user prefer less motion. */
     @media (prefers-reduced-motion: no-preference) {
       transition: all 130ms ease-in;
