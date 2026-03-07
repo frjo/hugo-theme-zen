@@ -18,6 +18,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Table of contents
 
+* [Version 6.x](#version-6x)
 * [Version 5.x](#version-5x)
 * [Version 4.x](#version-4x)
 * [Version 3.x](#version-3x)
@@ -41,12 +42,15 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Podcast](#podcast)
 * [Shortcodes](#shortcodes)
 * [Content security policy headers](#Content-security-policy-headers)
-* [Use npm to lint Sass and JavaScript](#use-npm-to-lint-sass-and-javascript)
+* [Use npm to lint CSS and JavaScript](#use-npm-to-lint-css-and-javascript)
 * [Repository links](#repository-links)
 * [Math typesetting with KaTeX](#math-typesetting-with-katex)
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
+## Version 6.x
+
+* Converted from sass to modern vanilla css with nesting and @layers.
 
 ## Version 5.x
 
@@ -136,7 +140,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Contact form (PHP)
 * CSS grid and flex throughout
 * HTML5
-* Hugo Pipes for images, js and sass
+* Hugo Pipes for images, js and css
 * Math typesetting with KaTeX
 * Micro.blog
 * Meta tags and JSON-LD
@@ -311,7 +315,6 @@ params:
   poweredby: true           # Show powered by hugo in footer
   privacyPolicyUrl: ""      # If set will add link to cookie consent form.
   relatedposts: true        # Show related posts under a "See also" section, default false.
-  sassTranspiler: "dartsass"# The Sass transpiler to use, default "libsass".
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right, default false.
   siteName: false           # Hide the site name (visually-hidden), default true.
@@ -358,13 +361,11 @@ If you do not specify any sections in the "mainSections" param (see configuratio
 
 This is another part that almost everyone will like to customise.
 
-They are found in the theme `assets/sass/_colors.scss`, `assets/sass/_variables.scss` and `assets/sass/_sass_variables.scss` files. You can copy them to the root `assets/sass/` directory to set your own values. 
+They are found in the theme `assets/css/_colors.css` and `assets/css/_variables.css` files. You can copy them to the root `assets/css/` directory to set your own values. 
 
-In most cases you likely only need to override a few values and then it is easier to set these in the extra and custom sass files.
+In most cases you likely only need to override a few values and then it is easier to set these in the custom css files.
 
-Root `assets/sass/_extra.scss`: Loaded first so use to override sass variables only.
-
-Root `assets/sass/_custom.scss`: Loaded last so use to override css variables and add any custom styles you need.
+Root `assets/css/_custom.css`: Loaded last so use to override css variables and add any custom styles you need.
 
 
 ### Logo
@@ -409,20 +410,20 @@ They are set up in `layouts/partials/menu.html`, `layouts/partials/mobilmenu.htm
 
 Modern CSS grid is the easiest and cleanest way to layout your pages.
 
-The CSS grid layout are in `assets/sass/layouts/_layouts.scss`. A lot can be done by just reordering "grid-template-rows".
+The CSS grid layout are in `assets/css/layouts/_layouts.css`. A lot can be done by just reordering "grid-template-rows".
 
 
 ### Other styles and scripts
 
 Styles and scripts are processed with Hugo pipes that was added in Hugo 0.46.
 
-To customise a js or sass file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/sass directory.
+To customise a js or css file, copy it to the root assets directory and edit it there. Make sure to maintain the directory structure inside the assets/css directory.
 
-There is an `assets/sass/_custom.scss` file meant for your custom styles. Copy it to the root `assets/sass/_custom.scss` to use it.
+There is an `assets/css/_custom.css` file meant for your custom styles. Copy it to the root `assets/css/_custom.css` to use it.
 
-The default styles in `assets/sass/_zen.scss` are boring but functional. You can easily override them completely by placing an empty file named "_zen.scss" in root assets/sass directory.
+The default styles in `assets/css/_zen.css` are boring but functional. You can easily override them completely by placing an empty file named "_zen.css" in root assets/css directory.
 
-The sass files are by default built for production, compressed with fingerprint.
+The css files are by default built for production, compressed with fingerprint.
 
 By setting the Hugo environment variable to "development" (default when running `hugo server`) they will instead be nested with sourcemaps.
 
@@ -825,9 +826,9 @@ The **content** that should be wrapped. Some more content.
 Includes tracking code for Matomo or Google in a way that supports Content security policy headers. Read more in my blog post [Content security policy headers when using Matomo or Google analytics](https://xdeb.org/post/2020/01/14/content-security-policy-headers-when-using-matomo-or-google-analytics/).
 
 
-## Use npm to lint Sass and JavaScript
+## Use npm to lint CSS and JavaScript
 
-* Lint your Sass using stylelint.
+* Lint your CSS using stylelint.
 * Lint your JavaScript using biome.
 * Can lint files in the theme as well as the project assets directory.
 
@@ -839,7 +840,7 @@ Node.js software you need. To install them run:
 
         npm install
 
-3. Run the following commands to lint your theme and projects Sass and JavaScript code.
+3. Run the following commands to lint your theme and projects CSS and JavaScript code.
 
         npm run lint-theme
         npm run lint-project

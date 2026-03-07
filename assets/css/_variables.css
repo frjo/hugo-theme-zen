@@ -1,7 +1,7 @@
 @layer vars {
   :root {
     /* Set theme css variables.
-    Override css variables in "assets/sass/_custom.css" */
+    Override css variables in "assets/css/_custom.css" */
 
     /* The max content width. (Consider using one of the breakpoints.) */
     --max-content-width: 1111px;
