@@ -1,2 +1,0 @@
-/* Declare layers first to set order. */
-@layer reset, fonts, vars, base, layout, components, zen;
