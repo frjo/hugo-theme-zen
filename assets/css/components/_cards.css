@@ -22,7 +22,7 @@ A simple cards style. */
 
     & > * {
       &:first-child {
-        margin-top: 0;
+        margin-block-start: 0;
       }
 
       &:last-child {
