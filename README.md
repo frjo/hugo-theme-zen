@@ -154,7 +154,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Minimum Hugo version
 
-Hugo Extended version 0.146.0 or higher is required.
+Hugo version 0.146.0 or higher is required.
 
 
 ## Installation
