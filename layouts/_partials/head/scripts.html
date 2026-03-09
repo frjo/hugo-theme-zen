@@ -5,7 +5,7 @@
   {{ $opts = merge $opts (dict "minify" false) -}}
 {{ end -}}
 
-{{ $early := resources.Get "js/script-early.js" | js.Build $opts | fingerprint -}}
+{{ $early := resources.Get "js/script-early.js" | js.Build $opts -}}
 <script>
 {{ $early.Content | safeJS }}
 </script>
