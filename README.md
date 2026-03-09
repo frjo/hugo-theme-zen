@@ -49,12 +49,12 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Credits](#credits)
 
 
-## Version 6.x
+## Version 6.x 2026-03-xx
 
 * Converted from sass to modern vanilla css with nesting and layers. Please check [CSS Nesting | Can I use](https://caniuse.com/css-nesting) to see if you are comfortable with css nesting support in browsers before updating to v6.
+* No changes to styles or templates so sites should look identical, if the browser support nesting.
 
-
-## Version 5.x
+## Version 5.x 2025-03-26
 
 * Minimum Hugo version is now v0.146.0. This plus the rearranged variables are the reasons for making this v5.
 * Rearranged a lot of variables. This will require some work to upgrade if you have customisations. I'm working towards using vanilla css only.
@@ -76,14 +76,14 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 5. If you have overridden templates you will need to use the new template structure in your root layout directory.
 
 
-## Version 4.x
+## Version 4.x 2024-08-14
 
 * Minimum Hugo version is now v0.124.0. This is the reason for making this v4.
 * Updated a number of things to remove all "WARN  deprecated".
 * No other significant changes.
 
 
-## Version 3.x
+## Version 3.x 2023-04-04
 
 * Implement modern CSS like flex, grid and variables throughout.
 * All sass variables now have a css variable version. All styles use the css variable version.
@@ -120,7 +120,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 5. Replace sass variables with css variables, e.g. `$zen-gutters` with `var(--gutters)`.
 
 
-## Version 2.x
+## Version 2.x 2022-03-11
 
 * Replaced "normalize" with slimmer and updated "reset". Removed everything for old IE versions.
 * Use of css4 variables. Colours are now used like this `var(--color-brand)`.
