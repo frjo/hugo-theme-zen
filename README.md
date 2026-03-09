@@ -48,9 +48,11 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Getting help](#getting-help)
 * [Credits](#credits)
 
+
 ## Version 6.x
 
-* Converted from sass to modern vanilla css with nesting and @layers.
+* Converted from sass to modern vanilla css with nesting and layers. Please check [CSS Nesting | Can I use](https://caniuse.com/css-nesting) to see if you are comfortable with css nesting support in browsers before updating to v6.
+
 
 ## Version 5.x
 
@@ -72,6 +74,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 3. Override colours and other css variables in projects `_custom.scss`.
 4. Update/remove/convert variables you overridden in projects `_extra.scss` so they match changes in themes `_variables.scss` and `_sass_variables.scss`.
 5. If you have overridden templates you will need to use the new template structure in your root layout directory.
+
 
 ## Version 4.x
 
