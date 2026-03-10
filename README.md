@@ -49,7 +49,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Credits](#credits)
 
 
-## Version 6.x 2026-03-xx
+## Version 6.x 2026-03-10
 
 * Converted from sass to modern vanilla css with nesting and layers. Please check [CSS Nesting | Can I use](https://caniuse.com/css-nesting) to see if you are comfortable with css nesting support in browsers before updating to v6.
 * No changes to styles or templates so sites should look identical, if the browser support nesting.
