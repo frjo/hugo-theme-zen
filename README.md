@@ -54,6 +54,11 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Converted from sass to modern vanilla css with nesting and layers. Please check [CSS Nesting | Can I use](https://caniuse.com/css-nesting) to see if you are comfortable with css nesting support in browsers before updating to v6.
 * No changes to styles or templates so sites should look identical, if the browser support nesting.
 
+### Upgrade to 6.x
+
+1. If you have overridden any sass files you will need to rename the directory and change the file extension. E.g `assets/sass/_custom.scss` -> `assets/css/_custom.css`.
+2. You might also need to update the styles in the overridden files to conform to standard css.
+
 ## Version 5.x 2025-03-26
 
 * Minimum Hugo version is now v0.146.0. This plus the rearranged variables are the reasons for making this v5.
