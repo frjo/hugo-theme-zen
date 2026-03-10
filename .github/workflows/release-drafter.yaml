@@ -10,6 +10,8 @@ on:
     # Only following types are handled by the action, but one can default to all as well
     types: [opened, reopened, synchronize]
 
+  workflow_dispatch:
+
 permissions:
   contents: read
 
