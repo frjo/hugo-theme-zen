@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "The node.js requirements to lint this project.",
   "scripts": {
-    "lint-theme:css": "stylelint \"assets/sass/**/*.scss\"",
+    "lint-theme:css": "stylelint \"assets/css/**/*.css\"",
     "lint-theme:js": "biome check",
-    "lint-project:css": "stylelint \"../../assets/sass/**/*.scss\"",
+    "lint-project:css": "stylelint \"../../assets/css/**/*.css\"",
     "lint-project:js": "biome check \"../../assets/js/**/*.js\"",
     "lint-theme": "npm run lint-theme:css && npm run lint-theme:js",
     "lint-project": "npm run lint-project:css && npm run lint-project:js",
@@ -20,8 +20,9 @@
   "author": "Fredrik Jonsson",
   "license": "GPL-2.0",
   "devDependencies": {
-    "stylelint": "^16.25.0",
-    "stylelint-config-standard-scss": "^16.0.0"
+    "@biomejs/biome": "^2.4.6",
+    "stylelint": "^17.4.0",
+    "stylelint-config-standard": "^40.0.0"
   },
   "engines": {
     "node": ">=24.0.0"

@@ -13,13 +13,12 @@ if [[ ! "$0" =~ "themes/zen/scripts/set_up_new_site.sh" ]]; then
   exit 1
 fi
 
-mkdir -p "assets/sass"
+mkdir -p "assets/css"
 mkdir -p "layouts"
 
-copy_files=("themes/zen/assets/sass/_extra.scss:assets/sass/_extra.scss"
-            "themes/zen/assets/sass/_fonts.scss:assets/sass/_fonts.scss"
-            "themes/zen/assets/sass/_custom.scss:assets/sass/_custom.scss"
-            "themes/zen/assets/sass/_zen.scss:assets/sass/_zen.scss"
+copy_files=("themes/zen/assets/css/_fonts.scss:assets/css/_fonts.css"
+            "themes/zen/assets/css/_custom.scss:assets/css/_custom.css"
+            "themes/zen/assets/css/_zen.scss:assets/css/_zen.css"
             "themes/zen/layouts/home.html:layouts/home.html"
             "themes/zen/exampleSite/hugo.yaml:hugo.yaml"
             "themes/zen/.editorconfig:.editorconfig")

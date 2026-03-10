@@ -1,0 +1,51 @@
+@layer components {
+  .grid-group {
+    --grid-group-column-min: 200px;
+    --grid-group-gap: 1.5rem;
+
+    display: grid;
+    gap: var(--grid-group-gap);
+
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-group-column-min), 100%), 1fr));
+  }
+
+  .grid-group--fill {
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-group-column-min), 100%), 1fr));
+  }
+
+  .grid-group--100 {
+    --grid-group-column-min: 100px;
+  }
+
+  .grid-group--150 {
+    --grid-group-column-min: 150px;
+  }
+
+  .grid-group--200 {
+    --grid-group-column-min: 200px;
+  }
+
+  .grid-group--250 {
+    --grid-group-column-min: 250px;
+  }
+
+  .grid-group--300 {
+    --grid-group-column-min: 300px;
+  }
+
+  .grid-group--350 {
+    --grid-group-column-min: 350px;
+  }
+
+  .grid-group--400 {
+    --grid-group-column-min: 400px;
+  }
+
+  .grid-group--500 {
+    --grid-group-column-min: 500px;
+  }
+
+  .grid-group--600 {
+    --grid-group-column-min: 600px;
+  }
+}

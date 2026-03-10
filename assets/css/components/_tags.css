@@ -1,0 +1,7 @@
+@layer components {
+  .tags {
+    ul {
+      margin-block: 0;
+    }
+  }
+}

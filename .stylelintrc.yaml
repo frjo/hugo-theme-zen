@@ -1,5 +1,5 @@
 extends:
-  - stylelint-config-standard-scss
+  - stylelint-config-standard
 rules:
   alpha-value-notation: number
   block-no-empty: null
@@ -19,17 +19,5 @@ rules:
   media-feature-range-notation: prefix
   no-descending-specificity: null
   selector-class-pattern:
-    - "^[a-z0-9\\-]+$"
-    - message: Selector should be written in lowercase with hyphens (selector-class-pattern)
-  scss/at-mixin-argumentless-call-parentheses: null
-  scss/comment-no-empty: null
-  scss/double-slash-comment-empty-line-before:
-    - always
-    - except:
-        - first-nested
-      ignore:
-        - between-comments
-        - stylelint-commands
-        - inside-block
-  scss/no-global-function-names: null
-  scss/percent-placeholder-pattern: null
+    - "^[a-z0-9\\-\\_]+$"
+    - message: Selector should be written in lowercase with hyphens or underscore (selector-class-pattern)

@@ -1,0 +1,9 @@
+@layer components {
+  .wrap-any {
+    overflow-wrap: anywhere;
+  }
+
+  .wrap-word {
+    overflow-wrap: break-word;
+  }
+}

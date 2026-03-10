@@ -1,0 +1,9 @@
+/* Style for meta content. */
+
+@layer components {
+  .meta {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-xs);
+    color: var(--color-text-meta);
+  }
+}
