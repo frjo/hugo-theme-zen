@@ -18,16 +18,16 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 
 ## Table of contents
 
-* [Version 6.x](#version-6x)
-* [Version 5.x](#version-5x)
-* [Version 4.x](#version-4x)
-* [Version 3.x](#version-3x)
-* [Version 2.x](#version-2x)
 * [Features](#features)
 * [Minimum Hugo version](#minimum-hugo-version)
 * [Installation](#installation)
 * [Updating](#updating)
 * [Run example site](#run-example-site)
+* [Version 6.x](#version-6x)
+* [Version 5.x](#version-5x)
+* [Version 4.x](#version-4x)
+* [Version 3.x](#version-3x)
+* [Version 2.x](#version-2x)
 * [Performance](#performance)
 * [Sites using the Hugo Zen theme](#sites-using-the-hugo-zen-theme)
 * [Screenshots](#screenshots)
@@ -47,6 +47,107 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Math typesetting with KaTeX](#math-typesetting-with-katex)
 * [Getting help](#getting-help)
 * [Credits](#credits)
+
+
+## Features
+
+* A mobile menu
+* AlpineJS 3
+* Analytics with Matomo (Piwik)
+* Cookie consent
+* Commands for linting of css and js
+* Contact form (PHP)
+* CSS grid and flex throughout
+* HTML5
+* Hugo Pipes for images, js and css
+* Math typesetting with KaTeX
+* Micro.blog
+* Meta tags and JSON-LD
+* Multilingual (i18n)
+* Modern CSS reset
+* Podcast
+* Responsive design
+* RSS and JSON feeds with full content
+* Search with FlexSearch.js
+
+
+## Minimum Hugo version
+
+Hugo version 0.146.0 or higher is required. Since v6 the extended version is no longer needed as it was with v5 and earlier.
+
+
+## Installation
+
+### Hugo module
+
+You need to have `go` installed to use Hugo modules.
+
+Turn your new or existing site into a hugo module.
+
+From the root of your site:
+
+```shell
+hugo mod init github.com/me/my-site
+```
+
+Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v6".
+
+From the root of your site:
+
+```shell
+hugo mod get -u
+```
+
+### Git clone
+
+You can download and unpack the theme manually from Github but it's easier to use git to clone the repo.
+
+From the root of your site:
+
+```shell
+git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
+```
+
+Then set the "theme" setting to "zen".
+
+### Git submodule
+
+If you use git to version control your site you can add the zen theme as a submodule.
+
+From the root of your site:
+
+```shell
+git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
+```
+
+Then set the "theme" setting to "zen".
+
+## Updating
+
+### Hugo module
+
+From the root of your site:
+
+```shell
+hugo mod get -u
+```
+
+### Git submodule
+
+From the root of your site:
+
+```shell
+git submodule update --remote --merge
+```
+
+
+## Run example site
+
+From the root of `themes/zen/exampleSite`:
+
+```shell
+hugo server --themesDir ../..
+```
 
 
 ## Version 6.x 2026-03-10
@@ -136,107 +237,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * The zen-gutters variable is now a calculated value based on window width.
 * Added max-line-width for readability, default to 70ch.
 * New shortcodes: button, svg, reflink and details.
-
-
-## Features
-
-* A mobile menu
-* AlpineJS 3
-* Analytics with Matomo (Piwik)
-* Cookie consent
-* Commands for linting of css and js
-* Contact form (PHP)
-* CSS grid and flex throughout
-* HTML5
-* Hugo Pipes for images, js and css
-* Math typesetting with KaTeX
-* Micro.blog
-* Meta tags and JSON-LD
-* Multilingual (i18n)
-* Modern CSS reset
-* Podcast
-* Responsive design
-* RSS and JSON feeds with full content
-* Search with FlexSearch.js
-
-
-## Minimum Hugo version
-
-Hugo version 0.146.0 or higher is required.
-
-
-## Installation
-
-### Hugo module
-
-You need to have `go` installed to use Hugo modules.
-
-Turn your new or existing site into a hugo module.
-
-From the root of your site:
-
-```shell
-hugo mod init github.com/me/my-site
-```
-
-Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v5".
-
-From the root of your site:
-
-```shell
-hugo mod get -u
-```
-
-### Git clone
-
-You can download and unpack the theme manually from Github but it's easier to use git to clone the repo.
-
-From the root of your site:
-
-```shell
-git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
-```
-
-Then set the "theme" setting to "zen".
-
-### Git submodule
-
-If you use git to version control your site you can add the zen theme as a submodule.
-
-From the root of your site:
-
-```shell
-git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
-```
-
-Then set the "theme" setting to "zen".
-
-## Updating
-
-### Hugo module
-
-From the root of your site:
-
-```shell
-hugo mod get -u
-```
-
-### Git submodule
-
-From the root of your site:
-
-```shell
-git submodule update --remote --merge
-```
-
-
-## Run example site
-
-From the root of `themes/zen/exampleSite`:
-
-```shell
-hugo server --themesDir ../..
-```
 
 
 ## Performance
