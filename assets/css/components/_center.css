@@ -1,7 +1,7 @@
 @layer components {
   .grid-center {
     display: grid;
-    place-items: center;
+    place-content: center;
   }
 
   .text-center {
