@@ -14,42 +14,42 @@
       flex-direction: row;
       align-items: center;
     }
+  }
 
-    /* Wrapping link for logo. */
-    .header__logo {
-      width: fit-content;
+  /* Wrapping link for logo. */
+  .header__logo {
+    width: fit-content;
+  }
+
+  /* Logo image. */
+  .header__logo-image {
+    vertical-align: bottom;
+  }
+
+  /* The name of the website. */
+  .header__site-name {
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* The link around the name of the website. */
+  .header__site-link {
+    &:link,
+    &:visited {
+      color: var(--color-text);
+      text-decoration: none;
     }
 
-    /* Logo image. */
-    .header__logo-image {
-      vertical-align: bottom;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
+  }
 
-    /* The name of the website. */
-    .header__site-name {
-      margin: 0;
-      line-height: 1;
-    }
-
-    /* The link around the name of the website. */
-    .header__site-link {
-      &:link,
-      &:visited {
-        color: var(--color-text);
-        text-decoration: none;
-      }
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-
-    /* Wrapper for any blocks placed in the header region. */
-    .header__region {
-      @media (min-width: 666px) {
-        margin-inline-start: auto;
-      }
+  /* Wrapper for any blocks placed in the header region. */
+  .header__region {
+    @media (min-width: 666px) {
+      margin-inline-start: auto;
     }
   }
 }
