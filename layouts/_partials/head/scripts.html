@@ -1,9 +1,6 @@
 {{ $noop := .WordCount -}}
 
-{{ $opts := dict "minify" true -}}
-{{ if eq hugo.Environment "development" -}}
-  {{ $opts = merge $opts (dict "minify" false) -}}
-{{ end -}}
+{{ $opts := dict "minify" (cond hugo.IsDevelopment false true) -}}
 
 {{ $early := resources.Get "js/script-early.js" | js.Build $opts -}}
 <script>
@@ -58,7 +55,7 @@
 {{ end -}}
 
 {{ if .HasShortcode "search" -}}
-{{ $flexsearch := resources.Get "libs/flexsearch.compact.js" | fingerprint -}}
+{{ $flexsearch := resources.Get "libs/flexsearch.compact.min.js" | fingerprint -}}
 <script defer src="{{ $flexsearch.RelPermalink }}"></script>
 {{ $search_opts := merge $opts (dict "params" (dict "searchLimit" (site.Params.searchLimit | default 20) "basePath" site.Home.RelPermalink)) -}}
 {{ $search := resources.Get "js/search.js" | js.Build $search_opts | fingerprint -}}

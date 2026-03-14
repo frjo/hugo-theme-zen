@@ -1,14 +1,11 @@
 {{ $opts := dict
-  "minify" true
+  "minify" (cond hugo.IsDevelopment false true)
   "params" (dict
     "cookieConsent" site.Params.cookieConsent
     "piwikTrackerUrl" site.Params.piwikTrackerUrl
     "piwikSiteID" site.Params.piwikSiteID
     "plausibleSiteID" site.Params.plausibleSiteID
     "GoogleAnalytics" site.Config.Services.GoogleAnalytics.ID) -}}
-{{ if eq hugo.Environment "development" -}}
-  {{ $opts = merge $opts (dict "minify" false) -}}
-{{ end -}}
 {{ if and site.Params.piwikTrackerUrl site.Params.piwikSiteID -}}
 {{ $script := resources.Get "js/tracking.js" | js.Build $opts | fingerprint -}}
 <script src="{{ $script.RelPermalink }}"></script>
