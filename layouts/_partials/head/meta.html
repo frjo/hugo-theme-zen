@@ -22,6 +22,6 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .IsTranslated -}}
 {{ range .Translations -}}
-<link rel="alternate" hreflang="{{ .Site.Language.LanguageCode | default .Lang }}" href="{{ .Permalink }}">
+<link rel="alternate" hreflang="{{ .Site.Language.Locale | default .Language.Name }}" href="{{ .Permalink }}">
 {{ end -}}
 {{ end -}}
