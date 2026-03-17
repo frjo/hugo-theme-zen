@@ -6,6 +6,9 @@ $address = 'info@example.com';
 // Set the e-mail subject prefix.
 $prefix = 'Website feedback';
 
+// Maximum allowed message length in characters.
+$max_message_length = 5000;
+
 // DO NOT EDIT ANYTHING BELOW UNLESS YOU KNOW WHAT YOU ARE DOING.
 
 $error = false;
@@ -43,11 +46,16 @@ else {
   $error = true;
 }
 
+// Enforce maximum message length.
+if (isset($_POST['message']) && strlen($_POST['message']) > $max_message_length) {
+  $error = true;
+}
+
 if (!$error) {
   // Construct the mail with headers.
-  $name = _contact_clean_str($_POST['name'], ENT_QUOTES, true, true);
-  $prefix = _contact_clean_str($prefix, ENT_NOQUOTES, true, true);
-  $subject = _contact_clean_str($_POST['subject'], ENT_NOQUOTES, true, true);
+  $name = _contact_clean_str($_POST['name'], ENT_QUOTES, true, true, true);
+  $prefix = _contact_clean_str($prefix, ENT_NOQUOTES, true, true, true);
+  $subject = _contact_clean_str($_POST['subject'], ENT_NOQUOTES, true, true, true);
   $subject = "[$prefix] $subject";
   $message = _contact_clean_str($_POST['message'], ENT_NOQUOTES);
   $lines = explode("\n", $message);
@@ -83,9 +91,13 @@ function _contact_ff_wrap(&$line) {
   $line = wordwrap($line, 72, "  \n");
 }
 
-function _contact_clean_str($str, $quotes, $strip = false, $encode = false) {
-  if ($strip) {
+function _contact_clean_str($str, $quotes, $strip_tags = false, $strip_newlines = false, $encode = false) {
+  if ($strip_tags) {
     $str = strip_tags($str);
+  }
+
+  if ($strip_newlines) {
+    $str = str_replace(["\r", "\n"], '', $str);
   }
 
   $str = htmlspecialchars(trim($str), $quotes, 'UTF-8');
