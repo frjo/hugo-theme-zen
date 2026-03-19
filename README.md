@@ -152,7 +152,7 @@ hugo server --themesDir ../..
 
 ## Version 6.x 2026-03-10
 
-* Minimum Hugo version is now v0.158.0 (since 6.1).
+* Minimum Hugo version is now v0.158.0 (since 6.3).
 * Converted from sass to modern vanilla css with nesting and layers. Please check [CSS Nesting | Can I use](https://caniuse.com/css-nesting) to see if you are comfortable with css nesting support in browsers before updating to v6.
 * No changes to styles or templates so sites should look identical, if the browser support nesting.
 
