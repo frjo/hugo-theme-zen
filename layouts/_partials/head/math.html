@@ -1,7 +1,4 @@
-{{ $opts := dict "minify" true -}}
-{{ if eq hugo.Environment "development" -}}
-  {{ $opts = merge $opts (dict "minify" false) -}}
-{{ end -}}
+{{ $opts := dict "minify" (cond hugo.IsDevelopment false true) -}}
 {{ if or ($.Param "math") (.Page.Store.Get "math") (.HasShortcode "math") -}}
 <link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
 <script defer src="{{ "katex/katex.min.js" | relURL }}"></script>

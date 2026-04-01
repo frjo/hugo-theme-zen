@@ -903,6 +903,7 @@ Lorem {{< math >}}E=mc^2{{< /math >}} ipsum
 `[ \int_0^1 \frac{dx}{e^x} =  \frac{e-1}{e} ]`  
 `~~~~`
 
+Read more about this in Hugo docs [Mathematics in Markdown](https://gohugo.io/content-management/mathematics/).
 
 ## Getting help
 
