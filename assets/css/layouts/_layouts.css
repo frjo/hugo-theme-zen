@@ -7,7 +7,6 @@
 
     @media (min-width: 666px) {
       margin-inline: auto;
-      min-height: 100vh;
       min-height: 100svh;
     }
   }
