@@ -6,7 +6,7 @@
     right: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     font-family: var(--ff-headings);
     z-index: 20;
@@ -24,7 +24,7 @@
   .mobile-nav__cover {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: var(--color-mobile-menu-cover);
     backdrop-filter: blur(3px);
     opacity: 0;
