@@ -1,38 +1,38 @@
 {{ with resources.Get "css/styles.css" -}}
-  {{ $opts := dict
-    "loaders" (dict ".png" "dataurl" ".svg" "dataurl")
-    "minify" (cond hugo.IsDevelopment false true)
-    "sourceMap" (cond hugo.IsDevelopment "linked" "none")
-  -}}
-  {{ with . | css.Build $opts -}}
-    {{ if hugo.IsDevelopment -}}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{ else -}}
-      {{ with . | fingerprint -}}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{ end -}}
-    {{ end }}
-  {{ end -}}
+{{ $opts := dict
+  "loaders" (dict ".png" "dataurl" ".svg" "dataurl")
+  "minify" (cond hugo.IsDevelopment false true)
+  "sourceMap" (cond hugo.IsDevelopment "linked" "none")
+-}}
+{{ with . | css.Build $opts -}}
+{{ if hugo.IsDevelopment -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ else -}}
+{{ with . | fingerprint -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end -}}
+{{ end -}}
+{{ end -}}
 {{ end -}}
 
 {{ if $.Param "mobilemenu" -}}
-  {{ with resources.Get "css/mobilemenu.css" -}}
-    {{ if hugo.IsDevelopment -}}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">
-    {{ else -}}
-      {{ with . | minify | fingerprint -}}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="screen">
-      {{ end -}}
-    {{ end -}}
-  {{ end -}}
+{{ with resources.Get "css/mobilemenu.css" -}}
+{{ if hugo.IsDevelopment -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">
+{{ else -}}
+{{ with . | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="screen">
+{{ end -}}
+{{ end -}}
+{{ end -}}
 {{ end -}}
 
 {{ with resources.Get "css/print.css" -}}
-  {{ if hugo.IsDevelopment -}}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" media="print">
-  {{ else -}}
-    {{ with . | minify | fingerprint -}}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="print">
-    {{ end -}}
-  {{ end -}}
+{{ if hugo.IsDevelopment -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" media="print">
+{{ else -}}
+{{ with . | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="print">
+{{ end -}}
+{{ end -}}
 {{ end -}}
