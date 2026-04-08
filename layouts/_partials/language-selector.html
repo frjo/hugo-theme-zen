@@ -6,12 +6,12 @@
 <ul class="flex-inline mx--0">
 {{ if .IsTranslated -}}
 {{ range .Translations -}}
-<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Site.Language.LanguageCode | default .Lang }}" lang="{{ .Site.Language.LanguageCode | default .Lang }}">{{ .Language.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Site.Language.Locale | default .Language.Name }}" lang="{{ .Site.Language.Locale | default .Language.Name }}">{{ .Language.Label }}</a></li>
 {{ end -}}
 {{ else -}}
-{{ range site.Languages -}}
-{{ if ne site.Language.Lang .Lang -}}
-<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+{{ range hugo.Sites -}}
+{{ if ne $.Language.Name .Language.Name -}}
+<li><a rel="alternate" href="{{ .Home.RelPermalink }}" hreflang="{{ .Language.Locale | default .Language.Name }}" lang="{{ .Language.Locale | default .Language.Name }}">{{ .Language.Label }}</a></li>
 {{ end -}}
 {{ end -}}
 {{ end -}}
