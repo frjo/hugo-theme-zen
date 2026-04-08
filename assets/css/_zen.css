@@ -1,207 +1,205 @@
 /* Zen custom styles */
 
-@layer zen {
-  /* Page */
+/* Page */
 
-  body {
-    background-color: var(--color-backdrop);
+body {
+  background-color: var(--color-backdrop);
+}
+
+.page {
+  background-color: var(--color-body-bg);
+}
+
+.footer {
+  border-block-start: 2px solid var(--color-border);
+}
+
+/* Apply smaller text to blocks, footer etc. */
+
+th,
+label,
+legend,
+figcaption {
+  font-size: var(--fs-s);
+}
+
+.language-selector,
+.footer {
+  font-size: var(--fs-xs);
+}
+
+/* Apply heading font stack and colour to labels etc. */
+
+th,
+label,
+legend,
+.main-menu,
+.header,
+.footer {
+  color: var(--color-headings);
+  font-family: var(--ff-headings);
+}
+
+th,
+label {
+  font-weight: var(--fw-headings);
+}
+
+/* Article and content. */
+
+article,
+aside {
+  & > ul {
+    display: table;
+    list-style: none;
+    padding: 0;
+
+    & > li {
+      display: table-row;
+
+      &::before {
+        padding-inline-end: var(--spacing-xs);
+        display: table-cell;
+        content: '\2981';
+        font-size: var(--fs-s);
+      }
+    }
   }
 
-  .page {
-    background-color: var(--color-body-bg);
+  & > ol {
+    display: table;
+    list-style: none;
+    padding: 0;
+
+    & > li {
+      display: table-row;
+      counter-increment: table-ol;
+
+      &::before {
+        padding-inline-end: var(--spacing-xs);
+        display: table-cell;
+        content: counter(table-ol) '.';
+        font-size: var(--fs-s);
+        text-align: end;
+      }
+    }
+  }
+}
+
+article {
+  .submitted,
+  .tags {
+    @media (min-width: 666px) {
+      display: inline-block;
+      padding-inline-end: 1rem;
+    }
   }
 
-  .footer {
-    border-block-start: 2px solid var(--color-border);
-  }
-
-  /* Apply smaller text to blocks, footer etc. */
-
-  th,
-  label,
-  legend,
-  figcaption {
-    font-size: var(--fs-s);
-  }
-
-  .language-selector,
-  .footer {
+  code {
     font-size: var(--fs-xs);
+    overflow-wrap: break-word;
   }
 
-  /* Apply heading font stack and colour to labels etc. */
+  pre {
+    border-radius: var(--radius-xs);
+    padding: 5px;
+    border: 1px solid var(--color-border-light);
+    background-color: var(--color-text-bg);
+    overflow: auto;
+    max-height: 300px;
 
-  th,
-  label,
-  legend,
-  .main-menu,
-  .header,
-  .footer {
-    color: var(--color-headings);
-    font-family: var(--ff-headings);
-  }
-
-  th,
-  label {
-    font-weight: var(--fw-headings);
-  }
-
-  /* Article and content. */
-
-  article,
-  aside {
-    & > ul {
-      display: table;
-      list-style: none;
-      padding: 0;
-
-      & > li {
-        display: table-row;
-
-        &::before {
-          padding-inline-end: var(--spacing-xs);
-          display: table-cell;
-          content: '\2981';
-          font-size: var(--fs-s);
-        }
-      }
+    &.chroma {
+      max-height: initial;
+      overflow-x: scroll;
     }
 
-    & > ol {
-      display: table;
-      list-style: none;
-      padding: 0;
-
-      & > li {
-        display: table-row;
-        counter-increment: table-ol;
-
-        &::before {
-          padding-inline-end: var(--spacing-xs);
-          display: table-cell;
-          content: counter(table-ol) '.';
-          font-size: var(--fs-s);
-          text-align: end;
-        }
-      }
+    & > code {
+      display: inline-block;
+      white-space: pre;
     }
   }
+}
 
-  article {
-    .submitted,
-    .tags {
-      @media (min-width: 666px) {
-        display: inline-block;
-        padding-inline-end: 1rem;
-      }
-    }
+.content-dates {
+  text-align: end;
+}
 
-    code {
-      font-size: var(--fs-xs);
-      overflow-wrap: break-word;
-    }
+.repository-links {
+  justify-content: end;
+  align-items: center;
 
-    pre {
-      border-radius: var(--radius-xs);
-      padding: 5px;
-      border: 1px solid var(--color-border-light);
-      background-color: var(--color-text-bg);
-      overflow: auto;
-      max-height: 300px;
-
-      &.chroma {
-        max-height: initial;
-        overflow-x: scroll;
-      }
-
-      & > code {
-        display: inline-block;
-        white-space: pre;
-      }
-    }
+  svg {
+    order: 1;
   }
+}
 
-  .content-dates {
-    text-align: end;
-  }
+/* Navigation */
 
-  .repository-links {
-    justify-content: end;
-    align-items: center;
-
-    svg {
-      order: 1;
-    }
-  }
-
-  /* Navigation */
-
-  .main-menu {
-    a {
-      display: block;
-      background-color: var(--color-button);
-      color: var(--color-button-text);
-      padding: 2px 8px;
-      text-decoration: none;
-
-      &:hover,
-      &:focus {
-        background-color: var(--color-button-hover);
-      }
-
-      &:active,
-      &[aria-current] {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  /* Search */
-
-  .search-text {
-    font-size: var(--fs-l);
-  }
-
-  /* Copy code */
-
-  [data-codeblock] {
-    position: relative;
-
-    & > pre {
-      padding-block-start: 1lh;
-    }
-  }
-
-  .codebutton {
-    position: absolute;
-    inset-inline-end: 1rem;
-    background: unset;
-    border: unset;
-    text-shadow: unset;
-    font-size: var(--fs-l);
-    color: var(--color-border);
-    rotate: 90deg;
-    cursor: pointer;
-
-    & > span {
-      pointer-events: none;
-    }
+.main-menu {
+  a {
+    display: block;
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+    padding: 2px 8px;
+    text-decoration: none;
 
     &:hover,
-    &:focus-visible,
-    &:active {
-      scale: 1.15;
+    &:focus {
+      background-color: var(--color-button-hover);
+    }
+
+    &:active,
+    &[aria-current] {
+      text-decoration: underline;
     }
   }
+}
 
-  .flash-item {
-    animation: --flash 500ms ease-in-out 1ms;
+/* Search */
+
+.search-text {
+  font-size: var(--fs-l);
+}
+
+/* Copy code */
+
+[data-codeblock] {
+  position: relative;
+
+  & > pre {
+    padding-block-start: 1lh;
+  }
+}
+
+.codebutton {
+  position: absolute;
+  inset-inline-end: 1rem;
+  background: unset;
+  border: unset;
+  text-shadow: unset;
+  font-size: var(--fs-l);
+  color: var(--color-border);
+  rotate: 90deg;
+  cursor: pointer;
+
+  & > span {
+    pointer-events: none;
   }
 
-  @keyframes --flash {
-    50% {
-      border-color: var(--color-warning);
-      background-color: var(--color-warning-bg);
-    }
+  &:hover,
+  &:focus-visible,
+  &:active {
+    scale: 1.15;
+  }
+}
+
+.flash-item {
+  animation: --flash 500ms ease-in-out 1ms;
+}
+
+@keyframes --flash {
+  50% {
+    border-color: var(--color-warning);
+    background-color: var(--color-warning-bg);
   }
 }

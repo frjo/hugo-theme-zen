@@ -1,14 +1,38 @@
-{{ $main_style := resources.Match "css/_*.css" | append (resources.Match "css/**/_*.css") | resources.Concat "css/styles.css" -}}
-{{ $mobile_style := resources.Get "css/mobilemenu.css" -}}
-{{ $print_style := resources.Get "css/print.css" -}}
-{{ if ne hugo.Environment "development" -}}
-  {{ $main_style = $main_style | minify | fingerprint -}}
-  {{ $mobile_style = $mobile_style | minify | fingerprint -}}
-  {{ $print_style = $print_style | minify | fingerprint -}}
+{{ with resources.Get "css/styles.css" -}}
+  {{ $opts := dict
+    "loaders" (dict ".png" "dataurl" ".svg" "dataurl")
+    "minify" (cond hugo.IsDevelopment false true)
+    "sourceMap" (cond hugo.IsDevelopment "linked" "none")
+  -}}
+  {{ with . | css.Build $opts -}}
+    {{ if hugo.IsDevelopment -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else -}}
+      {{ with . | fingerprint -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end -}}
+    {{ end }}
+  {{ end -}}
 {{ end -}}
-{{ with resources.Get "css/layers-init.css" }}<style>{{ .Content | safeCSS }}</style>{{ end }}
-<link rel="stylesheet" href="{{ $main_style.RelPermalink }}">
+
 {{ if $.Param "mobilemenu" -}}
-<link rel="stylesheet" href="{{ $mobile_style.RelPermalink }}" media="screen">
+  {{ with resources.Get "css/mobilemenu.css" -}}
+    {{ if hugo.IsDevelopment -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">
+    {{ else -}}
+      {{ with . | minify | fingerprint -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="screen">
+      {{ end -}}
+    {{ end -}}
+  {{ end -}}
 {{ end -}}
-<link rel="stylesheet" href="{{ $print_style.RelPermalink }}" media="print">
+
+{{ with resources.Get "css/print.css" -}}
+  {{ if hugo.IsDevelopment -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" media="print">
+  {{ else -}}
+    {{ with . | minify | fingerprint -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="print">
+    {{ end -}}
+  {{ end -}}
+{{ end -}}

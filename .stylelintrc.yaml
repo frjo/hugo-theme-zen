@@ -13,6 +13,7 @@ rules:
         - stylelint-commands
         - after-comment
   hue-degree-notation: number
+  import-notation: null
   keyframes-name-pattern:
     - "--.+"
     - message: Keyframe name should be written as <dashed-ident>

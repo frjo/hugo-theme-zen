@@ -1,20 +1,18 @@
-@layer components {
-  .flex-inline {
-    --flex-inline-gap: .5rem;
+.flex-inline {
+  --flex-inline-gap: .5rem;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--flex-inline-gap);
-    padding: 0;
-    text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-inline-gap);
+  padding: 0;
+  text-align: start;
 
-    .flex-inline__item,
-    li {
-      list-style: none;
-    }
+  .flex-inline__item,
+  li {
+    list-style: none;
   }
+}
 
-  .flex-inline--inline {
-    display: inline-flex;
-  }
+.flex-inline--inline {
+  display: inline-flex;
 }

@@ -2,107 +2,105 @@
 
 /* Reset browsers to some sane defaults. */
 
-@layer reset {
-  /* Document */
+/* Document */
 
-  /* Use the saner border-box model for all elements. */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+/* Use the saner border-box model for all elements. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Activate transition to intrinsic sizes like auto and fit-content. */
+  interpolate-size: allow-keywords;
+}
+
+/* Transitioning page view. */
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  /* Prevent adjustments of font size. */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  /* Improve text rendering. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Always keep space for the scrollbar */
+  scrollbar-gutter: stable;
+}
+
+/* Sections */
+
+body {
+  /* Remove the margin in all browsers. */
+  margin: 0;
+  padding: 0;
+
+  /* On short pages, we want the body to fill the entire height */
+  /* of the browser. */
+  min-height: 100svh;
+}
+
+/* Embedded content */
+
+img,
+svg,
+picture,
+audio,
+video,
+canvas,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-inline: 0;
+}
+
+/* Form defaults. */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+[type='search'] {
+  @media (min-width: 666px) {
+    /* Correct the odd appearance in Safari on desktop. */
+    -webkit-appearance: textfield;
   }
+}
 
-  :root {
-    /* Activate transition to intrinsic sizes like auto and fit-content. */
-    interpolate-size: allow-keywords;
-  }
+/* Code */
 
-  /* Transitioning page view. */
-  @view-transition {
-    navigation: auto;
-  }
+code,
+kbd,
+samp {
+  font-family: var(--ff-monospace);
+}
 
-  html {
-    /* Prevent adjustments of font size. */
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
+/* Numbers */
 
-    /* Improve text rendering. */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    /* Always keep space for the scrollbar */
-    scrollbar-gutter: stable;
-  }
-
-  /* Sections */
-
-  body {
-    /* Remove the margin in all browsers. */
-    margin: 0;
-    padding: 0;
-
-    /* On short pages, we want the body to fill the entire height */
-    /* of the browser. */
-    min-height: 100svh;
-  }
-
-  /* Embedded content */
-
-  img,
-  svg,
-  picture,
-  audio,
-  video,
-  canvas,
-  iframe,
-  embed,
-  object {
-    display: block;
-  }
-
-  img,
-  svg,
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  figure {
-    margin-inline: 0;
-  }
-
-  /* Form defaults. */
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-    letter-spacing: inherit;
-    word-spacing: inherit;
-  }
-
-  [type='search'] {
-    @media (min-width: 666px) {
-      /* Correct the odd appearance in Safari on desktop. */
-      -webkit-appearance: textfield;
-    }
-  }
-
-  /* Code */
-
-  code,
-  kbd,
-  samp {
-    font-family: var(--ff-monospace);
-  }
-
-  /* Numbers */
-
-  td,
-  math,
-  time[datetime*=':'] {
-    font-variant-numeric: tabular-nums lining-nums;
-  }
+td,
+math,
+time[datetime*=':'] {
+  font-variant-numeric: tabular-nums lining-nums;
 }

@@ -1,7 +1,5 @@
-@layer components {
-  .tags {
-    ul {
-      margin-block: 0;
-    }
+.tags {
+  ul {
+    margin-block: 0;
   }
 }

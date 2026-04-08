@@ -1,12 +1,10 @@
 /* Language selector */
 
-@layer components {
-  .language-selector {
-    display: flex;
-  }
+.language-selector {
+  display: flex;
+}
 
-  .language-icon {
-    margin-inline-end: var(--spacing-xs);
-    fill: var(--color-text);
-  }
+.language-icon {
+  margin-inline-end: var(--spacing-xs);
+  fill: var(--color-text);
 }

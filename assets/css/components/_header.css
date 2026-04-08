@@ -1,55 +1,53 @@
 /* Branding header */
 
-@layer components {
-  .header {
-    --header-gap: var(--spacing-s);
+.header {
+  --header-gap: var(--spacing-s);
 
-    padding-block: min(var(--gutters), var(--spacing-m));
-    display: flex;
-    flex-direction: column;
-    gap: var(--header-gap);
-    background-color: var(--color-header-bg);
+  padding-block: min(var(--gutters), var(--spacing-m));
+  display: flex;
+  flex-direction: column;
+  gap: var(--header-gap);
+  background-color: var(--color-header-bg);
 
-    @media (min-width: 666px) {
-      flex-direction: row;
-      align-items: center;
-    }
+  @media (min-width: 666px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Wrapping link for logo. */
+.header__logo {
+  width: fit-content;
+}
+
+/* Logo image. */
+.header__logo-image {
+  vertical-align: bottom;
+}
+
+/* The name of the website. */
+.header__site-name {
+  margin: 0;
+  line-height: 1;
+}
+
+/* The link around the name of the website. */
+.header__site-link {
+  &:link,
+  &:visited {
+    color: var(--color-text);
+    text-decoration: none;
   }
 
-  /* Wrapping link for logo. */
-  .header__logo {
-    width: fit-content;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
+}
 
-  /* Logo image. */
-  .header__logo-image {
-    vertical-align: bottom;
-  }
-
-  /* The name of the website. */
-  .header__site-name {
-    margin: 0;
-    line-height: 1;
-  }
-
-  /* The link around the name of the website. */
-  .header__site-link {
-    &:link,
-    &:visited {
-      color: var(--color-text);
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-
-  /* Wrapper for any blocks placed in the header region. */
-  .header__region {
-    @media (min-width: 666px) {
-      margin-inline-start: auto;
-    }
+/* Wrapper for any blocks placed in the header region. */
+.header__region {
+  @media (min-width: 666px) {
+    margin-inline-start: auto;
   }
 }

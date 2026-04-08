@@ -1,13 +1,11 @@
 /* Branding footer */
 
-@layer components {
-  .footer {
-    padding-block: var(--gutters);
-    background-color: var(--color-footer-bg);
-    text-align: center;
+.footer {
+  padding-block: var(--gutters);
+  background-color: var(--color-footer-bg);
+  text-align: center;
 
-    p {
-      margin: 0;
-    }
+  p {
+    margin: 0;
   }
 }

@@ -3,17 +3,15 @@
 Allows the bottom of an element to extend to the bottom of all floated child
 elements. See http://nicolasgallagher.com/micro-clearfix-hack/ */
 
-@layer components {
-  .clearfix {
-    &::before {
-      content: '';
-      display: table;
-    }
+.clearfix {
+  &::before {
+    content: '';
+    display: table;
+  }
 
-    &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }

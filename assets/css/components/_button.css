@@ -2,108 +2,106 @@
 
 /* Button */
 
-@layer components {
-  .button,
-  [type='button'],
-  [type='submit'] {
-    /* Some styles don't apply to <a> links since they are inline elements by default. */
-    display: inline-block;
-    font-family: var(--ff-headings);
-    text-decoration: none;
-    text-align: center;
-    width: fit-content;
-    padding: .2rem 1rem;
+.button,
+[type='button'],
+[type='submit'] {
+  /* Some styles don't apply to <a> links since they are inline elements by default. */
+  display: inline-block;
+  font-family: var(--ff-headings);
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  padding: .2rem 1rem;
 
-    /* Improve usability and consistency of cursor style between image-type `input` and others. */
-    cursor: pointer;
+  /* Improve usability and consistency of cursor style between image-type `input` and others. */
+  cursor: pointer;
+  color: var(--color-button-text);
+  text-shadow: var(--color-button) 0 1px 0;
+  background: linear-gradient(var(--color-button), var(--color-button-hover));
+  border: 1px solid var(--color-button-hover);
+  border-radius: var(--radius-s);
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    /* Override any link underlines and color changes. */
+    text-decoration: none;
+    color: var(--color-button-text-hover);
+    text-shadow: var(--color-button-hover) 0 1px 0;
+    background: linear-gradient(var(--color-button-hover), var(--color-button));
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 5px var(--color-black-40);
+  }
+}
+
+.button--small {
+  font-size: var(--fs-xs);
+  padding: .2rem .75rem;
+}
+
+.button--alt {
+  color: var(--color-button-text-hover);
+  background: var(--color-button-hover);
+
+  &:hover,
+  &:focus-visible,
+  &:active {
     color: var(--color-button-text);
-    text-shadow: var(--color-button) 0 1px 0;
-    background: linear-gradient(var(--color-button), var(--color-button-hover));
-    border: 1px solid var(--color-button-hover);
-    border-radius: var(--radius-s);
+    background: var(--color-button);
+  }
+}
+
+.button--outline {
+  color: var(--color-button);
+  background: var(--color-button-text);
+}
+
+.button--accept {
+  border-color: var(--color-success);
+}
+
+.button--decline {
+  border-color: var(--color-warning);
+}
+
+/* The disabled variation should always go last, so that it overrides any
+other variations. */
+.button,
+[type='button'],
+[type='submit'] {
+  &:disabled {
+    background-color: var(--color-grey-200);
+    border: 1px solid var(--color-button-disabled);
+    background-image: none;
+    text-shadow: none;
+    cursor: default;
+    color: var(--color-button-disabled);
 
     &:hover,
-    &:focus-visible,
+    &:focus,
     &:active {
       /* Override any link underlines and color changes. */
-      text-decoration: none;
-      color: var(--color-button-text-hover);
-      text-shadow: var(--color-button-hover) 0 1px 0;
-      background: linear-gradient(var(--color-button-hover), var(--color-button));
-    }
-
-    &:active {
-      box-shadow: inset 2px 2px 5px var(--color-black-40);
-    }
-  }
-
-  .button--small {
-    font-size: var(--fs-xs);
-    padding: .2rem .75rem;
-  }
-
-  .button--alt {
-    color: var(--color-button-text-hover);
-    background: var(--color-button-hover);
-
-    &:hover,
-    &:focus-visible,
-    &:active {
-      color: var(--color-button-text);
-      background: var(--color-button);
-    }
-  }
-
-  .button--outline {
-    color: var(--color-button);
-    background: var(--color-button-text);
-  }
-
-  .button--accept {
-    border-color: var(--color-success);
-  }
-
-  .button--decline {
-    border-color: var(--color-warning);
-  }
-
-  /* The disabled variation should always go last, so that it overrides any
-  other variations. */
-  .button,
-  [type='button'],
-  [type='submit'] {
-    &:disabled {
-      background-color: var(--color-grey-200);
-      border: 1px solid var(--color-button-disabled);
-      background-image: none;
-      text-shadow: none;
-      cursor: default;
       color: var(--color-button-disabled);
-
-      &:hover,
-      &:focus,
-      &:active {
-        /* Override any link underlines and color changes. */
-        color: var(--color-button-disabled);
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
   }
+}
 
-  /* For forms with multiple fields show submit button below the form. */
-  input:not(:only-of-type),
-  textarea {
-    & + [type='submit'] {
-      display: block;
-    }
+/* For forms with multiple fields show submit button below the form. */
+input:not(:only-of-type),
+textarea {
+  & + [type='submit'] {
+    display: block;
   }
+}
 
-  /* For forms on mobile with single field add space between it and the submit button. */
-  @media (min-width: 666px) {
-    input:only-of-type {
-      &:has(+ [type='submit']) {
-        margin-inline-end: .5rem;
-      }
+/* For forms on mobile with single field add space between it and the submit button. */
+@media (min-width: 666px) {
+  input:only-of-type {
+    &:has(+ [type='submit']) {
+      margin-inline-end: .5rem;
     }
   }
 }

@@ -1,36 +1,34 @@
 /* Anchor */
 
-@layer components {
-  .anchor {
-    --anchor-gap: .5rem;
-    --anchor-opacity: .4;
+.anchor {
+  --anchor-gap: .5rem;
+  --anchor-opacity: .4;
 
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: start;
-    align-items: baseline;
-    gap: var(--anchor-gap);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: baseline;
+  gap: var(--anchor-gap);
 
+  a {
+    opacity: 0;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  &:has(:focus-visible),
+  &:hover {
     a {
-      opacity: 0;
-      text-decoration: none;
-      width: fit-content;
-    }
+      opacity: var(--anchor-opacity);
 
-    &:has(:focus-visible),
-    &:hover {
-      a {
-        opacity: var(--anchor-opacity);
-
-        &:focus-visible,
-        &:hover {
-          opacity: 1;
-        }
+      &:focus-visible,
+      &:hover {
+        opacity: 1;
       }
     }
   }
+}
 
-  p:has(+ .anchor) {
-    margin-block-end: 0;
-  }
+p:has(+ .anchor) {
+  margin-block-end: 0;
 }
