@@ -16,3 +16,11 @@
 .flex-inline--inline {
   display: inline-flex;
 }
+
+.flex-inline--center {
+  align-items: center;
+}
+
+.flex-inline--baseline {
+  align-items: baseline;
+}

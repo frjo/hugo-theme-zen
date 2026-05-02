@@ -16,7 +16,6 @@
   /* Improve usability and consistency of cursor style between image-type `input` and others. */
   cursor: pointer;
   color: var(--color-button-text);
-  text-shadow: var(--color-button) 0 1px 0;
   background: linear-gradient(var(--color-button), var(--color-button-hover));
   border: 1px solid var(--color-button-hover);
   border-radius: var(--radius-s);
@@ -27,7 +26,6 @@
     /* Override any link underlines and color changes. */
     text-decoration: none;
     color: var(--color-button-text-hover);
-    text-shadow: var(--color-button-hover) 0 1px 0;
     background: linear-gradient(var(--color-button-hover), var(--color-button));
   }
 
@@ -59,11 +57,39 @@
 }
 
 .button--accept {
+  color: var(--color-success);
   border-color: var(--color-success);
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--color-button-text);
+    background: var(--color-success);
+}
 }
 
 .button--decline {
+  color: var(--color-warning);
   border-color: var(--color-warning);
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--color-button-text);
+    background: var(--color-warning);
+  }
+}
+
+.button--delete {
+  color: var(--color-error);
+  border-color: var(--color-error);
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--color-button-text);
+    background: var(--color-error);
+  }
 }
 
 /* The disabled variation should always go last, so that it overrides any
