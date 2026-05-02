@@ -277,7 +277,7 @@ Configurations parameters for the sites config file, in yaml format. All the "pa
 baseurl: "https://example.org/"
 title: "SiteTitle"
 theme: "zen"
-languageCode: "en-GB"       # Set your language code (only needed for none multilingual sites).
+locale: "en-GB"       # Set your language code (only needed for none multilingual sites).
 
 params:
   alpine: true              # Add AlpineJS, default false.
@@ -460,29 +460,29 @@ Example render hook to "Copy code" buttons to codeblocks". To activate it copy t
 
 ## Multilingual
 
-A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
+A language selector will be included on sites with more than one language. Add `label` to your language configuration, this is what will be displayed in the selector.
 
 The language selector will link to a translation of the current page if it exist and to the front page if it does not.
 
-For "rtl" languages add a `languageDirection` parameter to the language configuration. If not added it will default to "ltr".
+For "rtl" languages add a `direction` parameter to the language configuration. If not added it will default to "ltr".
 
-Add a `languageCode` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `languageCode` is then not needed. If not set the language key (e.g. "en") will be used.
+Add a `locale` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `locale` is then not needed. If not set the language key (e.g. "en") will be used.
 
 ```yaml
 languages:
   sv:
     weight: 1
-    languageName: "Svenska"
-    languageCode: "sv-SE"
+    label: "Svenska"
+    locale: "sv-SE"
   en:
     weight: 2
-    languageName: "English"
-    languageCode: "en-GB"
+    label: "English"
+    locale: "en-GB"
   ar:
     weight: 3
-    languageName: "العربية"
-    languageDirection: "rtl"
-    languageCode: "ar"
+    label: "العربية"
+    direction: "rtl"
+    locale: "ar"
 ```
 
 The Zen theme templates has some strings that needs translation, e.g. "Home" and "Menu". Many translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
@@ -506,12 +506,12 @@ The Zen theme templates has some strings that needs translation, e.g. "Home" and
 
 If you want to have a site in another language than English but do not need multiple languages the following settings are needed.
 
-Set `defaultContentLanguage` to your language code, otherwise it will default to "en" . Also set `languageCode` so browsers are informed of what language the site is in.
+Set `defaultContentLanguage` to your language code, otherwise it will default to "en" . Also set `locale` so browsers are informed of what language the site is in.
 
 Here how it looks for a site in Swedish.
 
 ```yaml
-languageCode: "sv-SE"
+locale: "sv-SE"
 defaultContentLanguage: "sv"
 ```
 
