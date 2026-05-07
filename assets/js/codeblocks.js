@@ -16,7 +16,6 @@
   copybuttons.forEach(function (button) {
     button.addEventListener('click', function (e) {
       const codeblock = e.target.parentElement;
-      const codeid = e.target.dataset.codebutton;
       const codesnippet = codeblock.querySelector('[data-codetext]').getAttribute('content');
       const codearea = codeblock.querySelector('pre');
       codearea.classList.add('flash-item');
