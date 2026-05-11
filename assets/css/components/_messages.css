@@ -1,33 +1,35 @@
 /* Messages */
 
 .message {
+  --color-message: var(--color-grey-600);
+  --color-message-text: light-dark(oklch(from var(--color-message) l c h), oklch(from var(--color-message) 100% 0.03 h));
+  --color-message-bg: light-dark(oklch(from var(--color-message) 100% 0.03 h), oklch(from var(--color-message) calc(l + 0.07) c h));
+  --color-message-border: light-dark(oklch(from var(--color-message) calc(l + 0.2) c h), oklch(from var(--color-message) calc(l - 0.07) c h));
+
+
+
   padding: .5rem;
+  color: var(--color-message-text);
+  background-color: var(--color-message-bg);
+  outline-color: var(--color-message-border);
   outline-width: 2px;
   outline-style: solid;
   width: 95%;
 
-  &.success {
-    background-color: var(--color-success-bg);
-    color: var(--color-success);
-    outline-color: var(--color-success);
+  &.info {
+    --color-message: var(--color-info);
   }
 
-  &.info {
-    background-color: var(--color-info-bg);
-    color: var(--color-info);
-    outline-color: var(--color-info);
+  &.success {
+    --color-message: var(--color-success);
   }
 
   &.warning {
-    background-color: var(--color-warning-bg);
-    color: var(--color-warning);
-    outline-color: var(--color-warning);
+    --color-message: var(--color-warning);
   }
 
   &.error {
-    background-color: var(--color-error-bg);
-    color: var(--color-error);
-    outline-color: var(--color-error);
+    --color-message: var(--color-error);
   }
 }
 

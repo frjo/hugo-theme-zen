@@ -28,6 +28,7 @@
 @import './components/_grid-stack.css' layer(components);
 @import './components/_header.css' layer(components);
 @import './components/_hidden.css' layer(components);
+@import './components/_htmx-indicator.css' layer(components);
 @import './components/_icon-inline.css' layer(components);
 @import './components/_language-selector.css' layer(components);
 @import './components/_list-straight-left.css' layer(components);
