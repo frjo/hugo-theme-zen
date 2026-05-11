@@ -10,7 +10,7 @@
   &:focus-visible,
   &:hover {
     .icon-link {
-      opacity: .3;
+      opacity: 0.3;
 
       &:focus-visible,
       &:hover {

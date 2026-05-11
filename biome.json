@@ -41,6 +41,12 @@
       }
     }
   },
+  "css": {
+    "formatter": {
+      "quoteStyle": "single",
+      "lineWidth": 100
+    }
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
