@@ -1,16 +1,6 @@
 repos:
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: "0.0.2"
-    hooks:
-      - id: stylelint
-        files: assets/css/.*\.css$
-        additional_dependencies:
-          - "stylelint@17.4.0"
-          - "stylelint-config-standard@40.0.0"
   - repo: https://github.com/biomejs/pre-commit
-    rev: "v2.4.6"
+    rev: "v2.4.15"
     hooks:
       - id: biome-check
-        files: assets/js/.*\.js$
-        additional_dependencies:
-          - "@biomejs/biome@2.4.6"
+      - id: biome-lint

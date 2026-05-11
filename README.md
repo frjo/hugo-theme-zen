@@ -835,27 +835,6 @@ The **content** that should be wrapped. Some more content.
 Includes tracking code for Matomo or Google in a way that supports Content security policy headers. Read more in my blog post [Content security policy headers when using Matomo or Google analytics](https://xdeb.org/post/2020/01/14/content-security-policy-headers-when-using-matomo-or-google-analytics/).
 
 
-## Use npm to lint CSS and JavaScript
-
-* Lint your CSS using stylelint.
-* Lint your JavaScript using biome.
-* Can lint files in the theme as well as the project assets directory.
-
-Set up your front-end development build tools:
-
-1. Install Node.js and npm, the Node.js package manager.
-2. The package.json file in your new sub-theme contains the versions of all the
-Node.js software you need. To install them run:
-
-        npm install
-
-3. Run the following commands to lint your theme and projects CSS and JavaScript code.
-
-        npm run lint-theme
-        npm run lint-project
-        nmp run lint (project + theme)
-
-
 ## Repository links
 
 Add view and edit repo links on your post. Activates when you add repository settings, see example for GitHub below. See more in the partial `repository-links.html`.
