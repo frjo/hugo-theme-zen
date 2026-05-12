@@ -18,7 +18,7 @@
     opacity: 1;
     visibility: visible;
     animation:
-      --fade-in 2s linear forwards,
+      --fadein 2s linear forwards,
       --slide 1.2s ease-in-out infinite;
   }
 }

@@ -80,7 +80,7 @@
   --color-button-hover:           light-dark(var(--color-brand-200), var(--color-brand-400));
   --color-button-text-hover:      light-dark(var(--color-white), var(--color-white));
   --color-button-disabled:        light-dark(var(--color-grey-400), var(--color-grey-600));
-  --color-button-text-disabled:   light-dark(var(--color-grey-100), var(--color-grey-800));
+  --color-button-disabled-alt:    light-dark(var(--color-grey-100), var(--color-grey-800));
 
   /* Border colours. */
   --color-border:                 light-dark(var(--color-brand-400), var(--color-brand-200));

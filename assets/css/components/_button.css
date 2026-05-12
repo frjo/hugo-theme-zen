@@ -96,7 +96,7 @@ other variations. */
 [type='button'],
 [type='submit'] {
   &:disabled {
-    background-color: var(--color-button-text-disabled);
+    background-color: var(--color-button-disabled-alt);
     border: 1px solid var(--color-button-disabled);
     background-image: none;
     text-shadow: none;
@@ -107,7 +107,7 @@ other variations. */
     &:focus,
     &:active {
       /* Override any link underlines and color changes. */
-      color: var(--color-button-disabled);
+      color: var(--color-button-disabled-alt);
       text-decoration: none;
     }
   }
