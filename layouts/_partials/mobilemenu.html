@@ -8,7 +8,7 @@
       <rect width="80" height="12" x="10" y="70" rx="5"></rect>
     </svg>
   </button>
-  <div class="mobile-nav__sheet link-inverted link-nav" id="sheet" aria-hidden="true">
+  <div class="mobile-nav__sheet link-nav" id="sheet" data-theme="dark" aria-hidden="true">
     <div class="mobile-nav__region">{{ if hugo.IsMultilingual }}{{ partial "language-selector.html" . }}{{ end }}</div>
     <nav class="mobile-nav__main-menu" aria-label="{{ i18n "menu_title" }}">
     <ul class="mobile-nav__navbar">

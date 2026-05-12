@@ -69,9 +69,9 @@
   --color-code:                   light-dark(var(--color-grey-900), var(--color-grey-100));
 
   /* Link colours. */
-  --color-link:                   light-dark(var(--color-brand-400), var(--color-brand-200));
-  --color-link-visited:           light-dark(var(--color-brand-400), var(--color-brand-200));
-  --color-link-hover:             light-dark(var(--color-brand-200), var(--color-brand-400));
+  --color-link:                   light-dark(var(--color-brand-500), var(--color-brand-100));
+  --color-link-visited:           light-dark(var(--color-brand-500), var(--color-brand-100));
+  --color-link-hover:             light-dark(var(--color-brand-200), var(--color-brand-200));
   --color-link-active:            light-dark(var(--color-red), var(--color-red));
 
   /* Button colours. */
@@ -84,7 +84,8 @@
 
   /* Border colours. */
   --color-border:                 light-dark(var(--color-brand-400), var(--color-brand-200));
-  --color-border-alt:             light-dark(var(--color-grey-900), var(--color-grey-100));
+  --color-border-light:           light-dark(var(--color-brand-200), var(--color-brand-400));
+  --color-border-dark:            light-dark(var(--color-brand-600), var(--color-brand-300));
 
   /* Background colours. */
   --color-body-bg:                light-dark(var(--color-white), var(--color-black));
@@ -94,8 +95,8 @@
   --color-backdrop:               light-dark(var(--color-black-60), var(--color-black-80));
 
   /* Mobil menu colours. */
-  --color-mobile-menu:            light-dark(var(--color-brand-400), var(--color-brand-200));
-  --color-mobile-menu-cover:      light-dark(var(--color-black-20), var(--color-white-20));
+  --color-mobile-menu:            light-dark(var(--color-brand-400), var(--color-brand-400));
+  --color-mobile-menu-cover:      light-dark(var(--color-black-20), var(--color-black-20));
 
   /* Form colours. */
   --color-accent:                 light-dark(var(--color-brand-400), var(--color-brand-200));

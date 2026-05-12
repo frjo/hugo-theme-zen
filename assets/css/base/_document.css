@@ -23,7 +23,6 @@ body {
 }
 
 .page {
-  /* Set background colour. */
   background-color: var(--color-page-bg);
 }
 
