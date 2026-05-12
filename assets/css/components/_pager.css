@@ -31,9 +31,6 @@ is available. */
     padding-inline: 2px;
   }
 
-  .page-item {
-  }
-
   .active {
     font-weight: var(--fw-bold);
   }
@@ -42,13 +39,13 @@ is available. */
     .page-link {
       /* Re-set default cursor for disabled elements. */
       cursor: default;
-      color: var(--color-button-disabled);
+      color: var(--color-disabled);
 
       &:hover,
       &:focus,
       &:active {
         /* Override any link underlines and color changes. */
-        color: var(--color-button-disabled);
+        color: var(--color-disabled);
         text-decoration: none;
       }
     }

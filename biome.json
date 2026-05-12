@@ -8,16 +8,12 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "**/assets/**/*.js",
-      "**/assets/**/*.css",
-      "!**/*.min.js",
-      "!**/assets/libs/*.js"
-    ]
+    "includes": ["**/assets/**/*.js", "**/assets/**/*.css", "!**/*.min.js", "!**/assets/libs/*.js"]
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "lineWidth": 100
   },
   "assist": {
     "enabled": true,
@@ -43,15 +39,14 @@
   },
   "css": {
     "formatter": {
-      "quoteStyle": "single",
-      "lineWidth": 100
+      "quoteStyle": "single"
     }
   },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "lineWidth": 100
+      "semicolons": "always"
     },
-    "globals": ["define", "htmx", "Alpine"]
+    "globals": ["Alpine", "htmx"]
   }
 }
