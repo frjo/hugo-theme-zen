@@ -303,7 +303,6 @@ params:
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.
   internalPagination: true  # Use Hugo's internal pagination template, default false.
-  jquery: true              # Add jQuery, default false.
   languageDir: ""           # Set ltr or rtl, defaults to ltr.
   logo: false               # Turn off the logo, defaults to true.
   logoPath:                 # Relative path to site logo, defaults to "images/logo.png", no leading slash.
@@ -329,7 +328,6 @@ params:
   siteName: false           # Hide the site name (visually-hidden), default true.
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
-  umbrella: true            # Add Umbrella JS, default false.
 
   podcast:
     title:                  # * Feed title, defaults to site title (iTunes).

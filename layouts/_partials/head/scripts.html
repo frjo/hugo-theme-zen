@@ -12,16 +12,6 @@
 <script defer src="{{ $alpine.RelPermalink }}"></script>
 {{ end -}}
 
-{{ if $.Param "jquery" -}}
-{{ $jquery := resources.Get "libs/jquery.slim.min.js" | fingerprint -}}
-<script defer src="{{ $jquery.RelPermalink }}"></script>
-{{ end -}}
-
-{{ if $.Param "umbrella" -}}
-{{ $umbrella := resources.Get "libs/umbrella.min.js" | fingerprint -}}
-<script defer src="{{ $umbrella.RelPermalink }}"></script>
-{{ end -}}
-
 {{ if $.Param "mobilemenu" -}}
 {{ $mobilemenu := resources.Get "js/mobilemenu.js" | js.Build $opts | fingerprint -}}
 <script defer src="{{ $mobilemenu.RelPermalink }}"></script>
