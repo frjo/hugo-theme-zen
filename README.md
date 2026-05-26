@@ -42,7 +42,6 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Podcast](#podcast)
 * [Shortcodes](#shortcodes)
 * [Content security policy headers](#Content-security-policy-headers)
-* [Use npm to lint CSS and JavaScript](#use-npm-to-lint-css-and-javascript)
 * [Repository links](#repository-links)
 * [Math typesetting with KaTeX](#math-typesetting-with-katex)
 * [Getting help](#getting-help)
@@ -292,6 +291,7 @@ params:
     - section2              # in the <schema.org> `JSON+LD` in the page's `<head>`.
     - section3              # This theme requires Hugo `v0.109.0` or higher to
                             # generate the `BreadcrumbListing`.
+  colorScheme: "light"      # "light/dark" to lock, omit for user system preference.
   cookieConsent: true       # Show cookie consent form, default false.
   contact: "info@example.org"
   dateformat: ""            # Set the date format, default to "2 January, 2006"
