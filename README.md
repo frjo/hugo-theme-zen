@@ -57,6 +57,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * Commands for linting of css and js
 * Contact form (PHP)
 * CSS grid and flex throughout
+* Dark and light mode
 * HTML5
 * Hugo Pipes for images, js and css
 * Math typesetting with KaTeX
@@ -244,8 +245,8 @@ hugo server --themesDir ../..
 Performance should be excellent.
 
 * Minimal and compliant HTML5
-* Styles 23,2 kB (6,7 kB when gzipped)
-* JavaScript 1 kB (with only mobile menu active, 4 Kb with all features active)
+* Styles 28 kB (8 kB when gzipped)
+* JavaScript 6 kB (with everything active, otherwise near zero)
 * All scripts loaded in head with "defer"
 * Optimised for HTTP/2
 
@@ -372,7 +373,7 @@ They are found in the theme `assets/css/_colors.css` and `assets/css/_variables.
 
 In most cases you likely only need to override a few values and then it is easier to set these in the custom css files.
 
-Root `assets/css/_custom.css`: Loaded last so use to override css variables and add any custom styles you need.
+Root `assets/css/_custom.css`: Loaded last so use it to override css variables and add any custom styles you need.
 
 
 ### Logo
@@ -388,13 +389,11 @@ Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) t
 The theme will autodetect them and add the needed code.
 
 
-### Head and footer partials
+### Dark and light mode
 
-If you create partials named `head/extra.html` and/or `footer.html` they will be used. They do not exist or are empty in the theme but are supported as a convenience.
+Colors are set with the css function `light-dark()`. The first colour is used in light mode and the other colour is used in dark mode. See `assets/css/_colors.css`.
 
-Content in the "head/extra" partial will be added to the end of the "head" tag, perhaps some extra css or javascript.
-
-Content in the "footer" partial will replace all the default content in the "footer" tag.
+Use the param `colorScheme` to lock your site to either light or dark mode. By default the mode will follow the users system preferences.
 
 
 ### Layouts
@@ -429,10 +428,6 @@ To customise a js or css file, copy it to the root assets directory and edit it 
 There is an `assets/css/_custom.css` file meant for your custom styles. Copy it to the root `assets/css/_custom.css` to use it.
 
 The default styles in `assets/css/_zen.css` are boring but functional. You can easily override them completely by placing an empty file named "_zen.css" in root assets/css directory.
-
-The css files are by default built for production, compressed with fingerprint.
-
-By setting the Hugo environment variable to "development" (default when running `hugo server`) they will instead be nested with sourcemaps.
 
 
 ## Render hook templates
