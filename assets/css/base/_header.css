@@ -10,7 +10,7 @@
   gap: var(--header-gap);
   background-color: var(--color-header-bg);
 
-  @media (min-width: 666px) {
+  @media (width >= 666px) {
     flex-direction: row;
     align-items: center;
   }
@@ -49,7 +49,7 @@
 
 /* Wrapper for any blocks placed in the header region. */
 .header__region {
-  @media (min-width: 666px) {
+  @media (width >= 666px) {
     margin-inline-start: auto;
   }
 }

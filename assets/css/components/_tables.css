@@ -1,7 +1,7 @@
 .zebra-table {
   --table-cell-padding: 0.5rem;
 
-  @media (max-width: 666px) {
+  @media (width < 666px) {
     --table-cell-padding: 0.3rem;
   }
 
@@ -32,7 +32,7 @@
 .responsive-table {
   --table-gap: 0.5rem;
 
-  @media (max-width: 666px) {
+  @media (width < 666px) {
     th {
       display: none;
     }

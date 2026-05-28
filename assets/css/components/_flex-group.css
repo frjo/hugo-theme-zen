@@ -10,7 +10,7 @@
   }
 }
 
-@media (min-width: 666px) {
+@media (width >= 666px) {
   .flex-group--2 > * {
     flex-basis: calc(100% / 2 - var(--flex-gap));
     flex-grow: 0;

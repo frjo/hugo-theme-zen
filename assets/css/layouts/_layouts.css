@@ -4,7 +4,7 @@
 .layout__page {
   max-width: var(--max-page-width);
 
-  @media (min-width: 666px) {
+  @media (width >= 666px) {
     margin-inline: auto;
     min-height: 100svh;
   }
@@ -27,7 +27,7 @@
 .layout__navigation > * {
   max-width: var(--max-content-width);
 
-  @media (min-width: 666px) {
+  @media (width >= 666px) {
     margin-inline: auto;
   }
 }
@@ -86,7 +86,7 @@
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 999px) {
+@media (width >= 999px) {
   .layout__page {
     grid-template-rows: auto
                         auto
