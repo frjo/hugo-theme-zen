@@ -5,7 +5,8 @@
 
   padding-block: min(var(--gutters), var(--spacing-m));
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: var(--header-gap);
   background-color: var(--color-header-bg);
 
@@ -23,6 +24,7 @@
 /* Logo image. */
 .header__logo-image {
   vertical-align: bottom;
+  min-width: 32px;
 }
 
 /* The name of the website. */

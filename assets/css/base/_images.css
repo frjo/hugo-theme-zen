@@ -3,7 +3,7 @@
 figure,
 img {
   &.image {
-    --image-padding: .75rem;
+    --image-padding: 0.75rem;
 
     @media (min-width: 666px) {
       &.center {

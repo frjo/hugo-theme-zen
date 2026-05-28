@@ -1,21 +1,31 @@
 /* Document */
 
 html {
-  /* Change the default font family in all browsers. */
-  font-family: var(--ff-body);
-
   /* Set base font size in percent. */
   font-size: calc(var(--base-font-size) / 16 * 100%);
-
-  /* Set text colour. */
-  color: var(--color-text);
 }
 
 body {
+  /* Change the default font family in all browsers. */
+  font-family: var(--ff-body);
+
   /* Correct the line height in all browsers. */
   line-height: var(--base-line-height);
 
+  /* Set text colour. */
+  color: var(--color-text);
+
   /* Accent colour for forms. */
   accent-color: var(--color-accent);
+
+  /* Set background colour. */
+  background-color: var(--color-body-bg);
 }
 
+.page {
+  background-color: var(--color-page-bg);
+}
+
+::backdrop {
+  background-color: var(--color-backdrop);
+}

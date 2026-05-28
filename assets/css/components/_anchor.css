@@ -1,8 +1,8 @@
 /* Anchor */
 
 .anchor {
-  --anchor-gap: .5rem;
-  --anchor-opacity: .4;
+  --anchor-gap: 0.5rem;
+  --anchor-opacity: 0.4;
 
   display: grid;
   grid-template-columns: auto auto;

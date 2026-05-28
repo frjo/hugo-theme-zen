@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-block: 1.5em .5em;
+  margin-block: 1.5em 0.5em;
   color: var(--color-headings);
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings);
@@ -17,7 +17,7 @@ h6 {
 
   /* Smaller margin when a headeing is right after another heading. */
   & + & {
-    margin-block-start: .75em;
+    margin-block-start: 0.75em;
   }
 
   /* Set max text line width in main for readability. */
@@ -31,17 +31,17 @@ h1 {
   margin-block-start: var(--spacing-m);
   margin-block-end: var(--spacing-xs);
   font-size: var(--fs-xxl);
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   font-size: var(--fs-xl);
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
 }
 
 h3 {
   font-size: var(--fs-l);
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
 }
 
 h4 {

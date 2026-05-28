@@ -33,32 +33,3 @@
 .box--gutter {
   padding-inline: var(--gutters);
 }
-
-.box--inverted {
-  background: var(--color-border);
-  color: var(--color-text-bg);
-
-  /* Make sure headings etc. also gets inverted. */
-  * {
-    color: var(--color-text-bg);
-  }
-
-  a {
-    &:link {
-      color: var(--color-link-inverted);
-    }
-
-    &:visited {
-      color: var(--color-link-visited-inverted);
-    }
-
-    &:hover,
-    &:focus {
-      color: var(--color-link-hover-inverted);
-    }
-
-    &:active {
-      color: var(--color-link-active-inverted);
-    }
-  }
-}

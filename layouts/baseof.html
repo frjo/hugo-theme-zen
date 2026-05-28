@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="nojs" lang="{{ site.Language.Locale | default site.Language.Name }}" dir="{{ site.Language.Direction | default "ltr" }}">
+<html class="nojs" lang="{{ site.Language.Locale | default site.Language.Name }}" dir="{{ site.Language.Direction | default "ltr" }}"{{ with $.Param "colorScheme" }} data-theme="{{ . }}"{{ end }}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">

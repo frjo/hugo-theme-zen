@@ -55,25 +55,3 @@ a:active {
     }
   }
 }
-
-/* Inverted links, for dark backgrounds. */
-.link-inverted {
-  a {
-    &:link {
-      color: var(--color-link-inverted);
-    }
-
-    &:visited {
-      color: var(--color-link-visited-inverted);
-    }
-
-    &:hover,
-    &:focus {
-      color: var(--color-link-hover-inverted);
-    }
-
-    &:active {
-      color: var(--color-link-active-inverted);
-    }
-  }
-}

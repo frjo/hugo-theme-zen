@@ -1,5 +1,5 @@
 .flex-inline {
-  --flex-inline-gap: .5rem;
+  --flex-inline-gap: 0.5rem;
 
   display: flex;
   flex-wrap: wrap;

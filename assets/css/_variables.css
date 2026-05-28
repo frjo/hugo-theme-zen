@@ -1,3 +1,5 @@
+/* biome-ignore-all format: aligned columns for readability */
+
 :root {
   /* Set theme css variables.
   Override css variables in "assets/css/_custom.css" */
@@ -39,8 +41,6 @@
   monospace) hints at what type of font to use if the web browser doesn't
   find any of the fonts in the list. */
 
-  /* stylelint-disable value-keyword-case */
-
   /* Emojis font stack. Add to end of other stacks when needed. */
   --emojis:         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
@@ -69,7 +69,6 @@
 
   /* Monospace font stacks. */
   --ui-monospace:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  /* stylelint-enable value-keyword-case */
 
   /* Font family. */
   --ff-body: var(--ui-serif);

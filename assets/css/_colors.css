@@ -1,97 +1,152 @@
+/* biome-ignore-all format: aligned columns for readability */
+
 /* Theme colours. */
 
 /* Override css variables in "assets/css/_custom.css" */
 
 :root {
+  /* Brand colours. */
+  --color-brand:                  var(--color-grey-900);
+  --color-brand-alt:              var(--color-grey-500);
+
+  /* Brand variations */
+  --color-brand-900:              oklch(from var(--color-brand) calc(l - 0.5) c h);
+  --color-brand-800:              oklch(from var(--color-brand) calc(l - 0.4) c h);
+  --color-brand-700:              oklch(from var(--color-brand) calc(l - 0.3) c h);
+  --color-brand-600:              oklch(from var(--color-brand) calc(l - 0.2) c h);
+  --color-brand-500:              oklch(from var(--color-brand) calc(l - 0.1) c h);
+  --color-brand-400:              oklch(from var(--color-brand) l c h);
+  --color-brand-300:              oklch(from var(--color-brand) calc(l + 0.1) c h);
+  --color-brand-200:              oklch(from var(--color-brand) calc(l + 0.2) c h);
+  --color-brand-100:              oklch(from var(--color-brand) calc(l + 0.3) c h);
+
+  /* Brand alt variations */
+  --color-brand-alt-900:          oklch(from var(--color-brand-alt) calc(l - 0.5) c h);
+  --color-brand-alt-800:          oklch(from var(--color-brand-alt) calc(l - 0.4) c h);
+  --color-brand-alt-700:          oklch(from var(--color-brand-alt) calc(l - 0.3) c h);
+  --color-brand-alt-600:          oklch(from var(--color-brand-alt) calc(l - 0.2) c h);
+  --color-brand-alt-500:          oklch(from var(--color-brand-alt) calc(l - 0.1) c h);
+  --color-brand-alt-400:          oklch(from var(--color-brand-alt) l c h);
+  --color-brand-alt-300:          oklch(from var(--color-brand-alt) calc(l + 0.1) c h);
+  --color-brand-alt-200:          oklch(from var(--color-brand-alt) calc(l + 0.2) c h);
+  --color-brand-alt-100:          oklch(from var(--color-brand-alt) calc(l + 0.3) c h);
+
   /* Base colours. */
   --color-black:                  oklch(1% 0.01 0);
-  --color-nearblack:              oklch(25% 0.01 0);
-  --color-grey-700:               oklch(38% 0 0);
-  --color-grey-600:               oklch(49% 0 0);
-  --color-grey-500:               oklch(60% 0 0);
-  --color-grey-400:               oklch(71% 0 0);
-  --color-grey-300:               oklch(80% 0 0);
-  --color-grey-200:               oklch(89% 0 0);
+  --color-grey-900:               oklch(21% 0.01 0);
+  --color-grey-800:               oklch(28% 0.01 0);
+  --color-grey-700:               oklch(37% 0.01 0);
+  --color-grey-600:               oklch(45% 0.01 0);
+  --color-grey-500:               oklch(55% 0.01 0);
+  --color-grey-400:               oklch(71% 0.01 0);
+  --color-grey-300:               oklch(87% 0.01 0);
+  --color-grey-200:               oklch(93% 0.01 0);
   --color-grey-100:               oklch(95% 0 0);
-  --color-nearwhite:              oklch(98% 0 0);
-  --color-white:                  oklch(100% 0 0);
+  --color-white:                  oklch(99% 0 0);
   --color-red:                    oklch(65% 0.2 24);
   --color-yellow:                 oklch(65% 0.12 80);
   --color-green:                  oklch(65% 0.19 138);
   --color-blue:                   oklch(65% 0.16 247);
 
   /* Transparent colours. */
-  --color-black-60:               oklch(0% 0 0 / 0.6);
-  --color-black-40:               oklch(0% 0 0 / 0.4);
-  --color-black-20:               oklch(0% 0 0 / 0.2);
-  --color-black-10:               oklch(0% 0 0 / 0.1);
-  --color-white-20:               oklch(100% 0 0 / 0.2);
-  --color-white-10:               oklch(100% 0 0 / 0.1);
-
-  /* Brand colours. */
-  --color-brand:                  var(--color-nearblack);
-  --color-brand-alt:              var(--color-grey-500);
-  --color-brand-light:            var(--color-grey-300);
-  --color-brand-dark:             var(--color-grey-700);
+  --color-black-90:               oklch(1% 0.01 0 / 0.9);
+  --color-black-80:               oklch(1% 0.01 0 / 0.8);
+  --color-black-70:               oklch(1% 0.01 0 / 0.7);
+  --color-black-60:               oklch(1% 0.01 0 / 0.6);
+  --color-black-50:               oklch(1% 0.01 0 / 0.5);
+  --color-black-40:               oklch(1% 0.01 0 / 0.4);
+  --color-black-30:               oklch(1% 0.01 0 / 0.3);
+  --color-black-20:               oklch(1% 0.01 0 / 0.2);
+  --color-black-10:               oklch(1% 0.01 0 / 0.1);
+  --color-white-20:               oklch(99% 0 0 / 0.2);
+  --color-white-10:               oklch(99% 0 0 / 0.1);
 
   /* Text colours. */
-  --color-text:                   var(--color-black);
-  --color-text-bg:                var(--color-white);
-  --color-text-meta:              var(--color-grey-600);
-  --color-headings:               var(--color-nearblack);
-  --color-code:                   var(--color-nearblack);
+  --color-text:                   light-dark(var(--color-black), var(--color-white));
+  --color-text-bg:                light-dark(var(--color-white), var(--color-black));
+  --color-text-meta:              light-dark(var(--color-grey-600), var(--color-grey-300));
+  --color-headings:               light-dark(var(--color-grey-900), var(--color-grey-100));
+  --color-code:                   light-dark(var(--color-grey-900), var(--color-grey-100));
 
   /* Link colours. */
-  --color-link:                   var(--color-brand);
-  --color-link-visited:           var(--color-brand);
-  --color-link-hover:             var(--color-brand-alt);
-  --color-link-active:            var(--color-red);
-  --color-link-inverted:          var(--color-white);
-  --color-link-visited-inverted:  var(--color-white);
-  --color-link-hover-inverted:    var(--color-white);
-  --color-link-active-inverted:   var(--color-red);
+  --color-link:                   light-dark(var(--color-brand-500), var(--color-grey-100));
+  --color-link-visited:           light-dark(var(--color-brand-500), var(--color-grey-100));
+  --color-link-hover:             light-dark(var(--color-brand-200), var(--color-brand-400));
+  --color-link-active:            light-dark(var(--color-red), var(--color-red));
 
   /* Button colours. */
-  --color-button:                 var(--color-brand);
-  --color-button-hover:           var(--color-brand-alt);
-  --color-button-text:            var(--color-white);
-  --color-button-text-hover:      var(--color-white);
-  --color-button-disabled:        var(--color-grey-400);
+  --color-button:                 light-dark(var(--color-brand-400), var(--color-brand-100));
+  --color-button-text:            light-dark(var(--color-white), var(--color-white));
+  --color-button-hover:           light-dark(var(--color-brand-200), var(--color-brand-300));
+  --color-button-text-hover:      light-dark(var(--color-white), var(--color-white));
+
+  /* Disabled colours. */
+  --color-disabled:               light-dark(var(--color-grey-400), var(--color-grey-600));
+  --color-disabled-alt:           light-dark(var(--color-grey-100), var(--color-grey-800));
 
   /* Border colours. */
-  --color-border:                 var(--color-brand);
-  --color-border-light:           var(--color-brand-light);
-  --color-border-dark:            var(--color-brand-dark);
+  --color-border:                 light-dark(var(--color-brand-400), var(--color-brand-200));
+  --color-border-light:           light-dark(var(--color-brand-200), var(--color-brand-400));
+  --color-border-dark:            light-dark(var(--color-brand-600), var(--color-brand-300));
 
   /* Background colours. */
-  --color-header-bg:              var(--color-white);
-  --color-body-bg:                var(--color-white);
-  --color-footer-bg:              var(--color-white);
-  --color-backdrop:               var(--color-grey-100);
+  --color-body-bg:                light-dark(var(--color-white), var(--color-black));
+  --color-page-bg:                light-dark(transparent, transparent);
+  --color-header-bg:              light-dark(transparent, transparent);
+  --color-footer-bg:              light-dark(transparent, transparent);
+  --color-backdrop:               light-dark(var(--color-black-60), var(--color-black-80));
 
   /* Mobil menu colours. */
-  --color-mobile-menu:            var(--color-brand);
-  --color-mobile-menu-cover:      var(--color-black-20);
+  --color-mobile-menu:            light-dark(var(--color-brand-400), var(--color-brand-400));
+  --color-mobile-menu-cover:      light-dark(var(--color-black-20), var(--color-black-20));
 
   /* Form colours. */
-  --color-accent:                 var(--color-brand);
+  --color-accent:                 light-dark(var(--color-brand-400), var(--color-brand-200));
 
   /* Row (e.g. in table) colours. */
-  --color-row-header:             transparent;
-  --color-row-odd:                var(--color-nearwhite);
-  --color-row-even:               transparent;
+  --color-row-header:             light-dark(transparent, transparent);
+  --color-row-odd:                light-dark(var(--color-grey-100), var(--color-grey-900));
+  --color-row-even:               light-dark(transparent, transparent);
+
+  /* Highlight colours. */
+  --color-highlight:              light-dark(var(--color-brand-400), var(--color-brand-100));
+  --color-mark-highlight:         light-dark(var(--color-red), var(--color-red));
 
   /* Status colours. */
   --color-info:                   var(--color-blue);
-  --color-info-bg:                oklch(from var(--color-blue) 100% 0.03 h);
-  --color-success:                 var(--color-green);
-  --color-success-bg:              oklch(from var(--color-green) 100% 0.03 h);
+  --color-success:                var(--color-green);
   --color-warning:                var(--color-yellow);
-  --color-warning-bg:             oklch(from var(--color-yellow) 100% 0.03 h);
   --color-error:                  var(--color-red);
-  --color-error-bg:               oklch(from var(--color-red) 100% 0.03 h);
 
-  /* Highlight colours. */
-  --color-highlight:              var(--color-brand-alt);
-  --color-mark-highlight:         var(--color-red);
+
+
+  /* Follow user system dark/light setting. */
+  color-scheme: light dark;
+
+  /* Initialize the theme variable */
+  --theme: light;
+
+  @media (prefers-color-scheme: dark) {
+    --theme: dark;
+  }
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@container style(--theme: light) {
+  [data-theme="inverted"] {
+    color-scheme: dark;
+  }
+}
+
+@container style(--theme: dark) {
+  [data-theme="inverted"] {
+    color-scheme: light;
+  }
 }

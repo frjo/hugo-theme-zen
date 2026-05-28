@@ -1,13 +1,13 @@
 .disabled {
   /* Re-set default cursor for disabled elements. */
   cursor: default;
-  color: var(--color-button-disabled);
+  color: var(--color-disabled);
 
   &:hover,
   &:focus,
   &:active {
     /* Override any link underlines and color changes. */
-    color: var(--color-button-disabled);
+    color: var(--color-disabled);
     text-decoration: none;
   }
 }

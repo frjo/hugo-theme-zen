@@ -42,27 +42,3 @@ A simple cards style. */
 .card--gutter {
   padding-inline: var(--gutters);
 }
-
-.card--inverted {
-  background: var(--color-border);
-  color: var(--color-text-bg);
-
-  a {
-    &:link {
-      color: var(--color-link-inverted);
-    }
-
-    &:visited {
-      color: var(--color-link-visited-inverted);
-    }
-
-    &:hover,
-    &:focus {
-      color: var(--color-link-hover-inverted);
-    }
-
-    &:active {
-      color: var(--color-link-active-inverted);
-    }
-  }
-}

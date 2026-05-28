@@ -2,14 +2,6 @@
 
 /* Page */
 
-body {
-  background-color: var(--color-backdrop);
-}
-
-.page {
-  background-color: var(--color-body-bg);
-}
-
 .footer {
   border-block-start: 2px solid var(--color-border);
 }
