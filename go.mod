@@ -1,3 +1,3 @@
-module github.com/frjo/hugo-theme-zen/v6
+module github.com/frjo/hugo-theme-zen/v7
 
-go 1.26
+go 1.26.3

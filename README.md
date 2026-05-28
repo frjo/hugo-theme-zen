@@ -23,6 +23,7 @@ Quickstart a new site with the Zen theme by using the [Zen demo repo as a templa
 * [Installation](#installation)
 * [Updating](#updating)
 * [Run example site](#run-example-site)
+* [Version 7.x](#version-7x)
 * [Version 6.x](#version-6x)
 * [Version 5.x](#version-5x)
 * [Version 4.x](#version-4x)
@@ -90,7 +91,7 @@ From the root of your site:
 hugo mod init github.com/me/my-site
 ```
 
-Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v6".
+Then set the "theme" setting to "github.com/frjo/hugo-theme-zen/v7".
 
 From the root of your site:
 
@@ -149,6 +150,17 @@ From the root of `themes/zen/exampleSite`:
 hugo server --themesDir ../..
 ```
 
+## Version 7.x 2026-05-28
+
+* Using color-scheme and light-dark() to implement dark mode.
+* Add colorScheme param to optionally lock to light/dark.
+* Lint css with biome, remove stylelint.
+* Move header and footer styles to base.
+* Remove node completely, replaced by pre-commit and biome.
+
+### Upgrade to 7.x
+
+Redo your colour settings to make it work well in dark mode or set `colorScheme: "light"` to lock your site to light mode.
 
 ## Version 6.x 2026-03-10
 
