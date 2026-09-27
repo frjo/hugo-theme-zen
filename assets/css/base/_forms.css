@@ -32,10 +32,21 @@ label {
 /* Valid and invalid state. */
 input,
 textarea {
+  --color-input: currentColor;
+  --color-input-bg: light-dark(
+    oklch(from var(--color-input) 100% 0.03 h),
+    oklch(from var(--color-input) calc(l - 0.4) c h)
+  );
+  --color-input-border: light-dark(
+    oklch(from var(--color-input) calc(l + 0.2) c h),
+    oklch(from var(--color-input) calc(l - 0.07) c h)
+  );
+
   &:user-valid {
-    border-color: var(--color-success);
+    --color-input: var(--color-success);
+    border-color: var(--color-input-border);
     border-style: solid;
-    background-color: var(--color-success-bg);
+    background-color: var(--color-input-bg);
   }
 
   &:focus:user-valid {
@@ -43,14 +54,16 @@ textarea {
   }
 
   &:user-invalid {
-    border-color: var(--color-error);
+    --color-input: var(--color-error);
+    border-color: var(--color-input-border);
     border-style: solid;
-    background-color: var(--color-error-bg);
+    background-color: var(--color-input-bg);
   }
 
   &:focus:user-invalid {
+    --color-input: var(--color-warning);
     border-color: transparent;
-    background-color: var(--color-warning-bg);
+    background-color: var(--color-input-bg);
   }
 }
 

@@ -170,7 +170,7 @@ article {
   border: unset;
   text-shadow: unset;
   font-size: var(--fs-l);
-  color: var(--color-border);
+  color: var(--color-border-light);
   rotate: 90deg;
   cursor: pointer;
 
@@ -186,12 +186,22 @@ article {
 }
 
 .flash-item {
+  --color-flash: var(--color-warning);
+  --color-flash-bg: light-dark(
+    oklch(from var(--color-flash) 100% 0.03 h),
+    oklch(from var(--color-flash) calc(l - 0.3) c h)
+  );
+  --color-flash-border: light-dark(
+    oklch(from var(--color-flash) calc(l + 0.2) c h),
+    oklch(from var(--color-flash) calc(l - 0.07) c h)
+  );
+
   animation: --flash 500ms ease-in-out 1ms;
 }
 
 @keyframes --flash {
   50% {
-    border-color: var(--color-warning);
-    background-color: var(--color-warning-bg);
+    border-color: var(--color-flash-border);
+    background-color: var(--color-flash-bg);
   }
 }

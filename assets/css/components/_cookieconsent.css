@@ -1,6 +1,16 @@
 /* Cookieconsent */
 
 .cookieconsent {
+  --color-cookieconsent: var(--color-warning);
+  --color-cookieconsent-text: light-dark(
+    oklch(from var(--color-cookieconsent) l c h),
+    oklch(from var(--color-cookieconsent) 100% 0.03 h)
+  );
+  --color-cookieconsent-bg: light-dark(
+    oklch(from var(--color-cookieconsent) 100% 0.03 h),
+    oklch(from var(--color-cookieconsent) calc(l + 0.07) c h)
+  );
+
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -9,13 +19,18 @@
   bottom: 0;
   width: 100%;
   padding: var(--spacing-xs);
-  color: var(--color-warning);
-  background-color: var(--color-warning-bg);
-  border-block-start: 4px solid var(--color-warning);
+  color: var(--color-cookieconsent-text);
+  background-color: var(--color-body-bg);
+  border-block-start: 4px solid var(--color-cookieconsent-text);
   font-size: var(--fs-s);
   transform: translateY(100vh);
   transition: all 130ms ease-out;
   z-index: 99;
+
+  .cookieconsent__message {
+    font-family: var(--ff-alt);
+    font-size: var(--fs-xs);
+  }
 
   .cookieconsent__actions {
     display: flex;

@@ -9,7 +9,9 @@
   text-decoration: none;
   text-align: center;
   width: fit-content;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 
   /* Improve usability and consistency of cursor style between image-type `input` and others. */
   cursor: pointer;
@@ -34,7 +36,7 @@
 
 .button--small {
   font-size: var(--fs-xs);
-  padding: 0.2rem 0.75rem;
+  padding: 0.35rem 0.5rem;
 }
 
 .button--alt {
@@ -54,40 +56,49 @@
   background: var(--color-button-text);
 }
 
-.button--accept {
-  color: var(--color-success);
-  border-color: var(--color-success);
+.button--accept,
+.button--decline,
+.button--delete {
+  --color-button: currentColor;
+  --color-button-text: light-dark(
+    oklch(from var(--color-button) l c h),
+    oklch(from var(--color-button) 100% 0.03 h)
+  );
+  --color-button-bg: light-dark(
+    oklch(from var(--color-button) 100% 0.03 h),
+    oklch(from var(--color-button) calc(l - 0.3) c h)
+  );
+  --color-button-border: light-dark(
+    oklch(from var(--color-button) calc(l + 0.2) c h),
+    oklch(from var(--color-button) calc(l - 0.07) c h)
+  );
+  --color-button-hover: light-dark(
+    oklch(from var(--color-button) 90% 0.03 h),
+    oklch(from var(--color-button) calc(l - 0.6) c h)
+  );
+
+  color: var(--color-button-text);
+  background: linear-gradient(var(--color-button-bg), var(--color-button-hover));
+  border-color: var(--color-button-border);
 
   &:hover,
   &:focus-visible,
   &:active {
     color: var(--color-button-text);
-    background: var(--color-success);
+    background: linear-gradient(var(--color-button-hover), var(--color-button-bg));
   }
+}
+
+.button--accept {
+  --color-button: var(--color-success);
 }
 
 .button--decline {
-  color: var(--color-warning);
-  border-color: var(--color-warning);
-
-  &:hover,
-  &:focus-visible,
-  &:active {
-    color: var(--color-button-text);
-    background: var(--color-warning);
-  }
+  --color-button: var(--color-warning);
 }
 
 .button--delete {
-  color: var(--color-error);
-  border-color: var(--color-error);
-
-  &:hover,
-  &:focus-visible,
-  &:active {
-    color: var(--color-button-text);
-    background: var(--color-error);
-  }
+  --color-button: var(--color-error);
 }
 
 /* The disabled variation should always go last, so that it overrides any

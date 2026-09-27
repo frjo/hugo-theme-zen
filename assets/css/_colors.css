@@ -71,7 +71,7 @@
   /* Link colours. */
   --color-link:                   light-dark(var(--color-brand-500), var(--color-grey-100));
   --color-link-visited:           light-dark(var(--color-brand-500), var(--color-grey-100));
-  --color-link-hover:             light-dark(var(--color-brand-200), var(--color-brand-400));
+  --color-link-hover:             light-dark(var(--color-brand-200), var(--color-grey-300));
   --color-link-active:            light-dark(var(--color-red), var(--color-red));
 
   /* Button colours. */
@@ -86,7 +86,7 @@
 
   /* Border colours. */
   --color-border:                 light-dark(var(--color-brand-400), var(--color-brand-200));
-  --color-border-light:           light-dark(var(--color-brand-200), var(--color-brand-400));
+  --color-border-light:           light-dark(var(--color-brand-200), var(--color-brand-100));
   --color-border-dark:            light-dark(var(--color-brand-600), var(--color-brand-300));
 
   /* Background colours. */
