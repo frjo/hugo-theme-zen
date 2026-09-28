@@ -15,10 +15,6 @@
     &[data-navopen] {
       position: fixed;
     }
-
-    .language-icon {
-      fill: var(--color-text-bg);
-    }
   }
 
   .mobile-nav__cover {
