@@ -133,20 +133,24 @@
 
 [data-theme="light"] {
   color-scheme: light;
+  --theme: light;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
+  --theme: dark;
 }
 
 @container style(--theme: light) {
   [data-theme="inverted"] {
     color-scheme: dark;
+    --theme: dark;
   }
 }
 
 @container style(--theme: dark) {
   [data-theme="inverted"] {
     color-scheme: light;
+    --theme: light;
   }
 }
