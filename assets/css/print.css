@@ -20,6 +20,7 @@
     border-color: black;
     box-shadow: none;
     color: black;
+    min-height: initial;
   }
 
   .main {
