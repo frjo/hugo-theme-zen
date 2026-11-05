@@ -9,11 +9,6 @@
   align-items: center;
   gap: var(--header-gap);
   background-color: var(--color-header-bg);
-
-  @media (width >= 666px) {
-    flex-direction: row;
-    align-items: center;
-  }
 }
 
 /* Wrapping link for logo. */
